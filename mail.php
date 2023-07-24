@@ -3,7 +3,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         # FIX: Replace this email with recipient email
-        $mail_to = "info@yourmail.com";
+        $mail_to = "soulsoft.soul119@gmail.com";
         
         # Sender Data
         $subject = trim($_POST["subject"]);
@@ -45,5 +45,7 @@
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
+
+    
 
 ?>
