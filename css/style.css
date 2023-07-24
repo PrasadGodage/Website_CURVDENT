@@ -1162,7 +1162,7 @@ input[type="checkbox"] {
     right: 0;
     left: 45px;
     bottom: 0;
-    border: 10px solid #f5e5ed;
+    border: 10px solid #eed48e;
     z-index: 2;
 }
 
@@ -2226,13 +2226,13 @@ input[type="checkbox"] {
 }
 
 .main-footer.dark {
-    background: #bea972;
-    color: #fff;
+    background: #fffcf2;
+    color: #6d6d6d;
 }
 
 .main-footer .abot p {
     font-size: 15px;
-    color: #fff;
+    color: #6d6d6d;
 }
 
 .main-footer .abot .social-icon {
@@ -2254,8 +2254,8 @@ input[type="checkbox"] {
 }
 
 .main-footer .abot .social-icon a:hover {
-    border-color: #fff;
-    color: #fff;
+    border-color: #6d6d6d;
+    color: #6d6d6d;
 }
 
 .main-footer .usful-links ul {
@@ -2269,17 +2269,17 @@ input[type="checkbox"] {
 }
 
 .main-footer .usful-links ul li:hover {
-    color: #fff;
+    color: #6d6d6d;
 }
 
 .main-footer .usful-links ul li i {
     font-size: 7px;
-    color: #fff;
+    color: #6d6d6d;
     margin-right: 5px;
 }
 
 .main-footer .fothead h6 {
-    color: #fff;
+    color: #6d6d6d;
     font-size: 18px;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
@@ -2303,7 +2303,7 @@ input[type="checkbox"] {
 .main-footer .fotcont p {
     font-size: 15px;
     font-family: 'Rambla', sans-serif;
-    color: #fff;
+    color: #6d6d6d;
     margin-bottom: 0px;
 }
 
@@ -2315,13 +2315,13 @@ input[type="checkbox"] {
 
 .main-footer .sub-footer p {
     font-size: 14px;
-    color: #fff;
+    color: #6d6d6d;
 }
 
 .main-footer .logo h2 {
     font-weight: 400;
     font-size: 55px;
-    color: #fff;
+    color: #6d6d6d;
     line-height: 0.7em;
 }
 
@@ -2329,7 +2329,7 @@ input[type="checkbox"] {
     display: block;
     margin-top: 5px;
     font-size: 13px;
-    color: #fff;
+    color: #6d6d6d;
     font-weight: 400;
     font-style: italic;
     margin-left: 4px;
