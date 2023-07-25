@@ -408,7 +408,8 @@ input[type="checkbox"] {
 }
 
 .nav-scroll {
-    background: #c7c7c7;
+    background: #3f3f3f;
+    opacity: 0.5;
     padding: 0 0 0 0;
     position: fixed;
     top: -100px;
@@ -427,11 +428,11 @@ input[type="checkbox"] {
 
 .nav-scroll .navbar-toggler-icon,
 .nav-scroll .icon-bar {
-    color: #bea972;
+    color: #ffffff;
 }
 
 .nav-scroll .navbar-nav .nav-link {
-    color: #666;
+    color: #ffffff;
 }
 
 .nav-scroll .navbar-nav .active {
