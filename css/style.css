@@ -25,8 +25,9 @@
 
 /* ======= Google fonts ======= */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rambla:300,400,700,900|Playfair+Display:400,400i,700,700i,900,900i&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,700,900|Playfair+Display:400,400i,700,700i,900,900i&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* ======= Basics ======= */
 
@@ -51,7 +52,7 @@ body {
 body {
     overflow-x: hidden !important;
     background: #fff;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow';
     font-size: 16px;
     line-height: 1.75em;
     font-weight: 400;
@@ -59,7 +60,7 @@ body {
 }
 
 p {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow';
     font-size: 16px;
     font-weight: 400;
     color: #666;
@@ -74,7 +75,7 @@ h4,
 h5,
 h6 {
     font-weight: 400;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow';
     line-height: 1.5em;
 }
 
@@ -110,7 +111,7 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 input[type="password"]:focus,
@@ -138,7 +139,7 @@ textarea {
     box-shadow: none;
     display: block;
     width: 100%;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow';
     font-size: 16px;
     line-height: 1.75em;
     color: #666;
@@ -242,7 +243,7 @@ input[type="checkbox"] {
 }
 
 .count {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow';
 }
 
 .valign {
@@ -329,14 +330,14 @@ input[type="checkbox"] {
 .section-subtitle {
     color: #000;
     font-size: 18px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     margin-bottom: 15px;
 }
 
 .section-title {
     font-size: 36px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     color: #d4b76e;
     position: relative;
@@ -383,7 +384,7 @@ input[type="checkbox"] {
 
 .navbar .navbar-nav .nav-link {
     font-size: 16px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     color: #fff;
     margin: 15px 5px;
@@ -525,7 +526,7 @@ input[type="checkbox"] {
 
 .navbar .dropdown-menu .dropdown-item {
     padding: 9px 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-size: 16px;
     font-weight: 400;
     color: #666;
@@ -777,7 +778,7 @@ input[type="checkbox"] {
     font-size: 17px;
     margin-bottom: 0;
     letter-spacing: 1px;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow';
     -webkit-animation-delay: .2s;
     animation-delay: .2s;
 }
@@ -794,7 +795,7 @@ input[type="checkbox"] {
 }
 
 .header .caption p {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 0;
@@ -1065,14 +1066,14 @@ input[type="checkbox"] {
 .banner-header h5 {
     color: #fff;
     font-size: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     margin-bottom: 15px;
 }
 
 .banner-header h1 {
     font-size: 40px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     color: #fff;
     position: relative;
@@ -1081,7 +1082,7 @@ input[type="checkbox"] {
 }
 
 .banner-header p {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 0;
@@ -1327,7 +1328,7 @@ input[type="checkbox"] {
 .testimonials .item-box p {
     font-size: 16px;
     color: #666;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
 }
 
 .testimonials .item-box .info {
@@ -1457,7 +1458,7 @@ input[type="checkbox"] {
 .services-price-info {}
 
 .services-price-info .title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-size: 18px;
     color: #bea972;
     margin-bottom: 10px;
@@ -1641,7 +1642,7 @@ input[type="checkbox"] {
     box-sizing: border-box;
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     margin-bottom: 30px;
 }
 
@@ -1671,7 +1672,7 @@ input[type="checkbox"] {
 }
 
 .price-box .price-box-inner ul li.pricing-content {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     padding: 0;
     line-height: 2em;
     font-size: 16px;
@@ -1822,7 +1823,7 @@ input[type="checkbox"] {
     color: #bea972;
     font-size: 20px;
     text-decoration: none;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 400;
     line-height: 1em;
 }
@@ -1842,7 +1843,7 @@ input[type="checkbox"] {
     font-size: 15px;
     color: #fff;
     font-weight: 700;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 .blog-entry .desc .lead:hover {
@@ -1920,7 +1921,7 @@ input[type="checkbox"] {
 .betty-sidebar-block .betty-sidebar-block-title {
     color: #bea972;
     text-decoration: none;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     font-weight: 500;
     font-size: 24px;
     margin-bottom: 15px;
@@ -2097,7 +2098,7 @@ input[type="checkbox"] {
 }
 
 .betty-user-content h3 span {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 12px;
     line-height: 1.75em;
     color: #666;
@@ -2129,7 +2130,7 @@ input[type="checkbox"] {
 /* ======= Buttons ======= */
 
 .butn {
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -2194,7 +2195,7 @@ input[type="checkbox"] {
 .butn-dark {
     border: 1px solid #bea972;
     background: #bea972;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
 }
 
 .butn-dark:hover {
@@ -2216,7 +2217,7 @@ input[type="checkbox"] {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 1px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
 }
 
 
@@ -2283,7 +2284,7 @@ input[type="checkbox"] {
     color: #6d6d6d;
     font-size: 18px;
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
 }
 
 .main-footer .fotcont .fothead h6 {
@@ -2303,7 +2304,7 @@ input[type="checkbox"] {
 
 .main-footer .fotcont p {
     font-size: 15px;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
     color: #6d6d6d;
     margin-bottom: 0px;
 }
@@ -2503,7 +2504,7 @@ input[type="checkbox"] {
     font-size: 16px;
     margin-bottom: 0px;
     margin-top: 0px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Barlow', serif;
     color: #000;
 }
 
@@ -2512,5 +2513,5 @@ input[type="checkbox"] {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 0px;
-    font-family: 'Rambla', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
