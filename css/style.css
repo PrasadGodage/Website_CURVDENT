@@ -1193,7 +1193,7 @@ input[type="checkbox"] {
 /* ======= Team style ======= */
 
 .team .item {
-    padding: 30px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0 25px 75px rgba(0, 0, 0, 0.05);
@@ -1205,7 +1205,7 @@ input[type="checkbox"] {
 .team .img {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     overflow: hidden;
     float: left;
 }
