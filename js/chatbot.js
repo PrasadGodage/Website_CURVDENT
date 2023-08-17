@@ -6,7 +6,7 @@
                 var options = {
                 "enabled":true,
                 "chatButtonSetting":{
-                    "backgroundColor":"#02f7db",
+                    "backgroundColor":"#25d366",
                     "ctaText":"Chat with us",
                     "borderRadius":"25",
                     "marginLeft": "0",
@@ -21,11 +21,11 @@
                     "brandImg":"file:///C:/xampp/htdocs/web/Website_CURVDENT/index.html",
                     "welcomeText":"Hi there!\nHow can I help you?",
                     "messageText":"Hello, %0A I have a question about {{page_link}}",
-                    "backgroundColor":"#02f7db",
+                    "backgroundColor":"#25d366",
                     "ctaText":"Chat with us",
                     "borderRadius":"25",
                     "autoShow":false,
-                    "phoneNumber":"918530798679"
+                    "phoneNumber":"919143950950"
                 }
                 };
                 s.onload = function() {
