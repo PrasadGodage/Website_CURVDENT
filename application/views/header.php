@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="<?php echo base_url() . 'resource/images/favicon.ico'; ?>">
 
-        <title>Spark GPS System</title>
+        <title>Curvdent</title>
 
         <!-- Bootstrap 4.1-->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css'; ?>">
@@ -113,4 +113,4 @@
                         </div>
                     </div>
                 </div>
-    </header>
+            </header>
