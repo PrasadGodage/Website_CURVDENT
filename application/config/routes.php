@@ -9,4 +9,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 //--------------- Controller UI --------------------------------------
 
+$route['home']='ui/UIController/home';
 $route['admin']='ui/UIController/admin';
