@@ -1,5 +1,88 @@
-<!-- About Us -->
-<section class="section-padding">
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper mt-3">
+                <a class="logo" href="index.html"> <img src="img/logo-light.png" class="logo-img" alt=""> </a>
+                <!-- <a class="logo" href="index.html">
+                    <h2>Curvdent<span>Center of Beauty</span></h2>
+                </a> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" data-scroll-nav="0">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="1">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-scroll-nav="5">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Slider -->
+    <header class="header slider-fade" data-scroll-index="0" id="home">
+        <div class="owl-carousel owl-theme">
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/3.jpg">
+                <div class="v-middle caption mt-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="o-hidden">
+                                    <h1 style="font-weight: 700;">Face the wow experience</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/2.jpg">
+                <div class="v-middle caption mt-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="o-hidden">
+                                    <h1 style="font-weight: 700">Let's Glow More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/1.jpg">
+                <div class="v-middle caption mt-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="o-hidden">
+                                    <h1 style="font-weight: 700">Surprise Yourself At Curvdent</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/4.jpg">
+                <div class="v-middle caption mt-30">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="o-hidden">
+                                    <h1 style="font-weight: 700">No More Wrinkles On Face</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Us -->
+    <section class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
@@ -215,6 +298,313 @@
             </div>
         </div>
     </section>
+    <!-- Services -->
+    <!-- <section class="betty-services section-padding" data-scroll-index="2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title">Our Services</h2>
+                    <span class="section-subtitle">We offer a wide range of beauty services</span>
+                    <hr class="line line-hr-left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/01.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Makeup <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/02.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Hairdressing <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/03.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Barber <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/04.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Massages <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/05.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Body Treatments <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="img/services/06.jpg" alt=""> </div>
+                        <div class="con">
+                            <h5>Aromatherapy <i class="ti-arrow-right"></i></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Makeup -->
+    <!-- <section class="betty-makeup section-padding light-pink-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title">All Services</h2> <span class="section-subtitle">Our makeup
+                        services</span>
+                    <hr class="line line-hr-left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-039-make-up"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Hair Fall treatment</h4>
+                            <p>Hair Fall treatment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-007-mascara-4"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Hair PRP (platelet rich plasma)</h4>
+                            <p>Hair PRP (platelet rich plasma).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-013-facial-mask-1"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Hair transplant surgery</h4>
+                            <p>Hair transplant surgery.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-034-eyebrow"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Jaw line</h4>
+                            <p>Jaw line.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-018-scissors"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Dark Circle Treatment</h4>
+                            <p>Dark Circle Treatment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="betty-makeup-container">
+                        <div class="betty-makeup-img-area"><span class="flaticon-037-dressing-table"></span></div>
+                        <div class="betty-makeup-text-area">
+                            <h4 class="betty-makeup-heading">Acne Removal</h4>
+                            <p>Acne Removal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Pricing -->
+    <!-- <section class="section-padding" data-scroll-index="3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title">Pricing</h2> <span class="section-subtitle">The best makeup
+                        packages</span>
+                    <hr class="line line-hr-left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="price-box">
+                        <div class="price-box-inner img-grayscale" style="background-image: url(img/pricing/1.jpg)">
+                            <ul>
+                                <li class="pricing-title">
+                                    <h3 class="pricing-pt-title">Eye Makeup</h3>
+                                </li>
+                                <li class="pricing-prices"> <sup class="pricing-dolar">$</sup> <span
+                                        class="pricing-price">300</span> </li>
+                                <li class="pricing-content">
+                                    <ul>
+                                        <li>Quisque volutpat</li>
+                                        <li>Praesent at eros</li>
+                                        <li>Donec commodo</li>
+                                        <li>Morbi mollis</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box">
+                        <div class="price-box-inner" style="background-image: url(img/pricing/2.jpg)">
+                            <ul>
+                                <li class="pricing-title">
+                                    <h3 class="pricing-pt-title">Face Makeup</h3>
+                                </li>
+                                <li class="pricing-prices"> <sup class="pricing-dolar">$</sup> <span
+                                        class="pricing-price">450</span> </li>
+                                <li class="pricing-content">
+                                    <ul>
+                                        <li>Quisque volutpat</li>
+                                        <li>Praesent at eros</li>
+                                        <li>Donec commodo</li>
+                                        <li>Morbi mollis</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-box">
+                        <div class="price-box-inner" style="background-image: url(img/pricing/3.jpg)">
+                            <ul>
+                                <li class="pricing-title">
+                                    <h3 class="pricing-pt-title">Hair Makeup</h3>
+                                </li>
+                                <li class="pricing-prices"> <sup class="pricing-dolar">$</sup> <span
+                                        class="pricing-price">750</span> </li>
+                                <li class="pricing-content">
+                                    <ul>
+                                        <li>Quisque volutpat</li>
+                                        <li>Praesent at eros</li>
+                                        <li>Donec commodo</li>
+                                        <li>Morbi mollis</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Testimonials -->
+    <!-- <section class="testimonials bg-img bg-fixed section-padding" data-overlay-light="2"
+        data-background="img/testimonial.jpg">
+        <div class="container mt-30">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-head">
+                        <h4>What our clients say about Betty</h4>
+                        <p>Quisque consectetur massa id ipsum soltudin ultrices. Pellentesque the sceisque justo.</p>
+                    </div>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item-box"> <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Quality dapibus augue metus the nec feugiat erat hendrerit nec. Duister ve ante the lemon
+                                sanlae. Phasellus rutrum in lacus ut euismod. Vestibulum eleifend tortor orci euthe
+                                ornare tortor somera theme duis miss the nibhse.</p>
+                            <div class="info">
+                                <div class="author-img"> <img src="img/team/t1.png" alt=""> </div>
+                                <div class="cont">
+                                    <h6>Emma Brown</h6> <span>Lawyer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-box"> <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Quality dapibus augue metus the nec feugiat erat hendrerit nec. Duister ve ante the lemon
+                                sanlae. Phasellus rutrum in lacus ut euismod. Vestibulum eleifend tortor orci euthe
+                                ornare tortor somera theme duis miss the nibhse.</p>
+                            <div class="info">
+                                <div class="author-img"> <img src="img/team/t2.png" alt=""> </div>
+                                <div class="cont">
+                                    <h6>Jason White</h6> <span>Model</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-box"> <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Quality dapibus augue metus the nec feugiat erat hendrerit nec. Duister ve ante the lemon
+                                sanlae. Phasellus rutrum in lacus ut euismod. Vestibulum eleifend tortor orci euthe
+                                ornare tortor somera theme duis miss the nibhse.</p>
+                            <div class="info">
+                                <div class="author-img"> <img src="img/team/t3.png" alt=""> </div>
+                                <div class="cont">
+                                    <h6>Emily Smith</h6> <span>Psychologist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Blog -->
+    <!-- <section class="betty-home-blog section-padding light-pink-bg" data-scroll-index="4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title">Latest News</h2> <span class="section-subtitle">Read about latest health
+                        trends</span>
+                    <hr class="line line-hr-left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="blog-entry">
+                        <a href="#" class="blog-img"><img src="img/blog/01.jpg" class="img-fluid" alt=""></a>
+                        <div class="desc"> <span><a href="#">Makeup</a></span>
+                            <h4><a href="#">Top 5 Benefits of Body Polishing</a></h4> <span class="text-right"><a
+                                    href="#">Dec 30, 2023</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-entry">
+                        <a href="#" class="blog-img"><img src="img/blog/02.jpg" class="img-fluid" alt=""></a>
+                        <div class="desc"> <span><a href="#">Makeup</a></span>
+                            <h4><a href="#">Hair Accessories You Should Try</a></h4> <span class="text-right"><a
+                                    href="#">Dec 29, 2023</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-entry">
+                        <a href="#" class="blog-img"><img src="img/blog/03.jpg" class="img-fluid" alt=""></a>
+                        <div class="desc"> <span><a href="#">Barber</a></span>
+                            <h4><a href="#">Trending Hairstyles For Men in 2023</a></h4> <span class="text-right"><a
+                                    href="#">Dec 20, 2023</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Contact -->
     <section class="section-padding" data-scroll-index="5" data-background="img/contact.png">
         <div class="container">
             <div class="row">
@@ -296,3 +686,38 @@
             </div>
         </div>
     </section>
+    <!-- Brands -->
+    <!-- <section class="brands section-padding light-pink-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title">Our Brands</h2>
+                    <span class="section-subtitle">We use only the high quality original products</span>
+                    <hr class="line line-hr-left">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 owl-carousel owl-theme">
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/3.png" alt=""></a>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/2.png" alt=""></a>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/5.png" alt=""></a>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/6.png" alt=""></a>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/1.png" alt=""></a>
+                    </div>
+                    <div class="brand-logo">
+                        <a href="#"><img src="img/brands/4.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
