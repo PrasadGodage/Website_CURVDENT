@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$route['default_controller'] = 'ui/UIController/home';
+$route['default_controller'] = 'ui/UIController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
