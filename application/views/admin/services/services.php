@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <!-- Sidebar -->
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="betty-sidebar-part">
