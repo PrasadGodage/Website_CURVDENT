@@ -9,7 +9,7 @@ class UIController extends CI_Controller {
     public function home() {        
         $this->load->view('header');
         $this->load->view('sidebar/side_bar');
-        $this->load->view('home/home');
+        $this->load->view('ui/home/home');
         $this->load->view('aboutUs/aboutUs');
         $this->load->view('contact/contact');
         $this->load->view('footer');
