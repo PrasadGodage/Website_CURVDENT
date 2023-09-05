@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+</footer>
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-light">
     <!-- Create the tabs -->

@@ -255,5 +255,5 @@ $route['sales_api/(:num)']='api/SalesController/sales/$1';
 
 //--------------- Controller UI --------------------------------------
 
-$route['uifolder']='ui/UIController/uiFolder';
+$route['ui']='ui/UIController/ui';
 $route['admin']='ui/UIController/admin';
