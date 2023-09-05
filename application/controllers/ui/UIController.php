@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 class UIController extends CI_Controller {
       
 
-    public function uiFolder() {        
+    public function ui() {        
         $this->load->view('header');
         $this->load->view('sidebar/side_bar');
         $this->load->view('contact/contact');
