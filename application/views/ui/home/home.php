@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
-                <a class="logo" href="index.html"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/logo-light.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="home"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/logo-light.png" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html">
                     <h2>Curvdent<span>Center of Beauty</span></h2>
                 </a> -->
@@ -19,7 +19,7 @@
                     <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="1">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="#contact" data-scroll-nav="5">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="5">Contact</a></li>
                 </ul>
             </div>
         </div>

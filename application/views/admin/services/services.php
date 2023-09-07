@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
-                <a class="logo" href="index.html"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/logo-light.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="home"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/logo-light.png" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html">
                     <h2>Curvdent<span>Center of Beauty</span></h2>
                 </a> -->
@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
 
-                    <a href="index.html"><h5>Services Page</h5></a>
+                    <a href="services"><h5>Services Page</h5></a>
                     <hr class="line line-hr-left-white">
                 </div>
             </div>
