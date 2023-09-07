@@ -29,21 +29,21 @@ class Welcome extends CI_Controller {
         $this->load->view('ui/footer');
     }
 
-    public function aboutUs() {        
-        $this->load->view('ui/header');
-        $this->load->view('ui/aboutUs/aboutUs');
-        $this->load->view('ui/footer');
-    }
+    // public function aboutUs() {        
+    //     $this->load->view('ui/header');
+    //     $this->load->view('ui/aboutUs/aboutUs');
+    //     $this->load->view('ui/footer');
+    // }
     
-	public function contact() {        
-        $this->load->view('ui/header');
-        $this->load->view('ui/contact/contact');
-        $this->load->view('ui/footer');
-    }
+	// public function contact() {        
+    //     $this->load->view('ui/header');
+    //     $this->load->view('ui/contact/aboutUs');
+    //     $this->load->view('ui/footer');
+    // }
     
 	public function services() {        
-        $this->load->view('sidebar/side_bar');
-		// $this->load->view('ui/header');
+		$this->load->view('ui/header');
+        // $this->load->view('sidebar/side_bar');
         $this->load->view('admin/services/services');
         $this->load->view('ui/footer');
     }
