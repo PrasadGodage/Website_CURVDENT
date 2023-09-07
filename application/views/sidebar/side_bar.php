@@ -24,7 +24,7 @@
             </div>
         </div>
     </nav>
-    <header class="banner-header valign bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/2.jpg">
+    <!-- <header class="banner-header valign bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/2.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
@@ -34,4 +34,4 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
