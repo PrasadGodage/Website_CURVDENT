@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
     
 	public function services() {        
 		$this->load->view('ui/header');
-        $this->load->view('sidebar/sidebar');
+        $this->load->view('sidebar/side_bar');
         $this->load->view('admin/services/services');
         $this->load->view('ui/footer');
     }
