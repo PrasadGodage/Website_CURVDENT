@@ -10,6 +10,4 @@ $route['translate_uri_dashes'] = FALSE;
 //--------------- Controller UI --------------------------------------
 
 $route['home']='welcome/home';
-// $route['aboutus']='welcome/aboutUs';
-// $route['contact']='welcome/contact';
 $route['services']='welcome/services';
