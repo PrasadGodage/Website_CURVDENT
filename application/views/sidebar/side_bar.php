@@ -16,10 +16,10 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="home" data-scroll-nav="0">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutUs" data-scroll-nav="1">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home" data-scroll-nav="1">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="contact" data-scroll-nav="5">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home" data-scroll-nav="5">Contact</a></li>
                 </ul>
             </div>
         </div>
