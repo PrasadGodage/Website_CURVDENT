@@ -43,7 +43,8 @@
                   <h6 class="mb-0">TOTAL POST</h6>
                   <small>50+</small>
                 </div>
-                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
+                <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
+                <i class="fa fa-newspaper-o avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
               </div>
             </a>
         </div>
