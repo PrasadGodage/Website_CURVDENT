@@ -11,6 +11,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['employeeLogin']='admin/NewAdminController/index';
 $route['dashboard']='admin/NewAdminController/dashboard';
 
+//Employee Login and logout api
+$route['employee_login']='api/EmployeeLoginController/login_auth';
+$route['employeeLogout']='api/EmployeeLoginController/logout';
+
 //--------------- Controller UI --------------------------------------
 
 $route['home']='welcome/home';
