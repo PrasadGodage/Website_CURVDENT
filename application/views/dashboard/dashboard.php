@@ -40,7 +40,7 @@
           	<div class="box box-body bg-pale-primary">
               <div class="flexbox">
 
-                <span class="font-size-40 font-weight-400">Total POSTS</span>
+                <span class="font-size-40 font-weight-200">Total POSTS</span>
                 <span class="ion ion-grid text-primary font-size-50"></span>
                 
               </div>
@@ -51,8 +51,9 @@
           	<div class="box box-body bg-pale-danger">
               <div class="flexbox">
 
-                <span class="font-size-40 font-weight-400">NEWS CATEGORY</span>
-                <span class="ion ion-grid text-primary font-size-50"></span>
+                <span class="font-size-40 font-weight-200">NEWS CATEGORY</span>
+                <span class="far fa-newspaper fa-3x text-gray-500"></span>
+                <!-- <i class="far fa-newspaper fa-3x text-gray-500"></i> -->
                 
               </div>
               <div class="text-right">50</div>
@@ -62,7 +63,7 @@
           	<div class="box box-body bg-pale-success">
               <div class="flexbox">
 
-                <span class="font-size-40 font-weight-400">BANNER</span>
+                <span class="font-size-40 font-weight-200">BANNER</span>
                 <span class="ion ion-grid text-primary font-size-50"></span>
 
                 </div>
