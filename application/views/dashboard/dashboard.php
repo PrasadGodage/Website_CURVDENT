@@ -39,33 +39,421 @@
 		<div class="col-md-4 col-12">
           	<div class="box box-body bg-pale-primary">
               <div class="flexbox">
+
+                <span class="font-size-40 font-weight-400">Total POSTS</span>
                 <span class="ion ion-grid text-primary font-size-50"></span>
-                <span class="font-size-40 font-weight-400">+1824</span>
+                
               </div>
-              <div class="text-right">Total POSTS</div>
+              <div class="text-right">50</div>
             </div>
         </div>
 		<div class="col-md-4 col-12">
           	<div class="box box-body bg-pale-danger">
               <div class="flexbox">
-                <span class="ion ion-wrench text-danger font-size-50"></span>
-                <span class="font-size-40 font-weight-400">+824</span>
+
+                <span class="font-size-40 font-weight-400">NEWS CATEGORY</span>
+                <span class="ion ion-grid text-primary font-size-50"></span>
+                
               </div>
-              <div class="text-right">NEWS CATAGORY</div>
+              <div class="text-right">50</div>
             </div>
         </div>
 		<div class="col-md-4 col-12">
           	<div class="box box-body bg-pale-success">
               <div class="flexbox">
-                <span class="ion ion-thumbsup text-success font-size-50"></span>
-                <span class="font-size-40 font-weight-400">+1245</span>
-              </div>
-              <div class="text-right">BANNER</div>
+
+                <span class="font-size-40 font-weight-400">BANNER</span>
+                <span class="ion ion-grid text-primary font-size-50"></span>
+
+                </div>
+                <div class="text-right">50</div>
             </div>
         </div>		  
       </div>
 
-		
+      <div class="col-12">
+          <div class="box">
+            <div class="box-body">
+			  <div class="flexbox align-items-center p-15 bg-light">
+				<div class="flexbox align-items-center">
+				  <div class="custom-control custom-checkbox pl-0">
+					<button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="ion ion-android-checkbox-outline-blank"></i></button>
+				  </div>
+
+				  <span class="divider-line mx-1"></span>
+
+				  <!-- <div class="dropdown">
+					<button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Move to</button>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="#"><span class="badge badge-ring badge-danger mr-1"></span> Work</a>
+					  <a class="dropdown-item" href="#"><span class="badge badge-ring badge-warning mr-1"></span> Family</a>
+					  <a class="dropdown-item" href="#"><span class="badge badge-ring badge-info mr-1"></span> Friends</a>
+					  <a class="dropdown-item" href="#"><span class="badge badge-ring badge-success mr-1"></span> Private</a>
+					</div>
+				  </div> -->
+				  <!-- <div class="dropdown d-none d-sm-block">
+					<button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Sort by</button>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="#">Date</a>
+					  <a class="dropdown-item" href="#">Name</a>
+					  <a class="dropdown-item" href="#">Group</a>
+					  <a class="dropdown-item" href="#">Popular</a>
+					</div>
+				  </div> -->
+				</div>
+
+				<!-- <div>
+				  <div class="lookup lookup-circle lookup-right">
+					<input type="text" data-provide="media-search">
+				  </div>
+				</div> -->
+			  </div>
+				
+              <!-- <div class="media-list media-list-divided media-list-hover">
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+					<div class="app-contact-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-danger"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/1.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Hannah</h6>
+					  <small>
+						<span>hannah@gmail.com</span>
+						<span class="divider-dash">(123) 456-7980</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+					
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-danger opacity-0"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/2.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Samuel</h6>
+					  <small>
+						<span>samuel@gmail.com</span>
+						<span class="divider-dash">(256) 875-6579</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				 <div class="app-contact-star"> <a href="#"><i class="fa fa-star-o text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-warning"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/3.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Caleb</h6>
+					  <small>
+						<span>caleb84@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-danger opacity-0"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/4.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Isaac</h6>
+					  <small>
+						<span>isaac@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-info"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/default.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Luke</h6>
+					  <small>
+						<span>luke@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-info"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/5.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Isaiah</h6>
+					  <small>
+						<span>isaiah@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-danger opacity-0"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/6.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Brandon</h6>
+					  <small>
+						<span>brandon@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="media align-items-center">
+				  <div class="custom-control custom-checkbox">
+					<div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="custom-control-input" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+				  </div>
+
+				  <div class="app-contact-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></div>
+
+				  <span class="badge badge-dot badge-success"></span>
+
+				  <a class="flexbox flex-grow gap-items text-truncate" href="#qv-user-details" data-toggle="quickview">
+					<img class="avatar" src="../../../images/avatar/8.jpg" alt="...">
+
+					<div class="media-body text-truncate">
+					  <h6>Aaron</h6>
+					  <small>
+						<span>aaron@gmail.com</span>
+						<span class="divider-dash">(123) 456-7890</span>
+					  </small>
+					</div>
+				  </a>
+					
+				  <ul class="list-inline">
+					<li><a class="hover-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="hover-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="hover-google" href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a class="hover-instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a class="hover-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="hover-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+				  </ul>
+
+				  <div class="dropdown">
+					<a class="text-lighter" href="#" data-toggle="dropdown"><i class="ti-more-alt rotate-90"></i></a>
+					<div class="dropdown-menu dropdown-menu-right">
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-phone"></i> Call</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-commenting"></i> Message</a>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-envelope"></i> Email</a>
+					  <div class="dropdown-divider"></div>
+					  <a class="dropdown-item" href="#"><i class="fa fa-fw fa-trash"></i> Delete</a>
+					</div>
+				  </div>
+				</div>
+
+			  </div> -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /. box -->
+        <!-- </div> -->
+
 	</section>
     <!-- /.content -->
   </div>
