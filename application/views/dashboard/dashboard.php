@@ -495,7 +495,7 @@
  
             <div class="box-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart" height="100vh"></canvas>
+                    <canvas id="myAreaChart" height="400vh"></canvas>
                 </div>
             </div>
 
