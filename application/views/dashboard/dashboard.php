@@ -144,12 +144,6 @@
 				  </div> -->
 				</div>
 
-                <div class="box-body">
-                        <div class="chart-area">
-                            <canvas id="myAreaChart" height="100vh"></canvas>
-                        </div>
-                </div>
-
 				<!-- <div>
 				  <div class="lookup lookup-circle lookup-right">
 					<input type="text" data-provide="media-search">
@@ -498,9 +492,17 @@
 			  </div> -->
             </div>
             <!-- /.box-body -->
+ 
+            <div class="box-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart" height="100vh"></canvas>
+                </div>
+            </div>
+
           </div>
+
           <!-- /. box -->
-        <!-- </div> -->
+        </div>
 
 	</section>
     <!-- /.content -->
