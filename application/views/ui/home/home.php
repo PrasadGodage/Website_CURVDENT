@@ -132,7 +132,7 @@
                         <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/B2.png" alt="">
                         </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Pimple Treatment<i class=" ti-arrow-right"></i>
@@ -146,7 +146,7 @@
                         <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/B3.png" alt="">
                         </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Melasma Treatment<i class="ti-arrow-right"></i></h5>
@@ -159,7 +159,7 @@
                         <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/B1.png" alt="">
                         </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Antiaging Treatment<i class="ti-arrow-right"></i></h5>
@@ -171,7 +171,7 @@
                     <div class="item">
                         <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Non surgical face.jpg" alt=""> </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Non Surgical Face Lift<i class="ti-arrow-right"></i></h5>
@@ -185,7 +185,7 @@
                     <div class="item">
                         <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Surgical face.jpg" alt=""> </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Surgical Face Lift<i class="ti-arrow-right"></i></h5>
@@ -197,7 +197,7 @@
                     <div class="item">
                         <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""> </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Skin Glowing Treatment<i class="ti-arrow-right"></i></h5>
@@ -209,7 +209,7 @@
                     <div class="item">
                         <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt=""> </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                 style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">
                                     Skin Lightening Treatment<i class="ti-arrow-right"></i></h5>
@@ -221,7 +221,7 @@
                     <div class="item">
                         <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Dull Skin Treatment.jpg" alt=""> </div>
                         <div class="con">
-                            <a href="services.html">
+                            <a href="services">
                                 <h5
                                     style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
                                     Dull Skin Treatment<i class="ti-arrow-right"></i></h5>
