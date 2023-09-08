@@ -35,7 +35,38 @@
     <!-- Main content -->
     <section class="content">
 	  
-		<div class="row">
+    <div class="row">
+		<div class="col-md-4 col-12">
+          	<div class="box box-body bg-pale-primary">
+              <div class="flexbox">
+                <span class="ion ion-grid text-primary font-size-50"></span>
+                <span class="font-size-40 font-weight-400">+1824</span>
+              </div>
+              <div class="text-right">Total POSTS</div>
+            </div>
+        </div>
+		<div class="col-md-4 col-12">
+          	<div class="box box-body bg-pale-danger">
+              <div class="flexbox">
+                <span class="ion ion-wrench text-danger font-size-50"></span>
+                <span class="font-size-40 font-weight-400">+824</span>
+              </div>
+              <div class="text-right">NEWS CATAGORY</div>
+            </div>
+        </div>
+		<div class="col-md-4 col-12">
+          	<div class="box box-body bg-pale-success">
+              <div class="flexbox">
+                <span class="ion ion-thumbsup text-success font-size-50"></span>
+                <span class="font-size-40 font-weight-400">+1245</span>
+              </div>
+              <div class="text-right">BANNER</div>
+            </div>
+        </div>		  
+      </div>
+
+
+		<!-- <div class="row"> -->
 			<div class="col-xl-3 col-md-6 col-6">
 			  <!-- small box -->
 			  <div class="small-box box-inverse bg-primary-gradient">
