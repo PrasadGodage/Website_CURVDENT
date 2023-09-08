@@ -1,4 +1,28 @@
-<!-- sidebar-->
+<aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
+            <li class="header nav-small-cap">Menu Bar</li><li class="treeview">
+         <a href="#">
+             <i class="glyphicon glyphicon-briefcase"></i> <span>Dashboard</span>
+             <span class="pull-right-container">
+                 <i class="fa fa-angle-right pull-right"></i>
+             </span>
+         </a>
+         <!-- <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/myAttendance"><i class="fa fa-fw fa-spinner"></i>My Attendance</a></li><li><a href="https://crm.sparksoulinfotech.com/attendanceMark"><i class="fa fa-fw fa-spinner"></i>Attendance Mark</a></li></ul></li><li class="treeview"> -->
+         <a href="#">
+             <i class="fa fa-dashboard"></i> <span>Category</span>
+             <span class="pull-right-container">
+                 <i class="fa fa-angle-right pull-right"></i>
+             </span>
+         </a>
+         <!-- <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/lead"><i class="fa fa-dashboard"></i>Lead</a></li><li><a href="https://crm.sparksoulinfotech.com/contact"><i class="glyphicon glyphicon-briefcase"></i>Contact</a></li><li><a href="https://crm.sparksoulinfotech.com/leadTask"><i class="glyphicon glyphicon-briefcase"></i>Lead Task</a></li><li><a href="https://crm.sparksoulinfotech.com/officeleadmapping"><i class="glyphicon glyphicon-briefcase"></i>Lead Mapping</a></li><li><a href="https://crm.sparksoulinfotech.com/accountMaster"><i class="fa fa-bank"></i>Account</a></li><li><a href="https://crm.sparksoulinfotech.com/officeindustrymapping"><i class="glyphicon glyphicon-briefcase"></i>Industry Mapping</a></li></ul></li></ul></section> -->
+            <a href="#">
+             <i class="glyphicon glyphicon-briefcase"></i> <span>Add Post</span>
+             <span class="pull-right-container">
+                 <i class="fa fa-angle-right pull-right"></i>
+             </span>
+         </a>
+        </aside>
     <section class="sidebar">
       
       <!-- sidebar menu-->
