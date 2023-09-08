@@ -1,84 +1,23 @@
-
     <!-- sidebar-->
-    <section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
-            <li class="header nav-small-cap">Menu Bar</li><li class="treeview">
+<section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
+            <li class="header nav-small-cap">Menu Bar</li><li class="treeview menu-open">
          <a href="#">
-             <i class="glyphicon glyphicon-briefcase"></i> <span>Dashboard</span>
+             <i class="glyphicon glyphicon-briefcase"></i> <span>Employee</span>
              <span class="pull-right-container">
                  <i class="fa fa-angle-right pull-right"></i>
              </span>
          </a>
-         <!-- <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/myAttendance"><i class="fa fa-fw fa-spinner"></i>My Attendance</a></li><li><a href="https://crm.sparksoulinfotech.com/attendanceMark"><i class="fa fa-fw fa-spinner"></i>Attendance Mark</a></li></ul></li><li class="treeview"> -->
+         <ul class="treeview-menu" style="display: block;"><li><a href="https://crm.sparksoulinfotech.com/myAttendance"><i class="fa fa-fw fa-spinner"></i>My Attendance</a></li><li><a href="https://crm.sparksoulinfotech.com/attendanceMark"><i class="fa fa-fw fa-spinner"></i>Attendance Mark</a></li></ul></li><li class="treeview">
          <a href="#">
-             <i class="fa fa-dashboard"></i> <span>Category</span>
+             <i class="fa fa-dashboard"></i> <span>Master</span>
              <span class="pull-right-container">
                  <i class="fa fa-angle-right pull-right"></i>
              </span>
          </a>
-         <!-- <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/lead"><i class="fa fa-dashboard"></i>Lead</a></li><li><a href="https://crm.sparksoulinfotech.com/contact"><i class="glyphicon glyphicon-briefcase"></i>Contact</a></li><li><a href="https://crm.sparksoulinfotech.com/leadTask"><i class="glyphicon glyphicon-briefcase"></i>Lead Task</a></li><li><a href="https://crm.sparksoulinfotech.com/officeleadmapping"><i class="glyphicon glyphicon-briefcase"></i>Lead Mapping</a></li><li><a href="https://crm.sparksoulinfotech.com/accountMaster"><i class="fa fa-bank"></i>Account</a></li><li><a href="https://crm.sparksoulinfotech.com/officeindustrymapping"><i class="glyphicon glyphicon-briefcase"></i>Industry Mapping</a></li></ul></li></ul></section> -->
-            <a href="#">
-             <i class="glyphicon glyphicon-briefcase"></i> <span>Add Post</span>
-             <span class="pull-right-container">
-                 <i class="fa fa-angle-right pull-right"></i>
-             </span>
-         </a>
-        </aside>
-    <section class="sidebar">
-      
-      <!-- sidebar menu-->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="user-profile treeview">
-          <a href="#">
-			<img src="../images/user5-128x128.jpg" alt="user">
-            <span>Juliya Brus</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-		  <ul class="treeview-menu">
-            <li><a href="javascript:void()"><i class="fa fa-user mr-5"></i>My Profile </a></li>
-			<li><a href="javascript:void()"><i class="fa fa-money mr-5"></i>My Balance</a></li>
-			<li><a href="javascript:void()"><i class="fa fa-envelope-open mr-5"></i>Inbox</a></li>
-			<li><a href="javascript:void()"><i class="fa fa-cog mr-5"></i>Account Setting</a></li>
-			<li><a href="javascript:void()"><i class="fa fa-power-off mr-5"></i>Logout</a></li>
-          </ul>
-        </li>
-        <li class="header nav-small-cap">PERSONAL</li>
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-        </li>
-        <li class="active">
-          <a href="index.html">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-        </li>
-           
-        <li class="header nav-small-cap">FORMS, TABLE & LAYOUTS</li>
-		
-		<li class="header nav-small-cap">EXTRA COMPONENTS</li>       
-        
-      </ul>
-    </section>
-  </aside>
+         <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/lead"><i class="fa fa-dashboard"></i>Lead</a></li><li><a href="https://crm.sparksoulinfotech.com/contact"><i class="glyphicon glyphicon-briefcase"></i>Contact</a></li><li><a href="https://crm.sparksoulinfotech.com/leadTask"><i class="glyphicon glyphicon-briefcase"></i>Lead Task</a></li><li><a href="https://crm.sparksoulinfotech.com/officeleadmapping"><i class="glyphicon glyphicon-briefcase"></i>Lead Mapping</a></li><li><a href="https://crm.sparksoulinfotech.com/accountMaster"><i class="fa fa-bank"></i>Account</a></li><li><a href="https://crm.sparksoulinfotech.com/officeindustrymapping"><i class="glyphicon glyphicon-briefcase"></i>Industry Mapping</a></li></ul></li></ul>
+        </section>
 
-
-  <div class="content-wrapper">
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
