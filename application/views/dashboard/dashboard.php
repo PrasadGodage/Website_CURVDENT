@@ -120,9 +120,15 @@
 				  <div class="custom-control custom-checkbox pl-0">
 					<!-- <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="ion ion-android-checkbox-outline-blank"></i></button> -->
                     <h6 class="m-0 font-weight-bold text-primary">Total Posts Monthly</h6>
-                </div>
+                  </div>
 
 				  <span class="divider-line mx-1"></span>
+
+                    <div class="box-body">
+                        <div class="chart-area">
+                            <canvas id="myAreaChart" height="100vh"></canvas>
+                        </div>
+                    </div>
 
 				  <!-- <div class="dropdown">
 					<button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Move to</button>
