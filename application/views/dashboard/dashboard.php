@@ -44,7 +44,7 @@
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
-                <i class="fa fa-newspaper-o avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+                <i class="fa fa-newspaper-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
               </div>
             </a>
         </div>
@@ -69,8 +69,9 @@
                   <h6 class="mb-0">NEWS CATEGORY</h6>
                   <small>50+</small>
                 </div>
-                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
-              </div>
+                <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
+                <i class="mdi mdi-checkbox-multiple-blank-outline fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+            </div>
             </a>
          </div>
 
@@ -106,7 +107,9 @@
                   <h6 class="mb-0">BANNER</h6>
                   <small>50+</small>
                 </div>
-                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
+                <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
+                <i class="fa fa-picture-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+
               </div>
             </a>
          </div>
