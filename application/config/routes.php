@@ -8,6 +8,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 //--------------------------Login Page UI--------------------------------------------------
 
+$route['employeeLogin']='admin/NewAdminController/index';
 $route['dashboard']='admin/NewAdminController/dashboard';
 
 //--------------- Controller UI --------------------------------------
