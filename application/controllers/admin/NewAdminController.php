@@ -6,11 +6,11 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 class NewAdminController extends CI_Controller {
 
    
-//     public function index() {
-// //		$this->load->view('welcome_message');
-//         //echo base_url();
-//         $this->load->view('login');
-//     }
+    public function index() {
+//		$this->load->view('welcome_message');
+        //echo base_url();
+        $this->load->view('login');
+    }
 
     
     
