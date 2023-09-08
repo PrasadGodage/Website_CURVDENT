@@ -1,7 +1,7 @@
     <!-- sidebar-->
 <section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
             <li class="header nav-small-cap">Menu Bar</li>
-         <a href="#">
+         <!-- <a href="#">
              <i class="glyphicon glyphicon-briefcase"></i> <span>Employee</span>
              <span class="pull-right-container">
                  <i class="fa fa-angle-right pull-right"></i>
@@ -14,7 +14,7 @@
                  <i class="fa fa-angle-right pull-right"></i>
              </span>
          </a>
-         <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/lead"><i class="fa fa-dashboard"></i>Lead</a></li><li><a href="https://crm.sparksoulinfotech.com/contact"><i class="glyphicon glyphicon-briefcase"></i>Contact</a></li><li><a href="https://crm.sparksoulinfotech.com/leadTask"><i class="glyphicon glyphicon-briefcase"></i>Lead Task</a></li><li><a href="https://crm.sparksoulinfotech.com/officeleadmapping"><i class="glyphicon glyphicon-briefcase"></i>Lead Mapping</a></li><li><a href="https://crm.sparksoulinfotech.com/accountMaster"><i class="fa fa-bank"></i>Account</a></li><li><a href="https://crm.sparksoulinfotech.com/officeindustrymapping"><i class="glyphicon glyphicon-briefcase"></i>Industry Mapping</a></li></ul></li></ul>
+         <ul class="treeview-menu" style="display: none;"><li><a href="https://crm.sparksoulinfotech.com/lead"><i class="fa fa-dashboard"></i>Lead</a></li><li><a href="https://crm.sparksoulinfotech.com/contact"><i class="glyphicon glyphicon-briefcase"></i>Contact</a></li><li><a href="https://crm.sparksoulinfotech.com/leadTask"><i class="glyphicon glyphicon-briefcase"></i>Lead Task</a></li><li><a href="https://crm.sparksoulinfotech.com/officeleadmapping"><i class="glyphicon glyphicon-briefcase"></i>Lead Mapping</a></li><li><a href="https://crm.sparksoulinfotech.com/accountMaster"><i class="fa fa-bank"></i>Account</a></li><li><a href="https://crm.sparksoulinfotech.com/officeindustrymapping"><i class="glyphicon glyphicon-briefcase"></i>Industry Mapping</a></li></ul></li></ul> -->
         </section>
 
 <div class="content-wrapper">
