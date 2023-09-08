@@ -1,6 +1,6 @@
     <!-- sidebar-->
 <section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
-            <li class="header nav-small-cap">Menu Bar</li><li class="menu-open">
+            <li class="header nav-small-cap">Menu Bar</li><li class="treeview menu-open">
          <!-- <a href="#">
              <i class="glyphicon glyphicon-briefcase"></i> <span>Employee</span>
              <span class="pull-right-container">
