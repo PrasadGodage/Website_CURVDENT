@@ -124,12 +124,6 @@
 
 				  <span class="divider-line mx-1"></span>
 
-                    <div class="box-body">
-                        <div class="chart-area">
-                            <canvas id="myAreaChart" height="100vh"></canvas>
-                        </div>
-                    </div>
-
 				  <!-- <div class="dropdown">
 					<button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Move to</button>
 					<div class="dropdown-menu">
@@ -149,6 +143,12 @@
 					</div>
 				  </div> -->
 				</div>
+
+                <div class="box-body">
+                        <div class="chart-area">
+                            <canvas id="myAreaChart" height="100vh"></canvas>
+                        </div>
+                </div>
 
 				<!-- <div>
 				  <div class="lookup lookup-circle lookup-right">
