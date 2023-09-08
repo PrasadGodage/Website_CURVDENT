@@ -1,4 +1,4 @@
-<!-- <aside class="main-sidebar"> -->
+
     <!-- sidebar-->
     <section class="sidebar" style="height: auto;"><ul class="sidebar-menu tree" data-widget="tree">
             <li class="header nav-small-cap">Menu Bar</li><li class="treeview">
@@ -77,7 +77,8 @@
     </section>
   </aside>
 
-<div class="content-wrapper">
+
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
