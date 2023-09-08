@@ -37,14 +37,14 @@
 	  
     <div class="row">
 		<div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-primary">
+          	<a class="box box-body box-inverse box-primary bg-pale-primary shadow h-100 py-2">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">TOTAL POST</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
-                <i class="fa fa-newspaper-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+                <i class="fa fa-newspaper-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true" style="padding: 4vh"></i>
               </div>
             </a>
         </div>
@@ -63,14 +63,14 @@
           </div> -->
 
           <div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-danger">
+          	<a class="box box-body box-inverse box-primary bg-pale-danger shadow h-100 py-2">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">NEWS CATEGORY</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
-                <i class="mdi mdi-checkbox-multiple-blank-outline fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+                <i class="mdi mdi-checkbox-multiple-blank-outline fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true" style="padding: 4vh"></i>
             </div>
             </a>
          </div>
@@ -101,14 +101,14 @@
         </div>	 -->
         
         <div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-success">
+          	<a class="box box-body box-inverse box-primary bg-pale-success shadow h-100 py-2">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">BANNER</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
-                <i class="fa fa-picture-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
+                <i class="fa fa-picture-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true" style="padding: 4vh"></i>
 
               </div>
             </a>
