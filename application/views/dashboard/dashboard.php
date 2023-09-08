@@ -37,17 +37,44 @@
 	  
     <div class="row">
 		<div class="col-md-4 col-12">
-          	<div class="box box-body bg-pale-primary">
-              <div class="flexbox">
-
-                <span class="font-size-20 font-weight-400">Total POSTS</span>
-                <span class="ion ion-grid text-primary font-size-50"></span>
-                
+          	<a class="box box-body box-inverse box-primary bg-pale-primary">
+              <div class="flexbox align-items-center">
+                <div>
+                  <h6 class="mb-0">TOTAL POST</h6>
+                  <small>50+</small>
+                </div>
+                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
               </div>
-              <div class="text-right">50</div>
-            </div>
+            </a>
         </div>
-		<div class="col-md-4 col-12">
+
+
+            <!-- <div class="col-md-6 col-lg-3">
+            <a class="box box-body box-inverse box-primary" href="#">
+              <div class="flexbox align-items-center">
+                <div>
+                  <h6 class="mb-0">Adom Tony</h6>
+                  <small>PHP Designer</small>
+                </div>
+                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
+              </div>
+            </a>
+          </div> -->
+
+          <div class="col-md-4 col-12">
+          	<a class="box box-body box-inverse box-primary bg-pale-danger">
+              <div class="flexbox align-items-center">
+                <div>
+                  <h6 class="mb-0">NEWS CATEGORY</h6>
+                  <small>50+</small>
+                </div>
+                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
+              </div>
+            </a>
+         </div>
+
+        <!-- </div> -->
+		<!-- <div class="col-md-4 col-12">
           	<div class="box box-body bg-pale-danger">
               <div class="flexbox">
 
@@ -57,8 +84,9 @@
               </div>
               <div class="text-right">50</div>
             </div>
-        </div>
-		<div class="col-md-4 col-12">
+        </div> -->
+
+		<!-- <div class="col-md-4 col-12">
           	<div class="box box-body bg-pale-success">
               <div class="flexbox">
 
@@ -68,7 +96,20 @@
                 </div>
                 <div class="text-right">50</div>
             </div>
-        </div>		  
+        </div>	 -->
+        
+        <div class="col-md-4 col-12">
+          	<a class="box box-body box-inverse box-primary bg-pale-success">
+              <div class="flexbox align-items-center">
+                <div>
+                  <h6 class="mb-0">BANNER</h6>
+                  <small>50+</small>
+                </div>
+                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
+              </div>
+            </a>
+         </div>
+        
       </div>
 
       <div class="col-12">
@@ -78,7 +119,8 @@
 				<div class="flexbox align-items-center">
 				  <div class="custom-control custom-checkbox pl-0">
 					<!-- <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="ion ion-android-checkbox-outline-blank"></i></button> -->
-				  </div>
+                    <h6 class="m-0 font-weight-bold text-primary">Total Posts Monthly</h6>
+                </div>
 
 				  <span class="divider-line mx-1"></span>
 
