@@ -25,11 +25,7 @@ class EmployeeLoginController extends REST_Controller {
 
         $empDetails = $this->login->get_authenticate($data);
         if (!empty($empDetails)) {
-        $rolePermission=$this->role->get_profile_role($empDetails['profile_id']);
-        $tabPermission=$this->tab->get_profile_tab($empDetails['profile_id'],1);
-        $activityPermission=$this->activity->get_profile_activity($empDetails['profile_id']);
-        $activityContorlPermission = $this->permission->get_profile_activity_permission($empDetails['profile_id']);
-
+        
 
             $tokenData['id']=$empDetails['id'];
             $tokenData['name']=$empDetails['name'];
@@ -51,11 +47,6 @@ class EmployeeLoginController extends REST_Controller {
 //            send response
             $response['msg'] = 'user login successfully!';
             $response['empdetails']=$empDetails;
-            $response['type']='employee';
-            $response['role']=$rolePermission;
-            $response['tab']=$tabPermission;
-            $response['activity']=$activityPermission;
-            $response['activityControls']=$activityContorlPermission;
             $response['url']= base_url();
             $response['token'] = $jwtToken;
             $response['status'] = 200;
