@@ -13,21 +13,14 @@
                 </a>
             </li>
 
-            <li class="treeview">
-                <a href="#">
+            <li>
+                <a href="<?php echo base_url('dashboard'); ?>">
                     <i class="fa fa-envelope"></i> <span>Masters</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Tab</a></li>
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Activity</a></li>
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Role Master</a></li>
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Icon Master</a></li>
-                    
-                    
-                </ul>
+               
             </li>
             
             
@@ -38,28 +31,17 @@
                 </a>
             </li>
 
-            <li class="treeview">
-                <a href="#">
+            <li>
+                <a href="<?php echo base_url('dashboard'); ?>">
                     <i class="fa fa-envelope"></i> <span>Office</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
-                <ul class="treeview-menu" style="display: none;">
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Type</a></li>
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Branch</a></li>
-                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Employee</a></li>
-                    
-                    
-                    
-                </ul>
+                
             </li>
 
-            <li>
-                <a href="<?php echo base_url('dashboard'); ?>">
-                    <i class="glyphicon glyphicon-user mr-15"></i> <span>Location</span>
-                </a>
-            </li>
+           
             
     </section>
 <!-- </aside> -->
