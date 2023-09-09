@@ -36,9 +36,9 @@
                             <!--</div>-->
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body">
+                        <!-- <div class="box-body">
                             <div class="table-responsive">
-                                <table id=" " class="table table-bordered table-striped">
+                                <table id="categoryTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>Sr.No</th>
@@ -48,7 +48,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id=" ">
+                                    <tbody id="categoryList">
                                         
                                     </tbody>
                                     <tfoot>
@@ -62,8 +62,69 @@
                                     </tfoot>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- /.box-body -->
+
+
+                        <div class="box-body">
+				<div class="table-responsive">
+				  <table id="example1" class="table table-bordered table-striped">
+					<thead>
+						<tr>
+                            <th>Sr.No</th>
+                            <th>Category Name</th>
+                            <th>Slug</th>
+                            <th>Active</th>
+                            <th>Action</th>             
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
+                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
+                            </td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
+                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
+                            </td>
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>Junior Technical Author</td>
+							<td>San Francisco</td>
+							<td>66</td>
+							<td>2009/01/12</td>
+							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
+                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
+                            </td>
+						</tr>
+                        </tbody>
+                        <tfoot>
+						<tr>
+                            <th>Sr.No</th>
+                            <th>Category Name</th>
+                            <th>Slug</th>
+                            <th>Active</th>
+                            <th>Action</th>             
+						</tr>
+					</tfoot>
+				  </table>
+				</div>
+            </div>
+
+
+
                     </div>
                     <!-- /.box -->
 
