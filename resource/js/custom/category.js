@@ -27,17 +27,18 @@ function getCategoryList() {
                     
                 }
                 setCategoryList(categoryList);
+                console.log(categoryList);
             }
 
         }
-
+        
     });
 }
 getCategoryList();
 
-
-// client table show
+// category table show
 function setCategoryList(list) {
+    console.log(list); 
 
 $('#categoryTable').dataTable().fnDestroy();
 $('#categoryList').empty();
