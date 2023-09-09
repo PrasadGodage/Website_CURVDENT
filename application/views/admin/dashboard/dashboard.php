@@ -13,7 +13,22 @@
 
     <!-- Main content -->
     <section class="content">
-	  
+	  <div class="row">
+	    <div class="col">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                Logged In Successfully...               
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                     <span aria-hidden="true">×</span>
+                </button>   
+            </div>
+        </div>
+
+		<div class="callout bg-pale-info">
+					<h4>Nots!</h4>
+					<p>All the data is loaded from a seperate JS file</p>
+		</div>
+
+	  </div>
     <div class="row">
 		<div class="col-md-4 col-12">
           	<a class="box box-body box-inverse box-primary bg-pale-primary">
