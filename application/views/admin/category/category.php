@@ -31,8 +31,8 @@
                         <div class="box-header with-border box-controls pull-left">
 
                             <!--<div class="box-controls pull-right">-->
-                            <button type="button" class="btn btn-primary p-3" id="addPurchaseBtn">Add</button>
-                            <button type="button" class="btn btn-xs btn-primary p-3">Reload</button>
+                            <button type="button" class="btn btn-primary" id="addPurchaseBtn">Add</button>
+                            <button type="button" class="btn btn-xs btn-primary">Reload</button>
                             <!--</div>-->
                         </div>
                         <!-- /.box-header -->
