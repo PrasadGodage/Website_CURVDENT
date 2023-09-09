@@ -36,8 +36,7 @@ function getCategoryList() {
 }
 getCategoryList();
 
-
-// client table show
+// category table show
 function setCategoryList(list) {
     console.log(list); 
 
