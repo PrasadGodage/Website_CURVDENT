@@ -28,12 +28,12 @@
                 <!--table start-->
                 <div class="col-12">         
                     <div class="box">
-                        <div class="box-header with-border">
-                            <div class="box-controls pull-right">
+                        <div class="box-header with-border box-controls pull-right">
+                            <!-- <div class="box-controls pull-right"> -->
                             <button type="button" class="btn btn-primary" id="addPurchaseBtn">Add</button>
                             <button type="button" class="btn btn-xs btn-primary">Reload</button>
                             </div>
-                        </div>
+                        <!-- </div> -->
                         <!-- /.box-header -->
                         <!-- <div class="box-body">
                             <div class="table-responsive">
