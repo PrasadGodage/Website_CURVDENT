@@ -8,7 +8,7 @@
 
             <li class="header nav-small-cap">PERSONAL</li>
             <li>
-                <a href="<?php echo base_url('superDashboard'); ?>">
+                <a href="<?php echo base_url('dashboard'); ?>">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
@@ -21,10 +21,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
-                    <li><a href="<?php echo base_url('superTab'); ?>"><i class="fa fa-circle-thin"></i>Tab</a></li>
-                    <li><a href="<?php echo base_url('superActivity'); ?>"><i class="fa fa-circle-thin"></i>Activity</a></li>
-                    <li><a href="<?php echo base_url('superRole'); ?>"><i class="fa fa-circle-thin"></i>Role Master</a></li>
-                    <li><a href="<?php echo base_url('superIcon'); ?>"><i class="fa fa-circle-thin"></i>Icon Master</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Tab</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Activity</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Role Master</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Icon Master</a></li>
                     
                     
                 </ul>
@@ -33,7 +33,7 @@
             
 
             <li>
-                <a href="<?php echo base_url('superProfile'); ?>">
+                <a href="<?php echo base_url('dashboard'); ?>">
                     <i class="glyphicon glyphicon-user mr-15"></i> <span>Profile</span>
                 </a>
             </li>
@@ -46,9 +46,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu" style="display: none;">
-                    <li><a href="<?php echo base_url('office_type'); ?>"><i class="fa fa-circle-thin"></i>Type</a></li>
-                    <li><a href="<?php echo base_url('superOfficeBranch'); ?>"><i class="fa fa-circle-thin"></i>Branch</a></li>
-                    <li><a href="<?php echo base_url('superEmployee'); ?>"><i class="fa fa-circle-thin"></i>Employee</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Type</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Branch</a></li>
+                    <li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-circle-thin"></i>Employee</a></li>
                     
                     
                     
@@ -56,7 +56,7 @@
             </li>
 
             <li>
-                <a href="<?php echo base_url('superCountry'); ?>">
+                <a href="<?php echo base_url('dashboard'); ?>">
                     <i class="glyphicon glyphicon-user mr-15"></i> <span>Location</span>
                 </a>
             </li>
