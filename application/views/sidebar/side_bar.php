@@ -1,5 +1,5 @@
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
+<!-- <aside class="main-sidebar"> -->
     <!-- sidebar-->
     <section class="sidebar">
 
@@ -62,5 +62,5 @@
             </li>
             
     </section>
-</aside>
+<!-- </aside> -->
 
