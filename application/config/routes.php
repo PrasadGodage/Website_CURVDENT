@@ -8,8 +8,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 //--------------------------Login Page UI--------------------------------------------------
 
-$route['employeeLogin']='admin/NewAdminController/index';
-$route['dashboard']='admin/NewAdminController/dashboard';
+$route['employeeLogin']='admin/AdminController/index';
+$route['dashboard']='admin/AdminController/dashboard';
 
 //Employee Login and logout api
 $route['employee_login']='api/EmployeeLoginController/login_auth';
