@@ -5,7 +5,9 @@ header("Access-Control-Allow-Methods: GET, OPTIONS");
 
 class AdminController extends CI_Controller {
 
-    
+    public function index() {
+                 $this->load->view('login');
+            }
     public function dashboard() {
         $this->load->view('header');
         $this->load->view('sidebar/side_bar');
