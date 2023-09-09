@@ -68,6 +68,26 @@
 
                         <div class="box-body">
 				<div class="table-responsive">
+                <div class="row"><div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="project-table_length">
+                        <label>Show 
+                            <select name="project-table_length" aria-controls="project-table" class="form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> 
+                            entries</label>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div id="project-table_filter" class="dataTables_filter">
+                        <label>Search:
+                            <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="project-table">
+                        </label>
+                    </div>
+                </div>
+            </div>
 				  <table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
@@ -80,31 +100,28 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Tiger Nixon</td>
+							<td>1</td>
 							<td>System Architect</td>
 							<td>Edinburgh</td>
-							<td>61</td>
-							<td>2011/04/25</td>
+							<td>Active</td>
 							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
                                  <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
                             </td>
 						</tr>
 						<tr>
-							<td>Garrett Winters</td>
+							<td>2</td>
 							<td>Accountant</td>
 							<td>Tokyo</td>
-							<td>63</td>
-							<td>2011/07/25</td>
+							<td>In-Active</td>							
 							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
                                  <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
                             </td>
 						</tr>
 						<tr>
-							<td>Ashton Cox</td>
+							<td>3</td>
 							<td>Junior Technical Author</td>
 							<td>San Francisco</td>
-							<td>66</td>
-							<td>2009/01/12</td>
+							<td>Active</td>
 							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
                                  <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
                             </td>
