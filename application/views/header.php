@@ -1,3 +1,9 @@
+<?php 
+$session_data=$this->session->userdata();
+if($session_data['SuperLoginSession']==NULL){
+    redirect(base_url('/superLogin'));
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,21 +107,21 @@
                             <!-- User Account-->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <!--img src="<?php// echo ($session_data['empSession']['image']!='')?base_url().$session_data['empSession']['image']:'resource/images/avatar-custom.png'; ?>" class="user-image rounded-circle" alt="User Image"-->
-                                    <img src="" id="userImageSm" class="user-image rounded-circle" alt="User Image">
+                                    <img src="<?php echo base_url(); ?>resource/images/avatar-custom.png" class="user-image rounded-circle" alt="User Image">
                                 </a>
                                 <ul class="dropdown-menu scale-up">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <!--img src="<?php //echo ($session_data['empSession']['image']!='')?base_url().$session_data['empSession']['image']:'resource/images/avatar-custom.png'; ?>" class="float-left rounded-circle responsive-image" alt="User Image" width="50%" height=""-->
-                                        <img src="" id="userImageMd" class="float-left rounded-circle responsive-image" alt="User Image" width="50%" height="">
+                                        <img src="<?php echo base_url(); ?>resource/images/avatar-custom.png" class="float-left rounded-circle" alt="User Image">
 
                                         <p>
                                             <!--Lalit Meshram-->
-                                            <span id="userName"></span>
+                                            <?php
+                                            echo $session_data['SuperLoginSession']['username'];
+                                            
+                                            ?>
                                             <small class="mb-5">
-                                               <span class="text-bold text-info text-center" id="userRole"></span>  
-                                               <span class="text-bold text-info text-center" id="userIdforAvatar"></span>  
+                                               <span class="text-bold text-info text-center">Super Admin</span>  
                                             
                                                 
                                             </small>
@@ -131,7 +137,7 @@
                                             </div>
                                             <div role="separator" class="divider col-12"></div>
                                             <div class="col-12 text-left">
-                                                <a href="#" onclick="employeeLogout();"><i class="fa fa-power-off"></i> Logout</a>
+                                                <a href="#" onclick="superSessionLogout();"><i class="fa fa-power-off"></i> Logout</a>
                                             </div>				
                                         </div>
                                         <!-- /.row -->
