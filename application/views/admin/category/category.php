@@ -35,7 +35,7 @@
                             </div>
                         <!-- </div> -->
                         <!-- /.box-header -->
-                        <!-- <div class="box-body">
+                        <div class="box-body">
                             <div class="table-responsive">
                                 <table id="categoryTable" class="table table-bordered table-striped">
                                     <thead>
@@ -61,11 +61,11 @@
                                     </tfoot>
                                 </table>
                             </div>
-                        </div> -->
+                        </div>
                         <!-- /.box-body -->
 
 
-            <div class="box-body">
+            <!-- <div class="box-body">
 				<div class="table-responsive">         
 				  <table id="example1" class="table table-bordered table-striped">
 					<thead>
@@ -117,7 +117,7 @@
 					</tfoot>
 				  </table>
 				</div>
-            </div>
+            </div> -->
 
 
 
