@@ -39,6 +39,7 @@ class AdminController extends CI_Controller {
         $this->load->view('header');
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/category/category');
+        $this->load->view('admin/category/modal/add_category');
         $this->load->view('footer');
         $this->load->view('admin/category/category_js');
         $this->load->view('htmlend');
