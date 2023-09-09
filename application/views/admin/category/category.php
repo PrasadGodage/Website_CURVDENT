@@ -52,7 +52,7 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                        <th>Sr.No</th>
+                                            <th>Sr.No</th>
                                             <th>Category Name</th>
                                             <th>Slug</th>
                                             <th>Active</th>
