@@ -23,8 +23,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-thin"></i>Category</a></li>
-            <li><a href="#"><i class="fa fa-circle-thin"></i>Add Post</a></li>
+            <li><a href="category"><i class="fa fa-circle-thin"></i>Category</a></li>
+            <li><a href="posting"><i class="fa fa-circle-thin"></i>Add Post</a></li>
             
           </ul>
         </li>
