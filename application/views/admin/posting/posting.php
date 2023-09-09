@@ -71,8 +71,12 @@
             <div class="box-header with-border">
               <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
 			  <div class="box-controls pull-right">
-                 <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button>
-                 <button id="ror_delete" class="btn btn-xs btn-danger">Delete Selected Row</button>
+                <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button>
+              </div>
+              <div class="box-controls pull-right">
+                 <!-- <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button> -->
+                 <!-- <button id="ror_delete" class="btn btn-xs btn-danger">Delete Selected Row</button> -->
+                 <button id="row-count" class="btn btn-xs btn-primary">Row count</button>
               </div>
             </div>
             <!-- /.box-header -->
