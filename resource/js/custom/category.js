@@ -1,6 +1,6 @@
 let categoryList = new Map();
 
-function getCategoryList() {
+function getClientList() {
     $.ajax({
 
         url: ebase_url+'category_api',
@@ -34,7 +34,7 @@ function getCategoryList() {
         
     });
 }
-getCategoryList();
+getClientList();
 
 // category table show
 function setCategoryList(list) {
