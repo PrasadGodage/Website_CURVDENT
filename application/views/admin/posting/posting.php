@@ -40,7 +40,7 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table id="clientTable" class="table table-bordered table-striped">
+                                <table id="postTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
@@ -54,7 +54,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="clientList">
+                                    <tbody id="postList">
                                         
                                     </tbody>
                                     <tfoot>

@@ -22,6 +22,7 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/posting/posting');
         $this->load->view('footer');
+        $this->load->view('admin/posting/posting_js');
         $this->load->view('htmlend');
     }
     
