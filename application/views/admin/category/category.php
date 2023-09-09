@@ -66,28 +66,8 @@
                         <!-- /.box-body -->
 
 
-                        <div class="box-body">
-				<div class="table-responsive">
-                <div class="row"><div class="col-sm-12 col-md-6">
-                    <div class="dataTables_length" id="project-table_length">
-                        <label>Show 
-                            <select name="project-table_length" aria-controls="project-table" class="form-control form-control-sm">
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                            </select> 
-                            entries</label>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <div id="project-table_filter" class="dataTables_filter">
-                        <label>Search:
-                            <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="project-table">
-                        </label>
-                    </div>
-                </div>
-            </div>
+            <div class="box-body">
+				<div class="table-responsive">         
 				  <table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
