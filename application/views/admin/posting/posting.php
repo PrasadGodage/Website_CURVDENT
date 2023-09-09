@@ -30,13 +30,13 @@
                 <!--table start-->
                 <div class="col-12">         
                     <div class="box">
-                        <div class="box-header with-border box-controls pull-right">
+                        <!-- <div class="box-header with-border box-controls pull-right"> -->
 
-                            <div class="box-controls pull-left">
+                            <!-- <div class="box-controls pull-left"> -->
                             <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <button type="button" class="btn btn-primary" id="addClientBtn">Add Client</button>
-                            </div>
-                        </div>
+                            <!-- <button type="button" class="btn btn-primary" id="addClientBtn">Add Client</button> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
                         <div class="box-header with-border">
                             <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
                                 <div class="box-controls pull-right">
