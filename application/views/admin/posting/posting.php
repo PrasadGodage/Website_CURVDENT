@@ -30,91 +30,57 @@
                 <!--table start-->
                 <div class="col-12">         
                     <div class="box">
-                        <!-- <div class="box-header with-border box-controls pull-right"> -->
+                        <div class="box-header with-border box-controls pull-right">
 
-                            <!--<div class="box-controls pull-right">-->
-                            <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <!-- <button type="button" class="btn btn-primary" id="addClientBtn">Add Post</button> -->
-                            <!--</div>-->
-                        <!-- </div> -->
-                        <!-- /.box-header -->
-                      <!--  <div class="box-body">
-                            <div class="table-responsive">
-                                <table id="postTable" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Name</th>
-                                            <th>Address</th>
-                                            <th>Contact</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="postList">
-                                        
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Name</th>
-                                            <th>Address</th>
-                                            <th>Contact</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                            <div class="box-controls pull-right">
+                                <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button>
                             </div>
-                        </div> -->
+                        </div>
+                        <!-- /.box-header -->
+                      
                         <div class="box">
-            <div class="box-header with-border">
-              <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
-			  <div class="box-controls pull-right">
-                <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button>
-              </div>
-              <div class="box-controls pull-right">
-                 <!-- <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button> -->
-                 <!-- <button id="ror_delete" class="btn btn-xs btn-danger">Delete Selected Row</button> -->
-                 <button id="row-count" class="btn btn-xs btn-primary">Row count</button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-				<div class="table-responsive">
-				  <table id="postTable" class="table table-bordered table-striped">
-					<thead>
-						<tr>
-							<th>Article Title</th>
-							<th>F</th>
-							<th>C</th>
-							<th>P</th>
-							<th>Category</th>
-							<th>Active</th>
-							<th>Publised</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody id="postList" >
+                            <div class="box-header with-border">
+                            <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
+                                <div class="box-controls pull-right">
+                                    <button id="row-count" class="btn btn-xs btn-danger">Row count</button>
+                                </div>
+                            </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table id="postTable" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Article Title</th>
+                                                    <th>F</th>
+                                                    <th>C</th>
+                                                    <th>P</th>
+                                                    <th>Category</th>
+                                                    <th>Active</th>
+                                                    <th>Publised</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="postList" >
 
-					</tbody>
-					<tfoot>
-						<tr>
-                        <th>Article Title</th>
-							<th>F</th>
-							<th>C</th>
-							<th>P</th>
-							<th>Category</th>
-							<th>Active</th>
-							<th>Publised</th>
-							<th>Action</th>
-						</tr>
-					</tfoot>
-				  </table>
-				</div>
-            </div>
-            <!-- /.box-body -->
-          </div>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                <th>Article Title</th>
+                                                    <th>F</th>
+                                                    <th>C</th>
+                                                    <th>P</th>
+                                                    <th>Category</th>
+                                                    <th>Active</th>
+                                                    <th>Publised</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                        </div>
 
                         <!-- /.box-body -->
                     </div>
