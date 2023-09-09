@@ -1,10 +1,10 @@
 <!-- Left side column. contains the logo and sidebar -->
 <!-- <aside class="main-sidebar"> -->
     <!-- sidebar-->
-    <section class="sidebar">
+    <section>
 
         <!-- sidebar menu-->
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul>
 
             <li class="header nav-small-cap">PERSONAL</li>
             <li>
