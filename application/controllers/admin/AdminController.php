@@ -8,6 +8,7 @@ class AdminController extends CI_Controller {
     public function index() {
                  $this->load->view('login');
             }
+            
     public function dashboard() {
         $this->load->view('header');
         $this->load->view('admin/sidebar/side_bar');
