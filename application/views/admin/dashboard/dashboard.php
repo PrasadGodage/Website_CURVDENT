@@ -29,18 +29,7 @@
         </div>
 
 
-            <!-- <div class="col-md-6 col-lg-3">
-            <a class="box box-body box-inverse box-primary" href="#">
-              <div class="flexbox align-items-center">
-                <div>
-                  <h6 class="mb-0">Adom Tony</h6>
-                  <small>PHP Designer</small>
-                </div>
-                <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="...">
-              </div>
-            </a>
-          </div> -->
-
+            
           <div class="col-md-4 col-12">
           	<a class="box box-body box-inverse box-primary bg-pale-danger">
               <div class="flexbox align-items-center">
@@ -54,31 +43,6 @@
             </a>
          </div>
 
-        <!-- </div> -->
-		<!-- <div class="col-md-4 col-12">
-          	<div class="box box-body bg-pale-danger">
-              <div class="flexbox">
-
-                <span class="font-size-20 font-weight-400">NEWS CATEGORY</span>
-                <span class="ion ion-grid text-primary font-size-50"></span>
-                
-              </div>
-              <div class="text-right">50</div>
-            </div>
-        </div> -->
-
-		<!-- <div class="col-md-4 col-12">
-          	<div class="box box-body bg-pale-success">
-              <div class="flexbox">
-
-                <span class="font-size-20 font-weight-400">BANNER</span>
-                <span class="ion ion-grid text-primary font-size-50"></span>
-
-                </div>
-                <div class="text-right">50</div>
-            </div>
-        </div>	 -->
-        
         <div class="col-md-4 col-12">
           	<a class="box box-body box-inverse box-primary bg-pale-success">
               <div class="flexbox align-items-center">
