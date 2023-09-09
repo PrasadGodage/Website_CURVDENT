@@ -53,7 +53,7 @@
                                     <option value="N">No</option>
                                     <option value="Y">Yes</option> 
                                 </select>
-                                <small class="form-text text-danger">Recommended Image: 1920 x 1080.</small>
+                                <!-- <small class="form-text text-danger">Recommended Image: 1920 x 1080.</small> -->
                             </div>
 
                             <div class="col">
@@ -71,14 +71,10 @@
                                     <option value="Y">Yes</option> 
                                 </select>
                             </div>
-
                             <div class="col">
                                 <label for="category" class="col-form-label"><span class="text-danger">*</span> Category</label>
-                                <select class="form-control" id="id_category" name="id_category">
-                                    <option value="">- Select -</option>
-                                    <?php foreach($category as $c) : ?>
-                                        <option value="<?= $c->id ?>"><?= $c->category_name ?></option> 
-                                    <?php endforeach ?>
+                                <select type="text" class="form-control" placeholder="Select Category" id="id_category" name="id_category">
+
                                 </select>
                             </div>
                             
@@ -105,6 +101,10 @@
                             </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="posting">Close</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btn_save">Save</button>
                     </div>
                 </div>
             </div>
