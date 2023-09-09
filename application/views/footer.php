@@ -1,4 +1,3 @@
-<div id="loader"></div>
 <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
@@ -237,12 +236,13 @@
 
 <!-- SoftMaterial admin for Data Table -->
 <script src="<?php echo base_url() . 'resource/js/pages/data-table.js'; ?>"></script>
-<!--<script src="<?php // echo base_url() . 'resource/js/pages/project-table.js'; ?>"></script>-->
+
+<!-- side_bar -->
+<script src="<?php  //echo base_url() . 'resource/js/custom/employee_footer_import.js'; ?>"></script>
+
 
 <!-- Select2 -->
 	<script src="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/js/select2.full.js'; ?>"></script>
-
-    <script src="<?php  echo base_url() . 'resource/js/custom/super_footer_import.js'; ?>"></script>
 
     <script>
     //Initialize Select2 Elements
@@ -271,16 +271,7 @@
                 $loading.hide();
             });
 
-
-var base_url = sessionStorage.getItem('url');
-var token = sessionStorage.getItem('token');
-var type = sessionStorage.getItem('type');
-var rolePermission = JSON.parse(sessionStorage.getItem("rolePermission"));
-var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
-var activityControlPermission = JSON.parse(sessionStorage.getItem("activityControlPermission"));
-
-if (token === null){
-    window.location.replace("/superLogin");
-}
-    
 </script>
+
+<!-- side_bar -->
+<script src="<?php  echo base_url() . 'resource/js/custom/employeeHeaderConfiguration.js'; ?>"></script>
