@@ -1,5 +1,12 @@
 let postList = new Map();
 
+$('#addPostBtn').click(function () {
+
+    $(location).attr('href',ebase_url+'addPost');
+     
+    
+ });
+
 function getClientList() {
     $.ajax({
 
@@ -42,15 +49,15 @@ function setPostList(list) {
 $('#postTable').dataTable().fnDestroy();
 $('#postList').empty();
 var tblData = '';
+var index=1;
 
 for (let k of list.keys()) {
     
     let post = list.get(k);
 
-   
     tblData += `
     <tr>
-            <td>` + post.id + `</td>
+            <td>` + index + `</td>
             <td>` + post.title + `</td>
             <td>` + post.featured + `</td>
             <td>` + post.choice + `</td>
@@ -62,7 +69,8 @@ for (let k of list.keys()) {
             
             </td>
             
-    </tr>`            
+    </tr>`;
+    index++;
 }
 
 $('#postList').html(tblData);
