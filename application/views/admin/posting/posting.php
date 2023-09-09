@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Client
+            Positng Management
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <!--<li class="breadcrumb-item"><a href="#">Master</a></li>-->
-            <li class="breadcrumb-item active">Client Master</li>
+            <li class="breadcrumb-item active">Add Post</li>
         </ol>
     </section>
 
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Client List</h3>
+                <h3 class="box-title">Add Post</h3>
 
                 <ul class="box-controls pull-right">
                     <li><a class="box-btn-close" href="#"></a></li>
@@ -32,49 +32,45 @@
                     <div class="box">
                         <div class="box-header with-border box-controls pull-right">
 
-                            <div class="box-controls pull-left">
+                            <!--<div class="box-controls pull-right">-->
                             <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <button type="button" class="btn btn-primary" id="addClientBtn">Add Client</button>
-                            </div>
+                            <button type="button" class="btn btn-primary" id="addClientBtn">Add Post</button>
+                            <!--</div>-->
                         </div>
-                        <div class="box-header with-border">
-                            <!-- <h3 class="box-title">Data Table With Full Features</h3> -->
-                                <div class="box-controls pull-right">
-                                    <button id="row-count" class="btn btn-xs btn-danger">Row count</button>
-                                </div>
-                            </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                            <table id="postTable" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Article Title</th>
-                                                    <th>F</th>
-                                                    <th>C</th>
-                                                    <th>P</th>
-                                                    <th>Category</th>
-                                                    <th>Active</th>
-                                                    <th>Publised</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="postList" >
-
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                <th>Article Title</th>
-                                                    <th>F</th>
-                                                    <th>C</th>
-                                                    <th>P</th>
-                                                    <th>Category</th>
-                                                    <th>Active</th>
-                                                    <th>Publised</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                                <table id="clientTable" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr No.</th>
+                                            <th>Article Title</th>
+                                            <th>F</th>
+                                            <th>C</th>
+                                            <th>P</th>
+                                            <th>Category</th>
+                                            <th>Active</th>
+                                            <th>Publish</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="clientList">
+                                        
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                        <th>Sr No.</th>
+                                            <th>Article Title</th>
+                                            <th>F</th>
+                                            <th>C</th>
+                                            <th>P</th>
+                                            <th>Category</th>
+                                            <th>Active</th>
+                                            <th>Publish</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                             </div>
                         </div>
                         <!-- /.box-body -->
