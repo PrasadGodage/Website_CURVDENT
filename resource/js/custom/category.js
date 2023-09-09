@@ -27,10 +27,11 @@ function getCategoryList() {
                     
                 }
                 setCategoryList(categoryList);
+                console.log(categoryList);
             }
 
         }
-
+        
     });
 }
 getCategoryList();
