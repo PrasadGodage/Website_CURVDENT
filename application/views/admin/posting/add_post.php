@@ -71,6 +71,7 @@
                                     <option value="Y">Yes</option> 
                                 </select>
                             </div>
+                            
                             <div class="col">
                                 <label for="category" class="col-form-label"><span class="text-danger">*</span> Category</label>
                                 <select type="text" class="form-control" placeholder="Select Category" id="id_category" name="id_category"></select>
@@ -102,7 +103,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="closePage">Close</button>
-                        <button type="button" class="btn btn-sm btn-primary" id="btn_save">Save</button>
+                        <button type="submit" class="btn btn-sm btn-primary" id= "btn_Save">Save</button>
                     </div>
                 </div>
             </div>
