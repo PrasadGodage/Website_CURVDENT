@@ -73,9 +73,7 @@
                             </div>
                             <div class="col">
                                 <label for="category" class="col-form-label"><span class="text-danger">*</span> Category</label>
-                                <select type="text" class="form-control" placeholder="Select Category" id="id_category" name="id_category">
-
-                                </select>
+                                <select type="text" class="form-control" placeholder="Select Category" id="id_category" name="id_category"></select>
                             </div>
                             
                             <div class="col">
