@@ -68,31 +68,33 @@ $('#addCategoryBtn').click(function () {
 });
 
 
-//Set BrandList ---------------------------------------------------
-function setCategoryList(list) {
+// //Set BrandList ---------------------------------------------------
+// function setCategoryList(list) {
 
-    $('#categoryTable').dataTable().fnDestroy();
-    $('#categoryList').empty();
-    var tblData = '';
+//     $('#categoryTable').dataTable().fnDestroy();
+//     $('#categoryList').empty();
+//     var tblData = '';
     
-    for (let k of list.keys()) {
+//     for (let k of list.keys()) {
         
-        let category = list.get(k);
+//         let category = list.get(k);
         
         
 
-        tblData += `
-                <tr>
-                        <td>${category.id}</td>
-                        <td>${category.category_name}</td>
-                        <td> <a href="#" onclick="updateCategoryDetails(${category.id})" title="Update Category" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
-                </tr>
-                `;
-    }
+//         tblData += `
+//                 <tr>
+//                         <td>${category.id}</td>
+//                         <td>${category.category_name}</td>
+//                         <td>${category.slug}</td>
+//                         <td>${category.is_active}</td>
+//                         <td> <a href="#" onclick="updateCategoryDetails(${category.id})" title="Update Category" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
+//                 </tr>
+//                 `;
+//     }
     
-    $('#categoryList').html(tblData);
-    $('#categoryTable').DataTable();
-}
+//     $('#categoryList').html(tblData);
+//     $('#categoryTable').DataTable();
+// }
 
 
 
@@ -102,11 +104,15 @@ function updateCategoryDetails(id) {
     //clear all fields
     $('#id').val('');
     $('#category_name').val('');
+    $('#slug').val('');
+    $('#is_active').val('');
     
     $('.error').text('');
     //set details
     $('#id').val(category.id);
     $('#category_name').val(category.category_name);
+    $('#slug').val(category.slug);
+    $('#is_active').val(category.is_active);
     $('#addCategoryModal').modal('toggle');
 }
 
