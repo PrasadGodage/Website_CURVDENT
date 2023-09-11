@@ -30,8 +30,8 @@
                     <div class="box">
                         <div class="box-header pull-left">
                             <!-- <div class="box-controls pull-right"> -->
-                            <button type="button" class="btn btn-primary" id="addCategoryBtn"><i class="fas fa-plus"></i>Add</button>
-                            <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fas fa-sync-alt"></i>Reload</button>
+                            <button type="button" class="btn btn-primary" id="addCategoryBtn"><i class="fa-plus"></i>Add</button>
+                            <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fa-sync-alt"></i>Reload</button>
                             </div>
                         <!-- </div> -->
                         <!-- /.box-header -->
