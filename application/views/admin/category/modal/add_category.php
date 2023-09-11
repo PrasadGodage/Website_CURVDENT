@@ -17,7 +17,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Enter Category Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryName" name="categoryName">
+                                    <input type="text" class="form-control" placeholder="Enter Category Name" id="category_name" name="category_name">
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>

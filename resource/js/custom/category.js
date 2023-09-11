@@ -84,7 +84,7 @@ function setCategoryList(list) {
         tblData += `
                 <tr>
                         <td>${category.id}</td>
-                        <td>${category.categoryName}</td>
+                        <td>${category.category_name}</td>
                         <td> <a href="#" onclick="updateCategoryDetails(${category.id})" title="Update Category" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
                 </tr>
                 `;
@@ -101,12 +101,12 @@ function updateCategoryDetails(id) {
     let category = categoryList.get(id.toString());
     //clear all fields
     $('#id').val('');
-    $('#categoryName').val('');
+    $('#category_name').val('');
     
     $('.error').text('');
     //set details
     $('#id').val(category.id);
-    $('#categoryName').val(category.categoryName);
+    $('#category_name').val(category.category_name);
     $('#addCategoryModal').modal('toggle');
 }
 
