@@ -21,6 +21,23 @@
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Enter Slug</label>
+                                    <input type="text" class="form-control" placeholder="Enter Slug Name" id="slug" name="slug">
+                                    <input type="hidden" class="form-control" id="id" name="id">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Enter Status</label>
+                                    <input type="text" class="form-control" placeholder="Enter Status" id="is_active" name="is_active">
+                                    <input type="hidden" class="form-control" id="id" name="id">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="modal-footer text-right">
