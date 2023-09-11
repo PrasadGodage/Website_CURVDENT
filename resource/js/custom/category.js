@@ -68,33 +68,36 @@ $('#addCategoryBtn').click(function () {
 });
 
 
-// //Set BrandList ---------------------------------------------------
-// function setCategoryList(list) {
+// category table show
+function setCategoryList(list) {
+    console.log(list); 
 
-//     $('#categoryTable').dataTable().fnDestroy();
-//     $('#categoryList').empty();
-//     var tblData = '';
-    
-//     for (let k of list.keys()) {
-        
-//         let category = list.get(k);
-        
-        
+$('#categoryTable').dataTable().fnDestroy();
+$('#categoryList').empty();
+var tblData = '';
 
-//         tblData += `
-//                 <tr>
-//                         <td>${category.id}</td>
-//                         <td>${category.category_name}</td>
-//                         <td>${category.slug}</td>
-//                         <td>${category.is_active}</td>
-//                         <td> <a href="#" onclick="updateCategoryDetails(${category.id})" title="Update Category" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
-//                 </tr>
-//                 `;
-//     }
+for (let k of list.keys()) {
     
-//     $('#categoryList').html(tblData);
-//     $('#categoryTable').DataTable();
-// }
+    let category = list.get(k);
+
+   
+    tblData += `
+    <tr>
+            <td>` + category.id + `</td>
+            <td>` + category.category_name + `</td>
+            <td>` + category.slug + `</td>
+            <td>` + category. is_active + `</td>
+            <td> <a href="#" onclick="updatePostDetails(${category.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
+            <a href="" onclick="" title="dalete"><i class="mdi mdi-tooltip-delete" style="font-size: 20px;"></i></a>                   
+            </td>
+            
+    </tr>`            
+}
+
+$('#categoryList').html(tblData);
+$('#categoryTable').DataTable();
+}
+
 
 
 
@@ -155,32 +158,3 @@ function getCategoryList() {
 }
 getCategoryList();
 
-// category table show
-function setCategoryList(list) {
-    console.log(list); 
-
-$('#categoryTable').dataTable().fnDestroy();
-$('#categoryList').empty();
-var tblData = '';
-
-for (let k of list.keys()) {
-    
-    let category = list.get(k);
-
-   
-    tblData += `
-    <tr>
-            <td>` + category.id + `</td>
-            <td>` + category.category_name + `</td>
-            <td>` + category.slug + `</td>
-            <td>` + category. is_active + `</td>
-            <td> <a href="#" onclick="updatePostDetails(${category.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
-            <a href="" onclick="" title="dalete"><i class="mdi mdi-tooltip-delete" style="font-size: 20px;"></i></a>                   
-            </td>
-            
-    </tr>`            
-}
-
-$('#categoryList').html(tblData);
-$('#categoryTable').DataTable();
-}
