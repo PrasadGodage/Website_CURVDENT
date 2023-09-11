@@ -157,3 +157,9 @@ function getCategoryList() {
 }
 getCategoryList();
 
+
+//import categoryValidation script
+var categoryValidation = document.createElement('script');
+categoryValidation.src = ebase_url + 'resource/js/custom/categoryValidation.js';
+categoryValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(categoryValidation);
