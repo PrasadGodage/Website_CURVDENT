@@ -42,7 +42,7 @@
                             <div class="form-group row">
                             <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Content</label>
                             <div class="col-sm-10">
-                                <textarea name="editor" id="editor" cols="30" rows="4" class="form-control"></textarea>
+                                <textarea name="content" id="content" cols="30" rows="4" class="form-control"></textarea>
                             </div>
                             </div>
 
@@ -85,7 +85,7 @@
                             </div>
                             </div>
 
-                            <div class="form-group row" id="photo-preview">
+                            <div class="form-group row" id="photo_preview">
                             <label class="col-sm-2 col-form-label">Photo</label>
                             <div class="col-sm-10">
                                 (No photo)
@@ -95,13 +95,13 @@
                             <div class="form-group row">
                             <label class="col-sm-2 col-form-label" id="label-photo"><span class="text-danger">*</span> Upload Photo </label>
                             <div class="col-sm-10">
-                                <input name="photo" type="file">
+                                <input name="photo" type="file" id="photo">
                             </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="posting">Close</button>
+                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="closePage">Close</button>
                         <button type="button" class="btn btn-sm btn-primary" id="btn_save">Save</button>
                     </div>
                 </div>
