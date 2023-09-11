@@ -64,63 +64,6 @@
                         </div>
                         <!-- /.box-body -->
 
-
-            <!-- <div class="box-body">
-				<div class="table-responsive">         
-				  <table id="example1" class="table table-bordered table-striped">
-					<thead>
-						<tr>
-                            <th>Sr.No</th>
-                            <th>Category Name</th>
-                            <th>Slug</th>
-                            <th>Active</th>
-                            <th>Action</th>             
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>System Architect</td>
-							<td>Edinburgh</td>
-							<td>Active</td>
-							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
-                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
-                            </td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Accountant</td>
-							<td>Tokyo</td>
-							<td>In-Active</td>							
-							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
-                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
-                            </td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Junior Technical Author</td>
-							<td>San Francisco</td>
-							<td>Active</td>
-							<td> <a href="" onclick="" title="view"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
-                                 <a href="" onclick="" title="update"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
-                            </td>
-						</tr>
-                        </tbody>
-                        <tfoot>
-						<tr>
-                            <th>Sr.No</th>
-                            <th>Category Name</th>
-                            <th>Slug</th>
-                            <th>Active</th>
-                            <th>Action</th>             
-						</tr>
-					</tfoot>
-				  </table>
-				</div>
-            </div> -->
-
-
-
                     </div>
                     <!-- /.box -->
 

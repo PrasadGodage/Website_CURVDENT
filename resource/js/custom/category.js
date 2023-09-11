@@ -43,8 +43,7 @@ $('#addCategoryForm').on('submit', function (e) {
                  setCategoryList(categoryList);
 
                     swal("Good job!", response.msg, "success");
-
-
+                    $(location).attr('href',ebase_url+'category');
                 } else {
 
                     swal("Good job!", response.msg, "error");
