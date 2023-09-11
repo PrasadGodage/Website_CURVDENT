@@ -76,3 +76,50 @@ for (let k of list.keys()) {
 $('#postList').html(tblData);
 $('#postTable').DataTable();
 }
+
+//Submit
+$("#btn_save").click(function(e){
+
+    e.preventDefault();
+
+    var returnVal = $("#addPostForm").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'posting_api',
+
+            type: 'POST',
+
+            headers: {
+                "Authorization": etoken
+            },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    swal("Good job!", response.msg, "success");
+                        setTimeout(
+                            $(location).attr('href',ebase_url+'posting'),
+                             8000
+                             )
+                } else {
+
+                    swal("ERROR!", response.msg, "error");
+
+                }
+
+            }
+
+        });
+    }
+});
