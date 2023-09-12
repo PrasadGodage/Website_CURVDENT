@@ -7,9 +7,30 @@ $('#addCategoryForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    var returnVal = $("#addCategoryForm").valid();
-    var formdata = new FormData(this);
-    if (returnVal) {
+    var title = $('#title').text().trim();
+    var content = $('#content').text().trim();
+    var featured = $('#featured option:selected').text().trim();
+    var choice = $('#choice option:selected').text().trim();
+    var thread = $('#thread option:selected').text().trim();
+    var id_category = $('#id_category').text().trim();
+    var photo = $('#photo option:selected').val().trim();
+    var is_active = $('#is_active').val().trim();
+
+    var formData = {
+        title:title,
+        content:content,
+        featured:featured,
+        choice:choice,
+        thread:thread ,
+        id_category:id_category ,
+        photo:photo,
+        is_active:is_active
+    
+        };
+
+    // var returnVal = $("#addCategoryForm").valid();
+    var formdata = new formData(this);
+    // if (returnVal) {
         $.ajax({
 
             url: ebase_url+'category_api',
@@ -53,8 +74,7 @@ $('#addCategoryForm').on('submit', function (e) {
             }
 
         });
-    }
-});
+    });
 
 
 
