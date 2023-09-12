@@ -29,9 +29,9 @@ $("#callPostAjax").click(function(e){
     
         };
 
-    var returnVal = $("#addPostForm").valid();
-    var formdata = new formData(this);
-    if (returnVal) {
+    // var returnVal = $("#addPostForm").valid();
+    // var formdata = new formData(this);
+    // if (returnVal) {
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -68,16 +68,14 @@ $("#callPostAjax").click(function(e){
             }
 
         });
-    }else{
-        swal({   
-            title: "Alert!",   
-            text: "Please add at least one record.",   
-            timer: 2000,   
-            showConfirmButton: false 
-        });
-    }
-    
-  });
+    // }else{
+    //     swal({   
+    //         title: "Alert!",   
+    //         text: "Please add at least one record.",   
+    //         timer: 2000,   
+    //         showConfirmButton: false 
+    //     })
+    });
   
   $('#cancleSalesPage').click(function () {
 
