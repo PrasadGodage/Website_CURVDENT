@@ -42,7 +42,7 @@ $("#callPostAjax").click(function(e){
                 "Authorization": etoken
             },
 
-            data: formdata,
+            data: formData,
 
             cache: false,
 
