@@ -16,7 +16,7 @@ $('#addPostForm').on('submit', function (e) {
     var choice = $('#choice option:selected').text().trim();
     var thread = $('#thread option:selected').text().trim();
     var id_category = $('#id_category option:selected').text().trim();
-    var category_id = $('#id_category').val().trim();
+    // var category_id = $('#id_category').val().trim();
     var is_active = $('#is_active option:selected').text().trim();
     var photo = $('#photo option:selected').val().trim();
     var date = $('#date').val().trim();
@@ -28,7 +28,7 @@ $('#addPostForm').on('submit', function (e) {
         choice:choice,
         thread:thread ,
         id_category:id_category ,
-        category_id:category_id,
+        // category_id:category_id,
         is_active:is_active,
         photo:photo,
         date:date
