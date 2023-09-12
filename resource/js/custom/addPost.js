@@ -4,8 +4,8 @@ let postList = new Map();
 // set category data
 //Submit Category Btn script
 
-$('#addPostForm').on('submit', function (e) {
-
+$("#callPostAjax").click(function(e){
+    
     e.preventDefault();
 
     var returnVal = $("#addPostForm").valid();
@@ -33,18 +33,11 @@ $('#addPostForm').on('submit', function (e) {
 
             success: function (response) {
                 if (response.status == 200) {
-                    // $('#addCategoryModal').modal('toggle');
-
-                    let id=response.data.id;
-                  
-                 if(postList.has(id)){
-                    postList.delete(id);   
-                 }
-                 postList.set(id, response.data);
-                //  setPostList(postList);
-
                     swal("Good job!", response.msg, "success");
-                    $(location).attr('href',ebase_url+'addPost');
+                        setTimeout(
+                            $(location).attr('href',ebase_url+'sales'),
+                             8000
+                             )
                 } else {
 
                     swal("Good job!", response.msg, "error");
@@ -54,10 +47,23 @@ $('#addPostForm').on('submit', function (e) {
             }
 
         });
+    }else{
+        swal({   
+            title: "Alert!",   
+            text: "Please add at least one record.",   
+            timer: 2000,   
+            showConfirmButton: false 
+        });
     }
-});
+    
+  });
+  
+  $('#cancleSalesPage').click(function () {
 
-
+    $(location).attr('href',ebase_url+'sales');
+     
+    
+ });
 
 
 function getCategoryList() {
