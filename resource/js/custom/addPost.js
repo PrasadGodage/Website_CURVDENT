@@ -9,30 +9,30 @@ $('#addPostForm').on('submit', function (e) {
     e.preventDefault();
 
      // Get form values
-    var title = $('#title').text().trim();
-    // var seo_title = $('#seo_title').text('').trim();
-    var content = $('#content').text().trim();
-    var featured = $('#featured option:selected').text().trim();
-    var choice = $('#choice option:selected').text().trim();
-    var thread = $('#thread option:selected').text().trim();
-    // var id_category = $('#id_category option:selected').text().trim();
-    // var category_id = $('#id_category').val().trim();
-    var is_active = $('#is_active option:selected').text().trim();
-    var photo = $('#photo option:selected').val().trim();
-    var date = $('#date').val().trim();
+    // var title = $('#title').text().trim();
+    // // var seo_title = $('#seo_title').text('').trim();
+    // var content = $('#content').text().trim();
+    // var featured = $('#featured option:selected').text().trim();
+    // var choice = $('#choice option:selected').text().trim();
+    // var thread = $('#thread option:selected').text().trim();
+    // // var id_category = $('#id_category option:selected').text().trim();
+    // // var category_id = $('#id_category').val().trim();
+    // var is_active = $('#is_active option:selected').text().trim();
+    // var photo = $('#photo option:selected').val().trim();
+    // var date = $('#date').val().trim();
 
-    var formdata = {
-        title:title,
-        content:content,
-        featured:featured,
-        choice:choice,
-        thread:thread ,
-        // id_category:id_category ,
-        // category_id:category_id,
-        is_active:is_active,
-        photo:photo,
-        date:date
-        };
+    // var formdata = {
+    //     title:title,
+    //     content:content,
+    //     featured:featured,
+    //     choice:choice,
+    //     thread:thread ,
+    //     // id_category:id_category ,
+    //     // category_id:category_id,
+    //     is_active:is_active,
+    //     photo:photo,
+    //     date:date
+    //     };
 
         $.ajax({
 
