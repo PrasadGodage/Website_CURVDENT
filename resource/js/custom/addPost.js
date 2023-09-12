@@ -2,15 +2,38 @@ let categoryList = new Map();
 let postList = new Map();
 
 // set category data
-//Submit Category Btn script
+//----------Submit Category Btn script--------------------------
 
 $('#addPostForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    var returnVal = $("#addPostForm").valid();
-    var formdata = new FormData(this);
-    if (returnVal) {
+     // Get form values
+    var title = $('#title').text().trim();
+    // var seo_title = $('#seo_title').text('').trim();
+    var content = $('#content').text().trim();
+    var featured = $('#featured option:selected').text().trim();
+    var choice = $('#choice option:selected').text().trim();
+    var thread = $('#thread option:selected').text().trim();
+    var id_category = $('#id_category option:selected').text().trim();
+    var category_id = $('#id_category').val().trim();
+    var is_active = $('#is_active option:selected').text().trim();
+    var photo = $('#photo option:selected').val().trim();
+    var date = $('#date').val().trim();
+
+    var formdata = {
+        title:title,
+        content:content,
+        featured:featured,
+        choice:choice,
+        thread:thread ,
+        id_category:id_category ,
+        category_id:category_id,
+        is_active:is_active,
+        photo:photo,
+        date:date
+        };
+
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -48,9 +71,7 @@ $('#addPostForm').on('submit', function (e) {
             }
 
         });
-    }
-
-});
+    });
 
 
 //Add Category Btn script -----------------------------------------------------------------
@@ -75,24 +96,24 @@ $('#addPostForm').on('submit', function (e) {
     // $('#is_active').val(' ');
     // $('#date').val(' ');
 
-    $('#btn_Save').click(function () {
-        $("#addClientForm").trigger("reset");
-        $('#id').val('');
-        $('.error').text('');
-        $('#title').text('');
-        $('#seo_title').text('');
-        $('#content').text('');
-        $('#featured').text('');
-        $('#choice').text('');
-        $('#thread').text('');
-        $('#content').text('');
-        $('#id_category').val(' ');
-        $('#is_active').val(' ');
-        $('#date').val(' ');
+    // $('#btn_Save').click(function () {
+        // $("#addClientForm").trigger("reset");
+        // $('#id').val('');
+        // $('.error').text('');
+        // $('#title').text('');
+        // $('#seo_title').text('');
+        // $('#content').text('');
+        // $('#featured').text('');
+        // $('#choice').text('');
+        // $('#thread').text('');
+        // $('#content').text('');
+        // $('#id_category').val(' ');
+        // $('#is_active').val(' ');
+        // $('#date').val(' ');
         // $('#featured').val("").change();
 
 
-});
+// });
 
 function getCategoryList() {
     $.ajax({
