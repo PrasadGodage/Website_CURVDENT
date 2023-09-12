@@ -53,8 +53,3 @@ function setCategoryDropdown(list){
 
 
 
-//import addPostValidation script
-var addPostValidation = document.createElement('script');
-addPostValidation.src = ebase_url + 'resource/js/custom/addPostValidation.js';
-addPostValidation.setAttribute("type", "text/javascript");
-document.head.appendChild(addPostValidation);
