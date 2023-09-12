@@ -15,7 +15,7 @@ $('#addPostForm').on('submit', function (e) {
     var featured = $('#featured option:selected').text().trim();
     var choice = $('#choice option:selected').text().trim();
     var thread = $('#thread option:selected').text().trim();
-    var id_category = $('#id_category option:selected').text().trim();
+    // var id_category = $('#id_category option:selected').text().trim();
     // var category_id = $('#id_category').val().trim();
     var is_active = $('#is_active option:selected').text().trim();
     var photo = $('#photo option:selected').val().trim();
@@ -27,7 +27,7 @@ $('#addPostForm').on('submit', function (e) {
         featured:featured,
         choice:choice,
         thread:thread ,
-        id_category:id_category ,
+        // id_category:id_category ,
         // category_id:category_id,
         is_active:is_active,
         photo:photo,
@@ -74,46 +74,6 @@ $('#addPostForm').on('submit', function (e) {
     });
 
 
-//Add Category Btn script -----------------------------------------------------------------
-// $('#btn_Save').click(function () {
-//     // $('#addCategoryModal').modal('toggle');
-//     $("#addPostForm").trigger("reset");
-//     // $('#id').val('');
-//     // $('.error').text('');
-// });
-
-// $('#addPurchaseForm').submit(function(e) {
-//     e.preventDefault();
-
-    // $('#title').val(' ');
-    // $('#seo_title').val(' ');
-    // $('#content').val(' ');
-    // $('#featured').val(' ');
-    // $('#choice').val(' ');
-    // $('#thread').val(' ');
-    // $('#id_category').val(' ');
-    // $('#photo').val(' ');
-    // $('#is_active').val(' ');
-    // $('#date').val(' ');
-
-    // $('#btn_Save').click(function () {
-        // $("#addClientForm").trigger("reset");
-        // $('#id').val('');
-        // $('.error').text('');
-        // $('#title').text('');
-        // $('#seo_title').text('');
-        // $('#content').text('');
-        // $('#featured').text('');
-        // $('#choice').text('');
-        // $('#thread').text('');
-        // $('#content').text('');
-        // $('#id_category').val(' ');
-        // $('#is_active').val(' ');
-        // $('#date').val(' ');
-        // $('#featured').val("").change();
-
-
-// });
 
 function getCategoryList() {
     $.ajax({
