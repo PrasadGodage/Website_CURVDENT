@@ -101,10 +101,9 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="closePage">Close</button>
-                        <button type="submit" class="btn btn-sm btn-primary">Save</button>
-                    </div>
+                    <div class="col-md-12 text-center modal-footer text-right">
+                    <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleSalesPage">Cancel</button>
+                    <button type="button" id="callPostAjax" class="btn btn-primary btn-outline"><i class="ti-save-alt"></i> Save</button>
                 </div>
             </div>
                             
