@@ -102,8 +102,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="closePage">Close</button>
-                        <button type="button" class="btn btn-sm btn-primary" id= "btn_Save">Save</button>
+                        <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="closePage">Close</button>
+                        <button type="submit" class="btn btn-primary btn-outline"><i class="ti-save-alt"></i>Save</button>
                     </div>
                 </div>
             </div>
