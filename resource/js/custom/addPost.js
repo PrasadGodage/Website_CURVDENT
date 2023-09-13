@@ -30,7 +30,7 @@ $("#callPostAjax").click(function(e){
         };
 
     // var returnVal = $("#addPostForm").valid();
-    // var formdata = new formData(this);
+    var formdata = new formData(this);
     // if (returnVal) {
         $.ajax({
 
@@ -42,7 +42,7 @@ $("#callPostAjax").click(function(e){
                 "Authorization": etoken
             },
 
-            data: formData,
+            data: formdata,
 
             cache: false,
 
