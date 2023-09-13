@@ -104,25 +104,14 @@ $('#addPostForm').on('submit', function (e) {
             dataType: 'json',
 
             success: function (response) {
-                if (response.status == 200) {
-                    // $('#addClientModal').modal('toggle');
-
-                    let id=response.data.id;
-                  
-                 if(postList.has(id)){
-                    postList.delete(id);   
+             if (response.status == 200) {
+                 swal("Good job!", response.msg, "success");
+                                       
+                     } else {
+                
+                        swal("Good job!", response.msg, "error");
+                
                  }
-                 postList.set(id, response.data);
-                 setPostList(postList);
-
-                    swal("Good job!", response.msg, "success");
-
-
-                } else {
-
-                    swal("Good job!", response.msg, "error");
-
-                }
 
             }
 
