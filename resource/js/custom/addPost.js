@@ -4,34 +4,85 @@ let postList = new Map();
 // set category data
 //Submit Category Btn script
 
-$("#callPostAjax").click(function(e){
+// $("#callPostAjax").click(function(e){
     
+//     e.preventDefault();
+
+//     var title = $('#title').val().trim();
+//     var content = $('#content').val().trim();
+//     var featured = $('#featured option:selected').text().trim();
+//     var choice = $('#choice option:selected').text().trim();
+//     var thread = $('#thread option:selected').text().trim();
+//     var id_category = $('#id_category option:selected').text().trim();
+//     // var photo = $('#photo option:selected').val().trim();
+//     var is_active = $('#is_active').val().trim();
+
+//     var formdata = {
+//         title:title,
+//         content:content,
+//         featured:featured,
+//         choice:choice,
+//         thread:thread ,
+//         id_category:id_category ,
+//         photo:photo,
+//         is_active:is_active
+    
+//         };
+
+//     // var returnVal = $("#addPostForm").valid();
+//     // var formdata = new formData(this);
+//     // if (returnVal) {
+//         $.ajax({
+
+//             url: ebase_url+'posting_api',
+
+//             type: 'POST',
+
+//             headers: {
+//                 "Authorization": etoken
+//             },
+
+//             data: formdata,
+
+//             cache: false,
+
+//             contentType: false,
+
+//             processData: false,
+
+//             dataType: 'json',
+
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     swal("Good job!", response.msg, "success");
+                       
+//                 } else {
+
+//                     swal("Good job!", response.msg, "error");
+
+//                 }
+
+//             }
+
+//         });
+//     // }else{
+//     //     swal({   
+//     //         title: "Alert!",   
+//     //         text: "Please add at least one record.",   
+//     //         timer: 2000,   
+//     //         showConfirmButton: false 
+//     //     })
+//     });
+
+
+//submit
+$('#addPostForm').on('submit', function (e) {
+
     e.preventDefault();
 
-    var title = $('#title').val().trim();
-    var content = $('#content').val().trim();
-    var featured = $('#featured option:selected').text().trim();
-    var choice = $('#choice option:selected').text().trim();
-    var thread = $('#thread option:selected').text().trim();
-    var id_category = $('#id_category option:selected').text().trim();
-    // var photo = $('#photo option:selected').val().trim();
-    var is_active = $('#is_active').val().trim();
-
-    var formdata = {
-        title:title,
-        content:content,
-        featured:featured,
-        choice:choice,
-        thread:thread ,
-        id_category:id_category ,
-        photo:photo,
-        is_active:is_active
-    
-        };
-
-    // var returnVal = $("#addPostForm").valid();
-    // var formdata = new formData(this);
-    // if (returnVal) {
+    var returnVal = $("#addPostForm").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -54,8 +105,19 @@ $("#callPostAjax").click(function(e){
 
             success: function (response) {
                 if (response.status == 200) {
+                    // $('#addClientModal').modal('toggle');
+
+                    let id=response.data.id;
+                  
+                 if(postList.has(id)){
+                    postList.delete(id);   
+                 }
+                 postList.set(id, response.data);
+                 setPostList(postList);
+
                     swal("Good job!", response.msg, "success");
-                       
+
+
                 } else {
 
                     swal("Good job!", response.msg, "error");
@@ -65,14 +127,12 @@ $("#callPostAjax").click(function(e){
             }
 
         });
-    // }else{
-    //     swal({   
-    //         title: "Alert!",   
-    //         text: "Please add at least one record.",   
-    //         timer: 2000,   
-    //         showConfirmButton: false 
-    //     })
-    });
+    }
+});
+
+
+
+
   
   $('#cancleaddPostPage').click(function () {
 
