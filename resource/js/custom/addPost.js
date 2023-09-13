@@ -8,12 +8,12 @@ $("#callPostAjax").click(function(e){
     
     e.preventDefault();
 
-    var title = $('#title').text().trim();
-    var content = $('#content').text().trim();
+    var title = $('#title').val().trim();
+    var content = $('#content').val().trim();
     var featured = $('#featured option:selected').text().trim();
     var choice = $('#choice option:selected').text().trim();
     var thread = $('#thread option:selected').text().trim();
-    var id_category = $('#id_category').text().trim();
+    var id_category = $('#id_category option:selected').text().trim();
     // var photo = $('#photo option:selected').val().trim();
     var is_active = $('#is_active').val().trim();
 
