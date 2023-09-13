@@ -17,7 +17,7 @@ $("#callPostAjax").click(function(e){
     // var photo = $('#photo option:selected').val().trim();
     var is_active = $('#is_active').val().trim();
 
-    var formData = {
+    var formdata = {
         title:title,
         content:content,
         featured:featured,
@@ -30,7 +30,7 @@ $("#callPostAjax").click(function(e){
         };
 
     // var returnVal = $("#addPostForm").valid();
-    var formdata = new formData(this);
+    // var formdata = new formData(this);
     // if (returnVal) {
         $.ajax({
 
@@ -55,10 +55,7 @@ $("#callPostAjax").click(function(e){
             success: function (response) {
                 if (response.status == 200) {
                     swal("Good job!", response.msg, "success");
-                        setTimeout(
-                            $(location).attr('href',ebase_url+'sales'),
-                             8000
-                             )
+                       
                 } else {
 
                     swal("Good job!", response.msg, "error");
@@ -77,9 +74,9 @@ $("#callPostAjax").click(function(e){
     //     })
     });
   
-  $('#cancleSalesPage').click(function () {
+  $('#cancleaddPostPage').click(function () {
 
-    $(location).attr('href',ebase_url+'sales');
+    $(location).attr('href',ebase_url+'addPost');
      
     
  });
