@@ -80,6 +80,18 @@ $('#addPostForm').on('submit', function (e) {
 
     e.preventDefault();
 
+    var formdata = {
+                title:title,
+                content:content,
+                featured:featured,
+                choice:choice,
+                thread:thread ,
+                id_category:id_category ,
+                // photo:photo,
+                is_active:is_active
+            
+                };
+
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
