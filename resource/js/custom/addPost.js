@@ -81,7 +81,7 @@ let postList = new Map();
 $("#btn_save").click(function(e){
 
     e.preventDefault();
-
+    console.log("btn_save");
     var returnVal = $("#addPostForm").valid();
     // var formdata = new FormData(this);
     if (returnVal) {
