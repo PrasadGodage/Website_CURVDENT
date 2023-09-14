@@ -17,6 +17,20 @@ $("#callPostAjax").click(function(e){
     // var photo = $('#photo option:selected').val().trim();
     var is_active = $('#is_active').val().trim();
 
+    var flag;
+
+    if (title == '' || title == null){
+        $('#clientName option:selected').text('Please Select Client Name');
+        flag=false;
+    }else if(content == '' || content == null){
+        $('#productName option:selected').text('Please select pruduct name');
+        flag=false;
+    }
+    else{
+        flag=true;
+    }
+  if(flag){
+
     var formdata = {
         title:title,
         content:content,
@@ -28,6 +42,15 @@ $("#callPostAjax").click(function(e){
         is_active:is_active
     
         };
+        //clear field value
+
+        $('#title').val(' ');
+        $('#content').val(' ');
+       
+            refreshTable();
+    
+  }
+    
 
     // var returnVal = $("#addPostForm").valid();
     // var formdata = new formData(this);
