@@ -4,12 +4,13 @@ let postList = new Map();
 
 
 
-$('#callPostAjax').on('submit', function (e) {
+$('#addPostForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    var returnVal = $("#callPostAjax").valid();
+    var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
+    console.log(formdata);
     if (returnVal) {
         $.ajax({
 
@@ -32,6 +33,9 @@ $('#callPostAjax').on('submit', function (e) {
             dataType: 'json',
 
             success: function (response) {
+
+                console.log(response);
+
                 if (response.status == 200) {
                     $('#addPostForm').modal('toggle');
 
