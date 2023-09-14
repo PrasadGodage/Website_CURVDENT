@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
@@ -33,7 +32,7 @@
             <div class="row">
                 <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
 
-                    <a href="services"><h5>Services Page</h5></a>
+                    <a href="blog"><h5>Services Page</h5></a>
                     <hr class="line line-hr-left-white">
                 </div>
             </div>
