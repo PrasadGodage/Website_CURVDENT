@@ -83,7 +83,7 @@ $("#btn_save").click(function(e){
     e.preventDefault();
 
     var returnVal = $("#addPostForm").valid();
-    var formdata = new FormData(this);
+    // var formdata = new FormData(this);
     if (returnVal) {
         $.ajax({
 
