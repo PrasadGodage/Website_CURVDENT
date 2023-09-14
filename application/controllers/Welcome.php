@@ -35,4 +35,11 @@ class Welcome extends CI_Controller {
         $this->load->view('ui/services/services');
         $this->load->view('ui/footer');
     }
+    
+	public function blog() {        
+		$this->load->view('ui/header');
+        // $this->load->view('sidebar/side_bar');
+        $this->load->view('ui/blog/blog');
+        $this->load->view('ui/footer');
+    }
 }
