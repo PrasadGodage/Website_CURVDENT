@@ -2,112 +2,59 @@ let categoryList = new Map();
 let postList = new Map();
 
 // set category data
-//Submit Category Btn script
+// //Submit Category Btn script
 
-$("#callPostAjax").click(function(e){
+// $("#callPostAjax").click(function(e){
     
-    e.preventDefault();
-
-    var title = $('#title').val().trim();
-    var content = $('#content').val().trim();
-    var featured = $('#featured option:selected').text().trim();
-    var choice = $('#choice option:selected').text().trim();
-    var thread = $('#thread option:selected').text().trim();
-    var id_category = $('#id_category option:selected').text().trim();
-    // var photo = $('#photo option:selected').val().trim();
-    var is_active = $('#is_active').val().trim();
-
-    var flag;
-
-    if (title == '' || title == null){
-        $('#clientName option:selected').text('Please Select Client Name');
-        flag=false;
-    }else if(content == '' || content == null){
-        $('#productName option:selected').text('Please select pruduct name');
-        flag=false;
-    }
-    else{
-        flag=true;
-    }
-  if(flag){
-
-    var formdata = {
-        title:title,
-        content:content,
-        featured:featured,
-        choice:choice,
-        thread:thread ,
-        id_category:id_category ,
-        photo:photo,
-        is_active:is_active
-    
-        };
-        //clear field value
-
-        $('#title').val(' ');
-        $('#content').val(' ');
-       
-            refreshTable();
-    
-  }
-    
-
-    // var returnVal = $("#addPostForm").valid();
-    // var formdata = new formData(this);
-    // if (returnVal) {
-        $.ajax({
-
-            url: ebase_url+'posting_api',
-
-            type: 'POST',
-
-            headers: {
-                "Authorization": etoken
-            },
-
-            data: formdata,
-
-            cache: false,
-
-            contentType: false,
-
-            processData: false,
-
-            dataType: 'json',
-
-            success: function (response) {
-                if (response.status == 200) {
-                    swal("Good job!", response.msg, "success");
-                       
-                } else {
-
-                    swal("Good job!", response.msg, "error");
-
-                }
-
-            }
-
-        });
-    // }else{
-    //     swal({   
-    //         title: "Alert!",   
-    //         text: "Please add at least one record.",   
-    //         timer: 2000,   
-    //         showConfirmButton: false 
-    //     })
-    });
-
-
-
-
-// // submit
-// $("#btn_save").click(function(e){
-
 //     e.preventDefault();
-//     console.log("btn_save");
-//     var returnVal = $("#addPostForm").valid();
-//     // var formdata = new FormData(this);
-//     if (returnVal) {
+
+//     var title = $('#title').val().trim();
+//     var content = $('#content').val().trim();
+//     var featured = $('#featured option:selected').text().trim();
+//     var choice = $('#choice option:selected').text().trim();
+//     var thread = $('#thread option:selected').text().trim();
+//     var id_category = $('#id_category option:selected').text().trim();
+//     // var photo = $('#photo option:selected').val().trim();
+//     var is_active = $('#is_active').val().trim();
+
+//     var flag;
+
+//     if (title == '' || title == null){
+//         $('#clientName option:selected').text('Please Select Client Name');
+//         flag=false;
+//     }else if(content == '' || content == null){
+//         $('#productName option:selected').text('Please select pruduct name');
+//         flag=false;
+//     }
+//     else{
+//         flag=true;
+//     }
+//   if(flag){
+
+//     var formdata = {
+//         title:title,
+//         content:content,
+//         featured:featured,
+//         choice:choice,
+//         thread:thread ,
+//         id_category:id_category ,
+//         photo:photo,
+//         is_active:is_active
+    
+//         };
+//         //clear field value
+
+//         $('#title').val(' ');
+//         $('#content').val(' ');
+       
+//             refreshTable();
+    
+//   }
+    
+
+//     // var returnVal = $("#addPostForm").valid();
+//     // var formdata = new formData(this);
+//     // if (returnVal) {
 //         $.ajax({
 
 //             url: ebase_url+'posting_api',
@@ -131,21 +78,84 @@ $("#callPostAjax").click(function(e){
 //             success: function (response) {
 //                 if (response.status == 200) {
 //                     swal("Good job!", response.msg, "success");
-//                         // setTimeout(
-//                         //     $(location).attr('href',ebase_url+'posting'),
-//                         //      8000
-//                         //      )
+                       
 //                 } else {
 
-//                     swal("ERROR!", response.msg, "error");
+//                     swal("Good job!", response.msg, "error");
 
 //                 }
 
 //             }
 
 //         });
-//     }
-// });
+//     // }else{
+//     //     swal({   
+//     //         title: "Alert!",   
+//     //         text: "Please add at least one record.",   
+//     //         timer: 2000,   
+//     //         showConfirmButton: false 
+//     //     })
+//     });
+
+
+
+
+// // submit
+// $("#callPostAjax").click(function(e){
+
+$('#callPostAjax').on('submit', function (e) {
+
+    e.preventDefault();
+
+    var returnVal = $("#callPostAjax").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'posting_api',
+
+            type: 'POST',
+
+            headers: {
+                "Authorization": etoken
+            },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    $('#addPostForm').modal('toggle');
+
+                    let id=response.data.id;
+                  
+                 if(postList.has(id)){
+                    postList.delete(id);   
+                 }
+                 postList.set(id, response.data);
+                 setPostList(postList);
+
+                    swal("Good job!", response.msg, "success");
+                    $(location).attr('href',ebase_url+'posting');
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
+                }
+
+            }
+
+        });
+    }
+});
+
 
 
   
