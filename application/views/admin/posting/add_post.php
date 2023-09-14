@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-md-12 text-center modal-footer text-right">
                     <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddPostPage">Cancel</button>
-                    <button type="button" id="btn_save" class="btn btn-primary btn-outline"><i
+                    <button type="button" id="callPostAjax" class="btn btn-primary btn-outline"><i
                         class="ti-save-alt"></i> Save</button>
                 </div>
             </div>
