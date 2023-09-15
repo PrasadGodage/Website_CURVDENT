@@ -145,10 +145,11 @@ function updatePostDetails(id) {
     //clear all fields
             $('#id').val('');
             $('#title').val('');
+            $('#content').val('');
             $('#featured').val('');
             $('#choice').val('');
             $('#thread').val('');
-            $('#category_name').val('');
+            $('#id_category').val('');
             $('#is_active').val('');
             $('#date').val('');
             $('#photo').val('');
@@ -157,10 +158,11 @@ function updatePostDetails(id) {
             //set details
             $('#id').val(post.id);
             $('#title').val(post.title);
+            $('#content').val(post.content);
             $('#featured').val(post.featured);
             $('#choice').val(post.choice);
             $('#thread').val(post.thread);
-            $('#category_name').val(post.category_name);
+            $('#id_category').val(post.category_name);
             $('#is_active').val(post.is_active);
             $('#date').val(post.date);
             $('#photo').val(post.photo);
