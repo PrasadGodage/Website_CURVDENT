@@ -102,7 +102,7 @@ function getPostList() {
         
     });
 }
-getCategoryList();
+getPostList();
 
 
 function setPostList(list) {
