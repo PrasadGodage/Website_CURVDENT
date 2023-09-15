@@ -140,7 +140,7 @@ function setPostList(list) {
 
     //Update Post List
     // Updte Category Details----------------------------------------------------------------------------------------
-function updateCategoryDetails(id) {
+function updatePostDetails(id) {
     let post = postList.get(id.toString());
     //clear all fields
             $('#id').val('');
@@ -165,7 +165,7 @@ function updateCategoryDetails(id) {
             $('#date').val(post.date);
             $('#photo').val(post.photo);
             // $('#addCategoryModal').modal('toggle');
-            $('#addCategoryModal').modal('toggle');
+            $('#addPostModal').modal('toggle');
         }
 
 
