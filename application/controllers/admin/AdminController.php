@@ -27,6 +27,7 @@ class AdminController extends CI_Controller {
         $this->load->view('htmlend');
     }
     
+    
     // public function addPost() {
     //     $this->load->view('header');
     //     $this->load->view('admin/sidebar/side_bar');
