@@ -162,7 +162,7 @@ function updatePostDetails(id) {
             $('#featured').val(post.featured);
             $('#choice').val(post.choice);
             $('#thread').val(post.thread);
-            $('#id_category').val(post.category_name);
+            $('#id_category').val(post.id_category);
             $('#is_active').val(post.is_active);
             $('#date').val(post.date);
             $('#photo').val(post.photo);
