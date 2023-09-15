@@ -31,7 +31,7 @@
 	  </div>
     <div class="row">
 		<div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-primary">
+          	<a class="box box-body box-inverse box-primary bg-primary">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">TOTAL POST</h6>
@@ -46,7 +46,7 @@
 
             
           <div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-danger">
+          	<a class="box box-body box-inverse box-primary bg-danger">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">NEWS CATEGORY</h6>
@@ -59,7 +59,7 @@
          </div>
 
         <div class="col-md-4 col-12">
-          	<a class="box box-body box-inverse box-primary bg-pale-success">
+          	<a class="box box-body box-inverse box-primary bg-success">
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">BANNER</h6>
