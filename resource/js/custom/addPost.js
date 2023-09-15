@@ -1,7 +1,9 @@
 let categoryList = new Map();
 let postList = new Map();
 let updatepostId=id;
- console.log('post Id2:'+updatepostId);
+//  console.log('post Id2:'+updatepostId);
+ console.log('post id='+id);
+
 
 
 
