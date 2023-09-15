@@ -39,7 +39,7 @@ class Welcome extends CI_Controller {
 	public function blog() {        
 		$this->load->view('ui/header');
         // $this->load->view('sidebar/side_bar');
-        $this->load->view('ui/blog/blog');
+        $this->load->view('ui/blogs/blog');
         $this->load->view('ui/footer');
     }
 }
