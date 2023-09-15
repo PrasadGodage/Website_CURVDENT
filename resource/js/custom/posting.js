@@ -81,7 +81,7 @@ $('#postTable').DataTable();
 // Updte Posting Details----------------------------------------------------------------------------------------
 function updatePostDetails(id) {
    
-         $(location).attr('href',ebase_url+'addPost?postid'+id);
+         $(location).attr('href',ebase_url+'addPost');
 
 
       // Updte Posting Details----------------------------------------------------------------------------------------
