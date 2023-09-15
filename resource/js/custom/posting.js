@@ -149,7 +149,7 @@ function updatePostDetails(id) {
             $('#featured').val('');
             $('#choice').val('');
             $('#thread').val('');
-            $('#id_category').val('');
+            $('#category_name').val('');
             $('#is_active').val('');
             $('#date').val('');
             $('#photo').val('');
@@ -162,7 +162,7 @@ function updatePostDetails(id) {
             $('#featured').val(post.featured);
             $('#choice').val(post.choice);
             $('#thread').val(post.thread);
-            $('#id_category').val(post.id_category);
+            $('#category_name').val(post.category_name);
             $('#is_active').val(post.is_active);
             $('#date').val(post.date);
             $('#photo').val(post.photo);
