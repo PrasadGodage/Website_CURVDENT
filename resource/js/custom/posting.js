@@ -81,13 +81,14 @@ $('#postTable').DataTable();
 // Updte Posting Details----------------------------------------------------------------------------------------
 function updatePostDetails(id) {
    
-         $(location).attr('href',ebase_url+'addPost/112');
+         $(location).attr('href',ebase_url+'addPost');
 
 
       // Updte Posting Details----------------------------------------------------------------------------------------
 // function updatePostDetails(id) {
     let post = postList.get(id.toString());
     //clear all fields
+    if (post) {
     $('#id').val('');
     $('#title').val('');
     $('#featured').val('');
@@ -110,7 +111,10 @@ function updatePostDetails(id) {
     $('#date').val(post.date);
     $('#photo').val(post.photo);
     $('#addCategoryModal').modal('toggle');
- }
+} else {
+    console.error('Post not found with ID: ' + id);
+}
+}
          
 // success: function (response) {
 //     let post=response.data[0];
