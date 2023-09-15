@@ -110,7 +110,7 @@ function updatePostDetails(id) {
     $('#is_active').val(post.is_active);
     $('#date').val(post.date);
     $('#photo').val(post.photo);
-    $('#addCategoryModal').modal('toggle');
+    // $('#addCategoryModal').modal('toggle');
 } else {
     console.error('Post not found with ID: ' + id);
 }
