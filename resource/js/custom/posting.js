@@ -111,6 +111,7 @@ function updatePostDetails(id) {
     $('#date').val(post.date);
     $('#photo').val(post.photo);
     // $('#addCategoryModal').modal('toggle');
+    $('#addPostForm').modal('show');
 } else {
     console.error('Post not found with ID: ' + id);
 }
