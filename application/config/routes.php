@@ -11,8 +11,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['employeeLogin']='admin/AdminController/index';
 $route['dashboard']='admin/AdminController/dashboard';
 $route['posting']='admin/AdminController/posting';
-// $route['addPost']='admin/AdminController/addPost';
-$route['addPost/(:num)']='ui/UIController/addPost/$1';
+$route['addPost']='admin/AdminController/addPost';
+// $route['addPost/(:num)']='ui/UIController/addPost/$1';
 $route['category']='admin/AdminController/category';
 
 //Employee Login and logout api
