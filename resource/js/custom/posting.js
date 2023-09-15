@@ -159,11 +159,11 @@ function updatePostDetails(id) {
             $('#id').val(post.id);
             $('#title').val(post.title);
             $('#content').val(post.content);
-            $('#featured').val(post.featured);
-            $('#choice').val(post.choice);
-            $('#thread').val(post.thread);
+            $('#featured').val(post.featured).change();
+            $('#choice').val(post.choice).change();
+            $('#thread').val(post.thread).change();
             $('#id_category').val(post.id_category).change();
-            $('#is_active').val(post.is_active);
+            $('#is_active').val(post.is_active).change();
             $('#date').val(post.date);
             $('#photo').val(post.photo);
             // $('#addCategoryModal').modal('toggle');
