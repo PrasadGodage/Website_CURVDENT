@@ -65,6 +65,17 @@
                             </div>
                         </div>
 
+                        <!-- <div class="col-md-3"> -->
+                            <div class="form-group text-center">
+                                <label class="col-sm-2 col-form-label">Photo</label>
+                                <div class="col-sm-10">
+                                    <img src="<?php echo base_url('resource/images/avatar-custom.png'); ?>" alt="" id="otherdpre"  width="100px" height="100px"/>
+                                    <p><label for="profile_image" style="cursor: pointer;" class="h6"><u>Upload...</u></label></p>
+                                    <input type="file" class="form-control" name="profile_image" style="display: none;" id="profile_image" accept="image/*"  onchange="loadFile(event, 'otherdpre')" />
+                                </div>
+                            </div>
+
+
                         <div class="form-group row" id="photo_preview">
                             <label class="col-sm-2 col-form-label">Photo</label>
                             <div class="col-sm-10">
