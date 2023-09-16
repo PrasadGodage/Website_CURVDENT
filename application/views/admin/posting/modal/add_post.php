@@ -85,8 +85,8 @@
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" id="label-photo"><span class="text-danger">*</span> Upload Photo </label>
-                           <label class="col-sm-2 col-form-label h6 b-groove" for="profile_image"><span class="text-danger"></span> Choose Photo... </label>    
-                            <div class="col-sm-8">
+                           <label class="col-sm-3 col-form-label h6 b-groove" for="profile_image"><span class="text-danger"></span> Choose Photo... </label>    
+                            <div class="col-sm-7">
                                 <!-- <input name="photo" type="file" id="photo"> -->
                                 <input type="file" class="form-control" name="profile_image" style="display: none;" id="profile_image" accept="image/*"  onchange="loadFile(event, 'otherdpre')" />
                             </div>
