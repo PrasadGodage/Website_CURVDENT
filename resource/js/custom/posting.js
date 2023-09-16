@@ -125,7 +125,7 @@ function setPostList(list) {
                 <td>` + post.thread + `</td>
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
-                <td>` + post.date + `</td>
+                <td>` + post.label-photo + `</td>
                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>             
                 </td>
                 
@@ -152,7 +152,7 @@ function updatePostDetails(id) {
             $('#id_category').val('');
             $('#is_active').val('');
             $('#date').val('');
-            $('#photo').val('');
+            $('#label-photo').val('');
     
             $('.error').text('');
             //set details
@@ -165,7 +165,7 @@ function updatePostDetails(id) {
             $('#id_category').val(post.id_category).change();
             $('#is_active').val(post.is_active).change();
             $('#date').val(post.date);
-            $('#photo').val(post.photo);
+            $('#label-photo').val(post.label-photo);
             // $('#addCategoryModal').modal('toggle');
             $('#addPostModal').modal('toggle');
         }
