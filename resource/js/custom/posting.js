@@ -5,6 +5,8 @@ let postList = new Map();
 
 $('#addPostForm').on('submit', function (e) {
 
+    var currentDate = new Date().toISOString().slice(0, 10);
+
     e.preventDefault();
 
     var returnVal = $("#addPostForm").valid();
@@ -20,8 +22,8 @@ $('#addPostForm').on('submit', function (e) {
                 "Authorization": etoken
             },
 
-            data: formdata,
-
+            data: formdata, currentDate: currentDate,
+          
             cache: false,
 
             contentType: false,
