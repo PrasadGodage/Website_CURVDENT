@@ -44,6 +44,7 @@
             <div class="row">
                 <!-- Content -->
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                    <div class="main_title2"><h2>All News About Blog</h2></div>
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
@@ -213,3 +214,19 @@
             </div>
         </div>
     </section>
+    <style>
+    .main_title2{
+	   background: #f9f9ff;
+	   border-left: 3px solid $baseColor;
+	   margin-bottom: 30px;
+	h2{
+		color: $dip;
+		font-size: 18px; 
+		font-family: $rob;
+		font-weight: 500;
+		line-height: 40px;
+		padding-left: 15px;
+		margin-bottom: 0px;
+	}
+}
+    </style>
