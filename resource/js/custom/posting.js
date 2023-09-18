@@ -4,14 +4,17 @@ let postList = new Map();
 //Submit Category Btn script
 
 $('#addPostForm').on('submit', function (e) {
-
-    var currentDate = new Date().toISOString().slice(0, 10);
-
     e.preventDefault();
+
+    // Get the current date as a string in the format 'yyyy-mm-dd'
+    var currentDate = new Date().toISOString().slice(0, 10);
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
+         // Include currentDate in the data object
+         formdata.append('currentDate', currentDate);
+
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -22,7 +25,7 @@ $('#addPostForm').on('submit', function (e) {
                 "Authorization": etoken
             },
 
-            data: formdata, currentDate: currentDate,
+            data: formdata,
           
             cache: false,
 
@@ -127,7 +130,7 @@ function setPostList(list) {
                 <td>` + post.thread + `</td>
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
-                <td>` + post.profile_image + `</td>
+                <td>` + post.date + `</td>
                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>             
                 </td>
                 
