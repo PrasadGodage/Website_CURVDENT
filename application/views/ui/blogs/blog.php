@@ -62,6 +62,7 @@
                                         <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
                                         <div class="col-md-12">
                                             <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div>    
                                         <div class="col-md-12">
                                             <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
                                         </div>
