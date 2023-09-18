@@ -57,7 +57,7 @@
                             <div class="item">
                                 <div class="media-body">
                                     <div class="row">
-                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Add</button></div>
                                         <div class="col-sm-4"></div>
                                         <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
                                         <div class="col-md-12">
