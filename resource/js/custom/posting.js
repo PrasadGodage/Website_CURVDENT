@@ -196,7 +196,7 @@ function updatePostDetails(id) {
     $('#photo').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
     
     // Clear the file input field
-    // $('#profile_image').val('');
+    $('#profile_image').val('');
 
     $('.error').text('');
     
