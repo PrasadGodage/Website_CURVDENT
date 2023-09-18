@@ -168,7 +168,7 @@ function updatePostDetails(id) {
             // $('#photo').val(post.profile_image);
 
             $('#photo').attr('src','');
-            $('#photo').attr('src',base_url+'resource/images/avatar-custom.png');
+            // $('#photo').attr('src',base_url+'resource/images/avatar-custom.png');
 
             // $('#addCategoryModal').modal('toggle');
             $('#addPostModal').modal('toggle');
