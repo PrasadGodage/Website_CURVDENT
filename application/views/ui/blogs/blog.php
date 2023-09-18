@@ -124,15 +124,26 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-7 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Dull Skin Treatment.jpg" alt="">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <div class="col-md-12">
+                                            <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div> 
+                                        <div class="col-md-12">
+                                            <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
