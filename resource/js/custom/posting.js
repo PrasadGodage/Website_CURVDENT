@@ -140,41 +140,84 @@ function setPostList(list) {
 
     //Update Post List
     // Updte Category Details----------------------------------------------------------------------------------------
+// function updatePostDetails(id) {
+//     let post = postList.get(id.toString());
+//     //clear all fields
+//             $('#id').val('');
+//             $('#title').val('');
+//             $('#content').val('');
+//             $('#featured').val('');
+//             $('#choice').val('');
+//             $('#thread').val('');
+//             $('#id_category').val('');
+//             $('#is_active').val('');
+//             $('#date').val('');
+//             $('#photo').val('');
+
+//             $('#photo').attr('');
+    
+//             $('.error').text('');
+//             //set details
+//             $('#id').val(post.id);
+//             $('#title').val(post.title);
+//             $('#content').val(post.content);
+//             $('#featured').val(post.featured).change();
+//             $('#choice').val(post.choice).change();
+//             $('#thread').val(post.thread).change();
+//             $('#id_category').val(post.id_category).change();
+//             $('#is_active').val(post.is_active).change();
+//             $('#date').val(post.date);
+//             $('#photo').val(post.profile_image);
+
+//             $('#photo').attr('src','');
+//             $('#photo').attr('src',base_url+'resource/images/avatar-custom.png');
+
+//             // $('#addCategoryModal').modal('toggle');
+//             $('#addPostModal').modal('toggle');
+//         }
+
+
 function updatePostDetails(id) {
     let post = postList.get(id.toString());
-    //clear all fields
-            $('#id').val('');
-            $('#title').val('');
-            $('#content').val('');
-            $('#featured').val('');
-            $('#choice').val('');
-            $('#thread').val('');
-            $('#id_category').val('');
-            $('#is_active').val('');
-            $('#date').val('');
-            $('#photo').val('');
-            
-            $('#photo').attr('');
     
-            $('.error').text('');
-            //set details
-            $('#id').val(post.id);
-            $('#title').val(post.title);
-            $('#content').val(post.content);
-            $('#featured').val(post.featured).change();
-            $('#choice').val(post.choice).change();
-            $('#thread').val(post.thread).change();
-            $('#id_category').val(post.id_category).change();
-            $('#is_active').val(post.is_active).change();
-            $('#date').val(post.date);
-            $('#photo').val(post.profile_image);
+    // Clear all fields
+    $('#id').val('');
+    $('#title').val('');
+    $('#content').val('');
+    $('#featured').val('');
+    $('#choice').val('');
+    $('#thread').val('');
+    $('#id_category').val('');
+    $('#is_active').val('');
+    $('#date').val('');
+    $('#photo').val('');
 
-            $('#photo').attr('src','');
-            $('#photo').attr('src',base_url+'resource/images/avatar-custom.png');
+    // Reset the image preview
+    $('#photo').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    
+    // Clear the file input field
+    $('#profile_image').val('');
 
-            // $('#addCategoryModal').modal('toggle');
-            $('#addPostModal').modal('toggle');
-        }
+    $('.error').text('');
+    
+    // Set details
+    $('#id').val(post.id);
+    $('#title').val(post.title);
+    $('#content').val(post.content);
+    $('#featured').val(post.featured).change();
+    $('#choice').val(post.choice).change();
+    $('#thread').val(post.thread).change();
+    $('#id_category').val(post.id_category).change();
+    $('#is_active').val(post.is_active).change();
+    $('#date').val(post.date);
+    $('#photo').val(post.profile_image);
+
+    // Show the updated post details in a modal
+    $('#addPostModal').modal('toggle');
+}
+
+
+
 
 
     //Get Category List 
