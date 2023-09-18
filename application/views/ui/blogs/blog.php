@@ -69,15 +69,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-5 p-4">
-                                <div class="item">
-                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Antiaging.jpg" alt=""
+                    </div>    
+                    <div class="row">
+                        <div class="col-md-5 p-4">
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Antiaging.jpg" alt=""
                                             style="height: 185px;">
-                                    </div>
-
                                 </div>
                             </div>
+                        </div>
                             <div class="col-md-7 p-4">
                                 <div class="item">
                                     <div class="media-body">
@@ -86,7 +86,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 p-4">
