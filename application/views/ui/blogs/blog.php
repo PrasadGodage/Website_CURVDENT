@@ -45,7 +45,7 @@
                 <!-- Content -->
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
                     <div class="row">
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-4 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
                                         style="height: 185px;">
@@ -53,7 +53,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-8 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/melasma.jpg" alt=""
                                         style="height: 185px;">
