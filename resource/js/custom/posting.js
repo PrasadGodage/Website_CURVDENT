@@ -152,6 +152,8 @@ function updatePostDetails(id) {
             $('#id_category').val('');
             $('#is_active').val('');
             $('#date').val('');
+            $('#photo').val('');
+            
             $('#photo').attr('');
     
             $('.error').text('');
@@ -165,7 +167,7 @@ function updatePostDetails(id) {
             $('#id_category').val(post.id_category).change();
             $('#is_active').val(post.is_active).change();
             $('#date').val(post.date);
-            // $('#photo').val(post.profile_image);
+            $('#photo').val(post.profile_image);
 
             $('#photo').attr('src','');
             $('#photo').attr('src',base_url+'resource/images/avatar-custom.png');
