@@ -253,13 +253,14 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col-12 p-0">
-                                <button class="carousel-control-prev" type="button" data-target="#sliderid" data-slide="prev">
-                                    <span class="bg-warning p-2">Back<span>
-                                </button>
-                            </div>
+                            
                         </div>
                     </div>
+                    <div class="col-12 p-0">
+                         <button class="carousel-control-prev" type="button" data-target="#sliderid" data-slide="prev">
+                            <span class="bg-warning p-2">Back<span>
+                        </button>
+                     </div>
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
                             <div class="betty-sidebar-block-content">
