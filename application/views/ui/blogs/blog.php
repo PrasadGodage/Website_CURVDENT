@@ -183,7 +183,7 @@
                             <div class="item">
                                 <div class="media-body">
                                     <div class="row">
-                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
                                         <div class="col-sm-4"></div>
                                         <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
                                         <div class="col-md-12">
@@ -197,6 +197,8 @@
                             </div>
                         </div>
                     </div>  
+                    <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>
+
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
                             <div class="betty-sidebar-block-content">
