@@ -7,13 +7,13 @@ $('#addPostForm').on('submit', function (e) {
     e.preventDefault();
 
     // Get the current date as a string in the format 'yyyy-mm-dd'
-    var currentDate = new Date().toISOString().slice(0, 10);
+    // var currentDate = new Date().toISOString().slice(0, 10);
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
          // Include currentDate in the data object
-         formdata.append('currentDate', currentDate);
+        //  formdata.append('currentDate', currentDate);
 
         $.ajax({
 
@@ -68,6 +68,8 @@ $('#addPostBtn').click(function () {
     $("#addPostForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
+    $('#otherdpre').attr('src','');
+    $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
 });
 
 
@@ -195,9 +197,11 @@ function updatePostDetails(id) {
     $('#id_category').val('');
     $('#is_active').val('');
     $('#date').val('');
+    $('#otherdpre').attr('src','');
     
     // Reset the image preview
-    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    // $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
     
     $('.error').text('');
     
@@ -211,6 +215,7 @@ function updatePostDetails(id) {
     $('#id_category').val(post.id_category).change();
     $('#is_active').val(post.is_active).change();
     $('#date').val(post.date);
+    $('#photo').val(post.photo);
 
     // Show the updated post details in a modal
     $('#addPostModal').modal('toggle');
