@@ -217,6 +217,9 @@
                                                        <li><a href="services">Removal</a></li> 
                                                     </ul>
                                                 </div>
+                                                <div class="card-footer bg-primary text-center">
+                                                    <button class="btn btn-dark">View</button>
+                                                <div>
                                             </div>
                                         </div>
                                     </div>
