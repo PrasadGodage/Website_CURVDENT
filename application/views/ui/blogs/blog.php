@@ -198,7 +198,21 @@
                         </div>
                     </div>  
                     <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>
-
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 p-0">
+                                <div class="csrousel-inner">
+                                    <div class="csrousel-item active">
+                                        <div class="card w-25 float-left">
+                                            <div class="card-header bg-primary p-0">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
                             <div class="betty-sidebar-block-content">
