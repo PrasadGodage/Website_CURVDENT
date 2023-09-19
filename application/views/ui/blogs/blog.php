@@ -201,9 +201,15 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 p-0">
+                              <div id="sliderid" class="carousel slide" data="carousel">
+                                <ol>
+                                    <li data-target="#sliderid" data-slide-to="0" class="active"></li>
+                                    <li data-target="#sliderid" data-slide-to="1"></li>
+                                    <li data-target="#sliderid" data-slide-to="2"></li>
+                                </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <div class="card w-50 float-left">
+                                        <div class="card w-100 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
@@ -224,7 +230,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="card w-50 float-left">
+                                        <div class="card w-100 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt=""></div>
@@ -245,6 +251,7 @@
                                         </div>
                                     </div>
                                 </div>
+                              </div>
                             </div>
                         </div>
                     </div>
