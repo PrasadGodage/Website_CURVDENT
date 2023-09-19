@@ -203,7 +203,7 @@ function updatePostDetails(id) {
     
     // Reset the image preview
     // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
     
