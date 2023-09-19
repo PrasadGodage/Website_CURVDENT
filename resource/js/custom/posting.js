@@ -135,7 +135,8 @@ function setPostList(list) {
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
                 <td>` + post.date + `</td>
-                <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>             
+                <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <td> <a href="#" onclick="deletePostDetails(${post.id})" ><i class="mdi mdi-tooltip-delete" style="font-size: 20px;"></i></a>                          
                 </td>
                 
         </tr>`;
