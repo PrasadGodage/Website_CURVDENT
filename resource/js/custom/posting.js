@@ -69,8 +69,8 @@ $('#addPostBtn').click(function () {
     $('#id').val('');
     $('.error').text('');
     $('#otherdpre').attr('src','');
-    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    // $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
 
 });
 
