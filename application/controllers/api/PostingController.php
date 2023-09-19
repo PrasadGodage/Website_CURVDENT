@@ -62,7 +62,7 @@ class PostingController extends REST_Controller {
         $data['thread'] = $this->post('thread');
         $data['id_category'] = $this->post('id_category');
         // $data['photo'] = $this->post('photo');
-        // $data['date'] = $this->post('date');
+        $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
         $data['is_active'] = $this->post('is_active');
         
         $id = $this->post('id');
@@ -77,23 +77,6 @@ class PostingController extends REST_Controller {
                 
                 if (empty($id)) {
                     if($this->posting->find_posting($data['title'])){
-                        
-                        $loop=1;
-                        $prefix=$this->getPrefix();
-                        
-                        while($loop){
-                            $randomNo=rand(1,10000);
-                            
-                            if($this->posting->find_categoryid($prefix.$randomNo)){
-                                $data['id_category']=$prefix.$randomNo;
-                                $loop=0;
-                            }
-                        }
-                        
-                        $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                        // $data['created_by'] = $this->post('created_by');
-                    // $data['created_at'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                    
 
                     if (!empty($_FILES['photo']['name'])) {
                     $file_data['file_name'] = $_FILES['photo']['name'];
@@ -131,7 +114,7 @@ class PostingController extends REST_Controller {
                 if($this->posting->find_posting($data['title']) || $result['title']==$data['title']){
                     
                     // $data['modified_by'] = $this->post('created_by');
-                    $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
+                    // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
                     if (!empty($_FILES['photo']['name'])) {
                         if (!empty($result['photo'])) {
                             unlink($result['photo']);
@@ -173,16 +156,7 @@ class PostingController extends REST_Controller {
         
     }
 
-    public function getPrefix(){
-        $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < 2; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
-        }
-
+    
     public function upload_docs($file) {
         if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg")) {
             $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
