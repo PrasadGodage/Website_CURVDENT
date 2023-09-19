@@ -199,18 +199,11 @@ function updatePostDetails(id) {
     $('#id_category').val('');
     $('#is_active').val('');
     $('#date').val('');
-    // $('#otherdpre').attr('src','');
+    $('#otherdpre').attr('src','');
     
-    // // Reset the image preview
-    // // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
-
-     // Reset the image preview
-     var imageElement = $('#otherdpre'); // Select the image by its ID or other selector
-     imageElement.attr('src', ebase_url + 'resource/images/avatar-custom.png'); // Set the new src attribute
-     
-
-
+    // Reset the image preview
+    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
     
@@ -224,7 +217,7 @@ function updatePostDetails(id) {
     $('#id_category').val(post.id_category).change();
     $('#is_active').val(post.is_active).change();
     $('#date').val(post.date);
-    $('#photo').val(post.photo);
+    $('#photo').attr(post.photo);
 
     // Show the updated post details in a modal
     $('#addPostModal').modal('toggle');
