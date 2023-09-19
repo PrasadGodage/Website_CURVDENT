@@ -44,7 +44,7 @@
             <div class="row">
                 <!-- Content -->
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
-                    <div class="main_title2"><h2>All News About Blog</h2></div>
+                    <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
