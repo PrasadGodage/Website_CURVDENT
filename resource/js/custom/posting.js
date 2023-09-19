@@ -69,7 +69,9 @@ $('#addPostBtn').click(function () {
     $('#id').val('');
     $('.error').text('');
     $('#otherdpre').attr('src','');
-    $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+
 });
 
 
@@ -200,8 +202,8 @@ function updatePostDetails(id) {
     $('#otherdpre').attr('src','');
     
     // Reset the image preview
-    $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    // $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
     
     $('.error').text('');
     
