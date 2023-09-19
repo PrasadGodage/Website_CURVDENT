@@ -203,7 +203,7 @@
                             <div class="col-12 p-0">
                                 <div class="csrousel-inner">
                                     <div class="csrousel-item active">
-                                        <div class="card w-25 float-left">
+                                        <div class="card w-100 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
