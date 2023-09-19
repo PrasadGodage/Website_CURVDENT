@@ -12,7 +12,7 @@ class PostingController extends REST_Controller {
         $this->load->library('Authorization_Token'); 
         $this->load->helper('date');
         $this->load->model('PostingModel','posting');
-        $this->load->model('AdminModel','admin');
+        // $this->load->model('AdminModel','admin');
         
     }
 
@@ -84,8 +84,8 @@ class PostingController extends REST_Controller {
                         while($loop){
                             $randomNo=rand(1,10000);
                             
-                            if($this->admin->find_userid($prefix.$randomNo)){
-                                $data['userid']=$prefix.$randomNo;
+                            if($this->posting->find_categoryid($prefix.$randomNo)){
+                                $data['id_category']=$prefix.$randomNo;
                                 $loop=0;
                             }
                         }
