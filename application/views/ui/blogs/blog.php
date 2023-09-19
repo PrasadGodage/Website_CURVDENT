@@ -203,7 +203,7 @@
                             <div class="col-12 p-0">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <div class="card w-100 float-left">
+                                        <div class="card w-50 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
@@ -224,7 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="card w-100 float-left">
+                                        <div class="card w-50 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt=""></div>
