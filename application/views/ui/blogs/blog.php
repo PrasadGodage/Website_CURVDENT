@@ -208,6 +208,15 @@
                                                <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
                                                 </div>
+                                                <div class="card-body bg-dark">
+                                                    <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
+                                                    <ul class="ul1">
+                                                       <li><a href="services">Laser Hair Removal</a></li>
+                                                       <li><a href="services">Pimple/Acne Scar</a></li>
+                                                       <li><a href="services">Pimple Treatment</a></li>
+                                                       <li><a href="services">Removal</a></li> 
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
