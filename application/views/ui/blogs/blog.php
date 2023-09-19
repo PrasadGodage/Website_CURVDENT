@@ -205,7 +205,9 @@
                                     <div class="csrousel-item active">
                                         <div class="card w-25 float-left">
                                             <div class="card-header bg-primary p-0">
-                                                
+                                               <div class="item">
+                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
