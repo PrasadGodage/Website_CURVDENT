@@ -199,11 +199,18 @@ function updatePostDetails(id) {
     $('#id_category').val('');
     $('#is_active').val('');
     $('#date').val('');
-    $('#otherdpre').attr('src','');
+    // $('#otherdpre').attr('src','');
     
-    // Reset the image preview
-    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    // // Reset the image preview
+    // // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+
+     // Reset the image preview
+     var imageElement = $('#otherdpre'); // Select the image by its ID or other selector
+     imageElement.attr('src', ebase_url + 'resource/images/avatar-custom.png'); // Set the new src attribute
+     
+
+
     
     $('.error').text('');
     
