@@ -177,6 +177,8 @@
                 </div> 
                 <!-- Sidebar -->
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                    <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
+
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
                             <div class="betty-sidebar-block-content">
