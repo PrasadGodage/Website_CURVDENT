@@ -217,7 +217,8 @@ function updatePostDetails(id) {
     $('#id_category').val(post.id_category).change();
     $('#is_active').val(post.is_active).change();
     $('#date').val(post.date);
-    $('#photo').attr(post.photo);
+    (post.photo != null) ? $('#otherdpre').attr('src', ebase_url + post.photo) : '';
+    // $('#photo').attr(post.photo);
 
     // Show the updated post details in a modal
     $('#addPostModal').modal('toggle');
