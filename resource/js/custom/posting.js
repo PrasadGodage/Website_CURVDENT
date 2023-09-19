@@ -4,12 +4,17 @@ let postList = new Map();
 //Submit Category Btn script
 
 $('#addPostForm').on('submit', function (e) {
-
     e.preventDefault();
+
+    // Get the current date as a string in the format 'yyyy-mm-dd'
+    var currentDate = new Date().toISOString().slice(0, 10);
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
+         // Include currentDate in the data object
+         formdata.append('currentDate', currentDate);
+
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -21,7 +26,7 @@ $('#addPostForm').on('submit', function (e) {
             },
 
             data: formdata,
-
+          
             cache: false,
 
             contentType: false,
@@ -125,7 +130,7 @@ function setPostList(list) {
                 <td>` + post.thread + `</td>
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
-                <td>` + post.date + `</td>
+                <td>` + post.currentDate + `</td>
                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>             
                 </td>
                 
@@ -140,35 +145,78 @@ function setPostList(list) {
 
     //Update Post List
     // Updte Category Details----------------------------------------------------------------------------------------
+// function updatePostDetails(id) {
+//     let post = postList.get(id.toString());
+//     //clear all fields
+//             $('#id').val('');
+//             $('#title').val('');
+//             $('#content').val('');
+//             $('#featured').val('');
+//             $('#choice').val('');
+//             $('#thread').val('');
+//             $('#id_category').val('');
+//             $('#is_active').val('');
+//             $('#date').val('');
+//             // $('#photo').val('');
+
+//             $('#otherdpre').attr('');
+    
+//             $('.error').text('');
+//             //set details
+//             $('#id').val(post.id);
+//             $('#title').val(post.title);
+//             $('#content').val(post.content);
+//             $('#featured').val(post.featured).change();
+//             $('#choice').val(post.choice).change();
+//             $('#thread').val(post.thread).change();
+//             $('#id_category').val(post.id_category).change();
+//             $('#is_active').val(post.is_active).change();
+//             $('#date').val(post.date);
+//             // $('#photo').val(post.profile_image);
+
+//             $('#otherdpre').attr('src','');
+//             $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
+
+//             // $('#addCategoryModal').modal('toggle');
+//             $('#addPostModal').modal('toggle');
+//         }
+
+
 function updatePostDetails(id) {
     let post = postList.get(id.toString());
-    //clear all fields
-            $('#id').val('');
-            $('#title').val('');
-            $('#content').val('');
-            $('#featured').val('');
-            $('#choice').val('');
-            $('#thread').val('');
-            $('#id_category').val('');
-            $('#is_active').val('');
-            $('#date').val('');
-            $('#photo').val('');
     
-            $('.error').text('');
-            //set details
-            $('#id').val(post.id);
-            $('#title').val(post.title);
-            $('#content').val(post.content);
-            $('#featured').val(post.featured).change();
-            $('#choice').val(post.choice).change();
-            $('#thread').val(post.thread).change();
-            $('#id_category').val(post.id_category).change();
-            $('#is_active').val(post.is_active).change();
-            $('#date').val(post.date);
-            $('#photo').val(post.photo);
-            // $('#addCategoryModal').modal('toggle');
-            $('#addPostModal').modal('toggle');
-        }
+    // Clear all fields
+    $('#id').val('');
+    $('#title').val('');
+    $('#content').val('');
+    $('#featured').val('');
+    $('#choice').val('');
+    $('#thread').val('');
+    $('#id_category').val('');
+    $('#is_active').val('');
+    $('#date').val('');
+    
+    // Reset the image preview
+    $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
+    
+    $('.error').text('');
+    
+    // Set details
+    $('#id').val(post.id);
+    $('#title').val(post.title);
+    $('#content').val(post.content);
+    $('#featured').val(post.featured).change();
+    $('#choice').val(post.choice).change();
+    $('#thread').val(post.thread).change();
+    $('#id_category').val(post.id_category).change();
+    $('#is_active').val(post.is_active).change();
+    $('#date').val(post.date);
+
+    // Show the updated post details in a modal
+    $('#addPostModal').modal('toggle');
+}
+
+
 
 
     //Get Category List 

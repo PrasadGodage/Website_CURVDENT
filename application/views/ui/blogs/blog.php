@@ -44,8 +44,9 @@
             <div class="row">
                 <!-- Content -->
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                    <div class="main_title2"><h2>All News About Blog</h2></div>
                     <div class="row">
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
                                         style="height: 185px;">
@@ -53,57 +54,122 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-7 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/melasma.jpg" alt=""
-                                        style="height: 185px;">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <div class="col-md-12">
+                                            <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div>    
+                                        <div class="col-md-12">
+                                            <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                        </div>
+                                    </div> 
                                 </div>
-
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 p-4">
-                                <div class="item">
-                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Antiaging.jpg" alt=""
+                    </div>    
+                    <div class="row">
+                        <div class="col-md-5 p-4">
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Antiaging.jpg" alt=""
                                             style="height: 185px;">
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-md-6 p-4">
-                                <div class="item">
-                                    <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Non surgical face.jpg" alt=""
-                                            style="height: 185px;"> </div>
-
                                 </div>
                             </div>
                         </div>
+                            <div class="col-md-7 p-4">
+                                <div class="item">
+                                    <div class="media-body">
+                                        <div class="row">
+                                            <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                            <div class="col-sm-4"></div>
+                                            <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                            <div class="col-md-12">
+                                                <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                            </div> 
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Surgical face.jpg" alt=""> </div>
 
                             </div>
                         </div>
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-7 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <div class="col-md-12">
+                                            <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div> 
+                                        <div class="col-md-12">
+                                            <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 p-4">
+                        <div class="col-md-7 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Dull Skin Treatment.jpg" alt="">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <div class="col-md-12">
+                                            <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div> 
+                                        <div class="col-md-12">
+                                            <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 p-4">
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 p-4">
+                            <div class="item">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <div class="col-md-12">
+                                            <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                        </div> 
+                                        <div class="col-md-12">
+                                            <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -148,3 +214,19 @@
             </div>
         </div>
     </section>
+    <style>
+    .main_title2{
+	   background: #f9f9ff;
+	   border-left: 3px solid $baseColor;
+	   margin-bottom: 30px;
+	h2{
+		color: $dip;
+		font-size: 18px; 
+		font-family: $rob;
+		font-weight: 500;
+		line-height: 40px;
+		padding-left: 15px;
+		margin-bottom: 0px;
+	}
+}
+    </style>

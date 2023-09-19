@@ -30,7 +30,7 @@
         <!-- Select2 -->
 	    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/css/select2.min.css'?>">	
 
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <style>
             .error{
                 color: red;
