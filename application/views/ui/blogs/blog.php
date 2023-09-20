@@ -200,59 +200,7 @@
                     <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-12 p-0">
-                              <div id="sliderid" class="carousel slide" data="carousel">
-                                <ol>
-                                    <li data-target="#sliderid" data-slide-to="0" class="active"></li>
-                                    <li data-target="#sliderid" data-slide-to="1"></li>
-                                    <li data-target="#sliderid" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card w-100 float-left">
-                                            <div class="card-header bg-primary p-0">
-                                               <div class="item">
-                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""></div>
-                                                </div>
-                                                <div class="card-body bg-dark">
-                                                    <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
-                                                    <ul class="ul1">
-                                                       <li><a href="services">Laser Hair Removal</a></li>
-                                                       <li><a href="services">Pimple/Acne Scar</a></li>
-                                                       <li><a href="services">Pimple Treatment</a></li>
-                                                       <li><a href="services">Removal</a></li> 
-                                                    </ul>
-                                                </div>
-                                                <div class="card-footer bg-primary text-center">
-                                                    <button class="btn btn-dark">View</button>
-                                                <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card w-100 float-left">
-                                            <div class="card-header bg-primary p-0">
-                                               <div class="item">
-                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt=""></div>
-                                                </div>
-                                                <div class="card-body bg-dark">
-                                                    <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
-                                                    <ul class="ul1">
-                                                       <li><a href="services">Laser Hair Removal</a></li>
-                                                       <li><a href="services">Pimple/Acne Scar</a></li>
-                                                       <li><a href="services">Pimple Treatment</a></li>
-                                                       <li><a href="services">Removal</a></li> 
-                                                    </ul>
-                                                </div>
-                                                <div class="card-footer bg-primary text-center">
-                                                    <button class="btn btn-dark">View</button>
-                                                <div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
+                            <p>abcd</p>
                         </div>
                     </div>
                     <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
@@ -269,22 +217,22 @@
                                     <li><a href="services">Skin Lightening</a></li>
                                     <li><a href="services">Treatment</a></li>
                                     <li><a href="services">Pigmentation Treatment</a></li>
-                                    <!-- <li><a href="services">Melasma Treatment</a></li> -->
-                                    <!-- <li><a href="services">Dark Circle Treatment</a></li> -->
-                                    <!-- <li><a href="services">Dull Skin Treatment</a></li> -->
-                                    <!-- <li><a href="services">Signature Facial</a></li> -->
-                                    <!-- <li><a href="services">Stretch Marks Removal</a></li> -->
-                                    <!-- <li><a href="services">Treatment</a></li> -->
-                                    <!-- <li><a href="services">Anti-Aging Treatment</a></li> -->
-                                    <!-- <li><a href="services">Botox Treatment</a></li> -->
-                                    <!-- <li><a href="services">Filters Treatment</a></li> -->
-                                    <!-- <li><a href="services">Skin Tightiening</a></li> -->
-                                    <!-- <li><a href="services">Permanent Tatto</a></li> -->
-                                    <!-- <li><a href="services">Removal</a></li> -->
-                                    <!-- <li><a href="services">Mole Removal</a></li> -->
-                                    <!-- <li><a href="services">Wart Removal</a></li> -->
-                                    <!-- <li><a href="services">Skin Tag Removal</a></li> -->
-                                    <!-- <li><a href="services">Liquid Rhinoplasty</a></li> -->
+                                    <li><a href="services">Melasma Treatment</a></li> 
+                                    <li><a href="services">Dark Circle Treatment</a></li>
+                                    <li><a href="services">Dull Skin Treatment</a></li>
+                                    <li><a href="services">Signature Facial</a></li>
+                                    <li><a href="services">Stretch Marks Removal</a></li>
+                                    <li><a href="services">Treatment</a></li>
+                                    <li><a href="services">Anti-Aging Treatment</a></li>
+                                    <li><a href="services">Botox Treatment</a></li>
+                                    <li><a href="services">Filters Treatment</a></li>
+                                    <li><a href="services">Skin Tightiening</a></li>
+                                    <li><a href="services">Permanent Tatto</a></li>
+                                    <li><a href="services">Removal</a></li>
+                                    <li><a href="services">Mole Removal</a></li>
+                                    <li><a href="services">Wart Removal</a></li>
+                                    <li><a href="services">Skin Tag Removal</a></li>
+                                    <li><a href="services">Liquid Rhinoplasty</a></li>
                                 </ul>
                             </div>
                         </div>
