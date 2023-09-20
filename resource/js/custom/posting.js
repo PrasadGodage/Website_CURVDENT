@@ -150,7 +150,7 @@ function setPostList(list) {
         }
     }
 
-        // // Attach a click event handler to the delete buttons
+      // // Attach a click event handler to the delete buttons
         // $('.delete-btn').on('click', function() {
         //     // Find the parent <li> element and remove it when the button is clicked
         //     $(this).closest('li').remove();
