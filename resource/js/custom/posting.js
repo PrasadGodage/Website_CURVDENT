@@ -6,15 +6,10 @@ let postList = new Map();
 $('#addPostForm').on('submit', function (e) {
     e.preventDefault();
 
-    // Get the current date as a string in the format 'yyyy-mm-dd'
-    // var currentDate = new Date().toISOString().slice(0, 10);
-
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
-         // Include currentDate in the data object
-        //  formdata.append('currentDate', currentDate);
-
+     
         $.ajax({
 
             url: ebase_url+'posting_api',
@@ -73,7 +68,6 @@ $('#addPostBtn').click(function () {
     // $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
 
 });
-
 
 
 // get category data
@@ -136,7 +130,7 @@ function setPostList(list) {
                 <td>` + post.is_active + `</td>
                 <td>` + post.date + `</td>
                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletePostDetails(${post.id})" ><i class="mdi mdi-tooltip-delete" style="font-size: 20px;"></i></a>                          
+                <a href="#" onclick="deletePostDetails(${post.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
                 </td>
                 
         </tr>`;
@@ -148,44 +142,20 @@ function setPostList(list) {
     }
 
 
-    //Update Post List
-    // Updte Category Details----------------------------------------------------------------------------------------
-// function updatePostDetails(id) {
-//     let post = postList.get(id.toString());
-//     //clear all fields
-//             $('#id').val('');
-//             $('#title').val('');
-//             $('#content').val('');
-//             $('#featured').val('');
-//             $('#choice').val('');
-//             $('#thread').val('');
-//             $('#id_category').val('');
-//             $('#is_active').val('');
-//             $('#date').val('');
-//             // $('#photo').val('');
+    //Delete purchase item 
+    function deletePurchaseDetailItems(id){
+        if(itemMap.has(id)){
+            itemMap.delete(id);
+            refreshTable();
+        }
+    }
 
-//             $('#otherdpre').attr('');
+        // // Attach a click event handler to the delete buttons
+        // $('.delete-btn').on('click', function() {
+        //     // Find the parent <li> element and remove it when the button is clicked
+        //     $(this).closest('li').remove();
+        // });
     
-//             $('.error').text('');
-//             //set details
-//             $('#id').val(post.id);
-//             $('#title').val(post.title);
-//             $('#content').val(post.content);
-//             $('#featured').val(post.featured).change();
-//             $('#choice').val(post.choice).change();
-//             $('#thread').val(post.thread).change();
-//             $('#id_category').val(post.id_category).change();
-//             $('#is_active').val(post.is_active).change();
-//             $('#date').val(post.date);
-//             // $('#photo').val(post.profile_image);
-
-//             $('#otherdpre').attr('src','');
-//             $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-
-//             // $('#addCategoryModal').modal('toggle');
-//             $('#addPostModal').modal('toggle');
-//         }
-
 
 function updatePostDetails(id) {
     let post = postList.get(id.toString());
@@ -279,222 +249,3 @@ function updatePostDetails(id) {
             $('#id_category').html(options);
     
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let postList = new Map();
-
-// $('#addPostBtn').click(function () {
-
-//     $(location).attr('href',ebase_url+'addPost');
-     
-    
-//  });
-
-// function getClientList() {
-//     $.ajax({
-
-//         url: ebase_url+'posting_api',
-
-//         type: 'GET',
-
-//         async:false,
-
-//         headers: {
-//             "Authorization": etoken
-//         },
-
-//         dataType: 'json',
-
-//         success: function (response) {
-        
-
-//             if (response.status == 200) {
-
-//                 if (response.data.lenght != 0) {
-//                     for (var i = 0; i < response.data.length; i++) {
-//                         postList.set(response.data[i].id, response.data[i]);
-//                     }
-                    
-//                 }
-//                 setPostList(postList);
-//             }
-
-//         }
-
-//     });
-// }
-// getClientList();
-
-
-// // client table show
-// function setPostList(list) {
-
-// $('#postTable').dataTable().fnDestroy();
-// $('#postList').empty();
-// var tblData = '';
-// var index=1;
-
-// for (let k of list.keys()) {
-    
-//     let post = list.get(k);
-
-//     tblData += `
-//     <tr>
-//             <td>` + index + `</td>
-//             <td>` + post.title + `</td>
-//             <td>` + post.featured + `</td>
-//             <td>` + post.choice + `</td>
-//             <td>` + post.thread + `</td>
-//             <td>` + post.category_name + `</td>
-//             <td>` + post.is_active + `</td>
-//             <td>` + post.date + `</td>
-//             <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>             
-//             </td>
-            
-//     </tr>`;
-//     index++;
-// }
-
-// $('#postList').html(tblData);
-// $('#postTable').DataTable();
-// }
-
-
-// // Updte Posting Details----------------------------------------------------------------------------------------
-// function updatePostDetails(id) {
-   
-//          $(location).attr('href',ebase_url+'addPost'/+id);
-
-
-//       // Updte Posting Details----------------------------------------------------------------------------------------
-// // function updatePostDetails(id) {
-// //     let post = postList.get(id.toString());
-// //     //clear all fields
-// //     if (post) {
-// //     $('#id').val('');
-// //     $('#title').val('');
-// //     $('#featured').val('');
-// //     $('#choice').val('');
-// //     $('#thread').val('');
-// //     $('#category_name').val('');
-// //     $('#is_active').val('');
-// //     $('#date').val('');
-// //     $('#photo').val('');
-    
-// //     $('.error').text('');
-// //     //set details
-// //     $('#id').val(post.id);
-// //     $('#title').val(post.title);
-// //     $('#featured').val(post.featured);
-// //     $('#choice').val(post.choice);
-// //     $('#thread').val(post.thread);
-// //     $('#category_name').val(post.category_name);
-// //     $('#is_active').val(post.is_active);
-// //     $('#date').val(post.date);
-// //     $('#photo').val(post.photo);
-// //     // $('#addCategoryModal').modal('toggle');
-// //     $('#addPostForm').modal('show');
-// // } else {
-// //     console.error('Post not found with ID: ' + id);
-// // }
-// }
-         
-// // success: function (response) {
-// //     let post=response.data[0];
-     
-// //     if (response.status == 200) {
-// //         $('#id').val('');
-// //             $('#title').val('');
-// //             $('#featured').val('');
-// //             $('#choice').val('');
-// //             $('#thread').val('');
-// //             $('#category_name').val('');
-// //             $('#is_active').val('');
-// //             $('#date').val('');
-// //             $('#photo').val('');
-// //             $('.error').text('');
-    
-// //         //set details
-// //         $('#id').val(post.id);
-// //             $('#title').val(post.title);
-// //             $('#featured').val(post.featured);
-// //             $('#choice').val(post.choice);
-// //             $('#thread').val(post.thread);
-// //             $('#category_name').val(post.category_name);
-// //             $('#is_active').val(post.is_active);
-// //             $('#date').val(post.date);
-// //             $('#photo').val(post.photo);
-// //             $('#addCategoryModal').modal('toggle');
-
-//         // $('#name').html(client.salutation + ` ` + client.firstName + ` ` + client.lastName);
-//         // console.log(client.industryId);
-//         // $('#industryId').val(client.industryId).change();
-        
-
-//         //  (client.status == 1) ? $("#active").attr('checked', 'checked') : $("#inactive").attr('checked', 'checked');
-//         // $('#addClientModal').modal('toggle');
-        
-//         //setClientList(clientList);
-// //     }
-
-// // }
-
-// // }
-
-// //Submit
-// $("#btn_save").click(function(e){
-
-//     e.preventDefault();
-
-//     var returnVal = $("#addPostForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
-//         $.ajax({
-
-//             url: ebase_url+'posting_api',
-
-//             type: 'POST',
-
-//             headers: {
-//                 "Authorization": etoken
-//             },
-
-//             data: formdata,
-
-//             cache: false,
-
-//             contentType: false,
-
-//             processData: false,
-
-//             dataType: 'json',
-
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     swal("Good job!", response.msg, "success");
-//                         setTimeout(
-//                             $(location).attr('href',ebase_url+'posting'),
-//                              8000
-//                              )
-//                 } else {
-
-//                     swal("ERROR!", response.msg, "error");
-
-//                 }
-
-//             }
-
-//         });
-//     }
-// });
