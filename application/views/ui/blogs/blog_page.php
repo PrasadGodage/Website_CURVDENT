@@ -34,7 +34,7 @@
                     <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
 
                         <a href="blog"><h2>Product Details</h2></a>
-                            <div class="page_link color-black">
+                            <div class="page_link text-yellow" style="font-weight:bold;">
                                 <a href="home">Home</a>
                                 <a href="blog">Blog</a>
                                 <hr class="line line-hr-left-white">
@@ -44,16 +44,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="container">
-         <div class="banner_content text-center">
-            <h2>News Details</h2>
-            <div class="page_link">
-               <a href="http://localhost:8080/realsourcecodes/home">Home</a>
-               <a href="http://localhost:8080/realsourcecodes/blog/read/the-definitive-story-of-how-marvel-studios-created-the-marvel-cinematic-universe">News Details</a>
-            </div>
-         </div>
-      </div> -->
 
     </header>
 <!-- section -->
