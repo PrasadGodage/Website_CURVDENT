@@ -282,9 +282,9 @@
                                     <div class="item active">
                                         <div class="card w-100">
                                             <div class="card-header bg-primary p-0">
-                                               <div class="item">
+                                               <!-- <div class="item">
                                                    <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="..."></div>
-                                                </div>
+                                                </div> -->
                                                 <div class="card-body bg-dark">
                                                     <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
                                                     <ul class="ul1">
