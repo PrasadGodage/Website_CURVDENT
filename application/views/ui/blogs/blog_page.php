@@ -36,9 +36,10 @@
                         <a href="blog"><h2>Product Details</h2></a>
                             <div class="page_link">
                                 <a href="home">Home</a>
-                                <a href="#">News Details</a>
+                                <a href="blog">Blog</a>
+                                <hr class="line line-hr-left-white">
                             </div>
-                        <hr class="line line-hr-left-white">
+                       
                     </div>
                 </div>
             </div>
