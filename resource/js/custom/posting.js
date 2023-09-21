@@ -193,6 +193,7 @@ function setPostList(list) {
     //         });
     //     });
         
+    
     // delete date function -------------------------------------
     $(document).ready(function () {
         // Attach a click event handler to the delete buttons
