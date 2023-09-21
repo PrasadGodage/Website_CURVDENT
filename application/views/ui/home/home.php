@@ -28,7 +28,7 @@
     <!-- Slider -->
     <header class="header slider-fade" data-scroll-index="0" id="home">
         <div class="owl-carousel owl-theme">
-            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/3.jpg">
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/3.jpg'; ?>">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/2.jpg">
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/1.jpg">
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/4.jpg">
+            <div class="text-left item bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/4.jpg'; ?>">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <div class="betty-about-img">
-                        <div class="img"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/about.jpg" alt=""> </div>
+                        <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt=""> </div>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/B2.png" alt="">
+                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/B2.png'; ?>" alt="">
                         </div>
                         <div class="con">
                             <a href="services">
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/B3.png" alt="">
+                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/img/B3.png'; ?>" alt="">
                         </div>
                         <div class="con">
                             <a href="services">
@@ -157,7 +157,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/B1.png" alt="">
+                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/B1.png'; ?>" alt="">
                         </div>
                         <div class="con">
                             <a href="services">
@@ -170,7 +170,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Non surgical face.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/img/Non surgical face.jpg'; ?>" alt=""> </div>
                         <div class="con">
                             <a href="services">
                                 <h5
@@ -184,7 +184,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Surgical face.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Surgical face.jpg'; ?>" alt=""> </div>
                         <div class="con">
                             <a href="services">
                                 <h5
@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt=""> </div>
                         <div class="con">
                             <a href="services">
                                 <h5
@@ -208,7 +208,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt=""> </div>
                         <div class="con">
                             <a href="services">
                                 <h5
@@ -220,7 +220,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="item">
-                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/Dull Skin Treatment.jpg" alt=""> </div>
+                        <div class="position-re o-hidden"> <img src="<?php echo base_url() . 'uiAssets/img/Dull Skin Treatment.jpg'; ?>" alt=""> </div>
                         <div class="con">
                             <a href="services">
                                 <h5
@@ -244,7 +244,7 @@
             <div class="row mb-50">
                 <div class="col-md-4">
                     <div class="item mb-30">
-                        <div> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/team/NDR1.png" alt=""> </div>
+                        <div> <img src="<?php echo base_url() . 'uiAssets/img/team/NDR1.png'; ?>" alt=""> </div>
                         
                             <div style="text-align: center;">
                                <h6>Dr.Misbah Mulla</h6>
@@ -262,7 +262,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item mb-30">
-                        <div> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/team/NDR2.png" alt=""> </div>
+                        <div> <img src="<?php echo base_url() . 'uiAssets/img/team/NDR2.png'; ?>" alt=""> </div>
                         
                             <div style="text-align: center;">
                                 <h6>Dr.Sagar Gopale</h6>
@@ -280,7 +280,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="item mb-30">
-                        <div> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/team/NDR3.png" alt=""> </div>
+                        <div> <img src="<?php echo base_url() . 'uiAssets/img/team/NDR3.png'; ?>" alt=""> </div>
                         
                             <div style="text-align: center;">
                                <h6>Dr. Radhika Chopda</h6>
@@ -606,7 +606,7 @@
         </div>
     </section> -->
     <!-- Contact -->
-    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/contact.png">
+    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">

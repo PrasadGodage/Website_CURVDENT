@@ -27,7 +27,7 @@
     </nav>
     
     <!-- Header -->
-    <header class="banner-header valign bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/2.jpg">
+    <header class="banner-header valign bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden" href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                <div class="position-re o-hidden" href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                 </div>
 
@@ -80,7 +80,7 @@
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Antiaging.jpg" alt=""
+                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/img/Antiaging.jpg'; ?>" alt=""
                                             style="height: 185px;">
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Surgical face.jpg" alt=""> </div>
+                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/img/Surgical face.jpg'; ?>" alt=""> </div>
 
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt="">
+                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt="">
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                     <div class="row">
                         <div class="col-md-5 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="">
+                                <div class="position-re o-hidden" href="blog_page"><img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt="">
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                                         <div class="card w-100 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
-                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="..."></div>
+                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt="..."></div>
                                                 </div>
                                                 <div class="card-body bg-dark">
                                                     <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
@@ -238,7 +238,7 @@
                                         <div class="card w-100 float-left">
                                             <div class="card-header bg-primary p-0">
                                                <div class="item">
-                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin lightening treatment.jpg" alt="..."></div>
+                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt="..."></div>
                                                 </div>
                                                 <div class="card-body bg-dark">
                                                     <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
