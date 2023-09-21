@@ -12,17 +12,17 @@
                 aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
                     class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
             <!-- Menu -->
-            <!-- <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="home">Home</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="home">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services">Services</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link" href="home">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li> -->
-                <!-- </ul> -->
-            <!-- </div> -->
+                    <li class="nav-item"><a class="nav-link" href="home">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                </ul>
+           </div>
         </div>
     </nav>
     
