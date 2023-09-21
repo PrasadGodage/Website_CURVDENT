@@ -205,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- Sidebar -->
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
@@ -275,7 +275,7 @@
                                                        <li><a href="services">Removal</a></li> 
                                                     </ul>
                                                 </div>
-                                                <div class="card-footer bg-primary text-center">
+                                                <div class="card-footer text-center">
                                                     <button class="btn btn-dark">View</button>
                                                 <div>
                                             </div>
@@ -283,7 +283,7 @@
                                     </div>
                                 </div>
                               </div>
-                              <div class="row">
+                              <!-- <div class="row">
                                 <div class="col-4">
                                     <div> 
                                       <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-danger p-2">Back</span></button>
@@ -295,60 +295,8 @@
                                         <button class="" type="button" data-target="#sliderid" data-slide="next"><span class="bg-success p-2">Next</span></button>
                                     </div>
                                 </div>    
-                              </div>
+                              </div> -->
                               
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="container"> -->
-                        <input type="radio" name="slider" id="item-1" checked>
-                        <input type="radio" name="slider" id="item-2">
-                        <input type="radio" name="slider" id="item-3">
-                        <div class="cards">
-                            <label class="card" for="item-1" id="song-1">
-                               <img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt="song">
-                            </label>
-                            <label class="card" for="item-2" id="song-2">
-                               <img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt="song">
-                            <label>
-                            <label class="card" for="item-3" id="song-3">
-                               <img src="<?php echo base_url() . 'uiAssets/img/Surgical face.jpg'; ?>" alt="song">
-                            <label>
-                        </div>
-                        <div class="player">
-                            <div class="upper-part">
-                                <div class="info-area" id="test">
-                                    <label class="song-info" id="song-info-1">
-                                        <div class="title">-- Skin/Hair Treatments --</div>
-                                           <div class="sub-line">
-                                           <div class="subtitle">Laser Hair Removal</div>
-                                           <div class="subtitle">Pimple/Acne Scar</div>
-                                           <div class="subtitle">Pimple Treatment</div>
-                                           <div class="subtitle">Removal</div>
-                                           <div class="time"></div>
-                                        </div>
-                                    </label>
-                                    <label class="song-info" id="song-info-2">
-                                        <div class="title">-- Pigmentation Treatment--</div>
-                                           <div class="sub-line">
-                                           <div class="subtitle">Laser Hair Removal</div>
-                                           <div class="subtitle">Pimple/Acne Scar</div>
-                                           <div class="subtitle">Pimple Treatment</div>
-                                           <div class="subtitle">Removal</div>
-                                           <div class="time"></div>
-                                        </div>
-                                    </label>
-                                    <label class="song-info" id="song-info-3">
-                                        <div class="title">-- Melasma Treatment --</div>
-                                           <div class="sub-line">
-                                           <div class="subtitle">Laser Hair Removal</div>
-                                           <div class="subtitle">Pimple/Acne Scar</div>
-                                           <div class="subtitle">Pimple Treatment</div>
-                                           <div class="subtitle">Removal</div>
-                                           <div class="time"></div>
-                                        </div>
-                                    </label>
-                                </div>
                             </div>
                         </div>
                     </div>
