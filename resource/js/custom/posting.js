@@ -143,7 +143,7 @@ function setPostList(list) {
 
 
     //Delete purchase item 
-    function deletePurchaseDetailItems(id){
+    function deletePostDetails(id){
         if(itemMap.has(id)){
             itemMap.delete(id);
             refreshTable();
