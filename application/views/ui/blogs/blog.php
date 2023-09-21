@@ -275,7 +275,7 @@
                                                        <li><a href="services">Removal</a></li> 
                                                     </ul>
                                                 </div>
-                                                <div class="card-footer bg-primary text-center">
+                                                <div class="card-footer text-center">
                                                     <button class="btn btn-dark">View</button>
                                                 <div>
                                             </div>
@@ -283,7 +283,7 @@
                                     </div>
                                 </div>
                               </div>
-                              <div class="row">
+                              <!-- <div class="row">
                                 <div class="col-4">
                                     <div> 
                                       <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-danger p-2">Back</span></button>
@@ -295,7 +295,7 @@
                                         <button class="" type="button" data-target="#sliderid" data-slide="next"><span class="bg-success p-2">Next</span></button>
                                     </div>
                                 </div>    
-                              </div>
+                              </div> -->
                               
                             </div>
                         </div>

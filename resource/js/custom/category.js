@@ -1,5 +1,5 @@
 let categoryList = new Map();
-
+console.log(etoken);
 // set category data
 //Submit Category Btn script
 
