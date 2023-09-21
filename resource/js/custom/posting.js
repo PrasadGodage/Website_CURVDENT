@@ -70,7 +70,7 @@ $('#addPostBtn').click(function () {
 });
 
 
-// get category data
+// get posting data
 function getPostList() {
     $.ajax({
 
