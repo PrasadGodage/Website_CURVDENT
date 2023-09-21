@@ -30,7 +30,7 @@
     <header class="banner-header valign bg-img" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/'; ?>img/slider/2.jpg">
         <div class="container">
             <div class="row">
-                <div class="banner_content text-center">
+                <div class="banner_content">
                     <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
 
                         <a href="blog"><h2>Product Details</h2></a>
