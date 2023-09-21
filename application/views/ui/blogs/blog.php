@@ -280,7 +280,25 @@
                                  <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                      <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+                                        <div class="card w-100 float-left">
+                                            <div class="card-header bg-primary p-0">
+                                               <div class="item">
+                                                   <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/'; ?>img/Skin glowing treatment.jpg" alt="..."></div>
+                                                </div>
+                                                <div class="card-body bg-dark">
+                                                    <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
+                                                    <ul class="ul1">
+                                                       <li><a href="services">Laser Hair Removal</a></li>
+                                                       <li><a href="services">Pimple/Acne Scar</a></li>
+                                                       <li><a href="services">Pimple Treatment</a></li>
+                                                       <li><a href="services">Removal</a></li> 
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer bg-primary text-center">
+                                                    <button class="btn btn-dark">View</button>
+                                                <div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="item">
                                        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
