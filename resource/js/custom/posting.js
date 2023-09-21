@@ -141,7 +141,6 @@ function setPostList(list) {
     $('#postTable').DataTable();
     }
 
-
     // $('#postTable').on('click', '.mdi-delete-circle', function () {
     //     // Get the parent row of the clicked delete button
     //     var row = $(this).closest('tr');
@@ -194,6 +193,8 @@ function setPostList(list) {
     //         });
     //     });
         
+    
+    // delete date function -------------------------------------
     $(document).ready(function () {
         // Attach a click event handler to the delete buttons
         $('#postTable').on('click', '.mdi-delete-circle', function () {
@@ -255,7 +256,7 @@ function setPostList(list) {
         });
     });
 
-    
+
 function updatePostDetails(id) {
     let post = postList.get(id.toString());
     
