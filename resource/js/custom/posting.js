@@ -151,15 +151,15 @@ function setPostList(list) {
         row.remove();
 
         // You can add an AJAX call here to delete the data from the server
-        Swal.fire({
-                    title: 'Are you sure?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Delete!'
-                    }).then((result) => {
-                    if (result.value) {
+        // Swal.fire({
+        //             title: 'Are you sure?',
+        //             icon: 'warning',
+        //             showCancelButton: true,
+        //             confirmButtonColor: '#3085d6',
+        //             cancelButtonColor: '#d33',
+        //             confirmButtonText: 'Delete!'
+        //             }).then((result) => {
+        //             if (result.value) {
 
                     $.ajax({
                         url: ebase_url+'posting_api' + postId,
@@ -167,31 +167,31 @@ function setPostList(list) {
                         success: function (response) {
                             if (response.success) {
                                 row.remove();
-                                $('#modalPosting').modal('hide');
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Success',
-                                    showConfirmButton: true
-                                });
+                                // $('#modalPosting').modal('hide');
+                                // Swal.fire({
+                                //     icon: 'success',
+                                //     title: 'Success',
+                                //     showConfirmButton: true
+                                // });
                             } 
-                            // else {
-                            //     alert('Failed to delete the post.');
-                            // }
+                            else {
+                                alert('Failed to delete the post.');
+                            }
                         },
                         error: function () {
-                            // alert('An error occurred while deleting the post.');
-                            $('#modalPosting').modal('hide');
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Oops...',
-                                text: 'Something Happened!',
-                                showConfirmButton: true
-                            });
+                            alert('An error occurred while deleting the post.');
+                            // $('#modalPosting').modal('hide');
+                            // Swal.fire({
+                            //     icon: 'error',
+                            //     title: 'Oops...',
+                            //     text: 'Something Happened!',
+                            //     showConfirmButton: true
+                            // });
                         }
                     });
-                }
-            });
-        });
+                });
+        //     });
+        // });
 
 
 function updatePostDetails(id) {
