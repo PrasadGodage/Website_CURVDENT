@@ -95,6 +95,9 @@
    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
      <!-- End Whats App Chat Boat Code  -->
 
+     <script > 
+        let ebase_url = <?php echo base_url();?>
+    </script>
 
 
 </body>
