@@ -79,14 +79,14 @@
         </div>
     </footer>
     <!-- jQuery -->
-    <script src="<?php echo base_url() . 'uiAssets/js/jquery-3.6.3.min.js'; ?>"></script>
+   
     <script src="<?php echo base_url() . 'uiAssets/js/jquery-migrate-3.0.0.min.js'; ?>"></script>
     <script src="<?php echo base_url() . 'uiAssets/js/modernizr-2.6.2.min.js'; ?>"></script>
     <script src="<?php echo base_url() . 'uiAssets/js/popper.min.js'; ?>"></script>
-    <script src="<?php echo base_url() . 'uiAssets/js/bootstrap.min.js'; ?>"></script>
+    
     <script src="<?php echo base_url() . 'uiAssets/js/scrollIt.min.js'; ?>"></script>
     <script src="<?php echo base_url() . 'uiAssets/js/jquery.waypoints.min.js'; ?>"></script>
-    <script src="<?php echo base_url() . 'uiAssets/js/owl.carousel.min.js'; ?>"></script>
+   
     <script src="<?php echo base_url() . 'uiAssets/js/jquery.stellar.min.js'; ?>"></script>
     <script src="<?php echo base_url() . 'uiAssets/js/jquery.fancybox.min.js'; ?>"></script>
     <script src="<?php echo base_url() . 'uiAssets/js/scripts.js'; ?>"></script>
