@@ -142,57 +142,6 @@ function setPostList(list) {
     }
 
 
-    // //Delete purchase item 
-    // function deletePostDetails(id){
-    // //     // if(itemMap.has(id)){
-    // //     //     itemMap.delete(id);
-    // //     //     refreshTable();
-    // //     // }
-
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Delete!'
-    //         }).then((result) => {
-    //         if (result.value) {
-    //            $.ajax({
-    //               type: 'post',
-    //               dataType: 'json',
-    //               url: '<?= base_url('back/posting/delete'); ?>',
-    //               data: {
-    //                  id: id
-    //               },
-    //             //   success: function(data){
-    //             //      if(data.status){
-    //             //         tablePosting.row( $(this).parents('tr') ).remove().draw();
-    //             //         $('#modalPosting').modal('hide');
-    //             //         Swal.fire({
-    //             //            icon: 'success',
-    //             //            title: 'Success',
-    //             //            showConfirmButton: true
-    //             //         });
-    //             //      }
-    //             //   },
-    //             //   error: function(){
-    //             //      $('#modalPosting').modal('hide');
-    //             //      Swal.fire({
-    //             //         icon: 'error',
-    //             //         title: 'Oops...',
-    //             //         text: 'Something Happened!',
-    //             //         showConfirmButton: true
-    //             //      });
-    //             //   }
-    //            });
-    //         }
-        
-    //      });
-   
-        
-    // }
-
     // $('#postTable').on('click', '.mdi-delete-circle', function () {
     //     // Get the parent row of the clicked delete button
     //     var row = $(this).closest('tr');
@@ -305,15 +254,8 @@ function setPostList(list) {
             });
         });
     });
-    
 
-      // // Attach a click event handler to the delete buttons
-        // $('.delete-btn').on('click', function() {
-        //     // Find the parent <li> element and remove it when the button is clicked
-        //     $(this).closest('li').remove();
-        // });
     
-
 function updatePostDetails(id) {
     let post = postList.get(id.toString());
     
