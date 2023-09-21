@@ -20,12 +20,19 @@ function setBlogList(list) {
 // get category data
 function getBlogList() {
     $.ajax({
+        
         url: ebase_url + 'category_api',
+
         type: 'GET',
+
+        async:false,
+
         headers: {
             "Authorization": etoken
         },
+
         dataType: 'json',
+
         success: function (response) {
             if (response.status == 200) {
                 if (response.data.length != 0) {
@@ -37,9 +44,7 @@ function getBlogList() {
                 }
             }
         },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.error('AJAX request failed:', errorThrown);
-        }
+        
     });
 }
 getBlogList();
