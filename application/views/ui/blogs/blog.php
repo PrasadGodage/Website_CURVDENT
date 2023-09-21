@@ -173,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <!-- <div class="container"> -->
                         <input type="radio" name="slider" id="item-1" checked>
                         <input type="radio" name="slider" id="item-2">
                         <input type="radio" name="slider" id="item-3">
@@ -264,7 +264,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Style for Title -->
     <style>
     .main_title2{
@@ -284,10 +284,3 @@
     </style>
 
     <!-- script for slider -->
-
-<script type="text/javascript">
-	$('input').on('change', function() {
-  $('body').toggleClass('blue');
-});
-
-</script>
