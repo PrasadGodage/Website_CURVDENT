@@ -41,6 +41,7 @@ class Welcome extends CI_Controller {
         // $this->load->view('sidebar/side_bar');
         $this->load->view('ui/blogs/blog');
         $this->load->view('ui/footer');
+        $this->load->view('ui/blogs/blog_js');
     }
 	
 	public function blogPage() {        
@@ -48,6 +49,7 @@ class Welcome extends CI_Controller {
         // $this->load->view('sidebar/side_bar');
         $this->load->view('ui/blogs/blog_page');
         $this->load->view('ui/footer');
+		$this->load->view('ui/blogs/blog_js');
     }
 
 }
