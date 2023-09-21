@@ -193,50 +193,110 @@ function setPostList(list) {
         
     // }
 
-    $('#postTable').on('click', '.mdi-delete-circle', function () {
-        // Get the parent row of the clicked delete button
-        var row = $(this).closest('tr');
-        // Extract the data ID from the row (you can use data attributes)
-        var postId = row.data('id');
+    // $('#postTable').on('click', '.mdi-delete-circle', function () {
+    //     // Get the parent row of the clicked delete button
+    //     var row = $(this).closest('tr');
+    //     // Extract the data ID from the row (you can use data attributes)
+    //     var postId = row.data('id');
 
-        // Perform the delete action (e.g., remove the row from the table)
-        row.remove();
+    //     // Perform the delete action (e.g., remove the row from the table)
+    //     row.remove();
 
-        // You can add an AJAX call here to delete the data from the server
-        Swal.fire({
-                    title: 'Are you sure?',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Delete!'
-                    }).then((result) => {
-                    if (result.value) {
+    //     // You can add an AJAX call here to delete the data from the server
+    //     Swal.fire({
+    //                 title: 'Are you sure?',
+    //                 icon: 'warning',
+    //                 showCancelButton: true,
+    //                 confirmButtonColor: '#3085d6',
+    //                 cancelButtonColor: '#d33',
+    //                 confirmButtonText: 'Delete!'
+    //                 }).then((result) => {
+    //                 if (result.value) {
 
+    //                 $.ajax({
+    //                     url: ebase_url+'posting_api' + postId,
+    //                     method: 'DELETE',
+    //                     success: function (response) {
+    //                         if (response.success) {
+    //                             row.remove();
+    //                             $('#modalPosting').modal('hide');
+    //                             Swal.fire({
+    //                                 icon: 'success',
+    //                                 title: 'Success',
+    //                                 showConfirmButton: true
+    //                             });
+    //                         } 
+    //                         // else {
+    //                         //     alert('Failed to delete the post.');
+    //                         // }
+    //                     },
+    //                     error: function () {
+    //                         // alert('An error occurred while deleting the post.');
+    //                         $('#modalPosting').modal('hide');
+    //                         Swal.fire({
+    //                             icon: 'error',
+    //                             title: 'Oops...',
+    //                             text: 'Something Happened!',
+    //                             showConfirmButton: true
+    //                         });
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     });
+        
+    $(document).ready(function () {
+        // Attach a click event handler to the delete buttons
+        $('#postTable').on('click', '.mdi-delete-circle', function () {
+            // Get the parent row of the clicked delete button
+            var row = $(this).closest('tr');
+            // Extract the data ID from the row (you can use data attributes)
+            var postId = row.data('id');
+    
+            // Show a confirmation dialog using SweetAlert
+            Swal.fire({
+                title: 'Are you sure?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Delete!'
+            }).then((result) => {
+                if (result.value) {
+                    // Send an AJAX request to delete the data from the server
                     $.ajax({
-                        url: ebase_url+'posting_api' + postId,
+                        url: ebase_url + 'posting_api/' + postId, // Include the postId in the URL
                         method: 'DELETE',
                         success: function (response) {
-                            if (response.success) {
+                            if (response.status == 200) {
+                                // Remove the row from the table
                                 row.remove();
+                                // Close the modal if it's open
                                 $('#modalPosting').modal('hide');
+                                // Show a success message
                                 Swal.fire({
                                     icon: 'success',
                                     title: 'Success',
+                                    text: 'The post has been deleted.',
                                     showConfirmButton: true
                                 });
-                            } 
-                            // else {
-                            //     alert('Failed to delete the post.');
-                            // }
+                            } else {
+                                // Handle the case where the server returns an error
+                                // Show an error message using Swal or handle it differently
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: 'Something went wrong!',
+                                    showConfirmButton: true
+                                });
+                            }
                         },
                         error: function () {
-                            // alert('An error occurred while deleting the post.');
-                            $('#modalPosting').modal('hide');
+                            // Handle the case where the AJAX request itself fails
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Oops...',
-                                text: 'Something Happened!',
+                                text: 'Something went wrong!',
                                 showConfirmButton: true
                             });
                         }
@@ -244,8 +304,8 @@ function setPostList(list) {
                 }
             });
         });
-        
-        
+    });
+    
 
       // // Attach a click event handler to the delete buttons
         // $('.delete-btn').on('click', function() {
