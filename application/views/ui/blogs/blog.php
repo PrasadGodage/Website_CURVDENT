@@ -205,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <!-- Sidebar -->
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
@@ -300,7 +300,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                     <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
                     <div class="betty-sidebar-part">
