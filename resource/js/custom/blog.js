@@ -1,7 +1,7 @@
 let categoryList = new Map();
 
 // category table show
-function setBlogList(list) {
+function setCategoryList(list) {
     console.log(list);
 
     $('#uiList').empty();
@@ -18,10 +18,10 @@ function setBlogList(list) {
 }
 
 // get category data
-function getBlogList() {
+function getCategoryList() {
     $.ajax({
 
-        url: base_url + 'category_api',
+        url: ebase_url+'category_api',
 
         type: 'GET',
 
@@ -34,17 +34,22 @@ function getBlogList() {
         dataType: 'json',
 
         success: function (response) {
+        
+
             if (response.status == 200) {
+
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         categoryList.set(response.data[i].id, response.data[i]);
                     }
-                    setBlogList(categoryList);
-                    console.log(categoryList);
+                    
                 }
+                setCategoryList(categoryList);
+                console.log(categoryList);
             }
-        },
+
+        }
         
     });
 }
-getBlogList();
+getCategoryList();
