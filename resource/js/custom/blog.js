@@ -54,7 +54,7 @@ function getCategoryList() {
         
     });
 }
-// getCategoryList();
+getCategoryList();
 
 
 
