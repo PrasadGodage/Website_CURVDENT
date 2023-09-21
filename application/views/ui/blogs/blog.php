@@ -49,7 +49,7 @@
                         <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden">
-                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                         <div class="col-md-5 p-4">
                             <div class="item">
                                <div class="position-re o-hidden">
-                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                     </a>
                                 </div>
@@ -113,7 +113,7 @@
                         <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden">
-                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                     </a>
                                 </div>
@@ -146,7 +146,7 @@
                         <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden">
-                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                     </a>
                                 </div>
@@ -177,7 +177,7 @@
                         <div class="col-md-5 p-4">
                             <div class="item">
                                 <div class="position-re o-hidden">
-                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
+                                    <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
                                         style="height: 185px;">
                                     </a>
                                 </div>
