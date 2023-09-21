@@ -274,36 +274,57 @@
                             </div>
                         </div>
                     </div>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                 <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                   <li data-target="#myCarousel" data-slide-to="1"></li>
-                                   <li data-target="#myCarousel" data-slide-to="2"></li>
-                                </ol>
-
-                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                    </div>
-                                    <div class="item">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
-                                    </div>
-                                    <div class="item">
-                                        <img src="ny.jpg" alt="New york" style="width:100%;">
-                                    </div>
+                    <div class="container">
+                        <input type="radio" name="slider" id="item-1" checked>
+                        <input type="radio" name="slider" id="item-2">
+                        <input type="radio" name="slider" id="item-3">
+                        <div class="cards">
+                            <label class="card" for="item-1" id="song-1">
+                               <img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt="song">
+                            </label>
+                            <label class="card" for="item-2" id="song-2">
+                               <img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt="song">
+                            <label>
+                            <label class="card" for="item-3" id="song-3">
+                               <img src="<?php echo base_url() . 'uiAssets/img/Surgical face.jpg'; ?>" alt="song">
+                            <label>
+                        </div>
+                        <div class="player">
+                            <div class="upper-part">
+                                <div class="info-area" id="test">
+                                    <label class="song-info" id="song-info-1">
+                                        <div class="title">-- Skin/Hair Treatments --</div>
+                                           <div class="sub-line">
+                                           <div class="subtitle">Laser Hair Removal</div>
+                                           <div class="subtitle">Pimple/Acne Scar</div>
+                                           <div class="subtitle">Pimple Treatment</div>
+                                           <div class="subtitle">Removal</div>
+                                           <div class="time"></div>
+                                        </div>
+                                    </label>
+                                    <label class="song-info" id="song-info-2">
+                                        <div class="title">-- Pigmentation Treatment--</div>
+                                           <div class="sub-line">
+                                           <div class="subtitle">Laser Hair Removal</div>
+                                           <div class="subtitle">Pimple/Acne Scar</div>
+                                           <div class="subtitle">Pimple Treatment</div>
+                                           <div class="subtitle">Removal</div>
+                                           <div class="time"></div>
+                                        </div>
+                                    </label>
+                                    <label class="song-info" id="song-info-3">
+                                        <div class="title">-- Melasma Treatment --</div>
+                                           <div class="sub-line">
+                                           <div class="subtitle">Laser Hair Removal</div>
+                                           <div class="subtitle">Pimple/Acne Scar</div>
+                                           <div class="subtitle">Pimple Treatment</div>
+                                           <div class="subtitle">Removal</div>
+                                           <div class="time"></div>
+                                        </div>
+                                    </label>
                                 </div>
-
-                                 <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                     <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
@@ -344,6 +365,8 @@
             </div>
         </div>
     </section>
+    
+    <!-- Style for Title -->
     <style>
     .main_title2{
 	   background: #f9f9ff;
@@ -360,3 +383,12 @@
 	}
 }
     </style>
+
+    <!-- script for slider -->
+
+<script type="text/javascript">
+	$('input').on('change', function() {
+  $('body').toggleClass('blue');
+});
+
+</script>
