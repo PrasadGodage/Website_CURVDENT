@@ -96,7 +96,7 @@
      <!-- End Whats App Chat Boat Code  -->
 
      <script > 
-        let ebase_url = <?php echo base_url();?>
+        let ebase_url ='https://dev.curvdent.com/';
     </script>
 
 
