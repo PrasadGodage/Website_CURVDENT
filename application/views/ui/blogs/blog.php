@@ -251,6 +251,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div> 
+                                    <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-warning p-2">Back</span></button>
+                                </div>    
                               </div>
                             </div>
                         </div>
