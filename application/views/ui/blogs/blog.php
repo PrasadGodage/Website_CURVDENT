@@ -252,8 +252,18 @@
                                     </div>
                                 </div>
                               </div>
-                              <div> 
-                                    <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-warning p-2">Back</span></button>
+                              <div class="row">
+                                <div class="col-4">
+                                    <div> 
+                                      <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-danger p-2">Back</span></button>
+                                    </div>
+                                </div>
+                                <div class="col-4"></div> 
+                                <div class="col-4">   
+                                    <div> 
+                                        <button class="" type="button" data-target="#sliderid" data-slide="next"><span class="bg-success p-2">Next</span></button>
+                                    </div>
+                                </div>    
                               </div>
                             </div>
                         </div>
