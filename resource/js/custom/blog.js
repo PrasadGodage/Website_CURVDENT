@@ -20,8 +20,8 @@ function setBlogList(list) {
 // get category data
 function getBlogList() {
     $.ajax({
-        
-        url: ebase_url + 'category_api',
+
+        url: base_url + 'category_api',
 
         type: 'GET',
 
