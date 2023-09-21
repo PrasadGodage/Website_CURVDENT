@@ -265,7 +265,11 @@
                                     </div>
                                 </div>    
                               </div>
-                              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                  <!-- Indicators -->
                                 <ol class="carousel-indicators">
                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -295,9 +299,6 @@
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
-                               </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                     <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
