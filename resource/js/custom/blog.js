@@ -27,11 +27,11 @@ function getCategoryList() {
 
         type: 'GET',
 
-        // async:false,
+        async:false,
 
-        // headers: {
-        //     "Authorization": etoken
-        // },
+        headers: {
+            "Authorization": etoken
+        },
 
         dataType: 'json',
 
@@ -66,11 +66,11 @@ function getPostList() {
 
         type: 'GET',
 
-        // async:false,
+        async:false,
 
-        // headers: {
-        //     "Authorization": etoken
-        // },
+        headers: {
+            "Authorization": etoken
+        },
 
         dataType: 'json',
 
