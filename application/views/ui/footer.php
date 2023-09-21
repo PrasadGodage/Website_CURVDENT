@@ -97,6 +97,7 @@
 
      <script > 
         let ebase_url ='https://dev.curvdent.com/';
+        let etoken ='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJuYW1lIjoiTGFsaXQgTWVzaHJhbSIsIkFQSV9USU1FIjoxNjk1MjY5Mjk2fQ.dWLLPz3h6wGPTpqwk8SDuKxOZ7Xksn8153I92XsQ-jI';
     </script>
 
 
