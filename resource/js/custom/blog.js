@@ -1,5 +1,6 @@
 let categoryList = new Map();
 let postList = new Map();
+console.log("baseUrl"+ebase_url);
 
 // category table show
 function setCategoryList(list) {
@@ -53,7 +54,7 @@ function getCategoryList() {
         
     });
 }
-getCategoryList();
+// getCategoryList();
 
 
 
@@ -78,7 +79,7 @@ function getPostList() {
 
             if (response.status == 200) {
 
-                if (response.data.lenght != 0) {
+                if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         postList.set(response.data[i].id, response.data[i]);
                         $('#paragraph1').text(response.data[i].content);
