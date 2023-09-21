@@ -34,9 +34,9 @@
                     <div class="col-md-8 caption mt-90 animate-box" data-animate-effect="fadeInUp">
 
                         <a href="blog"><h2>Product Details</h2></a>
-                            <div class="page_link text-yellow" style="font-weight:bold;">
-                                <a href="home">Home</a>
-                                <a href="blog">Blog</a>
+                            <div class="page_link" style="font-weight:bold;">
+                                <a href="home"><span class="text-yellow">Home</span></a>
+                                <a href="blog"><span class="text-yellow">Blog</span></a>
                                 <hr class="line line-hr-left-white">
                             </div>
                        
