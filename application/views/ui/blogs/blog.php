@@ -58,8 +58,13 @@
                             <div class="item">
                                 <div class="media-body">
                                     <div class="row">
-                                        <div class="col-sm-4"><button type="button" class="btn btn-warning" href="blog_page">Blog</button></div>
-                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-4">
+                                            <a  href="blog_page">
+                                            <button type="button" class="btn btn-warning">Blog</button></a>
+                                        </div>
+                                        <div class="col-sm-4">
+
+                                        </div>
                                         <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true" href="blog_page"></i>May 22, 2023</a></div>
                                         <div class="col-md-12">
                                             <h5 style="color:red;" href="blog_page">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
