@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
-                <a class="logo" href="home"> <img src="<?php echo base_url() . 'uiAssets/'; ?>img/logo-light.png" class="logo-img" alt=""> </a>
+                <a class="logo" href="home"> <img src="<?php echo base_url() . 'uiAssets/img/logo-light.png'; ?>" class="logo-img" alt=""> </a>
                 <!-- <a class="logo" href="index.html">
                     <h2>Curvdent<span>Center of Beauty</span></h2>
                 </a> -->
