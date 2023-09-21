@@ -177,4 +177,46 @@ class PostingController extends REST_Controller {
         imagejpeg($image, $destination_url, $quality);
         return $destination_url;
     }
+
+    public function posting_delete($id = 0) {
+        $response = [];
+
+            
+        try {
+            //Authentication
+            $headers = $this->input->request_headers();
+
+            if (isset($headers['Authorization'])) {
+                $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
+                if ($decodedToken['status'])
+                {
+                    if(!empty($id)){
+                        $status = $this->posting->delete_posting($id);
+
+                        if (!empty($status)) {
+                            $response['data'] = $status;
+                            $response['msg'] = 'Delete successfully!';
+                            $response['status'] = 200;
+                            $this->response($response, REST_Controller::HTTP_OK);
+                        } else {
+                            $response['msg'] = 'Data not Found!';
+                            $response['status'] = 404;
+                            $this->response($response, REST_Controller::HTTP_OK);
+                        }
+                    }
+                }else {
+                    $this->response($decodedToken);
+                }
+                
+            }else {
+                $this->response(['Authentication failed'], REST_Controller::HTTP_OK);
+            }
+
+            
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        }
+    }
+
+
 }
