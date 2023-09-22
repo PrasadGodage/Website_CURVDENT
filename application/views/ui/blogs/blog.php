@@ -336,7 +336,7 @@
       <div class="row">
          <div class="col-lg-8">
             <div class="main_title2">
-               <h2>All News <?= $title ?></h2>
+               <h2>All News </h2>
             </div>
             <div class="latest_news">
                   <div class="media">
