@@ -145,17 +145,17 @@ function setPostList(list) {
 // ---------------------- delete data ---------------------------------------------
 function deletePostDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
-    swal({
-        title: 'Are you sure?',
-        text: 'You won\'t be able to revert this!',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Send an AJAX request to delete the data
+    // swal({
+    //     title: 'Are you sure?',
+    //     text: 'You won\'t be able to revert this!',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Yes, delete it!'
+    // }).then((result) => {
+    //     if (result.isConfirmed) {
+    //         // Send an AJAX request to delete the data
             $.ajax({
                 url: ebase_url + 'posting_api/' + id, // Replace with your actual delete API endpoint
                 type: 'DELETE',
@@ -165,7 +165,7 @@ function deletePostDetails(id) {
                 success: function (response) {
                     if (response.status == 200) {
                         // Remove the table row
-                        $('#postTable tr[data-id="' + id + '"]').remove();
+                        // $('#postTable tr[data-id="' + id + '"]').remove();
                         // Show a success message
                         swal(
                             'Deleted!',
@@ -181,18 +181,18 @@ function deletePostDetails(id) {
                         );
                     }
                 },
-                error: function () {
-                    // Handle the case where the AJAX request itself fails
-                    swal(
-                        'Error!',
-                        'Something went wrong!',
-                        'error'
-                    );
-                }
+                // error: function () {
+                //     // Handle the case where the AJAX request itself fails
+                //     swal(
+                //         'Error!',
+                //         'Something went wrong!',
+                //         'error'
+                //     );
+                // }
             });
         }
-    });
-}
+//     });
+// }
 
            
 
