@@ -31,7 +31,7 @@
                     <div class="box-header with-border box-controls pull-right">
                         <!-- <div class="box-header pull-left"> -->
                             <!-- <div class="box-controls pull-right"> -->
-                            <button type="button" class="btn btn-primary" id="addCategoryBtn">Add</button>
+                            <button type="button" class="btn btn-primary" id="addCategoryBtn"><i class="fa fa-plus" aria-hidden="true"></i>Add Category</button>
                             <!-- <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fa-sync-alt"></i>Reload</button> -->
                             </div>
                         <!-- </div> -->
