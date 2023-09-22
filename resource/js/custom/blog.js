@@ -23,7 +23,7 @@ function setCategoryList(list) {
 function getCategoryList() {
     $.ajax({
 
-        url: ebase_url+'category_api',
+        url: ebase_url+'blog_api',
 
         type: 'GET',
 
@@ -62,7 +62,7 @@ getCategoryList();
 function getPostList() {
     $.ajax({
 
-        url: ebase_url+'posting_api',
+        url: ebase_url+'blogpage_api',
 
         type: 'GET',
 
