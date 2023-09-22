@@ -198,10 +198,10 @@ function setPostList(list) {
 
           //Delete purchase item 
             function deletePostDetails(id){
-                if(itemMap.has(id)){
+                // if(itemMap.has(id)){
                     itemMap.delete(id);
                     refreshTable();
-                }
+                // }
             }
 
 
