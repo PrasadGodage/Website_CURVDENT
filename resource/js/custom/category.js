@@ -87,7 +87,7 @@ for (let k of list.keys()) {
             <td>` + category.slug + `</td>
             <td>` + category. is_active + `</td>
             <td> <a href="#" onclick="updateCategoryDetails(${category.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
-            <a href="" onclick="" title="dalete"><i class="mdi mdi-tooltip-delete" style="font-size: 20px;"></i></a>                   
+            <a href="#" onclick="deleteCategoryDetails(${post.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
             </td>
             
     </tr>`            
@@ -97,6 +97,59 @@ $('#categoryList').html(tblData);
 $('#categoryTable').DataTable();
 }
 
+
+// ---------------------- delete data ---------------------------------------------
+function deleteCategoryDetails(id) {
+    // Show a confirmation dialog using SweetAlert or JavaScript confirm
+    // swal({
+    //     title: 'Are you sure?',
+    //     text: 'You won\'t be able to revert this!',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Yes, delete it!'
+    // }).then((result) => {
+    //     if (result.isConfirmed) {
+    //         // Send an AJAX request to delete the data
+            $.ajax({
+                url: ebase_url + 'category_api/' + id, // Replace with your actual delete API endpoint
+                type: 'DELETE',
+                headers: {
+                    "Authorization": etoken
+                },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 200) {
+                        // Remove the table row
+                        // $('#postTable tr[data-id="' + id + '"]').remove();
+                        // Show a success message
+                        swal(
+                            'Deleted!',
+                            'Your post has been deleted.',
+                            'success'
+                        );
+                    } else {
+                        // Handle the case where the server returns an error
+                        swal(
+                            'Error!',
+                            'Something went wrong!',
+                            'error'
+                        );
+                    }
+                },
+                // error: function () {
+                //     // Handle the case where the AJAX request itself fails
+                //     swal(
+                //         'Error!',
+                //         'Something went wrong!',
+                //         'error'
+                //     );
+                // }
+            });
+        }
+//     });
+// }
 
 
 
