@@ -173,6 +173,8 @@ function deletePostDetails(id) {
                             'Your post has been deleted.',
                             'success'
                         );
+                        // Refresh the table here
+                        refreshTable();
                     } else {
                         // Handle the case where the server returns an error
                         swal(
@@ -211,13 +213,13 @@ function refreshTable(data) {
 
         // Create a new row and append it to the table body
         var newRow = '<tr>' +
-            '<td>' + rowData.title + '</td>' +
-            '<td>' + rowData.featured + '</td>' +
-            '<td>' + rowData.choice + '</td>' +
-            '<td>' + rowData.thread + '</td>' +
-            '<td>' + rowData.category_name + '</td>' +
-            '<td>' + rowData.is_active + '</td>' +
-            '<td>' + rowData.date + '</td>' +
+            '<td>' + rowData.title + '</td>' + // Make sure 'title' matches your data structure
+            '<td>' + rowData.featured + '</td>' + // Make sure 'featured' matches your data structure
+            '<td>' + rowData.choice + '</td>' + // Make sure 'choice' matches your data structure
+            '<td>' + rowData.thread + '</td>' + // Make sure 'thread' matches your data structure
+            '<td>' + rowData.category_name + '</td>' + // Make sure 'category_name' matches your data structure
+            '<td>' + rowData.is_active + '</td>' + // Make sure 'is_active' matches your data structure
+            '<td>' + rowData.date + '</td>' + // Make sure 'date' matches your data structure
             // Add more columns as needed
             '</tr>';
 
