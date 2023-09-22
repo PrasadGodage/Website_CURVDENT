@@ -9,6 +9,12 @@
     <link rel="shortcut icon" href="<?php echo base_url() . 'uiAssets/img/logo-light.png'; ?>" />
     <link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/plugins.css'; ?>" />
     <link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/style.css'; ?>" />
+
+    <!-- owlcarousel-->
+	<link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/plugins/owl.carousel.css'; ?>" />
+	<link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/plugins/owl.theme.default.css'; ?>" />
+	<!-- <link rel="stylesheet" href="../../../assets/vendor_components/OwlCarousel2/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="../../../assets/vendor_components/OwlCarousel2/dist/assets/owl.theme.default.css">	 -->
     
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
