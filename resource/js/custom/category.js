@@ -87,7 +87,7 @@ for (let k of list.keys()) {
             <td>` + category.slug + `</td>
             <td>` + category. is_active + `</td>
             <td> <a href="#" onclick="updateCategoryDetails(${category.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
-            <a href="#" onclick="deleteCategoryDetails(${post.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+            <a href="#" onclick="deleteCategoryDetails(${category.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
             </td>
             
     </tr>`            
