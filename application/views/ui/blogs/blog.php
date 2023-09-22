@@ -49,9 +49,7 @@
                     <div class="col-md-5 p-4">
                         <div class="item">
                             <div class="position-re o-hidden" id="div1">
-                                <!-- <a href="blog_page"><img src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt=""
-                                    style="height: 185px;">
-                                </a> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -67,11 +65,13 @@
 
                                     </div>
                                     <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true" href="blog_page"></i>May 22, 2023</a></div>
-                                    <div class="col-md-12">
-                                        <h5 style="color:red;" href="blog_page">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                                    <div class="col-md-12" id="heading1">
+                                        <!-- <h5 style="color:red;" href="blog_page" id="heading1"> -->
+                                        <!-- The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe -->
+                                    <!-- </h5> -->
                                     </div>    
                                     <div class="col-md-12" href="blog_page" id="p1">
-                                        <p id="paragraph1"></p>
+                                        <!-- <p id="paragraph1"></p> -->
                                         <!-- <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p> -->
                                     </div>
                                 </div> 

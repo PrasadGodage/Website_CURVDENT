@@ -100,18 +100,29 @@ function setPostList(postList){
 
     console.log(postList);
 
+    $('#heading1').empty();
+    $('#p1').empty();
     $('#div1').empty();
-    var divData = '';
+    var image = '';
+    var heading = '';
+    var paragraph = '';
 
     for (let k of postList.keys()) {
 
         let post = postList.get(k);
 
-        divData += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;">`;
+
+        heading += `<h5>` + post.title + `</h5>`;
+
+        image += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>`;
+
+        paragraph += `<p>` + post.content + `</p>`;
     }
 
-    $('#div1').html(divData);
 
+    $('#div1').html(image);
+    $('#p1').html(paragraph);
+    $('#heading1').html(heading);
 
    /* $('#p1').empty();
     var heading = '';
