@@ -82,7 +82,7 @@ function getPostList() {
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         postList.set(response.data[i].id, response.data[i]);
-                        $('#paragraph1').text(response.data[i].content);
+                        // $('#paragraph1').text(response.data[i].content);
                     }
                     
                 }
@@ -99,6 +99,19 @@ getPostList();
 function setPostList(postList){
 
     console.log(postList);
+
+    $('#div1').empty();
+    var divData = '';
+
+    for (let k of postList.keys()) {
+
+        let post = postList.get(k);
+
+        divData += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;">`;
+    }
+
+    $('#div1').html(divData);
+
 
    /* $('#p1').empty();
     var heading = '';
