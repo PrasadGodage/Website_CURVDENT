@@ -196,6 +196,34 @@ function deletePostDetails(id) {
 // }
 
            
+function refreshTable(data) {
+    // Assuming 'data' is an array of objects representing the updated table data
+
+    // Get a reference to the table
+    var table = $('#postTable');
+
+    // Clear existing rows from the table body
+    table.find('tbody').empty();
+
+    // Iterate through the 'data' array and append rows to the table
+    for (var i = 0; i < data.length; i++) {
+        var rowData = data[i];
+
+        // Create a new row and append it to the table body
+        var newRow = '<tr>' +
+            '<td>' + rowData.title + '</td>' +
+            '<td>' + rowData.featured + '</td>' +
+            '<td>' + rowData.choice + '</td>' +
+            '<td>' + rowData.thread + '</td>' +
+            '<td>' + rowData.category_name + '</td>' +
+            '<td>' + rowData.is_active + '</td>' +
+            '<td>' + rowData.date + '</td>' +
+            // Add more columns as needed
+            '</tr>';
+
+        table.find('tbody').append(newRow);
+    }
+}
 
 
 
