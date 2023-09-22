@@ -162,7 +162,7 @@ function setPostList(list) {
         //             if (result.value) {
 
                     $.ajax({
-                        url: ebase_url+'posting_api' + postId,
+                        url: ebase_url+'posting_api' + id,
                         method: 'DELETE',
                         success: function (response) {
                             if (response.success) {
