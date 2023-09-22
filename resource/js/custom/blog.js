@@ -106,6 +106,7 @@ function setPostList(postList){
     var image = '';
     var heading = '';
     var paragraph = '';
+    var date1 = '';
 
     for (let k of postList.keys()) {
 
@@ -113,6 +114,8 @@ function setPostList(postList){
 
 
         heading += `<h5>` + post.title + `</h5>`;
+
+        date1 += `<i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +``;
 
         image += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>`;
 
@@ -123,6 +126,7 @@ function setPostList(postList){
     $('#div1').html(image);
     $('#p1').html(paragraph);
     $('#heading1').html(heading);
+    $('#div2').html(date1);
 
    /* $('#p1').empty();
     var heading = '';
