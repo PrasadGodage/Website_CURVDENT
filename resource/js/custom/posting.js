@@ -145,7 +145,7 @@ function setPostList(list) {
 // ---------------------- delete data ---------------------------------------------
 function deletePostDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
-    Swal.fire({
+    swal({
         title: 'Are you sure?',
         text: 'You won\'t be able to revert this!',
         icon: 'warning',
@@ -167,14 +167,14 @@ function deletePostDetails(id) {
                         // Remove the table row
                         $('#postTable tr[data-id="' + id + '"]').remove();
                         // Show a success message
-                        Swal.fire(
+                        swal(
                             'Deleted!',
                             'Your post has been deleted.',
                             'success'
                         );
                     } else {
                         // Handle the case where the server returns an error
-                        Swal.fire(
+                        swal(
                             'Error!',
                             'Something went wrong!',
                             'error'
@@ -183,7 +183,7 @@ function deletePostDetails(id) {
                 },
                 error: function () {
                     // Handle the case where the AJAX request itself fails
-                    Swal.fire(
+                    swal(
                         'Error!',
                         'Something went wrong!',
                         'error'
