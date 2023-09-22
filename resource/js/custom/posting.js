@@ -173,6 +173,8 @@ function deletePostDetails(id) {
                             'Your post has been deleted.',
                             'success'
                         );
+                        // Refresh the table here
+                        refreshTable();
                     } else {
                         // Handle the case where the server returns an error
                         swal(
@@ -196,6 +198,34 @@ function deletePostDetails(id) {
 // }
 
            
+function refreshTable(data) {
+    // Assuming 'data' is an array of objects representing the updated table data
+
+    // Get a reference to the table
+    var table = $('#postTable');
+
+    // Clear existing rows from the table body
+    table.find('tbody').empty();
+
+    // Iterate through the 'data' array and append rows to the table
+    for (var i = 0; i < data.length; i++) {
+        var rowData = data[i];
+
+        // Create a new row and append it to the table body
+        var newRow = '<tr>' +
+            '<td>' + rowData.title + '</td>' + // Make sure 'title' matches your data structure
+            '<td>' + rowData.featured + '</td>' + // Make sure 'featured' matches your data structure
+            '<td>' + rowData.choice + '</td>' + // Make sure 'choice' matches your data structure
+            '<td>' + rowData.thread + '</td>' + // Make sure 'thread' matches your data structure
+            '<td>' + rowData.category_name + '</td>' + // Make sure 'category_name' matches your data structure
+            '<td>' + rowData.is_active + '</td>' + // Make sure 'is_active' matches your data structure
+            '<td>' + rowData.date + '</td>' + // Make sure 'date' matches your data structure
+            // Add more columns as needed
+            '</tr>';
+
+        table.find('tbody').append(newRow);
+    }
+}
 
 
 
