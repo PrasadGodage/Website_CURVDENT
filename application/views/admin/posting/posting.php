@@ -34,7 +34,7 @@
 
                             <!--<div class="box-controls pull-right">-->
                             <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <button type="button" class="btn btn-primary" id="addPostBtn">Add Post</button>
+                            <button type="button" class="btn btn-primary" id="addPostBtn"><i class="fa fa-plus" aria-hidden="true"></i> Add Post</button>
                             <!--</div>-->
                         </div>
                         <!-- /.box-header -->
