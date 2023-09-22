@@ -339,34 +339,30 @@
                <h2>All News <?= $title ?></h2>
             </div>
             <div class="latest_news">
-               <?php foreach($post as $p)  :?>
                   <div class="media">
                      <div class="d-flex">
-                        <img class="img-fluid" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
+                        <img class="img-fluid" src="" alt="">
                      </div>
                      <div class="media-body">
                         <div class="choice_text">
                            <div class="date">
-                              <a class="gad_btn" href="<?= base_url("blog/read/$p->seo_title") ?>"><?= $p->category_name ?></a>
-                              <a href="<?= base_url("blog/read/$p->seo_title") ?>" class="float-right"><i class="fa fa-calendar" aria-hidden="true">
-                                 </i><?= mediumdate_indo($p->date) ?>
+                              <a class="gad_btn" href="#"></a>
+                              <a href="#" class="float-right"><i class="fa fa-calendar" aria-hidden="true">
                               </a>
                            </div>
-                           <a href="<?= base_url("blog/read/$p->seo_title") ?>">
-                              <h4><?= $p->title ?></h4>
+                           <a href="#">
+                              <h4>abcd</h4>
                            </a>
-                           <p><?= character_limiter($p->content, 100) ?></p>
+                           <p>abcd</p>
                         </div>
                      </div>
                   </div>
-               <?php endforeach ?>
             </div>
 
             <!-- Pagination -->
             <div class="row mt-5">
                <div class="col">
                   <nav aria-label="Page navigation example">
-                     <?= $pagination ?>
                   </nav>
                </div> 
             </div>
@@ -374,7 +370,6 @@
             
          </div>
          <!-- ================Sidebar================== -->
-         <?php $this->load->view('front/layouts/_sidebar', $trending) ?>
          <!-- ================End of Sidebar================== -->
       </div>
    </div>
