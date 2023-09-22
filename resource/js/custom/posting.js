@@ -162,6 +162,7 @@ function deletePostDetails(id) {
                 headers: {
                     "Authorization": etoken
                 },
+                dataType: 'json',
                 success: function (response) {
                     if (response.status == 200) {
                         // Remove the table row
