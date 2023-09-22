@@ -229,75 +229,22 @@
                     </div>
                 </div>  
                 <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 p-0">
-                            <div id="sliderid" class="carousel slide" data-ride="carousel">
-                            <ol>
-                                <li data-target="#sliderid" data-slide-to="0" class="active"></li>
-                                <li data-target="#sliderid" data-slide-to="1"></li>
-                                <li data-target="#sliderid" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="card w-100 float-left">
-                                        <div class="card-header bg-primary p-0">
-                                            <div class="item">
-                                                <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Skin glowing treatment.jpg'; ?>" alt="..."></div>
-                                            </div>
-                                            <div class="card-body bg-dark">
-                                                <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
-                                                <ul class="ul1">
-                                                    <li><a href="services">Laser Hair Removal</a></li>
-                                                    <li><a href="services">Pimple/Acne Scar</a></li>
-                                                    <li><a href="services">Pimple Treatment</a></li>
-                                                    <li><a href="services">Removal</a></li> 
-                                                </ul>
-                                            </div>
-                                            <div class="card-footer bg-primary text-center">
-                                                <button class="btn btn-dark">View</button>
-                                            <div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card w-100 float-left">
-                                        <div class="card-header bg-primary p-0">
-                                            <div class="item">
-                                                <div class="position-re o-hidden"><img src="<?php echo base_url() . 'uiAssets/img/Skin lightening treatment.jpg'; ?>" alt="..."></div>
-                                            </div>
-                                            <div class="card-body bg-dark">
-                                                <h1 class="text-white text-center h4">-- Skin/Hair Treatments --</h1>
-                                                <ul class="ul1">
-                                                    <li><a href="services">Laser Hair Removal</a></li>
-                                                    <li><a href="services">Pimple/Acne Scar</a></li>
-                                                    <li><a href="services">Pimple Treatment</a></li>
-                                                    <li><a href="services">Removal</a></li> 
-                                                </ul>
-                                            </div>
-                                            <div class="card-footer text-center">
-                                                <button class="btn btn-dark">View</button>
-                                            <div>
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- <div class="container-fluid"> -->
+                <div class="box-body">
+                    <div class="owl-carousel owl-theme">
+                            <div class="box mb-0">
+                                <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
+                                <!-- <img class="card-img-top img-responsive" src="../../../images/card/img1.jpg" alt="Card image cap"> -->
                             </div>
+                            <div class="box mb-0">
+                                <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
                             </div>
-                            <!-- <div class="row">
-                            <div class="col-4">
-                                <div> 
-                                    <button class="" type="button" data-target="#sliderid" data-slide="prev"><span class="bg-danger p-2">Back</span></button>
-                                </div>
+                            <div class="box mb-0">
+                                <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
                             </div>
-                            <div class="col-4"></div> 
-                            <div class="col-4">   
-                                <div> 
-                                    <button class="" type="button" data-target="#sliderid" data-slide="next"><span class="bg-success p-2">Next</span></button>
-                                </div>
-                            </div>    
-                            </div> -->
-                            
-                        </div>
+                            <div class="box mb-0">
+                                <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
+                            </div>
                     </div>
                 </div>
                 <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
