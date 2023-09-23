@@ -1,5 +1,4 @@
 let categoryList = new Map();
-console.log(etoken);
 // set category data
 //Submit Category Btn script
 
@@ -124,19 +123,16 @@ function deleteCategoryDetails(id) {
                         // Remove the table row
                         // $('#postTable tr[data-id="' + id + '"]').remove();
                         // Show a success message
-                        swal(
-                            'Deleted!',
-                            'Your post has been deleted.',
-                            'success'
-                        );
-                    } else {
-                        // Handle the case where the server returns an error
-                        swal(
-                            'Error!',
-                            'Something went wrong!',
-                            'error'
-                        );
-                    }
+                        swal("Good job!", response.msg, "success");  
+                            setTimeout(
+                                $(location).attr('href',ebase_url+'category'),
+                                 8000
+                                 )
+                        } else {
+
+                            swal("Good job!", response.msg, "error");
+
+                        }
                 },
                 // error: function () {
                 //     // Handle the case where the AJAX request itself fails

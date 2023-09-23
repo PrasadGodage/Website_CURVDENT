@@ -65,7 +65,6 @@ $('#addPostBtn').click(function () {
     $('.error').text('');
     $('#otherdpre').attr('src','');
     $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
-    // $('#otherdpre').attr('src', '<?php echo base_url("resource/images/avatar-custom.png"); ?>');
 
 });
 
@@ -165,24 +164,18 @@ function deletePostDetails(id) {
                 dataType: 'json',
                 success: function (response) {
                     if (response.status == 200) {
-                        // Remove the table row
-                        // $('#postTable tr[data-id="' + id + '"]').remove();
+                      
                         // Show a success message
-                        swal(
-                            'Deleted!',
-                            'Your post has been deleted.',
-                            'success'
-                        );
-                        // Refresh the table here
-                        refreshTable();
-                    } else {
-                        // Handle the case where the server returns an error
-                        swal(
-                            'Error!',
-                            'Something went wrong!',
-                            'error'
-                        );
-                    }
+                        swal("Good job!", response.msg, "success");
+                    setTimeout(
+                        $(location).attr('href',ebase_url+'posting'),
+                         8000
+                         )
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
+                }
                 },
                 // error: function () {
                 //     // Handle the case where the AJAX request itself fails
@@ -198,34 +191,37 @@ function deletePostDetails(id) {
 // }
 
            
-function refreshTable(data) {
-    // Assuming 'data' is an array of objects representing the updated table data
-
-    // Get a reference to the table
-    var table = $('#postTable');
-
-    // Clear existing rows from the table body
-    table.find('tbody').empty();
-
-    // Iterate through the 'data' array and append rows to the table
-    for (var i = 0; i < data.length; i++) {
-        var rowData = data[i];
-
-        // Create a new row and append it to the table body
-        var newRow = '<tr>' +
-            '<td>' + rowData.title + '</td>' + // Make sure 'title' matches your data structure
-            '<td>' + rowData.featured + '</td>' + // Make sure 'featured' matches your data structure
-            '<td>' + rowData.choice + '</td>' + // Make sure 'choice' matches your data structure
-            '<td>' + rowData.thread + '</td>' + // Make sure 'thread' matches your data structure
-            '<td>' + rowData.category_name + '</td>' + // Make sure 'category_name' matches your data structure
-            '<td>' + rowData.is_active + '</td>' + // Make sure 'is_active' matches your data structure
-            '<td>' + rowData.date + '</td>' + // Make sure 'date' matches your data structure
-            // Add more columns as needed
-            '</tr>';
-
-        table.find('tbody').append(newRow);
-    }
-}
+// function refreshTable() {
+//     $('#postTable').dataTable().fnDestroy();
+//     $('#postList').empty();
+//     var tblData = '';
+//     var index=1;
+    
+//     for (let k of postList.keys()) {
+        
+//         let post = postList.get(k);
+    
+//         tblData += `
+//         <tr>
+//                 <td>` + index + `</td>
+//                 <td>` + post.title + `</td>
+//                 <td>` + post.featured + `</td>
+//                 <td>` + post.choice + `</td>
+//                 <td>` + post.thread + `</td>
+//                 <td>` + post.category_name + `</td>
+//                 <td>` + post.is_active + `</td>
+//                 <td>` + post.date + `</td>
+//                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                 <a href="#" onclick="deletePostDetails(${post.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+//                 </td>
+                
+//         </tr>`;
+//         index++;
+//     }
+    
+//     $('#postList').html(tblData);
+//     $('#postTable').DataTable();
+// }
 
 
 
@@ -245,7 +241,6 @@ function updatePostDetails(id) {
     $('#otherdpre').attr('src','');
     
     // Reset the image preview
-    // $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
     $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
@@ -261,16 +256,12 @@ function updatePostDetails(id) {
     $('#is_active').val(post.is_active).change();
     $('#date').val(post.date);
     (post.photo != null) ? $('#otherdpre').attr('src', ebase_url + post.photo) : '';
-    // $('#photo').attr(post.photo);
 
     // Show the updated post details in a modal
     $('#addPostModal').modal('toggle');
 }
 
-
-
-
-    //Get Category List 
+ //Get Category List 
     function getCategoryList() {
         $.ajax({
     
