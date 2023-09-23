@@ -167,7 +167,10 @@ function deletePostDetails(id) {
                       
                         // Show a success message
                         swal("Good job!", response.msg, "success");
-                    $(location).attr('href',ebase_url+'posting');
+                    setTimeout(
+                        $(location).attr('href',ebase_url+'posting'),
+                         8000
+                         )
                 } else {
 
                     swal("Good job!", response.msg, "error");
