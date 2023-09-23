@@ -123,22 +123,13 @@ function deleteCategoryDetails(id) {
                         // Remove the table row
                         // $('#postTable tr[data-id="' + id + '"]').remove();
                         // Show a success message
-                        swal(
-                            'Deleted!',
-                            'Your post has been deleted.',
-                            'success'
-                        );
-                      // refresh table  
-                        $(location).attr('href',ebase_url+'category');
+                        swal("Good job!", response.msg, "success");
+                            $(location).attr('href',ebase_url+'category');
+                        } else {
 
-                    } else {
-                        // Handle the case where the server returns an error
-                        swal(
-                            'Error!',
-                            'Something went wrong!',
-                            'error'
-                        );
-                    }
+                            swal("Good job!", response.msg, "error");
+
+                        }
                 },
                 // error: function () {
                 //     // Handle the case where the AJAX request itself fails
