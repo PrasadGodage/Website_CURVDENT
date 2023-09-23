@@ -73,7 +73,7 @@ function getPostList() {
 
                 if (response.data.length != 0) {
                     // for (var i = 0; i < response.data.length; i++) {
-                        postList.set(response.data[i].id, response.data[i]);
+                        postList.set(response.data[0].id, response.data[0]);
                         // $('#paragraph1').text(response.data[i].content);
                     // }
                     
