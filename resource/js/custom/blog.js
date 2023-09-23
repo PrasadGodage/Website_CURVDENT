@@ -19,6 +19,25 @@ function setCategoryList(list) {
     $('#uiList').html(ulData);
 }
 
+// Category table show on blog_page
+function setCategoryList1(list) {
+    console.log(list);
+
+    $('#uiList').empty();
+    var ulData = '';
+
+    for (let k of list.keys()) {
+
+        let category = list.get(k);
+
+        ulData += `<li>` + category.category_name + `</li>`;
+    }
+
+    $('#uiList').html(ulData);
+}
+
+
+
 // get category data
 function getCategoryList() {
     $.ajax({
@@ -43,6 +62,7 @@ function getCategoryList() {
                     
                 }
                 setCategoryList(categoryList);
+                setCategoryList1(categoryList);
                 console.log(categoryList);
             }
 
