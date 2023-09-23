@@ -141,12 +141,7 @@ function setPostList(postList){
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                        if (imageData != null && imageData.length > 0) {
                             <a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>
-                        }else{
-                            <a href="blog_page"><img src= ebase_url() . 'uiAssets/img/dummy.jpg alt="" style="height: 185px;"></a>
-                            
-                        }
                         </div>
                     </div>
                 </div>
