@@ -37,7 +37,6 @@ function setCategoryList1(list) {
 }
 
 
-
 // get category data
 function getCategoryList() {
     $.ajax({
