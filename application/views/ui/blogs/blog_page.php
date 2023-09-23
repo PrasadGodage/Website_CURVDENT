@@ -51,26 +51,25 @@
         <div class="container">
             <div class="row">
                 <!-- Content -->
-                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp" id="data2">
                     <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div> -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-12 p-4">
                             <div class="item">
-                                <div class="position-re o-hidden"><img src= "<?php echo base_url() . 'uiAssets/'; ?>img/pimple.jpg" alt=""
-                                        style="height: 400px;">
+                                <div class="position-re o-hidden">
                                 </div>
 
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div> -->
+                    <!-- <div class="row">
                         <div class="col-md-12 p-4">
                             <div class="item">
                                 <div class="media-body">
                                     <div class="row">
-                                        <!-- <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div> -->
+                                         <div class="col-sm-4"><button type="button" class="btn btn-warning">Blog</button></div> -->
                                         <!-- <div class="col-sm-4"></div> -->
-                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
+                                        <!-- <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>May 22, 2023</a></div>
                                         <div class="col-md-12">
                                             <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
                                         </div>    
@@ -86,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>     -->
                     
                 </div> 
                 <!-- Sidebar -->

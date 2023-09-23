@@ -199,7 +199,7 @@ function setPostList(postList){
 
     $('#p1').html(paragraph);
 }
-
+*/
 function setPostList(postList) {
     console.log(postList);
     
@@ -252,13 +252,12 @@ function setPostList(postList) {
     $('#data1').html(data1);
 }
 
-*/
-function setPostList(postList) {
+// Show data on Blog_page 
+function setPostList1(postList) {
     console.log(postList);
-
-    $('#data1').empty();
-    var data1 = '';
-    var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    
+    $('#data2').empty();
+    var data2 = '';
 
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
@@ -266,58 +265,38 @@ function setPostList(postList) {
     for (let k of postList.keys()) {
         let post = postList.get(k);
 
-        data1 += '<div class="row">';
-        
-        // Check if post.photo is not empty or falsy
-        if (post.photo) {
-            data1 += `
-                <div class="col-md-5 p-4">
-                    <div class="item">
-                        <div class="position-re o-hidden">
-                            <a href="blog_page"><img src="${post.photo}" alt="" style="height: 185px;"></a>
-                        </div>
-                    </div>
-                </div>
-            `;
-        } else {
-            // If post.photo is empty, provide a default image
-            data1 += `
-                <div class="col-md-5 p-4">
-                    <div class="item">
-                        <div class="position-re o-hidden">
-                            <a href="blog_page"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-        
         data1 += `
-            <div class="col-md-7 p-4">
-                <div class="item">
-                    <div class="media-body">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <a href="blog_page">
-                                <button type="button" class="btn btn-warning">Blog</button></a>
-                            </div>
-                            <div class="col-sm-4">
-                            </div>
-                            <div class="col-sm-4">
-                                <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
-                            </div>
-                            <div class="col-md-12">
-                                <h5>${post.title}</h5>
-                            </div>    
-                            <div class="col-md-12">
-                                <p>${post.content}</p>
-                            </div>
-                        </div> 
+            <div class="row">
+                <div class="col-md-12 p-4">
+                     <div class="item">
+                        <div class="position-re o-hidden">
+                            <img src="${post.photo}" alt="" style="height: 400px;">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>`;
+            <div class="row">
+                <div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                    <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h5 style="color:red;">${post.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${post.content}</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        `;
     }
 
-    $('#data1').html(data1);
+    $('#data2').html(data2);
 }
