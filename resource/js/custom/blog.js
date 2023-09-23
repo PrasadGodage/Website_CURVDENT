@@ -251,3 +251,52 @@ function setPostList(postList) {
 
     $('#data1').html(data1);
 }
+
+// Show data on Blog_page 
+function setPostList1(postList) {
+    console.log(postList);
+    
+    $('#data2').empty();
+    var data1 = '';
+
+    // Add the title section outside the loop
+    data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+
+    for (let k of postList.keys()) {
+        let post = postList.get(k);
+
+        data1 += `
+            <div class="row">
+                <div class="col-md-12 p-4">
+                     <div class="item">
+                        <div class="position-re o-hidden">
+                            <img src="${post.photo}" alt="" style="height: 400px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                    <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h5 style="color:red;">${post.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${post.content}</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        `;
+    }
+
+    $('#data2').html(data2);
+}
