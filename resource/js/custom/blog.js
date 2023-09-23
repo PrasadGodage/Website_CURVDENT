@@ -23,7 +23,7 @@ function setCategoryList(list) {
 function setCategoryList1(list) {
     console.log(list);
 
-    $('#uiList').empty();
+    $('#uiList1').empty();
     var ulData = '';
 
     for (let k of list.keys()) {
@@ -33,7 +33,7 @@ function setCategoryList1(list) {
         ulData += `<li>` + category.category_name + `</li>`;
     }
 
-    $('#uiList').html(ulData);
+    $('#uiList1').html(ulData);
 }
 
 
