@@ -116,37 +116,45 @@ function setPostList(postList){
         // paragraph += `<p>` + post.content + `</p>`;
         data1 =`
         
-        <div class="col-md-5 p-4">
-            <div class="item">
-                <div class="position-re o-hidden">
-                    <a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>
+            <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
+            <div class="row">
+                <div class="col-md-5 p-4">
+                    <div class="item">
+                        <div class="position-re o-hidden">
+                        if (imageData != null && imageData.length > 0) {
+                            <a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>
+                        }else{
+                            <a href="blog_page"><img src= ebase_url() . 'uiAssets/img/dummy.jpg alt="" style="height: 185px;"></a>
+                            
+                        }
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col-md-7 p-4">
-            <div class="item">
-                <div class="media-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <a  href="blog_page">
-                            <button type="button" class="btn btn-warning">Blog</button></a>
+                <div class="col-md-7 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <a  href="blog_page">
+                                    <button type="button" class="btn btn-warning">Blog</button></a>
+                                </div>
+                                <div class="col-sm-4">
+                                </div>
+                                <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +`
+                                </div>
+                                <div class="col-md-12">
+                                    <h5>` + post.title + `</h5>
+                                </div>    
+                                <div class="col-md-12" href="blog_page">
+                                    <p>` + post.content + `</p>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="col-sm-4">
-                        </div>
-                        <div class="col-sm-4">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +`
-                        </div>
-                        <div class="col-md-12">
-                            <h5>` + post.title + `</h5>
-                        </div>    
-                        <div class="col-md-12" href="blog_page">
-                            <p>` + post.content + `</p>
-                        </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
-        </div>
         
         `
     }
