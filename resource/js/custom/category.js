@@ -123,8 +123,11 @@ function deleteCategoryDetails(id) {
                         // Remove the table row
                         // $('#postTable tr[data-id="' + id + '"]').remove();
                         // Show a success message
-                        swal("Good job!", response.msg, "success");
-                            $(location).attr('href',ebase_url+'category');
+                        swal("Good job!", response.msg, "success");  
+                            setTimeout(
+                                $(location).attr('href',ebase_url+'category'),
+                                 8000
+                                 )
                         } else {
 
                             swal("Good job!", response.msg, "error");
