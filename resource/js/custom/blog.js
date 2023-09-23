@@ -257,7 +257,7 @@ function setPostList1(postList) {
     console.log(postList);
     
     $('#data2').empty();
-    var data1 = '';
+    var data2 = '';
 
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
