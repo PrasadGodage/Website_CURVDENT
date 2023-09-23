@@ -29,10 +29,6 @@ function getCategoryList() {
 
         async:false,
 
-        headers: {
-            "Authorization": etoken
-        },
-
         dataType: 'json',
 
         success: function (response) {
@@ -67,10 +63,6 @@ function getPostList() {
         type: 'GET',
 
         async:false,
-
-        headers: {
-            "Authorization": etoken
-        },
 
         dataType: 'json',
 

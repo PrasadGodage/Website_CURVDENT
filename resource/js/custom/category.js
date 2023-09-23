@@ -1,5 +1,4 @@
 let categoryList = new Map();
-console.log(etoken);
 // set category data
 //Submit Category Btn script
 
@@ -129,6 +128,9 @@ function deleteCategoryDetails(id) {
                             'Your post has been deleted.',
                             'success'
                         );
+                      // refresh table  
+                        $(location).attr('href',ebase_url+'category');
+
                     } else {
                         // Handle the case where the server returns an error
                         swal(
