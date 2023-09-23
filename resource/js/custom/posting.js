@@ -166,22 +166,13 @@ function deletePostDetails(id) {
                     if (response.status == 200) {
                       
                         // Show a success message
-                        swal(
-                            'Deleted!',
-                            'Your post has been deleted.',
-                            'success'
-                        );
-                        // Refresh the table here
-                        // refreshTable();
-                        $(location).attr('href',ebase_url+'posting');
-                    } else {
-                        // Handle the case where the server returns an error
-                        swal(
-                            'Error!',
-                            'Something went wrong!',
-                            'error'
-                        );
-                    }
+                        swal("Good job!", response.msg, "success");
+                    $(location).attr('href',ebase_url+'posting');
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
+                }
                 },
                 // error: function () {
                 //     // Handle the case where the AJAX request itself fails
