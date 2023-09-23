@@ -283,38 +283,46 @@ function setPostList1(postList) {
     for (let k of postList.keys()) {
         let post = postList.get(k);
 
-        data1 += `
-            <div class="row">
-                <div class="col-md-12 p-4">
-                     <div class="item">
-                        <div class="position-re o-hidden">
-                            <img src="${post.photo}" alt="" style="height: 400px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 p-4">
-                    <div class="item">
-                        <div class="media-body">
-                            <div class="row">
-                                    <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
-                                    </div>
-                                    <div class="col-md-12">
-                                        <h5 style="color:red;">${post.title}</h5>
-                                    </div>    
-                                    <div class="col-md-12">
-                                        <p>${post.content}</p>
-                                    </div>
-                                </div> 
+        data2 +=
+                    `
+                    <div class="row">
+                        <div class="col-md-12 p-4">
+                            <div class="item">
+                                <div class="position-re o-hidden"><img src= "${post.photo}" alt="" style="height: 400px;">
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>   
-        `;
+                    <div class="row">
+                        <div class="col-md-12 p-4">
+                            <div class="item">
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>${post.date}</div>
+                    `;
+        data2 +=
+                 `
+                    <div class="col-md-12">
+                        <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
+                    </div>  
+                `;
+                                        
+        data2 +=             
+                 `  
+                    <div class="col-md-12">
+                        <p>${post.content}</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>    
+</div> 
+
+`;
     }
 
     $('#data2').html(data2);
 }
+
