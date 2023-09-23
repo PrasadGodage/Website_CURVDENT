@@ -150,13 +150,13 @@ function setPostList(postList){
         
         `
     }
+    $('#data1').html(data1);
 
 
     // $('#div1').html(image);
     // $('#p1').html(paragraph);
     // $('#heading1').html(heading);
     // $('#div2').html(date1);
-    $('#data1').html(date1);
 
    /* $('#p1').empty();
     var heading = '';
