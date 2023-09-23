@@ -92,33 +92,71 @@ function setPostList(postList){
 
     console.log(postList);
 
-    $('#heading1').empty();
-    $('#p1').empty();
-    $('#div1').empty();
-    var image = '';
-    var heading = '';
-    var paragraph = '';
-    var date1 = '';
+    $('#data1').empty();
+    // $('#heading1').empty();
+    // $('#p1').empty();
+    // $('#div1').empty();
+    // var image = '';
+    // var heading = '';
+    // var paragraph = '';
+    // var date1 = '';
+    var data1 = '';
 
     for (let k of postList.keys()) {
 
         let post = postList.get(k);
 
 
-        heading += `<h5>` + post.title + `</h5>`;
+        // heading += `<h5>` + post.title + `</h5>`;
 
-        date1 += `<i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +``;
+        // date1 += `<i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +``;
 
-        image += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>`;
+        // image += `<a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>`;
 
-        paragraph += `<p>` + post.content + `</p>`;
+        // paragraph += `<p>` + post.content + `</p>`;
+        data1 =`
+        
+        <div class="col-md-5 p-4">
+            <div class="item">
+                <div class="position-re o-hidden">
+                    <a href="blog_page"><img src= ${post.photo} alt="" style="height: 185px;"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 p-4">
+            <div class="item">
+                <div class="media-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a  href="blog_page">
+                            <button type="button" class="btn btn-warning">Blog</button></a>
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-4">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>`+ post.date +`
+                        </div>
+                        <div class="col-md-12">
+                            <h5>` + post.title + `</h5>
+                        </div>    
+                        <div class="col-md-12" href="blog_page">
+                            <p>` + post.content + `</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+        `
     }
 
 
-    $('#div1').html(image);
-    $('#p1').html(paragraph);
-    $('#heading1').html(heading);
-    $('#div2').html(date1);
+    // $('#div1').html(image);
+    // $('#p1').html(paragraph);
+    // $('#heading1').html(heading);
+    // $('#div2').html(date1);
+    $('#data1').html(date1);
 
    /* $('#p1').empty();
     var heading = '';

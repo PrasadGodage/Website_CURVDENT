@@ -161,7 +161,7 @@ class PostingUiController extends REST_Controller {
         if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg")) {
             $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
             $time = date('Y_m_d_hisu');
-            $filename = $this->compress_image($file['temp_name'], "resource/img/employee/" . 'photo' . $time . "." . $ext, 50);
+            $filename = $this->compress_image($file['temp_name'], "resource/img/blog/" . 'photo' . $time . "." . $ext, 50);
             return $filename;
         }
     }

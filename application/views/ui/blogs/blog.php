@@ -45,8 +45,8 @@
             <!-- Content -->
             <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
                 <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
-                <div class="row">
-                    <div class="col-md-5 p-4">
+                <div class="row" id="data1">
+                    <!-- <div class="col-md-5 p-4">
                         <div class="item">
                             <div class="position-re o-hidden" id="div1">
                                 
@@ -67,18 +67,18 @@
                                     <div class="col-sm-4" id="div2">
                                     </div>
                                     <div class="col-md-12" id="heading1">
-                                        <!-- <h5 style="color:red;" href="blog_page" id="heading1"> -->
+                                         <h5 style="color:red;" href="blog_page" id="heading1"> -->
                                         <!-- The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe -->
                                     <!-- </h5> -->
-                                    </div>    
+                                    <!--</div>    
                                     <div class="col-md-12" href="blog_page" id="p1">
-                                        <!-- <p id="paragraph1"></p> -->
-                                        <!-- <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p> -->
+                                         <p id="paragraph1"></p> -->
+                                        <!-- <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
                                     </div>
                                 </div> 
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -115,15 +115,7 @@
                                         <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
                                         <!-- <img class="card-img-top img-responsive" src="../../../images/card/img1.jpg" alt="Card image cap"> -->
                                     </div>
-                                    <div class="box mb-0">
-                                        <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
-                                    </div>
-                                    <div class="box mb-0">
-                                        <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
-                                    </div>
-                                    <div class="box mb-0">
-                                        <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
