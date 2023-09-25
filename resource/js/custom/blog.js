@@ -212,7 +212,7 @@ function setPostList(postList) {
 
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
-    data2 += '<div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>';
+    data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
 
     for (let k of postList.keys()) {
         let post = postList.get(k);
@@ -304,7 +304,8 @@ function setPostList(postList) {
             </div>
         `;
 
-        data2 +=`<div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>`;
+        data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
+        // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         data2 +=`<div class="row">`;
         
         data2 +=`<div class="col-md-12 p-4">
@@ -312,7 +313,12 @@ function setPostList(postList) {
                         <div class="media-body">
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src= "${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastPost.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastPost.content}</p>
+                                    </div>
                                 </div>
                                 <div class="box mb-0">
                                     <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
