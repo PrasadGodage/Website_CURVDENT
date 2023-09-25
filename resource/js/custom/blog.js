@@ -98,6 +98,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
+                setPostList1(postList);
                 // console.log(postList);
             }
 
@@ -291,10 +292,10 @@ function setPostList(postList) {
                                     <i class="fa fa-calendar" aria-hidden="true">${lastPost.date}
                                 </div>
                                 <div class="col-md-12">
-                                <h5>${lastPost.title}</h5>
+                                    <h5>${lastPost.title}</h5>
                                 </div>    
                                 <div class="col-md-12">
-                                <p>${lastPost.content}</p>
+                                    <p>${lastPost.content}</p>
                                 </div>
                             </div> 
                         </div>
@@ -313,55 +314,89 @@ function setPostList(postList) {
 function setPostList1(postList) {
     console.log(postList);
     
-    $('#data2').empty();
-    var data2 = '';
+    $('#data3').empty();
+    var data3 = '';
+    var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
 
     // Add the title section outside the loop
-    data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+    data3 += '<div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>';
 
-    for (let k of postList.keys()) {
-        let post = postList.get(k);
+    let lastKey = null;
 
-        data2 +=
-                    `
-                    <div class="row">
-                        <div class="col-md-12 p-4">
-                            <div class="item">
-                                <div class="position-re o-hidden"><img src= "${post.photo}" alt="" style="height: 400px;">
-                                </div>
+        for (let temp of postList.keys()) {
+            lastKey = temp;
+        }
+        console.log(lastKey);
+        let lastPost = postList.get(lastKey);
+   // for (let k of postList.keys()) {
+     //   let post = postList.get(k);
 
-                            </div>
+        data3 +=`<div class="row">`;
+
+
+        // Check if post.photo is not empty or falsy
+        if (lastPost.photo) {
+            data3 += `
+                    <div class="col-md-12 p-4">
+                        <div class="item">
+
+                            <div class="position-re o-hidden"><img src= "${lastPost.photo}" alt="" style="height: 400px;"></div>
+
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 p-4">
-                            <div class="item">
-                                <div class="media-body">
-                                    <div class="row">
-                                        <div class="col-sm-4"><i class="fa fa-calendar" aria-hidden="true"></i>${post.date}</div>
-                    `;
-        data2 +=
-                 `
-                    <div class="col-md-12">
-                        <h5 style="color:red;">The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe</h5>
-                    </div>  
-                `;
-                                        
-        data2 +=             
-                 `  
-                    <div class="col-md-12">
-                        <p>${post.content}</p>
+                
+            `;
+        } else {
+            // If post.photo is empty, provide a default image
+            data3 += `
+                    <div class="col-md-12 p-4">
+                        <div class="item">
+
+                            <div class="position-re o-hidden"><img src= "${imageSrc}" alt="" style="height: 400px;"></div>
+
+                        </div>
                     </div>
-                </div> 
+                
+            `;
+        }
+
+        // data3 +=`
+        //     <div class="col-md-12 p-4">
+        //         <div class="item">
+
+        //             <div class="position-re o-hidden"><img src= "${post.photo}" alt="" style="height: 400px;"></div>
+
+        //         </div>
+        //     </div>
+        // </div>
+        // `;
+                    
+       // data3= `<div class="row">`;
+        data3= `
+                <div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>${lastPost.date}
+                                </div>
+            
+
+                                <div class="col-md-12">
+                                    <h5>${lastPost.title}</h5>
+                                </div>  
+                                <div class="col-md-12">
+                                    <p>${lastPost.content}</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>    
-</div> 
 
-`;
-    }
+        `;
+  //  }
 
-    $('#data2').html(data2);
+    $('#data3').html(data3);
 }
 
