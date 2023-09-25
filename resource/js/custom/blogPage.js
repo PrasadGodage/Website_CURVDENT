@@ -64,32 +64,21 @@ function setPostList1(postList) {
 
 
         // Check if post.photo is not empty or falsy
-        // if (postList.photo) {
-            // (post.photo != null) ? $('#otherdpre').attr('src', ebase_url + post.photo) : '';
+        if (postList.photo!='') {
+            imageSrc=postList.photo;
+        }
+            // If post.photo is empty, provide a default image
             data3 += `
                     <div class="col-md-12 p-4">
                         <div class="item">
                             <div class="position-re o-hidden">
-                                <img src= "${ebase_url + postList.photo}" alt="" style="height: 400px;">
+                                <img src= "${imageSrc}" alt="" style="height: 400px;">
                             </div>
                         </div>
                     </div>
                 </div>
             `;
-            
-        // } else {
-        //     // If post.photo is empty, provide a default image
-        //     data3 += `
-        //             <div class="col-md-12 p-4">
-        //                 <div class="item">
-        //                     <div class="position-re o-hidden">
-        //                         <img src= "${imageSrc}" alt="" style="height: 400px;">
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     `;
-        // }
+        
 
         data3= `<div class="row">`;
         data3= `
