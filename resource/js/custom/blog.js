@@ -132,7 +132,7 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                            <a href="#" onclick="postDetails(${post.id})"><img src="${post.photo}" alt="" style="height: 185px;"></a>
+                            <a href="blog_page" onclick="postDetails(${post.id})"><img src="${post.photo}" alt="" style="height: 185px;"></a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                        <a href="#" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
+                        <a href="blog_page" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@ function setPostList(postList) {
                     <div class="media-body">
                         <div class="row">
                             <div class="col-sm-4">
-                            <a href="#" onclick="postDetails(${post.id})">
+                            <a href="blog_page" onclick="postDetails(${post.id})">
                                 <button type="button" class="btn btn-warning">Blog</button></a>
                             </div>
                             <div class="col-sm-4">
@@ -314,16 +314,16 @@ function setPostList1(postList) {
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
 
     // Add the title section outside the loop
-    data3 += '<div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>';
+    data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
     data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
 
     let lastKey = null;
 
-        for (let temp of postList.keys()) {
-            lastKey = temp;
-        }
-        console.log(lastKey);
-        let lastPost = postList.get(lastKey);
+        let temp = postList.keys();
+            // lastKey = temp;
+        
+        // console.log(lastKey);
+        let lastPost = postList.get(temp);
    // for (let k of postList.keys()) {
      //   let post = postList.get(k);
 
@@ -531,7 +531,7 @@ function postDetails(id){
         }
         
     });
-    $(location).attr('href',ebase_url+'blog_page');
+    // $(location).attr('href',ebase_url+'blog_page');
 }
 
 $(function () {
