@@ -49,7 +49,7 @@ function setPostList1(postList) {
 
     // Add the title section outside the loop
     data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
-    data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
+    
 
     // let lastKey = null;
 
@@ -119,80 +119,81 @@ function setPostList1(postList) {
 //   console.log(lastKey1);
 //   let lastPost1 = postList.get(lastKey);
 
-  data4 += `<div class="row">`;
+    data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
+    data4 += `<div class="row">`;
 
-  data4 += `<div class="col-md-12 p-4">
-              <div class="item">
-                  <div class="media-body">
-                      <div class="row">
-                          <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
-                          <div class="col-sm-4"></div>
-                          <div class="col-sm-4">
-                              <i class="fa fa-calendar" aria-hidden="true">${postList.date}
-                          </div>
-                          <div class="col-md-12">
-                              <h5>${postList.title}</h5>
-                          </div>    
-                          <div class="col-md-12">
-                              <p>${postList.content}</p>
-                          </div>
-                      </div> 
-                  </div>
-              </div>
-          </div>
-      </div>
-  `;
+    data4 += `<div class="col-md-12 p-4">
+                <div class="item">
+                    <div class="media-body">
+                        <div class="row">
+                            <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <i class="fa fa-calendar" aria-hidden="true">${postList.date}
+                            </div>
+                            <div class="col-md-12">
+                                <h5>${postList.title}</h5>
+                            </div>    
+                            <div class="col-md-12">
+                                <p>${postList.content}</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
 
-  data4 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
-  // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
-  data4 +=`<div class="row">`;
-  
-  data4 +=`<div class="col-md-12 p-4">
-              <div class="item">
-                  <div class="media-body">
-                      <div class="row owl-carousel owl-theme">
-                            <div class="box mb-0">
-                                <div class="col-md-12">
-                                    <h5>${postList.title}</h5>
-                                </div>    
-                                <div class="col-md-12">
-                                    <p>${postList.content}</p>
+    data4 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
+    // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
+    data4 +=`<div class="row">`;
+    
+    data4 +=`<div class="col-md-12 p-4">
+                <div class="item">
+                    <div class="media-body">
+                        <div class="row owl-carousel owl-theme">
+                                <div class="box mb-0">
+                                    <div class="col-md-12">
+                                        <h5>${postList.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${postList.content}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="box mb-0">
-                                <div class="col-md-12">
-                                    <h5>${postList.title}</h5>
-                                </div>    
-                                <div class="col-md-12">
-                                    <p>${postList.content}</p>
+                                <div class="box mb-0">
+                                    <div class="col-md-12">
+                                        <h5>${postList.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${postList.content}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="box mb-0">
-                                <div class="col-md-12">
-                                    <h5>${postList.title}</h5>
-                                </div>    
-                                <div class="col-md-12">
-                                    <p>${postList.content}</p>
+                                <div class="box mb-0">
+                                    <div class="col-md-12">
+                                        <h5>${postList.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${postList.content}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="box mb-0">
-                                <div class="col-md-12">
-                                    <h5>${postList.title}</h5>
-                                </div>    
-                                <div class="col-md-12">
-                                    <p>${postList.content}</p>
+                                <div class="box mb-0">
+                                    <div class="col-md-12">
+                                        <h5>${postList.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${postList.content}</p>
+                                    </div>
                                 </div>
-                            </div>
-                          
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  
-  
-      `;
+    
+    
+        `;
 
       data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                   <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
