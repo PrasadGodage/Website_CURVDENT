@@ -204,6 +204,7 @@ function setPostList(postList) {
     console.log(postList);
 
     $('#data1').empty();
+    $('#data2').empty();
     var data1 = '';
     var data2 = '';
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
@@ -269,41 +270,6 @@ function setPostList(postList) {
 
         
     }
-
-    let lastEntry = null;
-
-    for (let entry of postList.entries()) {
-        lastEntry = entry;
-    }
-
-    let l = lastEntry.keys();
-    let lastest = lastEntry.get(l);
-
-    data2 += `<div class="row">`;
-
-    data2 += `<div class="col-md-12 p-4">
-                <div class="item">
-                    <div class="media-body">
-                        <div class="row">
-                            <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
-                            <div class="col-sm-4"></div>
-                            <div class="col-sm-4">
-                                <i class="fa fa-calendar" aria-hidden="true">${lastest.date}
-                            </div>
-                            <div class="col-md-12">
-                            <h5>${lastest.title}</h5>
-                            </div>    
-                            <div class="col-md-12">
-                            <p>${lastest.content}</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-        `;
-
 
     $('#data1').html(data1);
     $('#data2').html(data2);
