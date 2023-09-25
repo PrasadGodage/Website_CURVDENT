@@ -24,7 +24,7 @@ $route['employeeLogout']='api/EmployeeLoginController/logout';
 $route['home']='welcome/home';
 $route['services']='welcome/services';
 $route['blog']='welcome/blog';
-$route['blog_page']='welcome/blogPage/$1';
+$route['blog_page/(:num)']='welcome/blogPage/$1';
 
 
 //--------------- Controller API --------------------------------------
