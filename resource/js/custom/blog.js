@@ -275,6 +275,26 @@ function setPostList(postList) {
         //             </div>
         //         </div>
         //     `;
+        data2 = `
+                    <div class="main_title2">
+                        <h6 style="font-weight: bold;"></h6>
+                    </div>
+                    <div class="main_title2">
+                        <h6 style="font-weight: bold;">Social Network</h6>
+                    </div>
+                    <div class="betty-sidebar-part">
+                        <div class="betty-sidebar-block betty-sidebar-block-categories">
+                            <div class="betty-sidebar-block-content">
+                                <h6>-- Skin/Hair Treatments --</h6>
+                                <ul class="ul1" id="uiList">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        `;
+
+// Now 'data2' contains the formatted HTML structure
+
 
     $('#data1').html(data1);
     $('#data2').html(data2);
