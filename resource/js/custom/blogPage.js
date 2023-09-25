@@ -1,8 +1,10 @@
+console.log(id);
+
 function getPostData(){
     
     $.ajax({
         
-        url: ebase_url+'blogpage_api/' +id,
+        url: ebase_url+'blogpage_api/'+id,
 
         type: 'GET',
         
@@ -17,13 +19,13 @@ function getPostData(){
 
                 if (response.data.length != 0) {
                     // for (var i = 0; i < response.data.length; i++) {
-                        postList.set(response.data[0].id, response.data[0]);
+                        setPostList1(response.data[0]);
                         // $('#paragraph1').text(response.data[i].content);
                         // }
                         
                     }
                 // setPostList(postList);
-                setPostList1(postList);
+                // setPostList1(postList);
                 // console.log(postList);
             }
             
@@ -48,7 +50,7 @@ function setPostList1(postList) {
     data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
     data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
 
-    let lastKey = null;
+    // let lastKey = null;
 
         let temp = postList.keys();
             // lastKey = temp;

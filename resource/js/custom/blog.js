@@ -184,7 +184,7 @@ function setPostList(postList) {
         for (let temp of postList.keys()) {
             lastKey = temp;
         }
-        console.log(lastKey);
+        // console.log(lastKey);
         let lastPost = postList.get(lastKey);
 
         data2 += `<div class="row">`;
