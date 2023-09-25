@@ -98,7 +98,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
-                setPostList1(postList);
+                // setPostList1(postList);
                 // console.log(postList);
             }
 
@@ -132,7 +132,7 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                            <a href="blog_page"><img src="${post.photo}" alt="" style="height: 185px;"></a>
+                            <a href="#" onclick="postDetails(${post.id})"><img src="${post.photo}" alt="" style="height: 185px;"></a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                            <a href="blog_page"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
+                        <a href="#" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@ function setPostList(postList) {
                     <div class="media-body">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="blog_page">
+                            <a href="#" onclick="postDetails(${post.id})">
                                 <button type="button" class="btn btn-warning">Blog</button></a>
                             </div>
                             <div class="col-sm-4">
@@ -391,7 +391,40 @@ function setPostList1(postList) {
     $('#data3').html(data3);
 }
 
+function postDetails(id){
+    $(location).attr('href',ebase_url+'blog_page');
 
+    $.ajax({
+
+        url: ebase_url+'blogpage_api/' +id,
+
+        type: 'GET',
+
+        async:false,
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    // for (var i = 0; i < response.data.length; i++) {
+                        postList.set(response.data[0].id, response.data[0]);
+                        // $('#paragraph1').text(response.data[i].content);
+                    // }
+                    
+                }
+                // setPostList(postList);
+                setPostList1(postList);
+                // console.log(postList);
+            }
+
+        }
+        
+    });
+}
 
 $(function () {
     "use strict";
