@@ -435,23 +435,38 @@ function setPostList1(postList) {
               <div class="item">
                   <div class="media-body">
                       <div class="row owl-carousel owl-theme">
-                          <div class="box mb-0">
-                              <div class="col-md-12">
-                                  <h5>${lastPost1.title}</h5>
-                              </div>    
-                              <div class="col-md-12">
-                                  <p>${lastPost1.content}</p>
-                              </div>
-                          </div>
-                          <div class="box mb-0">
-                              <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
-                          </div>
-                          <div class="box mb-0">
-                              <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
-                          </div>
-                          <div class="box mb-0">
-                              <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
-                          </div>
+                            <div class="box mb-0">
+                                <div class="col-md-12">
+                                    <h5>${lastPost.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                    <p>${lastPost.content}</p>
+                                </div>
+                            </div>
+                            <div class="box mb-0">
+                                <div class="col-md-12">
+                                    <h5>${lastPost.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                    <p>${lastPost.content}</p>
+                                </div>
+                            </div>
+                            <div class="box mb-0">
+                                <div class="col-md-12">
+                                    <h5>${lastPost.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                    <p>${lastPost.content}</p>
+                                </div>
+                            </div>
+                            <div class="box mb-0">
+                                <div class="col-md-12">
+                                    <h5>${lastPost.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                    <p>${lastPost.content}</p>
+                                </div>
+                            </div>
                           
                       </div>
                   </div>
@@ -460,7 +475,25 @@ function setPostList1(postList) {
       </div>
 
   
-  `;
+  
+      `;
+
+      data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
+                  <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
+          `;
+      data4 += `  <div class="betty-sidebar-part">
+                  <div class="betty-sidebar-block betty-sidebar-block-categories">
+                  <div class="betty-sidebar-block-content">
+          `;
+      data4 +=`<h6>-- Skin/Hair Treatments --</h6>`;
+      data4 +=`           <ul class="ul1" id="uiList">
+
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          `;
+
 
     $('#data3').html(data3);
     $('#data4').html(data4);
