@@ -1,10 +1,10 @@
 let categoryList = new Map();
 let postList = new Map();
-console.log("baseUrl"+ebase_url);
+// console.log("baseUrl"+ebase_url);
 
 // category table show
 function setCategoryList(list) {
-    console.log(list);
+    // console.log(list);
 
     $('#uiList').empty();
     var ulData = '';
@@ -21,7 +21,7 @@ function setCategoryList(list) {
 
 // Category table show on blog_page
 function setCategoryList1(list) {
-    console.log(list);
+    // console.log(list);
 
     $('#uiList1').empty();
     var ulData = '';
@@ -62,7 +62,7 @@ function getCategoryList() {
                 }
                 setCategoryList(categoryList);
                 setCategoryList1(categoryList);
-                console.log(categoryList);
+                // console.log(categoryList);
             }
 
         }
@@ -98,7 +98,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
-                console.log(postList);
+                // console.log(postList);
             }
 
         }
@@ -201,7 +201,7 @@ function setPostList(postList){
 }
 */
 function setPostList(postList) {
-    console.log(postList);
+    // console.log(postList);
 
     $('#data1').empty();
     $('#data2').empty();
@@ -271,12 +271,13 @@ function setPostList(postList) {
         
     }
 
-    let lastEntry = null;
+    let lastKey = null;
 
-        for (let entry of postList.entries()) {
-            lastEntry = entry;
+        for (let temp of postList.keys()) {
+            lastKey = temp;
         }
-        console.log(lastEntry);
+        console.log(lastKey);
+        let lastPost = postList.get(lastKey);
 
         data2 += `<div class="row">`;
 
@@ -287,13 +288,13 @@ function setPostList(postList) {
                                 <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true">${lastEntry.date}
+                                    <i class="fa fa-calendar" aria-hidden="true">${lastPost.date}
                                 </div>
                                 <div class="col-md-12">
-                                <h5>${lastEntry.title}</h5>
+                                <h5>${lastPost.title}</h5>
                                 </div>    
                                 <div class="col-md-12">
-                                <p>${lastEntry.content}</p>
+                                <p>${lastPost.content}</p>
                                 </div>
                             </div> 
                         </div>
