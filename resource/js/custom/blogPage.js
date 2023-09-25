@@ -65,11 +65,12 @@ function setPostList1(postList) {
 
         // Check if post.photo is not empty or falsy
         // if (postList.photo) {
+            // (post.photo != null) ? $('#otherdpre').attr('src', ebase_url + post.photo) : '';
             data3 += `
                     <div class="col-md-12 p-4">
                         <div class="item">
                             <div class="position-re o-hidden">
-                                <img src= "${postList.photo}" alt="" style="height: 400px;">
+                                <img src= "${ebase_url + postList.photo}" alt="" style="height: 400px;">
                             </div>
                         </div>
                     </div>
