@@ -98,6 +98,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
+                setPostList1(postList);
                 // console.log(postList);
             }
 
@@ -375,7 +376,7 @@ function setPostList1(postList) {
             
 
                                 <div class="col-md-12">
-                                    <h5>${lastPost.title}</h5>
+                                    <h5>${post.title}</h5>
                                 </div>  
                                 <div class="col-md-12">
                                     <p>${post.content}</p>
