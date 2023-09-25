@@ -321,13 +321,28 @@ function setPostList(postList) {
                                     </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastPost.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastPost.content}</p>
+                                    </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastPost.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastPost.content}</p>
+                                    </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastPost.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastPost.content}</p>
+                                    </div>
                                 </div>
                                 
                             </div>
