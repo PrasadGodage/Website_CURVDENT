@@ -104,23 +104,27 @@
                         </div>
                     </div>
                 </div>   -->
-                <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>
+                <!-- <div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div> -->
                 <!-- <div class="container-fluid"> -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12 p-4">
                         <div class="item">
                             <div class="media-body">
                                 <div class="row owl-carousel owl-theme">
                                     <div class="box mb-0">
-                                        <img class="card-img-top img-responsive" src= "<?php echo base_url() . 'uiAssets/img/pimple.jpg'; ?>" alt="Card image cap" style="height: 185px;">
+                                        <img class="card-img-top img-responsive" src= "" alt="" style="height: 185px;"> -->
                                         <!-- <img class="card-img-top img-responsive" src="../../../images/card/img1.jpg" alt="Card image cap"> -->
+                                    <!-- </div>
+                                    <div class="box mb-0">
+                                        <img class="card-img-top img-responsive" src="" alt="" style="height: 185px;">
                                     </div>
                                     
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
                 <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                 <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
                 <div class="betty-sidebar-part">

@@ -302,7 +302,29 @@ function setPostList(postList) {
                     </div>
                 </div>
             </div>
-                
+        `;
+
+        data2 +=`<div class="main_title2"><h6 style=" font-weight:bold;">Trending Now</h6></div>`;
+        data2 +=`<div class="row">`;
+        
+        data2 +=`<div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row owl-carousel owl-theme">
+                                <div class="box mb-0">
+                                    <img class="card-img-top img-responsive" src= "${imageSrc}" alt="Default Image" style="height: 185px;">
+                                </div>
+                                <div class="box mb-0">
+                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
         `;
 
     $('#data1').html(data1);
@@ -400,3 +422,32 @@ function setPostList1(postList) {
     $('#data3').html(data3);
 }
 
+
+
+$(function () {
+    "use strict";
+
+    /* owl-carousel SLIDER */
+		$('.owl-carousel').owlCarousel({
+			loop: true,
+			margin: 10,
+			responsiveClass: true,
+			autoplay: true,
+			responsive: {
+			  0: {
+				items: 1,
+				nav: false
+			  },
+			  600: {
+				items: 3,
+				nav: false
+			  },
+			  1000: {
+				items: 4,
+				nav: true,
+				margin: 20
+			  }
+			}
+		});
+	
+  }); // End of use strict
