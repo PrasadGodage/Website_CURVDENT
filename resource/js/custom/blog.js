@@ -276,8 +276,32 @@ function setPostList(postList) {
         for (let entry of postList.entries()) {
             lastEntry = entry;
         }
-
         console.log(lastEntry);
+
+        data2 += `<div class="row">`;
+
+        data2 += `<div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true">${lastEntry.date}
+                                </div>
+                                <div class="col-md-12">
+                                <h5>${lastEntry.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                <p>${lastEntry.content}</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        `;
 
     $('#data1').html(data1);
     $('#data2').html(data2);
