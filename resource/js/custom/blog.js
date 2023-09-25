@@ -260,20 +260,21 @@ function setPostList(postList) {
         
         `;
 
-        data2 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
-                    <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
-            `;
-        data2 += `  <div class="betty-sidebar-part">
-                    <div class="betty-sidebar-block betty-sidebar-block-categories">
-                    <div class="betty-sidebar-block-content">
-            `;
-        data2 +=`<h6>-- Skin/Hair Treatments --</h6>`;
-        data2 +=`           <ul class="ul1" id="uiList">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            `;
+        // data2 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
+        //             <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
+        //     `;
+        // data2 += `  <div class="betty-sidebar-part">
+        //             <div class="betty-sidebar-block betty-sidebar-block-categories">
+        //             <div class="betty-sidebar-block-content">
+        //     `;
+        // data2 +=`<h6>-- Skin/Hair Treatments --</h6>`;
+        // data2 +=`           <ul class="ul1" id="uiList">
+
+        //                     </ul>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     `;
 
     $('#data1').html(data1);
     $('#data2').html(data2);
@@ -289,7 +290,7 @@ function setPostList1(postList) {
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
 
     // Add the title section outside the loop
-    data3 += '<div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>';
+    data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
 
     let lastKey = null;
 
