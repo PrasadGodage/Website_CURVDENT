@@ -500,16 +500,15 @@ function setPostList1(postList) {
 }
 
 function postDetails(id){
-    $(location).attr('href',ebase_url+'blog_page');
-
+    
     $.ajax({
-
+        
         url: ebase_url+'blogpage_api/' +id,
 
         type: 'GET',
-
+        
         async:false,
-
+        
         dataType: 'json',
 
         success: function (response) {
@@ -521,17 +520,18 @@ function postDetails(id){
                     // for (var i = 0; i < response.data.length; i++) {
                         postList.set(response.data[0].id, response.data[0]);
                         // $('#paragraph1').text(response.data[i].content);
-                    // }
-                    
-                }
+                        // }
+                        
+                    }
                 // setPostList(postList);
                 setPostList1(postList);
                 // console.log(postList);
             }
-
+            
         }
         
     });
+    $(location).attr('href',ebase_url+'blog_page');
 }
 
 $(function () {
