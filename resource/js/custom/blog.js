@@ -321,19 +321,26 @@ function setPostList1(postList) {
     // Add the title section outside the loop
     data3 += '<div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>';
 
-    for (let k of postList.keys()) {
-        let post = postList.get(k);
+    let lastKey = null;
+
+        for (let temp of postList.keys()) {
+            lastKey = temp;
+        }
+        console.log(lastKey);
+        let lastPost = postList.get(lastKey);
+   // for (let k of postList.keys()) {
+     //   let post = postList.get(k);
 
         data3 +=`<div class="row">`;
 
 
         // Check if post.photo is not empty or falsy
-        if (post.photo) {
+        if (lastPost.photo) {
             data3 += `
                     <div class="col-md-12 p-4">
                         <div class="item">
 
-                            <div class="position-re o-hidden"><img src= "${post.photo}" alt="" style="height: 400px;"></div>
+                            <div class="position-re o-hidden"><img src= "${lastPost.photo}" alt="" style="height: 400px;"></div>
 
                         </div>
                     </div>
@@ -371,15 +378,15 @@ function setPostList1(postList) {
                         <div class="media-body">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>${post.date}
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>${lastPost.date}
                                 </div>
             
 
                                 <div class="col-md-12">
-                                    <h5>${post.title}</h5>
+                                    <h5>${lastPost.title}</h5>
                                 </div>  
                                 <div class="col-md-12">
-                                    <p>${post.content}</p>
+                                    <p>${lastPost.content}</p>
                                 </div>
                             </div> 
                         </div>
@@ -388,7 +395,7 @@ function setPostList1(postList) {
             </div>
 
         `;
-    }
+  //  }
 
     $('#data3').html(data3);
 }
