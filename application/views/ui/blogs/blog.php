@@ -124,14 +124,15 @@
                         </div>
                     </div>
                 </div> -->
-
-                <!-- <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
-                <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div> -->
-                <!-- <div class="betty-sidebar-part">
+            </div>
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInUp" id= "data5">
+                <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
+                <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
+                <div class="betty-sidebar-part">
                     <div class="betty-sidebar-block betty-sidebar-block-categories">
                         <div class="betty-sidebar-block-content">
                             <h6>-- Skin/Hair Treatments --</h6>
-                                <ul class="ul1" id="uiList"> -->
+                                <ul class="ul1" id="uiList">
                                 <!-- <li><a href="services">Laser Hair Removal</a></li>
                                     <li><a href="services">Pimple/Acne Scar</a></li>
                                     <li><a href="services">Pimple Treatment</a></li>
@@ -156,10 +157,10 @@
                                     <li><a href="services">Wart Removal</a></li>
                                     <li><a href="services">Skin Tag Removal</a></li>
                                     <li><a href="services">Liquid Rhinoplasty</a></li> -->
-                                <!-- </ul> -->
-                        <!-- </div>
+                                </ul>
+                        </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
