@@ -36,7 +36,7 @@ function getPostData(){
 getPostData();
 
 function setPostList1(postList) {
-    console.log(postList);
+    console.log(postList.photo);
     
     $('#data3').empty();
     $('#data4').empty();
@@ -73,7 +73,7 @@ function setPostList1(postList) {
 
                         </div>
                     </div>
-                
+                </div>
             `;
         } else {
             // If post.photo is empty, provide a default image
@@ -85,7 +85,7 @@ function setPostList1(postList) {
 
                         </div>
                     </div>
-                
+                </div>
             `;
         }
 
@@ -100,7 +100,7 @@ function setPostList1(postList) {
         // </div>
         // `;
                     
-       // data3= `<div class="row">`;
+        data3= `<div class="row">`;
         data3= `
                 <div class="col-md-12 p-4">
                     <div class="item">
