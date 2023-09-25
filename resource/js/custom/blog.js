@@ -267,9 +267,17 @@ function setPostList(postList) {
                 </div>
             </div>
         </div>`;
-
+        
         
     }
+
+    let lastEntry = null;
+
+        for (let entry of postList.entries()) {
+            lastEntry = entry;
+        }
+
+        console.log(lastEntry);
 
     $('#data1').html(data1);
     $('#data2').html(data2);
