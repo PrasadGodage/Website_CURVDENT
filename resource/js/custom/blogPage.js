@@ -68,44 +68,36 @@ function setPostList1(postList) {
             data3 += `
                     <div class="col-md-12 p-4">
                         <div class="item">
-
-                            <div class="position-re o-hidden"><img src= "${postList.photo}" alt="" style="height: 400px;"></div>
-
+                            <div class="position-re o-hidden">
+                                <img src= "${postList.photo}" alt="" style="height: 400px;">
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
+            
         } else {
             // If post.photo is empty, provide a default image
             data3 += `
                     <div class="col-md-12 p-4">
                         <div class="item">
-
-                            <div class="position-re o-hidden"><img src= "${imageSrc}" alt="" style="height: 400px;"></div>
-
+                            <div class="position-re o-hidden">
+                                <img src= "${imageSrc}" alt="" style="height: 400px;">
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
         }
 
-        // data3 +=`
-        //     <div class="col-md-12 p-4">
-        //         <div class="item">
-
-        //             <div class="position-re o-hidden"><img src= "${post.photo}" alt="" style="height: 400px;"></div>
-
-        //         </div>
-        //     </div>
-        // </div>
-        // `;
-                    
         data3= `<div class="row">`;
         data3= `
                 <div class="col-md-12 p-4">
                     <div class="item">
                         <div class="media-body">
                             <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>${postList.date}
                                 </div>
