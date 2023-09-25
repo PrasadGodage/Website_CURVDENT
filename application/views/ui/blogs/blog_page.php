@@ -89,8 +89,8 @@
                     
                 </div> 
                 <!-- Sidebar -->
-                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
-                    <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
+                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp" id="data4">
+                    <!-- <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
                     <div class="row">
                         <div class="col-md-12 p-4">
                             <div class="item">
@@ -115,7 +115,9 @@
                         <div class="row">
                             <p>abcd</p>
                         </div>
-                    </div>
+                    </div> -->
+
+                    <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                     <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
