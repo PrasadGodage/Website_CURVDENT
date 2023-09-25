@@ -317,6 +317,12 @@ function setPostList(postList) {
                                 <div class="box mb-0">
                                     <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
                                 </div>
+                                <div class="box mb-0">
+                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                </div>
+                                <div class="box mb-0">
+                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                </div>
                                 
                             </div>
                         </div>
@@ -443,7 +449,7 @@ $(function () {
 				nav: false
 			  },
 			  1000: {
-				items: 4,
+				items: 2,
 				nav: true,
 				margin: 20
 			  }
