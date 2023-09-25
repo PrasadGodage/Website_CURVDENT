@@ -60,55 +60,62 @@ function setPostList1(postList) {
    // for (let k of postList.keys()) {
      //   let post = postList.get(k);
 
-     data3 += `<div class="row">`;
+        data3 +=`<div class="row">`;
 
-     // Check if post.photo is not empty or falsy
-     if (post.photo) {
-         data3 += `
-             <div class="col-md-12 p-4">
-                 <div class="item">
-                     <div class="position-re o-hidden">
-                         <img src="${post.photo}" alt="" style="height: 400px;">
-                     </div>
-                 </div>
-             </div>
-         `;
-     } else {
-         // If post.photo is empty, provide a default image
-         data3 += `
-             <div class="col-md-12 p-4">
-                 <div class="item">
-                     <div class="position-re o-hidden">
-                         <img src="${imageSrc}" alt="" style="height: 400px;">
-                     </div>
-                 </div>
-             </div>
-         `;
-     }
-     
-     data3 += `
-         <div class="col-md-12 p-4">
-             <div class="item">
-                 <div class="media-body">
-                     <div class="row">
-                         <div class="col-sm-4"></div>
-                         <div class="col-sm-4"></div>
-                         <div class="col-sm-4">
-                             <i class="fa fa-calendar" aria-hidden="true"></i>${post.date}
-                         </div>
-     
-                         <div class="col-md-12">
-                             <h5>${post.title}</h5>
-                         </div>  
-                         <div class="col-md-12">
-                             <p>${post.content}</p>
-                         </div>
-                     </div> 
-                 </div>
-             </div>
-         </div>
-     </div>`;
-     
+
+        // Check if post.photo is not empty or falsy
+        // if (postList.photo) {
+            data3 += `
+                    <div class="col-md-12 p-4">
+                        <div class="item">
+                            <div class="position-re o-hidden">
+                                <img src= "${postList.photo}" alt="" style="height: 400px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+        // } else {
+        //     // If post.photo is empty, provide a default image
+        //     data3 += `
+        //             <div class="col-md-12 p-4">
+        //                 <div class="item">
+        //                     <div class="position-re o-hidden">
+        //                         <img src= "${imageSrc}" alt="" style="height: 400px;">
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //     `;
+        // }
+
+        data3= `<div class="row">`;
+        data3= `
+                <div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>${postList.date}
+                                </div>
+            
+
+                                <div class="col-md-12">
+                                    <h5>${postList.title}</h5>
+                                </div>  
+                                <div class="col-md-12">
+                                    <p>${postList.content}</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        `;
   //  }
 
   
