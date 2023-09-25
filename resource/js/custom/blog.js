@@ -143,7 +143,7 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                        <a href="#" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 400px;"></a>
+                        <a href="#" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
                         </div>
                     </div>
                 </div>
