@@ -205,10 +205,12 @@ function setPostList(postList) {
 
     $('#data1').empty();
     var data1 = '';
+    var data2 = '';
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
 
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+    data2 += '<div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>';
 
     for (let k of postList.keys()) {
         let post = postList.get(k);
@@ -264,9 +266,42 @@ function setPostList(postList) {
                 </div>
             </div>
         </div>`;
+
+        data2 += `<div class="row">`;
+
+        data2 += `<div class="col-md-12 p-4">
+                    <div class="item">
+                        <div class="media-body">
+                            <div class="row">
+                                <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <i class="fa fa-calendar" aria-hidden="true">${post.date}
+                                </div>
+                                <div class="col-md-12">
+                                <h5>${post.title}</h5>
+                                </div>    
+                                <div class="col-md-12">
+                                <p>${post.content}</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            `;
+
+
+
+
+
+
+
     }
 
     $('#data1').html(data1);
+    $('#data2').html(data2);
 }
 
 
