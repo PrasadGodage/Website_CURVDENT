@@ -269,6 +269,16 @@ function setPostList(postList) {
 
         
     }
+
+    let lastEntry = null;
+
+    for (let entry of postList.entries()) {
+        lastEntry = entry;
+    }
+
+    let l = lastEntry.keys();
+    let lastest = lastEntry.get(l);
+
     data2 += `<div class="row">`;
 
     data2 += `<div class="col-md-12 p-4">
@@ -278,13 +288,13 @@ function setPostList(postList) {
                             <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
                             <div class="col-sm-4"></div>
                             <div class="col-sm-4">
-                                <i class="fa fa-calendar" aria-hidden="true">${post.date}
+                                <i class="fa fa-calendar" aria-hidden="true">${lastest.date}
                             </div>
                             <div class="col-md-12">
-                            <h5>${post.title}</h5>
+                            <h5>${lastest.title}</h5>
                             </div>    
                             <div class="col-md-12">
-                            <p>${post.content}</p>
+                            <p>${lastest.content}</p>
                             </div>
                         </div> 
                     </div>
