@@ -125,6 +125,7 @@
                     </div>
                 </div> -->
             </div>
+            <div class="col-md-8 animate-box" data-animate-effect="fadeInUp"></div>
             <div class="col-md-4 animate-box" data-animate-effect="fadeInUp" id= "data5">
                 <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
                 <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
