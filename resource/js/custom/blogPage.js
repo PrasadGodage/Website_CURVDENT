@@ -44,7 +44,8 @@ function setPostList1(postList) {
     var data3 = '';
     var data4 = '';
     
-    var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc = '';
 
     // Add the title section outside the loop
     data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
