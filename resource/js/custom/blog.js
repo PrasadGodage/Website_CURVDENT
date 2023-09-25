@@ -273,6 +273,8 @@ function setPostList(postList) {
     }
 
     let lastKey = null;
+    let lastFour = null;
+    
 
         for (let temp of postList.keys()) {
             lastKey = temp;
@@ -306,6 +308,15 @@ function setPostList(postList) {
 
         data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
         // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
+        let count = 0;
+        for (let temp of postList.keys()) {
+            let lastFour = postList.get(temp);
+            count++;
+            if(count===4){
+                break;
+            }
+            console.log(lastFour);
+        }
         data2 +=`<div class="row">`;
         
         data2 +=`<div class="col-md-12 p-4">
@@ -314,20 +325,35 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${lastFour.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${lastFour.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastFour.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastFour.content}</p>
+                                    </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastFour.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastFour.content}</p>
+                                    </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <img class="card-img-top img-responsive" src="${imageSrc}" alt="Default Image" style="height: 185px;">
+                                    <div class="col-md-12">
+                                        <h5>${lastFour.title}</h5>
+                                    </div>    
+                                    <div class="col-md-12">
+                                        <p>${lastFour.content}</p>
+                                    </div>
                                 </div>
                                 
                             </div>
