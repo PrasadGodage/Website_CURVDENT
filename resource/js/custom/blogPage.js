@@ -96,7 +96,10 @@ function setAllPostList(list){
                 <div class="item">
                     <div class="media-body">
                         <div class="row">
-                            <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
+                            <div class="col-sm-4">
+                            <a href="#" onclick="postDetails(${firstPost.id})">
+                                <button type="button" class="btn btn-warning">Latest Blog</button></a>
+                            </div>
                             <div class="col-sm-4"></div>
                             <div class="col-sm-4">
                                 <i class="fa fa-calendar" aria-hidden="true">${firstPost.date}
