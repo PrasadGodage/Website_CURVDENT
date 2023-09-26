@@ -127,7 +127,7 @@
                 </div>
             </div>
             <div class="row">
-            <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
                 <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp" id="data6">
                     <!-- <div class="betty-about-img">
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
@@ -149,6 +149,14 @@
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
                 <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
+                     <a  href="blog_page">
+                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
