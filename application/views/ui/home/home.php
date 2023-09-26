@@ -121,15 +121,15 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">Latest Blog</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-6 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <div class="betty-about-img">
-                        <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt=""> </div>
+                        <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt="" width="300" height="250"> </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
@@ -140,14 +140,18 @@
                         individual needs. Whether you seek hair restoration solutions or facial treatments, our
                         experienced team of experts is here to deliver exceptional results. Discover the path to a more
                         radiant you at Curvdent Hair & Face Clinic.</p>
-                    <p></p>
+                        <div class="">
+                            <a  href="blog_page">
+                                <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
+                            </a>
+                        </div>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-sm-4">
+                <!-- <div class="col-sm-4">
                     <a  href="blog_page">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
