@@ -1,3 +1,6 @@
+let categoryList = new Map();
+
+
 console.log(id);
 
 function getPostData(){
@@ -195,25 +198,90 @@ function setPostList1(postList) {
     
         `;
 
-      data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
-                  <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
-          `;
-      data4 += `  <div class="betty-sidebar-part">
-                  <div class="betty-sidebar-block betty-sidebar-block-categories">
-                  <div class="betty-sidebar-block-content">
-          `;
-      data4 +=`<h6>-- Skin/Hair Treatments --</h6>`;
-      data4 +=`           <ul class="ul1" id="uiList">
+    //   data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
+    //               <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
+    //       `;
+    //   data4 += `  <div class="betty-sidebar-part">
+    //               <div class="betty-sidebar-block betty-sidebar-block-categories">
+    //               <div class="betty-sidebar-block-content">
+    //       `;
+    //   data4 +=`<h6>-- Skin/Hair Treatments --</h6>`;
+    //   data4 +=`           <ul class="ul1" id="uiList">
 
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          `;
+    //                       </ul>
+    //                   </div>
+    //               </div>
+    //           </div>
+    //       `;
 
 
     $('#data3').html(data3);
     $('#data4').html(data4);
+}
+
+
+
+// get category data
+function getCategoryList() {
+    $.ajax({
+
+        url: ebase_url+'blog_api',
+
+        type: 'GET',
+
+        async:false,
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        categoryList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                }
+                setCategoryList(categoryList);
+                // console.log(categoryList);
+            }
+
+        }
+        
+    });
+}
+getCategoryList();
+function setCategoryList(list){
+
+    $('#data4').empty();
+
+    var data4 = '';
+
+    data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
+              <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
+      `;
+    data4 += `  <div class="betty-sidebar-part">
+                <div class="betty-sidebar-block betty-sidebar-block-categories">
+                <div class="betty-sidebar-block-content">
+        `;
+    data4 +=`<h6>-- Skin/Hair Treatments --</h6>`;
+    data4 +=`<ul class="ul1">`;
+
+    for (let k of list.keys()) {
+
+        let category = list.get(k);
+
+            `<li> ${category.category_name} </li>`;
+    }
+    data4 +=`       </ul>
+                </div>
+            </div>
+        </div>`;
+
+    $('#data4').html(data4);
+
 }
 
 $(function () {
