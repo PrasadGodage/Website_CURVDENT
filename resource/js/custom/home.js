@@ -56,15 +56,19 @@ function setAllPostList(list){
     }
 
     data6 +=`<div class="betty-about-img">
-                <div class="img"> <img src="${imageSrc}" alt="" width="300" height="250"> </div>
+                <a  href="#" onclick="postDetails(${firstPost.id})">
+                    <div class="img"> <img src="${imageSrc}" alt="" width="300" height="250"> </div>
+                </a>
             </div>
     `;
 
 
     data7 +=`<h6>${firstPost.title}</h6>`;
-    data7 +=`   <p>
+    data7 +=`<a  href="#" onclick="postDetails(${firstPost.id})">   
+                <p>
                     ${firstPost.content}
                 </p>
+            </a>
     `;
     
     data7 +=`
