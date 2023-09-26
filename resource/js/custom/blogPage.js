@@ -323,6 +323,12 @@ getCategoryList();
 function goHome(){
     $(location).attr('href',ebase_url+'home');
 }
+function goService(){
+    $(location).attr('href',ebase_url+'services');
+}
+function goBlog(){
+    $(location).attr('href',ebase_url+'blog');
+}
 
 $(function () {
     "use strict";
