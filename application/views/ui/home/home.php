@@ -133,22 +133,22 @@
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
                     </div> -->
                 </div>
-                <div class="col-md-6 mb-30 animate-box content" data-animate-effect="fadeInUp"  id="data7">
-                    <!-- <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
+                <div class="col-md-6 mb-20 animate-box content" data-animate-effect="fadeInUp">
+                    <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
                         your natural beauty and boosting your confidence through specialized services tailored to your
                         individual needs. Whether you seek hair restoration solutions or facial treatments, our
                         experienced team of experts is here to deliver exceptional results. Discover the path to a more
-                        radiant you at Curvdent Hair & Face Clinic.</p> -->
-                        <!-- <div class="">
+                        radiant you at Curvdent Hair & Face Clinic.</p>
+                         <!-- <div class=""> -->
                             <a  href="blog_page">
                                 <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                             </a>
-                        </div> -->
+                        <!-- </div>  -->
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-1 mb-30 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
         </div>
     </section>
