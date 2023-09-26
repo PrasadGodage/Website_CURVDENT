@@ -145,7 +145,6 @@
                             <!-- <a  href="blog_page">
                                 <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                             </a> -->
-
                         </div>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
