@@ -104,7 +104,7 @@ function setPostList(postList) {
                             </div>
                             <div class="col-sm-4">
                             <a href="#" onclick="postDetails(${post.id})">
-                                <button type="button" class="btn btn-warning" read-more-button>Read More</button></a>
+                                <button type="button" class="btn btn-warning mt-3 read-more-button" >Read More</button></a>
                             </div>
                         </div> 
                     </div>
@@ -132,7 +132,7 @@ function setPostList(postList) {
                             <div class="row">
                                 <div class="col-sm-6">
                                     <a href="#" onclick="postDetails(${firstPost.id})">
-                                    <button type="button" class="btn btn-warning read-more-button">Latest Blog</button></a>
+                                    <button type="button" class="btn btn-warning mt-3 read-more-button">Latest Blog</button></a>
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
@@ -186,34 +186,34 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firsPost.title}</h5>
+                                        <h5>${firsPost.photo}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firsPost.content}</p>
+                                        <p>${firsPost.title}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${secondPost.title}</h5>
+                                        <h5>${secondPost.photo}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${secondPost.content}</p>
+                                        <p>${secondPost.title}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${thirdPost.title}</h5>
+                                        <h5>${thirdPost.photo}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${thirdPost.content}</p>
+                                        <p>${thirdPost.title}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${fourthPost.title}</h5>
+                                        <h5>${fourthPost.photo}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${fourthPost.content}</p>
+                                        <p>${fourthPost.title}</p>
                                     </div>
                                 </div>
                                 
