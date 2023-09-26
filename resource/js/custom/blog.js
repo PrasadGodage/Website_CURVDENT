@@ -115,6 +115,7 @@ function setPostList(postList) {
         
     }
 
+        data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         let firstKey = null;
 
         for (let temp of postList.keys()) {
@@ -151,7 +152,7 @@ function setPostList(postList) {
             </div>
         `;
 
-        data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
+       
         let firstFourKeys = [];
         let count = 0;
 
