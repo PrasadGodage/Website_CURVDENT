@@ -214,30 +214,15 @@ function setPostList1(postList) {
     console.log(postList.photo);
     
     $('#data3').empty();
-    // $('#data4').empty();
 
     var data3 = '';
-    // var data4 = '';
     
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
-    // var imageSrc;
 
     // Add the title section outside the loop
     data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
     
-
-    // let lastKey = null;
-
-        // let temp = postList.keys();
-            // lastKey = temp;
-        
-        // console.log(lastKey);
-        // let lastPost = postList.get(temp);
-   // for (let k of postList.keys()) {
-     //   let post = postList.get(k);
-
         data3 +=`<div class="row">`;
-
 
         // Check if post.photo is not empty or falsy
         if (postList.photo!='') {
@@ -267,7 +252,6 @@ function setPostList1(postList) {
                                 <div class="col-sm-4">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>${postList.date}
                                 </div>
-            
 
                                 <div class="col-md-12">
                                     <h5>${postList.title}</h5>
@@ -282,113 +266,8 @@ function setPostList1(postList) {
             </div>
 
         `;
-  //  }
-
-  
-
-//   let lastKey1 = null;
-
-//   for (let temp of postList.keys()) {
-//       lastKey1 = temp;
-//   }
-//   console.log(lastKey1);
-//   let lastPost1 = postList.get(lastKey);
-
-    // data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
-    // data4 += `<div class="row">`;
-
-    // data4 += `<div class="col-md-12 p-4">
-    //             <div class="item">
-    //                 <div class="media-body">
-    //                     <div class="row">
-    //                         <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
-    //                         <div class="col-sm-4"></div>
-    //                         <div class="col-sm-4">
-    //                             <i class="fa fa-calendar" aria-hidden="true">${postList.date}
-    //                         </div>
-    //                         <div class="col-md-12">
-    //                             <h5>${postList.title}</h5>
-    //                         </div>    
-    //                         <div class="col-md-12">
-    //                             <p>${postList.content}</p>
-    //                         </div>
-    //                     </div> 
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // `;
-
-    // data4 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
-    // // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
-    // data4 +=`<div class="row">`;
-    
-    // data4 +=`<div class="col-md-12 p-4">
-    //             <div class="item">
-    //                 <div class="media-body">
-    //                     <div class="row owl-carousel owl-theme">
-    //                             <div class="box mb-0">
-    //                                 <div class="col-md-12">
-    //                                     <h5>${postList.title}</h5>
-    //                                 </div>    
-    //                                 <div class="col-md-12">
-    //                                     <p>${postList.content}</p>
-    //                                 </div>
-    //                             </div>
-    //                             <div class="box mb-0">
-    //                                 <div class="col-md-12">
-    //                                     <h5>${postList.title}</h5>
-    //                                 </div>    
-    //                                 <div class="col-md-12">
-    //                                     <p>${postList.content}</p>
-    //                                 </div>
-    //                             </div>
-    //                             <div class="box mb-0">
-    //                                 <div class="col-md-12">
-    //                                     <h5>${postList.title}</h5>
-    //                                 </div>    
-    //                                 <div class="col-md-12">
-    //                                     <p>${postList.content}</p>
-    //                                 </div>
-    //                             </div>
-    //                             <div class="box mb-0">
-    //                                 <div class="col-md-12">
-    //                                     <h5>${postList.title}</h5>
-    //                                 </div>    
-    //                                 <div class="col-md-12">
-    //                                     <p>${postList.content}</p>
-    //                                 </div>
-    //                             </div>
-                            
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-
-    
-    
-    //     `;
-
-    //   data4 += `  <div class="main_title2"><h6 style=" font-weight:bold;"></h6></div>
-    //               <div class="main_title2"><h6 style=" font-weight:bold;">Social Network</h6></div>
-    //       `;
-    //   data4 += `  <div class="betty-sidebar-part">
-    //               <div class="betty-sidebar-block betty-sidebar-block-categories">
-    //               <div class="betty-sidebar-block-content">
-    //       `;
-    //   data4 +=`<h6>-- Skin/Hair Treatments --</h6>`;
-    //   data4 +=`           <ul class="ul1" id="uiList">
-
-    //                       </ul>
-    //                   </div>
-    //               </div>
-    //           </div>
-    //       `;
-
 
     $('#data3').html(data3);
-    // $('#data4').html(data4);
 }
 
 // category table show
