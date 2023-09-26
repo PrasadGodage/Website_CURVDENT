@@ -63,7 +63,7 @@ function setPostList(postList) {
                     <div class="item">
                         <div class="position-re o-hidden">
                             <a href="#" onclick="postDetails(${post.id})">
-                            <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; image-rendering: auto;">
+                            <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; filter: grayscale(100%);">
                             </a>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ function setPostList(postList) {
                     <div class="item">
                         <div class="position-re o-hidden">
                             <a href="#" onclick="postDetails(${post.id})">
-                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated;">
+                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: grayscale(100%);">
                             </a>
                         </div>                    
                     </div>
