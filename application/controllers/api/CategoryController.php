@@ -91,7 +91,7 @@ class CategoryController extends REST_Controller {
         } else {
             $result=$this->category->get_category($id);
             if (!empty($result)) {
-                if($this->category->find_category($data['category_name']) || $result['category_name']==$data['category_name']){
+                // if($this->category->find_category($data['category_name']) || $result['category_name']==$data['category_name']){
                     
                 $status = $this->category->update_category($id, $data);
                 if ($status) {
@@ -101,11 +101,11 @@ class CategoryController extends REST_Controller {
                     $response['status'] = 200;
                     $this->response($response, REST_Controller::HTTP_OK);
                 }
-            }else{
-                $response['msg'] = 'Duplicate Entry!';
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_OK);
-            }
+            // }else{
+            //     $response['msg'] = 'Duplicate Entry!';
+            //     $response['status'] = 400;
+            //     $this->response($response, REST_Controller::HTTP_OK);
+            // }
             } else {
                 $response['msg'] = 'Data not found!';
                 $response['id'] = $id;
