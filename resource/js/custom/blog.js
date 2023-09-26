@@ -115,13 +115,15 @@ function setPostList(postList) {
         
     }
 
-    let lastKey = null;
+        let firstKey = null;
 
         for (let temp of postList.keys()) {
-            lastKey = temp;
+            firstKey = temp;
+            break; // Exit the loop after the first iteration
         }
+
         // console.log(lastKey);
-        let lastPost = postList.get(lastKey);
+        let firstPost = postList.get(firstKey);
 
         data2 += `<div class="row">`;
 
@@ -132,13 +134,13 @@ function setPostList(postList) {
                                 <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true">${lastPost.date}
+                                    <i class="fa fa-calendar" aria-hidden="true">${firstPost.date}
                                 </div>
                                 <div class="col-md-12">
-                                    <h5>${lastPost.title}</h5>
+                                    <h5>${firstPost.title}</h5>
                                 </div>    
                                 <div class="col-md-12">
-                                    <p>${lastPost.content}</p>
+                                    <p>${firstPost.content}</p>
                                 </div>
                             </div> 
                         </div>
@@ -157,34 +159,34 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${firstPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${firstPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${firstPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${firstPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${firstPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${firstPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${firstPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${firstPost.content}</p>
                                     </div>
                                 </div>
                                 
