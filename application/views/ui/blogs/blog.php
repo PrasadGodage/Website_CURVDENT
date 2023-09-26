@@ -186,7 +186,7 @@
 
         .content {
             overflow: hidden;
-            max-height: 100px; /* Adjust the max-height as needed */
+            max-height: 110px; /* Adjust the max-height as needed */
         }
         .content1 {
             overflow: hidden;

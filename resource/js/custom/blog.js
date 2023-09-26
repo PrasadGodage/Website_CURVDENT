@@ -49,8 +49,8 @@ function setPostList(postList) {
     
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
-    data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
-
+    
+    
     for (let k of postList.keys()) {
         let post = postList.get(k);
 
@@ -151,6 +151,7 @@ function setPostList(postList) {
             </div>
         `;
 
+        data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         let firstFourKeys = [];
         let count = 0;
 
