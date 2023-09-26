@@ -111,7 +111,7 @@ class PostingController extends REST_Controller {
             if (!empty($result)) {
 
                 
-                if($this->posting->find_posting($data['title']) || $result['title']==$data['title']){
+                // if($this->posting->find_posting($data['title']) || $result['title']==$data['title']){
                     
                     // $data['modified_by'] = $this->post('created_by');
                     // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
@@ -134,11 +134,11 @@ class PostingController extends REST_Controller {
                     $response['status'] = 200;
                     $this->response($response, REST_Controller::HTTP_OK);
                 }
-            }else{
-                $response['msg'] = 'Duplicate Entry!';
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_OK);
-            }
+            // }else{
+            //     $response['msg'] = 'Duplicate Entry!';
+            //     $response['status'] = 400;
+            //     $this->response($response, REST_Controller::HTTP_OK);
+            // }
             } else {
                 $response['msg'] = 'Data not found!';
                 $response['id'] = $id;
