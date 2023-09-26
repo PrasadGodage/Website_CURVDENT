@@ -46,6 +46,10 @@ function setPostList(postList) {
     var data1 = '';
     var data2 = '';
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc1 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc2 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc3 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
 
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
@@ -104,7 +108,7 @@ function setPostList(postList) {
                             </div>
                             <div class="col-sm-4">
                             <a href="#" onclick="postDetails(${post.id})">
-                                <button type="button" class="btn btn-warning mt-3 read-more-button" >Read More</button></a>
+                                <button type="button" class="btn btn-warning mt-1 read-more-button" >Read More</button></a>
                             </div>
                         </div> 
                     </div>
@@ -132,7 +136,7 @@ function setPostList(postList) {
                             <div class="row">
                                 <div class="col-sm-6">
                                     <a href="#" onclick="postDetails(${firstPost.id})">
-                                    <button type="button" class="btn btn-warning mt-3 read-more-button">Latest Blog</button></a>
+                                    <button type="button" class="btn btn-warning mt-1 read-more-button">Latest Blog</button></a>
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
@@ -175,6 +179,18 @@ function setPostList(postList) {
         let secondPost = postList.get(secondKey);
         let thirdPost = postList.get(thirdKey);
         let fourthPost = postList.get(fourthKey);
+        if (firsPost.photo!='') {
+            imageSrc1 = ebase_url+postList.photo;
+        }
+        if (secondPost.photo!='') {
+            imageSrc2 = ebase_url+postList.photo;
+        }
+        if (thirdPost.photo!='') {
+            imageSrc3 = ebase_url+postList.photo;
+        }
+        if (fourthPost.photo!='') {
+            imageSrc4 = ebase_url+postList.photo;
+        }
 
         data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
         // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
@@ -186,7 +202,7 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firsPost.photo}</h5>
+                                        <h5>${imageSrc1}</h5>
                                     </div>    
                                     <div class="col-md-12">
                                         <p>${firsPost.title}</p>
@@ -194,7 +210,7 @@ function setPostList(postList) {
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${secondPost.photo}</h5>
+                                        <h5>${imageSrc2}</h5>
                                     </div>    
                                     <div class="col-md-12">
                                         <p>${secondPost.title}</p>
@@ -202,7 +218,7 @@ function setPostList(postList) {
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${thirdPost.photo}</h5>
+                                        <h5>${imageSrc3}</h5>
                                     </div>    
                                     <div class="col-md-12">
                                         <p>${thirdPost.title}</p>
@@ -210,7 +226,7 @@ function setPostList(postList) {
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${fourthPost.photo}</h5>
+                                        <h5>${imageSrc4}</h5>
                                     </div>    
                                     <div class="col-md-12">
                                         <p>${fourthPost.title}</p>
