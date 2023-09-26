@@ -64,7 +64,7 @@
                         <div class="fothead">
                             <h6>Menus</h6>
                         </div>
-                        <ul class="footer-menu">
+                        <ul class="footer-menu" style="padding-left: 1px;">
                             <li>
                                <a href="">Home</a>
                             </li>
@@ -78,11 +78,6 @@
                                <a href="">Blog</a>
                             </li>
                         </ul>
-                        <!-- <a href=""><p>Home</P></a>
-                        <a href=""><p>About Us</P></a>
-                        <a href=""><p>Services</P></a>
-                        <a href=""><p>Contact</P></a>
-                        <a href=""><p>Blog</P></a> -->
                     </div>
                 </div>
             </div>
