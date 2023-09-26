@@ -768,7 +768,7 @@
 
         .content {
             overflow: hidden;
-            max-height: 310px; /* Adjust the max-height as needed */
+            max-height: 250px; /* Adjust the max-height as needed */
         }
         .read-more-button {
             display: none;
