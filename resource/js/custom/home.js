@@ -66,11 +66,11 @@ function setAllPostList(list){
 
 
     data7 +=`<h6>${firstPost.title}</h6>`;
-    data7 +=`<a  href="#" onclick="postDetails(${firstPost.id})">   
+    data7 +=`
                 <p>
                     ${firstPost.content}
                 </p>
-            </a>
+            
     `;
 
     data8 +=`
