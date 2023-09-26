@@ -41,7 +41,7 @@
 <!-- section -->
 <section class="section-padding">
     <div class="container">
-        <div class="row">
+        <div class="row horizontal-scrollable">
             <!-- Content -->
             <div class="col-md-8 animate-box" data-animate-effect="fadeInUp" id="data1">
                 <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
@@ -190,6 +190,11 @@
         }
         .read-more-button {
             display: none;
+        }
+
+        .horizontal-scrollable {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent text from wrapping */
         }
     </style>
 
