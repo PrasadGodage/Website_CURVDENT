@@ -64,11 +64,11 @@
                         <div class="fothead">
                             <h6>Menus</h6>
                         </div>
-                        <p>Home</P>
-                        <p>About Us</P>
-                        <p>Services</P>
-                        <p>Contact</P>
-                        <p>Blog</P>
+                        <a href=""><p>Home</P></a>
+                        <a href=""><p>About Us</P></a>
+                        <a href=""><p>Services</P></a>
+                        <a href=""><p>Contact</P></a>
+                        <a href=""><p>Blog</P></a>
                     </div>
                 </div>
             </div>
