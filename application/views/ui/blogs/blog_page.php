@@ -171,4 +171,12 @@
 		margin-bottom: 0px;
 	}
 }
+
+        .content {
+            overflow: hidden;
+            max-height: 50px; /* Adjust the max-height as needed */
+        }
+        .read-more-button {
+            display: none;
+        }
     </style>
