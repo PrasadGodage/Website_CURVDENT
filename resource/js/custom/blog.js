@@ -108,7 +108,7 @@ function setPostList(postList) {
                             </div>
                             <div class="col-sm-4">
                             <a href="#" onclick="postDetails(${post.id})">
-                                <button type="button" class="btn btn-warning read-more-button" >Read More</button></a>
+                                <button type="button" class="btn btn-warning" >Read More</button></a>
                             </div>
                         </div> 
                     </div>
@@ -136,7 +136,7 @@ function setPostList(postList) {
                             <div class="row">
                                 <div class="col-sm-6">
                                     <a href="#" onclick="postDetails(${firstPost.id})">
-                                    <button type="button" class="btn btn-warning read-more-button">Latest Blog</button></a>
+                                    <button type="button" class="btn btn-warning">Latest Blog</button></a>
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
