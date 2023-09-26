@@ -121,7 +121,6 @@ function setPostList(postList) {
             firstKey = temp;
             break; // Exit the loop after the first iteration
         }
-
         // console.log(lastKey);
         let firstPost = postList.get(firstKey);
 
@@ -149,6 +148,31 @@ function setPostList(postList) {
             </div>
         `;
 
+        let firstFourKeys = [];
+        let count = 0;
+
+        for (let temp of postList.keys()) {
+            firstFourKeys.push(temp);
+            count++;
+
+            if (count === 4) {
+                break;
+            }
+        }
+        const firsKey = firstFourKeys[0];
+        const secondKey = firstFourKeys[1];
+        const thirdKey = firstFourKeys[2];
+        const fourthKey = firstFourKeys[3];
+        // for (let i = 0; i < firstFourKeys.length; i++) {
+        //     const fourKeys = firstFourKeys[i];
+        //     console.log('Key:', fourKeys);
+        // }
+        
+        let firsPost = postList.get(firsKey);
+        let secondPost = postList.get(secondKey);
+        let thirdPost = postList.get(thirdKey);
+        let fourthPost = postList.get(fourthKey);
+
         data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
         // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         data2 +=`<div class="row">`;
@@ -159,34 +183,34 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firstPost.title}</h5>
+                                        <h5>${firsPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firstPost.content}</p>
+                                        <p>${firsPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firstPost.title}</h5>
+                                        <h5>${secondPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firstPost.content}</p>
+                                        <p>${secondPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firstPost.title}</h5>
+                                        <h5>${thirdPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firstPost.content}</p>
+                                        <p>${thirdPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${firstPost.title}</h5>
+                                        <h5>${fourthPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firstPost.content}</p>
+                                        <p>${fourthPost.content}</p>
                                     </div>
                                 </div>
                                 
