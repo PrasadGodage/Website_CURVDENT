@@ -205,7 +205,7 @@ function setPostList(postList) {
                                         <h5>${firsPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${firsPost.title}</p>
+                                        <p>${firsPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
@@ -213,7 +213,7 @@ function setPostList(postList) {
                                         <h5>${secondPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${secondPost.title}</p>
+                                        <p>${secondPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
@@ -221,7 +221,7 @@ function setPostList(postList) {
                                         <h5>${thirdPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${thirdPost.title}</p>
+                                        <p>${thirdPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
@@ -229,7 +229,7 @@ function setPostList(postList) {
                                         <h5>${fourthPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${fourthPost.title}</p>
+                                        <p>${fourthPost.content}</p>
                                     </div>
                                 </div>
                                 
