@@ -128,12 +128,12 @@
             </div>
             <div class="row">
             <div class="col-md-1 mb-30 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
-                    <div class="betty-about-img">
-                        <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt="" width="300" height="250"> </div>
-                    </div>
+                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp" id="data6">
+                    <!-- <div class="betty-about-img">
+                        <div class="img"> <img src="" alt="" width="300" height="250"> </div>
+                    </div> -->
                 </div>
-                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp"  id="data7">
                     <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
