@@ -83,7 +83,7 @@ function setPostList(postList) {
                 </div>
             `;
         }
-        
+    
         data1 += `
             <div class="col-md-7 p-4">
                 <div class="item">
