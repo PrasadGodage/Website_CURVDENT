@@ -68,11 +68,11 @@ function setAllPostList(list){
     `;
     
     data7 +=`
-                <div class="">
+               
                     <a  href="#" onclick="postDetails(${firstPost.id})">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center; margin-top : 10px;">Read More</button>
                     </a>
-                </div>
+              
     `;
 
     $('#data6').html(data6);
