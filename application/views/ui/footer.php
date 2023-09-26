@@ -66,16 +66,16 @@
                         </div>
                         <ul class="footer-menu" style="padding-left: 1px;">
                             <li>
-                               <a href="">Home</a>
+                               <a href="home">Home</a>
                             </li>
                             <li>
-                               <a href="">About Us</a>
+                               <a href="home">About Us</a>
                             </li><li>
-                               <a href="">Services</a>
+                               <a href="services">Services</a>
                             </li><li>
-                               <a href="">Contact</a>
+                               <a href="home">Contact</a>
                             </li><li>
-                               <a href="">Blog</a>
+                               <a href="blog">Blog</a>
                             </li>
                         </ul>
                     </div>
