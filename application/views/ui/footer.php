@@ -59,6 +59,18 @@
                         <p>Mon-Sat: 10 AM - 8 PM Sunday: Closed</p>
                     </div>
                 </div>
+                <div class="col-md-2 mb-20">
+                    <div class="item fotcont">
+                        <div class="fothead">
+                            <h6>Menus</h6>
+                        </div>
+                        <p>Home</P>
+                        <p>About Us</P>
+                        <p>Services</P>
+                        <p>Contact</P>
+                        <p>Blog</P>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="sub-footer">
