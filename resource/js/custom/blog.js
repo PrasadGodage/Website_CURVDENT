@@ -274,7 +274,9 @@ function setPostList(postList) {
                     <div class="betty-sidebar-block-content">
             `;
         data2 +=`<h6>-- Skin/Hair Treatments --</h6>`;
-        data2 +=`           
+        data2 +=`           <ul class="ul1" id="uiList">
+
+                            </ul>
                         </div>
                     </div>
                 </div>
