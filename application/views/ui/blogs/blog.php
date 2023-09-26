@@ -132,8 +132,8 @@
                 <div class="betty-sidebar-part">
                     <div class="betty-sidebar-block betty-sidebar-block-categories">
                         <div class="betty-sidebar-block-content">
-                            <h6>-- Skin/Hair Treatments --</h6>
-                                <ul class="ul1" id="uiList"> -->
+                            <h6>-- Skin/Hair Treatments --</h6> -->
+                                <ul class="ul1" id="uiList1">
                                 <!-- <li><a href="services">Laser Hair Removal</a></li>
                                     <li><a href="services">Pimple/Acne Scar</a></li>
                                     <li><a href="services">Pimple Treatment</a></li>
@@ -158,8 +158,8 @@
                                     <li><a href="services">Wart Removal</a></li>
                                     <li><a href="services">Skin Tag Removal</a></li>
                                     <li><a href="services">Liquid Rhinoplasty</a></li> -->
-                                <!-- </ul>
-                        </div>
+                                 </ul>
+                       <!-- </div>
                     </div>
                 </div> -->
             </div>

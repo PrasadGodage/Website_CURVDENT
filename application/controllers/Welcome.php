@@ -27,6 +27,7 @@ class Welcome extends CI_Controller {
         $this->load->view('ui/header');
         $this->load->view('ui/home/home');
         $this->load->view('ui/footer');
+        $this->load->view('ui/home/home_js');
     }
 
     public function services() {        

@@ -2,76 +2,6 @@ let categoryList = new Map();
 let postList = new Map();
 // console.log("baseUrl"+ebase_url);
 
-// category table show
-function setCategoryList(list) {
-    // console.log(list);
-
-    $('#uiList').empty();
-    var ulData = '';
-
-    for (let k of list.keys()) {
-
-        let category = list.get(k);
-
-        ulData += `<li>` + category.category_name + `</li>`;
-    }
-
-    $('#uiList').html(ulData);
-}
-
-// Category table show on blog_page
-function setCategoryList1(list) {
-    // console.log(list);
-
-    $('#uiList1').empty();
-    var ulData = '';
-
-    for (let k of list.keys()) {
-
-        let category = list.get(k);
-
-        ulData += `<li>` + category.category_name + `</li>`;
-    }
-
-    $('#uiList1').html(ulData);
-}
-
-
-// get category data
-function getCategoryList() {
-    $.ajax({
-
-        url: ebase_url+'blog_api',
-
-        type: 'GET',
-
-        async:false,
-
-        dataType: 'json',
-
-        success: function (response) {
-        
-
-            if (response.status == 200) {
-
-                if (response.data.length != 0) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        categoryList.set(response.data[i].id, response.data[i]);
-                    }
-                    
-                }
-                setCategoryList(categoryList);
-                setCategoryList1(categoryList);
-                // console.log(categoryList);
-            }
-
-        }
-        
-    });
-}
-getCategoryList();
-
-
 
 // get posting data
 function getPostList() {
@@ -132,7 +62,9 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                            <a href="#" onclick="postDetails(${post.id})"><img src="${post.photo}" alt="" style="height: 185px;"></a>
+                            <a href="#" onclick="postDetails(${post.id})">
+                            <img src="${post.photo}" alt="" style="width: 235px; height: 185px;">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -143,8 +75,10 @@ function setPostList(postList) {
                 <div class="col-md-5 p-4">
                     <div class="item">
                         <div class="position-re o-hidden">
-                        <a href="#" onclick="postDetails(${post.id})"><img src="${imageSrc}" alt="Default Image" style="height: 185px;"></a>
-                        </div>
+                            <a href="#" onclick="postDetails(${post.id})">
+                                <img src="${imageSrc}" alt="Default Image" style="width: 235px; height: 185px;">
+                            </a>
+                        </div>                    
                     </div>
                 </div>
             `;
@@ -181,13 +115,14 @@ function setPostList(postList) {
         
     }
 
-    let lastKey = null;
+        let firstKey = null;
 
         for (let temp of postList.keys()) {
-            lastKey = temp;
+            firstKey = temp;
+            break; // Exit the loop after the first iteration
         }
         // console.log(lastKey);
-        let lastPost = postList.get(lastKey);
+        let firstPost = postList.get(firstKey);
 
         data2 += `<div class="row">`;
 
@@ -195,16 +130,19 @@ function setPostList(postList) {
                     <div class="item">
                         <div class="media-body">
                             <div class="row">
-                                <div class="col-sm-4"><button type="button" class="btn btn-warning">Contact</button></div>
-                                <div class="col-sm-4"></div>
+                                <div class="col-sm-6">
+                                    <a href="#" onclick="postDetails(${firstPost.id})">
+                                    <button type="button" class="btn btn-warning">Latest Blog</button></a>
+                                </div>
+                                <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true">${lastPost.date}
+                                    <i class="fa fa-calendar" aria-hidden="true">${firstPost.date}
                                 </div>
                                 <div class="col-md-12">
-                                    <h5>${lastPost.title}</h5>
+                                    <h5>${firstPost.title}</h5>
                                 </div>    
                                 <div class="col-md-12">
-                                    <p>${lastPost.content}</p>
+                                    <p>${firstPost.content}</p>
                                 </div>
                             </div> 
                         </div>
@@ -212,6 +150,31 @@ function setPostList(postList) {
                 </div>
             </div>
         `;
+
+        let firstFourKeys = [];
+        let count = 0;
+
+        for (let temp of postList.keys()) {
+            firstFourKeys.push(temp);
+            count++;
+
+            if (count === 4) {
+                break;
+            }
+        }
+        const firsKey = firstFourKeys[0];
+        const secondKey = firstFourKeys[1];
+        const thirdKey = firstFourKeys[2];
+        const fourthKey = firstFourKeys[3];
+        // for (let i = 0; i < firstFourKeys.length; i++) {
+        //     const fourKeys = firstFourKeys[i];
+        //     console.log('Key:', fourKeys);
+        // }
+        
+        let firsPost = postList.get(firsKey);
+        let secondPost = postList.get(secondKey);
+        let thirdPost = postList.get(thirdKey);
+        let fourthPost = postList.get(fourthKey);
 
         data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
         // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
@@ -223,34 +186,34 @@ function setPostList(postList) {
                             <div class="row owl-carousel owl-theme">
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${firsPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${firsPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${secondPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${secondPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${thirdPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${thirdPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
                                     <div class="col-md-12">
-                                        <h5>${lastPost.title}</h5>
+                                        <h5>${fourthPost.title}</h5>
                                     </div>    
                                     <div class="col-md-12">
-                                        <p>${lastPost.content}</p>
+                                        <p>${fourthPost.content}</p>
                                     </div>
                                 </div>
                                 
@@ -277,30 +240,61 @@ function setPostList(postList) {
                     </div>
                 </div>
             `;
-        // data2 = `
-        //             <div class="main_title2">
-        //                 <h6 style="font-weight: bold;"></h6>
-        //             </div>
-        //             <div class="main_title2">
-        //                 <h6 style="font-weight: bold;">Social Network</h6>
-        //             </div>
-        //             <div class="betty-sidebar-part">
-        //                 <div class="betty-sidebar-block betty-sidebar-block-categories">
-        //                     <div class="betty-sidebar-block-content">
-        //                         <h6>-- Skin/Hair Treatments --</h6>
-        //                         <ul class="ul1" id="uiList">
-        //                         </ul>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        // `;
-
-// Now 'data2' contains the formatted HTML structure
-
+        
 
     $('#data1').html(data1);
     $('#data2').html(data2);
 }
+
+
+
+// category table show
+function setCategoryList(list) {
+    // console.log(list);
+
+    $('#uiList').empty();
+    var ulData = '';
+
+    for (let k of list.keys()) {
+
+        let category = list.get(k);
+
+        ulData += `<li>` + category.category_name + `</li>`;
+    }
+
+    $('#uiList').html(ulData);
+}
+function getCategoryList() {
+    $.ajax({
+
+        url: ebase_url+'blog_api',
+
+        type: 'GET',
+
+        async:false,
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        categoryList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                }
+                setCategoryList(categoryList);
+                // console.log(categoryList);
+            }
+
+        }
+        
+    });
+}
+getCategoryList();
 
 function postDetails(id){
     

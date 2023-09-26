@@ -14,13 +14,13 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="home">Home</a>
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="goHome()">Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="home">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goHome()">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goService()">Services</a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="home">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goHome()">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goBlog()">Blog</a></li>
                 </ul>
            </div>
         </div>
@@ -122,8 +122,8 @@
                     <div class="betty-sidebar-part">
                         <div class="betty-sidebar-block betty-sidebar-block-categories">
                             <div class="betty-sidebar-block-content">
-                                    <h6>-- Skin/Hair Treatments --</h6>
-                                    <ul class="ul1" id="uiList1"> -->
+                                    <h6>-- Skin/Hair Treatments --</h6>-->
+                                    <ul class="ul1" id="uiList1"> 
                                     <!-- <li><a href="services">Laser Hair Removal</a></li>
                                     <li><a href="services">Pimple/Acne Scar</a></li>
                                     <li><a href="services">Pimple Treatment</a></li>
@@ -148,8 +148,8 @@
                                     <li><a href="services">Wart Removal</a></li>
                                     <li><a href="services">Skin Tag Removal</a></li>
                                     <li><a href="services">Liquid Rhinoplasty</a></li> -->
-                                <!-- </ul>
-                            </div>
+                                 </ul>
+                        <!--    </div>
                         </div>
                     </div> -->
                 </div>
