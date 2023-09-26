@@ -36,8 +36,10 @@ function setAllPostList(list){
 
     $('#data6').empty();
     $('#data7').empty();
+    $('#data8').empty();
     var data6 = '';
     var data7 = '';
+    var data8 = '';
     
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
     // data6 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
@@ -70,17 +72,22 @@ function setAllPostList(list){
                 </p>
             </a>
     `;
+
+    data8 +=`
     
-    data7 +=`
-                <div class="">
-                    <a  href="#" onclick="postDetails(${firstPost.id})">
-                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center; margin-top : 10px;">Read More</button>
-                    </a>
-                </div>
+            <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+            <div class="col-md-7 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <a  href="#" onclick="postDetails(${firstPost.id})">
+                    <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
+                </a>
+            </div>
     `;
+    
+    
 
     $('#data6').html(data6);
     $('#data7').html(data7);
+    $('#data8').html(data8);
 
 }
 

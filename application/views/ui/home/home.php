@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
-            <div class="row">
+            <div class="row" id="data8">
                 <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
                 <div class="col-md-7 mb-20 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
@@ -768,7 +768,7 @@
 
         .content {
             overflow: hidden;
-            max-height: 110px; /* Adjust the max-height as needed */
+            max-height: 310px; /* Adjust the max-height as needed */
         }
         .read-more-button {
             display: none;
