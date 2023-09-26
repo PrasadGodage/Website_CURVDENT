@@ -76,7 +76,7 @@ function setPostList(postList) {
                     <div class="item">
                         <div class="position-re o-hidden">
                             <a href="#" onclick="postDetails(${post.id})">
-                                <img src="${imageSrc}" alt="Default Image" style="width: 235px; height: 185px;">
+                                <img src="${imageSrc}" alt="Default Image" style="width: 235px; height: 185px; object-fit: cover;">
                             </a>
                         </div>                    
                     </div>
