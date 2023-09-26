@@ -64,11 +64,25 @@
                         <div class="fothead">
                             <h6>Menus</h6>
                         </div>
-                        <a href=""><p>Home</P></a>
+                        <ul class="footer-menu">
+                            <li>
+                               <a href="">Home</a>
+                            </li>
+                            <li>
+                               <a href="">About Us</a>
+                            </li><li>
+                               <a href="">Services</a>
+                            </li><li>
+                               <a href="">Contact</a>
+                            </li><li>
+                               <a href="">Blog</a>
+                            </li>
+                        </ul>
+                        <!-- <a href=""><p>Home</P></a>
                         <a href=""><p>About Us</P></a>
                         <a href=""><p>Services</P></a>
                         <a href=""><p>Contact</P></a>
-                        <a href=""><p>Blog</P></a>
+                        <a href=""><p>Blog</P></a> -->
                     </div>
                 </div>
             </div>
