@@ -47,8 +47,8 @@ function setPostList1(postList) {
     var data3 = '';
     var data4 = '';
     
-    // var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
-    var imageSrc = '';
+    var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc;
 
     // Add the title section outside the loop
     data3 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
@@ -69,7 +69,7 @@ function setPostList1(postList) {
 
         // Check if post.photo is not empty or falsy
         if (postList.photo!='') {
-            imageSrc=postList.photo;
+            imageSrc = ebase_url+postList.photo;
         }
             // If post.photo is empty, provide a default image
             data3 += `
