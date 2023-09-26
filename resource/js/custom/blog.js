@@ -204,7 +204,7 @@ function setPostList(postList) {
                                     <div class="col-md-12">
                                         <h5>${firsPost.title}</h5>
                                     </div>    
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 content1">
                                         <p>${firsPost.content}</p>
                                     </div>
                                 </div>
@@ -212,15 +212,15 @@ function setPostList(postList) {
                                     <div class="col-md-12">
                                         <h5>${secondPost.title}</h5>
                                     </div>    
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 content1">
                                         <p>${secondPost.content}</p>
                                     </div>
                                 </div>
                                 <div class="box mb-0">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 ">
                                         <h5>${thirdPost.title}</h5>
                                     </div>    
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 content1">
                                         <p>${thirdPost.content}</p>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@ function setPostList(postList) {
                                     <div class="col-md-12">
                                         <h5>${fourthPost.title}</h5>
                                     </div>    
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 content1">
                                         <p>${fourthPost.content}</p>
                                     </div>
                                 </div>
