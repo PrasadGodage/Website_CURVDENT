@@ -156,8 +156,6 @@ function setPostList(postList) {
                     <div class="media-body">
                         <div class="row">
                             <div class="col-sm-4">
-                            <a href="#" onclick="postDetails(${post.id})">
-                                <button type="button" class="btn btn-warning">Blog</button></a>
                             </div>
                             <div class="col-sm-4">
                             </div>
@@ -169,6 +167,10 @@ function setPostList(postList) {
                             </div>    
                             <div class="col-md-12">
                                 <p>${post.content}</p>
+                            </div>
+                            <div class="col-sm-4">
+                            <a href="#" onclick="postDetails(${post.id})">
+                                <button type="button" class="btn btn-warning">Read More</button></a>
                             </div>
                         </div> 
                     </div>
