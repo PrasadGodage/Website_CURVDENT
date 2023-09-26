@@ -133,7 +133,7 @@
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
                     </div> -->
                 </div>
-                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp"  id="data7">
+                <div class="col-md-6 mb-30 animate-box content" data-animate-effect="fadeInUp"  id="data7">
                     <!-- <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -756,4 +756,13 @@
             </div>
         </div>
     </section> -->
-    
+    <style>
+
+        .content {
+            overflow: hidden;
+            max-height: 100px; /* Adjust the max-height as needed */
+        }
+        .read-more-button {
+            display: none;
+        }
+    </style>

@@ -183,6 +183,14 @@
 		margin-bottom: 0px;
 	}
 }
+
+        .content {
+            overflow: hidden;
+            max-height: 100px; /* Adjust the max-height as needed */
+        }
+        .read-more-button {
+            display: none;
+        }
     </style>
 
     <!-- script for slider -->

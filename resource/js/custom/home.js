@@ -68,7 +68,7 @@ function setAllPostList(list){
     `;
     
     data7 +=`
-                <div class="">
+                <div class="read-more-button">
                     <a  href="#" onclick="postDetails(${firstPost.id})">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
