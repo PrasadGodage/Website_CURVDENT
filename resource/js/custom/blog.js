@@ -2,76 +2,6 @@ let categoryList = new Map();
 let postList = new Map();
 // console.log("baseUrl"+ebase_url);
 
-// category table show
-function setCategoryList(list) {
-    // console.log(list);
-
-    $('#uiList').empty();
-    var ulData = '';
-
-    for (let k of list.keys()) {
-
-        let category = list.get(k);
-
-        ulData += `<li>` + category.category_name + `</li>`;
-    }
-
-    $('#uiList').html(ulData);
-}
-
-// Category table show on blog_page
-function setCategoryList1(list) {
-    // console.log(list);
-
-    $('#uiList1').empty();
-    var ulData = '';
-
-    for (let k of list.keys()) {
-
-        let category = list.get(k);
-
-        ulData += `<li>` + category.category_name + `</li>`;
-    }
-
-    $('#uiList1').html(ulData);
-}
-
-
-// get category data
-function getCategoryList() {
-    $.ajax({
-
-        url: ebase_url+'blog_api',
-
-        type: 'GET',
-
-        async:false,
-
-        dataType: 'json',
-
-        success: function (response) {
-        
-
-            if (response.status == 200) {
-
-                if (response.data.length != 0) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        categoryList.set(response.data[i].id, response.data[i]);
-                    }
-                    
-                }
-                setCategoryList(categoryList);
-                setCategoryList1(categoryList);
-                // console.log(categoryList);
-            }
-
-        }
-        
-    });
-}
-getCategoryList();
-
-
 
 // get posting data
 function getPostList() {
@@ -281,30 +211,61 @@ function setPostList(postList) {
                     </div>
                 </div>
             `;
-        // data2 = `
-        //             <div class="main_title2">
-        //                 <h6 style="font-weight: bold;"></h6>
-        //             </div>
-        //             <div class="main_title2">
-        //                 <h6 style="font-weight: bold;">Social Network</h6>
-        //             </div>
-        //             <div class="betty-sidebar-part">
-        //                 <div class="betty-sidebar-block betty-sidebar-block-categories">
-        //                     <div class="betty-sidebar-block-content">
-        //                         <h6>-- Skin/Hair Treatments --</h6>
-        //                         <ul class="ul1" id="uiList">
-        //                         </ul>
-        //                     </div>
-        //                 </div>
-        //             </div>
-        // `;
-
-// Now 'data2' contains the formatted HTML structure
-
+        
 
     $('#data1').html(data1);
     $('#data2').html(data2);
 }
+
+
+
+// category table show
+function setCategoryList(list) {
+    // console.log(list);
+
+    $('#uiList').empty();
+    var ulData = '';
+
+    for (let k of list.keys()) {
+
+        let category = list.get(k);
+
+        ulData += `<li>` + category.category_name + `</li>`;
+    }
+
+    $('#uiList').html(ulData);
+}
+function getCategoryList() {
+    $.ajax({
+
+        url: ebase_url+'blog_api',
+
+        type: 'GET',
+
+        async:false,
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        categoryList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                }
+                setCategoryList(categoryList);
+                // console.log(categoryList);
+            }
+
+        }
+        
+    });
+}
+getCategoryList();
 
 function postDetails(id){
     
