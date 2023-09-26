@@ -35,7 +35,9 @@ getAllPostList();
 function setAllPostList(list){
 
     $('#data6').empty();
+    $('#data7').empty();
     var data6 = '';
+    var data7 = '';
     
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
     // data6 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
@@ -58,6 +60,27 @@ function setAllPostList(list){
             </div>
     `;
 
-    $('#data6').html(data6);
 
+    data7 +=`<h6>${firstPost.title}</h6>`;
+    data7 +=`   <p>
+                    ${firstPost.content}
+                </p>
+    `;
+    
+    data7 +=`
+                <div class="">
+                    <a  href="#" onclick="postDetails(${firstPost.id})">
+                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
+                    </a>
+                </div>
+    `;
+
+    $('#data6').html(data6);
+    $('#data7').html(data7);
+
+}
+
+function postDetails(id){
+    
+    $(location).attr('href',ebase_url+'blog_page/'+id);
 }
