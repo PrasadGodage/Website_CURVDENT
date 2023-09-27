@@ -28,7 +28,20 @@
             
           </ul>
         </li>
-             
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i>
+            <span>Subscriber</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <!-- <ul class="treeview-menu">
+            <li><a href="category"><i class="fa fa-circle-thin"></i>Category</a></li>
+            <li><a href="posting"><i class="fa fa-circle-thin"></i>Add Post</a></li>
+            
+          </ul> -->
+        </li>  
         
       </ul>
     </section>
