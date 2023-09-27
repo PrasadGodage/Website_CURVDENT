@@ -651,8 +651,9 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20" data-scroll-index="5" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-image: url('<?php echo base_url() . 'uiAssets/img/Newsletter.webp'; ?>');">
+    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
     <!-- Content of your section goes here -->
+   
         <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:60px;">
             <div class="row">
                 <div class="col-md-12 mb-30">
@@ -690,6 +691,7 @@
                 </form>
             </div>
         </div>
+   
     </section>
 
     <!-- Contact -->
