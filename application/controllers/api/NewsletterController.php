@@ -4,18 +4,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require APPPATH . '/libraries/REST_Controller.php';
 use Restserver\Libraries\REST_Controller;
 
-class PostingController extends REST_Controller {
+class NewsletterController extends REST_Controller {
 
     public function __construct() {
 
         parent::__construct();
         $this->load->library('Authorization_Token'); 
-        $this->load->helper('date');
-        $this->load->model('PostingModel','posting');
+        $this->load->model('NewsletterModel','newsletter');
         
     }
 
-    public function posting_get($id = 0) {
+    public function newsletter_get($id = 0) {
         $response = [];
 
             
@@ -27,7 +26,7 @@ class PostingController extends REST_Controller {
                 $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
                 if ($decodedToken['status'])
                 {
-                    $data = $this->posting->get_posting($id);
+                    $data = $this->newsletter->get_newsletter($id);
                     if (!empty($data)) {
                         $response['data'] = $data;
                         $response['msg'] = 'All Data Fetch successfully!';
@@ -51,45 +50,28 @@ class PostingController extends REST_Controller {
         }
     }
 
-    public function posting_post() { 
+    public function newsletter_post() { 
         $response = [];
-        $data['title'] = $this->post('title');
-        $data['seo_title'] = $this->post('seo_title');
-        $data['content'] = $this->post('content');
-        $data['featured'] = $this->post('featured');
-        $data['choice'] = $this->post('choice');
-        $data['thread'] = $this->post('thread');
-        $data['id_category'] = $this->post('id_category');
-        // $data['photo'] = $this->post('photo');
-        $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
+        $data['email'] = $this->post('email');
         $data['is_active'] = $this->post('is_active');
-        
+
         $id = $this->post('id');
         
         //Authentication
         $headers = $this->input->request_headers();
-        
+
         if (isset($headers['Authorization'])) {
             $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
             if ($decodedToken['status'])
             {
-                
-                if (empty($id)) {
-                    if($this->posting->find_posting($data['title'])){
+                      
+            if (empty($id)) {
+                if($this->newsletter->find_newsletter($data['email'])){
+                   $newsletter_id = $this->newsletter->insert_newsletter($data);
 
-                    if (!empty($_FILES['photo']['name'])) {
-                    $file_data['file_name'] = $_FILES['photo']['name'];
-                    $file_data['file_type'] = $_FILES['photo']['type'];
-                    $file_data['temp_name'] = $_FILES['photo']['tmp_name'];
-                    $file_data['file_size'] = $_FILES['photo']['size'];
-                       $data['photo']=$this->upload_docs($file_data);
-                    
-                }
-
-                $posting_id = $this->posting->insert_posting($data);
-            if (!empty($posting_id)) {
-                $restData = $this->posting->get_posting($posting_id);
-                $response['msg'] = 'Posting created successfully!';
+            if (!empty($newsletter_id)) {
+                $restData = $this->newsletter->get_newsletter($newsletter_id);
+                $response['msg'] = 'Newsletter created successfully!';
                 $response['data'] = $restData;
                 $response['status'] = 200;
                 $this->response($response, REST_Controller::HTTP_OK);
@@ -106,29 +88,14 @@ class PostingController extends REST_Controller {
                 }
                 
         } else {
-            $result=$this->posting->get_posting($id);
+            $result=$this->newsletter->get_newsletter($id);
             if (!empty($result)) {
-
-                
-                // if($this->posting->find_posting($data['title']) || $result['title']==$data['title']){
+                // if($this->category->find_category($data['category_name']) || $result['category_name']==$data['category_name']){
                     
-                    // $data['modified_by'] = $this->post('created_by');
-                    // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                    if (!empty($_FILES['photo']['name'])) {
-                        if (!empty($result['photo'])) {
-                            unlink($result['photo']);
-                        }
-                        $file_data['file_name'] = $_FILES['photo']['name'];
-                        $file_data['file_type'] = $_FILES['photo']['type'];
-                        $file_data['temp_name'] = $_FILES['photo']['tmp_name'];
-                        $file_data['file_size'] = $_FILES['photo']['size'];
-                         $data['photo']=$this->upload_docs($file_data);
-                        
-                    }
-                $status = $this->posting->update_posting($id, $data);
+                $status = $this->newsletter->update_newsletter($id, $data);
                 if ($status) {
-                    $restData = $this->posting->get_posting($id);
-                    $response['msg'] = 'Posting updated successfully!';
+                    $restData = $this->newsletter->get_newsletter($id);
+                    $response['msg'] = 'Newsletter updated successfully!';
                     $response['data'] = $restData;
                     $response['status'] = 200;
                     $this->response($response, REST_Controller::HTTP_OK);
@@ -155,29 +122,7 @@ class PostingController extends REST_Controller {
         
     }
 
-    
-    public function upload_docs($file) {
-        if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg")) {
-            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-            $time = date('Y_m_d_hisu');
-            $filename = $this->compress_image($file['temp_name'], "resource/img/blog/" . 'photo' . $time . "." . $ext, 50);
-            return $filename;
-        }
-    }
-
-    function compress_image($source_url, $destination_url, $quality) {
-        $info = getimagesize($source_url);
-        if ($info['mime'] == 'image/jpeg')
-            $image = imagecreatefromjpeg($source_url);
-        elseif ($info['mime'] == 'image/gif')
-            $image = imagecreatefromgif($source_url);
-        elseif ($info['mime'] == 'image/png')
-            $image = imagecreatefrompng($source_url);
-        imagejpeg($image, $destination_url, $quality);
-        return $destination_url;
-    }
-
-    public function posting_delete($id = 0) {
+    public function newsletter_delete($id = 0) {
         $response = [];
 
             
@@ -190,7 +135,7 @@ class PostingController extends REST_Controller {
                 if ($decodedToken['status'])
                 {
                     if(!empty($id)){
-                        $status = $this->posting->delete_posting($id);
+                        $status = $this->newsletter->delete_newsletter($id);
 
                         if (!empty($status)) {
                             $response['data'] = $status;
