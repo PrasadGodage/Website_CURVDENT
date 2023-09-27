@@ -188,7 +188,7 @@ function setPostList(postList) {
         if (secondPost.photo!='') {
             imageSrc2 = ebase_url+secondPost.photo;
         }
-        if (thirdPost3.photo!='') {
+        if (thirdPost.photo!='') {
             imageSrc3 = ebase_url+thirdPost.photo;
         }
         if (fourthPost.photo!='') {
@@ -209,7 +209,7 @@ function setPostList(postList) {
                                             <h5>${firsPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                            <img src="${imageSrc1}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                            <img src="${imageSrc1}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -217,7 +217,7 @@ function setPostList(postList) {
                                             <h5>${secondPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc2}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc2}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -225,7 +225,7 @@ function setPostList(postList) {
                                             <h5>${thirdPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc3}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc3}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -233,7 +233,7 @@ function setPostList(postList) {
                                             <h5>${fourthPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc4}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc4}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                 
