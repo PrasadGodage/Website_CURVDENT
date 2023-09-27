@@ -651,7 +651,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/3.jpg'; ?>">
+    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
     <!-- Content of your section goes here -->
    
         <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:60px;">
