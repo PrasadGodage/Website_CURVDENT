@@ -51,7 +51,7 @@ class NewsletterModel extends CI_Model {
     }
     
     public function find_newsletter($email) {
-          $data = $query = $this->db->get_where('email', array('email' => $email))->row_array();
+          $data = $query = $this->db->get_where('newsletter_master', array('email' => $email))->row_array();
           if (!empty($data)) {
               return FALSE;
           } else {
