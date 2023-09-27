@@ -663,12 +663,14 @@
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
             </div> -->
-            <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
+            <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <form method="POST" action="#">
                     <div class="row justify-content-center d-flex">
                         <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Enter your Email">
-                            <button type="submit" class="ms-2">Subscribe</button>
+                            <input name="email" type="email" placeholder="Email *" required>
+                            <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
+                            <!-- <button type="submit" class="ms-2">Subscribe</button> -->
+                            <input name="submit" type="submit" value="Send Message">
                         </div>
                     </div>
 
