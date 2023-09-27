@@ -648,6 +648,27 @@
             </div>
         </div>
     </section> -->
+    
+    <!-- NewsLetters -->
+    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
+      <div class="container aos-init aos-animate" data-aos="zoom-in">
+        <div class="section-header">
+          <h2>Newsletter</h2>
+          <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+        </div>
+
+        <form method="POST" action="#">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10 d-flex">
+              <input type="text" class="form-control" placeholder="Enter your Email">
+              <button type="submit" class="ms-2">Subscribe</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
         <div class="container">
