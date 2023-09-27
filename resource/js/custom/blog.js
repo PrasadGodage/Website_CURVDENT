@@ -205,36 +205,36 @@ function setPostList(postList) {
                         <div class="media-body">
                             <div class="row owl-carousel owl-theme">
                                     <div class="box mb-0">
-                                        <div class="col-md-12 content1">
-                                            <h5>${firsPost.title}</h5>
-                                        </div>    
                                         <div class="col-md-12 ">
                                             <img src="${imageSrc1}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
+                                        <div class="col-md-12 content1">
+                                            <h5>${firsPost.title}</h5>
+                                        </div>
                                     </div>
                                     <div class="box mb-0">
-                                        <div class="col-md-12 content1">
-                                            <h5>${secondPost.title}</h5>
-                                        </div>    
                                         <div class="col-md-12 ">
                                                 <img src="${imageSrc2}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
+                                        <div class="col-md-12 content1">
+                                            <h5>${secondPost.title}</h5>
+                                        </div>
                                     </div>
                                     <div class="box mb-0">
-                                        <div class="col-md-12 content1">
-                                            <h5>${thirdPost.title}</h5>
-                                        </div>    
                                         <div class="col-md-12 ">
                                                 <img src="${imageSrc3}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
+                                        <div class="col-md-12 content1">
+                                            <h5>${thirdPost.title}</h5>
+                                        </div>    
                                     </div>
                                     <div class="box mb-0">
-                                        <div class="col-md-12 content1">
-                                            <h5>${fourthPost.title}</h5>
-                                        </div>    
                                         <div class="col-md-12 ">
                                                 <img src="${imageSrc4}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
+                                        <div class="col-md-12 content1">
+                                            <h5>${fourthPost.title}</h5>
+                                        </div>    
                                     </div>
                                 
                             </div>
