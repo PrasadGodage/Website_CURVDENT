@@ -650,9 +650,9 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20" data-scroll-index="5" style="background-color: hsla(0, 0%, 70%, 0.5); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-image: url('<?php echo base_url() . 'uiAssets/img/Newsletter.webp'; ?>');">
+    <section class="section-padding mb-20" data-scroll-index="5" style="background-color: hsla(0, 0%, 70%, 0.7); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-image: url('<?php echo base_url() . 'uiAssets/img/Newsletter.webp'; ?>');">
     <!-- Content of your section goes here -->
-        <div class="container aos-init aos-animate mb-30" data-aos="zoom-in" style="background-color: hsla(0, 0%, 70%, 0.5);">
+        <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
             <div class="row">
                 <div class="col-md-12 mb-30">
                     <h2 class="section-title" id="newsletter">Newsletter</h2>
