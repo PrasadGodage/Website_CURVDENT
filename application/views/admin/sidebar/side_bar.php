@@ -29,9 +29,9 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="subscriber">
             <i class="fa fa-th"></i>
-            <span>Subscriber</span>
+            <span>Subscribers</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>

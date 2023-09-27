@@ -52,7 +52,7 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/subscriber/subscriber');
         $this->load->view('footer');
-        // $this->load->view('admin/subscriber/subscriber_js');
+        $this->load->view('admin/subscriber/subscriber_js');
         $this->load->view('htmlend');
     }
     

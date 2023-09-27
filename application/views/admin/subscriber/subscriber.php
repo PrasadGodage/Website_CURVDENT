@@ -2,11 +2,11 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Subscriber</h1>
+        <h1>Subscribers</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <!--<li class="breadcrumb-item"><a href="#">Master</a></li>-->
-            <li class="breadcrumb-item active">Subscriber</li>
+            <li class="breadcrumb-item active">Subscribers</li>
         </ol>
     </section>
     
