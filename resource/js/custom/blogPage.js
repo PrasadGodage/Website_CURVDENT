@@ -79,6 +79,11 @@ function setAllPostList(list){
     var data4 = '';
     
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc1 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc2 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc3 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
+    
     data4 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
 
     let firstKey = null;
@@ -142,6 +147,20 @@ function setAllPostList(list){
         let thirdPost = postList.get(thirdKey);
         let fourthPost = postList.get(fourthKey);
 
+        if (firsPost.photo!='') {
+            imageSrc1 = ebase_url+firsPost.photo;
+        }
+        if (secondPost.photo!='') {
+            imageSrc2 = ebase_url+secondPost.photo;
+        }
+        if (thirdPost.photo!='') {
+            imageSrc3 = ebase_url+thirdPost.photo;
+        }
+        if (fourthPost.photo!='') {
+            imageSrc4 = ebase_url+fourthPost.photo;
+        }
+
+
     data4 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
     // '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
     data4 +=`<div class="row">`;
@@ -150,38 +169,38 @@ function setAllPostList(list){
                 <div class="item">
                     <div class="media-body">
                         <div class="row owl-carousel owl-theme">
-                                <div class="box mb-0">
-                                    <div class="col-md-12 content">
-                                        <h5>${firsPost.title}</h5>
-                                    </div>    
-                                    <div class="col-md-12 content">
-                                        <p>${firsPost.content}</p>
-                                    </div>
-                                </div>
-                                <div class="box mb-0">
-                                    <div class="col-md-12 content">
-                                        <h5>${secondPost.title}</h5>
-                                    </div>    
-                                    <div class="col-md-12 content">
-                                        <p>${secondPost.content}</p>
-                                    </div>
-                                </div>
-                                <div class="box mb-0">
-                                    <div class="col-md-12 content">
-                                        <h5>${thirdPost.title}</h5>
-                                    </div>    
-                                    <div class="col-md-12 content">
-                                        <p>${thirdPost.content}</p>
-                                    </div>
-                                </div>
-                                <div class="box mb-0">
-                                    <div class="col-md-12 content">
-                                        <h5>${fourthPost.title}</h5>
-                                    </div>    
-                                    <div class="col-md-12 content">
-                                        <p>${fourthPost.content}</p>
-                                    </div>
-                                </div>
+                        <div class="box mb-0">
+                        <div class="col-md-12 ">
+                            <img src="${imageSrc1}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                        </div>
+                        <div class="col-md-12 content1">
+                            <h5>${firsPost.title}</h5>
+                        </div>
+                    </div>
+                    <div class="box mb-0">
+                        <div class="col-md-12 ">
+                                <img src="${imageSrc2}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                        </div>
+                        <div class="col-md-12 content1">
+                            <h5>${secondPost.title}</h5>
+                        </div>
+                    </div>
+                    <div class="box mb-0">
+                        <div class="col-md-12 ">
+                                <img src="${imageSrc3}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                        </div>
+                        <div class="col-md-12 content1">
+                            <h5>${thirdPost.title}</h5>
+                        </div>    
+                    </div>
+                    <div class="box mb-0">
+                        <div class="col-md-12 ">
+                                <img src="${imageSrc4}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                        </div>
+                        <div class="col-md-12 content1">
+                            <h5>${fourthPost.title}</h5>
+                        </div>    
+                    </div>
                             
                         </div>
                     </div>
