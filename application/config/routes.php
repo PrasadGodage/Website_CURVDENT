@@ -41,6 +41,11 @@ $route['blog_api/(:num)']='api/CategoryUiController/category/$1';
 $route['posting_api']='api/PostingController/posting';
 $route['posting_api/(:num)']='api/PostingController/posting/$1';
 
+
 //posting Api without Authorization
 $route['blogpage_api']='api/PostingUiController/posting';
 $route['blogpage_api/(:num)']='api/PostingUiController/posting/$1';
+
+//Newsletter Api
+$route['newsletter_api']='api/NewsletterController/newsletter';
+$route['newsletter_api/(:num)']='api/NewsletterController/newsletter/$1';
