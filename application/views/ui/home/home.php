@@ -691,7 +691,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
+    <section class="section-padding" data-scroll-index="5" style="hsla(0, 100%, 100%, 0.7)" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
