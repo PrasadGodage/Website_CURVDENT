@@ -76,7 +76,7 @@ class PostingController extends REST_Controller {
             {
                 
                 if (empty($id)) {
-                    if($this->posting->find_posting($data['title'])){
+                    // if($this->posting->find_posting($data['title'])){
 
                     if (!empty($_FILES['photo']['name'])) {
                     $file_data['file_name'] = $_FILES['photo']['name'];
@@ -100,11 +100,11 @@ class PostingController extends REST_Controller {
                 $response['status'] = 400;
                 $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
             } 
-                }else{
-                    $response['msg'] = 'Duplicate Entry!';
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_OK);
-                }
+                // }else{
+                //     $response['msg'] = 'Duplicate Entry!';
+                // $response['status'] = 400;
+                // $this->response($response, REST_Controller::HTTP_OK);
+                // }
                 
         } else {
             $result=$this->posting->get_posting($id);
