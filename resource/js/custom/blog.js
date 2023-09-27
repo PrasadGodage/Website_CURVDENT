@@ -205,7 +205,7 @@ function setPostList(postList) {
                         <div class="media-body">
                             <div class="row owl-carousel owl-theme">
                                     <div class="box mb-0">
-                                        <div class="col-md-12 content1">
+                                        <div class="col-md-12 content1"> 
                                             <h5>${firsPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
