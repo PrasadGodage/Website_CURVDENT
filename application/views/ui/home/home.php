@@ -654,7 +654,7 @@
         <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
             <div class="row">
                 <div class="col-md-12 mb-30">
-                    <h6 class="section-title" id="newsletter">Newsletter</h6>
+                    <h2 class="section-title" id="newsletter">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
             </div>
@@ -666,12 +666,15 @@
             <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <form method="POST" action="#">
                     <div class="row justify-content-center d-flex">
-                        <div class="col-12">
+                        <div class="col-md-8">
                             <input name="email" type="email" placeholder="Email *" required>
                             <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
                             <!-- <button type="submit" class="ms-2">Subscribe</button> -->
-                            <input name="submit" type="submit" value="Send Message">
+                            <!-- <input name="submit" type="submit" value="Send Message"> -->
                         </div>
+                        <div class="col-md-4">
+                                <input name="submit" type="submit" value="Send Message">
+                            </div>
                     </div>
 
                     <!-- <div class="row justify-content-center">
