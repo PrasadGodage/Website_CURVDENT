@@ -233,9 +233,9 @@ function setPostList1(postList) {
         }
             // If post.photo is empty, provide a default image
             data3 += `
-                    <div class="col-md-12 p-4">
+                    <div class="col-md-12 p-4 betty-about-img">
                         <div class="item">
-                            <div class="position-re o-hidden">
+                            <div class="position-re o-hidden img">
                                 <img src= "${imageSrc}" alt="" style="height: 400px;">
                             </div>
                         </div>
