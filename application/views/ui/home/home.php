@@ -666,13 +666,14 @@
             <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <form method="POST" action="#">
                     <div class="row justify-content-center d-flex">
+                        <div class="col-md-1"></div>
                         <div class="col-md-8">
                             <input name="email" type="email" placeholder="Email *" required>
                             <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
                             <!-- <button type="submit" class="ms-2">Subscribe</button> -->
                             <!-- <input name="submit" type="submit" value="Send Message"> -->
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                                 <input name="submit" type="submit" value="Send Message">
                             </div>
                     </div>
