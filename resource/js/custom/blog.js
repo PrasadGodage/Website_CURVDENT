@@ -46,6 +46,10 @@ function setPostList(postList) {
     var data1 = '';
     var data2 = '';
     var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc1 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc2 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc3 = ebase_url + '/uiAssets/img/dummy.jpg';
+    var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
     
     // Add the title section outside the loop
     data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
@@ -179,16 +183,16 @@ function setPostList(postList) {
         let fourthPost = postList.get(fourthKey);
 
         if (firsPost.photo!='') {
-            imageSrc = ebase_url+firsPost.photo;
+            imageSrc1 = ebase_url+firsPost.photo;
         }
         if (secondPost.photo!='') {
-            imageSrc = ebase_url+secondPost.photo;
+            imageSrc2 = ebase_url+secondPost.photo;
         }
-        if (thirdPost.photo!='') {
-            imageSrc = ebase_url+thirdPost.photo;
+        if (thirdPost3.photo!='') {
+            imageSrc3 = ebase_url+thirdPost.photo;
         }
         if (fourthPost.photo!='') {
-            imageSrc = ebase_url+fourthPost.photo;
+            imageSrc4 = ebase_url+fourthPost.photo;
         }
         
 
@@ -205,7 +209,7 @@ function setPostList(postList) {
                                             <h5>${firsPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                            <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                            <img src="${imageSrc1}" alt="Default Image" style="width: 150px; height: 150px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -213,7 +217,7 @@ function setPostList(postList) {
                                             <h5>${secondPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc2}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -221,7 +225,7 @@ function setPostList(postList) {
                                             <h5>${thirdPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc3}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
@@ -229,7 +233,7 @@ function setPostList(postList) {
                                             <h5>${fourthPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 ">
-                                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                                                <img src="${imageSrc4}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                 
