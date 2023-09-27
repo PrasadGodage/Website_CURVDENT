@@ -177,6 +177,10 @@ function setPostList(postList) {
         let secondPost = postList.get(secondKey);
         let thirdPost = postList.get(thirdKey);
         let fourthPost = postList.get(fourthKey);
+
+        if (firsPost.photo!='') {
+            imageSrc = ebase_url+firsPost.photo;
+        }
         
 
         data2 +=`<div class="main_title2"><h6 style="font-weight:bold;">Trending Now</h6></div>`;
@@ -192,7 +196,7 @@ function setPostList(postList) {
                                             <h5>${firsPost.title}</h5>
                                         </div>    
                                         <div class="col-md-12 content1">
-                                            <p>${firsPost.content}</p>
+                                            <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                                         </div>
                                     </div>
                                     <div class="box mb-0">
