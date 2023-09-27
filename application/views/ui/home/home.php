@@ -651,22 +651,36 @@
 
     <!-- NewsLetters -->
     <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
-      <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
-        <div class="section-header">
-          <h2>Newsletter</h2>
-          <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-        </div>
-
-        <form method="POST" action="#">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10 d-flex">
-              <input type="text" class="form-control" placeholder="Enter your Email">
-              <button type="submit" class="ms-2">Subscribe</button>
+        <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h6 class="section-title" id="newsletter">Newsletter</h6>
+                    <hr class="line line-hr-left text-center">
+                </div>
             </div>
-          </div>
-        </form>
+      
+          <!-- <div class="section-header">
+            <h2>Newsletter</h2>
+            <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
+            </div> -->
+            <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
+                <form method="POST" action="#">
+                    <div class="row justify-content-center d-flex">
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Enter your Email">
+                            <button type="submit" class="ms-2">Subscribe</button>
+                        </div>
+                    </div>
 
-      </div>
+                    <!-- <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-10 d-flex">
+                            <input type="text" class="form-control" placeholder="Enter your Email">
+                            <button type="submit" class="ms-2">Subscribe</button>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- Contact -->
