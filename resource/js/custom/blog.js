@@ -146,7 +146,7 @@ function setPostList(postList) {
                                 <div class="col-md-12">
                                     <h5>${firstPost.title}</h5>
                                 </div>    
-                                <div class="col-md-12 content1">
+                                <div class="col-md-12 content">
                                     <p>${firstPost.content}</p>
                                 </div>
                             </div> 
