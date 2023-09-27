@@ -190,7 +190,7 @@
         }
         .content1 {
             overflow: hidden;
-            max-height: 50px; /* Adjust the max-height as needed */
+            max-height: 45px; /* Adjust the max-height as needed */
         }
         .read-more-button {
             display: none;
