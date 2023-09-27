@@ -350,6 +350,9 @@ function goService(){
 function goBlog(){
     $(location).attr('href',ebase_url+'blog');
 }
+function goLogin(){
+    $(location).attr('href',ebase_url+'employeeLogin');
+}
 
 $(function () {
     "use strict";

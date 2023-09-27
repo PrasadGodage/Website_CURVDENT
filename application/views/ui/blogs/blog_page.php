@@ -21,6 +21,7 @@
                     <!-- <li class="nav-item"><a class="nav-link" href="#" data-scroll-nav="4">Blog</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="#" onclick="goHome()">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="goBlog()">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="goLogin()">Login</a></li>
                 </ul>
            </div>
         </div>
