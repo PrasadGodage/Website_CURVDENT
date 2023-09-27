@@ -650,7 +650,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
+    <section class="section-padding mb-20" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/Newsletter.webp'; ?>">
         <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
             <div class="row">
                 <div class="col-md-12 mb-30">
@@ -663,7 +663,7 @@
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
             </div> -->
-            
+
             <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <form method="POST" action="#">
                     <div class="row justify-content-center d-flex">
@@ -675,7 +675,7 @@
                             <!-- <input name="submit" type="submit" value="Send Message"> -->
                         </div>
                         <div class="col-md-3">
-                                <input name="submit" type="submit" value="Send Message">
+                                <input name="submit" type="submit" value="Subscribe">
                             </div>
                     </div>
 
