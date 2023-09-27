@@ -38,7 +38,7 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table id="categoryTable" class="table table-bordered table-striped">
+                                <table id="subscriberTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>Sr.No</th>
@@ -46,7 +46,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="categoryList">
+                                    <tbody id="subscriberList">
                                         
                                     </tbody>
                                     <tfoot>
