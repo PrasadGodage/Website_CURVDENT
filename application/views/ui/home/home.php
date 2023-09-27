@@ -663,6 +663,7 @@
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
             </div> -->
+            
             <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                 <form method="POST" action="#">
                     <div class="row justify-content-center d-flex">
