@@ -648,10 +648,10 @@
             </div>
         </div>
     </section> -->
-    
+
     <!-- NewsLetters -->
     <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
-      <div class="container aos-init aos-animate" data-aos="zoom-in">
+      <div class="container aos-init aos-animate mb-30" data-aos="zoom-in">
         <div class="section-header">
           <h2>Newsletter</h2>
           <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
