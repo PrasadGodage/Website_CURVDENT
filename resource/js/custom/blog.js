@@ -63,9 +63,9 @@ function setPostList(postList) {
         // Check if post.photo is not empty or falsy
         if (post.photo) {
             data1 += `
-                <div class="col-md-5 p-4">
+                <div class="col-md-5 p-4 betty-about-img">
                     <div class="item">
-                        <div class="position-re o-hidden">
+                        <div class="position-re o-hidden img">
                             <a href="#" onclick="postDetails(${post.id})">
                             <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; filter: none;">
                             </a>
@@ -76,9 +76,9 @@ function setPostList(postList) {
         } else {
             // If post.photo is empty, provide a default image
             data1 += `
-                <div class="col-md-5 p-4">
+                <div class="col-md-5 p-4 betty-about-img">
                     <div class="item">
-                        <div class="position-re o-hidden">
+                        <div class="position-re o-hidden img">
                             <a href="#" onclick="postDetails(${post.id})">
                                 <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
                             </a>
