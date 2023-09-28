@@ -39,8 +39,8 @@ getSubscriberList();
 
 //Add Category Btn script -----------------------------------------------------------------
 $('#addSubscriberBtn').click(function () {
-    $('#addCategoryModal').modal('toggle');
-    $("#addCategoryForm").trigger("reset");
+    $('#addSubscriberModal').modal('toggle');
+    $("#addSubscriberForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
 });
