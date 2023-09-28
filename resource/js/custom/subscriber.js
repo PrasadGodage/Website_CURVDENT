@@ -37,7 +37,16 @@ function getSubscriberList() {
 }
 getSubscriberList();
 
-//-------------
+//Add Category Btn script -----------------------------------------------------------------
+$('#addSubscriberBtn').click(function () {
+    $('#addCategoryModal').modal('toggle');
+    $("#addCategoryForm").trigger("reset");
+    $('#id').val('');
+    $('.error').text('');
+});
+
+
+//------------- show table data ----------------------------
 
 function setSubscriberList(list) {
 
