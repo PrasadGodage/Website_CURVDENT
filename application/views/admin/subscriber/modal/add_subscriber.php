@@ -26,8 +26,8 @@
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Enter Status</label>
                                     <select class="form-control" id="is_active" name="is_active">
-                                        <option value="Y">Yes</option> 
-                                        <option value="N">No</option>
+                                        <option value="1">Yes</option> 
+                                        <option value="0">No</option>
                                     </select>
 
                                 </div>
