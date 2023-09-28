@@ -28,20 +28,28 @@
             
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="subscriber">
             <i class="fa fa-th"></i>
             <span>Subscribers</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
-          </a>
+          </a> -->
           <!-- <ul class="treeview-menu">
             <li><a href="category"><i class="fa fa-circle-thin"></i>Category</a></li>
             <li><a href="posting"><i class="fa fa-circle-thin"></i>Add Post</a></li>
             
           </ul> -->
-        </li>  
+        <!-- </li> -->
+        <li class="active">
+          <a href="subscriber">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+        </li>
         
       </ul>
     </section>
