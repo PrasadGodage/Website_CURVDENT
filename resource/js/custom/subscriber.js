@@ -56,6 +56,16 @@ $('#addSubscriberForm').on('submit', function (e) {
 });
 
 
+//Add Subscriber Btn script -----------------------------------------------------------------
+$('#addSubscriberBtn').click(function () {
+    $('#addSubscriberModal').modal('toggle');
+    $("#addSubscriberForm").trigger("reset");
+    $('#id').val('');
+    $('.error').text('');
+});
+
+
+
 // ---------------------- delete data ---------------------------------------------
 function deletesubscriberDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
@@ -163,15 +173,6 @@ function getSubscriberList() {
 }
 getSubscriberList();
 
-//Add Subscriber Btn script -----------------------------------------------------------------
-$('#addSubscriberBtn').click(function () {
-    $('#addSubscriberModal').modal('toggle');
-    $("#addSubscriberForm").trigger("reset");
-    $('#id').val('');
-    $('.error').text('');
-});
-
-
 //------------- show table data ----------------------------
 
 function setSubscriberList(list) {
@@ -200,3 +201,9 @@ function setSubscriberList(list) {
     $('#subscriberList').html(tblData);
     $('#subscriberTable').DataTable();
     }
+
+    //subscriberValidation ----------------------------------------------------
+    var subscriberValidation = document.createElement('script');
+    subscriberValidation.src = ebase_url + 'resource/js/custom/subscriberValidation.js';
+    subscriberValidation.setAttribute("type", "text/javascript");
+    document.head.appendChild(subscriberValidation);
