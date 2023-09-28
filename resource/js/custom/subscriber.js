@@ -81,7 +81,6 @@ function setSubscriberList(list) {
         <tr>
                 <td>` + index + `</td>
                 <td>` + subscriber.email + `</td>
-                <td>` + subscriber. is_active + `</td>
                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
                 </td>
@@ -152,13 +151,11 @@ function updateSubscriberDetails(id) {
     //clear all fields
     $('#id').val('');
     $('#email').val('');
-    $('#is_active').val('');
     
     $('.error').text('');
     //set details
     $('#id').val(subscriber.id);
     $('#email').val(subscriber.email);
-    $('#is_active').val(subscriber.is_active);
     $('#addSubscriberModal').modal('toggle');
 }
 
