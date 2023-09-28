@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="<?php echo base_url() . 'resource/images/favicon.ico'; ?>">
 
-        <title>Spark GPS System</title>
+        <title>Curvdent Clinic</title>
 
         <!-- Bootstrap 4.1-->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css'; ?>">
@@ -30,10 +30,7 @@
         <!-- Select2 -->
 	    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/css/select2.min.css'?>">	
 
-        <link rel="shortcut icon" href="<?php echo base_url() . 'uiAssets/img/logo-light.png'?>" />
-        <link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/plugins.css'?>" />
-        <link rel="stylesheet" href="<?php echo base_url() . 'uiAssets/css/style.css'?>" />
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <style>
             .error{
                 color: red;
@@ -58,59 +55,94 @@
     <body class="hold-transition skin-blue sidebar-mini">
         <!-- Site wrapper -->
         <div class="wrapper">
-            <header class="header slider-fade" data-scroll-index="0" id="home">
-                <div class="owl-carousel owl-theme">
-                    <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/3.jpg">
-                        <div class="v-middle caption mt-30">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="o-hidden">
-                                            <h1 style="font-weight: 700;">Face the wow experience</h1>
+
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <span class="text-white">Curvdent Clinic</span>
+                </a>
+                <!-- Header Navbar -->
+                <nav class="navbar navbar-static-top">
+
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>	
+
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+
+                            <li class="search-box">
+                                <a class="nav-link hidden-sm-down" href="javascript:void(0)"><i class="mdi mdi-magnify"></i></a>
+                                <form class="app-search" style="display: none;">
+                                    <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                                </form>
+                            </li>			
+
+                            <!-- Messages -->
+                            <li class="dropdown messages-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="mdi mdi-email faa-horizontal animated"></i>
+                                </a>
+                                <ul class="dropdown-menu scale-up">
+                                    <li class="header">You have <span id="msgCount">0</span> messages</li>
+                                    <li id="listNotify">
+                                        <!-- inner menu: contains the actual data -->
+                                        
+                                            
+                                            <!-- end message -->
+                                           
+                                        
+                                    </li>
+                                    <li class="footer"><a href="#">See all Notification</a></li>
+                                </ul>
+                            </li>
+                           
+                            <!-- User Account-->
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!--img src="<?php// echo ($session_data['empSession']['image']!='')?base_url().$session_data['empSession']['image']:'resource/images/avatar-custom.png'; ?>" class="user-image rounded-circle" alt="User Image"-->
+                                    <img src="" id="userImageSm" class="user-image rounded-circle" alt="User Image">
+                                </a>
+                                <ul class="dropdown-menu scale-up">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <!--img src="<?php //echo ($session_data['empSession']['image']!='')?base_url().$session_data['empSession']['image']:'resource/images/avatar-custom.png'; ?>" class="float-left rounded-circle responsive-image" alt="User Image" width="50%" height=""-->
+                                        <img src="" id="userImageMd" class="float-left rounded-circle responsive-image" alt="User Image" width="50%" height="">
+
+                                        <p>
+                                            <!--Lalit Meshram-->
+                                            <span id="userName"></span>
+                                            <small class="mb-5">
+                                               <span class="text-bold text-info text-center" id="userRole"></span>  
+                                               <span class="text-bold text-info text-center" id="userIdforAvatar"></span>  
+                                            
+                                                
+                                            </small>
+                                            <!--<a href="#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>-->
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="row no-gutters">
+                                            <div role="separator" class="divider col-12"></div>
+                                            <div class="col-12 text-left">
+                                                <a href="#"><i class="ti-settings"></i> Change Password</a>
+                                            </div>
+                                            <div role="separator" class="divider col-12"></div>
+                                            <div class="col-12 text-left">
+                                                <a href="#" onclick="employeeLogout();"><i class="fa fa-power-off"></i> Logout</a>
+                                            </div>				
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        <!-- /.row -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Control Sidebar Toggle Button -->
+                            <li>
+                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/2.jpg">
-                        <div class="v-middle caption mt-30">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="o-hidden">
-                                            <h1 style="font-weight: 700">Let's Glow More</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/1.jpg">
-                        <div class="v-middle caption mt-30">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="o-hidden">
-                                            <h1 style="font-weight: 700">Surprise Yourself At Curvdent</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-left item bg-img" data-overlay-dark="1" data-background="img/slider/4.jpg">
-                        <div class="v-middle caption mt-30">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="o-hidden">
-                                            <h1 style="font-weight: 700">No More Wrinkles On Face</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    </header>
+                </nav>
+            </header>
