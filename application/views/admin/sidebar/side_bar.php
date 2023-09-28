@@ -44,7 +44,7 @@
         <!-- </li> -->
         <li class="active">
           <a href="subscriber">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-th"></i> <span>Subscribers</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
