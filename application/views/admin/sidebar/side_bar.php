@@ -42,7 +42,7 @@
             
           </ul> -->
         <!-- </li> -->
-        <li class="active">
+        <li class="">
           <a href="subscriber">
             <i class="fa fa-th"></i> <span>Subscribers</span>
             <span class="pull-right-container">
