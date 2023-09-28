@@ -64,10 +64,37 @@ $('#addSubscriberBtn').click(function () {
     $('.error').text('');
 });
 
+//------------- show table data ----------------------------
 
+function setSubscriberList(list) {
+
+    $('#subscriberTable').dataTable().fnDestroy();
+    $('#subscriberList').empty();
+    var tblData = '';
+    var index=1;
+    
+    for (let k of list.keys()) {
+        
+        let subscriber = list.get(k);
+    
+        tblData += `
+        <tr>
+                <td>` + index + `</td>
+                <td>` + subscriber.email + `</td>
+                <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                </td>
+                
+        </tr>`;
+        index++;
+    }
+    
+    $('#subscriberList').html(tblData);
+    $('#subscriberTable').DataTable();
+    }
 
 // ---------------------- delete data ---------------------------------------------
-function deletesubscriberDetails(id) {
+function deleteSubscriberDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
     // swal({
     //     title: 'Are you sure?',
@@ -118,8 +145,8 @@ function deletesubscriberDetails(id) {
 
 
 
-// Updte Category Details----------------------------------------------------------------------------------------
-function updatesubscriberDetails(id) {
+// Updte Subscriber Details----------------------------------------------------------------------------------------
+function updateSubscriberDetails(id) {
     let subscriber = subscriberList.get(id.toString());
     //clear all fields
     $('#id').val('');
@@ -173,34 +200,6 @@ function getSubscriberList() {
 }
 getSubscriberList();
 
-//------------- show table data ----------------------------
-
-function setSubscriberList(list) {
-
-    $('#subscriberTable').dataTable().fnDestroy();
-    $('#subscriberList').empty();
-    var tblData = '';
-    var index=1;
-    
-    for (let k of list.keys()) {
-        
-        let subscriber = list.get(k);
-    
-        tblData += `
-        <tr>
-                <td>` + index + `</td>
-                <td>` + subscriber.email + `</td>
-                <td> <a href="#" onclick="updatesubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                </td>
-                
-        </tr>`;
-        index++;
-    }
-    
-    $('#subscriberList').html(tblData);
-    $('#subscriberTable').DataTable();
-    }
 
     //subscriberValidation ----------------------------------------------------
     var subscriberValidation = document.createElement('script');
