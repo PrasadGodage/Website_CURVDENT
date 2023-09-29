@@ -36,11 +36,11 @@
 
                         <div class="form-group row">
                             <div class="col-sm-2">
-                            <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
+                                <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
                             <div class="btn btn-info btn-file btn-outline btn-rounded">
-                            <i class="fa fa-paperclip"></i> Attachment
-                            <input type="file" name="attachment">
+                                <i class="fa fa-paperclip"></i> Attachment
+                                <input type="file" name="attachment">
                             </div>
                             <div class=""><p class="help-block mt-3 ml-2"><span>Max. 32MB</span></p></div>
                         </div>
