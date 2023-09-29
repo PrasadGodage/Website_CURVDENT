@@ -17,7 +17,7 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-th"></i>
-            <span>Post</span>
+            <span>Blog</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -51,6 +51,15 @@
           </a>
         </li>
         
+        <li class="">
+          <a href="newsletter">
+            <i class="fa fa-th"></i> <span>Newsletters</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+        </li>
+
       </ul>
     </section>
   </aside>

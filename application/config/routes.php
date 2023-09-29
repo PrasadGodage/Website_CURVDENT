@@ -15,6 +15,8 @@ $route['posting']='admin/AdminController/posting';
 // $route['addPost/(:num)']='admin/AdminController/addPost/$1';
 $route['category']='admin/AdminController/category';
 $route['subscriber']='admin/AdminController/subscriber';
+$route['newsletter']='admin/AdminController/newsletter';
+
 
 //Employee Login and logout api
 $route['employee_login']='api/EmployeeLoginController/login_auth';
