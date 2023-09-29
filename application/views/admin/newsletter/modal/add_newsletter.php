@@ -35,6 +35,7 @@
                         </div> -->
 
                         <div class="form-group row">
+                            <div class="col-sm-2"></div>
                             <div class="col-sm-3 btn btn-info btn-file btn-outline btn-rounded">
                             <i class="fa fa-paperclip"></i> Attachment
                             <input type="file" name="attachment">
