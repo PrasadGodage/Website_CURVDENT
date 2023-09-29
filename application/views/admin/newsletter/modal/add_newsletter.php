@@ -40,7 +40,7 @@
                             <i class="fa fa-paperclip"></i> Attachment
                             <input type="file" name="attachment">
                             </div>
-                            <div class="col-sm-7"><p class="help-block">Max. 32MB</p></div>
+                            <div class="col-sm-7"><p class="help-block text-center text-justify-center">Max. 32MB</p></div>
                         </div>
 
                         <div class="col-md-12 text-center modal-footer text-right">
