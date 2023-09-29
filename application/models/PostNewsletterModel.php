@@ -1,6 +1,6 @@
 <?php
 
-class PostingModel extends CI_Model {
+class PostNewsletterModel extends CI_Model {
 
     public function insert_postingNews($data) {
         
