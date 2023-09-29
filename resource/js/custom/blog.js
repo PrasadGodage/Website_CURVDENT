@@ -1,7 +1,7 @@
 let categoryList = new Map();
 let postList = new Map();
 
-const numberPerPage = 5;
+const numberPerPage = 2;
 const currentPage = 1;
  const listArray = [];
 // console.log("baseUrl"+ebase_url);
