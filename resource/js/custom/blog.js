@@ -268,7 +268,7 @@ function setPostList(postList) {
             `;
         
 
-    $('#data1').html(data1);
+    // $('#data1').html(data1);
     $('#data2').html(data2);
      setPaginator(data1);
 
