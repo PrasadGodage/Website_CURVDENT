@@ -84,7 +84,7 @@
                 <!-- </div> -->
             </div>
           <!-- </ul>  -->
-          <div class="paginator"></div> 
+          <!-- <div class="paginator"></div>  -->
             <!-- Sidebar -->
             <div class="col-md-4 animate-box" data-animate-effect="fadeInUp" id= "data2">
                 <!-- <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
