@@ -11,7 +11,7 @@ $('#addNewsletterForm').on('submit', function (e) {
      
         $.ajax({
 
-            url: ebase_url+'posting_api',
+            url: ebase_url+'postNewsletter_api',
 
             type: 'POST',
 
@@ -72,7 +72,7 @@ $('#addNewsletterBtn').click(function () {
 function getNewsletterList() {
     $.ajax({
 
-        url: ebase_url+'posting_api',
+        url: ebase_url+'postNewsletter_api',
 
         type: 'GET',
 
@@ -124,6 +124,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                
                 </td>
                 
         </tr>`;
@@ -150,7 +151,7 @@ function deleteNewsletterDetails(id) {
     //     if (result.isConfirmed) {
     //         // Send an AJAX request to delete the data
             $.ajax({
-                url: ebase_url + 'posting_api/' + id, // Replace with your actual delete API endpoint
+                url: ebase_url + 'postNewsletter_api/' + id, // Replace with your actual delete API endpoint
                 type: 'DELETE',
                 headers: {
                     "Authorization": etoken

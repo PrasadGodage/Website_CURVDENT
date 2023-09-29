@@ -16,7 +16,7 @@ $('#addNewsletterForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: ebase_url+'posting_api',
+            url: ebase_url+'postNewsletter_api',
 
             type: 'POST',
 
@@ -67,7 +67,7 @@ $('#addNewsletterForm').on('submit', function (e) {
 function getNewsletterList() {
     $.ajax({
 
-        url: ebase_url+'posting_api',
+        url: ebase_url+'postNewsletter_api',
 
         type: 'GET',
 
