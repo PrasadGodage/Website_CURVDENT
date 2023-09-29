@@ -25,6 +25,15 @@
                             </div>
                         </div>
     
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" id="label-file"><span class="text-danger">*</span> Attached File: </label>
+                           <label class="col-sm-3 col-form-label h6 b-groove" for="file"><span class="text-danger"></span> Choose File... </label>    
+                            <div class="col-sm-7">
+                                <!-- <input name="photo" type="file" id="photo"> -->
+                                <input type="file" class="form-control" name="file" style="display: none;" id="file" accept="file/*"  onchange="loadFile(event, 'otherdpre')" />
+                            </div>
+                        </div>
+
                         <div class="col-md-12 text-center modal-footer text-right">
                             <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddNewsletterPage">Cancel</button>
                             <button type="submit" id="callNewsletterAjax" class="btn btn-primary btn-outline"><i
