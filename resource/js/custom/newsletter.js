@@ -11,7 +11,7 @@ $('#addNewsletterForm').on('submit', function (e) {
      
         $.ajax({
 
-            url: ebase_url+'posting_api',
+            url: ebase_url+'postNewsletter_api',
 
             type: 'POST',
 
@@ -72,7 +72,7 @@ $('#addNewsletterBtn').click(function () {
 function getNewsletterList() {
     $.ajax({
 
-        url: ebase_url+'posting_api',
+        url: ebase_url+'postNewsletter_api',
 
         type: 'GET',
 
@@ -91,7 +91,7 @@ function getNewsletterList() {
 
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        postList.set(response.data[i].id, response.data[i]);
+                        newsletterList.set(response.data[i].id, response.data[i]);
                     }
                     
                 }
@@ -124,6 +124,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                
                 </td>
                 
         </tr>`;
@@ -150,7 +151,7 @@ function deleteNewsletterDetails(id) {
     //     if (result.isConfirmed) {
     //         // Send an AJAX request to delete the data
             $.ajax({
-                url: ebase_url + 'posting_api/' + id, // Replace with your actual delete API endpoint
+                url: ebase_url + 'postNewsletter_api/' + id, // Replace with your actual delete API endpoint
                 type: 'DELETE',
                 headers: {
                     "Authorization": etoken
@@ -227,7 +228,10 @@ function updateNewsletterDetails(id) {
     $('#title').val('');
     $('#content').val(''); 
     $('#date').val('');
-   
+    $('#otherdpre').attr('src','');
+    
+    // Reset the image preview
+    $('#otherdpre').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
     
     // // Reset the image preview
     // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
@@ -239,7 +243,7 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     $('#date').val(newsletter.date);
-    // (newsletter.photo != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.photo) : '';
+    (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');

@@ -34,12 +34,15 @@
                             </div>
                         </div> -->
 
-                        <div class="form-group">
-                            <div class="btn btn-info btn-file btn-outline btn-rounded">
-                            <i class="fa fa-paperclip"></i> Attachment
-                            <input type="file" name="attachment">
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
-                            <p class="help-block">Max. 32MB</p>
+                            <div class="btn btn-info btn-file btn-outline btn-rounded">
+                                <i class="fa fa-paperclip"></i> Attachment
+                                <input type="file" name="attachment" id="PDF">
+                            </div>
+                            <div class=""><p class="help-block mt-3 ml-2"><span>Max. 32MB</span></p></div>
                         </div>
 
                         <div class="col-md-12 text-center modal-footer text-right">
