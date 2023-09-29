@@ -84,7 +84,7 @@
                 <!-- </div> -->
                
             </div>
-            <div class="paginator"></div> 
+           
           <!-- </ul>  -->
          
             <!-- Sidebar -->
@@ -168,6 +168,7 @@
                     </div>
                 </div> -->
             </div>
+            <div class="paginator"></div> 
         </div>
     </div>
 </section>
