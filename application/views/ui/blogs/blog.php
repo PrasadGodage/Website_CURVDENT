@@ -45,7 +45,7 @@
         <div class="row">
             <!-- Content -->
           <!-- <ul class="content list-group">   -->
-            <div class="col-md-8 animate-box" data-animate-effect="fadeInUp" id="data1">
+            <div class="col-md-8 animate-box  content list-group" data-animate-effect="fadeInUp" id="data1">
                 <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
                 <div class="row"> -->
                     <!-- <div class="col-md-5 p-4">
@@ -82,9 +82,10 @@
                         </div>
                     </div> -->
                 <!-- </div> -->
+                <div class="paginator"></div> 
             </div>
           <!-- </ul>  -->
-          <!-- <div class="paginator"></div>  -->
+         
             <!-- Sidebar -->
             <div class="col-md-4 animate-box" data-animate-effect="fadeInUp" id= "data2">
                 <!-- <div class="main_title2"><h6 style=" font-weight:bold;">Most Popular News</h6></div>
