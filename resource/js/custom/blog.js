@@ -3,7 +3,7 @@ let postList = new Map();
 
 const numberPerPage = 2;
 const currentPage = 1;
- const listArray = [];
+const listArray = [];
 // console.log("baseUrl"+ebase_url);
 
 
@@ -32,6 +32,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
+                setPaginator(postList);
                 // setPostList1(postList);
                 // console.log(postList);
             }
@@ -270,7 +271,7 @@ function setPostList(postList) {
 
     // $('#data1').html(data1);
     $('#data2').html(data2);
-     setPaginator(data1);
+    // setPaginator(data1);
 
 }
 
@@ -359,22 +360,87 @@ $(function () {
   }); // End of use strict
 
 
- //Paginator script
-
-
-function setPaginator(data){
+ 
+//Paginator script
+function setPaginator(postList){
    //Get total number of pages
+   var data1 = '';
+  data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+    
+    
+   for (let k of postList.keys()) {
+       let post = postList.get(k);
 
-for (let i=0; i<40; i++) {
+       data1 += '<div class="row">';
+       
+       // Check if post.photo is not empty or falsy
+       if (post.photo) {
+           data1 += `
+               <div class="col-md-5 p-4 betty-about-img">
+                   <div class="item">
+                       <div class="position-re o-hidden img">
+                           <a href="#" onclick="postDetails(${post.id})">
+                           <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; filter: none;">
+                           </a>
+                       </div>
+                   </div>
+               </div>
+           `;
+       } else {
+           // If post.photo is empty, provide a default image
+           data1 += `
+               <div class="col-md-5 p-4 betty-about-img">
+                   <div class="item">
+                       <div class="position-re o-hidden img">
+                           <a href="#" onclick="postDetails(${post.id})">
+                               <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                           </a>
+                       </div>                    
+                   </div>
+               </div>
+           `;
+       }
    
-}
-var a = data;
-listArray.push(a)
+       data1 += `
+           <div class="col-md-7 p-4">
+               <div class="item">
+                   <div class="media-body">
+                       <div class="row">
+                           <div class="col-sm-4">
+                           </div>
+                           <div class="col-sm-4">
+                           </div>
+                           <div class="col-sm-4">
+                               <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
+                           </div>
+                           <div class="col-md-12">
+                               <h5>${post.title}</h5>
+                           </div>    
+                           <div class="col-md-12 content">
+                               <p>${post.content}</p>
+                           </div>
+                           <div class="col-sm-4">
+                           <a href="#" onclick="postDetails(${post.id})">
+                               <button type="button" class="btn btn-warning" style="margin-top : 10px;">Read More</button></a>
+                           </div>
+                       </div> 
+                   </div>
+               </div>
+               
+           </div>
+       </div>`;
+        
+       listArray.push(data); 
+          
+   }
+
+
 console.log(listArray)
 
 // State
 // Number of products
 const numberOfItems = listArray.length
+console.log(numberOfItems);
 
 // Number of pages
 numberOfPages = Math.ceil(numberOfItems/numberPerPage)
@@ -389,15 +455,11 @@ buildPage(1)
     });
 
 }
-
-
-
 function accomodatePage(clickedPage) {
     if (clickedPage <= 1) { return clickedPage + 1}
     if (clickedPage >= numberOfPages) { return clickedPage -1}
     return clickedPage
 }
-
 function buildPagination(clickedPage) {
     $('.paginator').empty()
     const currPageNum = accomodatePage(clickedPage)
@@ -411,7 +473,6 @@ function buildPagination(clickedPage) {
         }
     }
 }
-
 function buildPage(currPage) {
     const trimStart = (currPage-1)*numberPerPage
     const trimEnd = trimStart + numberPerPage
@@ -420,7 +481,6 @@ function buildPage(currPage) {
     $('.contentTest').empty().append(listArray.slice(trimStart, trimEnd))
     // $('.grid-uniform').empty().append(listArray.slice(trimStart, trimEnd));
 }
-
 $(document).ready(function(){
-    alert("in page");
+    // alert("in page");
 }); //End Paginator script
