@@ -36,7 +36,7 @@
 
                         <div class="form-group row">
                             <div class="col-sm-2">
-                            <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Attached File </label>
+                            <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
                             <div class="btn btn-info btn-file btn-outline btn-rounded">
                             <i class="fa fa-paperclip"></i> Attachment
