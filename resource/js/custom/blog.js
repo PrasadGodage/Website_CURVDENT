@@ -1,5 +1,9 @@
 let categoryList = new Map();
 let postList = new Map();
+
+const numberPerPage = 5
+const currentPage = 1
+ const listArray = []
 // console.log("baseUrl"+ebase_url);
 
 
@@ -356,9 +360,6 @@ $(function () {
 
  //Paginator script
 
-const numberPerPage = 5
-const currentPage = 1
- const listArray = []
 
 function setPaginator(data){
    //Get total number of pages
