@@ -12,26 +12,34 @@
                     <input type="hidden" name="id" id="id">
 
                         <div class="form-group row">
-                            <label for="title" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Article Title</label>
+                            <label for="title" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Subject</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="title" name="title" autocomplete="off">
                             </div>
                         </div> 
 
                         <div class="form-group row">
-                            <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Content</label>
+                            <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Message </label>
                             <div class="col-sm-10">
                                 <textarea name="content" id="content" cols="30" rows="4" class="form-control"></textarea>
                             </div>
                         </div>
     
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label class="col-sm-2 col-form-label" id="label-file"><span class="text-danger">*</span> Attached File: </label>
                            <label class="col-sm-3 col-form-label h6 b-groove" for="file"><span class="text-danger"></span> Choose File... </label>    
                             <div class="col-sm-7">
-                                <!-- <input name="photo" type="file" id="photo"> -->
+                                
                                 <input type="file" class="form-control" name="file" style="display: none;" id="file" accept="file/*"  onchange="loadFile(event, 'otherdpre')" />
                             </div>
+                        </div> -->
+
+                        <div class="form-group">
+                            <div class="btn btn-info btn-file btn-outline btn-rounded">
+                            <i class="fa fa-paperclip"></i> Attachment
+                            <input type="file" name="attachment">
+                            </div>
+                            <p class="help-block">Max. 32MB</p>
                         </div>
 
                         <div class="col-md-12 text-center modal-footer text-right">
