@@ -368,10 +368,9 @@ function setPaginator(postList){
    var count = 0;
    for (let k of postList.keys()) {
        let post = postList.get(k);
-        if(count == 0) {
+      
        data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
-        }
-        count++;
+       
        data1 += '<div class="row">';
        
        // Check if post.photo is not empty or falsy
