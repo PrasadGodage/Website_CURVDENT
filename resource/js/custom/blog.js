@@ -366,9 +366,10 @@ function setPaginator(data){
    //Get total number of pages
 
 for (let i=0; i<40; i++) {
-    var a = data;
-    listArray.push(a)
+   
 }
+var a = data;
+listArray.push(a)
 console.log(listArray)
 
 // State
