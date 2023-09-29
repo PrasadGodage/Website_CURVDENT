@@ -1,9 +1,9 @@
 let categoryList = new Map();
 let postList = new Map();
 
-const numberPerPage = 5
-const currentPage = 1
- const listArray = []
+const numberPerPage = 5;
+const currentPage = 1;
+ const listArray = [];
 // console.log("baseUrl"+ebase_url);
 
 
@@ -123,7 +123,7 @@ function setPostList(postList) {
         
            
     }
-     setPaginator(data1)
+   
         data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         let firstKey = null;
 
@@ -270,6 +270,7 @@ function setPostList(postList) {
 
     $('#data1').html(data1);
     $('#data2').html(data2);
+     setPaginator(data1);
 
 }
 
@@ -415,10 +416,10 @@ function buildPage(currPage) {
     const trimEnd = trimStart + numberPerPage
     console.log(trimStart, trimEnd)
     console.log(listArray.slice(trimStart, trimEnd))
-    $('.content').empty().append(listArray.slice(trimStart, trimEnd))
+    $('.contentTest').empty().append(listArray.slice(trimStart, trimEnd))
     // $('.grid-uniform').empty().append(listArray.slice(trimStart, trimEnd));
 }
 
 $(document).ready(function(){
-    
+    alert("in page");
 }); //End Paginator script
