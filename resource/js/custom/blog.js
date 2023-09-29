@@ -1,7 +1,7 @@
 let categoryList = new Map();
 let postList = new Map();
 
-const numberPerPage = 2;
+const numberPerPage = 5;
 const currentPage = 1;
 const listArray = [];
 // console.log("baseUrl"+ebase_url);
@@ -57,7 +57,7 @@ function setPostList(postList) {
     var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
     
     // Add the title section outside the loop
-    data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+  
     
     
     for (let k of postList.keys()) {
@@ -365,10 +365,13 @@ $(function () {
 function setPaginator(postList){
    //Get total number of pages
    var data1 = '';
-   $('.contentTest').append('<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>');
+   var count = 0;
    for (let k of postList.keys()) {
        let post = postList.get(k);
-
+        if(count == 0) {
+       data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+        }
+        count++;
        data1 += '<div class="row">';
        
        // Check if post.photo is not empty or falsy
