@@ -71,15 +71,7 @@ class PostingModel extends CI_Model {
           }
     }
 
-//     public function find_categoryid($categoryId) {
-//         $data = $query = $this->db->get_where('posting', array('id_category' => $categoryId))->row_array();
-//         if (!empty($data)) {
-//             return FALSE;
-//         } else {
-//         return TRUE;
-            
-//         }
-//   }
+
 
     
 }
