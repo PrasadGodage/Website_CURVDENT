@@ -365,8 +365,7 @@ $(function () {
 function setPaginator(postList){
    //Get total number of pages
    var data1 = '';
-    
-    
+   $('.contentTest').append('<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>');
    for (let k of postList.keys()) {
        let post = postList.get(k);
 
@@ -432,7 +431,8 @@ function setPaginator(postList){
        listArray.push(data1); 
        data1 = '';
    }
-
+   
+  
 
 console.log(listArray)
 
