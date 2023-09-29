@@ -365,11 +365,14 @@ $(function () {
 function setPaginator(postList){
    //Get total number of pages
    var data1 = '';
-   var count = 0;
+   var count = 1;
    for (let k of postList.keys()) {
        let post = postList.get(k);
-        if(count == 0 || count==5) {
+        if(count ==1) {
        data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+        }
+        if(count/numberPerPage==0){
+            data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';  
         }
         count++;
        data1 += '<div class="row">';
