@@ -228,7 +228,10 @@ function updateNewsletterDetails(id) {
     $('#title').val('');
     $('#content').val(''); 
     $('#date').val('');
-   
+    $('#otherdpre').attr('src','');
+    
+    // Reset the image preview
+    $('#otherdpre').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
     
     // // Reset the image preview
     // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
@@ -240,7 +243,7 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     $('#date').val(newsletter.date);
-    // (newsletter.photo != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.photo) : '';
+    (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
