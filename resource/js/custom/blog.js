@@ -355,10 +355,14 @@ $(function () {
 
 
  //Paginator script
- var numberOfPages = 0;
+
+const numberPerPage = 5
+const currentPage = 1
+ const listArray = []
+
 function setPaginator(data){
    //Get total number of pages
-const listArray = []
+
 for (let i=0; i<40; i++) {
     var a = data;
     listArray.push(a)
@@ -368,8 +372,6 @@ console.log(listArray)
 // State
 // Number of products
 const numberOfItems = listArray.length
-const numberPerPage = 5
-const currentPage = 1
 
 // Number of pages
 numberOfPages = Math.ceil(numberOfItems/numberPerPage)
