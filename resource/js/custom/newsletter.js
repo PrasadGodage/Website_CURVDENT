@@ -62,8 +62,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    // $('#otherdpre').attr('src','');
-    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    $('#otherdpre').attr('src','');
+    $('#otherdpre').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
 
 });
 
@@ -124,7 +124,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                
+                <a href="#" onclick="sendNewsletterDetails(${newsletter.id})"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
                 </td>
                 
         </tr>`;
