@@ -24,73 +24,7 @@
                                 <textarea name="content" id="content" cols="30" rows="4" class="form-control"></textarea>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col">
-                                <label for="featured" class="col-form-label">Featured</label>
-                                <select class="form-control" id="featured" name="featured">
-                                    <option value="N">No</option>
-                                    <option value="Y">Yes</option> 
-                                </select>
-                                <!-- <small class="form-text text-danger">Recommended Image: 1920 x 1080.</small> -->
-                            </div>
-
-                            <div class="col">
-                                <label for="choice" class="col-form-label">Editor's Choice</label>
-                                <select class="form-control" id="choice" name="choice">
-                                    <option value="N">No</option>
-                                    <option value="Y">Yes</option> 
-                                </select>
-                            </div>
-
-                            <div class="col">
-                                <label for="thread" class="col-form-label">Popular News</label>
-                                <select class="form-control" id="thread" name="thread">
-                                    <option value="N">No</option>
-                                    <option value="Y">Yes</option> 
-                                </select>
-                            </div>
-                            
-                            <!-- <div class="col">
-                                <label for="category" class="col-form-label"><span class="text-danger">*</span> Category</label>
-                                <select type="text" class="form-control" placeholder="Select Category" id="id_category" name="id_category"></select>
-                            </div> -->
-                            
-                            <div class="col">
-                                <label for="is_active" class="col-form-label">Active</label>
-                                <select class="form-control" id="is_active" name="is_active">
-                                    <option value="Y">Yes</option> 
-                                    <option value="N">No</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- <div class="col-md-3">
-                            <div class="form-group text-center">
-                                <label class="col-sm-2 col-form-label">Photo</label> -->
-                                <!-- <div class="col-sm-10"> -->
-                                   
-                                <!-- </div> -->
-                            <!-- </div> --> 
-
-
-                        <div class="form-group row" id="photo_preview">
-                            <label class="col-sm-2 col-form-label">Photo</label>
-                            <div class="col-sm-10">
-                                <img src="<?php echo base_url('resource/images/avatar-custom.png'); ?>" alt="" id="otherdpre"  width="100px" height="100px"/>
-                                <!-- <p><label for="profile_image" style="cursor: pointer;" class="h6"><u>Upload...</u></label></p>
-                                <input type="file" class="form-control" name="profile_image" style="display: none;" id="profile_image" accept="image/*"  onchange="loadFile(event, 'otherdpre')" /> -->
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" id="label-photo"><span class="text-danger">*</span> Upload Photo </label>
-                           <label class="col-sm-3 col-form-label h6 b-groove" for="photo"><span class="text-danger"></span> Choose Photo... </label>    
-                            <div class="col-sm-7">
-                                <!-- <input name="photo" type="file" id="photo"> -->
-                                <input type="file" class="form-control" name="photo" style="display: none;" id="photo" accept="image/*"  onchange="loadFile(event, 'otherdpre')" />
-                            </div>
-                        </div>
+    
                         <div class="col-md-12 text-center modal-footer text-right">
                             <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddNewsletterPage">Cancel</button>
                             <button type="submit" id="callNewsletterAjax" class="btn btn-primary btn-outline"><i

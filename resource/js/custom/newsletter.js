@@ -62,8 +62,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    $('#otherdpre').attr('src','');
-    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    // $('#otherdpre').attr('src','');
+    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
 
 });
 
@@ -121,11 +121,6 @@ function setNewsletterList(list) {
         <tr>
                 <td>` + index + `</td>
                 <td>` + newsletter.title + `</td>
-                <td>` + newsletter.featured + `</td>
-                <td>` + newsletter.choice + `</td>
-                <td>` + newsletter.thread + `</td>
-                
-                <td>` + newsletter.is_active + `</td>
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
@@ -230,17 +225,12 @@ function updateNewsletterDetails(id) {
     // Clear all fields
     $('#id').val('');
     $('#title').val('');
-    $('#content').val('');
-    $('#featured').val('');
-    $('#choice').val('');
-    $('#thread').val('');
-    $('#id_category').val('');
-    $('#is_active').val('');
+    $('#content').val(''); 
     $('#date').val('');
-    $('#otherdpre').attr('src','');
+   
     
-    // Reset the image preview
-    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    // // Reset the image preview
+    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
     
@@ -248,13 +238,8 @@ function updateNewsletterDetails(id) {
     $('#id').val(newsletter.id);
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
-    $('#featured').val(newsletter.featured).change();
-    $('#choice').val(newsletter.choice).change();
-    $('#thread').val(newsletter.thread).change();
-   
-    $('#is_active').val(newsletter.is_active).change();
     $('#date').val(newsletter.date);
-    (newsletter.photo != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.photo) : '';
+    // (newsletter.photo != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.photo) : '';
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
