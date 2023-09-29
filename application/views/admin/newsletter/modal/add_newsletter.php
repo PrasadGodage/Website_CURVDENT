@@ -38,11 +38,11 @@
                             <div class="col-sm-2">
                             <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Attached File </label>
                             </div>
-                            <div class="col-sm-3 btn btn-info btn-file btn-outline btn-rounded">
+                            <div class="btn btn-info btn-file btn-outline btn-rounded">
                             <i class="fa fa-paperclip"></i> Attachment
                             <input type="file" name="attachment">
                             </div>
-                            <div class="col-sm-1"><p class="help-block"><span>Max. 32MB</span></p></div>
+                            <div class=""><p class="help-block"><span>Max. 32MB</span></p></div>
                         </div>
 
                         <div class="col-md-12 text-center modal-footer text-right">
