@@ -368,7 +368,7 @@ function setPaginator(postList){
    var count = 0;
    for (let k of postList.keys()) {
        let post = postList.get(k);
-        if(numberPerPage == numberPerPage+1) {
+        if(count == 0 || count==5) {
        data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
         }
         count++;
