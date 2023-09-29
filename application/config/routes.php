@@ -52,3 +52,7 @@ $route['blogpage_api/(:num)']='api/PostingUiController/posting/$1';
 //Newsletter Api
 $route['newsletter_api']='api/NewsletterController/newsletter';
 $route['newsletter_api/(:num)']='api/NewsletterController/newsletter/$1';
+
+//postNewsletter Api
+$route['postNewsletter_api']='api/PostNewsletterController/postingNews';
+$route['postNewsletter_api/(:num)']='api/PostNewsletterController/postingNews/$1';
