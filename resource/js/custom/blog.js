@@ -1,5 +1,9 @@
 let categoryList = new Map();
 let postList = new Map();
+
+const numberPerPage = 2;
+const currentPage = 1;
+ const listArray = [];
 // console.log("baseUrl"+ebase_url);
 
 
@@ -117,20 +121,9 @@ function setPostList(postList) {
             </div>
         </div>`;
         
-        
+           
     }
-    //   <div class="col-sm-12 col-md-7">
-    //             <div class="dataTables_paginate paging_simple_numbers" id="example5_paginate"><ul class="pagination">
-    //             <li class="paginate_button page-item previous" id="example5_previous"> <a href="#" aria-controls="example5" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-    //             <li class="paginate_button page-item "><a href="#" aria-controls="example5" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-    //             <li class="paginate_button page-item "><a href="#" aria-controls="example5" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-    //             <li class="paginate_button page-item "><a href="#" aria-controls="example5" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-    //             <li class="paginate_button page-item active"><a href="#" aria-controls="example5" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-    //             <li class="paginate_button page-item "><a href="#" aria-controls="example5" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-    //             <li class="paginate_button page-item "><a href="#" aria-controls="example5" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
-    //             <li class="paginate_button page-item next" id="example5_next"><a href="#" aria-controls="example5" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div>
-                
-
+   
         data2 += '<div class="main_title2"><h6 style="font-weight:bold;">Most Popular News</h6></div>';
         let firstKey = null;
 
@@ -275,9 +268,12 @@ function setPostList(postList) {
             `;
         
 
-    $('#data1').html(data1);
+    // $('#data1').html(data1);
     $('#data2').html(data2);
+     setPaginator(data1);
+
 }
+
 
 
 
@@ -361,3 +357,70 @@ $(function () {
 		});
 	
   }); // End of use strict
+
+
+ //Paginator script
+
+
+function setPaginator(data){
+   //Get total number of pages
+
+for (let i=0; i<40; i++) {
+   
+}
+var a = data;
+listArray.push(a)
+console.log(listArray)
+
+// State
+// Number of products
+const numberOfItems = listArray.length
+
+// Number of pages
+numberOfPages = Math.ceil(numberOfItems/numberPerPage)
+buildPage(1)
+    buildPagination(currentPage)
+
+    $('.paginator').on('click', 'button', function() {
+        var clickedPage = parseInt($(this).val())
+        buildPagination(clickedPage)
+        console.log(`Page clicked on ${clickedPage}`)
+        buildPage(clickedPage)
+    });
+
+}
+
+
+
+function accomodatePage(clickedPage) {
+    if (clickedPage <= 1) { return clickedPage + 1}
+    if (clickedPage >= numberOfPages) { return clickedPage -1}
+    return clickedPage
+}
+
+function buildPagination(clickedPage) {
+    $('.paginator').empty()
+    const currPageNum = accomodatePage(clickedPage)
+    if (numberOfPages >= 3) {
+        for (let i=-1; i<2; i++) {
+            $('.paginator').append(`<button class="btn btn-primary" value="${currPageNum+i}">${currPageNum+i}</button>`)
+        }
+    } else {
+        for (let i=0; i<numberOfPages; i++) {
+            $('.paginator').append(`<button class="btn btn-primary" value="${i+1}">${i+1}</button>`)
+        }
+    }
+}
+
+function buildPage(currPage) {
+    const trimStart = (currPage-1)*numberPerPage
+    const trimEnd = trimStart + numberPerPage
+    console.log(trimStart, trimEnd)
+    console.log(listArray.slice(trimStart, trimEnd))
+    $('.contentTest').empty().append(listArray.slice(trimStart, trimEnd))
+    // $('.grid-uniform').empty().append(listArray.slice(trimStart, trimEnd));
+}
+
+$(document).ready(function(){
+    alert("in page");
+}); //End Paginator script
