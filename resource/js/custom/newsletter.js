@@ -62,8 +62,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    $('#otherdpre').attr('src','');
-    $('#otherdpre').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
+    $('#PDF').attr('src','');
+    $('#PDF').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
 
 });
 
@@ -228,11 +228,7 @@ function updateNewsletterDetails(id) {
     $('#title').val('');
     $('#content').val(''); 
     $('#date').val('');
-    $('#otherdpre').attr('src','');
-    
-    // Reset the image preview
-    $('#otherdpre').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
-    
+
     // // Reset the image preview
     // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
@@ -243,10 +239,12 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     $('#date').val(newsletter.date);
-    (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
+    // (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 }
 
- 
+function sendNewsletterDetails(id) {
+    
+}
