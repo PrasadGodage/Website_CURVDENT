@@ -82,7 +82,7 @@ class PostNewsletterController extends REST_Controller {
                         $insert_id = $this->postingNews->save_pdf_path($pdf_path)
 
                         // Handle the error
-                    } 
+                    
                     // if($this->postingNews->find_postingNews($data['title'])){
 
                 //     if (!empty($_FILES['PDF']['name'])) {
@@ -108,6 +108,7 @@ class PostNewsletterController extends REST_Controller {
                 $response['status'] = 400;
                 $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
             } 
+             }
                 // }else{
                 //     $response['msg'] = 'Duplicate Entry!';
                 // $response['status'] = 400;
