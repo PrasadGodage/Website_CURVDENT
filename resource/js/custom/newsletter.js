@@ -157,7 +157,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendEmail(${newsletter.id})">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="sendEmailDetails(${newsletter.id})">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
                 </td>
                 
         </tr>`;
@@ -245,9 +245,12 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
 
-function sendEmail(id){
-    
+function sendEmailDetails(id){
     let subscriber = subscriberList.get(id.toString());
+    let newsletter = newsletterList.get(id.toString());
+
+    var subscriberDetailsList = purchase.subscriberDetail;
+    var newsletterDetailList = purchase.newsletterDetail;
 
     // var productData = inventoryList.get(this.value);
     // let purchase = purchaseList.get(id.toString());
@@ -263,9 +266,21 @@ function sendEmail(id){
     // setPurchaseDetailList(purchaseDetailList);
     // setItemDetailList(itemDetailList);
 
-    setPurchaseDetailList(purchaseDetailList);
+    setSubscriberDetailsList(subscriberDetailsList);
+    setNewsletterDetailList(newsletterDetailList);
     
     $('#addSendEmailModal').modal('toggle');
+}
+
+function sendEmailDetails(newsletterId) {
+    // Use the newsletterId to get the relevant newsletter data
+    let newsletter = newsletterList.get(newsletterId.toString());
+    
+    // Optionally, you can pass the newsletter data to the modal for further processing
+    $('#yourModalId').data('newsletter-data', newsletter);
+
+    // Open your modal here (assuming you have a modal with ID "yourModalId")
+    $('#yourModalId').modal('toggle');
 }
 
 function setSubscriberList(list) {
