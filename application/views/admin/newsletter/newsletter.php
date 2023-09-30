@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <!--<li class="breadcrumb-item"><a href="#">Master</a></li>-->
-            <li class="breadcrumb-item active">Add Newsletter</li>
+            <li class="breadcrumb-item active">Newsletter</li>
         </ol>
     </section>
 
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Add Newsletter</h3>
+                <h3 class="box-title">Newsletter List</h3>
 
                 <ul class="box-controls pull-right">
                     <li><a class="box-btn-close" href="#"></a></li>

@@ -156,7 +156,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendNewsletterDetails(${newsletter.id})"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
+                <a href="#" onclick="sendEmail(${newsletter.id})"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
                 </td>
                 
         </tr>`;
@@ -217,39 +217,6 @@ function deleteNewsletterDetails(id) {
 //     });
 // }
 
-           
-// function refreshTable() {
-//     $('#postTable').dataTable().fnDestroy();
-//     $('#postList').empty();
-//     var tblData = '';
-//     var index=1;
-    
-//     for (let k of postList.keys()) {
-        
-//         let post = postList.get(k);
-    
-//         tblData += `
-//         <tr>
-//                 <td>` + index + `</td>
-//                 <td>` + post.title + `</td>
-//                 <td>` + post.featured + `</td>
-//                 <td>` + post.choice + `</td>
-//                 <td>` + post.thread + `</td>
-//                 <td>` + post.category_name + `</td>
-//                 <td>` + post.is_active + `</td>
-//                 <td>` + post.date + `</td>
-//                 <td> <a href="#" onclick="updatePostDetails(${post.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                 <a href="#" onclick="deletePostDetails(${post.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-//                 </td>
-                
-//         </tr>`;
-//         index++;
-//     }
-    
-//     $('#postList').html(tblData);
-//     $('#postTable').DataTable();
-// }
-
 
 
 function updateNewsletterDetails(id) {
@@ -277,8 +244,25 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
 
-function sendNewsletterDetails(id) {
+function sendEmail(id){
+    
+    // var productData = inventoryList.get(this.value);
+    // let purchase = purchaseList.get(id.toString());
+    // var purchaseDetailList = purchase.purchaseDetail;
+    // var itemDetailList = purchase.itemDetail;
+    // $('#purchaseOrdIdView').text(purchase.purchaseOrderNo);
+    // $('#purchaseDateView').text(purchase.purchaseDate);
+    // $('#vendorNameView').text(purchase.vendorName);
+    // $('#gstinView').text(purchase.gstin);
+    // $('#contactFirmView').text(purchase.contactFirm);
+    // $('#createdByView').text(purchase.name);
+    
+    // setPurchaseDetailList(purchaseDetailList);
+    // setItemDetailList(itemDetailList);
 
+
+    
+    $('#addSendEmailModal').modal('toggle');
 }
 
 
