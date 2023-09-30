@@ -278,13 +278,36 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
 
-$('#newsletterTable').on('click', '.send-button', function (e) {
-  
-        $('#addSendEmailModal').modal('toggle');
-        $("#addSendEmailForm").trigger("reset");
-        $('#id').val('');
-        $('.error').text('');
+$(document).ready(function () {
+    // Attach a click event handler to the "Send" button
+    $('#newsletterTable').on('click', '.send-button', function (e) {
+        e.preventDefault();
+        
+        // Get the newsletter ID from the data attribute
+        var newsletterId = $(this).data('newsletter-id');
+        
+        // Open your modal form here
+        // Example (assuming you're using Bootstrap Modal):
+        $('#addSendEmailModal').modal('show');
+        
+        // Optionally, you can pass the newsletter ID to the modal for further processing
+        $('#addSendEmailModal').data('newsletter-id', newsletterId);
     });
+
+    // Handle the form submission within your modal if needed
+    $('#addSendEmailModal').on('submit', 'addSendEmailForm', function (e) {
+        e.preventDefault();
+        
+        // Get the newsletter ID from the modal's data attribute
+        var newsletterId = $('#addSendEmailModal').data('newsletter-id');
+        
+        // Perform your send email action here using the newsletterId
+        
+        // Close the modal if the action is complete
+        $('#addSendEmailModal').modal('hide');
+    });
+});
+
 
 // function updatePurchaseDetails(id){
 
