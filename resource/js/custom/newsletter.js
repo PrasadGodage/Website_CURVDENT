@@ -1,4 +1,5 @@
 let newsletterList = new Map();
+let subscriberList = new Map();
 
 //Submit Category Btn script
 
@@ -156,7 +157,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendEmail(${newsletter.id})"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
+                <a href="#" onclick="sendEmail(${newsletter.id})">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
                 </td>
                 
         </tr>`;
@@ -246,6 +247,8 @@ function updateNewsletterDetails(id) {
 
 function sendEmail(id){
     
+    let subscriber = subscriberList.get(id.toString());
+
     // var productData = inventoryList.get(this.value);
     // let purchase = purchaseList.get(id.toString());
     // var purchaseDetailList = purchase.purchaseDetail;
@@ -260,38 +263,64 @@ function sendEmail(id){
     // setPurchaseDetailList(purchaseDetailList);
     // setItemDetailList(itemDetailList);
 
-
+    setPurchaseDetailList(purchaseDetailList);
     
     $('#addSendEmailModal').modal('toggle');
 }
 
+function setSubscriberList(list) {
+
+    $('#subscriberTable').dataTable().fnDestroy();
+    $('#subscriberList').empty();
+    var tblData = '';
+    var index=1;
+    
+    for (let k of list.keys()) {
+        
+        let subscriber = list.get(k);
+    
+        tblData += `
+        <tr>
+                <td>` + index + `</td>
+                <td>` + subscriber.email + `</td>
+                <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                </td>
+                
+        </tr>`;
+        index++;
+    }
+    
+    $('#subscriberList').html(tblData);
+    $('#subscriberTable').DataTable();
+    }
 
 // post pdf file ----------------------------------------
-function displayPDF(pdfData) {
-    var pdfObject = document.getElementById('pdfPreview');
-    pdfObject.data = pdfData;
-}
+// function displayPDF(pdfData) {
+//     var pdfObject = document.getElementById('pdfPreview');
+//     pdfObject.data = pdfData;
+// }
 
-// Function to handle file upload
-$('#uploadButton').click(function () {
-    var formData = new FormData($('#pdfForm')[0]);
-    $.ajax({
-        url: 'upload.php', // Replace with your server-side script for handling file uploads
-        type: 'POST',
-        data: formData,
-        dataType: 'json',
-        contentType: false,
-        processData: false,
-        success: function (response) {
-            if (response.status === 'success') {
-                // Display the uploaded PDF
-                displayPDF(response.pdfUrl);
-            } else {
-                alert('Failed to upload PDF. Error: ' + response.message);
-            }
-        },
-        error: function () {
-            alert('An error occurred during PDF upload.');
-        }
-    });
-});
+// // Function to handle file upload
+// $('#uploadButton').click(function () {
+//     var formData = new FormData($('#pdfForm')[0]);
+//     $.ajax({
+//         url: 'upload.php', // Replace with your server-side script for handling file uploads
+//         type: 'POST',
+//         data: formData,
+//         dataType: 'json',
+//         contentType: false,
+//         processData: false,
+//         success: function (response) {
+//             if (response.status === 'success') {
+//                 // Display the uploaded PDF
+//                 displayPDF(response.pdfUrl);
+//             } else {
+//                 alert('Failed to upload PDF. Error: ' + response.message);
+//             }
+//         },
+//         error: function () {
+//             alert('An error occurred during PDF upload.');
+//         }
+//     });
+// });
