@@ -175,6 +175,14 @@ class PostNewsletterController extends REST_Controller {
     //         return $filename;
     //     }
     // }
+    public function upload_docs($file) {
+        if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg") || ($file['file_type'] == "application/pdf")) {
+            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+            $time = date('Y_m_d_hisu');
+            $filename = $this->compress_image($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
+            return $filename;
+        }
+    }
 
     // function compress_image($source_url, $destination_url, $quality) {
     //     $info = getimagesize($source_url);
@@ -188,24 +196,24 @@ class PostNewsletterController extends REST_Controller {
     //     return $destination_url;
     // }
 
-    public function upload_docs($file) {
-        $allowed_image_types = ["image/gif", "image/jpeg", "image/png", "image/pjpeg"];
-        $allowed_pdf_types = ["application/pdf"];
+    // public function upload_docs($file) {
+    //     $allowed_image_types = ["image/gif", "image/jpeg", "image/png", "image/pjpeg"];
+    //     $allowed_pdf_types = ["application/pdf"];
     
-        if (in_array($file['file_type'], $allowed_image_types)) {
-            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-            $time = date('Y_m_d_hisu');
-            $filename = $this->compress_image($file['temp_name'], "resource/img/blog/photo{$time}.{$ext}", 50);
-            return $filename;
-        } elseif (in_array($file['file_type'], $allowed_pdf_types)) {
-            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-            $time = date('Y_m_d_hisu');
-            $filename = $this->move_pdf($file['temp_name'], "resource/pdf/pdf{$time}.{$ext}");
-            return $filename;
-        }
-          else
-        return false; // Unsupported file type
-    }
+    //     if (in_array($file['file_type'], $allowed_image_types)) {
+    //         $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+    //         $time = date('Y_m_d_hisu');
+    //         $filename = $this->compress_image($file['temp_name'], "resource/img/blog/photo{$time}.{$ext}", 50);
+    //         return $filename;
+    //     } elseif (in_array($file['file_type'], $allowed_pdf_types)) {
+    //         $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+    //         $time = date('Y_m_d_hisu');
+    //         $filename = $this->move_pdf($file['temp_name'], "resource/pdf/pdf{$time}.{$ext}");
+    //         return $filename;
+    //     }
+    //       else
+    //         return false; // Unsupported file type
+    // }
     
     function compress_image($source_url, $destination_url, $quality) {
         // Your image compression logic remains the same
@@ -217,17 +225,32 @@ class PostNewsletterController extends REST_Controller {
             $image = imagecreatefromgif($source_url);
         elseif ($info['mime'] == 'image/png')
             $image = imagecreatefrompng($source_url);
+        elseif ($info['mime'] == 'application/pdf')
+            $image = imagecreatefrompng($source_url);
         imagejpeg($image, $destination_url, $quality);
         return $destination_url;
     }
+    // function compress_image($source_url, $destination_url, $quality) {
+    //     // Your image compression logic remains the same
+    //     // ...
+    //     $info = getimagesize($source_url);
+    //     if ($info['mime'] == 'image/jpeg')
+    //         $image = imagecreatefromjpeg($source_url);
+    //     elseif ($info['mime'] == 'image/gif')
+    //         $image = imagecreatefromgif($source_url);
+    //     elseif ($info['mime'] == 'image/png')
+    //         $image = imagecreatefrompng($source_url);
+    //     imagejpeg($image, $destination_url, $quality);
+    //     return $destination_url;
+    // }
     
-    function move_pdf($source_url, $destination_url) {
-        if (move_uploaded_file($source_url, $destination_url)) {
-            return $destination_url;
-        } else {
-            return false; // Failed to move PDF
-        }
-    }
+    // function move_pdf($source_url, $destination_url) {
+    //     if (move_uploaded_file($source_url, $destination_url)) {
+    //         return $destination_url;
+    //     } else {
+    //         return false; // Failed to move PDF
+    //     }
+    // }
     
 
     public function postingNews_delete($id = 0) {
