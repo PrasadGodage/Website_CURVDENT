@@ -156,7 +156,8 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendNewsletterDetails(${newsletter.id})"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
+                
+                <a href="#" class="send-button" data-newsletter-id="1"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;">Send</i></a>
                 </td>
                 
         </tr>`;
@@ -277,9 +278,17 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
 
-function sendNewsletterDetails(id) {
+function sendEmail(id) {
 
+    // $(location).attr('href',ebase_url+'sendEmail/'+id);
+    
 }
+
+// function updatePurchaseDetails(id){
+
+//     $(location).attr('href',ebase_url+'updatePurchase/'+id);
+    
+// }
 
 
 // post pdf file ----------------------------------------
