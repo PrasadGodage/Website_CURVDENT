@@ -177,7 +177,7 @@ class PostNewsletterController extends REST_Controller {
     // }
     public function upload_docs($file) {
         if (($file['file_type'] == "application/pdf")) {
-         console.log(2);
+           echo "hello";
             $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
             $time = date('Y_m_d_hisu');
             $filename = $this->compress_pdf($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
