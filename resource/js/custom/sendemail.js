@@ -1,13 +1,12 @@
 let subscriberList = new Map();
 
 //Add modal send Btn script -----------------------------------------------------------------
-$('#newsletterTable').on('click', '.send-button', function (e) {
-    e.preventDefault();
-    $('#addSendEmailModal').modal('toggle');
-    $("#addSendEmailForm").trigger("reset");
-    $('#id').val('');
-    $('.error').text('');
-});
+// $('#newsletterTable').on('click', '.send-button', function (e) {
+//     $('#addSendEmailModal').modal('toggle');
+//     $("#addSendEmailForm").trigger("reset");
+//     $('#id').val('');
+//     $('.error').text('');
+// });
 
 
 // //Add Subscriber Btn script -----------------------------------------------------------------
