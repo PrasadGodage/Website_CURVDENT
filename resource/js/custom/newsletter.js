@@ -2,57 +2,89 @@ let newsletterList = new Map();
 
 //Submit Category Btn script
 
-$('#addNewsletterForm').on('submit', function (e) {
-    e.preventDefault();
+// $('#addNewsletterForm').on('submit', function (e) {
+//     e.preventDefault();
 
-    var returnVal = $("#addNewsletterForm").valid();
-    var formdata = new FormData(this);
-    if (returnVal) {
+//     var returnVal = $("#addNewsletterForm").valid();
+//     var formdata = new FormData(this);
+//     if (returnVal) {
      
-        $.ajax({
+//         $.ajax({
 
-            url: ebase_url+'postNewsletter_api',
+//             url: ebase_url+'postNewsletter_api',
 
-            type: 'POST',
+//             type: 'POST',
 
-            headers: {
-                "Authorization": etoken
-            },
+//             headers: {
+//                 "Authorization": etoken
+//             },
 
-            data: formdata,
+//             data: formdata,
           
-            cache: false,
+//             cache: false,
 
-            contentType: false,
+//             contentType: false,
 
-            processData: false,
+//             processData: false,
 
-            dataType: 'json',
+//             dataType: 'json',
 
-            success: function (response) {
-                if (response.status == 200) {
-                    $('#addNewsletterModal').modal('toggle');
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     $('#addNewsletterModal').modal('toggle');
 
-                    let id=response.data.id;
+//                     let id=response.data.id;
                   
-                 if(newsletterList.has(id)){
-                    newsletterList.delete(id);   
-                 }
-                 newsletterList.set(id, response.data);
-                 setNewsletterList(newsletterList);
+//                  if(newsletterList.has(id)){
+//                     newsletterList.delete(id);   
+//                  }
+//                  newsletterList.set(id, response.data);
+//                  setNewsletterList(newsletterList);
 
-                    swal("Good job!", response.msg, "success");
-                    $(location).attr('href',ebase_url+'newsletter');
-                } else {
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href',ebase_url+'newsletter');
+//                 } else {
 
-                    swal("Good job!", response.msg, "error");
+//                     swal("Good job!", response.msg, "error");
 
+//                 }
+
+//             }
+
+//         });
+//     }
+// });
+
+
+$(document).ready(function() {
+    $('#addNewsletterForm').submit(function(e) {
+        e.preventDefault();
+
+        var formData = new FormData($(this)[0]);
+
+        $.ajax({
+            url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
+            type: 'POST',
+            
+            headers: {
+            "Authorization": etoken
+            },
+            data: formData,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function(response) {
+                if (response.status == 200) {
+                // Handle the response from the server, e.g., display a success message
+                alert('PDF uploaded successfully!');
                 }
-
+            },
+            error: function() {
+                // Handle errors, if any
+                alert('Error occurred while uploading PDF.');
             }
-
         });
-    }
+    });
 });
 
 
@@ -62,8 +94,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    $('#PDF').attr('src','');
-    $('#PDF').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
+    // $('#PDF').attr('src','');
+    // $('#PDF').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
 
 });
 
@@ -246,5 +278,36 @@ function updateNewsletterDetails(id) {
 }
 
 function sendNewsletterDetails(id) {
-    
+
 }
+
+
+// post pdf file ----------------------------------------
+function displayPDF(pdfData) {
+    var pdfObject = document.getElementById('pdfPreview');
+    pdfObject.data = pdfData;
+}
+
+// Function to handle file upload
+$('#uploadButton').click(function () {
+    var formData = new FormData($('#pdfForm')[0]);
+    $.ajax({
+        url: 'upload.php', // Replace with your server-side script for handling file uploads
+        type: 'POST',
+        data: formData,
+        dataType: 'json',
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            if (response.status === 'success') {
+                // Display the uploaded PDF
+                displayPDF(response.pdfUrl);
+            } else {
+                alert('Failed to upload PDF. Error: ' + response.message);
+            }
+        },
+        error: function () {
+            alert('An error occurred during PDF upload.');
+        }
+    });
+});
