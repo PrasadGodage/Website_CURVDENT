@@ -218,11 +218,11 @@ class PostNewsletterController extends REST_Controller {
     function compress_pdf($source_url, $destination_url, $quality) {
         // Your image compression logic remains the same
         // // ...
-        $info = getimagesize($source_url);
+        // $info = getimagesize($source_url);
         
-        if ($info['mime'] === 'image/pdf')
-            $image = imagecreatefrompng($source_url);
-        imagejpeg($image, $destination_url, $quality);
+        // if ($info['mime'] === 'image/pdf')
+        //     $image = imagecreatefrompng($source_url);
+        // imagejpeg($image, $destination_url, $quality);
         return $destination_url;
     }
     // function compress_image($source_url, $destination_url, $quality) {
