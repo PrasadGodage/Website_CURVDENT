@@ -62,8 +62,10 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/newsletter/newsletter');
         $this->load->view('admin/newsletter/modal/add_newsletter');
+        $this->load->view('admin/newsletter/modal/send_email');
         $this->load->view('footer');
         $this->load->view('admin/newsletter/newsletter_js');
+        $this->load->view('admin/newsletter/send_email_js');
         $this->load->view('htmlend');
     }
     
