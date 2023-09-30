@@ -107,15 +107,15 @@ class PostNewsletterController extends REST_Controller {
                     
                     // $data['modified_by'] = $this->post('created_by');
                     // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                    if (!empty($_FILES['photo']['name'])) {
-                        if (!empty($result['photo'])) {
-                            unlink($result['photo']);
+                    if (!empty($_FILES['PDF']['name'])) {
+                        if (!empty($result['PDF'])) {
+                            unlink($result['PDF']);
                         }
-                        $file_data['file_name'] = $_FILES['photo']['name'];
-                        $file_data['file_type'] = $_FILES['photo']['type'];
-                        $file_data['temp_name'] = $_FILES['photo']['tmp_name'];
-                        $file_data['file_size'] = $_FILES['photo']['size'];
-                         $data['photo']=$this->upload_docs($file_data);
+                        $file_data['file_name'] = $_FILES['PDF']['name'];
+                        $file_data['file_type'] = $_FILES['PDF']['type'];
+                        $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
+                        $file_data['file_size'] = $_FILES['PDF']['size'];
+                         $data['PDF']=$this->upload_docs($file_data);
                         
                     }
                 $status = $this->postingNews->update_postingNews($id, $data);
@@ -149,8 +149,26 @@ class PostNewsletterController extends REST_Controller {
     }
 
     
+    // public function upload() {
+    //     $config['upload_path']   = './uploads/';
+    //     $config['allowed_types'] = 'pdf';
+    //     $config['max_size']      = 2048;  // Maximum file size in kilobytes (2MB)
+
+    //     $this->load->library('upload', $config);
+
+    //     if (!$this->upload->do_upload('pdf_file')) {
+    //         $error = array('error' => $this->upload->display_errors());
+    //         // Handle the error
+    //     } else {
+    //         // File uploaded successfully, process it as needed
+    //         $data = array('upload_data' => $this->upload->data());
+    //         // You can handle the uploaded file data here
+    //     }
+    // }
+
+    
     // public function upload_docs($file) {
-    //     if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg")) {
+    //     if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg") || ($file['file_type'] == "application/pdf")) {
     //         $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
     //         $time = date('Y_m_d_hisu');
     //         $filename = $this->compress_image($file['temp_name'], "resource/img/blog/" . 'photo' . $time . "." . $ext, 50);
