@@ -67,6 +67,7 @@ class PostNewsletterController extends REST_Controller {
             if ($decodedToken['status'])
             {
                 
+                if (empty($id)) {
                 $data['upload_path']   = './resorce/pdf';
                     $data['allowed_types'] = 'pdf';
                     $data['max_size']      = 2048;  // Maximum file size in kilobytes (2MB)
@@ -82,7 +83,6 @@ class PostNewsletterController extends REST_Controller {
 
                         // Handle the error
                     } 
-                // if (empty($id)) {
                     // if($this->postingNews->find_postingNews($data['title'])){
 
                 //     if (!empty($_FILES['PDF']['name'])) {
@@ -114,7 +114,7 @@ class PostNewsletterController extends REST_Controller {
                 // $this->response($response, REST_Controller::HTTP_OK);
                 // }
                 
-        } else {
+         } else {
             $result=$this->postingNews->get_postingNews($id);
             if (!empty($result)) {
 
@@ -178,9 +178,8 @@ class PostNewsletterController extends REST_Controller {
         }else {
             $this->response(['Authentication failed'], REST_Controller::HTTP_OK);
         }
-        
     }
-
+        
     
    
 
