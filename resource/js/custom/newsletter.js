@@ -278,11 +278,13 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
 
-function sendEmail(id) {
-
-    // $(location).attr('href',ebase_url+'sendEmail/'+id);
-    
-}
+$('#newsletterTable').on('click', '.send-button', function (e) {
+  
+        $('#addSendEmailModal').modal('toggle');
+        $("#addSendEmailForm").trigger("reset");
+        $('#id').val('');
+        $('.error').text('');
+    });
 
 // function updatePurchaseDetails(id){
 
