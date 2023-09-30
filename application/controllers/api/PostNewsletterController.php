@@ -82,7 +82,7 @@ class PostNewsletterController extends REST_Controller {
                 $posting_id = $this->postingNews->insert_postingNews($data);
             if (!empty($posting_id)) {
                 $restData = $this->postingNews->get_postingNews($posting_id);
-                $response['msg'] = 'Posting created successfully!';
+                $response['msg'] = 'PostingNewsletter created successfully!';
                 $response['data'] = $restData;
                 $response['status'] = 200;
                 $this->response($response, REST_Controller::HTTP_OK);
@@ -177,6 +177,7 @@ class PostNewsletterController extends REST_Controller {
     // }
     public function upload_docs($file) {
         if (($file['file_type'] == "application/pdf")) {
+         console.log(2);
             $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
             $time = date('Y_m_d_hisu');
             $filename = $this->compress_pdf($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
