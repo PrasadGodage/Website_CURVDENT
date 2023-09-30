@@ -68,7 +68,7 @@ class PostNewsletterController extends REST_Controller {
             {
                 
                 if (empty($id)) {
-                    if($this->postingNews->find_postingNews($data['title'])){
+                    // if($this->postingNews->find_postingNews($data['title'])){
 
                     if (!empty($_FILES['PDF']['name'])) {
                     $file_data['file_name'] = $_FILES['PDF']['name'];
@@ -92,11 +92,11 @@ class PostNewsletterController extends REST_Controller {
                 $response['status'] = 400;
                 $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
             } 
-                }else{
-                    $response['msg'] = 'Duplicate Entry!';
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_OK);
-                }
+                // }else{
+                //     $response['msg'] = 'Duplicate Entry!';
+                // $response['status'] = 400;
+                // $this->response($response, REST_Controller::HTTP_OK);
+                // }
                 
         } else {
             $result=$this->postingNews->get_postingNews($id);
@@ -176,10 +176,10 @@ class PostNewsletterController extends REST_Controller {
     //     }
     // }
     public function upload_docs($file) {
-        if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg") || ($file['file_type'] == "application/pdf")) {
+        if (($file['file_type'] == "application/pdf")) {
             $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
             $time = date('Y_m_d_hisu');
-            $filename = $this->compress_image($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
+            $filename = $this->compress_pdf($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
             return $filename;
         }
     }
@@ -215,17 +215,12 @@ class PostNewsletterController extends REST_Controller {
     //         return false; // Unsupported file type
     // }
     
-    function compress_image($source_url, $destination_url, $quality) {
+    function compress_pdf($source_url, $destination_url, $quality) {
         // Your image compression logic remains the same
-        // ...
+        // // ...
         $info = getimagesize($source_url);
-        if ($info['mime'] == 'image/jpeg')
-            $image = imagecreatefromjpeg($source_url);
-        elseif ($info['mime'] == 'image/gif')
-            $image = imagecreatefromgif($source_url);
-        elseif ($info['mime'] == 'image/png')
-            $image = imagecreatefrompng($source_url);
-        elseif ($info['mime'] == 'application/pdf')
+        
+        if ($info['mime'] === 'image/pdf')
             $image = imagecreatefrompng($source_url);
         imagejpeg($image, $destination_url, $quality);
         return $destination_url;
