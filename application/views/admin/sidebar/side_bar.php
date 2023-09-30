@@ -9,9 +9,9 @@
         <li class="active">
           <a href="dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
+            <!-- <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
-            </span>
+            </span> -->
           </a>
         </li>
         <li class="treeview">
@@ -42,23 +42,37 @@
             
           </ul> -->
         <!-- </li> -->
-        <li class="">
+        
+        <!-- <li class="">
           <a href="subscriber">
             <i class="fa fa-th"></i> <span>Subscribers</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
-        </li>
-        
+        </li> -->
+
         <li class="">
+          <a href="subscriber">
+            <i class="glyphicon glyphicon-user mr-15"></i> <span>Subscribers</span>
+          </a>
+        </li>
+       
+        <!-- <li class="">
           <a href="newsletter">
             <i class="fa fa-th"></i> <span>Newsletters</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
+        </li> -->
+
+        <li class="">
+          <a href="newsletter">
+            <i class="glyphicon glyphicon-user mr-15"></i> <span>Newsletters</span>
+          </a>
         </li>
+        
 
       </ul>
     </section>
