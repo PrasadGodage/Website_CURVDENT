@@ -67,17 +67,33 @@ class PostNewsletterController extends REST_Controller {
             if ($decodedToken['status'])
             {
                 
-                if (empty($id)) {
+                $data['upload_path']   = './resorce/pdf';
+                    $data['allowed_types'] = 'pdf';
+                    $data['max_size']      = 2048;  // Maximum file size in kilobytes (2MB)
+            
+                    $this->load->library('upload', $data);
+
+                    if (!$this->upload->do_upload('PDF')) {
+                        $data1 = $this->upload->data();
+                        $pdf_path = 'resource/pdf/' . $data1['file_name'];
+            
+                        // Save the PDF path to the database using your model
+                        $insert_id = $this->postingNews->save_pdf_path($pdf_path)
+
+                        // Handle the error
+                    } 
+                // if (empty($id)) {
                     // if($this->postingNews->find_postingNews($data['title'])){
 
-                    if (!empty($_FILES['PDF']['name'])) {
-                    $file_data['file_name'] = $_FILES['PDF']['name'];
-                    $file_data['file_type'] = $_FILES['PDF']['type'];
-                    $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
-                    $file_data['file_size'] = $_FILES['PDF']['size'];
-                       $data['PDF']=$this->upload_docs($file_data);
+                //     if (!empty($_FILES['PDF']['name'])) {
+                //     $file_data['file_name'] = $_FILES['PDF']['name'];
+                //     $file_data['file_type'] = $_FILES['PDF']['type'];
+                //     $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
+                //     $file_data['file_size'] = $_FILES['PDF']['size'];
+                //        $data['PDF']=$this->upload_docs($file_data);
                     
-                }
+                // }
+
 
                 $posting_id = $this->postingNews->insert_postingNews($data);
             if (!empty($posting_id)) {
@@ -107,18 +123,35 @@ class PostNewsletterController extends REST_Controller {
                     
                     // $data['modified_by'] = $this->post('created_by');
                     // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                    if (!empty($_FILES['PDF']['name'])) {
-                        if (!empty($result['PDF'])) {
-                            unlink($result['PDF']);
-                        }
-                        $file_data['file_name'] = $_FILES['PDF']['name'];
-                        $file_data['file_type'] = $_FILES['PDF']['type'];
-                        $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
-                        $file_data['file_size'] = $_FILES['PDF']['size'];
-                         $data['PDF']=$this->upload_docs($file_data);
+                    // if (!empty($_FILES['PDF']['name'])) {
+                    //     if (!empty($result['PDF'])) {
+                    //         unlink($result['PDF']);
+                    //     }
+                    //     $file_data['file_name'] = $_FILES['PDF']['name'];
+                    //     $file_data['file_type'] = $_FILES['PDF']['type'];
+                    //     $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
+                    //     $file_data['file_size'] = $_FILES['PDF']['size'];
+                    //      $data['PDF']=$this->upload_docs($file_data);
                         
-                    }
-                $status = $this->postingNews->update_postingNews($id, $data);
+                    // }
+
+                    $data['upload_path']   = './resorce/pdf';
+                    $data['allowed_types'] = 'pdf';
+                    $data['max_size']      = 2048;  // Maximum file size in kilobytes (2MB)
+            
+                    $this->load->library('upload', $data);
+
+                    if (!$this->upload->do_upload('PDF')) {
+                        $data1 = $this->upload->data();
+                        $pdf_path = 'resource/pdf/' . $data1['file_name'];
+            
+                        // Save the PDF path to the database using your model
+                        $insert_id = $this->postingNews->save_pdf_path($pdf_path)
+
+                        // Handle the error
+                    } 
+
+                $status = $this->postingNews->update_postingNews($insert_id, $data);
                 if ($status) {
                     $restData = $this->postingNews->get_postingNews($id);
                     $response['msg'] = 'PostingNewsletter updated successfully!';
@@ -149,22 +182,7 @@ class PostNewsletterController extends REST_Controller {
     }
 
     
-    // public function upload() {
-    //     $config['upload_path']   = './uploads/';
-    //     $config['allowed_types'] = 'pdf';
-    //     $config['max_size']      = 2048;  // Maximum file size in kilobytes (2MB)
-
-    //     $this->load->library('upload', $config);
-
-    //     if (!$this->upload->do_upload('pdf_file')) {
-    //         $error = array('error' => $this->upload->display_errors());
-    //         // Handle the error
-    //     } else {
-    //         // File uploaded successfully, process it as needed
-    //         $data = array('upload_data' => $this->upload->data());
-    //         // You can handle the uploaded file data here
-    //     }
-    // }
+   
 
     
     // public function upload_docs($file) {
@@ -175,15 +193,15 @@ class PostNewsletterController extends REST_Controller {
     //         return $filename;
     //     }
     // }
-    public function upload_docs($file) {
-        if (($file['file_type'] == "application/pdf")) {
-           echo "hello";
-            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-            $time = date('Y_m_d_hisu');
-            $filename = $this->compress_pdf($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
-            return $filename;
-        }
-    }
+    // public function upload_docs($file) {
+    //     if (($file['file_type'] == "application/pdf")) {
+    //        echo "hello";
+    //         $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+    //         $time = date('Y_m_d_hisu');
+    //         $filename = $this->compress_pdf($file['temp_name'], "resource/pdf/" . 'pdf' . $time . "." . $ext, 10240);
+    //         return $filename;
+    //     }
+    // }
 
     // function compress_image($source_url, $destination_url, $quality) {
     //     $info = getimagesize($source_url);
@@ -216,17 +234,17 @@ class PostNewsletterController extends REST_Controller {
     //         return false; // Unsupported file type
     // }
     
-    function compress_pdf($source_url, $destination_url, $quality) {
-        // Your image compression logic remains the same
-        // // ...
-        // $info = getimagesize($source_url);
+    // function compress_pdf($source_url, $destination_url, $quality) {
+    //     // Your image compression logic remains the same
+    //     // // ...
+    //     // $info = getimagesize($source_url);
         
-        // if ($info['mime'] === 'image/pdf')
-        //     $image = imagecreatefrompng($source_url);
-        // imagejpeg($image, $destination_url, $quality);
-        return $destination_url;
-    }
-    // function compress_image($source_url, $destination_url, $quality) {
+    //     // if ($info['mime'] === 'image/pdf')
+    //     //     $image = imagecreatefrompng($source_url);
+    //     // imagejpeg($image, $destination_url, $quality);
+    //     return $destination_url;
+    // }
+    // // function compress_image($source_url, $destination_url, $quality) {
     //     // Your image compression logic remains the same
     //     // ...
     //     $info = getimagesize($source_url);

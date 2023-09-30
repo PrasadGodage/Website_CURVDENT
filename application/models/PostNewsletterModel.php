@@ -71,6 +71,14 @@ class PostNewsletterModel extends CI_Model {
           }
     }
 
+    public function save_pdf_path($file_path) {
+        $data = array(
+            'PDF' => $file_path
+        );
+        $this->db->insert('PostNewsletter', $data);
+        return $this->db->insert_id(); // Return the inserted row's ID if needed
+    }
+
 
 
     
