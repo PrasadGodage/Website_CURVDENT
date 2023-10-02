@@ -13,12 +13,14 @@
 
                     <div class="col-12">         
                             <div class="box">
-                                <div class="box-header with-border box-controls pull-right">
+                                <div class="box-header with-border box-controls pull-right custom-control custom-checkbox pl-0">
                                     <!-- <div class="box-header pull-left"> -->
                                         <!-- <div class="box-controls pull-right"> -->
                                        
                                         <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
-                                        <button type="button" class="btn btn-info mr-3" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
+                                        <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
+                                        <!-- <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="ion ion-android-checkbox-outline-blank"></i></button> -->
+
                                 </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
@@ -27,6 +29,7 @@
                                         <table id="subscriberTable" class="table table-bordered table-striped">
                                             <thead>
                                                 <tr>
+                                                    <th class="custom-control-input"></th>
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
@@ -37,6 +40,7 @@
                                             </tbody>
                                             <tfoot>
                                                 <tr>
+                                                    <th class="custom-control-input"></th>
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
