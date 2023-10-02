@@ -85,7 +85,7 @@ class PostNewsletterController extends REST_Controller {
                 $config['upload_path']   = './uploads/'; // Same as in the config file
                 $config['allowed_types'] = 'pdf';
                 $config['max_size']      = 10240; // 10 MB (in kilobytes)
-                $config['file_name']     = 'website_Requirement.pdf'; // Optional: Define a custom filename if needed
+                // $config['file_name']     = 'website_Requirement.pdf'; // Optional: Define a custom filename if needed
 
                 $this->load->library('upload', $config);
 
