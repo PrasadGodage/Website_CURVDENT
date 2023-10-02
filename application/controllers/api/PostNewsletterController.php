@@ -88,7 +88,7 @@ class PostNewsletterController extends REST_Controller {
                         $newsData=$this->input->post();
                         $data=$this->upload->data();
 
-                        $image_path="uploads/".$data['raw_name'].$data['file_ext'];
+                        $image_path=$this->destination("uploads/".$data['raw_name'].$data['file_ext']);
                         $newsData['PDF']=$image_path;
 
                     }
@@ -179,7 +179,11 @@ class PostNewsletterController extends REST_Controller {
         }
         
     }
+  public function destination($file_name){
 
+     return $file_name;
+
+  }
     
     // public function upload_docs($file) {
     //     if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg" ) || ($file['file_type'] == "image/pdf")) {
