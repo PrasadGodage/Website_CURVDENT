@@ -23,7 +23,7 @@ function setSubscriberList(list) {
     
         tblData += `
         <tr>
-                <td>`  `</td>
+                
                 <td>` + index + `</td>
                 <td>` + subscriber.email + `</td>
                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
@@ -138,5 +138,5 @@ function getSubscriberList() {
 getSubscriberList();
 
 function sendEmail(){
-    
+
 }
