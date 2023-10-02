@@ -56,7 +56,6 @@ class PostNewsletterController extends REST_Controller {
         $data = [];
         $newsData['title'] = $this->post('title');
         $newsData['content'] = $this->post('content');
-        // $data['photo'] = $this->post('photo');
         $newsData['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
      
         
