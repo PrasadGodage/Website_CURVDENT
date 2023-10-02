@@ -32,34 +32,61 @@
 
 //------------- show table data ----------------------------
 
-function setSubscriberList(list) {
+// function setSubscriberList(list) {
 
+//     $('#subscriberTable').dataTable().fnDestroy();
+//     $('#subscriberList').empty();
+//     var tblData = '';
+//     var index=1;
+    
+//     for (let k of list.keys()) {
+        
+//         let subscriber = list.get(k);
+    
+//         tblData += `
+//         <tr>
+                
+//                 <td>` + index + `</td>
+//                 <td>` + subscriber.email + `</td>
+//                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                 <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a> 
+//                 <a href="#" onclick="sendEmail()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>                         
+//                 </td>
+                
+//         </tr>`;
+//         index++;
+//     }
+    
+//     $('#subscriberList').html(tblData);
+//     $('#subscriberTable').DataTable();
+//     }
+
+function setSubscriberList(list) {
     $('#subscriberTable').dataTable().fnDestroy();
     $('#subscriberList').empty();
     var tblData = '';
-    var index=1;
-    
+    var index = 1;
+
     for (let k of list.keys()) {
-        
         let subscriber = list.get(k);
-    
+
         tblData += `
         <tr>
-                
-                <td>` + index + `</td>
-                <td>` + subscriber.email + `</td>
-                <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a> 
-                <a href="#" onclick="sendEmail()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>                         
-                </td>
-                
+            <td>${index}</td>
+            <td>${subscriber.email}</td>
+            <td>
+                <input type="checkbox" class="subscriberCheckbox" value="${subscriber.id}">
+                <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+            </td>
         </tr>`;
         index++;
     }
-    
+
     $('#subscriberList').html(tblData);
     $('#subscriberTable').DataTable();
-    }
+}
 
 
 
