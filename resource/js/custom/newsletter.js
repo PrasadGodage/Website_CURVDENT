@@ -241,16 +241,19 @@ function updateNewsletterDetails(id) {
     $('#date').val(newsletter.date);
     // (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
+}
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
-}
 
 function sendEmailDetails(id){
-    let subscriber = subscriberList.get(id.toString());
-    let newsletter = newsletterList.get(id.toString());
+    
+    $('#addSendEmailModal').modal('toggle');
 
-    var subscriberDetailsList = purchase.subscriberDetail;
-    var newsletterDetailList = purchase.newsletterDetail;
+    // let subscriber = subscriberList.get(id.toString());
+    // let newsletter = newsletterList.get(id.toString());
+
+    // var subscriberDetailsList = purchase.subscriberDetail;
+    // var newsletterDetailList = purchase.newsletterDetail;
 
     // var productData = inventoryList.get(this.value);
     // let purchase = purchaseList.get(id.toString());
@@ -266,22 +269,21 @@ function sendEmailDetails(id){
     // setPurchaseDetailList(purchaseDetailList);
     // setItemDetailList(itemDetailList);
 
-    setSubscriberDetailsList(subscriberDetailsList);
-    setNewsletterDetailList(newsletterDetailList);
+    // setSubscriberDetailsList(subscriberDetailsList);
+    // setNewsletterDetailList(newsletterDetailList);
     
-    $('#addSendEmailModal').modal('toggle');
 }
 
-function sendEmailDetails(newsletterId) {
-    // Use the newsletterId to get the relevant newsletter data
-    let newsletter = newsletterList.get(newsletterId.toString());
+// function sendEmailDetails(newsletterId) {
+//     // Use the newsletterId to get the relevant newsletter data
+//     let newsletter = newsletterList.get(newsletterId.toString());
     
-    // Optionally, you can pass the newsletter data to the modal for further processing
-    $('#yourModalId').data('newsletter-data', newsletter);
+//     // Optionally, you can pass the newsletter data to the modal for further processing
+//     $('#yourModalId').data('newsletter-data', newsletter);
 
-    // Open your modal here (assuming you have a modal with ID "yourModalId")
-    $('#yourModalId').modal('toggle');
-}
+//     // Open your modal here (assuming you have a modal with ID "yourModalId")
+//     $('#yourModalId').modal('toggle');
+// }
 
 function setSubscriberList(list) {
 
