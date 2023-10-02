@@ -53,6 +53,7 @@ class PostNewsletterController extends REST_Controller {
 
     public function postingNews_post() { 
         $response = [];
+        $data = [];
         $newsData['title'] = $this->post('title');
         $newsData['content'] = $this->post('content');
         // $data['photo'] = $this->post('photo');
@@ -70,7 +71,7 @@ class PostNewsletterController extends REST_Controller {
             {
                 
                 if (empty($id)) {
-                    if($this->postingNews->find_postingNews($data['title'])){
+                    if($this->postingNews->find_postingNews($newsData['title'])){
 
                 //     if (!empty($_FILES['PDF']['name'])) {
                 //     $file_data['file_name'] = $_FILES['PDF']['name'];
@@ -81,8 +82,8 @@ class PostNewsletterController extends REST_Controller {
                     
                 // }
 
-                    $config['upload_path']          = './uploads/';
-                    $config['allowed_types']        = 'gif|jpg|png|pdf';
+                    $config['upload_path']  = './uploads/';
+                    $config['allowed_types'] = 'gif|jpg|png|pdf';
                     $this->load->library('upload', $config);
                     if ( ! $this->upload->do_upload()){
                         $newsData=$this->input->post();
