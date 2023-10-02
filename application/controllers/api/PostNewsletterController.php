@@ -94,7 +94,7 @@ class PostNewsletterController extends REST_Controller {
 
                     }
                     
-                $posting_id = $this->postingNews->insert_postingNews($data);
+                $posting_id = $this->postingNews->insert_postingNews($newsData);
             if (!empty($posting_id)) {
                 $restData = $this->postingNews->get_postingNews($posting_id);
                 $response['msg'] = 'NewsLetter created successfully!';
@@ -151,7 +151,7 @@ class PostNewsletterController extends REST_Controller {
                     //         $this->load->view('upload_success', $data);
                     // }
 
-                $status = $this->postingNews->update_postingNews($id, $data);
+                $status = $this->postingNews->update_postingNews($id, $newsData);
                 if ($status) {
                     $restData = $this->postingNews->get_postingNews($id);
                     $response['msg'] = 'newsLetter updated successfully!';
