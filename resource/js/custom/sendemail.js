@@ -1,12 +1,34 @@
 // let subscriberList = new Map();
 
 //Add Subscriber Btn script -----------------------------------------------------------------
-$('#addSubscriberBtn').click(function () {
-    $('#addSendEmailModal').modal('toggle');
-    $("#addSubscriberForm").trigger("reset");
-    $('#id').val('');
-    $('.error').text('');
-});
+// $('#addSubscriberBtn').click(function () {
+//     $('#addSendEmailModal').modal('toggle');
+//     $("#addSubscriberForm").trigger("reset");
+//     $('#id').val('');
+//     $('.error').text('');
+// });
+
+// $(document).ready(function () {
+    // When the "Select All" checkbox is clicked
+    $('#selectAll').click(function () {
+        // Check or uncheck all row checkboxes based on the "Select All" checkbox state
+        $('.custom-control-input').prop('checked', this.checked);
+    });
+
+    // When any row checkbox is clicked
+    $('.custom-control-input').click(function () {
+        // Check if all row checkboxes are checked
+        if ($('.custom-control-input:checked').length === $('.custom-control-input').length) {
+            // If all row checkboxes are checked, check the "Select All" checkbox
+            $('#selectAll').prop('checked', true);
+        } else {
+            // If any row checkbox is unchecked, uncheck the "Select All" checkbox
+            $('#selectAll').prop('checked', false);
+        }
+    });
+// });
+
+
 
 //------------- show table data ----------------------------
 
@@ -23,10 +45,12 @@ function setSubscriberList(list) {
     
         tblData += `
         <tr>
+                
                 <td>` + index + `</td>
                 <td>` + subscriber.email + `</td>
                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a> 
+                <a href="#" onclick="sendEmail()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>                         
                 </td>
                 
         </tr>`;
@@ -135,3 +159,6 @@ function getSubscriberList() {
 }
 getSubscriberList();
 
+function sendEmail(){
+
+}
