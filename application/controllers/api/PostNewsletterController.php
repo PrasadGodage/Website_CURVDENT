@@ -72,14 +72,31 @@ class PostNewsletterController extends REST_Controller {
                 if (empty($id)) {
                     if($this->postingNews->find_postingNews($data['title'])){
 
-                    if (!empty($_FILES['PDF']['name'])) {
-                    $file_data['file_name'] = $_FILES['PDF']['name'];
-                    $file_data['file_type'] = $_FILES['PDF']['type'];
-                    $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
-                    $file_data['file_size'] = $_FILES['PDF']['size'];
-                       $data['PDF']=$this->upload_docs($file_data);
+                //     if (!empty($_FILES['PDF']['name'])) {
+                //     $file_data['file_name'] = $_FILES['PDF']['name'];
+                //     $file_data['file_type'] = $_FILES['PDF']['type'];
+                //     $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
+                //     $file_data['file_size'] = $_FILES['PDF']['size'];
+                //        $data['PDF']=$this->upload_docs($file_data);
                     
-                }
+                // }
+
+                    $data['PDF']          = './uploads/';
+                    $data['allowed_types']        = 'gif|jpg|png|pdf';
+                    $this->load->library('upload', $data);
+
+                    if ( ! $this->upload->do_upload('userfile'))
+                    {
+                            $error = array('error' => $this->upload->display_errors());
+    
+                            $this->load->view('upload_form', $error);
+                    }
+                    else
+                    {
+                            $data = array('upload_data' => $this->upload->data());
+    
+                            $this->load->view('upload_success', $data);
+                    }
 
                 $posting_id = $this->postingNews->insert_postingNews($data);
             if (!empty($posting_id)) {
@@ -109,17 +126,35 @@ class PostNewsletterController extends REST_Controller {
                     
                     // $data['modified_by'] = $this->post('created_by');
                     // $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
-                    if (!empty($_FILES['PDF']['name'])) {
-                        if (!empty($result['PDF'])) {
-                            unlink($result['PDF']);
-                        }
-                        $file_data['file_name'] = $_FILES['PDF']['name'];
-                        $file_data['file_type'] = $_FILES['PDF']['type'];
-                        $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
-                        $file_data['file_size'] = $_FILES['PDF']['size'];
-                         $data['PDF']=$this->upload_docs($file_data);
+                    // if (!empty($_FILES['PDF']['name'])) {
+                    //     if (!empty($result['PDF'])) {
+                    //         unlink($result['PDF']);
+                    //     }
+                    //     $file_data['file_name'] = $_FILES['PDF']['name'];
+                    //     $file_data['file_type'] = $_FILES['PDF']['type'];
+                    //     $file_data['temp_name'] = $_FILES['PDF']['tmp_name'];
+                    //     $file_data['file_size'] = $_FILES['PDF']['size'];
+                    //      $data['PDF']=$this->upload_docs($file_data);
                         
+                    // }
+
+                    $data['PDF']          = './uploads/';
+                    $data['allowed_types']        = 'gif|jpg|png|pdf';
+                    $this->load->library('upload', $data);
+
+                    if ( ! $this->upload->do_upload('userfile'))
+                    {
+                            $error = array('error' => $this->upload->display_errors());
+    
+                            $this->load->view('upload_form', $error);
                     }
+                    else
+                    {
+                            $data = array('upload_data' => $this->upload->data());
+    
+                            $this->load->view('upload_success', $data);
+                    }
+
                 $status = $this->postingNews->update_postingNews($id, $data);
                 if ($status) {
                     $restData = $this->postingNews->get_postingNews($id);
@@ -151,26 +186,30 @@ class PostNewsletterController extends REST_Controller {
     }
 
     
-    public function upload_docs($file) {
-        if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg")) {
-            $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
-            $time = date('Y_m_d_hisu');
-            $filename = $this->compress_image($file['temp_name'], "resource/img/blog/" . 'photo' . $time . "." . $ext, 50);
-            return $filename;
-        }
-    }
+    // public function upload_docs($file) {
+    //     if (($file['file_type'] == "image/gif") || ($file['file_type'] == "image/jpeg") || ($file['file_type'] == "image/png") || ($file['file_type'] == "image/pjpeg" ) || ($file['file_type'] == "image/pdf")) {
+    //         $ext = pathinfo($file['file_name'], PATHINFO_EXTENSION);
+    //         $time = date('Y_m_d_hisu');
+    //         $filename = $this->compress_image($file['temp_name'], "resource/img/blog/" . 'photo' . $time . "." . $ext, 50);
+    //         return $filename;
+    //     }
+    // }
 
-    function compress_image($source_url, $destination_url, $quality) {
-        $info = getimagesize($source_url);
-        if ($info['mime'] == 'image/jpeg')
-            $image = imagecreatefromjpeg($source_url);
-        elseif ($info['mime'] == 'image/gif')
-            $image = imagecreatefromgif($source_url);
-        elseif ($info['mime'] == 'image/png')
-            $image = imagecreatefrompng($source_url);
-        imagejpeg($image, $destination_url, $quality);
-        return $destination_url;
-    }
+    // function compress_image($source_url, $destination_url, $quality) {
+    //     $info = getimagesize($source_url);
+    //     // if ($info['mime'] == 'image/jpeg')
+    //     //     $image = imagecreatefromjpeg($source_url);
+    //     // elseif ($info['mime'] == 'image/gif')
+    //     //     $image = imagecreatefromgif($source_url);
+    //     // elseif ($info['mime'] == 'image/png')
+    //     //     $image = imagecreatefrompng($source_url);
+    //     // elseif ($info['mime'] == 'image/pdf')
+    //     //     $image = imagecreatefrompng($source_url);
+    //     if ($info['mime'] == 'image/pdf')
+    //         $image = $source_url;
+    //     imagejpeg($image, $destination_url, $quality);
+    //     return $destination_url;
+    // }
 
     public function postingNews_delete($id = 0) {
         $response = [];
