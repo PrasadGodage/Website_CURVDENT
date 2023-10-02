@@ -3,90 +3,90 @@ let subscriberList = new Map();
 
 //Submit Category Btn script
 
-// $('#addNewsletterForm').on('submit', function (e) {
-//     e.preventDefault();
+$('#addNewsletterForm').on('submit', function (e) {
+    e.preventDefault();
 
-//     var returnVal = $("#addNewsletterForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
+    var returnVal = $("#addNewsletterForm").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
      
-//         $.ajax({
-
-//             url: ebase_url+'postNewsletter_api',
-
-//             type: 'POST',
-
-//             headers: {
-//                 "Authorization": etoken
-//             },
-
-//             data: formdata,
-          
-//             cache: false,
-
-//             contentType: false,
-
-//             processData: false,
-
-//             dataType: 'json',
-
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     $('#addNewsletterModal').modal('toggle');
-
-//                     let id=response.data.id;
-                  
-//                  if(newsletterList.has(id)){
-//                     newsletterList.delete(id);   
-//                  }
-//                  newsletterList.set(id, response.data);
-//                  setNewsletterList(newsletterList);
-
-//                     swal("Good job!", response.msg, "success");
-//                     $(location).attr('href',ebase_url+'newsletter');
-//                 } else {
-
-//                     swal("Good job!", response.msg, "error");
-
-//                 }
-
-//             }
-
-//         });
-//     }
-// });
-
-
-$(document).ready(function() {
-    $('#addNewsletterForm').submit(function(e) {
-        e.preventDefault();
-
-        var formData = new FormData($(this)[0]);
-
         $.ajax({
-            url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
+
+            url: ebase_url+'postNewsletter_api',
+
             type: 'POST',
-            
+
             headers: {
-            "Authorization": etoken
+                "Authorization": etoken
             },
-            data: formData,
+
+            data: formdata,
+          
+            cache: false,
+
             contentType: false,
+
             processData: false,
+
             dataType: 'json',
-            success: function(response) {
+
+            success: function (response) {
                 if (response.status == 200) {
-                // Handle the response from the server, e.g., display a success message
-                alert('PDF uploaded successfully!');
+                    $('#addNewsletterModal').modal('toggle');
+
+                    let id=response.data.id;
+                  
+                 if(newsletterList.has(id)){
+                    newsletterList.delete(id);   
+                 }
+                 newsletterList.set(id, response.data);
+                 setNewsletterList(newsletterList);
+
+                    swal("Good job!", response.msg, "success");
+                    $(location).attr('href',ebase_url+'newsletter');
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
                 }
-            },
-            error: function() {
-                // Handle errors, if any
-                alert('Error occurred while uploading PDF.');
+
             }
+
         });
-    });
+    }
 });
+
+
+// $(document).ready(function() {
+//     $('#addNewsletterForm').submit(function(e) {
+//         e.preventDefault();
+
+//         var formData = new FormData($(this)[0]);
+
+//         $.ajax({
+//             url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
+//             type: 'POST',
+            
+//             headers: {
+//             "Authorization": etoken
+//             },
+//             data: formData,
+//             contentType: false,
+//             processData: false,
+//             dataType: 'json',
+//             success: function(response) {
+//                 if (response.status == 200) {
+//                 // Handle the response from the server, e.g., display a success message
+//                 alert('PDF uploaded successfully!');
+//                 }
+//             },
+//             error: function() {
+//                 // Handle errors, if any
+//                 alert('Error occurred while uploading PDF.');
+//             }
+//         });
+//     });
+// });
 
 
 //Add Newsletter Btn script -----------------------------------------------------------------
@@ -96,8 +96,6 @@ $('#addNewsletterBtn').click(function () {
     $('#id').val('');
     $('.error').text('');
     $('#PDF').attr('src','');
-    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
-
 });
 
 
@@ -239,9 +237,6 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     $('#date').val(newsletter.date);
-    (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
-
-
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 }
