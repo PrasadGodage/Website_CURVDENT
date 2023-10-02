@@ -23,10 +23,12 @@ function setSubscriberList(list) {
     
         tblData += `
         <tr>
+                <td>`  `</td>
                 <td>` + index + `</td>
                 <td>` + subscriber.email + `</td>
                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a> 
+                <a href="#" onclick="sendEmail()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>                         
                 </td>
                 
         </tr>`;
@@ -135,3 +137,6 @@ function getSubscriberList() {
 }
 getSubscriberList();
 
+function sendEmail(){
+    
+}
