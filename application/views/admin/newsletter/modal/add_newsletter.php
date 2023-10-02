@@ -50,7 +50,7 @@
                             </div>
                             <div class="btn btn-info btn-file btn-outline btn-rounded">
                                 <i class="fa fa-paperclip"></i> Attachment
-                                <input type="file" name="attachment" id="PDF">
+                                <input type="file" name="PDF" id="PDF">
                             </div>
                             <div class=""><p class="help-block mt-3 ml-2"><span>Max. 32MB</span></p></div>
                         </div>
