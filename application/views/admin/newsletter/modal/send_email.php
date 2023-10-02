@@ -90,8 +90,9 @@
                                 <div class="box-header with-border box-controls pull-right">
                                     <!-- <div class="box-header pull-left"> -->
                                         <!-- <div class="box-controls pull-right"> -->
-                                        <button type="button" class="btn btn-primary" id="addSubscriberBtn"><i class="fa fa-plus" aria-hidden="true"></i> Send Email</button>
-                                        <!-- <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fa-sync-alt"></i>Reload</button> -->
+                                        <button type="button" class="btn btn-info" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
+                                        <button type="button" class="btn btn-primary" id="addSubscriberBtn"><i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i> Send Email</button>
+                                       
                                 </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
