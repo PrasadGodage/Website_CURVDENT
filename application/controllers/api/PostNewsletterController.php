@@ -109,7 +109,7 @@ class PostNewsletterController extends REST_Controller {
                     $config['allowed_types'] = 'gif|jpg|png|pdf';
                     $this->load->library('upload', $config);
                     if ( ! $this->upload->do_upload('PDF')){
-                        $newsData=$this->input->post();
+                        // $newsData=$this->input->post();
                         $data=$this->upload->data();
                         // echo "<prev>";
                         // print_r($data);
