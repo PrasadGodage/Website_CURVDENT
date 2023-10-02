@@ -157,7 +157,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendEmailDetails(${newsletter.id})">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="sendEmailDetails()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
                 </td>
                 
         </tr>`;
@@ -245,33 +245,10 @@ function updateNewsletterDetails(id) {
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 
-function sendEmailDetails(id){
-    
+function sendEmailDetails(){
+
     $('#addSendEmailModal').modal('toggle');
 
-    // let subscriber = subscriberList.get(id.toString());
-    // let newsletter = newsletterList.get(id.toString());
-
-    // var subscriberDetailsList = purchase.subscriberDetail;
-    // var newsletterDetailList = purchase.newsletterDetail;
-
-    // var productData = inventoryList.get(this.value);
-    // let purchase = purchaseList.get(id.toString());
-    // var purchaseDetailList = purchase.purchaseDetail;
-    // var itemDetailList = purchase.itemDetail;
-    // $('#purchaseOrdIdView').text(purchase.purchaseOrderNo);
-    // $('#purchaseDateView').text(purchase.purchaseDate);
-    // $('#vendorNameView').text(purchase.vendorName);
-    // $('#gstinView').text(purchase.gstin);
-    // $('#contactFirmView').text(purchase.contactFirm);
-    // $('#createdByView').text(purchase.name);
-    
-    // setPurchaseDetailList(purchaseDetailList);
-    // setItemDetailList(itemDetailList);
-
-    // setSubscriberDetailsList(subscriberDetailsList);
-    // setNewsletterDetailList(newsletterDetailList);
-    
 }
 
 // function sendEmailDetails(newsletterId) {
