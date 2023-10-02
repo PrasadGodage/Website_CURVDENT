@@ -34,7 +34,26 @@
                             </div>
                         </div> -->
 
+                        <div class="form-group row" id="photo_preview">
+                            <label class="col-sm-2 col-form-label">PDF</label>
+                            <div class="col-sm-10">
+                                <img src="<?php echo base_url('resource/images/avatar-custom.png'); ?>" alt="" id="otherdpre"  width="100px" height="100px"/>
+                                <!-- <p><label for="profile_image" style="cursor: pointer;" class="h6"><u>Upload...</u></label></p>
+                                <input type="file" class="form-control" name="profile_image" style="display: none;" id="profile_image" accept="image/*"  onchange="loadFile(event, 'otherdpre')" /> -->
+                            </div>
+                        </div>
+
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" id="label-photo"><span class="text-danger">*</span> Upload Photo </label>
+                           <label class="col-sm-3 col-form-label h6 b-groove" for="PDF"><span class="text-danger"></span> Choose Photo... </label>    
+                            <div class="col-sm-7">
+                                <!-- <input name="photo" type="file" id="photo"> -->
+                                <input type="file" class="form-control" name="PDF" style="display: none;" id="PDF" accept="image/*"  onchange="loadFile(event, 'otherdpre')" />
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="form-group row">
                             <div class="col-sm-2">
                                 <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
@@ -43,7 +62,7 @@
                                 <input type="file" name="attachment" id="PDF">
                             </div>
                             <div class=""><p class="help-block mt-3 ml-2"><span>Max. 32MB</span></p></div>
-                        </div>
+                        </div> -->
 
                         <div class="col-md-12 text-center modal-footer text-right">
                             <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddNewsletterPage">Cancel</button>
