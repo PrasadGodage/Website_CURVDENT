@@ -241,9 +241,10 @@ function updateNewsletterDetails(id) {
     $('#date').val(newsletter.date);
     // (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
-}
+
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
+}
 
 function sendEmailDetails(){
 
