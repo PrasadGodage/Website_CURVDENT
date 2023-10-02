@@ -95,8 +95,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    // $('#PDF').attr('src','');
-    // $('#PDF').attr('src',ebase_url+'resource/pdf/Invoice.pdf');
+    $('#PDF').attr('src','');
+    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
 
 });
 
@@ -229,8 +229,8 @@ function updateNewsletterDetails(id) {
     $('#content').val(''); 
     $('#date').val('');
 
-    // // Reset the image preview
-    // $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
+    // Reset the image preview
+    $('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
     
@@ -239,7 +239,7 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     $('#date').val(newsletter.date);
-    // (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
+    (newsletter.PDF != null) ? $('#otherdpre').attr('src', ebase_url + newsletter.PDF) : '';
 
 
     // Show the updated post details in a modal
@@ -250,18 +250,9 @@ function sendEmailDetails(){
 
     $('#addSendEmailModal').modal('toggle');
 
+
+
 }
-
-// function sendEmailDetails(newsletterId) {
-//     // Use the newsletterId to get the relevant newsletter data
-//     let newsletter = newsletterList.get(newsletterId.toString());
-    
-//     // Optionally, you can pass the newsletter data to the modal for further processing
-//     $('#yourModalId').data('newsletter-data', newsletter);
-
-//     // Open your modal here (assuming you have a modal with ID "yourModalId")
-//     $('#yourModalId').modal('toggle');
-// }
 
 function setSubscriberList(list) {
 

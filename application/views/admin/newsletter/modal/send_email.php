@@ -85,37 +85,47 @@
                  <form class="form" id="addSendEmailForm" method="post">
                     <input type="hidden" name="id" id="id">
 
-                        <div class="form-group row">
-                            <label for="title" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Subject</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="title" name="title" autocomplete="off">
-                            </div>
-                        </div> 
+                    <div class="col-12">         
+                            <div class="box">
+                                <div class="box-header with-border box-controls pull-right">
+                                    <!-- <div class="box-header pull-left"> -->
+                                        <!-- <div class="box-controls pull-right"> -->
+                                        <button type="button" class="btn btn-primary" id="addSubscriberBtn"><i class="fa fa-plus" aria-hidden="true"></i> Add Subscriber</button>
+                                        <!-- <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fa-sync-alt"></i>Reload</button> -->
+                                </div>
+                                <!-- </div> -->
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table id="subscriberTable" class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr.No</th>
+                                                    <th>Email</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="subscriberList">
+                                                
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Sr.No</th>
+                                                    <th>Email</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
 
-                        <div class="form-group row">
-                            <label for="article" class="col-sm-2 col-form-label"><span class="text-danger">*</span> Message </label>
-                            <div class="col-sm-10">
-                                <textarea name="content" id="content" cols="30" rows="4" class="form-control"></textarea>
                             </div>
+                           <!-- /.box -->
+
+                           <!-- /.box -->          
                         </div>
-    
-                        <!-- <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" id="label-file"><span class="text-danger">*</span> Attached File: </label>
-                           <label class="col-sm-3 col-form-label h6 b-groove" for="file"><span class="text-danger"></span> Choose File... </label>    
-                            <div class="col-sm-7">
-                                
-                                <input type="file" class="form-control" name="file" style="display: none;" id="file" accept="file/*"  onchange="loadFile(event, 'otherdpre')" />
-                            </div>
-                        </div> -->
 
-                        
-
-                        <div class="col-md-12 text-center modal-footer text-right">
-                            <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddNewsletterPage">Cancel</button>
-                            <button type="submit" id="callNewsletterAjax" class="btn btn-primary btn-outline"><i
-                                    class="ti-save-alt"></i> Save
-                            </button>
-                        </div>
                 </form>
                         
                 <!--form end-->
@@ -126,5 +136,4 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-
 
