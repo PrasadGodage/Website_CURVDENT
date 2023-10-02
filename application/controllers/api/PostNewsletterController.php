@@ -81,20 +81,43 @@ class PostNewsletterController extends REST_Controller {
                     
                 // }
 
-                    $config['upload_path']  = './uploads/';
-                    $config['allowed_types'] = 'gif|jpg|png|pdf';
-                    $this->load->library('upload', $config);
-                    if ( ! $this->upload->do_upload()){
-                        $newsData=$this->input->post();
-                        $data=$this->upload->data();
-                        echo "<prev>";
-                        print_r($data);
+                $config['upload_path']   = './uploads/'; // Same as in the config file
+                $config['allowed_types'] = 'pdf';
+                // $config['max_size']      = 10240; // 10 MB (in kilobytes)
+                // $config['file_name']     = 'your_custom_filename.pdf'; // Optional: Define a custom filename if needed
 
-                        //$image_path=$this->destination("uploads/".$data['raw_name'].$data['file_ext']);
-                        $image_path=base_url("uploads/".$data['raw_name'].$data['file_ext']);
-                        $newsData['PDF']=$image_path;
+                $this->load->library('upload', $config);
 
-                    }
+                if ($this->upload->do_upload('PDF')) {
+                    // Upload successful, you can do further processing here
+                    $data = $this->upload->data();
+                    $pdf_path = 'uploads/' . $data['file_name'];
+
+                    echo "<prev>";
+                    print_r($data);
+
+                    $newsData['PDF']=$pdf_path;
+                    // Perform actions with $pdf_path (e.g., save it to the database)
+
+                    echo 'PDF uploaded successfully.';
+                } else {
+                    // Upload failed, show error messages
+                    echo $this->upload->display_errors();
+                }
+
+                    // $config['upload_path']  = './uploads/';
+                    // $config['allowed_types'] = 'gif|jpg|png|pdf';
+                    // $this->load->library('upload', $config);
+                    // if ( ! $this->upload->do_upload()){
+                    //     $newsData=$this->input->post();
+                    //     $data=$this->upload->data();
+                    //     echo "<prev>";
+                    //     print_r($data);
+
+                    //     //$image_path=$this->destination("uploads/".$data['raw_name'].$data['file_ext']);
+                    //     $image_path=base_url("uploads/".$data['raw_name'].$data['file_ext']);
+
+                    // }
                     
                 $posting_id = $this->postingNews->insert_postingNews($newsData);
             if (!empty($posting_id)) {
