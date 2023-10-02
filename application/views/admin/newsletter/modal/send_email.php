@@ -29,7 +29,7 @@
                                         <table id="subscriberTable" class="table table-bordered table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th class="custom-control-input"></th>
+                                                    <!-- <th class="custom-control-input"></th> -->
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
@@ -40,7 +40,7 @@
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <th class="custom-control-input"></th>
+                                                    <!-- <th class="custom-control-input"></th> -->
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
