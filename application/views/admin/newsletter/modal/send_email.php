@@ -30,6 +30,7 @@
                                             <thead>
                                                 <tr>
                                                     <!-- <th class="custom-control-input"></th> -->
+                                                    <th><input type="checkbox" id="selectAll"></th>
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
@@ -41,6 +42,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <!-- <th class="custom-control-input"></th> -->
+                                                    <td><input type="checkbox" class="custom-control-input"></td>
                                                     <th>Sr.No</th>
                                                     <th>Email</th>
                                                     <th>Action</th>
