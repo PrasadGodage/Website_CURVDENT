@@ -53,10 +53,10 @@ class PostNewsletterController extends REST_Controller {
 
     public function postingNews_post() { 
         $response = [];
-        $data['title'] = $this->post('title');
-        $data['content'] = $this->post('content');
+        $newsData['title'] = $this->post('title');
+        $newsData['content'] = $this->post('content');
         // $data['photo'] = $this->post('photo');
-        $data['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
+        $newsData['date'] = mdate('%Y-%m-%d %H:%i:%s', now());
      
         
         $id = $this->post('id');
@@ -81,23 +81,18 @@ class PostNewsletterController extends REST_Controller {
                     
                 // }
 
-                    $data['PDF']          = './uploads/';
-                    $data['allowed_types']        = 'gif|jpg|png|pdf';
-                    $this->load->library('upload', $data);
+                    $config['upload_path']          = './uploads/';
+                    $config['allowed_types']        = 'gif|jpg|png|pdf';
+                    $this->load->library('upload', $config);
+                    if ( ! $this->upload->do_upload()){
+                        $newsData=$this->input->post();
+                        $data=$this->upload->data();
 
-                    if ( ! $this->upload->do_upload('userfile'))
-                    {
-                            $error = array('error' => $this->upload->display_errors());
-    
-                            $this->load->view('upload_form', $error);
-                    }
-                    else
-                    {
-                            $data = array('upload_data' => $this->upload->data());
-    
-                            $this->load->view('upload_success', $data);
-                    }
+                        $image_path=base_url("uploads/".$data['raw_name'].$data['file_ext']);
+                        $newsData['PDF']=$image_path;
 
+                    }
+                    
                 $posting_id = $this->postingNews->insert_postingNews($data);
             if (!empty($posting_id)) {
                 $restData = $this->postingNews->get_postingNews($posting_id);
@@ -138,22 +133,22 @@ class PostNewsletterController extends REST_Controller {
                         
                     // }
 
-                    $data['PDF']          = './uploads/';
-                    $data['allowed_types']        = 'gif|jpg|png|pdf';
-                    $this->load->library('upload', $data);
+                    // $data['PDF']          = './uploads/';
+                    // $data['allowed_types']        = 'gif|jpg|png|pdf';
+                    // $this->load->library('upload', $data);
 
-                    if ( ! $this->upload->do_upload('userfile'))
-                    {
-                            $error = array('error' => $this->upload->display_errors());
+                    // if ( ! $this->upload->do_upload('userfile'))
+                    // {
+                    //         $error = array('error' => $this->upload->display_errors());
     
-                            $this->load->view('upload_form', $error);
-                    }
-                    else
-                    {
-                            $data = array('upload_data' => $this->upload->data());
+                    //         $this->load->view('upload_form', $error);
+                    // }
+                    // else
+                    // {
+                    //         $data = array('upload_data' => $this->upload->data());
     
-                            $this->load->view('upload_success', $data);
-                    }
+                    //         $this->load->view('upload_success', $data);
+                    // }
 
                 $status = $this->postingNews->update_postingNews($id, $data);
                 if ($status) {

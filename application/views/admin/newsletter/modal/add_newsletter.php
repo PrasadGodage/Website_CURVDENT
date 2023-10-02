@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
 
-                 <form class="form" id="addNewsletterForm" method="post">
+                 <form class="form" enctype="multipart/form-data" id="addNewsletterForm" method="post">
                     <input type="hidden" name="id" id="id">
 
                         <div class="form-group row">
