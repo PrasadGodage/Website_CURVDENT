@@ -88,7 +88,7 @@ class PostNewsletterController extends REST_Controller {
                         $newsData=$this->input->post();
                         $data=$this->upload->data();
 
-                        $image_path=base_url("uploads/".$data['raw_name'].$data['file_ext']);
+                        $image_path=("uploads/".$data['raw_name'].$data['file_ext']);
                         $newsData['PDF']=$image_path;
 
                     }
