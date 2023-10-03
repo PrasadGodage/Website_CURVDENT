@@ -408,11 +408,9 @@ function setSubscriberList1(list) {
                 <td><input type="checkbox" name="select[]" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
-                <td>
-                        
+                <td>        
                     <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                    <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
-                    <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+                    <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
                 </td>
             </tr>`;
             index++;

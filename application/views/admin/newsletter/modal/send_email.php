@@ -18,21 +18,21 @@
                                         <!-- <div class="box-controls pull-right"> -->
                                        
                                         <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
-                                        <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
-                                        <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i>
+                                        <!-- <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
+                                        <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i> -->
 						                </button>
 
                                 </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
                                 <div class="box-body ">
-                                    <div class="mailbox-messages">
+                                    <!-- <div class="mailbox-messages"> -->
                                         <div class="table-responsive">
                                             <table id="subscriberTable" class="table table-bordered table-striped table-hover">
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
-                                                        <th><input type="checkbox" id="selectAll" /></th>
+                                                        <th>#<input type="checkbox" id="selectAll" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
@@ -44,7 +44,7 @@
                                                 <tfoot>
                                                     <tr>
                                                         <!-- <th class="custom-control-input"></th> -->
-                                                        <th><input type="checkbox" class="largerCheckbox" id="chkAll" /></th>
+                                                        <th>#</th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
@@ -66,7 +66,7 @@
                 <!--form end-->
             </div>
             <!-- /.box-body -->
-        </div>
+        <!-- </div> -->
         <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
