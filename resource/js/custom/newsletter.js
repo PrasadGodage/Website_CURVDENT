@@ -73,11 +73,26 @@ let subscriberList = new Map();
 //   });
 
 
-$('#selectAll').change(function() {
-    var checkboxes = $(this).closest('table').find(':checkbox');
-    checkboxes.prop('checked', $(this).is(':checked'));
+$(document).ready(function () {
+    // Check or uncheck all checkboxes when the "Select All" checkbox in the header is clicked
+    $('#selectAll').change(function () {
+      if ($(this).is(':checked')) {
+        $('input[name="select[]"]').prop('checked', true);
+      } else {
+        $('input[name="select[]"]').prop('checked', false);
+      }
+    });
+  
+    // Check the "Select All" checkbox in the header when all row checkboxes are checked
+    $('#subscriberTable').on('change', 'input[name="select[]"]', function () {
+      if ($('input[name="select[]"]:checked').length === $('input[name="select[]"]').length) {
+        $('#selectAll').prop('checked', true);
+      } else {
+        $('#selectAll').prop('checked', false);
+      }
+    });
   });
-
+  
 
   
 //Submit Category Btn script
