@@ -246,9 +246,43 @@ function sendEmailDetails(){
 
     $('#addSendEmailModal').modal('toggle');
 
+    
+            $.ajax({
+        
+                url: ebase_url+'newsletter_api',
+        
+                type: 'GET',
+        
+                async:false,
+        
+                headers: {
+                    "Authorization": etoken
+                },
+        
+                dataType: 'json',
+        
+                success: function (response) {
+                
+        
+                    if (response.status == 200) {
+        
+                        if (response.data.length != 0) {
+                            for (var i = 0; i < response.data.length; i++) {
+                                subscriberList.set(response.data[i].id, response.data[i]);
+                            }
+                            
+                        }
+                        setSubscriberList1(subscriberList);
+                        console.log(subscriberList);
+                    }
+        
+                }
+                
+            });
+        }
+       
 
 
-}
 
 function setSubscriberList(list) {
 
@@ -277,32 +311,32 @@ function setSubscriberList(list) {
     $('#subscriberTable').DataTable();
     }
 
-// post pdf file ----------------------------------------
-// function displayPDF(pdfData) {
-//     var pdfObject = document.getElementById('pdfPreview');
-//     pdfObject.data = pdfData;
-// }
 
-// // Function to handle file upload
-// $('#uploadButton').click(function () {
-//     var formData = new FormData($('#pdfForm')[0]);
-//     $.ajax({
-//         url: 'upload.php', // Replace with your server-side script for handling file uploads
-//         type: 'POST',
-//         data: formData,
-//         dataType: 'json',
-//         contentType: false,
-//         processData: false,
-//         success: function (response) {
-//             if (response.status === 'success') {
-//                 // Display the uploaded PDF
-//                 displayPDF(response.pdfUrl);
-//             } else {
-//                 alert('Failed to upload PDF. Error: ' + response.message);
-//             }
-//         },
-//         error: function () {
-//             alert('An error occurred during PDF upload.');
-//         }
-//     });
-// });
+    function setSubscriberList1(list) {
+            $('#subscriberTable').dataTable().fnDestroy();
+            $('#subscriberList').empty();
+            var tblData = '';
+            var index = 1;
+        
+            for (let k of list.keys()) {
+                let subscriber = list.get(k);
+        
+                tblData += `
+                <tr>
+                    <td><input type="checkbox" id="selectAll"></td>
+                    <td>${index}</td>
+                    <td>${subscriber.email}</td>
+                    <td>
+                        <input type="checkbox" class="subscriberCheckbox" value="${subscriber.id}">
+                        <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                        <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
+                        <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+                    </td>
+                </tr>`;
+                index++;
+            }
+        
+            $('#subscriberList').html(tblData);
+            $('#subscriberTable').DataTable();
+        }
+        
