@@ -28,23 +28,29 @@
                                 <div class="box-body ">
                                     <div class="mailbox-messages">
                                         <div class="table-responsive">
-                                            <table id="subscriberTable" class="table table-bordered table-striped table table-hover">
+                                            <table id="subscriberTable" class="table table-bordered table-striped table-hover">
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
-                                                        <th>Select All <input type="checkbox" id="selectAll"></th>
+                                                        <th><input type="checkbox" class="largerCheckbox" id="chkAll" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="subscriberList">
-                                                
+                                                    <tr>
+                                                        <td colspan="6" id="trLoader">
+                                                            <div class="text-center">
+                                                            Loading
+                                                            </div>
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                                 <tfoot>
                                                     <tr>
                                                         <!-- <th class="custom-control-input"></th> -->
-                                                        <th>Select All <input type="checkbox" id="selectAll"></th>
+                                                        <!-- <th>Select All <input type="checkbox" id="selectAll"></th> -->
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
