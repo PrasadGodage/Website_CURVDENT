@@ -324,11 +324,11 @@ function setSubscriberList(list) {
         
                 tblData += `
                 <tr>
-                    <td><input type="checkbox" id="selectAll"></t>
+                    <td class="w-30"><input type="checkbox"></td>
                     <td>${index}</td>
                     <td>${subscriber.email}</td>
                     <td>
-                        <input type="checkbox" class="subscriberCheckbox" value="${subscriber.id}">
+                        
                         <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                         <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
                         <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
