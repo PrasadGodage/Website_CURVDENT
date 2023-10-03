@@ -283,7 +283,8 @@ function updateNewsletterDetails(id) {
     $('#title').val('');
     $('#content').val(''); 
     //$('#date').val('');
-     $('#PDF').attr('src','');
+     //$('#PDF').attr('src','');
+     $('#pdf-render').text('');
 
     // Reset the image preview
     //$('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
