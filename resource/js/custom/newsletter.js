@@ -1,94 +1,47 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
 
-// $(document).ready(function() {
-//     // Path to your PDF file
-//     var pdfUrl = './uploads/new.pdf';
-
-//     // Load and render PDF document
-//     PDFJS.getDocument(pdfUrl).promise.then(function(pdf) {
-//         // Get the first page of the PDF
-//         return pdf.getPage(1);
-//     }).then(function(page) {
-//         // Set the scale and viewport
-//         var scale = 1.5;
-//         var viewport = page.getViewport({ scale: scale });
-
-//         // Prepare canvas using jQuery
-//         var canvas = $('<canvas></canvas>').get(0);
-//         var context = canvas.getContext('2d');
-//         canvas.height = viewport.height;
-//         canvas.width = viewport.width;
-
-//         // Append canvas to the #pdf-render element
-//         $('#pdf-render').append(canvas);
-
-//         // Render PDF page on the canvas
-//         var renderContext = {
-//             canvasContext: context,
-//             viewport: viewport
-//         };
-//         page.render(renderContext);
-//     });
-// });
-
-
 
 //Select All Function ----------------------------------------------------
-// $(function () {
-//     "use strict";
-
-//     //Enable iCheck plugin for checkboxes
-//     //iCheck for checkbox and radio inputs
-//     $('.mailbox-messages input[type="checkbox"]').iCheck({
-//       checkboxClass: 'icheckbox_flat-blue',
-//       radioClass: 'iradio_flat-blue'
-//     });
-
-//     //Enable check and uncheck all functionality
-//     $(".checkbox-toggle").click(function () {
-//       var clicks = $(this).data('clicks');
-//       if (clicks) {
-//         //Uncheck all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
-//       } else {
-//         //Check all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("check");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
-//       }
-//       $(this).data("clicks", !clicks);
-//     });
-// }); // End of use strict
-
-// $(document).ready(function () {
-//     // Select All checkbox
-//     $('#selectAll').change(function () {
-//       if (this.checked) {
-//         // Check all the individual checkboxes
-//         $('.selectRow').prop('checked', true);
-//       } else {
-//         // Uncheck all the individual checkboxes
-//         $('.selectRow').prop('checked', false);
-//       }
-//     });
-  
-//     // Individual checkbox
-//     $('.selectRow').change(function () {
-//       // Check if all individual checkboxes are checked
-//       var allChecked = $('.selectRow:checked').length === $('.selectRow').length;
-  
-//       // Update the "Select All" checkbox accordingly
-//       $('#selectAll').prop('checked', allChecked);
-//     });
-//   });
-
-
-  $("button").click(function() {
-    $('input[type="checkbox"]').each(function() {
-      $(this).prop("checked", true);
+$(document).ready(function () {
+    loadGridData();
+    $('#subscriberTable').on('change', '.tblChk', function () {
+      debugger;
+      if ($('.tblChk:checked').length == $('.tblChk').length) {
+        $('#chkAll').prop('checked', true);
+      } else {
+        $('#chkAll').prop('checked', false);
+      }
+      getCheckRecords();
     });
+
+    $("#chkAll").change(function () {
+      debugger;
+      if ($(this).prop('checked')) {
+        $('.tblChk').not(this).prop('checked', true);
+      } else {
+        $('.tblChk').not(this).prop('checked', false);
+      }
+      getCheckRecords();
+    })
   });
+  function getCheckRecords() {
+    debugger;
+    $(".selectedDiv").html("");
+    $('.tblChk:checked').each(function () {
+      debugger;
+      if ($(this).prop('checked')) {
+        if ($(".selectedDiv").children().length == 0) {
+          const rec = "<strong>" + $(this).attr("data-id") + " </strong>";
+          $(".selectedDiv").append(rec);
+        } else {
+          const rec = ", <strong>" + $(this).attr("data-id") + " </strong>";
+          $(".selectedDiv").append(rec);
+        }
+      }
+      console.log(this.value);
+    });
+  }
 
 
 //Submit Category Btn script
@@ -145,6 +98,39 @@ $('#addNewsletterForm').on('submit', function (e) {
         });
     }
 });
+
+
+// $(document).ready(function() {
+//     $('#addNewsletterForm').submit(function(e) {
+//         e.preventDefault();
+
+//         var formData = new FormData($(this)[0]);
+
+//         $.ajax({
+//             url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
+//             type: 'POST',
+            
+//             headers: {
+//             "Authorization": etoken
+//             },
+//             data: formData,
+//             contentType: false,
+//             processData: false,
+//             dataType: 'json',
+//             success: function(response) {
+//                 if (response.status == 200) {
+//                 // Handle the response from the server, e.g., display a success message
+//                 alert('PDF uploaded successfully!');
+//                 }
+//             },
+//             error: function() {
+//                 // Handle errors, if any
+//                 alert('Error occurred while uploading PDF.');
+//             }
+//         });
+//     });
+// });
+
 
 //Add Newsletter Btn script -----------------------------------------------------------------
 $('#addNewsletterBtn').click(function () {
@@ -204,7 +190,6 @@ function setNewsletterList(list) {
     for (let k of list.keys()) {
         
         let newsletter = list.get(k);
-        console.log(newsletter);
     
         tblData += `
         <tr>
@@ -218,7 +203,7 @@ function setNewsletterList(list) {
                 
         </tr>`;
         index++;
-       }
+    }
     
     $('#newsletterList').html(tblData);
     $('#newsletterTable').DataTable();
@@ -373,31 +358,55 @@ function setSubscriberList(list) {
     }
 
 
-    function setSubscriberList1(list) {
-            $('#subscriberTable').dataTable().fnDestroy();
-            $('#subscriberList').empty();
-            var tblData = '';
-            var index = 1;
+    // function setSubscriberList1(list) {
+    //         $('#subscriberTable').dataTable().fnDestroy();
+    //         $('#subscriberList').empty();
+    //         var tblData = '';
+    //         var index = 1;
         
-            for (let k of list.keys()) {
-                let subscriber = list.get(k);
+    //         for (let k of list.keys()) {
+    //             let subscriber = list.get(k);
         
-                tblData += `
-                <tr>
-                    <td><input type="checkbox" class"my-checkbox" /></td>
-                    <td>${index}</td>
-                    <td>${subscriber.email}</td>
-                    <td>
-                        
-                        <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                        <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
-                        <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
-                    </td>
-                </tr>`;
-                index++;
-            }
+    //             tblData += `
+    //             <tr>
+    //                         <td><td>
+    //                         <td>${index}</td>
+    //                         <td>${subscriber.email}</td>
+    //                         <td>
+    //                             <input type="checkbox" class="subscriberCheckbox" value="${subscriber.id}">
+    //                             <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+    //                             <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
+    //                             <a href="#" onclick="sendEmail()"><i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+    //                         </td>
+    //                     </tr>`;
+    //                     index++;
+    //                 }
         
-            $('#subscriberList').html(tblData);
-            $('#subscriberTable').DataTable();
-        }
+    //         $('#subscriberList').html(tblData);
+    //         $('#subscriberTable').DataTable();
+    //     }
         
+    function loadGridData() {
+        $.ajax({
+          type: "GET",
+          url: ebase_url+'newsletter_api',
+          contentType: false,
+          processData: false,
+          data: "",
+          beforeSend: function () {
+            $("#trLoader").show();
+          },
+          success: function (results) {
+            $("#trLoader").remove();
+            let index = 0;
+            results.forEach(subscriber => {
+              let dynamicTR = "<tr>";
+              dynamicTR = dynamicTR + "<td> <input type='checkbox' data-id=" + subscriber.id + " class='largerCheckbox tblChk chk" + index + "' /></td>";
+              dynamicTR = dynamicTR + "<td>" + subscriber.email + "</td>";
+              dynamicTR = dynamicTR + " </tr>";
+              $("#subscriberTable tbody").append(dynamicTR);
+              index++;
+            });
+          }
+        });
+      }
