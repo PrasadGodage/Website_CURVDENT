@@ -43,6 +43,14 @@
                             </div>
                         </div> -->
 
+                        <div class="form-group row" id="photo_preview">
+                            <label class="col-sm-2 col-form-label">PDF</label>
+                            <div class="col-sm-10">
+                                <img src="<?php echo base_url('resource/images/pdf_img.jpg'); ?>" alt="" id="otherdpre"  width="100px" height="100px"/>
+                                <!-- <p><label for="profile_image" style="cursor: pointer;" class="h6"><u>Upload...</u></label></p>
+                                <input type="file" class="form-control" name="profile_image" style="display: none;" id="profile_image" accept="image/*"  onchange="loadFile(event, 'otherdpre')" /> -->
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <div class="col-sm-2">
@@ -50,7 +58,7 @@
                             </div>
                             <div class="btn btn-info btn-file btn-outline btn-rounded">
                                 <i class="fa fa-paperclip"></i> Attachment
-                                <input type="file" name="PDF" id="PDF">
+                                <input type="file" name="PDF" id="PDF" accept="image/*"  onchange="loadFile(event, 'otherdpre')">
                             </div>
                             <div class=""><p class="help-block mt-3 ml-2"><span>Max. 32MB</span></p></div>
                         </div>
