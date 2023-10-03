@@ -32,7 +32,7 @@
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
-                                                     <input type="checkbox" class="largerCheckbox" id="chkAll" />
+                                                        <th><input type="checkbox" class="largerCheckbox" id="chkAll" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
@@ -44,7 +44,7 @@
                                                 <tfoot>
                                                     <tr>
                                                         <!-- <th class="custom-control-input"></th> -->
-                                                        <input type="checkbox" class="largerCheckbox" id="chkAll" />
+                                                        <th><input type="checkbox" class="largerCheckbox" id="chkAll" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
