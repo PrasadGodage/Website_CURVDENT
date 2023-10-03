@@ -4,7 +4,7 @@ let subscriberList = new Map();
 
 //Select All Function ----------------------------------------------------
 $(document).ready(function () {
-    loadGridData();
+    setSubscriberList1();
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
@@ -386,7 +386,7 @@ function setSubscriberList(list) {
     //         $('#subscriberTable').DataTable();
     //     }
         
-    function loadGridData() {
+    function setSubscriberList1() {
         $.ajax({
           type: "GET",
           url: ebase_url+'newsletter_api',
