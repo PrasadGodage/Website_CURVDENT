@@ -115,6 +115,24 @@ class PostNewsletterController extends REST_Controller {
         } else {
             $result=$this->postingNews->get_postingNews($id);
             if (!empty($result)) {
+                $config['upload_path']   = './uploads/'; // Same as in the config file
+                $config['allowed_types'] = 'pdf';
+                $config['max_size']      = 10240; // 10 MB (in kilobytes)
+                // $config['file_name']     = 'website_Requirement.pdf'; // Optional: Define a custom filename if needed
+
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('PDF')) {
+                    // Upload successful, you can do further processing here
+                    $data = $this->upload->data();
+                    $pdf_path = 'uploads/' . $data['file_name'];
+
+                    // echo "<prev>";
+                    // print_r($data);
+
+                    $newsData['PDF']=$pdf_path;
+                    // Perform actions with $pdf_path (e.g., save it to the database)
+                    
 
                 
                 
@@ -127,15 +145,18 @@ class PostNewsletterController extends REST_Controller {
                     $this->response($response, REST_Controller::HTTP_OK);
                 }
             else{
-                $response['msg'] = 'Duplicate Entry!';
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_OK);
-            }
-            } else {
                 $response['msg'] = 'Data not found!';
                 $response['id'] = $id;
                 $response['status'] = 400;
                 $this->response($response, REST_Controller::HTTP_OK);
+                
+            }
+        }
+            } else {
+                $response['msg'] = 'Data not found!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_OK);
+                
             }
         }
       
