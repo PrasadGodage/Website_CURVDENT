@@ -52,13 +52,13 @@ let subscriberList = new Map();
 //   });
   
 
-  $("button").onclick(function() {
+  $("button").click(function() {
     $('input[type="checkbox"]').each(function() {
       $(this).prop("checked", true);
     });
   });
 
-  
+
 //Submit Category Btn script
 
 $('#addNewsletterForm').on('submit', function (e) {
