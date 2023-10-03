@@ -218,6 +218,8 @@ function setNewsletterList(list) {
                 
         </tr>`;
         index++;
+        $('#pdf-render').append(newsletter.PDF);
+
     }
     
     $('#newsletterList').html(tblData);
