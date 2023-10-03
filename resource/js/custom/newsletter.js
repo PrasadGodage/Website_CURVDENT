@@ -1,36 +1,36 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
 
-$(document).ready(function() {
-    // Path to your PDF file
-    var pdfUrl = './uploads/new.pdf';
+// $(document).ready(function() {
+//     // Path to your PDF file
+//     var pdfUrl = './uploads/new.pdf';
 
-    // Load and render PDF document
-    PDFJS.getDocument(pdfUrl).promise.then(function(pdf) {
-        // Get the first page of the PDF
-        return pdf.getPage(1);
-    }).then(function(page) {
-        // Set the scale and viewport
-        var scale = 1.5;
-        var viewport = page.getViewport({ scale: scale });
+//     // Load and render PDF document
+//     PDFJS.getDocument(pdfUrl).promise.then(function(pdf) {
+//         // Get the first page of the PDF
+//         return pdf.getPage(1);
+//     }).then(function(page) {
+//         // Set the scale and viewport
+//         var scale = 1.5;
+//         var viewport = page.getViewport({ scale: scale });
 
-        // Prepare canvas using jQuery
-        var canvas = $('<canvas></canvas>').get(0);
-        var context = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+//         // Prepare canvas using jQuery
+//         var canvas = $('<canvas></canvas>').get(0);
+//         var context = canvas.getContext('2d');
+//         canvas.height = viewport.height;
+//         canvas.width = viewport.width;
 
-        // Append canvas to the #pdf-render element
-        $('#pdf-render').append(canvas);
+//         // Append canvas to the #pdf-render element
+//         $('#pdf-render').append(canvas);
 
-        // Render PDF page on the canvas
-        var renderContext = {
-            canvasContext: context,
-            viewport: viewport
-        };
-        page.render(renderContext);
-    });
-});
+//         // Render PDF page on the canvas
+//         var renderContext = {
+//             canvasContext: context,
+//             viewport: viewport
+//         };
+//         page.render(renderContext);
+//     });
+// });
 
 
 
