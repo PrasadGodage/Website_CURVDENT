@@ -28,7 +28,7 @@
                                 <div class="box-body ">
                                     <div class="mailbox-messages">
                                         <div class="table-responsive">
-                                            <table id="subscriberTable" class="table table-bordered table-striped table table-hover">
+                                            <table id="subscriberTable" class="table table-bordered table-striped table-hover">
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
