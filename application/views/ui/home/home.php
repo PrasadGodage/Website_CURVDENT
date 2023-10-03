@@ -821,7 +821,7 @@
         }
 
         .fa {
-         padding: 10px;
+         padding: 20px;
          font-size: 10px;
          width: 10px;
          text-align: center;
@@ -836,4 +836,22 @@
         background: #3B5998;
         color: white;
        }
+       .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+
+       .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
     </style>
