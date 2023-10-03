@@ -3,31 +3,55 @@ let subscriberList = new Map();
 
 
 //Select All Function ----------------------------------------------------
-$(function () {
-    "use strict";
+// $(function () {
+//     "use strict";
 
-    //Enable iCheck plugin for checkboxes
-    //iCheck for checkbox and radio inputs
-    $('.mailbox-messages input[type="checkbox"]').iCheck({
-      checkboxClass: 'icheckbox_flat-blue',
-      radioClass: 'iradio_flat-blue'
-    });
+//     //Enable iCheck plugin for checkboxes
+//     //iCheck for checkbox and radio inputs
+//     $('.mailbox-messages input[type="checkbox"]').iCheck({
+//       checkboxClass: 'icheckbox_flat-blue',
+//       radioClass: 'iradio_flat-blue'
+//     });
 
-    //Enable check and uncheck all functionality
-    $(".checkbox-toggle").click(function () {
-      var clicks = $(this).data('clicks');
-      if (clicks) {
-        //Uncheck all checkboxes
-        $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
-        $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
+//     //Enable check and uncheck all functionality
+//     $(".checkbox-toggle").click(function () {
+//       var clicks = $(this).data('clicks');
+//       if (clicks) {
+//         //Uncheck all checkboxes
+//         $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
+//         $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
+//       } else {
+//         //Check all checkboxes
+//         $(".mailbox-messages input[type='checkbox']").iCheck("check");
+//         $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
+//       }
+//       $(this).data("clicks", !clicks);
+//     });
+// }); // End of use strict
+
+$(document).ready(function () {
+    // Select All checkbox
+    $('#selectAll').change(function () {
+      if (this.checked) {
+        // Check all the individual checkboxes
+        $('.selectRow').prop('checked', true);
       } else {
-        //Check all checkboxes
-        $(".mailbox-messages input[type='checkbox']").iCheck("check");
-        $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
+        // Uncheck all the individual checkboxes
+        $('.selectRow').prop('checked', false);
       }
-      $(this).data("clicks", !clicks);
     });
-}); // End of use strict
+  
+    // Individual checkbox
+    $('.selectRow').change(function () {
+      // Check if all individual checkboxes are checked
+      var allChecked = $('.selectRow:checked').length === $('.selectRow').length;
+  
+      // Update the "Select All" checkbox accordingly
+      $('#selectAll').prop('checked', allChecked);
+    });
+  });
+  
+
 
 
 //Submit Category Btn script
@@ -354,7 +378,7 @@ function setSubscriberList(list) {
         
                 tblData += `
                 <tr>
-                    <td class="w-30"><input type="checkbox"></td>
+                    <td><input type="checkbox" class="selectRow"></td>
                     <td>${index}</td>
                     <td>${subscriber.email}</td>
                     <td>
