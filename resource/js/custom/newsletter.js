@@ -52,25 +52,33 @@ let subscriberList = new Map();
 //   });
   
 
-$(document).ready(function () {
-    // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
-    $('#chkAll').change(function () {
-      if ($(this).is(':checked')) {
-        $('.tblChk').prop('checked', true);
-      } else {
-        $('.tblChk').prop('checked', false);
-      }
-    });
+// $(document).ready(function () {
+//     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
+//     $('#chkAll').change(function () {
+//       if ($(this).is(':checked')) {
+//         $('.tblChk').prop('checked', true);
+//       } else {
+//         $('.tblChk').prop('checked', false);
+//       }
+//     });
   
-    // Check the "Select All" checkbox when all row checkboxes are checked
-    $('#subscriberTable').on('change', '.tblChk', function () {
-      if ($('.tblChk:checked').length === $('.tblChk').length) {
-        $('#chkAll').prop('checked', true);
-      } else {
-        $('#chkAll').prop('checked', false);
-      }
-    });
+//     // Check the "Select All" checkbox when all row checkboxes are checked
+//     $('#subscriberTable').on('change', '.tblChk', function () {
+//       if ($('.tblChk:checked').length === $('.tblChk').length) {
+//         $('#chkAll').prop('checked', true);
+//       } else {
+//         $('#chkAll').prop('checked', false);
+//       }
+//     });
+//   });
+
+
+$('#selectAll').change(function() {
+    var checkboxes = $(this).closest('table').find(':checkbox');
+    checkboxes.prop('checked', $(this).is(':checked'));
   });
+
+
   
 //Submit Category Btn script
 
@@ -397,7 +405,7 @@ function setSubscriberList1(list) {
         
             tblData += `
             <tr>
-                <td></td>
+                <td><input type="checkbox" name="select[]" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
                 <td>
