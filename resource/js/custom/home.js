@@ -76,12 +76,12 @@ function setAllPostList(list){
     data8 +=`
     
             <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-            <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
+            <div class="col-md-3 mb-20 animate-box" data-animate-effect="fadeInUp">
                 <a  href="#" onclick="postDetails(${firstPost.id})">
                     <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                 </a>
             </div>
-            <div class="col-md-3 mb-20 animate-box" data-animate-effect="fadeInUp">
+            <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
                <a href="https://twitter.com/" class="fa fa-twitter"></a>
                <a href="https://www.google.com/" class="fa fa-google"></a>
