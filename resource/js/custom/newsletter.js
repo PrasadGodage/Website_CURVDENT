@@ -146,39 +146,6 @@ $('#addNewsletterForm').on('submit', function (e) {
     }
 });
 
-
-// $(document).ready(function() {
-//     $('#addNewsletterForm').submit(function(e) {
-//         e.preventDefault();
-
-//         var formData = new FormData($(this)[0]);
-
-//         $.ajax({
-//             url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
-//             type: 'POST',
-            
-//             headers: {
-//             "Authorization": etoken
-//             },
-//             data: formData,
-//             contentType: false,
-//             processData: false,
-//             dataType: 'json',
-//             success: function(response) {
-//                 if (response.status == 200) {
-//                 // Handle the response from the server, e.g., display a success message
-//                 alert('PDF uploaded successfully!');
-//                 }
-//             },
-//             error: function() {
-//                 // Handle errors, if any
-//                 alert('Error occurred while uploading PDF.');
-//             }
-//         });
-//     });
-// });
-
-
 //Add Newsletter Btn script -----------------------------------------------------------------
 $('#addNewsletterBtn').click(function () {
     $('#addNewsletterModal').modal('toggle');
