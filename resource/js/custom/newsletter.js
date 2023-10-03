@@ -324,7 +324,7 @@ function setSubscriberList(list) {
         
                 tblData += `
                 <tr>
-                    <td><input type="checkbox" id="selectAll"></td>
+                    <td><input type="checkbox" id="selectAll"></t>
                     <td>${index}</td>
                     <td>${subscriber.email}</td>
                     <td>

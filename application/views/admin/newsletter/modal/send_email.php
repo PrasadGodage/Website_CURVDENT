@@ -11,7 +11,7 @@
                  <form class="form" id="addSendEmailForm" method="post">
                     <input type="hidden" name="id" id="id">
 
-                    <div class="col-12">         
+                        <div class="col-12">         
                             <div class="box">
                                 <div class="box-header with-border box-controls pull-right custom-control custom-checkbox pl-0">
                                     <!-- <div class="box-header pull-left"> -->
@@ -24,38 +24,39 @@
                                 </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
-                                <div class="box-body">
-                                    <div class="table-responsive">
-                                        <table id="subscriberTable" class="table table-bordered table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <!-- <th class="custom-control-input"></th> -->
-                                                    <th>#</th>
-                                                    <th>Sr.No</th>
-                                                    <th>Email</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="subscriberList">
+                                <div class="box-body ">
+                                    <div class="mailbox-messages">
+                                        <div class="table-responsive icheckbox_flat-blue" aria-checked="false" aria-disabled="false">
+                                            <table id="subscriberTable" class="table table-bordered table-striped table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                     <!-- <th class="custom-control-input"></th> -->
+                                                        <th>#</th>
+                                                        <th>Sr.No</th>
+                                                        <th>Email</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="subscriberList">
                                                 
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <!-- <th class="custom-control-input"></th> -->
-                                                    <td>#</td>
-                                                    <th>Sr.No</th>
-                                                    <th>Email</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <!-- <th class="custom-control-input"></th> -->
+                                                        <td>#</td>
+                                                        <th>Sr.No</th>
+                                                        <th>Email</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
                                     </div>
+                                    <!-- /.box-body -->
+
                                 </div>
-                                <!-- /.box-body -->
-
+                                <!-- /.box -->
                             </div>
-                           <!-- /.box -->
-
                            <!-- /.box -->          
                         </div>
 
