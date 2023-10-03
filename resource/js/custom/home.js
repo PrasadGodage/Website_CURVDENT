@@ -87,7 +87,7 @@ function setAllPostList(list){
                <a href="https://www.google.com/" class="fa fa-google"></a>
                <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-               <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
+               <a href="https://web.whatsapp.com/sharer.php?u=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-whatsapp"></a>
             </div>
     `;
     
