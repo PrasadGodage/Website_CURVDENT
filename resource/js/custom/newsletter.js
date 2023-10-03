@@ -295,7 +295,7 @@ function updateNewsletterDetails(id) {
     $('#title').val(newsletter.title);
     $('#content').val(newsletter.content);
     //(newsletter.PDF != null) ? $('#PDF').attr('src', ebase_url + newsletter.PDF) : '';
-    $('#PDF').attr('src', ebase_url + newsletter.PDF);
+   //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
     $('#pdf-render').text(newsletter.PDF);
     //$('#date').val(newsletter.date);
     // Show the updated post details in a modal
