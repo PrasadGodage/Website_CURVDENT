@@ -32,7 +32,7 @@
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
-                                                        <th><input type="checkbox" class="largerCheckbox" id="chkAll" /></th>
+                                                        <th><input type="checkbox" id="selectAll" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                         <th>Action</th>
