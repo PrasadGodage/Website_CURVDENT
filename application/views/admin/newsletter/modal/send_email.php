@@ -19,14 +19,15 @@
                                        
                                         <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
                                         <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
-                                        <!-- <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="ion ion-android-checkbox-outline-blank"></i></button> -->
+                                        <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i>
+						                </button>
 
                                 </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
                                 <div class="box-body ">
                                     <div class="mailbox-messages">
-                                        <div class="table-responsive icheckbox_flat-blue" aria-checked="false" aria-disabled="false">
+                                        <div class="table-responsive">
                                             <table id="subscriberTable" class="table table-bordered table-striped table table-hover">
                                                 <thead>
                                                     <tr>
