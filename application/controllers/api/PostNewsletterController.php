@@ -91,25 +91,21 @@ class PostNewsletterController extends REST_Controller {
                     $newsData['PDF']=$pdf_path;
                     // Perform actions with $pdf_path (e.g., save it to the database)
                     
-                    echo 'PDF uploaded successfully.';
-                } else {
-                    // Upload failed, show error messages
-                    echo $this->upload->display_errors();
+                    
+                    $posting_id = $this->postingNews->insert_postingNews($newsData);
+                    if (!empty($posting_id)) {
+                        $restData = $this->postingNews->get_postingNews($posting_id);
+                        $response['msg'] = 'NewsLetter created successfully!';
+                        $response['data'] = $restData;
+                        $response['status'] = 200;
+                        $this->response($response, REST_Controller::HTTP_OK);
+                    } else {
+                        $response['msg'] = 'Bad Request!';
+                        $response['id'] = $id;
+                        $response['status'] = 400;
+                        $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+                    } 
                 }
-
-                     $posting_id = $this->postingNews->insert_postingNews($newsData);
-            if (!empty($posting_id)) {
-                $restData = $this->postingNews->get_postingNews($posting_id);
-                $response['msg'] = 'NewsLetter created successfully!';
-                $response['data'] = $restData;
-                $response['status'] = 200;
-                $this->response($response, REST_Controller::HTTP_OK);
-            } else {
-                $response['msg'] = 'Bad Request!';
-                $response['id'] = $id;
-                $response['status'] = 400;
-                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
-            } 
                 }else{
                     $response['msg'] = 'Duplicate Entry!';
                 $response['status'] = 400;
