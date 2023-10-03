@@ -854,4 +854,8 @@
         background: #125688;
         color: white;
       }
+      .fa-whatsapp {
+        background: rgba(0, 128, 0, 0.6);
+        color: white;
+      }
     </style>

@@ -82,11 +82,12 @@ function setAllPostList(list){
                 </a>
             </div>
             <div class="col-md-3 mb-20 animate-box" data-animate-effect="fadeInUp">
-               <a href="#" class="fa fa-facebook"></a>
-               <a href="#" class="fa fa-twitter"></a>
-               <a href="#" class="fa fa-google"></a>
-               <a href="#" class="fa fa-linkedin"></a>
-               <a href="#" class="fa fa-instagram"></a>
+               <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+               <a href="https://twitter.com/" class="fa fa-twitter"></a>
+               <a href="https://www.google.com/" class="fa fa-google"></a>
+               <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+               <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+               <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
             </div>
     `;
     
