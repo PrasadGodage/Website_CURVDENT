@@ -160,7 +160,7 @@
                 </div>
                 <div class="col-md-3 mb-20 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
-                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
+                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Hello</button>
                     </a>
                 </div>
             </div>
