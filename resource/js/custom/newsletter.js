@@ -52,12 +52,26 @@ let subscriberList = new Map();
 //   });
   
 
-  $("button").click(function() {
-    $('input[type="checkbox"]').each(function() {
-      $(this).prop("checked", true);
+$(document).ready(function () {
+    // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
+    $('#chkAll').change(function () {
+      if ($(this).is(':checked')) {
+        $('.tblChk').prop('checked', true);
+      } else {
+        $('.tblChk').prop('checked', false);
+      }
+    });
+  
+    // Check the "Select All" checkbox when all row checkboxes are checked
+    $('#subscriberTable').on('change', '.tblChk', function () {
+      if ($('.tblChk:checked').length === $('.tblChk').length) {
+        $('#chkAll').prop('checked', true);
+      } else {
+        $('#chkAll').prop('checked', false);
+      }
     });
   });
-
+  
 //Submit Category Btn script
 
 $('#addNewsletterForm').on('submit', function (e) {
