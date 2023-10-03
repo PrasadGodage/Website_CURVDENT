@@ -83,6 +83,10 @@ function setAllPostList(list){
             </div>
             <div class="col-md-3 mb-20 animate-box" data-animate-effect="fadeInUp">
                <a href="#" class="fa fa-facebook"></a>
+               <a href="#" class="fa fa-twitter"></a>
+               <a href="#" class="fa fa-google"></a>
+               <a href="#" class="fa fa-linkedin"></a>
+               <a href="#" class="fa fa-instagram"></a>
             </div>
     `;
     
