@@ -237,6 +237,7 @@ function setNewsletterList(list) {
     for (let k of list.keys()) {
         
         let newsletter = list.get(k);
+        console.log(newsletter);
     
         tblData += `
         <tr>
