@@ -288,7 +288,7 @@ function updateNewsletterDetails(id) {
     //$('#date').val('');
      $('#PDF').attr('src','');
 
-    // Reset the image preview
+    
     //$('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
     
     $('.error').text('');
