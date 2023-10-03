@@ -29,31 +29,36 @@ let subscriberList = new Map();
 //     });
 // }); // End of use strict
 
-$(document).ready(function () {
-    // Select All checkbox
-    $('#selectAll').change(function () {
-      if (this.checked) {
-        // Check all the individual checkboxes
-        $('.selectRow').prop('checked', true);
-      } else {
-        // Uncheck all the individual checkboxes
-        $('.selectRow').prop('checked', false);
-      }
-    });
+// $(document).ready(function () {
+//     // Select All checkbox
+//     $('#selectAll').change(function () {
+//       if (this.checked) {
+//         // Check all the individual checkboxes
+//         $('.selectRow').prop('checked', true);
+//       } else {
+//         // Uncheck all the individual checkboxes
+//         $('.selectRow').prop('checked', false);
+//       }
+//     });
   
-    // Individual checkbox
-    $('.selectRow').change(function () {
-      // Check if all individual checkboxes are checked
-      var allChecked = $('.selectRow:checked').length === $('.selectRow').length;
+//     // Individual checkbox
+//     $('.selectRow').change(function () {
+//       // Check if all individual checkboxes are checked
+//       var allChecked = $('.selectRow:checked').length === $('.selectRow').length;
   
-      // Update the "Select All" checkbox accordingly
-      $('#selectAll').prop('checked', allChecked);
+//       // Update the "Select All" checkbox accordingly
+//       $('#selectAll').prop('checked', allChecked);
+//     });
+//   });
+  
+
+  $("button").onclick(function() {
+    $('input[type="checkbox"]').each(function() {
+      $(this).prop("checked", true);
     });
   });
+
   
-
-
-
 //Submit Category Btn script
 
 $('#addNewsletterForm').on('submit', function (e) {
@@ -378,7 +383,7 @@ function setSubscriberList(list) {
         
                 tblData += `
                 <tr>
-                    <td><input type="checkbox" class="selectRow"></td>
+                    <td><input type="checkbox" class"my-checkbox" /></td>
                     <td>${index}</td>
                     <td>${subscriber.email}</td>
                     <td>
