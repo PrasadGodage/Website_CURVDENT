@@ -96,4 +96,3 @@ function postDetails(id){
     $(location).attr('href',ebase_url+'blog_page/'+id);
 }
 
-alert("Hii");
