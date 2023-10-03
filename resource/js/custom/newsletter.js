@@ -50,7 +50,7 @@ let subscriberList = new Map();
 //       $('#selectAll').prop('checked', allChecked);
 //     });
 //   });
-  
+
 
   $("button").click(function() {
     $('input[type="checkbox"]').each(function() {
