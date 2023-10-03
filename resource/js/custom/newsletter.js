@@ -32,7 +32,7 @@ $('#addNewsletterForm').on('submit', function (e) {
 
             success: function (response) {
                 if (response.status == 200) {
-                    $('#addNewsletterModal').modal('toggle');
+                    $(location).attr('href',ebase_url+'newsletter');
 
                     let id=response.data.id;
                   
