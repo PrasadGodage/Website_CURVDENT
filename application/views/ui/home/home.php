@@ -155,7 +155,7 @@
                 <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
                 <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
-                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">More</button>
+                        <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
                 </div>
             </div>
@@ -819,4 +819,21 @@
         .read-more-button {
             display: none;
         }
+
+        .fa {
+         padding: 10px;
+         font-size: 10px;
+         width: 10px;
+         text-align: center;
+         text-decoration: none;
+         margin: 5px 2px;
+        }
+        .fa:hover {
+        opacity: 0.7;
+        }
+
+       .fa-facebook {
+        background: #3B5998;
+        color: white;
+       }
     </style>
