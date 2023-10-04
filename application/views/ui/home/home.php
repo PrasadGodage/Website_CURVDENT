@@ -87,13 +87,13 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">About Us</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-7 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -110,7 +110,7 @@
                     <p></p>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <div class="betty-about-img">
                         <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt=""> </div>
                     </div>
@@ -122,19 +122,19 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-10 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">Latest Blog</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp" id="data6">
+                <div class="col-md-1 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-10 animate-box" data-animate-effect="fadeInUp" id="data6">
                     <!-- <div class="betty-about-img">
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
                     </div> -->
                 </div>
-                <div class="col-md-6 mb-20 animate-box content" data-animate-effect="fadeInUp"  id="data7">
+                <div class="col-md-6 mb-10 animate-box content" data-animate-effect="fadeInUp"  id="data7">
                     <!-- <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -149,11 +149,11 @@
                         </div>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-1 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
             <div class="row" id="data8">
-                <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-5 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-10 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
