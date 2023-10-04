@@ -3,31 +3,31 @@ let subscriberList = new Map();
 
 
 //Select All Function ----------------------------------------------------
-// $(function () {
-//     "use strict";
+$(function () {
+    "use strict";
 
-//     //Enable iCheck plugin for checkboxes
-//     //iCheck for checkbox and radio inputs
-//     $('.mailbox-messages input[type="checkbox"]').iCheck({
-//       checkboxClass: 'icheckbox_flat-blue',
-//       radioClass: 'iradio_flat-blue'
-//     });
+    //Enable iCheck plugin for checkboxes
+    //iCheck for checkbox and radio inputs
+    $('.mailbox-messages input[type="checkbox"]').iCheck({
+      checkboxClass: 'icheckbox_flat-blue',
+      radioClass: 'iradio_flat-blue'
+    });
 
-//     //Enable check and uncheck all functionality
-//     $(".checkbox-toggle").click(function () {
-//       var clicks = $(this).data('clicks');
-//       if (clicks) {
-//         //Uncheck all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
-//       } else {
-//         //Check all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("check");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
-//       }
-//       $(this).data("clicks", !clicks);
-//     });
-// }); // End of use strict
+    //Enable check and uncheck all functionality
+    $(".checkbox-toggle").click(function () {
+      var clicks = $(this).data('clicks');
+      if (clicks) {
+        //Uncheck all checkboxes
+        $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
+        $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
+      } else {
+        //Check all checkboxes
+        $(".mailbox-messages input[type='checkbox']").iCheck("check");
+        $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
+      }
+      $(this).data("clicks", !clicks);
+    });
+}); // End of use strict
 
 // $(document).ready(function () {
 //     // Select All checkbox
@@ -421,7 +421,14 @@ function setSubscriberList1(list) {
         
             tblData += `
             <tr>
-                <td><input type="checkbox" name="select[]" /></td>
+                <td><input type="checkbox" /></td>
+                <td class="w-30">
+                <div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
+                <input type="checkbox" style="position: absolute; opacity: 0;">
+                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;">
+                </ins>
+                </div>
+                </td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
                 <td>        
