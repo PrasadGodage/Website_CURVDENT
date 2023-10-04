@@ -337,7 +337,7 @@ function setSubscriberList1(list) {
 }
 
 //Select All Function ----------------------------------------------------
-$(function () {
+$(document)(function () {
 
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
@@ -349,7 +349,7 @@ $(function () {
     //   getCheckRecords();
     });
 
-    $("#chkAll").onchange(function () {
+    $("#chkAll").change(function () {
       debugger;
       if ($(this).prop('checked')) {
         $('.tblChk').not(this).prop('checked', true);
