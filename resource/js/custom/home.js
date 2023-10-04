@@ -83,11 +83,11 @@ function setAllPostList(list){
             </div>
             <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
                <a href="http://www.facebook.com/sharer.php?u=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-facebook"></a>
-               <a href="https://twitter.com/" class="fa fa-twitter"></a>
-               <a href="https://www.google.com/share?url=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-google"></a>
-               <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+               <a href=""http://twitter.com/share?url=http://dev.curvdent.com/blog_page/7&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank" class="fa fa-twitter"></a>
+               <a href="https://plus.google.com/share?url=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-google"></a>
+               <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://dev.curvdent.com/blog_page/7" class="fa fa-linkedin"></a>
                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-               <a href="https://web.whatsapp.com/" target="_blank" class="fa fa-whatsapp"></a>  
+               <a href="whatsapp://send?text=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-whatsapp"></a>  
             </div>
     `;
     
