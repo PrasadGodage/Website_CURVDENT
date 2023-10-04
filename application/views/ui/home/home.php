@@ -654,10 +654,10 @@
     <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
     <!-- Content of your section goes here -->
    
-        <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:60px;">
+        <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;">
             <div class="row">
                 <div class="col-md-12 mb-30">
-                    <h2 class="section-title" id="newsletter">Newsletter</h2>
+                    <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
             </div>
