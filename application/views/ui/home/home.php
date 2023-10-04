@@ -651,7 +651,8 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <section class="section-padding" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+   
     <!-- Content of your section goes here -->
    
         <div class="container">
