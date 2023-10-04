@@ -661,6 +661,7 @@
                     <hr class="line line-hr-left text-center">
                 </div>
             </div>
+        </div>
       
           <!-- <div class="section-header">
             <h2>Newsletter</h2>
