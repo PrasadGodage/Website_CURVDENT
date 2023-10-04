@@ -147,7 +147,7 @@ function setPostList(postList) {
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
-                                    <i class="fa fa-calendar" aria-hidden="true">${firstPost.date}
+                                    ${firstPost.date}
                                 </div>
                                 <div class="col-md-12">
                                     <h5>${firstPost.title}</h5>
