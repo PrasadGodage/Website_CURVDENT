@@ -337,7 +337,7 @@ function setSubscriberList1(list) {
 }
 
 //Select All Function ----------------------------------------------------
-$(function () {
+// $(function () {
 
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
@@ -358,7 +358,7 @@ $(function () {
       }
     //   getCheckRecords();
     })
-  });
+//   });
 
 //   function loadGridData() {
 //     $.ajax({
