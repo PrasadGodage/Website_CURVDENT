@@ -86,8 +86,8 @@ function setAllPostList(list){
                <a href="https://twitter.com/intent/tweet?url=dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-twitter"></a>
                <a href="https://plus.google.com/share?url=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-google"></a>
                <a href="https://www.linkedin.com/shareArticle?url=dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-linkedin"></a>
-               <a href="https://www.instagram.com/sharer.php?u=http://dev.curvdent.com/blog_page/7" class="fa fa-instagram"></a>
-               <a href="whatsapp://send?text=http://dev.curvdent.com/blog_page/7" target="_blank" class="fa fa-whatsapp"></a>  
+               <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+               <a href="https://api.whatsapp.com/send?text=https://dev.curvdent.com/blog_page/7" data-action="share/whatsapp/share" target="_blank" class="fa fa-whatsapp"></a>  
             </div>
     `;
     
