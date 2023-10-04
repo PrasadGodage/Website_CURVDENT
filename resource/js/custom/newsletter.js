@@ -245,7 +245,7 @@ function sendEmailDetails(){
                             }
                             
                         }
-                        // setSubscriberList1(subscriberList);
+                        setSubscriberList1(subscriberList);
                         console.log(subscriberList);
                     }
         
@@ -310,35 +310,35 @@ function sendEmailDetails(){
 //         $('#subscriberTable').DataTable();
 // }
         
-// function setSubscriberList1(list) {
-//     $('#subscriberTable').DataTable().destroy();
-//     $('#subscriberList').empty();
-//     var index = 1;
-//     for (let k of list.keys()) {
-//         let subscriber = list.get(k);
-//         results.forEach(subscriber => {
-//         let tblData = `
-//             <tr>
-//                 <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
-//                 <td>${index}</td>
-//                 <td>${subscriber.email}</td>
-//                 <td>
-//                     <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                     <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
-//                 </td>
-//             </tr>`;
+function setSubscriberList1(list) {
+    $('#subscriberTable').DataTable().destroy();
+    $('#subscriberList').empty();
+    var index = 1;
+    for (let k of list.keys()) {
+        let subscriber = list.get(k);
+        results.forEach(subscriber => {
+        let tblData = `
+            <tr>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
+                <td>${index}</td>
+                <td>${subscriber.email}</td>
+                <td>
+                    <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                    <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
+                </td>
+            </tr>`;
 
-//         $("#subscriberTable tbody").append(tblData);
-//         index++;
-//     });
-// }
+        $("#subscriberTable tbody").append(tblData);
+        index++;
+    });
+}
 
-//     $('#subscriberTable').DataTable();
-// }
+    $('#subscriberTable').DataTable();
+}
 
 //Select All Function ----------------------------------------------------
 $(document).ready(function () {
-    loadGridData();
+    setSubscriberList1();
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
@@ -360,31 +360,31 @@ $(document).ready(function () {
     })
   });
 
-  function loadGridData() {
-    $.ajax({
-      type: "GET",
-      url: ebase_url+'newsletter_api',
-      contentType: false,
-      processData: false,
-      data: "",
-      beforeSend: function () {
-    //     $("#trLoader").show();
-      },
-      success: function (results) {
-        // $("#trLoader").remove();
-        let index = 0;
-        results.forEach(element => {
-          let dynamicTR = "<tr>";
-          dynamicTR = dynamicTR + "<td> <input type='checkbox' data-id=" + element.id + " class='largerCheckbox tblChk chk" + index + "' /></td>";
-        //   dynamicTR = dynamicTR + "<td>" + element.name + "</td>";
-        //   dynamicTR = dynamicTR + "<td>" + element.username + "</td>";
-          dynamicTR = dynamicTR + "<td>" + element.email + "</td>";
-        //   dynamicTR = dynamicTR + "<td>" + element.phone + "</td>";
-        //   dynamicTR = dynamicTR + "<td>" + element.website + "</td>";
-          dynamicTR = dynamicTR + " </tr>";
-          $("#subscriberTable tbody").append(dynamicTR);
-          index++;
-        });
-      }
-    });
-  }
+//   function loadGridData() {
+//     $.ajax({
+//       type: "GET",
+//       url: ebase_url+'newsletter_api',
+//       contentType: false,
+//       processData: false,
+//       data: "",
+//       beforeSend: function () {
+//     //     $("#trLoader").show();
+//       },
+//       success: function (results) {
+//         // $("#trLoader").remove();
+//         let index = 0;
+//         results.forEach(element => {
+//           let dynamicTR = "<tr>";
+//           dynamicTR = dynamicTR + "<td> <input type='checkbox' data-id=" + element.id + " class='largerCheckbox tblChk chk" + index + "' /></td>";
+//         //   dynamicTR = dynamicTR + "<td>" + element.name + "</td>";
+//         //   dynamicTR = dynamicTR + "<td>" + element.username + "</td>";
+//           dynamicTR = dynamicTR + "<td>" + element.email + "</td>";
+//         //   dynamicTR = dynamicTR + "<td>" + element.phone + "</td>";
+//         //   dynamicTR = dynamicTR + "<td>" + element.website + "</td>";
+//           dynamicTR = dynamicTR + " </tr>";
+//           $("#subscriberTable tbody").append(dynamicTR);
+//           index++;
+//         });
+//       }
+//     });
+//   }
