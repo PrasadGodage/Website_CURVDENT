@@ -316,7 +316,7 @@ function setSubscriberList1(list) {
     var index = 1;
     for (let k of list.keys()) {
         let subscriber = list.get(k);
-        results.forEach(subscriber => {
+        // results.forEach(subscriber => {
         let tblData = `
             <tr>
                 <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
@@ -330,15 +330,15 @@ function setSubscriberList1(list) {
 
         $("#subscriberTable tbody").append(tblData);
         index++;
-    });
+    // });
 }
 
     $('#subscriberTable').DataTable();
 }
 
 //Select All Function ----------------------------------------------------
-$(document).ready(function () {
-    setSubscriberList1();
+$(function () {
+
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
