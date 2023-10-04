@@ -245,7 +245,7 @@ function sendEmailDetails(){
                             }
                             
                         }
-                        setSubscriberList1(subscriberList);
+                        // setSubscriberList1(subscriberList);
                         console.log(subscriberList);
                     }
         
