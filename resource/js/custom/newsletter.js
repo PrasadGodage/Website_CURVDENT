@@ -4,7 +4,7 @@ let subscriberList = new Map();
 
 //Select All Function ----------------------------------------------------
 // $(document).ready(function () {
-    loadGridData();
+    setSubscriberList1(list);
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
@@ -357,6 +357,6 @@ function setSubscriberList1(list) {
         $("#subscriberTable tbody").append(tblData);
         index++;
     }
-    
+
     $('#subscriberTable').DataTable();
 }
