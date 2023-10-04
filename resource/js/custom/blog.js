@@ -145,8 +145,8 @@ function setPostList(postList) {
                                     <a href="#" onclick="postDetails(${firstPost.id})">
                                     <button type="button" class="btn btn-warning" style="margin-top : 10px;">Latest Blog</button></a>
                                 </div>
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-5">
+                                
+                                <div class="col-sm-6">
                                 <i class="fa fa-calendar" aria-hidden="true"></i>${firstPost.date}
                                 </div>
                                 <div class="col-md-12">
