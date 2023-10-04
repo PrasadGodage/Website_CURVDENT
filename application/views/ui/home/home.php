@@ -654,7 +654,7 @@
     <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
     <!-- Content of your section goes here -->
    
-        <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
                     <h2 class="section-title" id="contact">Newsletter</h2>
@@ -666,29 +666,30 @@
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
             </div> -->
-
-            <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                <form method="POST" action="#">
-                    <div class="row justify-content-center d-flex">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <input name="email" type="email" placeholder="Email *" required>
-                            <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
-                            <!-- <button type="submit" class="ms-2">Subscribe</button> -->
-                            <!-- <input name="submit" type="submit" value="Send Message"> -->
-                        </div>
-                        <div class="col-md-3">
-                                <input name="submit" type="submit" value="Subscribe">
+            <div class="row aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <form method="POST" action="#">
+                        <div class="row justify-content-center d-flex">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-8">
+                                <input name="email" type="email" placeholder="Email *" required>
+                                <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
+                                <!-- <button type="submit" class="ms-2">Subscribe</button> -->
+                                <!-- <input name="submit" type="submit" value="Send Message"> -->
                             </div>
-                    </div>
-
-                    <!-- <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-10 d-flex">
-                            <input type="text" class="form-control" placeholder="Enter your Email">
-                            <button type="submit" class="ms-2">Subscribe</button>
+                            <div class="col-md-3">
+                                    <input name="submit" type="submit" value="Subscribe">
+                                </div>
                         </div>
-                    </div> -->
-                </form>
+
+                        <!-- <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-10 d-flex">
+                                <input type="text" class="form-control" placeholder="Enter your Email">
+                                <button type="submit" class="ms-2">Subscribe</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
             </div>
         </div>
    
