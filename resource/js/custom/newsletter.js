@@ -189,7 +189,8 @@ $('#addNewsletterBtn').click(function () {
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    $('#PDF').attr('src','');
+    //$('#PDF').attr('src','');
+    $('#pdf-render').text('');
 });
 
 
