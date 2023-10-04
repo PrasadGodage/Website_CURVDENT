@@ -4,7 +4,7 @@ let subscriberList = new Map();
 
 //Select All Function ----------------------------------------------------
 // $(document).ready(function () {
-    setSubscriberList1(list);
+    setSubscriberList1();
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
