@@ -337,10 +337,10 @@ function setSubscriberList1(list) {
 }
 
 //Select All Function ----------------------------------------------------
-$(document)(function () {
+// $(function () {
 
     $('#subscriberTable').on('change', '.tblChk', function () {
-      debugger;
+    //   debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
         $('#chkAll').prop('checked', true);
       } else {
@@ -350,7 +350,7 @@ $(document)(function () {
     });
 
     $("#chkAll").change(function () {
-      debugger;
+    //   debugger;
       if ($(this).prop('checked')) {
         $('.tblChk').not(this).prop('checked', true);
       } else {
@@ -358,33 +358,5 @@ $(document)(function () {
       }
     //   getCheckRecords();
     })
-  });
+//   });
 
-//   function loadGridData() {
-//     $.ajax({
-//       type: "GET",
-//       url: ebase_url+'newsletter_api',
-//       contentType: false,
-//       processData: false,
-//       data: "",
-//       beforeSend: function () {
-//     //     $("#trLoader").show();
-//       },
-//       success: function (results) {
-//         // $("#trLoader").remove();
-//         let index = 0;
-//         results.forEach(element => {
-//           let dynamicTR = "<tr>";
-//           dynamicTR = dynamicTR + "<td> <input type='checkbox' data-id=" + element.id + " class='largerCheckbox tblChk chk" + index + "' /></td>";
-//         //   dynamicTR = dynamicTR + "<td>" + element.name + "</td>";
-//         //   dynamicTR = dynamicTR + "<td>" + element.username + "</td>";
-//           dynamicTR = dynamicTR + "<td>" + element.email + "</td>";
-//         //   dynamicTR = dynamicTR + "<td>" + element.phone + "</td>";
-//         //   dynamicTR = dynamicTR + "<td>" + element.website + "</td>";
-//           dynamicTR = dynamicTR + " </tr>";
-//           $("#subscriberTable tbody").append(dynamicTR);
-//           index++;
-//         });
-//       }
-//     });
-//   }
