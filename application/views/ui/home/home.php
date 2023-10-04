@@ -651,7 +651,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <section class="section-padding p-5" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
    
     <!-- Content of your section goes here -->
    
@@ -668,7 +668,7 @@
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
             </div> -->
-            <div class="row aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;">
+            <!-- <div class="row aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;"> -->
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                     <form method="POST" action="#">
                         <div class="row justify-content-center d-flex">
@@ -692,7 +692,7 @@
                         </div> -->
                     </form>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
    
     </section>
