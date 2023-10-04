@@ -337,7 +337,7 @@ function setSubscriberList1(list) {
 }
 
 //Select All Function ----------------------------------------------------
-$(document)(function () {
+$(function () {
 
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
