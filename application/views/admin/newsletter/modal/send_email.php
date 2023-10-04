@@ -13,20 +13,22 @@
 
                         <div class="col-12">         
                             <div class="box">
-                                <div class="box-header with-border box-controls pull-right custom-control custom-checkbox pl-0">
-                                    <!-- <div class="box-header pull-left"> -->
-                                        <!-- <div class="box-controls pull-right"> -->
-                                       
-                                        <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
-                                        <!-- <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> 
-                                        <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i> -->
-						                </button>
+                                <div class="mailbox-controls">
+                                <div class="mailbox-messages">
+                                        <div class="box-header with-border box-controls pull-right custom-control custom-checkbox pl-0">
+                                            <!-- <div class="box-header pull-left"> -->
+                                                <!-- <div class="box-controls pull-right"> -->
+                                            
+                                                <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
+                                                <!-- <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> -->
+                                                <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i> 
+                                                </button>
 
-                                </div>
+                                        </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
                                 <div class="box-body ">
-                                    <!-- <div class="mailbox-messages"> -->
+                                
                                         <div class="table-responsive">
                                             <table id="subscriberTable" class="table table-bordered table-hover">
                                                 <thead>
@@ -57,6 +59,8 @@
 
                                 </div>
                                 <!-- /.box -->
+                                </div>
+                                </div>
                             </div>
                            <!-- /.box -->          
                         </div>
