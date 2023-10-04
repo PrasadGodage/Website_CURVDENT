@@ -56,3 +56,7 @@ $route['newsletter_api/(:num)']='api/NewsletterController/newsletter/$1';
 //postNewsletter Api
 $route['postNewsletter_api']='api/PostNewsletterController/postingNews';
 $route['postNewsletter_api/(:num)']='api/PostNewsletterController/postingNews/$1';
+
+//postNewsletter Api without Authorization
+$route['subsriberpage_api']='api/PostNewsletterUiController/postingNews';
+$route['subsriberpage_api/(:num)']='api/PostNewsletterUiController/postingNews/$1';

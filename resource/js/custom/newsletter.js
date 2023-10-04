@@ -29,6 +29,8 @@ let subscriberList = new Map();
 //     });
 // }); // End of use strict
 
+
+
 // $(document).ready(function () {
 //     // Select All checkbox
 //     $('#selectAll').change(function () {
@@ -382,57 +384,89 @@ function sendEmailDetails(){
        
 
 
-function setSubscriberList(list) {
+// function setSubscriberList(list) {
 
-    $('#subscriberTable').dataTable().fnDestroy();
-    $('#subscriberList').empty();
-    var tblData = '';
-    var index=1;
+//     $('#subscriberTable').dataTable().fnDestroy();
+//     $('#subscriberList').empty();
+//     var tblData = '';
+//     var index=1;
     
-    for (let k of list.keys()) {
+//     for (let k of list.keys()) {
         
-        let subscriber = list.get(k);
+//         let subscriber = list.get(k);
     
+//         tblData += `
+//         <tr>
+//                 <td>` + index + `</td>
+//                 <td>` + subscriber.email + `</td>
+//                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                 <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+//                 </td>
+                
+//         </tr>`;
+//         index++;
+//     }
+    
+//     $('#subscriberList').html(tblData);
+//     $('#subscriberTable').DataTable();
+//     }
+
+
+// function setSubscriberList1(list) {
+//     $('#subscriberTable').dataTable().fnDestroy();
+//     $('#subscriberList').empty();
+//         var tblData = '';
+//         var index = 1;
+        
+//         for (let k of list.keys()) {
+//             let subscriber = list.get(k);
+        
+//             tblData += `
+//             <tr>
+//                 <td><input type="checkbox" /></td>
+//                 <td>${index}</td>
+//                 <td>${subscriber.email}</td>
+//                 <td>        
+//                     <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                     <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
+//                 </td>
+//             </tr>`;
+//             index++;
+//         }
+        
+//         $('#subscriberList').html(tblData);
+//         $('#subscriberTable').DataTable();
+// }
+        
+function setSubscriberList1(list) {
+    // Destroy the previous DataTable (if any)
+    $('#subscriberTable').DataTable().destroy();
+
+    // Clear the existing table content
+    $('#subscriberList').empty();
+
+    var tblData = '';
+    var index = 1;
+
+    for (let k of list.keys()) {
+        let subscriber = list.get(k);
+
         tblData += `
         <tr>
-                <td>` + index + `</td>
-                <td>` + subscriber.email + `</td>
-                <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                </td>
-                
+            <td><input type="checkbox" class="subscriberCheckbox" /></td>
+            <td>${index}</td>
+            <td>${subscriber.email}</td>
+            <td>        
+                <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
+            </td>
         </tr>`;
         index++;
     }
-    
+
+    // Append the table rows to the table body
     $('#subscriberList').html(tblData);
+
+    // Initialize DataTable on the table
     $('#subscriberTable').DataTable();
-    }
-
-
-function setSubscriberList1(list) {
-    $('#subscriberTable').dataTable().fnDestroy();
-    $('#subscriberList').empty();
-        var tblData = '';
-        var index = 1;
-        
-        for (let k of list.keys()) {
-            let subscriber = list.get(k);
-        
-            tblData += `
-            <tr>
-                <td><input type="checkbox" name="select[]" /></td>
-                <td>${index}</td>
-                <td>${subscriber.email}</td>
-                <td>        
-                    <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                    <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
-                </td>
-            </tr>`;
-            index++;
-        }
-        
-        $('#subscriberList').html(tblData);
-        $('#subscriberTable').DataTable();
 }
-        
