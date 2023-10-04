@@ -1,31 +1,5 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
-
-
-//Select All Function ----------------------------------------------------
-$(document).ready(function () {
-    setSubscriberList1(list);
-    $('#subscriberTable').on('change', '.tblChk', function () {
-      debugger;
-      if ($('.tblChk:checked').length == $('.tblChk').length) {
-        $('#chkAll').prop('checked', true);
-      } else {
-        $('#chkAll').prop('checked', false);
-      }
-    //   getCheckRecords();
-    });
-
-    $("#chkAll").onchange(function () {
-      debugger;
-      if ($(this).prop('checked')) {
-        $('.tblChk').not(this).prop('checked', true);
-      } else {
-        $('.tblChk').not(this).prop('checked', false);
-      }
-    //   getCheckRecords();
-    })
-  });
-
   
 //Submit Category Btn script
 
@@ -360,3 +334,27 @@ function setSubscriberList1(list) {
 
     $('#subscriberTable').DataTable();
 }
+
+//Select All Function ----------------------------------------------------
+$(document).ready(function () {
+    setSubscriberList1(list);
+    $('#subscriberTable').on('change', '.tblChk', function () {
+      debugger;
+      if ($('.tblChk:checked').length == $('.tblChk').length) {
+        $('#chkAll').prop('checked', true);
+      } else {
+        $('#chkAll').prop('checked', false);
+      }
+    //   getCheckRecords();
+    });
+
+    $("#chkAll").onchange(function () {
+      debugger;
+      if ($(this).prop('checked')) {
+        $('.tblChk').not(this).prop('checked', true);
+      } else {
+        $('.tblChk').not(this).prop('checked', false);
+      }
+    //   getCheckRecords();
+    })
+  });
