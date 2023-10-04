@@ -3,8 +3,8 @@ let subscriberList = new Map();
 
 
 //Select All Function ----------------------------------------------------
-// $(document).ready(function () {
-    setSubscriberList1();
+$(document).ready(function () {
+    setSubscriberList1(list);
     $('#subscriberTable').on('change', '.tblChk', function () {
       debugger;
       if ($('.tblChk:checked').length == $('.tblChk').length) {
@@ -24,7 +24,7 @@ let subscriberList = new Map();
       }
     //   getCheckRecords();
     })
-//   });
+  });
 
   
 //Submit Category Btn script
