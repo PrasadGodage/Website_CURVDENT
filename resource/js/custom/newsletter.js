@@ -3,98 +3,28 @@ let subscriberList = new Map();
 
 
 //Select All Function ----------------------------------------------------
-// $(function () {
-//     "use strict";
-
-//     //Enable iCheck plugin for checkboxes
-//     //iCheck for checkbox and radio inputs
-//     $('.mailbox-messages input[type="checkbox"]').iCheck({
-//       checkboxClass: 'icheckbox_flat-blue',
-//       radioClass: 'iradio_flat-blue'
-//     });
-
-//     //Enable check and uncheck all functionality
-//     $(".checkbox-toggle").click(function () {
-//       var clicks = $(this).data('clicks');
-//       if (clicks) {
-//         //Uncheck all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("uncheck");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline").addClass('ion-android-checkbox-outline-blank');
-//       } else {
-//         //Check all checkboxes
-//         $(".mailbox-messages input[type='checkbox']").iCheck("check");
-//         $(".ion", this).removeClass("ion-android-checkbox-outline-blank").addClass('ion-android-checkbox-outline');
-//       }
-//       $(this).data("clicks", !clicks);
-//     });
-// }); // End of use strict
-
-
-
 // $(document).ready(function () {
-//     // Select All checkbox
-//     $('#selectAll').change(function () {
-//       if (this.checked) {
-//         // Check all the individual checkboxes
-//         $('.selectRow').prop('checked', true);
-//       } else {
-//         // Uncheck all the individual checkboxes
-//         $('.selectRow').prop('checked', false);
-//       }
-//     });
-  
-//     // Individual checkbox
-//     $('.selectRow').change(function () {
-//       // Check if all individual checkboxes are checked
-//       var allChecked = $('.selectRow:checked').length === $('.selectRow').length;
-  
-//       // Update the "Select All" checkbox accordingly
-//       $('#selectAll').prop('checked', allChecked);
-//     });
-//   });
-  
-
-// $(document).ready(function () {
-//     // Check or uncheck all checkboxes when the "Select All" checkbox is clicked
-//     $('#chkAll').change(function () {
-//       if ($(this).is(':checked')) {
-//         $('.tblChk').prop('checked', true);
-//       } else {
-//         $('.tblChk').prop('checked', false);
-//       }
-//     });
-  
-//     // Check the "Select All" checkbox when all row checkboxes are checked
-//     $('#subscriberTable').on('change', '.tblChk', function () {
-//       if ($('.tblChk:checked').length === $('.tblChk').length) {
-//         $('#chkAll').prop('checked', true);
-//       } else {
-//         $('#chkAll').prop('checked', false);
-//       }
-//     });
-//   });
-
-
-$(document).ready(function () {
-    // Check or uncheck all checkboxes when the "Select All" checkbox in the header is clicked
-    $('#selectAll').change(function () {
-      if ($(this).is(':checked')) {
-        $('input[name="select[]"]').prop('checked', true);
+    loadGridData();
+    $('#subscriberTable').on('change', '.tblChk', function () {
+      debugger;
+      if ($('.tblChk:checked').length == $('.tblChk').length) {
+        $('#chkAll').prop('checked', true);
       } else {
-        $('input[name="select[]"]').prop('checked', false);
+        $('#chkAll').prop('checked', false);
       }
+    //   getCheckRecords();
     });
-  
-    // Check the "Select All" checkbox in the header when all row checkboxes are checked
-    $('#subscriberTable').on('change', 'input[name="select[]"]', function () {
-      if ($('input[name="select[]"]:checked').length === $('input[name="select[]"]').length) {
-        $('#selectAll').prop('checked', true);
+
+    $("#chkAll").onchange(function () {
+      debugger;
+      if ($(this).prop('checked')) {
+        $('.tblChk').not(this).prop('checked', true);
       } else {
-        $('#selectAll').prop('checked', false);
+        $('.tblChk').not(this).prop('checked', false);
       }
-    });
-  });
-  
+    //   getCheckRecords();
+    })
+//   });
 
   
 //Submit Category Btn script
@@ -151,38 +81,6 @@ $('#addNewsletterForm').on('submit', function (e) {
         });
     }
 });
-
-
-// $(document).ready(function() {
-//     $('#addNewsletterForm').submit(function(e) {
-//         e.preventDefault();
-
-//         var formData = new FormData($(this)[0]);
-
-//         $.ajax({
-//             url: ebase_url+'postNewsletter_api', // The server-side script to handle file upload
-//             type: 'POST',
-            
-//             headers: {
-//             "Authorization": etoken
-//             },
-//             data: formData,
-//             contentType: false,
-//             processData: false,
-//             dataType: 'json',
-//             success: function(response) {
-//                 if (response.status == 200) {
-//                 // Handle the response from the server, e.g., display a success message
-//                 alert('PDF uploaded successfully!');
-//                 }
-//             },
-//             error: function() {
-//                 // Handle errors, if any
-//                 alert('Error occurred while uploading PDF.');
-//             }
-//         });
-//     });
-// });
 
 
 //Add Newsletter Btn script -----------------------------------------------------------------
@@ -439,34 +337,26 @@ function sendEmailDetails(){
 // }
         
 function setSubscriberList1(list) {
-    // Destroy the previous DataTable (if any)
     $('#subscriberTable').DataTable().destroy();
-
-    // Clear the existing table content
     $('#subscriberList').empty();
-
-    var tblData = '';
     var index = 1;
-
     for (let k of list.keys()) {
         let subscriber = list.get(k);
 
-        tblData += `
-        <tr>
-            <td><input type="checkbox" class="subscriberCheckbox" style="position: absulute; left:0px; opacity:1;" /></td>
-            <td>${index}</td>
-            <td>${subscriber.email}</td>
-            <td>        
-                <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
-            </td>
-        </tr>`;
+        let tblData = `
+            <tr>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
+                <td>${index}</td>
+                <td>${subscriber.email}</td>
+                <td>
+                    <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                    <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>
+                </td>
+            </tr>`;
+
+        $("#subscriberTable tbody").append(tblData);
         index++;
     }
-
-    // Append the table rows to the table body
-    $('#subscriberList').html(tblData);
-
-    // Initialize DataTable on the table
+    
     $('#subscriberTable').DataTable();
 }
