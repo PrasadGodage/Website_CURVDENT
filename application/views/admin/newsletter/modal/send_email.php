@@ -19,7 +19,7 @@
                                             <!-- <div class="box-header pull-left"> -->
                                                 <!-- <div class="box-controls pull-right"> -->
                                             
-                                                <button type="button" class="btn btn-primary" id="addSubscriberBtn">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
+                                                <button type="button" class="btn btn-primary" id="sendEmail">Send Email<i class="fa fa-fw fa-arrow-right" aria-hidden="true"></i></button>
                                                 <!-- <button type="button" class="btn btn-info mr-3 checkbox-toggle" id="selectAllBtn"><i class="fa-sync-alt"></i>Select All</button> -->
                                                 <!-- <button type="button" class="btn btn-sm checkbox-toggle bg-transparent no-border"><i class="ion ion-android-checkbox-outline-blank"></i>  -->
                                                 </button>
