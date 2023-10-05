@@ -87,13 +87,13 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">About Us</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-7 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -110,7 +110,7 @@
                     <p></p>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp">
                     <div class="betty-about-img">
                         <div class="img"> <img src="<?php echo base_url() . 'uiAssets/img/about.jpg'; ?>" alt=""> </div>
                     </div>
@@ -122,19 +122,19 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-10 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">Latest Blog</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp" id="data6">
+                <div class="col-md-1 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-10 animate-box" data-animate-effect="fadeInUp" id="data6">
                     <!-- <div class="betty-about-img">
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
                     </div> -->
                 </div>
-                <div class="col-md-6 mb-20 animate-box content" data-animate-effect="fadeInUp"  id="data7">
+                <div class="col-md-6 mb-10 animate-box content" data-animate-effect="fadeInUp"  id="data7">
                     <!-- <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -149,11 +149,11 @@
                         </div>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-1 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
             <div class="row" id="data8">
-                <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-5 mb-10 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-10 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
@@ -651,45 +651,48 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <section class="section-padding p-5 mb-20 shadow" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+   
     <!-- Content of your section goes here -->
    
-        <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:60px;">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
-                    <h2 class="section-title" id="newsletter">Newsletter</h2>
+                    <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
             </div>
+        </div>
       
-          <!-- <div class="section-header">
+          <div class="section-header">
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-            </div> -->
-
-            <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                <form method="POST" action="#">
-                    <div class="row justify-content-center d-flex">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <input name="email" type="email" placeholder="Email *" required>
-                            <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
-                            <!-- <button type="submit" class="ms-2">Subscribe</button> -->
-                            <!-- <input name="submit" type="submit" value="Send Message"> -->
-                        </div>
-                        <div class="col-md-3">
-                                <input name="submit" type="submit" value="Subscribe">
-                            </div>
-                    </div>
-
-                    <!-- <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-10 d-flex">
-                            <input type="text" class="form-control" placeholder="Enter your Email">
-                            <button type="submit" class="ms-2">Subscribe</button>
-                        </div>
-                    </div> -->
-                </form>
             </div>
+            <!-- <div class="row aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;"> -->
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <form method="POST" action="#">
+                        <div class="row justify-content-center d-flex">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-8">
+                                <input name="email" type="email" placeholder="Email *" required>
+                                <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
+                                <!-- <button type="submit" class="ms-2">Subscribe</button> -->
+                                <!-- <input name="submit" type="submit" value="Send Message"> -->
+                            </div>
+                            <div class="col-md-3">
+                                    <input name="submit" type="submit" value="Subscribe">
+                                </div>
+                        </div>
+
+                        <!-- <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-10 d-flex">
+                                <input type="text" class="form-control" placeholder="Enter your Email">
+                                <button type="submit" class="ms-2">Subscribe</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+            <!-- </div> -->
         </div>
    
     </section>
