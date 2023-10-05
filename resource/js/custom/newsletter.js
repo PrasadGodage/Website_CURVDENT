@@ -57,15 +57,24 @@ $('#addNewsletterForm').on('submit', function (e) {
     }
 });
 
-
-//Add Newsletter Btn script -----------------------------------------------------------------
+//Add Newsletter  Btn script -----------------------------------------------------------------
 $('#addNewsletterBtn').click(function () {
     $('#addNewsletterModal').modal('toggle');
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
     //$('#PDF').attr('src','');
-    $('#pdf-render').text('');
+    $('#pdfLink').text('');
+});
+
+//select File for attachment Btn script -----------------------------------------------------------------
+$('#PDF').click(function () {
+
+    // pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
+    // $('#pdfLink').html(pdfLink);
+
+
+   
 });
 
 
@@ -198,7 +207,7 @@ function updateNewsletterDetails(id) {
     $('#content').val(''); 
     //$('#date').val('');
      //$('#PDF').attr('src','');
-     $('#pdf-render').text('');
+     $('#pdfLink').text('');
 
     // Reset the image preview
     //$('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
@@ -211,12 +220,11 @@ function updateNewsletterDetails(id) {
     $('#content').val(newsletter.content);
     //(newsletter.PDF != null) ? $('#PDF').attr('src', ebase_url + newsletter.PDF) : '';
    //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
-    $('#pdf-render').text(newsletter.PDF);
-    //$('#date').val(newsletter.date);
+  //$('#date').val(newsletter.date);
     pdfName=newsletter.PDF;
     console.log(pdfName);
     var pdfLink = '';
-    pdfLink += '<a href='+pdfName+' >Download PDF</a>';
+    pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
     $('#pdfLink').html(pdfLink);
 
     // Show the updated post details in a modal
@@ -367,4 +375,10 @@ function setSubscriberList1(list) {
     //   getCheckRecords();
     })
 //   });
+
+//Add Newsletter sendEmail Btn script -----------------------------------------------------------------
+$('#sendEmail').click(function () {
+    $('#addNewsletterModal').modal('toggle'); 
+    
+});
 
