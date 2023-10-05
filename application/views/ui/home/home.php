@@ -665,7 +665,7 @@
                     <form class="form" id="emailForm" method="post">
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-success contact__msg" id="message" style="display: none" role="alert">
+                                <div class="alert alert-success" id="message" style="display: none" role="alert">
                                     Your message was sent successfully.
                                 </div>
                             </div>
