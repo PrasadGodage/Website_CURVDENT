@@ -110,65 +110,36 @@ function postDetails(id){
 $(document).ready(function() {
     $("#emailForm").submit(function(e) {
         e.preventDefault();
-        // let email = $("#email").val();
-        var formdata = new FormData(this);
-
-        // $.ajax({
-        //     type: "POST",
-        //     url: ebase_url+'newsletter_api', // Replace with your server-side script URL
-        //     data: { email: email },
-        //     success: function(response) {
-        //         $("#message").html(response);
-        //     }
-        // });
-
+        
+        // Get the email address from the form
+        var email = $("#email").val();
+        
+        // Create a FormData object to send data including active_value
+        var formData = new FormData(this);
+        formData.append("email", email);
+        formData.append("is_active", 1); // Set active_value to 1
+        
         $.ajax({
-
-            url: ebase_url+'newsletter_api',
-
+            url: ebase_url + 'newsletter_api',
             type: 'POST',
-
             headers: {
                 "Authorization": etoken
             },
-
-            data: formdata,
-
+            data: formData,
             cache: false,
-
             contentType: false,
-
             processData: false,
-
             dataType: 'json',
-
             success: function (response) {
                 if (response.status == 200) {
-                    // $('#addSubscriberModal').modal('toggle');
-
-                //     let id=response.data.id;
-                  
-                //  if(subscriberList.has(id)){
-                //     subscriberList.delete(id);   
-                //  }
-                //  subscriberList.set(id, response.data);
-                //  setSubscriberList(subscriberList);
-                // success: function(response) {
-                       $("#message").html(response);
-                    //     }
-
+                    // Handle success
                     swal("Good job!", response.msg, "success");
-                    // $(location).attr('href',ebase_url+'subscriber');
                 } else {
-
-                    swal("Good job!", response.msg, "error");
-
+                    // Handle error
+                    swal("Error", response.msg, "error");
                 }
-
             }
-
         });
-
     });
 });
 
@@ -200,55 +171,55 @@ $(document).ready(function() {
 
 
 
-$('#emailForm').on('submit', function (e) {
+// $('#emailForm').on('submit', function (e) {
 
-    e.preventDefault();
+//     e.preventDefault();
 
-    var returnVal = $("#emailForm").valid();
-    var formdata = new FormData(this);
-    if (returnVal) {
-        $.ajax({
+//     var returnVal = $("#emailForm").valid();
+//     var formdata = new FormData(this);
+//     if (returnVal) {
+//         $.ajax({
 
-            url: ebase_url+'newsletter_api',
+//             url: ebase_url+'newsletter_api',
 
-            type: 'POST',
+//             type: 'POST',
 
-            headers: {
-                "Authorization": etoken
-            },
+//             headers: {
+//                 "Authorization": etoken
+//             },
 
-            data: formdata,
+//             data: formdata,
 
-            cache: false,
+//             cache: false,
 
-            contentType: false,
+//             contentType: false,
 
-            processData: false,
+//             processData: false,
 
-            dataType: 'json',
+//             dataType: 'json',
 
-            success: function (response) {
-                if (response.status == 200) {
-                    // $('#addSubscriberModal').modal('toggle');
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     // $('#addSubscriberModal').modal('toggle');
 
-                    let id=response.data.id;
+//                     let id=response.data.id;
                   
-                 if(subscriberList.has(id)){
-                    subscriberList.delete(id);   
-                 }
-                 subscriberList.set(id, response.data);
-                //  setSubscriberList(subscriberList);
+//                  if(subscriberList.has(id)){
+//                     subscriberList.delete(id);   
+//                  }
+//                  subscriberList.set(id, response.data);
+//                 //  setSubscriberList(subscriberList);
 
-                    swal("Good job!", response.msg, "success");
-                    $(location).attr('href',ebase_url+'subscriber');
-                } else {
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href',ebase_url+'subscriber');
+//                 } else {
 
-                    swal("Good job!", response.msg, "error");
+//                     swal("Good job!", response.msg, "error");
 
-                }
+//                 }
 
-            }
+//             }
 
-        });
-    }
-});
+//         });
+//     }
+// });
