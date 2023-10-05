@@ -107,72 +107,99 @@ function postDetails(id){
 
 // subscriber post
 
-$(document).ready(function() {
-    $("#emailForm").submit(function(e) {
-        e.preventDefault();
-        let email = $("#email").val();
+// $(document).ready(function() {
+//     $("#emailForm").submit(function(e) {
+//         e.preventDefault();
+//         let email = $("#email").val();
 
-        $.ajax({
-            type: "POST",
-            url: ebase_url+'newsletter_api', // Replace with your server-side script URL
-            data: { email: email },
-            success: function(response) {
-                $("#message").html(response);
-            }
-        });
-    });
-});
-
-
-// $('#emailForm').on('submit', function (e) {
-
-//     e.preventDefault();
-
-//     var returnVal = $("#addSubscriberForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
 //         $.ajax({
-
-//             url: ebase_url+'newsletter_api',
-
-//             type: 'POST',
-
-//             headers: {
-//                 "Authorization": etoken
-//             },
-
-//             data: formdata,
-
-//             cache: false,
-
-//             contentType: false,
-
-//             processData: false,
-
-//             dataType: 'json',
-
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     // $('#addSubscriberModal').modal('toggle');
-
-//                     let id=response.data.id;
-                  
-//                  if(subscriberList.has(id)){
-//                     subscriberList.delete(id);   
-//                  }
-//                  subscriberList.set(id, response.data);
-//                 //  setSubscriberList(subscriberList);
-
-//                     swal("Good job!", response.msg, "success");
-//                     $(location).attr('href',ebase_url+'subscriber');
-//                 } else {
-
-//                     swal("Good job!", response.msg, "error");
-
-//                 }
-
+//             type: "POST",
+//             url: ebase_url+'newsletter_api', // Replace with your server-side script URL
+//             data: { email: email },
+//             success: function(response) {
+//                 $("#message").html(response);
 //             }
-
 //         });
-//     }
+//     });
 // });
+
+
+// $('#contact-form').on('submit', function(e) {
+//     console.log("Test");
+//     e.preventDefault();  
+//     var fData = new FormData(this);
+//     alert(fData);
+//     console.log("in Form data");
+//     $.ajax({
+//         url: 'email.php',
+//         type: 'POST',
+//         data: fData,
+//         cache: false,
+//         contentType: false,
+//         processData: false,
+//         success: function (response) {
+//       console.log(response);
+//       $("#contact-form")[0].reset();
+//      alert("response as recorde");
+//                          },
+//          error: function (request, status, error) {
+// console.log(request.responseText);
+// console.log(status);
+// }
+//     });
+// });
+
+
+
+$('#emailForm').on('submit', function (e) {
+
+    e.preventDefault();
+
+    var returnVal = $("#emailForm").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'newsletter_api',
+
+            type: 'POST',
+
+            headers: {
+                "Authorization": etoken
+            },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // $('#addSubscriberModal').modal('toggle');
+
+                    let id=response.data.id;
+                  
+                 if(subscriberList.has(id)){
+                    subscriberList.delete(id);   
+                 }
+                 subscriberList.set(id, response.data);
+                //  setSubscriberList(subscriberList);
+
+                    swal("Good job!", response.msg, "success");
+                    $(location).attr('href',ebase_url+'subscriber');
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
+                }
+
+            }
+
+        });
+    }
+});
