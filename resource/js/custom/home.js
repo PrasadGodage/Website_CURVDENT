@@ -1,4 +1,5 @@
 let postList = new Map();
+let subscriberList = new Map();
 
 function getAllPostList() {
     $.ajax({
@@ -104,3 +105,74 @@ function postDetails(id){
     $(location).attr('href',ebase_url+'blog_page/'+id);
 }
 
+// subscriber post
+
+$(document).ready(function() {
+    $("#emailForm").submit(function(e) {
+        e.preventDefault();
+        let email = $("#email").val();
+
+        $.ajax({
+            type: "POST",
+            url: ebase_url+'newsletter_api', // Replace with your server-side script URL
+            data: { email: email },
+            success: function(response) {
+                $("#message").html(response);
+            }
+        });
+    });
+});
+
+
+// $('#emailForm').on('submit', function (e) {
+
+//     e.preventDefault();
+
+//     var returnVal = $("#addSubscriberForm").valid();
+//     var formdata = new FormData(this);
+//     if (returnVal) {
+//         $.ajax({
+
+//             url: ebase_url+'newsletter_api',
+
+//             type: 'POST',
+
+//             headers: {
+//                 "Authorization": etoken
+//             },
+
+//             data: formdata,
+
+//             cache: false,
+
+//             contentType: false,
+
+//             processData: false,
+
+//             dataType: 'json',
+
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     // $('#addSubscriberModal').modal('toggle');
+
+//                     let id=response.data.id;
+                  
+//                  if(subscriberList.has(id)){
+//                     subscriberList.delete(id);   
+//                  }
+//                  subscriberList.set(id, response.data);
+//                 //  setSubscriberList(subscriberList);
+
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href',ebase_url+'subscriber');
+//                 } else {
+
+//                     swal("Good job!", response.msg, "error");
+
+//                 }
+
+//             }
+
+//         });
+//     }
+// });
