@@ -107,43 +107,6 @@ function postDetails(id){
 
 // subscriber post
 
-// $(document).ready(function() {
-//     $("#emailForm").submit(function(e) {
-//         e.preventDefault();
-        
-//         // Get the email address from the form
-//         var email = $("#email").val();
-        
-//         // Create a FormData object to send data including active_value
-//         var formData = new FormData(this);
-//         formData.append("email", email);
-//         formData.append("is_active", 1); // Set active_value to 1
-        
-//         $.ajax({
-//             url: ebase_url + 'newsletter_api',
-//             type: 'POST',
-//             headers: {
-//                 "Authorization": etoken
-//             },
-//             data: formData,
-//             cache: false,
-//             contentType: false,
-//             processData: false,
-//             dataType: 'json',
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     // Handle success
-//                     swal("Good job!", response.msg, "success");
-//                 } else {
-//                     // Handle error
-//                     swal("Error", response.msg, "error");
-//                 }
-//             }
-//         });
-//     });
-// });
-
-
 // $('#contact-form').on('submit', function(e) {
 //     console.log("Test");
 //     e.preventDefault();  
@@ -177,6 +140,23 @@ $('#emailForm').on('submit', function (e) {
 
     // var returnVal = $("#emailForm").val();
     var formdata = new FormData(this);
+
+    if (email) {
+        // Show the success message
+        $("#message").removeClass("alert-danger").addClass("alert-success");
+        $("#message").text("Your message was sent successfully.");
+        $("#message").fadeIn();
+
+        // Clear the input field
+        $("#email").val('');
+    } else {
+        // Display an error message if the email field is empty (optional)
+        $("#message").removeClass("alert-success").addClass("alert-danger");
+        $("#message").text("Email field cannot be empty.");
+        $("#message").fadeIn();
+    }
+
+
     // if (returnVal) {
         $.ajax({
 
@@ -204,7 +184,7 @@ $('#emailForm').on('submit', function (e) {
                     $("#successMessage").fadeIn();
                     
                     // Clear the input field
-                    $("#email").val('');
+                    // $("#email").val('');
                     
                     // Hide the success message after a few seconds (optional)
                     setTimeout(function() {
