@@ -651,31 +651,15 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding p-5 mb-20 shadow" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
-   
-    <!-- Content of your section goes here -->
-   
-            <!-- <div class="row">
-                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title" id="about" data-scroll-index="1">About Us</h2>
-                    <hr class="line line-hr-left">
-                </div>
-            </div> -->
-
+    <section class="section-padding p-5 mb-20 shadow" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="contact">Newsletter</h2>
-                    <hr class="line line-hr-left">
+                    <hr class="line line-hr-left text-center">
                     <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
                 </div>
             </div>
-            <!-- </div> -->
-      
-          <!-- <div class="section-header">
-            <h2>Newsletter</h2>
-            <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-            </div> -->
             <div class="row">
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                     <form method="POST" action="#">
@@ -683,26 +667,51 @@
                             <div class="col-md-1"></div>
                             <div class="col-md-8">
                                 <input name="email" type="email" placeholder="Email *" required>
-                                <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
-                                <!-- <button type="submit" class="ms-2">Subscribe</button> -->
-                                <!-- <input name="submit" type="submit" value="Send Message"> -->
                             </div>
                             <div class="col-md-3">
                                     <input name="submit" type="submit" value="Subscribe">
-                                </div>
-                        </div>
-
-                        <!-- <div class="row justify-content-center">
-                            <div class="col-lg-6 col-md-10 d-flex">
-                                <input type="text" class="form-control" placeholder="Enter your Email">
-                                <button type="submit" class="ms-2">Subscribe</button>
                             </div>
-                        </div> -->
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
    
+    </section>
+
+    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <h2 class="section-title" id="contact">Newsletter</h2>
+                    <hr class="line line-hr-left text-center">
+                </div>
+            </div>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                    <form method="post" class="contact__form" action="mail.php">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                    Your message was sent successfully.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input name="email" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="col-md-2">
+                                <input name="submit" type="submit" value="Subscribe">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact -->
