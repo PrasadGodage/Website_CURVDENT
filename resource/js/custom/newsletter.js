@@ -224,7 +224,7 @@ function updateNewsletterDetails(id) {
     pdfName=newsletter.PDF;
     console.log(pdfName);
     var pdfLink = '';
-    pdfLink += '<a  class="help-block" href='+ pdfName +' >Open PDF</a>';
+    pdfLink += '<a class="help-block mt-3 ml-2" href='+ pdfName +' >Open PDF</a>';
     $('#pdfLink').html(pdfLink);
 
     // Show the updated post details in a modal
