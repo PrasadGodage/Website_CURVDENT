@@ -1,4 +1,5 @@
 let postList = new Map();
+let subscriberList = new Map();
 
 function getAllPostList() {
     $.ajax({
@@ -104,3 +105,121 @@ function postDetails(id){
     $(location).attr('href',ebase_url+'blog_page/'+id);
 }
 
+// subscriber post
+
+$(document).ready(function() {
+    $("#emailForm").submit(function(e) {
+        e.preventDefault();
+        
+        // Get the email address from the form
+        var email = $("#email").val();
+        
+        // Create a FormData object to send data including active_value
+        var formData = new FormData(this);
+        formData.append("email", email);
+        formData.append("is_active", 1); // Set active_value to 1
+        
+        $.ajax({
+            url: ebase_url + 'newsletter_api',
+            type: 'POST',
+            headers: {
+                "Authorization": etoken
+            },
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (response) {
+                if (response.status == 200) {
+                    // Handle success
+                    swal("Good job!", response.msg, "success");
+                } else {
+                    // Handle error
+                    swal("Error", response.msg, "error");
+                }
+            }
+        });
+    });
+});
+
+
+// $('#contact-form').on('submit', function(e) {
+//     console.log("Test");
+//     e.preventDefault();  
+//     var fData = new FormData(this);
+//     alert(fData);
+//     console.log("in Form data");
+//     $.ajax({
+//         url: 'email.php',
+//         type: 'POST',
+//         data: fData,
+//         cache: false,
+//         contentType: false,
+//         processData: false,
+//         success: function (response) {
+//       console.log(response);
+//       $("#contact-form")[0].reset();
+//      alert("response as recorde");
+//                          },
+//          error: function (request, status, error) {
+// console.log(request.responseText);
+// console.log(status);
+// }
+//     });
+// });
+
+
+
+// $('#emailForm').on('submit', function (e) {
+
+//     e.preventDefault();
+
+//     var returnVal = $("#emailForm").valid();
+//     var formdata = new FormData(this);
+//     if (returnVal) {
+//         $.ajax({
+
+//             url: ebase_url+'newsletter_api',
+
+//             type: 'POST',
+
+//             headers: {
+//                 "Authorization": etoken
+//             },
+
+//             data: formdata,
+
+//             cache: false,
+
+//             contentType: false,
+
+//             processData: false,
+
+//             dataType: 'json',
+
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     // $('#addSubscriberModal').modal('toggle');
+
+//                     let id=response.data.id;
+                  
+//                  if(subscriberList.has(id)){
+//                     subscriberList.delete(id);   
+//                  }
+//                  subscriberList.set(id, response.data);
+//                 //  setSubscriberList(subscriberList);
+
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href',ebase_url+'subscriber');
+//                 } else {
+
+//                     swal("Good job!", response.msg, "error");
+
+//                 }
+
+//             }
+
+//         });
+//     }
+// });
