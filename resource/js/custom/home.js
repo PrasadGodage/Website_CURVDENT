@@ -175,7 +175,7 @@ $('#emailForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    var returnVal = $("#emailForm").valid();
+    // var returnVal = $("#emailForm").val();
     var formdata = new FormData(this);
     if (returnVal) {
         $.ajax({
