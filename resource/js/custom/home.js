@@ -170,7 +170,7 @@ function postDetails(id){
 // });
 
 function submitForm() {
-    document.emailForm.submit();
+    // document.emailForm.submit();
     document.emailForm.reset();
     }
 
