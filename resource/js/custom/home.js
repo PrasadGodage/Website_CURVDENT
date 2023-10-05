@@ -133,6 +133,27 @@ function postDetails(id){
 // });
 
 
+$(document).ready(function () {
+    $("#emailForm").submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: "mail.php", // Replace with the path to your PHP script
+            type: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function (response) {
+                if (response.status === "success") {
+                    $("#message").removeClass("alert-danger").addClass("alert-success").html(response.message).fadeIn();
+                } else {
+                    $("#message").removeClass("alert-success").addClass("alert-danger").html(response.message).fadeIn();
+                }
+            }
+        });
+    });
+});
+
+
 
 $('#emailForm').on('submit', function (e) {
 
