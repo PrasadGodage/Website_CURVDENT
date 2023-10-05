@@ -382,3 +382,9 @@ $('#sendEmail').click(function () {
     
 });
 
+
+ //import newsletterValidation script
+ var newsletterValidation = document.createElement('script');
+ newsletterValidation.src = ebase_url + 'resource/js/custom/newsletterValidation.js';
+ newsletterValidation.setAttribute("type", "text/javascript");
+ document.head.appendChild(newsletterValidation);

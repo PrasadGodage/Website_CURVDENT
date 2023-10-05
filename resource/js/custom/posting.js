@@ -312,3 +312,9 @@ function updatePostDetails(id) {
             $('#id_category').html(options);
     
     }
+
+    //import postingValidation script
+var postingValidation = document.createElement('script');
+postingValidation.src = ebase_url + 'resource/js/custom/postingValidation.js';
+postingValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(postingValidation);
