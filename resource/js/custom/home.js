@@ -107,21 +107,70 @@ function postDetails(id){
 
 // subscriber post
 
-// $(document).ready(function() {
-//     $("#emailForm").submit(function(e) {
-//         e.preventDefault();
-//         let email = $("#email").val();
+$(document).ready(function() {
+    $("#emailForm").submit(function(e) {
+        e.preventDefault();
+        // let email = $("#email").val();
+        var formdata = new FormData(this);
 
-//         $.ajax({
-//             type: "POST",
-//             url: ebase_url+'newsletter_api', // Replace with your server-side script URL
-//             data: { email: email },
-//             success: function(response) {
-//                 $("#message").html(response);
-//             }
-//         });
-//     });
-// });
+        // $.ajax({
+        //     type: "POST",
+        //     url: ebase_url+'newsletter_api', // Replace with your server-side script URL
+        //     data: { email: email },
+        //     success: function(response) {
+        //         $("#message").html(response);
+        //     }
+        // });
+
+        $.ajax({
+
+            url: ebase_url+'newsletter_api',
+
+            type: 'POST',
+
+            headers: {
+                "Authorization": etoken
+            },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // $('#addSubscriberModal').modal('toggle');
+
+                //     let id=response.data.id;
+                  
+                //  if(subscriberList.has(id)){
+                //     subscriberList.delete(id);   
+                //  }
+                //  subscriberList.set(id, response.data);
+                //  setSubscriberList(subscriberList);
+                // success: function(response) {
+                       $("#message").html(response);
+                    //     }
+
+                    swal("Good job!", response.msg, "success");
+                    // $(location).attr('href',ebase_url+'subscriber');
+                } else {
+
+                    swal("Good job!", response.msg, "error");
+
+                }
+
+            }
+
+        });
+
+    });
+});
 
 
 // $('#contact-form').on('submit', function(e) {
