@@ -378,7 +378,8 @@ function setSubscriberList1(list) {
 
 //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 $('#sendEmail').click(function () {
-    $('#addNewsletterModal').modal('toggle'); 
+    var mail_to = "soulsoft.soul120@gmail.com";
+    console.log(mail_to);
     
 });
 
