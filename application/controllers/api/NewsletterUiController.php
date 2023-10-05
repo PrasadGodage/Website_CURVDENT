@@ -53,7 +53,7 @@ class NewsletterUiController extends REST_Controller {
     public function newsletter_post() { 
         $response = [];
         $data['email'] = $this->post('email');
-        $data['is_active'] = $this->post('is_active');
+        //$data['is_active'] = $this->post('is_active');
 
         $id = $this->post('id');
         
