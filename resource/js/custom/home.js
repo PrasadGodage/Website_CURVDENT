@@ -199,10 +199,20 @@ $('#emailForm').on('submit', function (e) {
             dataType: 'json',
 
             success: function (response) {
-             if (response.status == 200) {
-                // Handle success
-                // success: function(response) {
-                    $("#message").html(response);
+                if (response.status == 200) {
+                    // Show success message
+                    $("#successMessage").fadeIn();
+                    
+                    // Clear the input field
+                    $("#email").val('');
+                    
+                    // Hide the success message after a few seconds (optional)
+                    setTimeout(function() {
+                        $("#successMessage").fadeOut();
+                    }, 3000); // Hide after 3 seconds
+                } else {
+                    // Handle error
+                    swal("Error", response.msg, "error");
                 }
             }
         });
