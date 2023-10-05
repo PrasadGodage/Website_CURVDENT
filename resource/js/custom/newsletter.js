@@ -378,8 +378,37 @@ function setSubscriberList1(list) {
 
 //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 $('#sendEmail').click(function () {
-    var mail_to = "soulsoft.soul120@gmail.com";
+    let mail_to = "soulsoft.urmila@gmail.com";
     console.log(mail_to);
+    let subject= "test subject";
+    console.log(subject);
+     
+
+        // sender details
+        let name = "urmila";
+        let email = "soulsoft.soul120@gmail.com";
+        let sendersubject = "test";
+        let message = "test msg";
+
+        let headers = name.concat(email,sendersubject,message);
+        console.log(headers);  
+
+    let success = mail(mail_to, subject, headers);
+
+    // $.ajax({
+    //     url: 'email.php',
+    //     type: 'POST',
+    //     data: fData,
+    //     cache: false,
+    //     contentType: false,
+    //     processData: false,
+    //     success: function (response) {
+      
+    //  alert("response as recorde");
+    //                      },
+    
+    // });
+
     
 });
 
