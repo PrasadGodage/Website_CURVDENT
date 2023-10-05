@@ -673,11 +673,10 @@
                         <div class="row">
                             <div class="col-md-1 form-group"></div>
                             <div class="col-md-8 form-group">
-                                <input name="email" type="email" placeholder="Email *" required>
+                                <input name="email" type="email" id="email" placeholder="Email *" required>
                             </div>
                             <div class="col-md-3">
-                                <!-- <input name="submit" type="submit" value="Subscribe" onclick="submitForm()"> -->
-                                <input type="button" value="Submit" id="btnsubmit" onclick="submitForm()">
+                                <input name="submit" type="submit" value="Subscribe" onclick="submitForm()">
                             </div>
                         </div>
                     </form>
