@@ -651,7 +651,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding p-5 mb-20 shadow" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <!-- <section class="section-padding p-5 mb-20 shadow" data-overlay-dark="1" data-background="">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
@@ -677,7 +677,7 @@
             </div>
         </div>
    
-    </section>
+    </section> -->
 
     <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container">
@@ -689,8 +689,7 @@
             </div>
             <div class="row">
                 <!-- Contact Form -->
-                <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-8 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                     <form method="post" class="contact__form" action="mail.php">
                         <div class="row">
                             <div class="col-12">
@@ -700,16 +699,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 form-group">
+                            <div class="col-md-1 form-group"></div>
+                            <div class="col-md-8 form-group">
                                 <input name="email" type="email" placeholder="Email *" required>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <input name="submit" type="submit" value="Subscribe">
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
         </div>
     </section>
