@@ -1,6 +1,6 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
-var pdfName = '';
+var pdfName;
   
 //Submit Category Btn script
 
@@ -213,7 +213,10 @@ function updateNewsletterDetails(id) {
    //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
     $('#pdf-render').text(newsletter.PDF);
     //$('#date').val(newsletter.date);
-    pdfName += '<a href="newsletter.PDF">newsletter.PDF</a>';
+    pdfName=newsletter.PDF;
+    var pdfLink = '';
+    pdfLink += '<a href="pdfName" download>Download PDF</a>';
+    $('#pdfLink').html(pdfLink);
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
