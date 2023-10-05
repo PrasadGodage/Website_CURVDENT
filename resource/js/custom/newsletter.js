@@ -214,6 +214,7 @@ function updateNewsletterDetails(id) {
     $('#pdf-render').text(newsletter.PDF);
     //$('#date').val(newsletter.date);
     pdfName=newsletter.PDF;
+    console.log(pdfName);
     var pdfLink = '';
     pdfLink += '<a href="pdfName" download>Download PDF</a>';
     $('#pdfLink').html(pdfLink);
