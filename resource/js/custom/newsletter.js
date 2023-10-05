@@ -216,13 +216,13 @@ function updateNewsletterDetails(id) {
     pdfName=newsletter.PDF;
     console.log(pdfName);
     var pdfLink = '';
-    pdfLink += '<a href="pdfName" download>Download PDF</a>';
+    pdfLink += '<a href='+pdfName+' >Download PDF</a>';
     $('#pdfLink').html(pdfLink);
 
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 }
-
+ 
 function sendEmailDetails(){
 
     $('#addSendEmailModal').modal('toggle');
