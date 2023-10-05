@@ -1,5 +1,6 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
+var pdfName = '';
   
 //Submit Category Btn script
 
@@ -191,6 +192,7 @@ function updateNewsletterDetails(id) {
     let newsletter = newsletterList.get(id.toString());
     
     // Clear all fields
+    $('#pdfLink').empty();
     $('#id').val('');
     $('#title').val('');
     $('#content').val(''); 
@@ -211,6 +213,8 @@ function updateNewsletterDetails(id) {
    //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
     $('#pdf-render').text(newsletter.PDF);
     //$('#date').val(newsletter.date);
+    pdfName += '<a href="newsletter.PDF">newsletter.PDF</a>';
+
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 }
