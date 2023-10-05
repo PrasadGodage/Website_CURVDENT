@@ -177,7 +177,7 @@ $('#emailForm').on('submit', function (e) {
 
     // var returnVal = $("#emailForm").val();
     var formdata = new FormData(this);
-    if (returnVal) {
+    // if (returnVal) {
         $.ajax({
 
             url: ebase_url+'newsletter_api',
@@ -208,5 +208,5 @@ $('#emailForm').on('submit', function (e) {
                 }
             }
         });
-    }
+    // }
 });
