@@ -204,7 +204,7 @@ $('#emailForm').on('submit', function (e) {
                 swal("Good job!", response.msg, "success");
                     } else {
                     // Handle error
-                swal("Error", response.msg, "error");
+                // swal("Error", response.msg, "error");
                 }
             }
         });
