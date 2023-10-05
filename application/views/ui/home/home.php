@@ -664,10 +664,10 @@
             </div>
         </div>
       
-          <!-- <div class="section-header">
+          <div class="section-header">
             <h2>Newsletter</h2>
             <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-            </div> -->
+            </div>
             <!-- <div class="row aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:40px;"> -->
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
                     <form method="POST" action="#">
