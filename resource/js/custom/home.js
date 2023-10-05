@@ -201,13 +201,11 @@ $('#emailForm').on('submit', function (e) {
             success: function (response) {
              if (response.status == 200) {
                 // Handle success
-                swal("Good job!", response.msg, "success");
-                    } else {
-                    // Handle error
-                // swal("Error", response.msg, "error");
+                // success: function(response) {
+                    $("#message").html(response);
                 }
             }
         });
-        
+
     // }
 });
