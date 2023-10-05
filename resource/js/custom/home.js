@@ -169,12 +169,7 @@ function postDetails(id){
 //     });
 // });
 
-function submitForm() {
-    var frm = document.getElementsByName('emailForm')[0];
-  
-   frm.reset();  // Reset all form data
-   return false; // Prevent page refresh
-    }
+
 
 $('#emailForm').on('submit', function (e) {
 
@@ -208,12 +203,17 @@ $('#emailForm').on('submit', function (e) {
                     // Show success message
                     $("#successMessage").fadeIn();
                     
+                    // Clear the input field
+                    $("#email").val('');
+                    
                     // Hide the success message after a few seconds (optional)
                     setTimeout(function() {
                         $("#successMessage").fadeOut();
                     }, 3000); // Hide after 3 seconds
-                
-                }
+                // } else {
+                //     // Handle error
+                //     swal("Error", response.msg, "error");
+                 }
             }
         });
 
