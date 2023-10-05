@@ -107,41 +107,41 @@ function postDetails(id){
 
 // subscriber post
 
-$(document).ready(function() {
-    $("#emailForm").submit(function(e) {
-        e.preventDefault();
+// $(document).ready(function() {
+//     $("#emailForm").submit(function(e) {
+//         e.preventDefault();
         
-        // Get the email address from the form
-        var email = $("#email").val();
+//         // Get the email address from the form
+//         var email = $("#email").val();
         
-        // Create a FormData object to send data including active_value
-        var formData = new FormData(this);
-        formData.append("email", email);
-        formData.append("is_active", 1); // Set active_value to 1
+//         // Create a FormData object to send data including active_value
+//         var formData = new FormData(this);
+//         formData.append("email", email);
+//         formData.append("is_active", 1); // Set active_value to 1
         
-        $.ajax({
-            url: ebase_url + 'newsletter_api',
-            type: 'POST',
-            headers: {
-                "Authorization": etoken
-            },
-            data: formData,
-            cache: false,
-            contentType: false,
-            processData: false,
-            dataType: 'json',
-            success: function (response) {
-                if (response.status == 200) {
-                    // Handle success
-                    swal("Good job!", response.msg, "success");
-                } else {
-                    // Handle error
-                    swal("Error", response.msg, "error");
-                }
-            }
-        });
-    });
-});
+//         $.ajax({
+//             url: ebase_url + 'newsletter_api',
+//             type: 'POST',
+//             headers: {
+//                 "Authorization": etoken
+//             },
+//             data: formData,
+//             cache: false,
+//             contentType: false,
+//             processData: false,
+//             dataType: 'json',
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     // Handle success
+//                     swal("Good job!", response.msg, "success");
+//                 } else {
+//                     // Handle error
+//                     swal("Error", response.msg, "error");
+//                 }
+//             }
+//         });
+//     });
+// });
 
 
 // $('#contact-form').on('submit', function(e) {
@@ -171,55 +171,42 @@ $(document).ready(function() {
 
 
 
-// $('#emailForm').on('submit', function (e) {
+$('#emailForm').on('submit', function (e) {
 
-//     e.preventDefault();
+    e.preventDefault();
 
-//     var returnVal = $("#emailForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
-//         $.ajax({
+    var returnVal = $("#emailForm").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
+        $.ajax({
 
-//             url: ebase_url+'newsletter_api',
+            url: ebase_url+'newsletter_api',
 
-//             type: 'POST',
+            type: 'POST',
 
-//             headers: {
-//                 "Authorization": etoken
-//             },
+            headers: {
+                "Authorization": etoken
+            },
 
-//             data: formdata,
+            data: formdata,
 
-//             cache: false,
+            cache: false,
 
-//             contentType: false,
+            contentType: false,
 
-//             processData: false,
+            processData: false,
 
-//             dataType: 'json',
+            dataType: 'json',
 
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     // $('#addSubscriberModal').modal('toggle');
-
-//                     let id=response.data.id;
-                  
-//                  if(subscriberList.has(id)){
-//                     subscriberList.delete(id);   
-//                  }
-//                  subscriberList.set(id, response.data);
-//                 //  setSubscriberList(subscriberList);
-
-//                     swal("Good job!", response.msg, "success");
-//                     $(location).attr('href',ebase_url+'subscriber');
-//                 } else {
-
-//                     swal("Good job!", response.msg, "error");
-
-//                 }
-
-//             }
-
-//         });
-//     }
-// });
+            success: function (response) {
+             if (response.status == 200) {
+                // Handle success
+                swal("Good job!", response.msg, "success");
+                    } else {
+                    // Handle error
+                swal("Error", response.msg, "error");
+                }
+            }
+        });
+    }
+});
