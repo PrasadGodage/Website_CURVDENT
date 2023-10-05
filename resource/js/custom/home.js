@@ -180,7 +180,7 @@ $('#emailForm').on('submit', function (e) {
     // if (returnVal) {
         $.ajax({
 
-            url: ebase_url+'newsletter_api',
+            url: ebase_url+'newsletterUi_api',
 
             type: 'POST',
 
