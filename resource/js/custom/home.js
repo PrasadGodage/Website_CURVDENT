@@ -184,9 +184,9 @@ $('#emailForm').on('submit', function (e) {
 
             type: 'POST',
 
-            headers: {
-                "Authorization": etoken
-            },
+            // headers: {
+            //     "Authorization": etoken
+            // },
 
             data: formdata,
 
