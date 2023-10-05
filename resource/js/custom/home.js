@@ -170,8 +170,8 @@ function postDetails(id){
 // });
 
 function submitForm() {
-    document.contact-form.submit();
-    document.contact-form.reset();
+    document.emailForm.submit();
+    document.emailForm.reset();
     }
 
 $('#emailForm').on('submit', function (e) {
