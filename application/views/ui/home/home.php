@@ -651,34 +651,6 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <!-- <section class="section-padding p-5 mb-20 shadow" data-overlay-dark="1" data-background="">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title" id="contact">Newsletter</h2>
-                    <hr class="line line-hr-left text-center">
-                    <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <form method="POST" action="#">
-                        <div class="row justify-content-center d-flex">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-8">
-                                <input name="email" type="email" placeholder="Email *" required>
-                            </div>
-                            <div class="col-md-3">
-                                    <input name="submit" type="submit" value="Subscribe">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-   
-    </section> -->
-
     <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container">
             <div class="row">
