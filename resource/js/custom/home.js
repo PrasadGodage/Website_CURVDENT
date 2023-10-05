@@ -169,7 +169,10 @@ function postDetails(id){
 //     });
 // });
 
-
+function submitForm() {
+    document.contact-form.submit();
+    document.contact-form.reset();
+    }
 
 $('#emailForm').on('submit', function (e) {
 
@@ -202,9 +205,6 @@ $('#emailForm').on('submit', function (e) {
                 if (response.status == 200) {
                     // Show success message
                     $("#successMessage").fadeIn();
-                    
-                    // Clear the input field
-                    $("#email").val('');
                     
                     // Hide the success message after a few seconds (optional)
                     setTimeout(function() {
