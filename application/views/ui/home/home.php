@@ -676,7 +676,8 @@
                                 <input name="email" type="email" placeholder="Email *" required>
                             </div>
                             <div class="col-md-3">
-                                <input name="submit" type="submit" value="Subscribe" onclick="submitForm()">
+                                <!-- <input name="submit" type="submit" value="Subscribe" onclick="submitForm()"> -->
+                                <input type="button" value="Submit" id="btnsubmit" onclick="submitForm()">
                             </div>
                         </div>
                     </form>
