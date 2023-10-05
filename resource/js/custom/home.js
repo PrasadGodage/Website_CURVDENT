@@ -210,9 +210,7 @@ $('#emailForm').on('submit', function (e) {
                     setTimeout(function() {
                         $("#successMessage").fadeOut();
                     }, 3000); // Hide after 3 seconds
-                } else {
-                    // Handle error
-                    Swal("Error", response.msg, "error");
+                
                 }
             }
         });
