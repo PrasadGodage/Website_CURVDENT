@@ -212,7 +212,7 @@ $('#emailForm').on('submit', function (e) {
                     }, 3000); // Hide after 3 seconds
                 } else {
                     // Handle error
-                    swal("Error", response.msg, "error");
+                    Swal("Error", response.msg, "error");
                 }
             }
         });
