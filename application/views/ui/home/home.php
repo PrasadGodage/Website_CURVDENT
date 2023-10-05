@@ -662,10 +662,10 @@
             <div class="row">
                 <!-- Contact Form -->
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <form method="post" class="contact__form" action="mail.php">
+                    <form method="post" id="emailForm" class="contact__form" action="mail.php">
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                <div class="alert alert-success contact__msg" id="message" style="display: none" role="alert">
                                     Your message was sent successfully.
                                 </div>
                             </div>
