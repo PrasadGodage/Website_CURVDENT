@@ -1,3 +1,6 @@
+let postList = new Map();
+ 
+ 
  // Function to show the success message
  function showSuccessMessage(message) {
     const successMessage = $("#successMessage");
@@ -14,4 +17,50 @@
 $(document).ready(function () {
     // You can call showSuccessMessage with your success message here
     showSuccessMessage("Login successful! Welcome to the dashboard.");
+
+    
+// Get BLog API -----------------
+
+// get posting data
+function getPostList() {
+    $.ajax({
+
+        url: ebase_url+'posting_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        postList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                }
+                // setPostList(postList);
+               var BolgCount = postList.size;
+                console.log(BolgCount);
+            }
+
+        }
+        
+    });
+}
+getPostList();
+
+
+
+
 });
+
