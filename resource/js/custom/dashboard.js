@@ -18,7 +18,7 @@ $(document).ready(function () {
     // You can call showSuccessMessage with your success message here
     showSuccessMessage("Login successful! Welcome to the dashboard.");
 
-    
+
 // Get BLog API -----------------
 
 // get posting data
@@ -51,6 +51,7 @@ function getPostList() {
                 // setPostList(postList);
                var BolgCount = postList.size;
                 console.log(BolgCount);
+                $("#blogConut").text = BolgCount;
             }
 
         }
