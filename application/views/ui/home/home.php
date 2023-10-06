@@ -348,10 +348,8 @@
             <div class="row">
                <div class="col-md-6"> 
                 <form action="form" method="POST">
-                    <!-- <div class="container"> -->
-                        <!-- <div class="row"> -->
-                            <!-- <div class="col-md-6"> -->
-                                <div class="formbold-mb-5">
+                    
+                                <!-- <div class="formbold-mb-5">
                                     <label for="name" class="formbold-form-label"> Full Name </label>
                                     <input type="text" name="name" id="name"placeholder="Full Name"class="formbold-form-input"/>
                                 </div>
@@ -383,10 +381,8 @@
                                 </div>
                                 <div>
                                     <button class="formbold-btn">Book Appointment</button>
-                                </div>
-                            <!-- </div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
+                                </div> -->
+                            
                 </form>
               </div> 
             </div>
