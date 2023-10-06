@@ -655,7 +655,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/bg.jpg'; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
