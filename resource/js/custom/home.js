@@ -298,18 +298,13 @@ $('#emailForm').on('submit', function (e) {
     {
         
         var jsonString= JSON.stringify(contactList);
-        //var formdata = new FormData();
-       // formdata.append("mailDtls",jsonString);
         
         $.ajax({
             
-            url: ebase_url + 'inventory_update',
+            url: ebase_url + 'sendMail_api',
 
                 type: 'POST',
 
-                headers: {
-                    "Authorization": etoken
-                },
 
                 data: jsonString,
 
@@ -325,10 +320,7 @@ $('#emailForm').on('submit', function (e) {
                     if (response.status == 200) {
                         
                         swal("Good job!", response.msg, "success");
-                        setTimeout(
-                            $(location).attr('href',ebase_url+'purchase'),
-                             8000
-                             )
+                        
                             
                     } else {
         
@@ -339,13 +331,6 @@ $('#emailForm').on('submit', function (e) {
                 }
           });
           
-    }else{
-        swal({   
-            title: "Alert!",   
-            text: "Please add at least one record.",   
-            timer: 2000,   
-            showConfirmButton: false 
-        });
     }
     
 }
