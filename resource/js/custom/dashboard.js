@@ -21,41 +21,27 @@ $(document).ready(function () {
 
 // Get BLog API -----------------
 
-// get posting data
 function getPostList() {
     $.ajax({
-
         url: ebase_url+'posting_api',
-
         type: 'GET',
-
-        async:false,
-
+        async: false,
         headers: {
             "Authorization": etoken
         },
-
         dataType: 'json',
-
         success: function (response) {
-        
-
             if (response.status == 200) {
-
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         postList.set(response.data[i].id, response.data[i]);
                     }
-                    
                 }
-                // setPostList(postList);
-               var BolgCount = postList.size;
+                var BolgCount = postList.size;
                 console.log(BolgCount);
-                $("#blogConut").text = BolgCount;
+                $("#blogConut").text(BolgCount); // Use .text() to set the content
             }
-
         }
-        
     });
 }
 getPostList();
