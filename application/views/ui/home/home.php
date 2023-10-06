@@ -407,7 +407,7 @@
                 <div  class="col-md-6 col-sm-6">
                     <!-- <h2 class="wow fadeInUp" data-wow-delay="0.6s"> </h2> -->
                     <div class="item mb-30">
-                        <div> <img src="<?php echo base_url() . 'uiAssets/img/team/dr.jpg'; ?>" alt=""> </div>
+                        <div> <img src="<?php echo base_url() . 'uiAssets/img/dr.jpg'; ?>" alt=""> </div>
                     </div>
                 </div>
             </div>
