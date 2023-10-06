@@ -343,7 +343,7 @@
             </div>
         </div>
     </section>
-    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/contact.png'; ?>">
+    <section class="team light-pink-bg">
     </section>
     <!-- <scction> -->
         <!-- <div class="container">
