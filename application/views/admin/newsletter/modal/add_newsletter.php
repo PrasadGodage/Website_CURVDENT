@@ -54,6 +54,8 @@
                             </div>
                             <!-- <div class=""><p class="help-block mt-3 ml-2"><span id="pdf-render">PDF Name</span></p></div> -->
                             <div class="mt-10 px-10" id="pdfLink"></div>
+                            <div class=""></div>
+
                         </div>
 
                         <div class="col-md-12 text-center modal-footer text-right">

@@ -45,12 +45,12 @@
                                         <tr>
                                             <th>Sr No.</th>
                                             <th>Article Title</th>
-                                            <th>F</th>
+                                            <!-- <th>F</th>
                                             <th>C</th>
-                                            <th>P</th>
+                                            <th>P</th> -->
                                             <th>Category</th>
                                             <th>Active</th>
-                                            <th>Publish</th>
+                                            <th>Publish Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -61,12 +61,12 @@
                                         <tr>
                                         <th>Sr No.</th>
                                             <th>Article Title</th>
-                                            <th>F</th>
+                                            <!-- <th>F</th>
                                             <th>C</th>
-                                            <th>P</th>
+                                            <th>P</th> -->
                                             <th>Category</th>
                                             <th>Active</th>
-                                            <th>Publish</th>
+                                            <th>Publish Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>

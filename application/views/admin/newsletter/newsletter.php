@@ -45,7 +45,7 @@
                                         <tr>
                                             <th>Sr No.</th>
                                             <th>Article Title</th>
-                                            <th>Publish</th>
+                                            <th>Publish Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,7 +56,7 @@
                                         <tr>
                                             <th>Sr No.</th>
                                             <th>Article Title</th>
-                                            <th>Publish</th>
+                                            <th>Publish Date</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
