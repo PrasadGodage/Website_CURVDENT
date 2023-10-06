@@ -118,7 +118,7 @@ getNewsletterList();
 
 $(document).ready(function() {
     // Set column widths using CSS in jQuery
-    $('#myTable col.column1').css('width', '50px');
+    $('#newsletterTable col.column1').css('width', '50px');
     // $('#myTable col.column2').css('width', '150px');
   });
   
