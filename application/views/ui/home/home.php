@@ -343,11 +343,11 @@
             </div>
         </div>
     </section>
-    <scction>
-        <div class="container">
+    <!-- <scction> -->
+        <!-- <div class="container">
             <div class="row">
                <div class="col-md-6"> 
-                <form action="form" method="POST">
+                <form action="form" method="POST"> -->
                     
                                 <!-- <div class="formbold-mb-5">
                                     <label for="name" class="formbold-form-label"> Full Name </label>
@@ -383,12 +383,12 @@
                                     <button class="formbold-btn">Book Appointment</button>
                                 </div> -->
                             
-                </form>
+                <!-- </form>
               </div> 
             </div>
-        </div>
+        </div> -->
   
-    </section>
+    <!-- </section> -->
     <!-- Services -->
     <!-- <section class="betty-services section-padding" data-scroll-index="2">
         <div class="container">
