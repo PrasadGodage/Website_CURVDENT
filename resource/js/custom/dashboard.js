@@ -67,7 +67,7 @@ function getNewsletterList() {
                 }
                 var NewsletterConut = newsletterList.size;
                 console.log(NewsletterConut);
-                $("#newsletterConut").text(NewsletterConut); // Use .text() to set the content
+                $("#newsletterCount").text(NewsletterConut); // Use .text() to set the content
             }
         }
     });

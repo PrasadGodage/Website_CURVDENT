@@ -51,7 +51,7 @@
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">TOTAL NEWSLETTER</h6>
-				  <div id="newsletterConut" style=""></div>
+				  <div id="newsletterCount" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="mdi mdi-checkbox-multiple-blank-outline fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
@@ -64,7 +64,7 @@
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">SUBSCRIBER</h6>
-                  <div id="subscriberConut" style=""></div>
+                  <div id="subscriberCount" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="fa fa-picture-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
