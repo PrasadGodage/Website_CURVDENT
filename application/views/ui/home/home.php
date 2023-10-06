@@ -384,11 +384,18 @@
                                       <input type="time" id="time" class="form-control" name="time">
                                    </div>
                                 </div>
+                                <br>
                                 <div class="form-group row">
                                    <label class="col-sm-4 col-lg-4">Address</label>
                                    <div class="col-sm-8 col-lg-8">
                                       <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row justify-content-end">
+                                    <div class="col-sm-5">
+                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">Book APPOINTMENT</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
