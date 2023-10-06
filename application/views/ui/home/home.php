@@ -343,6 +343,54 @@
             </div>
         </div>
     </section>
+    <scction>
+        <div class="container">
+            <div class="row">
+                <form action="form" method="POST">
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <!-- <div class="col-md-6"> -->
+                                <div class="formbold-mb-5">
+                                    <label for="name" class="formbold-form-label"> Full Name </label>
+                                    <input type="text" name="name" id="name"placeholder="Full Name"class="formbold-form-input"/>
+                                </div>
+                                <div class="formbold-mb-5">
+                                    <label for="phone" class="formbold-form-label"> Phone Number </label>
+                                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input"/>
+                                </div>
+                                <div class="formbold-mb-5">
+                                    <label for="email" class="formbold-form-label"> Email </label>
+                                    <input type="email"name="email" id="email" placeholder="Enter your email" class="formbold-form-input"/>
+                                </div>
+                                <div class="flex flex-wrap formbold--mx-3">
+                                    <div class="w-full sm:w-half formbold-px-3">
+                                        <div class="formbold-mb-5 w-full">
+                                            <label for="date" class="formbold-form-label"> Date </label>
+                                            <input type="date" name="date" id="date" class="formbold-form-input"/>
+                                        </div>
+                                    <div>
+                                    <div class="w-full sm:w-half formbold-px-3">
+                                        <div class="w-full sm:w-half formbold-px-3">
+                                            <label for="time" class="formbold-form-label"> Time </label>
+                                            <input type="time" name="time" id="time" class="formbold-form-input"/>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="formbold-mb-5">
+                                    <label for="address" class="formbold-form-label"> Address </label>
+                                    <input type="text" name="address" id="address" placeholder="Enter your address" class="formbold-form-input"/>
+                                </div>
+                                <div>
+                                    <button class="formbold-btn">Book Appointment</button>
+                                </div>
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+  
+    </section>
     <!-- Services -->
     <!-- <section class="betty-services section-padding" data-scroll-index="2">
         <div class="container">
@@ -849,4 +897,7 @@
         background: rgba(0, 128, 0, 0.6);
         color: white;
       }
+
+      /* Appointment Form */
+      
     </style>
