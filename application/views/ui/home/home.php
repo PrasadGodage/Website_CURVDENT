@@ -377,6 +377,7 @@
                                       <input type="date" id="date" class="form-control" name="date">
                                    </div>
                                 </div>
+                                <br>
                                 <div class="form-group row">
                                    <label class="col-sm-4 col-lg-4">Time</label>
                                    <div class="col-sm-8 col-lg-8">
