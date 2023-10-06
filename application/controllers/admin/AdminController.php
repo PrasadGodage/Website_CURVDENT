@@ -14,6 +14,7 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/dashboard/dashboard');
         $this->load->view('footer');
+        $this->load->view('admin/dashboard/dashboard_js');
         $this->load->view('htmlend');
     }
     
