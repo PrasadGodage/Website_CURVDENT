@@ -46,7 +46,7 @@ $('#addPostForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'posting');
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
 
@@ -170,7 +170,7 @@ function deletePostDetails(id) {
                          )
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
                 },

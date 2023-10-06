@@ -45,7 +45,7 @@ $('#addSubscriberForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'subscriber');
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
 
@@ -126,7 +126,7 @@ function deleteSubscriberDetails(id) {
                                  )
                         } else {
 
-                            swal("Good job!", response.msg, "error");
+                            swal("Error!", response.msg, "error");
 
                         }
                 },
