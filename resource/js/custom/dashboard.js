@@ -1,5 +1,6 @@
 let postList = new Map();
- 
+let newsletterList = new Map();
+let subscriberList = new Map();
  
  // Function to show the success message
  function showSuccessMessage(message) {
@@ -47,7 +48,70 @@ function getPostList() {
 getPostList();
 
 
+// get posting data
+function getNewsletterList() {
+    $.ajax({
+        url: ebase_url+'postNewsletter_api',
+        type: 'GET',
+        async: false,
+        headers: {
+            "Authorization": etoken
+        },
+        dataType: 'json',
+        success: function (response) {
+            if (response.status == 200) {
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        newsletterList.set(response.data[i].id, response.data[i]);
+                    }
+                }
+                var NewsletterConut = newsletterList.size;
+                console.log(NewsletterConut);
+                $("#newsletterConut").text(NewsletterConut); // Use .text() to set the content
+            }
+        }
+    });
+    }
+    getNewsletterList();
 
+
+    // get posting data
+function getSubscriberList() {
+    $.ajax({
+
+        url: ebase_url+'newsletter_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        subscriberList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                }
+                var SubscriberConut = newsletterList.size;
+                console.log(SubscriberConut);
+                $("#subscriberConut").text(SubscriberConut); // Use .text() to set the content
+            }
+
+        }
+        
+    });
+}
+getSubscriberList();
 
 });
 
