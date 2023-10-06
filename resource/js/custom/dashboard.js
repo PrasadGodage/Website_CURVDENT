@@ -67,7 +67,7 @@ function getNewsletterList() {
                 }
                 var NewsletterConut = newsletterList.size;
                 console.log(NewsletterConut);
-                $("#newsletterConut").text(NewsletterConut); // Use .text() to set the content
+                $("#newsletterCount").text(NewsletterConut); // Use .text() to set the content
             }
         }
     });
@@ -76,42 +76,33 @@ function getNewsletterList() {
 
 
     // get posting data
+   // get subscriber data
 function getSubscriberList() {
     $.ajax({
-
         url: ebase_url+'newsletter_api',
-
         type: 'GET',
-
-        async:false,
-
+        async: false,
         headers: {
             "Authorization": etoken
         },
-
         dataType: 'json',
-
         success: function (response) {
-        
-
             if (response.status == 200) {
-
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         subscriberList.set(response.data[i].id, response.data[i]);
                     }
-                    
                 }
-                var SubscriberConut = newsletterList.size;
-                console.log(SubscriberConut);
-                $("#subscriberConut").text(SubscriberConut); // Use .text() to set the content
+                var SubscriberCount = subscriberList.size;
+                console.log(SubscriberCount);
+                $("#subscriberCount").text(SubscriberCount); // Use .text() to set the content
             }
-
         }
-        
     });
 }
 getSubscriberList();
+
+
 
 });
 

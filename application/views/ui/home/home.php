@@ -397,6 +397,8 @@
                                         <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">Book APPOINTMENT</button>
                                     </div>
                                 </div>
+                                <br>
+                                <br>
                             </form>
                         </div>
                     </div>   
