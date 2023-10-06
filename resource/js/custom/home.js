@@ -1,5 +1,6 @@
 let postList = new Map();
 let subscriberList = new Map();
+let contactData=new Map();
 
 function getAllPostList() {
     $.ajax({
@@ -230,4 +231,122 @@ $('#emailForm').on('submit', function (e) {
         });
 
     // }
+});
+
+
+  // Handle form submission
+  $('#contactForm').submit(function(e) {
+    e.preventDefault();
+    // Get form values
+    var id = $('#id').val().trim();
+    var name = $('#name').val().trim();
+    var email = $('#email').val().trim();
+    var phone = $('#phone').val().trim();
+    var subject = $('#subject').val().trim();
+    var message = $('#message').val().trim();
+           
+    var flag;
+
+    if (name == '' || name == null){
+        $('#nameError').text('Please enter name');
+        flag=false;
+    }else if(email == '' || email == null){
+        $('#emailError').text('Please enter email');
+        flag=false;
+    }else if(phone == '' || phone == null){
+        $('#phoneError').text('Please enter phone');
+        flag=false;
+    }else if(subject == '' || subject == null){
+        $('#subject').text('Please enter subject');
+        flag=false;
+    }else if(message == '' || message == null){
+        $('#message').text('Please enter message');
+        flag=false;
+    }
+    else{
+        flag=true;
+    }
+
+   if(flag){
+   // Create an object to store the form data
+    var formData = {
+
+        id:id,
+        name:name,
+        email:email,
+        phone:phone,
+        subject:subject,
+        message:message
+         };
+     
+   
+         contactData.set(contactData.size+1,formData);
+         
+    $('#name').val(' ');
+    $('#email').val(' ');
+    $('#phone').val(' ');
+    $('#subject').val(' ');
+    $('#message').val(' ');
+
+    e.preventDefault();
+    
+   
+    var contactList=Array.from(contactData.values());
+    console.log(contactList);
+
+    if(contactList != '' && contactList != null && contactList.length>0)
+    {
+        
+        var jsonString= JSON.stringify(contactList);
+        //var formdata = new FormData();
+       // formdata.append("mailDtls",jsonString);
+        
+        $.ajax({
+            
+            url: ebase_url + 'inventory_update',
+
+                type: 'POST',
+
+                headers: {
+                    "Authorization": etoken
+                },
+
+                data: jsonString,
+
+                cache: false,
+
+                contentType: false,
+
+                processData: false,
+
+                dataType: 'json',
+                
+                success: function (response) {
+                    if (response.status == 200) {
+                        
+                        swal("Good job!", response.msg, "success");
+                        setTimeout(
+                            $(location).attr('href',ebase_url+'purchase'),
+                             8000
+                             )
+                            
+                    } else {
+        
+                        swal("ERROR!", response.msg, "error");
+        
+                    }
+        
+                }
+          });
+          
+    }else{
+        swal({   
+            title: "Alert!",   
+            text: "Please add at least one record.",   
+            timer: 2000,   
+            showConfirmButton: false 
+        });
+    }
+    
+}
 });
