@@ -41,6 +41,11 @@
                         <div class="box-body">
                             <div class="table-responsive">
                                 <table id="newsletterTable" class="table table-bordered table-striped">
+                                <colgroup>
+                                    <col class="column1">
+                                    <!-- <col class="column2"> -->
+                                    <!-- Add more col elements for additional columns as needed -->
+                                </colgroup>
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
