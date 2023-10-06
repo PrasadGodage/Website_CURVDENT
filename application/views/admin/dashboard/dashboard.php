@@ -15,8 +15,9 @@
     <section class="content">
 	  <div class="row">
 	    <div class="col">
-            <div class="alert alert-pale-info alert-dismissible fade show callout bg-pale-info" role="alert">
-                Logged In Successfully...               
+		<!-- id="successMessage" style="display: none;" class="alert alert-success"> -->
+            <div id="successMessage" style="display: none;" class="alert alert-pale-success alert-dismissible fade show callout bg-pale-info"  role="alert">
+                <!-- Logged In Successfully...                -->
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">×</span>
                 </button>   
@@ -34,7 +35,7 @@
           	<a class="box box-body box-inverse box-primary bg-primary">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">TOTAL POST</h6>
+                  <h6 class="mb-0">TOTAL BLOG</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
@@ -49,7 +50,7 @@
           	<a class="box box-body box-inverse box-primary bg-danger">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">NEWS CATEGORY</h6>
+                  <h6 class="mb-0">TOTAL NEWSLETTER</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
@@ -62,7 +63,7 @@
           	<a class="box box-body box-inverse box-primary bg-success">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">BANNER</h6>
+                  <h6 class="mb-0">SUBSCRIBER</h6>
                   <small>50+</small>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->

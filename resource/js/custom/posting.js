@@ -122,9 +122,6 @@ function setPostList(list) {
         <tr>
                 <td>` + index + `</td>
                 <td>` + post.title + `</td>
-                <td>` + post.featured + `</td>
-                <td>` + post.choice + `</td>
-                <td>` + post.thread + `</td>
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
                 <td>` + post.date + `</td>
@@ -312,3 +309,9 @@ function updatePostDetails(id) {
             $('#id_category').html(options);
     
     }
+
+    //import postingValidation script
+var postingValidation = document.createElement('script');
+postingValidation.src = ebase_url + 'resource/js/custom/postingValidation.js';
+postingValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(postingValidation);

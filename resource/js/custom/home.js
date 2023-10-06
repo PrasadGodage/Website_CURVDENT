@@ -1,4 +1,5 @@
 let postList = new Map();
+let subscriberList = new Map();
 
 function getAllPostList() {
     $.ajax({
@@ -104,3 +105,129 @@ function postDetails(id){
     $(location).attr('href',ebase_url+'blog_page/'+id);
 }
 
+// subscriber post
+
+// $('#contact-form').on('submit', function(e) {
+//     console.log("Test");
+//     e.preventDefault();  
+//     var fData = new FormData(this);
+//     alert(fData);
+//     console.log("in Form data");
+//     $.ajax({
+//         url: 'email.php',
+//         type: 'POST',
+//         data: fData,
+//         cache: false,
+//         contentType: false,
+//         processData: false,
+//         success: function (response) {
+//       console.log(response);
+//       $("#contact-form")[0].reset();
+//      alert("response as recorde");
+//                          },
+//          error: function (request, status, error) {
+// console.log(request.responseText);
+// console.log(status);
+// }
+//     });
+// });
+
+
+$(document).ready(function () {
+    $("#emailForm").submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: "mail.php", // Replace with the path to your PHP script
+            type: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function (response) {
+                if (response.status === "success") {
+                    $("#message").removeClass("alert-danger").addClass("alert-success").html(response.message).fadeIn();
+                } else {
+                    $("#message").removeClass("alert-success").addClass("alert-danger").html(response.message).fadeIn();
+                }
+            }
+        });
+    });
+});
+
+
+
+$('#emailForm').on('submit', function (e) {
+
+    e.preventDefault();
+
+    // var returnVal = $("#emailForm").val();
+    var formdata = new FormData(this);
+
+     // Show the success message
+     $("#message").fadeIn();
+
+      // Clear the input field (optional)
+      $("#email").val('');
+
+     // Hide the success message after 3 seconds (adjust the time as needed)
+     setTimeout(function () {
+        $("#message").fadeOut();
+    }, 3000);
+
+    // if (email) {
+    //     // Show the success message
+    //     $("#message").removeClass("alert-danger").addClass("alert-success");
+    //     $("#message").text("Your message was sent successfully.");
+    //     $("#message").fadeIn();
+
+    //     // Clear the input field
+    //     $("#email").val('');
+    // } else {
+    //     // Display an error message if the email field is empty (optional)
+    //     $("#message").removeClass("alert-success").addClass("alert-danger");
+    //     $("#message").text("Email field cannot be empty.");
+    //     $("#message").fadeIn();
+    // }
+
+
+    // if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'newsletterUi_api',
+
+            type: 'POST',
+
+            // headers: {
+            //     "Authorization": etoken
+            // },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // Show success message
+                    $("#successMessage").fadeIn();
+                    
+                    // Clear the input field
+                    // $("#email").val('');
+                    
+                    // Hide the success message after a few seconds (optional)
+                    setTimeout(function() {
+                        $("#successMessage").fadeOut();
+                    }, 3000); // Hide after 3 seconds
+                // } else {
+                //     // Handle error
+                //     swal("Error", response.msg, "error");
+                 }
+            }
+        });
+
+    // }
+});

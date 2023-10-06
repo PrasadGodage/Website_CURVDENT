@@ -1,5 +1,6 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
+var pdfName;
   
 //Submit Category Btn script
 
@@ -56,15 +57,25 @@ $('#addNewsletterForm').on('submit', function (e) {
     }
 });
 
-
-//Add Newsletter Btn script -----------------------------------------------------------------
+//Add Newsletter  Btn script -----------------------------------------------------------------
 $('#addNewsletterBtn').click(function () {
     $('#addNewsletterModal').modal('toggle');
     $("#addNewsletterForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    //$('#PDF').attr('src','');
-    $('#pdf-render').text('');
+   
+    
+    $('#pdfLink').text('');
+});
+
+//select File for attachment Btn script -----------------------------------------------------------------
+$('#PDF').click(function () {
+
+    // pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
+    // $('#pdfLink').html(pdfLink);
+
+
+   
 });
 
 
@@ -124,7 +135,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendEmailDetails()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+               
                 </td>
                 
         </tr>`;
@@ -191,12 +202,13 @@ function updateNewsletterDetails(id) {
     let newsletter = newsletterList.get(id.toString());
     
     // Clear all fields
+    $('#pdfLink').empty();
     $('#id').val('');
     $('#title').val('');
     $('#content').val(''); 
     //$('#date').val('');
      //$('#PDF').attr('src','');
-     $('#pdf-render').text('');
+     $('#pdfLink').text('');
 
     // Reset the image preview
     //$('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
@@ -209,12 +221,17 @@ function updateNewsletterDetails(id) {
     $('#content').val(newsletter.content);
     //(newsletter.PDF != null) ? $('#PDF').attr('src', ebase_url + newsletter.PDF) : '';
    //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
-    $('#pdf-render').text(newsletter.PDF);
-    //$('#date').val(newsletter.date);
+  //$('#date').val(newsletter.date);
+    pdfName=newsletter.PDF;
+    console.log(pdfName);
+    var pdfLink = '';
+    pdfLink += '<a class="help-block mt-3 ml-2" href='+ pdfName +' >Open PDF</a>';
+    $('#pdfLink').html(pdfLink);
+
     // Show the updated post details in a modal
     $('#addNewsletterModal').modal('toggle');
 }
-
+ 
 function sendEmailDetails(){
 
     $('#addSendEmailModal').modal('toggle');
@@ -360,3 +377,45 @@ function setSubscriberList1(list) {
     })
 //   });
 
+//Add Newsletter sendEmail Btn script -----------------------------------------------------------------
+$('#sendEmail').click(function () {
+    let mail_to = "soulsoft.urmila@gmail.com";
+    console.log(mail_to);
+    let subject= "test subject";
+    console.log(subject);
+     
+
+        // sender details
+        let name = "urmila";
+        let email = "soulsoft.soul120@gmail.com";
+        let sendersubject = "test";
+        let message = "test msg";
+
+        let headers = name.concat(email,sendersubject,message);
+        console.log(headers);  
+
+    let success = mail(mail_to, subject, headers);
+
+    // $.ajax({
+    //     url: 'email.php',
+    //     type: 'POST',
+    //     data: fData,
+    //     cache: false,
+    //     contentType: false,
+    //     processData: false,
+    //     success: function (response) {
+      
+    //  alert("response as recorde");
+    //                      },
+    
+    // });
+
+    
+});
+
+
+ //import newsletterValidation script
+ var newsletterValidation = document.createElement('script');
+ newsletterValidation.src = ebase_url + 'resource/js/custom/newsletterValidation.js';
+ newsletterValidation.setAttribute("type", "text/javascript");
+ document.head.appendChild(newsletterValidation);
