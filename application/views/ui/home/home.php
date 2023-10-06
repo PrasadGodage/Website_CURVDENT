@@ -343,114 +343,70 @@
             </div>
         </div>
     </section>
-    <scction>
-        <div class="container">
+    <section class="team light-pink-bg">
+        <div class="container" id="book">
             <div class="row">
-               <div class="col-md-6"> 
-                <form action="form" method="POST">
-                    
-                                <!-- <div class="formbold-mb-5">
-                                    <label for="name" class="formbold-form-label"> Full Name </label>
-                                    <input type="text" name="name" id="name"placeholder="Full Name"class="formbold-form-input"/>
+                <div  class="col-md-6 col-sm-6">
+                    <div class="about-info">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.6s">Book Your Appointment Now </h2>
+                        <div class="app-sub-w3">
+                            <br>
+                            <form id="send-form" role="form" method="post">
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Name</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="text" id="patient_name" class="form-control" placeholder=" name"  name="patient_name" required>
+                                   </div>
                                 </div>
-                                <div class="formbold-mb-5">
-                                    <label for="phone" class="formbold-form-label"> Phone Number </label>
-                                    <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input"/>
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Contact</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
+                                   </div>
                                 </div>
-                                <div class="formbold-mb-5">
-                                    <label for="email" class="formbold-form-label"> Email </label>
-                                    <input type="email"name="email" id="email" placeholder="Enter your email" class="formbold-form-input"/>
+                                <br>
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Email</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="email" id="email" class="form-control" placeholder="Your Email"  name="email">
+                                   </div>
                                 </div>
-                                <div class="flex flex-wrap formbold--mx-3">
-                                    <div class="w-full sm:w-half formbold-px-3">
-                                        <div class="formbold-mb-5 w-full">
-                                            <label for="date" class="formbold-form-label"> Date </label>
-                                            <input type="date" name="date" id="date" class="formbold-form-input"/>
-                                        </div>
-                                    <div>
-                                    <div class="w-full sm:w-half formbold-px-3">
-                                        <div class="w-full sm:w-half formbold-px-3">
-                                            <label for="time" class="formbold-form-label"> Time </label>
-                                            <input type="time" name="time" id="time" class="formbold-form-input"/>
-                                        </div>
-                                    </div>    
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Date</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="date" id="date" class="form-control" name="date">
+                                   </div>
                                 </div>
-                                <div class="formbold-mb-5">
-                                    <label for="address" class="formbold-form-label"> Address </label>
-                                    <input type="text" name="address" id="address" placeholder="Enter your address" class="formbold-form-input"/>
+                                <br>
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Time</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="time" id="time" class="form-control" name="time">
+                                   </div>
                                 </div>
-                                <div>
-                                    <button class="formbold-btn">Book Appointment</button>
-                                </div> -->
-                            
-                </form>
-              </div> 
+                                <br>
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Address</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
+                                   </div>
+                                </div>
+                                <br>
+                                <div class="form-group row justify-content-end">
+                                    <div class="col-sm-5">
+                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">Book APPOINTMENT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>   
+                </div>
             </div>
         </div>
-  
     </section>
-    <!-- Services -->
-    <!-- <section class="betty-services section-padding" data-scroll-index="2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mb-30">
-                    <h2 class="section-title">Our Services</h2>
-                    <span class="section-subtitle">We offer a wide range of beauty services</span>
-                    <hr class="line line-hr-left">
-                </div>
-            </div>               
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/01.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Makeup <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/02.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Hairdressing <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/03.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Barber <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/04.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Massages <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/05.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Body Treatments <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/06.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Aromatherapy <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <br>
+    <br>
+   
 
     <!-- Makeup -->
     <!-- <section class="betty-makeup section-padding light-pink-bg">

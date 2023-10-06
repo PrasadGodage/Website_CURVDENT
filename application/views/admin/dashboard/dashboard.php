@@ -36,7 +36,7 @@
               <div class="flexbox align-items-center">
                 <div>
                   <h6 class="mb-0">TOTAL BLOG</h6>
-                  <small>50+</small>
+                  <div id="blogConut" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="fa fa-newspaper-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
