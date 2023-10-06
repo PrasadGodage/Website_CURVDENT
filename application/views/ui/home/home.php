@@ -343,7 +343,7 @@
             </div>
         </div>
     </section>
-    <section class="section-padding mb-20 shadow" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/bg.jpg'; ?>">
+    <section class="section-padding mb-20 shadow" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/Newsletter.webp'; ?>">
         <div class="container" id="book">
             <div class="row">
                 <div  class="col-md-6 col-sm-6">
@@ -655,7 +655,7 @@
     </section> -->
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/bg.jpg'; ?>">
+    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg '; ?>">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-30">
