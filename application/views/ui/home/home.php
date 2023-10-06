@@ -364,6 +364,7 @@
                                       <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
                                    </div>
                                 </div>
+                                <br>
                                 <div class="form-group row">
                                    <label class="col-sm-4 col-lg-4">Email</label>
                                    <div class="col-sm-8 col-lg-8">
