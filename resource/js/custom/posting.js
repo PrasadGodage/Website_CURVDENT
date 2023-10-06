@@ -122,9 +122,6 @@ function setPostList(list) {
         <tr>
                 <td>` + index + `</td>
                 <td>` + post.title + `</td>
-                <td>` + post.featured + `</td>
-                <td>` + post.choice + `</td>
-                <td>` + post.thread + `</td>
                 <td>` + post.category_name + `</td>
                 <td>` + post.is_active + `</td>
                 <td>` + post.date + `</td>
