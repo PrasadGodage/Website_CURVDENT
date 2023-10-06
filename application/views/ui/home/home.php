@@ -349,7 +349,7 @@
                 <div  class="col-md-6 col-sm-6">
                     <div class="about-info">
                         <h2 class="wow fadeInUp" data-wow-delay="0.6s">Book Your Appointment Now </h2>
-                        <div class="app-sub-w3">
+                        <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                             <br>
                             <form id="send-form" role="form" method="post">
                                 <div class="form-group row">
