@@ -24,7 +24,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="category"><i class="fa fa-circle-thin"></i>Blog Category</a></li>
-            <li><a href="posting"><i class="fa fa-circle-thin"></i>Add BLog</a></li>
+            <li><a href="posting"><i class="fa fa-circle-thin"></i>Add Blog</a></li>
             
           </ul>
         </li>
