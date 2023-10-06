@@ -15,12 +15,10 @@
     }, 5000); // Message will hide after 5 seconds (5000 milliseconds)
 }
 
-// Example usage
+// Trigger the success message when the page loads
 $(document).ready(function () {
-    // Trigger the success message when a button is clicked (you can use any event to trigger it)
-    $("#showSuccessBtn").click(function () {
-        showSuccessMessage("Logged In Successfully...!");
-    });
+    // You can call showSuccessMessage with your success message here
+    showSuccessMessage("Login successful! Welcome to the dashboard.");
 });
 
 $(function () {
