@@ -343,7 +343,7 @@
             </div>
         </div>
     </section>
-    <section class="team light-pink-bg">
+    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/bg.jpg'; ?>">
         <div class="container" id="book">
             <div class="row">
                 <div  class="col-md-6 col-sm-6">
