@@ -343,15 +343,15 @@
             </div>
         </div>
     </section>
-    <scction>
-        <div class="container">
+    <section class="team light-pink-bg">
+    </section>
+    <!-- <scction> -->
+        <!-- <div class="container">
             <div class="row">
                <div class="col-md-6"> 
-                <form action="form" method="POST">
-                    <!-- <div class="container"> -->
-                        <!-- <div class="row"> -->
-                            <!-- <div class="col-md-6"> -->
-                                <div class="formbold-mb-5">
+                <form action="form" method="POST"> -->
+                    
+                                <!-- <div class="formbold-mb-5">
                                     <label for="name" class="formbold-form-label"> Full Name </label>
                                     <input type="text" name="name" id="name"placeholder="Full Name"class="formbold-form-input"/>
                                 </div>
@@ -383,16 +383,14 @@
                                 </div>
                                 <div>
                                     <button class="formbold-btn">Book Appointment</button>
-                                </div>
-                            <!-- </div> -->
-                        <!-- </div> -->
-                    <!-- </div> -->
-                </form>
+                                </div> -->
+                            
+                <!-- </form>
               </div> 
             </div>
-        </div>
+        </div> -->
   
-    </section>
+    <!-- </section> -->
     <!-- Services -->
     <!-- <section class="betty-services section-padding" data-scroll-index="2">
         <div class="container">
