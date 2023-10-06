@@ -16,7 +16,7 @@
 	  <div class="row">
 	    <div class="col">
 		<!-- id="successMessage" style="display: none;" class="alert alert-success"> -->
-            <div id="showSuccessBtn" style="display: none;" class="alert alert-pale-success alert-dismissible fade show callout bg-pale-info"  role="alert">
+            <div id="successMessage" style="display: none;" class="alert alert-pale-success alert-dismissible fade show callout bg-pale-info"  role="alert">
                 <!-- Logged In Successfully...                -->
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">×</span>
