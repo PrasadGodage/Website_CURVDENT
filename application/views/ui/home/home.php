@@ -349,11 +349,24 @@
                 <div  class="col-md-6 col-sm-6">
                     <div class="about-info">
                         <h2 class="wow fadeInUp" data-wow-delay="0.6s">Book Your Appointment Now </h2>
+                        <div class="app-sub-w3">
+                            <br>
+                            <form id="send-form" role="form" method="post">
+                                <div class="form-group row">
+                                   <label class="col-sm-4 col-lg-4">Patient Name</label>
+                                   <div class="col-sm-8 col-lg-8">
+                                      <input type="text" id="patient_name" class="form-control" placeholder="patient name"  name="patient_name" required>
+                                   </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>   
                 </div>
             </div>
         </div>
     </section>
+    <br>
+    <br>
    
 
     <!-- Makeup -->
