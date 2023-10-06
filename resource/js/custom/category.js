@@ -45,7 +45,7 @@ $('#addCategoryForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'category');
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
 
@@ -130,7 +130,7 @@ function deleteCategoryDetails(id) {
                                  )
                         } else {
 
-                            swal("Good job!", response.msg, "error");
+                            swal("Error!", response.msg, "error");
 
                         }
                 },

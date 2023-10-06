@@ -47,7 +47,7 @@ $('#addNewsletterForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'newsletter');
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
 
@@ -179,7 +179,7 @@ function deleteNewsletterDetails(id) {
                          )
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
                 },
