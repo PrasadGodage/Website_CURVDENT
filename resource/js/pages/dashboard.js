@@ -3,6 +3,26 @@
 //Project:	SoftMaterial admin - Responsive Admin Template
 //Primary use:   Used only for the main dashboard (index.html)
 
+ // Function to show the success message
+ function showSuccessMessage(message) {
+    const successMessage = $("#successMessage");
+    successMessage.text(message);
+    successMessage.show();
+
+    // Set a timeout to hide the message after a few seconds (optional)
+    setTimeout(function () {
+        successMessage.hide();
+    }, 5000); // Message will hide after 5 seconds (5000 milliseconds)
+}
+
+// Example usage
+$(document).ready(function () {
+    // Trigger the success message when a button is clicked (you can use any event to trigger it)
+    $("#showSuccessBtn").click(function () {
+        showSuccessMessage("Logged In Successfully...!");
+    });
+});
+
 $(function () {
 
   'use strict';
