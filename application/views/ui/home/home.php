@@ -360,42 +360,52 @@
                                    <div class="col-sm-2 col-lg-2"></div>
                                    <label class="col-sm-3 col-lg-3">Name</label>
                                    <div class="col-sm-5 col-lg-5">
-                                      <input type="text" id="patient_name" class="form-control" placeholder=" name"  name="patient_name" required>
+                                      <input type="text" id="patient_name" class="form-control" placeholder=" Name"  name="patient_name" required>
                                    </div>
                                    <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Contact</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-3">Contact</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <br>
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Email</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-3">Email</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <input type="email" id="email" class="form-control" placeholder="Your Email"  name="email">
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Date</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-3">Date</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <input type="date" id="date" class="form-control" name="date">
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <br>
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Time</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-4">Time</label>
+                                   <div class="col-sm-5 col-lg-8">
                                       <input type="time" id="time" class="form-control" name="time">
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <br>
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Address</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-4">Address</label>
+                                   <div class="col-sm-5 col-lg-8">
                                       <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <br>
                                 <div class="form-group row justify-content-end">
