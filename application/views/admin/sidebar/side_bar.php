@@ -74,6 +74,12 @@
         </li>
         
 
+        <li class="">
+          <a href="appointment">
+            <i class="glyphicon glyphicon-user mr-15"></i> <span>Appointment</span>
+          </a>
+        </li>
+
       </ul>
     </section>
   </aside>
