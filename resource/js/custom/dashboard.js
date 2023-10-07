@@ -23,7 +23,7 @@ const listArray = [];
 $(document).ready(function () {
     // You can call showSuccessMessage with your success message here
     showSuccessMessage("Login successful! Welcome to the dashboard.");
-
+});
 
 // Get BLog API -----------------
 
@@ -337,5 +337,5 @@ function setPaginator(postList) {
 
     
 
-});
+// });
 
