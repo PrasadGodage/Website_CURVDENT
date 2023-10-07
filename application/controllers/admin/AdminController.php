@@ -70,4 +70,14 @@ class AdminController extends CI_Controller {
         $this->load->view('htmlend');
     }
     
+    public function appointment() {
+        $this->load->view('header');
+        $this->load->view('admin/sidebar/side_bar');
+        $this->load->view('admin/appointment/appointment');
+        $this->load->view('admin/appointment/modal/add_appointment');
+        $this->load->view('footer');
+        $this->load->view('admin/appointment/appointment_js');
+        $this->load->view('htmlend');
+    }
+
 }

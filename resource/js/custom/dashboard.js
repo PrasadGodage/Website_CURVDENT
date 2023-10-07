@@ -2,7 +2,7 @@ let postList = new Map();
 let newsletterList = new Map();
 let subscriberList = new Map();
 
-const numberPerPage = 5;
+const numberPerPage = 3;
 const currentPage = 1;
 const listArray = [];
 // console.log("baseUrl"+ebase_url);
