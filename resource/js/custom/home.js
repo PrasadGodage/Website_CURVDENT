@@ -301,7 +301,7 @@ $('#emailForm').on('submit', function (e) {
         
         $.ajax({
             
-            url: ebase_url + 'sendMail_api',
+            url: ebase_url + 'sendEmail_api',
 
                 type: 'POST',
 
