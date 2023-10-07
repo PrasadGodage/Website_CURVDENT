@@ -530,9 +530,9 @@
 
 
 
-	<!-- Style for Title -->
-	<style>
-			/* .main_title2{
+		<!-- Style for Title -->
+		<style>
+			.main_title2{
 			background: #f9f9ff;
 			border-left: 3px solid $baseColor;
 			margin-bottom: 30px;
@@ -545,7 +545,7 @@
 				padding-left: 15px;
 				margin-bottom: 0px;
 			}
-		} */
+		}
 
         .content {
             overflow: hidden;
