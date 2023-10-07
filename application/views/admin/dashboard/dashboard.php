@@ -462,7 +462,7 @@
 
 					<!-- <section class="section-padding">
     	 <div class="container"> -->
-        <div class="row">
+        <div class="row col-md-12">
             <!-- Content -->
          	 <!-- <ul class="content list-group">   -->
             <div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1">
@@ -504,7 +504,7 @@
                 <!-- </div> -->
             </div>
 
-			<div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1"></div>
+			<!-- <div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1"></div> -->
 
 			<div class="paginator"></div> 
 
