@@ -529,7 +529,7 @@
   </div>
 
  <!-- Style for Title -->
- <style>
+ <!-- <style>
     .main_title2{
 	   background: #f9f9ff;
 	   border-left: 3px solid $baseColor;
@@ -561,7 +561,7 @@
             overflow-x: auto; /* Enable horizontal scrolling */
             white-space: nowrap; /* Prevent text from wrapping */
         }
-    </style>
+    </style> -->
 
     <!-- script for slider -->
 
