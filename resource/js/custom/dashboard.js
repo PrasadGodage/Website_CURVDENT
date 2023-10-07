@@ -200,7 +200,7 @@ function postDetails(id){
     $(location).attr('href',ebase_url+'blog_page/'+id);
 }
 
-// //Paginator script
+//Paginator script
 // function setPaginator(postList){
 //     //Get total number of pages
 //     var data1 = '';
@@ -361,7 +361,6 @@ function setPaginator(postList) {
     }
 
     console.log(listArray);
-}
 
 
 
