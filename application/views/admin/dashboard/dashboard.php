@@ -465,7 +465,7 @@
         <div class="row col-md-12">
             <!-- Content -->
          	 <!-- <ul class="content list-group">   -->
-            <div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1">
+            <div class="col-md-12 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1">
                 <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
                 <div class="row"> -->
                     <!-- <div class="col-md-5 p-4">
