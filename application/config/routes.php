@@ -71,3 +71,7 @@ $route['subsriberpage_api/(:num)']='api/PostNewsletterUiController/postingNews/$
 //AppointmentForm Api 
 $route['appointment_api']='api/AppointmentFormController/appointment';
 $route['appointment_api/(:num)']='api/AppointmentFormController/appointment/$1';
+
+//AppointmentForm Api without Authorization
+$route['appointmentUi_api']='api/AppointmentFormUiController/appointment';
+$route['appointmentUi_api/(:num)']='api/AppointmentFormUiController/appointment/$1';
