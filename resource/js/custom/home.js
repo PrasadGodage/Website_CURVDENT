@@ -378,48 +378,48 @@ function SendEmailAjax(list){
 });
 
 
-// // Handle appointment form submission
-// $('#send-form').submit(function(e) {
+// Handle appointment form submission
+$('#send-form').submit(function(e) {
 
-//     e.preventDefault();
+    e.preventDefault();
 
-//     var returnVal = $("#send-form").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
+    var returnVal = $("#send-form").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
      
-//         $.ajax({
+        $.ajax({
 
-//             url: ebase_url+'appointment_api',
+            url: ebase_url+'appointmentUi_api',
 
-//             type: 'POST',
+            type: 'POST',
 
-//             headers: {
-//                 "Authorization": etoken
-//             },
+            headers: {
+                "Authorization": etoken
+            },
 
-//             data: formdata,
+            data: formdata,
           
-//             cache: false,
+            cache: false,
 
-//             contentType: false,
+            contentType: false,
 
-//             processData: false,
+            processData: false,
 
-//             dataType: 'json',
+            dataType: 'json',
 
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     swal("Good job!", response.msg, "success");                                
+            success: function (response) {
+                if (response.status == 200) {
+                    swal("Good job!", response.msg, "success");                                
                        
-//                 } else {
+                } else {
 
-//                     swal("Error!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
-//                 }
+                }
 
-//             }
+            }
 
-//         });
-//     }
+        });
+    }
 
-// });
+});
