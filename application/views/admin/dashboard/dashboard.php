@@ -530,39 +530,4 @@
 
 
 
-		<!-- Style for Title -->
-		<style>
-			.main_title2{
-			background: #f9f9ff;
-			border-left: 3px solid $baseColor;
-			margin-bottom: 30px;
-			h2{
-				color: $dip;
-				font-size: 18px; 
-				font-family: $rob;
-				font-weight: 500;
-				line-height: 40px;
-				padding-left: 15px;
-				margin-bottom: 0px;
-			}
-		}
-
-        .content {
-            overflow: hidden;
-            max-height: 55px; /* Adjust the max-height as needed */
-        }
-        .content1 {
-            overflow: hidden;
-            max-height: 45px; /* Adjust the max-height as needed */
-        }
-        .read-more-button {
-            display: none;
-        }
-
-        .horizontal-scrollable {
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent text from wrapping */
-        }
-    </style>
-
-    <!-- script for slider -->
+		
