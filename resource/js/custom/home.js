@@ -234,54 +234,42 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax(list){
+function SendEmailAjax() {
+    var contactList = Array.from(contactData.values());
 
-    if(list != '' && list != null && list.length>0)
-    {
-        
-        var jsonString= JSON.stringify(list);
-        
+    if (contactList != '' && contactList != null && contactList.length > 0) {
+        var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+
         $.ajax({
-            
             url: ebase_url + 'sendEmail_api',
-
-                type: 'POST',
-
-
-                data: jsonString,
-
-                cache: false,
-
-                contentType: false,
-
-                processData: false,
-
-                dataType: 'json',
-                
-                success: function (response) {
-                    if (response.status == 200) {
-                        
-                        swal("Good job!", response.msg, "success");
-                        
-                            
-                    } else {
-        
-                        swal("ERROR!", response.msg, "error");
-        
-                    }
-        
+            type: 'POST',
+            data: jsonString,
+            cache: false,
+            contentType: 'application/json', // Set content type to JSON
+            dataType: 'json',
+            success: function(response) {
+                if (response.status == 200) {
+                    swal("Good job!", response.msg, "success");
+                } else {
+                    swal("ERROR!", response.msg, "error");
                 }
-          });
-          
+            },
+            error: function(xhr, status, error) {
+                // Handle errors if any
+                console.error(error);
+                swal("ERROR!", "An error occurred while sending the email.", "error");
+            }
+        });
+    } else {
+        swal("ERROR!", "No contact data available to send an email.", "error");
     }
-          
-
 }
+
   // Handle contactForm form submission
   $('#contactForm').submit(function(e) {
     e.preventDefault();
     // Get form values
-    var id = $('#id').val().trim();
+    // var id = $('#id').val().trim();
     var name = $('#name').val().trim();
     var email = $('#email').val().trim();
     var phone = $('#phone').val().trim();
@@ -314,7 +302,7 @@ function SendEmailAjax(list){
    // Create an object to store the form data
     var formData = {
 
-        id:id,
+        // id:id,
         name:name,
         email:email,
         phone:phone,
@@ -331,9 +319,9 @@ function SendEmailAjax(list){
     $('#subject').val(' ');
     $('#message').val(' ');   
    
-    var contactList=Array.from(contactData.values());
-    console.log(contactList);
-    SendEmailAjax(contactList);
+    // var contactList=Array.from(contactData.values());
+    // console.log(contactList);
+    SendEmailAjax();
 
     // if(contactList != '' && contactList != null && contactList.length>0)
     // {

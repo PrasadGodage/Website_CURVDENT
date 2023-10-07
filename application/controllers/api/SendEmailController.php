@@ -17,20 +17,49 @@ class SendEmailController extends CI_Controller {
         
         $response = [];
 
-        $name = $this->post('name');
-        $email = $this->post('email');
-        $phone = $this->post('phone');
-        $subject = $this->post('subject');
-        $message = $this->post('message');
+        $subject = 'Application for Clinc By - ' . $this->input->post("name");
+        // $programming_languages = implode(", ", $this->input->post("programming_languages"));
+
+        $message = '
+                    <h3 align="center">Client Details</h3>
+                        <table border="1" width="100%" cellpadding="5">
+                            <tr>
+                            <td width="30%">Name</td>
+                            <td width="70%">'.$this->input->post("name").'</td>
+                            </tr>
+                            
+                            <tr>
+                            <td width="30%">Email Address</td>
+                            <td width="70%">'.$this->input->post("email").'</td>
+                            </tr>
+                            
+                            <tr>
+                            <td width="30%">Phone Number</td>
+                            <td width="70%">'.$this->input->post("phone").'</td>
+                            </tr>
+
+                            <tr>
+                            <td width="30%">Message</td>
+                            <td width="70%">'.$this->input->post("message").'</td>
+                            </tr>
+                        </table>
+                    ';
+
+
+        // $name = $this->input->post('name');
+        // $email = $this->input->post('email');
+        // $phone = $this->input->post('phone');
+        // $subject = $this->input->post('subject');
+        // $message = $this->input->post('message');
         
-        $emailContent = 'Phone Number: ' . $phone . "\n\n" . 'Message: ' . $message;
+        // $emailContent = 'Phone Number: ' . $phone . "\n\n" . 'Message: ' . $message;
         // $subject = " NewsLetter send ";
         // $this->input->post("title");
         // 
         // $file_data = $this->upoload_file();
-
+        
         $config=array(
-
+            
             'protocol'   =>   'smtp',
             'smtp_host'   =>   'smtp.gmail.com',
             'smtp_port'   =>   465,
@@ -39,21 +68,27 @@ class SendEmailController extends CI_Controller {
             'mailtype'   =>   'html',
             'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
-                        
+            
         );
-
-
         
         $this->load->library('email', $config);
-        
-        $this->email->from($this->input->post("email"));
-        // $this->email->from($email);
-        $this->email->to("soulsoft.urmila@gmail.com");
-        $this->email->subject($subject);
-        // $this->email->message($message);
-        $this->email->message($emailContent);
         $this->email->set_newline("\r\n");
-        $this->email->send();
+        $this->email->from($this->input->post("email"));
+        $this->email->to('pradyumnb.297@gmail.com');
+        $this->email->subject($subject);
+            $this->email->message($message);
+
+        
+        // $this->load->library('email', $config);
+        
+        // $this->email->from($this->input->post("email"));
+        // // $this->email->from($email);
+        // $this->email->to("soulsoft.urmila@gmail.com");
+        // $this->email->subject($subject);
+        // // $this->email->message($message);
+        // $this->email->message($emailContent);
+        // $this->email->set_newline("\r\n");
+        // $this->email->send();
 
         if (!$this->email->send()) {
             $response['msg'] = 'Email Send Successfully!';
