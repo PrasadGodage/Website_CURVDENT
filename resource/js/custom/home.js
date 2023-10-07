@@ -379,11 +379,11 @@ function SendEmailAjax(list){
 
 
 // Handle appointment form submission
-$('#send-form').submit(function(e) {
+$('#send-form').on('submit', function (e){
 
     e.preventDefault();
 
-    var returnVal = $("#send-form").valid();
+    //var returnVal = $("#send-form").valid();
     var formdata = new FormData(this);
     if (returnVal) {
      
@@ -392,10 +392,6 @@ $('#send-form').submit(function(e) {
             url: ebase_url+'appointmentUi_api',
 
             type: 'POST',
-
-            headers: {
-                "Authorization": etoken
-            },
 
             data: formdata,
           
