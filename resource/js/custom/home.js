@@ -234,6 +234,49 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
+function SendEmailAjax(list){
+
+    if(list != '' && list != null && list.length>0)
+    {
+        
+        var jsonString= JSON.stringify(list);
+        
+        $.ajax({
+            
+            url: ebase_url + 'sendEmail_api',
+
+                type: 'POST',
+
+
+                data: jsonString,
+
+                cache: false,
+
+                contentType: false,
+
+                processData: false,
+
+                dataType: 'json',
+                
+                success: function (response) {
+                    if (response.status == 200) {
+                        
+                        swal("Good job!", response.msg, "success");
+                        
+                            
+                    } else {
+        
+                        swal("ERROR!", response.msg, "error");
+        
+                    }
+        
+                }
+          });
+          
+    }
+          
+
+}
   // Handle contactForm form submission
   $('#contactForm').submit(function(e) {
     e.preventDefault();
@@ -286,52 +329,50 @@ $('#emailForm').on('submit', function (e) {
     $('#email').val(' ');
     $('#phone').val(' ');
     $('#subject').val(' ');
-    $('#message').val(' ');
-
-    e.preventDefault();
-    
+    $('#message').val(' ');   
    
     var contactList=Array.from(contactData.values());
     console.log(contactList);
+    SendEmailAjax(contactList);
 
-    if(contactList != '' && contactList != null && contactList.length>0)
-    {
+    // if(contactList != '' && contactList != null && contactList.length>0)
+    // {
         
-        var jsonString= JSON.stringify(contactList);
+    //     var jsonString= JSON.stringify(contactList);
         
-        $.ajax({
+    //     $.ajax({
             
-            url: ebase_url + 'sendEmail_api',
+    //         url: ebase_url + 'sendEmail_api',
 
-                type: 'POST',
+    //             type: 'POST',
 
 
-                data: jsonString,
+    //             data: jsonString,
 
-                cache: false,
+    //             cache: false,
 
-                contentType: false,
+    //             contentType: false,
 
-                processData: false,
+    //             processData: false,
 
-                dataType: 'json',
+    //             dataType: 'json',
                 
-                success: function (response) {
-                    if (response.status == 200) {
+    //             success: function (response) {
+    //                 if (response.status == 200) {
                         
-                        swal("Good job!", response.msg, "success");
+    //                     swal("Good job!", response.msg, "success");
                         
                             
-                    } else {
+    //                 } else {
         
-                        swal("ERROR!", response.msg, "error");
+    //                     swal("ERROR!", response.msg, "error");
         
-                    }
+    //                 }
         
-                }
-          });
+    //             }
+    //       });
           
-    }
+    // }
     
 }
 });
