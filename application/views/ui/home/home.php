@@ -350,14 +350,19 @@
                     <div class="about-info">
                         <h2 class="wow fadeInUp" data-wow-delay="0.6s">Book Your Appointment Now </h2>
                         <hr class="line line-hr-left">
-                        <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
+                    </div>   
+                </div>
+                <div  class="col-md-12 col-sm-12">
+                    <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                             <br>
                             <form id="send-form" role="form" method="post">
                                 <div class="form-group row">
-                                   <label class="col-sm-4 col-lg-4">Name</label>
-                                   <div class="col-sm-8 col-lg-8">
+                                   <div class="col-sm-2 col-lg-2"></div>
+                                   <label class="col-sm-3 col-lg-3">Name</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <input type="text" id="patient_name" class="form-control" placeholder=" name"  name="patient_name" required>
                                    </div>
+                                   <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <div class="form-group row">
                                    <label class="col-sm-4 col-lg-4">Contact</label>
@@ -401,14 +406,7 @@
                                 <br>
                                 <br>
                             </form>
-                        </div>
-                    </div>   
-                </div>
-                <div  class="col-md-6 col-sm-6">
-                    <!-- <h2 class="wow fadeInUp" data-wow-delay="0.6s"> </h2> -->
-                    <!-- <div class="item mb-"> -->
-                        <!-- <div> <img src="<?php echo base_url() . 'uiAssets/img/dr.jpg'; ?>" alt="" style="width: 685px; height: 564px;"> </div> -->
-                    <!-- </div> -->
+                    </div>
                 </div>
             </div>
         </div>
