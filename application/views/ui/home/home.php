@@ -409,7 +409,7 @@
                                 </div>
                                 <div class="form-group row justify-content-end">
                                     <div class="col-sm-5">
-                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">Book APPOINTMENT</button>
+                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
                                     </div>
                                 </div>
                                 <br>
