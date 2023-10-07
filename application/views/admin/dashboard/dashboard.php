@@ -502,10 +502,11 @@
                         </div>
                     </div> -->
                 <!-- </div> -->
-               
             </div>
 
 			<div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1"></div>
+
+			<div class="paginator"></div> 
 
 		</div>
 
