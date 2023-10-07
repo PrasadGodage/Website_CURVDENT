@@ -65,6 +65,8 @@ $route['postNewsletter_api/(:num)']='api/PostNewsletterController/postingNews/$1
 $route['subsriberpage_api']='api/PostNewsletterUiController/postingNews';
 $route['subsriberpage_api/(:num)']='api/PostNewsletterUiController/postingNews/$1';
 
-//sendMail Api without Authorization
-$route['sendMail_api']='api/SendEmailController/sendMail';
-$route['sendMail_api/(:num)']='api/SendEmailController/sendMail/$1';
+
+
+//AppointmentForm Api 
+$route['appointment_api']='api/AppointmentFormController/appointment';
+$route['appointment_api/(:num)']='api/AppointmentFormController/appointment/$1';
