@@ -41,6 +41,7 @@ function getPostList() {
                 var BolgCount = postList.size;
                 console.log(BolgCount);
                 $("#blogConut").text(BolgCount); // Use .text() to set the content
+                setPostList(postList);
             }
         }
     });
@@ -101,7 +102,6 @@ function getSubscriberList() {
     });
 }
 getSubscriberList();
-
 
 
 
