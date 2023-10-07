@@ -13,7 +13,7 @@ class SendEmailController extends CI_Controller {
         
     // }
    
-    public function sendMail() {  
+    public function sendMail_post() {  
         
         $response = [];
 
