@@ -751,7 +751,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
                     <h6>Contact Form</h6>
-                    <form method="post" class="contact__form" action="mail.php" id="contactForm">
+                    <form method="post" class="contact__form" id="contactForm">
                            <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">
