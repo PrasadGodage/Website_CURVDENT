@@ -49,9 +49,9 @@
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
+                                            <th>Name</th>
                                             <th>Date</th>
                                             <th>Time</th>
-                                            <th>Name</th>
                                             <th>Contact</th>
                                             <th>Action</th>
                                         </tr>
@@ -61,10 +61,10 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Sr No.</th>
+                                        <th>Sr No.</th>
+                                            <th>Name</th>
                                             <th>Date</th>
                                             <th>Time</th>
-                                            <th>Name</th>
                                             <th>Contact</th>
                                             <th>Action</th>
                                         </tr>
