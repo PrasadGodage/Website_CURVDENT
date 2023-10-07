@@ -274,8 +274,8 @@ function setPaginator(postList){
             </div>
         </div>`;
         
-//         listArray.push(data1); 
-//         data1 = '';
+        listArray.push(data1); 
+        data1 = '';
 //     }
     
    
@@ -350,12 +350,12 @@ function setPaginator(postList){
 
         data1 += '</div>'; // Close the col-md-6 div
 
-        if (count % postsPerPage === 0 || count === postList.size) {
-            // End the row for every second post in a pair or if it's the last post
-            data1 += '</div>'; // Close the row
-            listArray.push(data1);
-            data1 = ''; // Reset data1
-        }
+        // if (count % postsPerPage === 0 || count === postList.size) {
+        //     // End the row for every second post in a pair or if it's the last post
+        //     data1 += '</div>'; // Close the row
+        //     listArray.push(data1);
+        //     data1 = ''; // Reset data1
+        // }
 
         count++;
     }
