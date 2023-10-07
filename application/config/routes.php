@@ -75,3 +75,7 @@ $route['appointment_api/(:num)']='api/AppointmentFormController/appointment/$1';
 //AppointmentForm Api without Authorization
 $route['appointmentUi_api']='api/AppointmentFormUiController/appointment';
 $route['appointmentUi_api/(:num)']='api/AppointmentFormUiController/appointment/$1';
+
+//SendEmail api
+$route['sendEmail_api']='api/SendEmailController/sendMail';
+
