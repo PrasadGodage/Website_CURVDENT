@@ -183,14 +183,12 @@ function setPostList(postList) {
         </div>`;
         
            
-    }
-   
-      
+    } 
 
     $('#data1').html(data1);
 
 
-// }
+}
 
 
 
