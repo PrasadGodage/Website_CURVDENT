@@ -104,7 +104,6 @@ function getSubscriberList() {
 getSubscriberList();
 
 
-
 function setPostList(postList) {
     // console.log(postList);
 
