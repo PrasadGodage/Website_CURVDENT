@@ -348,7 +348,7 @@
             <div class="row">
                 <div  class="col-md-6 col-sm-6">
                     <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.6s">Book Your Appointment Now </h2>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="color: #d4b76e;">Book Your Appointment Now </h2>
                         <hr class="line line-hr-left">
                     </div>   
                 </div>
@@ -358,7 +358,7 @@
                             <form id="send-form" role="form" method="post">
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Name</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Name</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <input type="text" id="patient_name" class="form-control" placeholder=" Name"  name="patient_name" required>
                                    </div>
@@ -366,7 +366,7 @@
                                 </div>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Contact</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Contact</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
                                    </div>
@@ -375,7 +375,7 @@
                                 <br>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Email</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Email</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <input type="email" id="email" class="form-control" placeholder="Your Email"  name="email">
                                    </div>
@@ -383,7 +383,7 @@
                                 </div>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Date</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Date</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <input type="date" id="date" class="form-control" name="date">
                                    </div>
@@ -392,7 +392,7 @@
                                 <br>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Time</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Time</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <input type="time" id="time" class="form-control" name="time">
                                    </div>
@@ -401,7 +401,7 @@
                                 <br>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2">Address</label>
+                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Address</label>
                                    <div class="col-sm-5 col-lg-5">
                                       <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
                                    </div>
