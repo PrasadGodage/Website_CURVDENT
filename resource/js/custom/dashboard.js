@@ -179,8 +179,7 @@ function setPaginator(postList){
                                 <p>${post.content}</p>
                             </div>
                             <div class="col-sm-4">
-                            <a href="#" onclick="postDetails(${post.id})">
-                                <button type="button" class="btn btn-warning" style="margin-top : 10px;">Read More</button></a>
+                           
                             </div>
                         </div> 
                     </div>
