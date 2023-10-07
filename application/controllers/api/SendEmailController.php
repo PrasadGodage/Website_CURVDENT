@@ -32,12 +32,12 @@ class SendEmailController extends CI_Controller {
         $config=array(
 
             'protocol'   =>   'smtp',
-            'smtp_host'   =>   'smtpuot.secureserver.net',
-            'smtp_port'   =>   80,
+            'smtp_host'   =>   'smtp.gmail.com',
+            'smtp_port'   =>   465,
             'smtp_user'   =>   'soulsoft.soul120@gmail.com',
             'smtp_pass'   =>   'dipalirahane@1993',
             'mailtype'   =>   'html',
-            'charset'   =>   'iso-8859-1',
+            'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
                         
         );
