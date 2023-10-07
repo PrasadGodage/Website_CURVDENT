@@ -385,6 +385,7 @@ $('#send-form').on('submit', function (e){
 
     //var returnVal = $("#send-form").valid();
     var formdata = new FormData(this);
+    console.log(formdata);
     
      
         $.ajax({
