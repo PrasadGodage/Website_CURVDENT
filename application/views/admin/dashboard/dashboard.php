@@ -30,7 +30,7 @@
 		</div> -->
 
 	  </div>
-    <div class="row">
+    	<div class="row">
 		<div class="col-md-4 col-12">
           	<a class="box box-body box-inverse box-primary bg-primary">
               <div class="flexbox align-items-center">
@@ -461,7 +461,7 @@
                     <!-- <canvas id="myAreaChart" height="400vh"></canvas> -->
 
 					<!-- <section class="section-padding">
-    <div class="container"> -->
+    	<div class="container"> -->
         <div class="row">
             <!-- Content -->
          	 <!-- <ul class="content list-group">   -->
@@ -528,24 +528,24 @@
     <!-- /.content -->
   </div>
 
-</div>
 
-  <!-- Style for Title -->
-  <style>
-    .main_title2{
-	   background: #f9f9ff;
-	   border-left: 3px solid $baseColor;
-	   margin-bottom: 30px;
-	h2{
-		color: $dip;
-		font-size: 18px; 
-		font-family: $rob;
-		font-weight: 500;
-		line-height: 40px;
-		padding-left: 15px;
-		margin-bottom: 0px;
-	}
-}
+
+	<!-- Style for Title -->
+	<style>
+			/* .main_title2{
+			background: #f9f9ff;
+			border-left: 3px solid $baseColor;
+			margin-bottom: 30px;
+			h2{
+				color: $dip;
+				font-size: 18px; 
+				font-family: $rob;
+				font-weight: 500;
+				line-height: 40px;
+				padding-left: 15px;
+				margin-bottom: 0px;
+			}
+		} */
 
         .content {
             overflow: hidden;
