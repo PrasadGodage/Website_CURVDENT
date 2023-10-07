@@ -234,7 +234,7 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-  // Handle form submission
+  // Handle contactForm form submission
   $('#contactForm').submit(function(e) {
     e.preventDefault();
     // Get form values
@@ -334,4 +334,51 @@ $('#emailForm').on('submit', function (e) {
     }
     
 }
+});
+
+
+// Handle appointment form submission
+$('#send-form').submit(function(e) {
+
+    e.preventDefault();
+
+    var returnVal = $("#send-form").valid();
+    var formdata = new FormData(this);
+    if (returnVal) {
+     
+        $.ajax({
+
+            url: ebase_url+'appointment_api',
+
+            type: 'POST',
+
+            headers: {
+                "Authorization": etoken
+            },
+
+            data: formdata,
+          
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    swal("Good job!", response.msg, "success");                                
+                       
+                } else {
+
+                    swal("Error!", response.msg, "error");
+
+                }
+
+            }
+
+        });
+    }
+
 });
