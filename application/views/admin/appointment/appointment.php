@@ -49,8 +49,10 @@
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
-                                            <th>Article Title</th>
-                                            <th>Publish Date</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Name</th>
+                                            <th>Contact</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -60,8 +62,10 @@
                                     <tfoot>
                                         <tr>
                                             <th>Sr No.</th>
-                                            <th>Article Title</th>
-                                            <th>Publish Date</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Name</th>
+                                            <th>Contact</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
