@@ -392,8 +392,8 @@
                                 <br>
                                 <div class="form-group row">
                                    <div class="col-sm-2 col-lg-2"></div>
-                                   <label class="col-sm-3 col-lg-4">Time</label>
-                                   <div class="col-sm-5 col-lg-8">
+                                   <label class="col-sm-3 col-lg-3">Time</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <input type="time" id="time" class="form-control" name="time">
                                    </div>
                                    <div class="col-sm-2 col-lg-2"></div>
@@ -401,8 +401,8 @@
                                 <br>
                                 <div class="form-group row">
                                    <div class="col-sm-2 col-lg-2"></div>
-                                   <label class="col-sm-3 col-lg-4">Address</label>
-                                   <div class="col-sm-5 col-lg-8">
+                                   <label class="col-sm-3 col-lg-3">Address</label>
+                                   <div class="col-sm-5 col-lg-5">
                                       <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
                                    </div>
                                    <div class="col-sm-2 col-lg-2"></div>
