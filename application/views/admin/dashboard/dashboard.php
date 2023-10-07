@@ -458,7 +458,61 @@
  
             <div class="box-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart" height="400vh"></canvas>
+                    <!-- <canvas id="myAreaChart" height="400vh"></canvas> -->
+
+					<!-- <section class="section-padding">
+    <div class="container"> -->
+        <div class="row">
+            <!-- Content -->
+         	 <!-- <ul class="content list-group">   -->
+            <div class="col-md-8 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1">
+                <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
+                <div class="row"> -->
+                    <!-- <div class="col-md-5 p-4">
+                        <div class="item">
+                            <div class="position-re o-hidden" id="div1">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 p-4">
+                        <div class="item">
+                            <div class="media-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <a  href="blog_page">
+                                        <button type="button" class="btn btn-warning">Blog</button></a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                    <div class="col-sm-4" id="div2">
+                                    </div>
+                                    <div class="col-md-12" id="heading1">
+                                         <h5 style="color:red;" href="blog_page" id="heading1"> -->
+                                        <!-- The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe -->
+                                    <!-- </h5> -->
+                                    <!--</div>    
+                                    <div class="col-md-12" href="blog_page" id="p1">
+                                         <p id="paragraph1"></p> -->
+                                        <!-- <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+               
+            </div>
+
+		</div>
+
+
+
+
+
+
+
                 </div>
             </div>
 

@@ -104,5 +104,99 @@ getSubscriberList();
 
 
 
+
+function setPostList(postList) {
+    // console.log(postList);
+
+    $('#data1').empty();
+    // $('#data2').empty();
+    var data1 = '';
+    // var data2 = '';
+    // var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc1 = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc2 = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc3 = ebase_url + '/uiAssets/img/dummy.jpg';
+    // var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
+    
+    // Add the title section outside the loop
+    
+    for (let k of postList.keys()) {
+        let post = postList.get(k);
+
+        data1 += '<div class="row">';
+        
+        // Check if post.photo is not empty or falsy
+        if (post.photo) {
+            data1 += `
+                <div class="col-md-5 p-4 betty-about-img">
+                    <div class="item">
+                        <div class="position-re o-hidden img">
+                            <a href="#" onclick="postDetails(${post.id})">
+                            <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; filter: none;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // If post.photo is empty, provide a default image
+            data1 += `
+                <div class="col-md-5 p-4 betty-about-img">
+                    <div class="item">
+                        <div class="position-re o-hidden img">
+                            <a href="#" onclick="postDetails(${post.id})">
+                                <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
+                            </a>
+                        </div>                    
+                    </div>
+                </div>
+            `;
+        }
+    
+        data1 += `
+            <div class="col-md-7 p-4">
+                <div class="item">
+                    <div class="media-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-4">
+                                <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
+                            </div>
+                            <div class="col-md-12">
+                                <h5>${post.title}</h5>
+                            </div>    
+                            <div class="col-md-12 content">
+                                <p>${post.content}</p>
+                            </div>
+                            <div class="col-sm-4">
+                            <a href="#" onclick="postDetails(${post.id})">
+                                <button type="button" class="btn btn-warning" style="margin-top : 10px;">Read More</button></a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>`;
+        
+           
+    }
+   
+      
+
+    $('#data1').html(data1);
+
+
+// }
+
+
+
+
+
+
+
 });
 
