@@ -195,6 +195,10 @@ getSubscriberList();
 
 // }
 
+function postDetails(id){
+    
+    $(location).attr('href',ebase_url+'blog_page/'+id);
+}
 
 //Paginator script
 function setPaginator(postList){
@@ -255,7 +259,8 @@ function setPaginator(postList){
                             <div class="col-md-12">
                                 <h5>${post.title}</h5>
                             </div>    
-                            <div class="col-md-12 content">
+                            <div class="col-md-12" style=" overflow: hidden;
+                            max-height: 55px;">
                                 <p>${post.content}</p>
                             </div>
                             <div class="col-sm-4">
