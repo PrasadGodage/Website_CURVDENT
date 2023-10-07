@@ -2,7 +2,7 @@ let postList = new Map();
 let newsletterList = new Map();
 let subscriberList = new Map();
 
-const numberPerPage = 3;
+const numberPerPage = 2;
 const currentPage = 1;
 const listArray = [];
 // console.log("baseUrl"+ebase_url);
@@ -110,24 +110,25 @@ function getSubscriberList() {
 getSubscriberList();
 
 
-// function setPostList(postList) {
-//     // console.log(postList);
+function postDetails(id){
+    
+    $(location).attr('href',ebase_url+'blog_page/'+id);
+}
 
-//     $('#data1').empty();
-//     // $('#data2').empty();
+// //Paginator script
+// function setPaginator(postList){
+//     //Get total number of pages
 //     var data1 = '';
-//     // var data2 = '';
-//     // var imageSrc = ebase_url + '/uiAssets/img/dummy.jpg';
-//     // var imageSrc1 = ebase_url + '/uiAssets/img/dummy.jpg';
-//     // var imageSrc2 = ebase_url + '/uiAssets/img/dummy.jpg';
-//     // var imageSrc3 = ebase_url + '/uiAssets/img/dummy.jpg';
-//     // var imageSrc4 = ebase_url + '/uiAssets/img/dummy.jpg';
-    
-//     // Add the title section outside the loop
-    
+//     var count = 1;
 //     for (let k of postList.keys()) {
 //         let post = postList.get(k);
-
+//          if(count ==1) {
+//         // data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
+//          }
+//          if(count/numberPerPage==0){
+//             //  data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';  
+//          }
+//          count++;
 //         data1 += '<div class="row">';
         
 //         // Check if post.photo is not empty or falsy
@@ -173,7 +174,8 @@ getSubscriberList();
 //                             <div class="col-md-12">
 //                                 <h5>${post.title}</h5>
 //                             </div>    
-//                             <div class="col-md-12 content">
+//                             <div class="col-md-12" style=" overflow: hidden;
+//                             max-height: 55px;">
 //                                 <p>${post.content}</p>
 //                             </div>
 //                             <div class="col-sm-4">
@@ -187,35 +189,33 @@ getSubscriberList();
 //             </div>
 //         </div>`;
         
-           
-//     } 
-
-//     $('#data1').html(data1);
-
-
-// }
-
-function postDetails(id){
+//         listArray.push(data1); 
+//         data1 = '';
+//         }
     
-    $(location).attr('href',ebase_url+'blog_page/'+id);
-}
+   
+ 
+//  console.log(listArray)
+ 
 
-//Paginator script
-function setPaginator(postList){
-    //Get total number of pages
+// Paginator script
+function setPaginator(postList) {
+    // Get total number of pages
     var data1 = '';
     var count = 1;
+    var postsPerPage = 2; // Define the number of posts per row
+    var listArray = []; // Array to store the generated HTML for each row
+
     for (let k of postList.keys()) {
         let post = postList.get(k);
-         if(count ==1) {
-        data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';
-         }
-         if(count/numberPerPage==0){
-             data1 += '<div class="main_title2"><h6 style="font-weight:bold;">All News About Blog</h6></div>';  
-         }
-         count++;
-        data1 += '<div class="row">';
-        
+
+        if (count % postsPerPage === 1) {
+            // Start a new row for every first post in a pair
+            data1 += '<div class="row">';
+        }
+
+        data1 += '<div class="col-md-12 p-4">'; // Use col-md-6 for 2 posts in a row
+
         // Check if post.photo is not empty or falsy
         if (post.photo) {
             data1 += `
@@ -243,7 +243,6 @@ function setPaginator(postList){
                 </div>
             `;
         }
-    
         data1 += `
             <div class="col-md-7 p-4">
                 <div class="item">
@@ -273,96 +272,22 @@ function setPaginator(postList){
                 
             </div>
         </div>`;
-        
-        listArray.push(data1); 
-        data1 = '';
-//     }
-    
-   
- 
-//  console.log(listArray)
- 
-
-// // Paginator script
-// function setPaginator(postList) {
-//     // Get total number of pages
-//     var data1 = '';
-//     var count = 1;
-//     var postsPerPage = 2; // Define the number of posts per row
-//     var listArray = []; // Array to store the generated HTML for each row
-
-//     for (let k of postList.keys()) {
-//         let post = postList.get(k);
-
-//         if (count % postsPerPage === 1) {
-//             // Start a new row for every first post in a pair
-//             data1 += '<div class="row">';
-//         }
-
-//         data1 += '<div class="col-md-6 p-4">'; // Use col-md-6 for 2 posts in a row
-
-//         // Check if post.photo is not empty or falsy
-//         if (post.photo) {
-//             data1 += `
-//                 <div class="item">
-//                     <div class="position-re o-hidden img">
-//                         <a href="#" onclick="postDetails(${post.id})">
-//                             <img src="${post.photo}" alt="" style="width: 230px; height: 180px; object-fit: cover; image-rendering: pixelated; filter: none;">
-//                         </a>
-//                     </div>
-//                 </div>
-//             `;
-//         } else {
-//             // If post.photo is empty, provide a default image
-//             data1 += `
-//                 <div class="item">
-//                     <div class="position-re o-hidden img">
-//                         <a href="#" onclick="postDetails(${post.id})">
-//                             <img src="${imageSrc}" alt="Default Image" style="width: 230px; height: 180px; object-fit: cover;  image-rendering: pixelated; filter: none;">
-//                         </a>
-//                     </div>
-//                 </div>
-//             `;
-//         }
-
-//         data1 += `
-//             <div class="item">
-//                 <div class="media-body">
-//                     <div class="row">
-//                         <div class="col-md-12">
-//                             <i class="fa fa-calendar" aria-hidden="true"></i> ${post.date}
-//                         </div>
-//                         <div class="col-md-12">
-//                             <h5>${post.title}</h5>
-//                         </div>    
-//                         <div class="col-md-12" style=" overflow: hidden; max-height: 55px;">
-//                             <p>${post.content}</p>
-//                         </div>
-//                         <div class="col-md-12">
-//                             <a href="#" onclick="postDetails(${post.id})">
-//                                 <button type="button" class="btn btn-warning" style="margin-top : 10px;">Read More</button>
-//                             </a>
-//                         </div>
-//                     </div> 
-//                 </div>
-//             </div>
-//         `;
 
         data1 += '</div>'; // Close the col-md-6 div
 
-        // if (count % postsPerPage === 0 || count === postList.size) {
-        //     // End the row for every second post in a pair or if it's the last post
-        //     data1 += '</div>'; // Close the row
-        //     listArray.push(data1);
-        //     data1 = ''; // Reset data1
-        // }
+        if (count % postsPerPage === 0 || count === postList.size) {
+            // End the row for every second post in a pair or if it's the last post
+            data1 += '</div>'; // Close the row
+            listArray.push(data1);
+            data1 = ''; // Reset data1
+        }
 
         count++;
     }
 
     console.log(listArray);
 
-
+}
 
 
  // State
@@ -411,7 +336,7 @@ function setPaginator(postList){
  }
 
 
-
+    
 
 });
 
