@@ -385,7 +385,7 @@ $('#send-form').on('submit', function (e){
 
     //var returnVal = $("#send-form").valid();
     var formdata = new FormData(this);
-    if (returnVal) {
+    
      
         $.ajax({
 
@@ -416,6 +416,6 @@ $('#send-form').on('submit', function (e){
             }
 
         });
-    }
+    
 
 });
