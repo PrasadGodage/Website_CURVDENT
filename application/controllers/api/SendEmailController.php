@@ -61,7 +61,7 @@ class SendEmailController extends CI_Controller {
         $config=array(
             
             'protocol'   =>   'smtp',
-            'smtp_host'   =>   'smtp.gmail.com',
+            'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
             'smtp_user'   =>   'soulsoft.soul120@gmail.com',
             'smtp_pass'   =>   'dipalirahane@1993',
