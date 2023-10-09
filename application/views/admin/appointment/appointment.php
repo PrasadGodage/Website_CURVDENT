@@ -35,10 +35,10 @@
                             <!--<div class="box-controls pull-right">-->
                             <button type="button" class="btn btn-primary" id="addappointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
                             <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
-                            <div class="col-md-2 box-controls pull-right">
+                            <!-- <div class=" box-controls pull-right"> -->
                                 <input type="date" class="form-control" id="date" name="date">
                             <!-- </button> -->
-                            </div>
+                            <!-- </div> -->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
