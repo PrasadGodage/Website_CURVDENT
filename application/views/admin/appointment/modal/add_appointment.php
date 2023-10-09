@@ -16,8 +16,8 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label ><span class="error">*</span>Date</label>
-                                    <input type="date" class="form-control" id="date" name="date">
+                                    <label ><span class="error">*</span>Name</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder=" Name" required>
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>
@@ -25,18 +25,6 @@
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Time</label>
                                     <input type="time" class="form-control" id="time" name="time">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label ><span class="error">*</span>Name</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder=" Name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label ><span class="error">*</span>Contact</label>
-                                    <input type="tel" class="form-control" id="contactNo" name="contactNo" placeholder=" Contact" recorded>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -51,7 +39,18 @@
                                     <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Date</label>
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Contact</label>
+                                    <input type="tel" class="form-control" id="contactNo" name="contactNo" placeholder=" Contact" recorded>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer text-right">
