@@ -206,8 +206,8 @@ function updateAppointmentDetails(id) {
     $('#id').val(appointment.id);
     $('#fullName').val(appointment.fullName);
     $('#date').val(appointment.date).change();
-    $('#time').val(post.time).change();
-    $('#contactNo').val(post.contactNo);
+    $('#time').val(appointment.time).change();
+    $('#contactNo').val(appointment.contactNo);
    
     
    
