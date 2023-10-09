@@ -18,9 +18,12 @@ class SendEmailController extends CI_Controller {
         
         $response = [];
         $jsonData = json_decode($jsonString, true);
+        echo "<pre>"
+        print_r($jsonData);
 
 
         $subject = 'Application for Clinc By - ' . $jsonData['name'];
+
         // $programming_languages = implode(", ", $this->input->post("programming_languages"));
 
         $message = '
@@ -82,7 +85,7 @@ class SendEmailController extends CI_Controller {
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($message);
-        print_r($this->email->print_debugger());
+        // print_r($this->email->print_debugger());
 
         
         // $this->load->library('email', $config);

@@ -250,11 +250,19 @@ function SendEmailAjax() {
 
         $.ajax({
             url: ebase_url + 'sendEmail_api',
+
             type: 'POST',
+
             data: jsonString,
+
             cache: false,
-            contentType: 'application/json', // Set content type to JSON
+
+            contentType: false,
+
+            processData: false,
+
             dataType: 'json',
+
             success: function(response) {
                 if (response.status == 200) {
                     swal("Good job!", response.msg, "success");
@@ -262,11 +270,7 @@ function SendEmailAjax() {
                     swal("ERROR!", response.msg, "error");
                 }
             },
-            error: function(xhr, status, error) {
-                // Handle errors if any
-                console.error(error);
-                swal("ERROR!", "An error occurred while sending the email.", "error");
-            }
+            
         });
     } else {
         swal("ERROR!", "No contact data available to send an email.", "error");
