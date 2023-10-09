@@ -379,71 +379,71 @@ $("#submitMail").click(function(e){
 });
 
 
-// Handle appointment form submission
-$('#appointment').click(function(e){
-    console.log("Hello");
+// // Handle appointment form submission
+// $('#appointment').click(function(e){
+//     console.log("Hello");
 
-    e.preventDefault();
+//     e.preventDefault();
 
-    // var formData = $(this);
+//     // var formData = $(this);
   
 
-    var patient_name = $('#fullName').val().trim();
-    var contact = $('#contactNo').val().trim();
-    var email = $('#email').val().trim();
-    var date = $('#date').val().trim();
-    var time = $('#time').val().trim();
-    var address = $('#address').val().trim();
+//     var patient_name = $('#fullName').val().trim();
+//     var contact = $('#contactNo').val().trim();
+//     var email = $('#email').val().trim();
+//     var date = $('#date').val().trim();
+//     var time = $('#time').val().trim();
+//     var address = $('#address').val().trim();
 
-//     //var returnVal = $("#send-form").valid();
-//    // var formdata = new FormData(this);
-//    // console.log(formdata);
+// //     //var returnVal = $("#send-form").valid();
+// //    // var formdata = new FormData(this);
+// //    // console.log(formdata);
 
-    var formData = {
+//     var formData = {
 
-        fullName:patient_name,
-        contactNo:contact,
-        email:email,
-        date:date,
-        time:time,
-        address:address,
-         };
-       console.log(formData);
-       var jsonString= JSON.stringify(formData);
-       console.log(jsonString);
+//         fullName:patient_name,
+//         contactNo:contact,
+//         email:email,
+//         date:date,
+//         time:time,
+//         address:address,
+//          };
+//        console.log(formData);
+//        var jsonString= JSON.stringify(formData);
+//        console.log(jsonString);
      
-        $.ajax({
+//         $.ajax({
 
-            url: ebase_url+'appointmentUi_api', 
+//             url: ebase_url+'appointmentUi_api', 
 
-            type: 'POST',
+//             type: 'POST',
 
-            data: jsonString,
+//             data: jsonString,
           
-            cache: false,
+//             cache: false,
 
-            contentType: false,
+//             contentType: false,
 
-            processData: false,
+//             processData: false,
 
-            dataType: 'json',
+//             dataType: 'json',
 
-            success: function (response) {
-                if (response.status == 200) {
-                    swal("Good job!", response.msg, "success");                                
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     swal("Good job!", response.msg, "success");                                
                        
-                } else {
+//                 } else {
 
-                    swal("Error!", response.msg, "error");
+//                     swal("Error!", response.msg, "error");
 
-                }
+//                 }
 
-            }
+//             }
 
-        });
+//         });
     
 
-});
+// });
 
 $('#sendform').on('submit', function (e) {
 
@@ -467,22 +467,6 @@ $('#sendform').on('submit', function (e) {
      setTimeout(function () {
         $("#message").fadeOut();
     }, 3000);
-
-    // if (email) {
-    //     // Show the success message
-    //     $("#message").removeClass("alert-danger").addClass("alert-success");
-    //     $("#message").text("Your message was sent successfully.");
-    //     $("#message").fadeIn();
-
-    //     // Clear the input field
-    //     $("#email").val('');
-    // } else {
-    //     // Display an error message if the email field is empty (optional)
-    //     $("#message").removeClass("alert-success").addClass("alert-danger");
-    //     $("#message").text("Email field cannot be empty.");
-    //     $("#message").fadeIn();
-    // }
-
 
     // if (returnVal) {
         $.ajax({
