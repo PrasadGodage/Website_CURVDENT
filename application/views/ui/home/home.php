@@ -1,5 +1,5 @@
 
-    <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
