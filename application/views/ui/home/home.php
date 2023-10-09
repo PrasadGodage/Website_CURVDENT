@@ -783,7 +783,7 @@
                                 <input name="subject" type="text" id="subject" placeholder="Subject *" >
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" ></textarea>
+                                <textarea name="message" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
                             </div>
                             <div class="col-md-12">
                                 <!-- <input name="submit" type="submit" value="Send Message"> -->

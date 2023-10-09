@@ -287,7 +287,7 @@ $("#submitMail").click(function(e){
     var email = $('#mail').val().trim();
     var phone = $('#mobile').val().trim();
     var subject = $('#subject').val().trim();
-    var message = $('#message').val().trim();
+    var message = $('#msg').val().trim();
            
     var flag=true;
 
@@ -320,17 +320,16 @@ $("#submitMail").click(function(e){
             email:email,
             phone:phone,
             subject:subject,
-            message:message
         };
      
    
         contactData.set(contactData.size+1,formData);
          
         $('#name').val(' ');
-        $('#email').val(' ');
-        $('#phone').val(' ');
+        $('#mail').val(' ');
+        $('#mobile').val(' ');
         $('#subject').val(' ');
-        $('#message').val(' ');   
+        $('#msg').val(' ');   
     
         // var contactList=Array.from(contactData.values());
         // console.log(contactList);
