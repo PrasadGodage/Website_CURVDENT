@@ -368,10 +368,12 @@ function SendEmailAjax() {
 
 // Handle appointment form submission
 $('#send-form').submit(function(e){
+    console.log("Hello");
 
     e.preventDefault();
 
-    var formData = $(this).serializeArray();
+    var formData = $(this);
+    console.log(formData);
 
 //     var patient_name = $('#patient_name').val().trim();
 //     var contact = $('#contact').val().trim();
@@ -398,7 +400,7 @@ $('#send-form').submit(function(e){
      
         $.ajax({
 
-            url: ebase_url+'appointmentUi_api',
+            url: ebase_url+'appointmentUi_api', 
 
             type: 'POST',
 
