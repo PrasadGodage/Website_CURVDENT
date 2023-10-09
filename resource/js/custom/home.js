@@ -368,7 +368,7 @@ $('#contactForm').submit(function(e) {
 
 
 // Handle appointment form submission
-$('#send-form').submit(function(e){
+$('#appointment').click(function(e){
     console.log("Hello");
 
     e.preventDefault();
