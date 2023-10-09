@@ -368,37 +368,39 @@ function SendEmailAjax() {
 
 // Handle appointment form submission
 $('#send-form').submit(function(e){
+    console.log("Hello");
 
     e.preventDefault();
 
-    var formData = $(this).serializeArray();
+    // var formData = $(this);
+  
 
-//     var patient_name = $('#patient_name').val().trim();
-//     var contact = $('#contact').val().trim();
-//     var email = $('#email').val().trim();
-//     var date = $('#date').val().trim();
-//     var time = $('#time').val().trim();
-//     var address = $('#address').val().trim();
+    var patient_name = $('#patient_name').val().trim();
+    var contact = $('#contact').val().trim();
+    var email = $('#email').val().trim();
+    var date = $('#date').val().trim();
+    var time = $('#time').val().trim();
+    var address = $('#address').val().trim();
 
 //     //var returnVal = $("#send-form").valid();
 //    // var formdata = new FormData(this);
 //    // console.log(formdata);
 
-//     var formData = {
+    var formData = {
 
-//         patient_name:patient_name,
-//         contact:contact,
-//         email:email,
-//         date:date,
-//         time:time,
-//         address:address
-//          };
-     
+        fullName:patient_name,
+        contactNo:contact,
+        email:email,
+        date:date,
+        time:time,
+        address:address,
+         };
+       console.log(formData);
     
      
         $.ajax({
 
-            url: ebase_url+'appointmentUi_api',
+            url: ebase_url+'appointmentUi_api', 
 
             type: 'POST',
 
