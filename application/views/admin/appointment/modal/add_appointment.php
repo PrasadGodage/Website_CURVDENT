@@ -22,9 +22,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label ><span class="error">*</span>Time</label>
-                                    <input type="time" class="form-control" id="time" name="time">
+                            <div class="form-group">
+                                    <label ><span class="error">*</span>Contact</label>
+                                    <input type="tel" class="form-control" id="contactNo" name="contactNo" placeholder=" Contact" recorded>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -46,10 +46,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <label ><span class="error">*</span>Contact</label>
-                                    <input type="tel" class="form-control" id="contactNo" name="contactNo" placeholder=" Contact" recorded>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
