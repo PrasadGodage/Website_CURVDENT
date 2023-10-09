@@ -117,7 +117,7 @@
      <!-- End Whats App Chat Boat Code  -->
 
      <script > 
-        let ebase_url ='https://dev.curvdent.com/';
+        let ebase_url ='https://curvdent.com/';
     </script>
 
 
