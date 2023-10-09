@@ -33,9 +33,9 @@
                         <div class="box-header with-border box-controls pull-right">
 
                             <!--<div class="box-controls pull-right">-->
-                            <button id="date" class="btn btn-xs btn-primary">Select Date
+                            <!-- <button id="date" class="btn btn-xs btn-primary">Select Date
                             <input type="date" class="form-control" id="date" name="date">
-                            </button>
+                            </button> -->
                             <button type="button" class="btn btn-primary" id="addappointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
                             <!--</div>-->
                         </div>
