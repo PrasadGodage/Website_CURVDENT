@@ -4,12 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SendEmailController extends CI_Controller {
       
-
+    
     public function __construct() {
 
         parent::__construct();
         // $this->load->library('email'); 
         $this->load->helper('url');
+        $this->load->library('email');
         
     }
    
@@ -71,7 +72,7 @@ class SendEmailController extends CI_Controller {
             
         );
         
-        $this->load->library('email', $config);
+        $this->email->initialize($config);
 
         $this->email->set_newline("\r\n");
 
@@ -79,6 +80,7 @@ class SendEmailController extends CI_Controller {
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($message);
+        print_r($this->email->print_debugger());
 
         
         // $this->load->library('email', $config);
