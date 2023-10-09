@@ -1,6 +1,7 @@
 let postList = new Map();
 let subscriberList = new Map();
 let contactData = new Map();
+let appointmentList = new Map();
 
 const myStyles = `
     #name, #email, #phone, #subject, #message {
@@ -442,4 +443,86 @@ $('#appointment').click(function(e){
         });
     
 
+});
+
+$('#sendform').on('submit', function (e) {
+
+    e.preventDefault();
+
+    // var returnVal = $("#emailForm").val();
+    var formdata = new FormData(this);
+
+     // Show the success message
+     $("#message").fadeIn();
+
+      // Clear the input field (optional)
+      $("#fullName").val('');
+      $("#contactNo").val('');
+      $("#email").val('');
+      $("#address").val('');
+      $("#date").val('');
+      $("#time").val('');
+
+     // Hide the success message after 3 seconds (adjust the time as needed)
+     setTimeout(function () {
+        $("#message").fadeOut();
+    }, 3000);
+
+    // if (email) {
+    //     // Show the success message
+    //     $("#message").removeClass("alert-danger").addClass("alert-success");
+    //     $("#message").text("Your message was sent successfully.");
+    //     $("#message").fadeIn();
+
+    //     // Clear the input field
+    //     $("#email").val('');
+    // } else {
+    //     // Display an error message if the email field is empty (optional)
+    //     $("#message").removeClass("alert-success").addClass("alert-danger");
+    //     $("#message").text("Email field cannot be empty.");
+    //     $("#message").fadeIn();
+    // }
+
+
+    // if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'appointmentUi_api',
+
+            type: 'POST',
+
+            // headers: {
+            //     "Authorization": etoken
+            // },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // Show success message
+                    $("#successMessage").fadeIn();
+                    
+                    // Clear the input field
+                    // $("#email").val('');
+                    
+                    // Hide the success message after a few seconds (optional)
+                    setTimeout(function() {
+                        $("#successMessage").fadeOut();
+                    }, 3000); // Hide after 3 seconds
+                // } else {
+                //     // Handle error
+                //     swal("Error", response.msg, "error");
+                 }
+            }
+        });
+
+    // }
 });
