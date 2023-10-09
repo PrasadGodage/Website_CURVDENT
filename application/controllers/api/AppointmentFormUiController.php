@@ -20,7 +20,7 @@ class AppointmentFormUiController extends REST_Controller {
             
         try {
             //Authentication
-            //$headers = $this->input->request_headers();
+           // $headers = $this->input->request_headers();
 
             // if (isset($headers['Authorization'])) {
             //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
@@ -37,7 +37,8 @@ class AppointmentFormUiController extends REST_Controller {
                         $response['status'] = 404;
                         $this->response($response, REST_Controller::HTTP_OK);
                     }
-                    //     }else {
+                    //     }
+                    //     else {
                     //     $this->response($decodedToken);
                     // }
                     // }else {
@@ -52,18 +53,17 @@ class AppointmentFormUiController extends REST_Controller {
 
     public function appointment_post() { 
         $response = [];
-        $data['fullName'] = $this->post('patient_name');
-        $data['contactNo'] = $this->post('contact');
+        $data['fullName'] = $this->post('fullName');
+        $data['contactNo'] = $this->post('contactNo');
         $data['email'] = $this->post('email');
         $data['date'] = $this->post('date');
         $data['time'] = $this->post('time');
         $data['address'] = $this->post('address');
-        //print_r($data);
         
         $id = $this->post('id');
         
         //Authentication
-        $headers = $this->input->request_headers();
+        //$headers = $this->input->request_headers();
 
         // if (isset($headers['Authorization'])) {
         //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
@@ -135,10 +135,10 @@ class AppointmentFormUiController extends REST_Controller {
             //Authentication
             $headers = $this->input->request_headers();
 
-            // if (isset($headers['Authorization'])) {
-            //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
-            //     if ($decodedToken['status'])
-            //     {
+            if (isset($headers['Authorization'])) {
+                $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
+                if ($decodedToken['status'])
+                {
                     if(!empty($id)){
                         $status = $this->appointment->delete_appointment($id);
 
@@ -153,14 +153,13 @@ class AppointmentFormUiController extends REST_Controller {
                             $this->response($response, REST_Controller::HTTP_OK);
                         }
                     }
-                //}
-            //     else {
-            //         $this->response($decodedToken);
-            //     }
+                }else {
+                    $this->response($decodedToken);
+                }
                 
-            // }else {
-            //     $this->response(['Authentication failed'], REST_Controller::HTTP_OK);
-            // }
+            }else {
+                $this->response(['Authentication failed'], REST_Controller::HTTP_OK);
+            }
 
             
         } catch (Exception $exc) {
