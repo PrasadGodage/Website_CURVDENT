@@ -387,8 +387,8 @@ $('#appointment').click(function(e){
     // var formData = $(this);
   
 
-    var patient_name = $('#patient_name').val().trim();
-    var contact = $('#contact').val().trim();
+    var patient_name = $('#fullName').val().trim();
+    var contact = $('#contactNo').val().trim();
     var email = $('#email').val().trim();
     var date = $('#date').val().trim();
     var time = $('#time').val().trim();
