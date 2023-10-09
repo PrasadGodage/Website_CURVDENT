@@ -410,7 +410,7 @@
                                 </div>
                                 <div class="form-group row justify-content-end">
                                     <div class="col-sm-5">
-                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
+                                        <button type="button"  id="appointment" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
                                     </div>
                                 </div>
                                 <br>
@@ -779,7 +779,8 @@
                                     required></textarea>
                             </div>
                             <div class="col-md-12">
-                                <input name="submit" type="submit" value="Send Message">
+                                <!-- <input name="submit" type="submit" value="Send Message"> -->
+                                <button type="submit" class="btn btn-form" id="submitMail" value="Send Message"></button>
                             </div>
                         </div>
                     </form>

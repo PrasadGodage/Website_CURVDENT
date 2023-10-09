@@ -266,8 +266,8 @@ function SendEmailAjax() {
     }
 }
 
-  // Handle contactForm form submission
-$('#contactForm').submit(function(e) {
+$("contactForm").click(function(e){
+
     e.preventDefault();
     // Get form values
     // var id = $('#id').val().trim();
@@ -314,11 +314,11 @@ $('#contactForm').submit(function(e) {
    
         contactData.set(contactData.size+1,formData);
          
-        // $('#name').val(' ');
-        // $('#email').val(' ');
-        // $('#phone').val(' ');
-        // $('#subject').val(' ');
-        // $('#message').val(' ');   
+        $('#name').val(' ');
+        $('#email').val(' ');
+        $('#phone').val(' ');
+        $('#subject').val(' ');
+        $('#message').val(' ');   
     
         // var contactList=Array.from(contactData.values());
         // console.log(contactList);
@@ -368,7 +368,7 @@ $('#contactForm').submit(function(e) {
 
 
 // Handle appointment form submission
-$('#send-form').submit(function(e){
+$('#appointment').click(function(e){
     console.log("Hello");
 
     e.preventDefault();
