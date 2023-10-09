@@ -1,6 +1,6 @@
 let postList = new Map();
 let subscriberList = new Map();
-let contactData=new Map();
+let contactData = new Map();
 
 function getAllPostList() {
     $.ajax({
@@ -236,6 +236,7 @@ $('#emailForm').on('submit', function (e) {
 
 function SendEmailAjax() {
     var contactList = Array.from(contactData.values());
+    console.log(contactList);
 
     if (contactList != '' && contactList != null && contactList.length > 0) {
         var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
@@ -266,7 +267,7 @@ function SendEmailAjax() {
 }
 
   // Handle contactForm form submission
-  $('#contactForm').submit(function(e) {
+$('#contactForm').submit(function(e) {
     e.preventDefault();
     // Get form values
     // var id = $('#id').val().trim();
@@ -299,70 +300,70 @@ function SendEmailAjax() {
     }
 
    if(flag){
-   // Create an object to store the form data
-    var formData = {
+        // Create an object to store the form data
+        var formData = {
 
-        // id:id,
-        name:name,
-        email:email,
-        phone:phone,
-        subject:subject,
-        message:message
-         };
+            // id:id,
+            name:name,
+            email:email,
+            phone:phone,
+            subject:subject,
+            message:message
+        };
      
    
-         contactData.set(contactData.size+1,formData);
+        contactData.set(contactData.size+1,formData);
          
-    $('#name').val(' ');
-    $('#email').val(' ');
-    $('#phone').val(' ');
-    $('#subject').val(' ');
-    $('#message').val(' ');   
-   
-    // var contactList=Array.from(contactData.values());
-    // console.log(contactList);
-    SendEmailAjax();
-
-    // if(contactList != '' && contactList != null && contactList.length>0)
-    // {
-        
-    //     var jsonString= JSON.stringify(contactList);
-        
-    //     $.ajax({
-            
-    //         url: ebase_url + 'sendEmail_api',
-
-    //             type: 'POST',
-
-
-    //             data: jsonString,
-
-    //             cache: false,
-
-    //             contentType: false,
-
-    //             processData: false,
-
-    //             dataType: 'json',
-                
-    //             success: function (response) {
-    //                 if (response.status == 200) {
-                        
-    //                     swal("Good job!", response.msg, "success");
-                        
-                            
-    //                 } else {
-        
-    //                     swal("ERROR!", response.msg, "error");
-        
-    //                 }
-        
-    //             }
-    //       });
-          
-    // }
+        // $('#name').val(' ');
+        // $('#email').val(' ');
+        // $('#phone').val(' ');
+        // $('#subject').val(' ');
+        // $('#message').val(' ');   
     
-}
+        // var contactList=Array.from(contactData.values());
+        // console.log(contactList);
+        SendEmailAjax();
+
+        // if(contactList != '' && contactList != null && contactList.length>0)
+        // {
+            
+        //     var jsonString= JSON.stringify(contactList);
+            
+        //     $.ajax({
+                
+        //         url: ebase_url + 'sendEmail_api',
+
+        //             type: 'POST',
+
+
+        //             data: jsonString,
+
+        //             cache: false,
+
+        //             contentType: false,
+
+        //             processData: false,
+
+        //             dataType: 'json',
+                    
+        //             success: function (response) {
+        //                 if (response.status == 200) {
+                            
+        //                     swal("Good job!", response.msg, "success");
+                            
+                                
+        //                 } else {
+            
+        //                     swal("ERROR!", response.msg, "error");
+            
+        //                 }
+            
+        //             }
+        //       });
+            
+        // }
+        
+    }
 });
 
 
