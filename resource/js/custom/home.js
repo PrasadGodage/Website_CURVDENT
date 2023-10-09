@@ -397,7 +397,8 @@ $('#appointment').click(function(e){
         address:address,
          };
        console.log(formData);
-    
+       var jsonString= JSON.stringify(formData);
+       console.log(jsonString);
      
         $.ajax({
 
@@ -405,7 +406,7 @@ $('#appointment').click(function(e){
 
             type: 'POST',
 
-            data: formData,
+            data: jsonString,
           
             cache: false,
 
