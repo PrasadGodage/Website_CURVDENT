@@ -266,7 +266,7 @@ function SendEmailAjax() {
     }
 }
 
-$("contactForm").click(function(e){
+$("submitMail").click(function(e){
 
     e.preventDefault();
     // Get form values
