@@ -17,8 +17,10 @@ class SendEmailController extends CI_Controller {
     public function sendMail_post() {  
         
         $response = [];
+        $jsonData = json_decode($jsonString, true);
 
-        $subject = 'Application for Clinc By - ' . $this->input->post("name");
+
+        $subject = 'Application for Clinc By - ' . $jsonData['name'];
         // $programming_languages = implode(", ", $this->input->post("programming_languages"));
 
         $message = '
@@ -26,22 +28,22 @@ class SendEmailController extends CI_Controller {
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$this->input->post("name").'</td>
+                            <td width="70%">'.$jsonData['name'].'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Email Address</td>
-                            <td width="70%">'.$this->input->post("email").'</td>
+                            <td width="70%">'.$jsonData['email'].'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$this->input->post("phone").'</td>
+                            <td width="70%">'.$jsonData['phone'].'</td>
                             </tr>
-
+                            
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$this->input->post("message").'</td>
+                            <td width="70%">'.$jsonData['message'].'</td>
                             </tr>
                         </table>
                     ';
@@ -76,7 +78,7 @@ class SendEmailController extends CI_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from($this->input->post("email"));
+        $this->email->from($jsonData['email']);
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($message);
