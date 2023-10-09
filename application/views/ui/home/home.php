@@ -361,7 +361,7 @@
                                    <div class="col-sm-3 col-lg-3"></div>
                                    <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Name</label>
                                    <div class="col-sm-5 col-lg-5">
-                                      <input type="text" id="patient_name" class="form-control" placeholder=" Name"  name="patient_name" required>
+                                      <input type="text" id="fullName" class="form-control" placeholder=" Name"  name="fullName" required>
                                    </div>
                                    <div class="col-sm-2 col-lg-2"></div>
                                 </div>
@@ -369,7 +369,7 @@
                                    <div class="col-sm-3 col-lg-3"></div>
                                    <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Contact</label>
                                    <div class="col-sm-5 col-lg-5">
-                                      <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
+                                      <input type="tel" id="contactNo" class="form-control" placeholder=" Contact"  name="contactNo" recorded>
                                    </div>
                                    <div class="col-sm-2 col-lg-2"></div>
                                 </div>
