@@ -284,27 +284,27 @@ $("#submitMail").click(function(e){
     var subject = $('#subject').val().trim();
     var message = $('#message').val().trim();
            
-    var flag;
+    var flag=true;
 
-    if (name === '' || name === null){
-        $('#nameError').text('Please enter name');
-        flag=false;
-    }else if(email === '' || email === null){
-        $('#emailError').text('Please enter email');
-        flag=false;
-    }else if(phone === '' || phone === null){
-        $('#phoneError').text('Please enter phone');
-        flag=false;
-    }else if(subject === '' || subject === null){
-        $('#subject').text('Please enter subject');
-        flag=false;
-    }else if(message === '' || message === null){
-        $('#message').text('Please enter message');
-        flag=false;
-    }
-    else{
-        flag=true;
-    }
+    // if (name === '' || name === null){
+    //     $('#nameError').text('Please enter name');
+    //     flag=false;
+    // }else if(email === '' || email === null){
+    //     $('#emailError').text('Please enter email');
+    //     flag=false;
+    // }else if(phone === '' || phone === null){
+    //     $('#phoneError').text('Please enter phone');
+    //     flag=false;
+    // }else if(subject === '' || subject === null){
+    //     $('#subject').text('Please enter subject');
+    //     flag=false;
+    // }else if(message === '' || message === null){
+    //     $('#message').text('Please enter message');
+    //     flag=false;
+    // }
+    // else{
+    //     flag=true;
+    // }
 
    if(flag){
         // Create an object to store the form data
