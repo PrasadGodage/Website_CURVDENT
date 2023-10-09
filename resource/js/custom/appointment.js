@@ -89,6 +89,8 @@ $('#addappointmentBtn').click(function () {
     $('#id').val('');
     $('.error').text('');
     
+    let currentDate = new Date().toJSON().slice(10,20);
+        console.log(currentDate);
     // Date Validation
 // var today = new Date().toISOString().split('T')[0];
 // document.getElementsByName("somedate")[0].setAttribute('min', today);
