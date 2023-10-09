@@ -779,7 +779,8 @@
                                     required></textarea>
                             </div>
                             <div class="col-md-12">
-                                <input name="submit" type="submit" value="Send Message">
+                                <!-- <input name="submit" type="submit" value="Send Message"> -->
+                                <button type="submit" class="btn btn-form" id="submitMail" value="Send Message"></button>
                             </div>
                         </div>
                     </form>
