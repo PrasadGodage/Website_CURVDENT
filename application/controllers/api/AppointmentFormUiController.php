@@ -59,6 +59,7 @@ class AppointmentFormUiController extends REST_Controller {
         $data['time'] = $this->post('time');
         $data['address'] = $this->post('address');
         print_r($data);
+        
         $id = $this->post('id');
         
         //Authentication
