@@ -356,6 +356,7 @@
                     <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                             <br>
                             <form id="send-form" role="form" method="post">
+                            <input type="hidden" class="form-control" id="id1" name="id">
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
                                    <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Name</label>
