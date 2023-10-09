@@ -124,11 +124,10 @@ function setAppointmentList(list) {
         tblData += `
         <tr>
                 <td>` + index + `</td>
-                <td>` + appointment.name + `</td>
+                <td>` + appointment.fullName + `</td>
                 <td>` + appointment.date + `</td>
                 <td>` + appointment.time + `</td>
-                <td>` + appointment.date + `</td>
-                <td>` + appointment.contact + `</td>
+                <td>` + appointment.contactNo + `</td>
                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
                 </td>
@@ -140,3 +139,78 @@ function setAppointmentList(list) {
     $('#appointmentList').html(tblData);
     $('#appointmentTable').DataTable();
     }
+
+    // ---------------------- delete data ---------------------------------------------
+function deleteppointmentDetails(id) {
+    // Show a confirmation dialog using SweetAlert or JavaScript confirm
+    // swal({
+    //     title: 'Are you sure?',
+    //     text: 'You won\'t be able to revert this!',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Yes, delete it!'
+    // }).then((result) => {
+    //     if (result.isConfirmed) {
+    //         // Send an AJAX request to delete the data
+            $.ajax({
+                url: ebase_url + 'appointment_api/' + id, // Replace with your actual delete API endpoint
+                type: 'DELETE',
+                headers: {
+                    "Authorization": etoken
+                },
+                dataType: 'json',
+                success: function (response) {
+                    if (response.status == 200) {
+                      
+                        // Show a success message
+                        swal("Good job!", response.msg, "success");
+                    setTimeout(
+                        $(location).attr('href',ebase_url+'appointment'),
+                         8000
+                         )
+                } else {
+
+                    swal("Error!", response.msg, "error");
+
+                }
+                },
+                // error: function () {
+                //     // Handle the case where the AJAX request itself fails
+                //     swal(
+                //         'Error!',
+                //         'Something went wrong!',
+                //         'error'
+                //     );
+                // }
+            });
+        }
+//     });
+// }
+
+
+function updateAppointmentDetails(id) {
+    let appointment = appointmentList.get(id.toString());
+    
+    // Clear all fields
+    $('#id').val('');
+    $('#fullName').val('');
+    $('#date').val('');
+    $('#time').val('');
+    $('#contactNo').val('');
+    
+    $('.error').text('');
+    
+    // Set details
+    $('#id').val(appointment.id);
+    $('#fullName').val(appointment.fullName);
+    $('#date').val(appointment.date).change();
+    $('#time').val(post.time).change();
+    $('#contactNo').val(post.contactNo);
+   
+    
+   
+    // Show the updated post details in a modal
+    $('#addappointmentModal').modal('toggle');
+}
