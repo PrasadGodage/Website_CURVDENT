@@ -2,6 +2,13 @@ let postList = new Map();
 let subscriberList = new Map();
 let contactData = new Map();
 
+const myStyles = `
+    #name, #email, #phone, #subject, #message {
+        color: red;
+        padding: 10px;
+    }
+`;
+
 function getAllPostList() {
     $.ajax({
 
@@ -279,19 +286,19 @@ $("#submitMail").click(function(e){
            
     var flag;
 
-    if (name == '' || name == null){
+    if (name === '' || name === null){
         $('#nameError').text('Please enter name');
         flag=false;
-    }else if(email == '' || email == null){
+    }else if(email === '' || email === null){
         $('#emailError').text('Please enter email');
         flag=false;
-    }else if(phone == '' || phone == null){
+    }else if(phone === '' || phone === null){
         $('#phoneError').text('Please enter phone');
         flag=false;
-    }else if(subject == '' || subject == null){
+    }else if(subject === '' || subject === null){
         $('#subject').text('Please enter subject');
         flag=false;
-    }else if(message == '' || message == null){
+    }else if(message === '' || message === null){
         $('#message').text('Please enter message');
         flag=false;
     }
