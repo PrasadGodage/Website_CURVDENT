@@ -357,6 +357,13 @@
                             <br>
                             <form id="sendform" role="form" method="post">
                             <input type="hidden" class="form-control" id="id1" name="id">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-success" id="message" style="display: none" role="alert">
+                                        Your message was sent successfully.
+                                    </div>
+                                </div>
+                            </div>
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
                                    <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Name</label>
