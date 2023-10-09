@@ -409,7 +409,7 @@
                                    <div class="col-sm-2 col-lg-2"></div>
                                 </div>
                                 <div class="form-group row justify-content-end">
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-7">
                                         <button type="button"  id="appointment" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
                                     </div>
                                 </div>
