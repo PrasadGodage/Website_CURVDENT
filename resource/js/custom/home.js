@@ -367,29 +367,32 @@ function SendEmailAjax() {
 
 
 // Handle appointment form submission
-$('#send-form').on('submit', function (e){
+$('#send-form').submit(function(e){
 
     e.preventDefault();
-    var patient_name = $('#patient_name').val().trim();
-    var contact = $('#contact').val().trim();
-    var email = $('#email').val().trim();
-    var date = $('#date').val().trim();
-    var time = $('#time').val().trim();
-    var address = $('#address').val().trim();
 
-    //var returnVal = $("#send-form").valid();
-   // var formdata = new FormData(this);
-   // console.log(formdata);
+    var formData = $(this).serializeArray();
 
-    var formData = {
+//     var patient_name = $('#patient_name').val().trim();
+//     var contact = $('#contact').val().trim();
+//     var email = $('#email').val().trim();
+//     var date = $('#date').val().trim();
+//     var time = $('#time').val().trim();
+//     var address = $('#address').val().trim();
 
-        patient_name:patient_name,
-        contact:contact,
-        email:email,
-        date:date,
-        time:time,
-        address:address
-         };
+//     //var returnVal = $("#send-form").valid();
+//    // var formdata = new FormData(this);
+//    // console.log(formdata);
+
+//     var formData = {
+
+//         patient_name:patient_name,
+//         contact:contact,
+//         email:email,
+//         date:date,
+//         time:time,
+//         address:address
+//          };
      
     
      
