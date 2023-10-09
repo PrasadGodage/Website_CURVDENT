@@ -52,8 +52,8 @@ class AppointmentFormUiController extends REST_Controller {
 
     public function appointment_post() { 
         $response = [];
-        $data['patient_name'] = $this->post('fullName');
-        $data['contact'] = $this->post('contactNo');
+        $data['fullName'] = $this->post('patient_name');
+        $data['contactNo'] = $this->post('contact');
         $data['email'] = $this->post('email');
         $data['date'] = $this->post('date');
         $data['time'] = $this->post('time');
