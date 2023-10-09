@@ -5,7 +5,11 @@ var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 
 if (etoken == null){
     window.location.replace('employeeLogin');
+}else{
+
+    window.location.replace('employeeLogin');
 }
+
 var profileImage=(empdetails.profile_image!=null)?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
 
 $('#userImageSm').attr('src',profileImage);
