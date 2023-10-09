@@ -48,7 +48,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Time</label>
-                                    <input type="time" class="form-control" id="formattedTime " name="formattedTime ">
+                                    <input type="time" class="form-control" id="time" name="formattedTime ">
                                 </div>
                             </div>
                         </div>
