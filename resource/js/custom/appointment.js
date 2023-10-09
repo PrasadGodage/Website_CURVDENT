@@ -199,17 +199,19 @@ function updateAppointmentDetails(id) {
     $('#date').val('');
     $('#time').val('');
     $('#contactNo').val('');
-    
+    $('#email').val('');
+    $('#address').val('');
+
     $('.error').text('');
     
     // Set details
     $('#id').val(appointment.id);
     $('#fullName').val(appointment.fullName);
-    $('#date').val(appointment.date).change();
-    $('#time').val(appointment.time).change();
+    $('#date').val(appointment.date);
+    $('#time').val(appointment.time);
     $('#contactNo').val(appointment.contactNo);
-   
-    
+    $('#email').val(appointment.email);
+    $('#address').val(appointment.address);
    
     // Show the updated post details in a modal
     $('#addappointmentModal').modal('toggle');
