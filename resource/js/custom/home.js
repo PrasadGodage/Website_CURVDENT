@@ -4,7 +4,7 @@ let contactData = new Map();
 let appointmentList = new Map();
 
 const myStyles = `
-    #name, #email, #phone, #subject, #message {
+    #nameError, #emailError, #phoneError, #subjectError, #messageError {
         color: red;
         padding: 10px;
     }
@@ -284,32 +284,32 @@ $("#submitMail").click(function(e){
     // Get form values
     // var id = $('#id').val().trim();
     var name = $('#name').val().trim();
-    var email = $('#email').val().trim();
-    var phone = $('#phone').val().trim();
+    var email = $('#mail').val().trim();
+    var phone = $('#mobile').val().trim();
     var subject = $('#subject').val().trim();
     var message = $('#message').val().trim();
            
     var flag=true;
 
-    // if (name === '' || name === null){
-    //     $('#nameError').text('Please enter name');
-    //     flag=false;
-    // }else if(email === '' || email === null){
-    //     $('#emailError').text('Please enter email');
-    //     flag=false;
-    // }else if(phone === '' || phone === null){
-    //     $('#phoneError').text('Please enter phone');
-    //     flag=false;
-    // }else if(subject === '' || subject === null){
-    //     $('#subject').text('Please enter subject');
-    //     flag=false;
-    // }else if(message === '' || message === null){
-    //     $('#message').text('Please enter message');
-    //     flag=false;
-    // }
-    // else{
-    //     flag=true;
-    // }
+    if (name === '' || name === null){
+        $('#nameError').text('Please enter name');
+        flag=false;
+    }else if(email === '' || email === null){
+        $('#emailError').text('Please enter email');
+        flag=false;
+    }else if(phone === '' || phone === null){
+        $('#phoneError').text('Please enter phone');
+        flag=false;
+    }else if(subject === '' || subject === null){
+        $('#subjectError').text('Please enter subject');
+        flag=false;
+    }else if(message === '' || message === null){
+        $('#messageError').text('Please enter message');
+        flag=false;
+    }
+    else{
+        flag=true;
+    }
 
    if(flag){
         // Create an object to store the form data

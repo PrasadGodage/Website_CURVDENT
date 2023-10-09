@@ -17,12 +17,12 @@ class SendEmailController extends CI_Controller {
     public function sendMail_post() {  
         
         $response = [];
-        $jsonData = json_decode($jsonString, true);
-        echo "<pre>"
-        print_r($jsonData);
+        // $jsonData = json_decode($jsonString, true);
+        // echo "<pre>"
+        // print_r($jsonData);
 
 
-        $subject = 'Application for Clinc By - ' . $jsonData['name'];
+        $subject = 'Application for Clinc By - ' . $this->post('name');
 
         // $programming_languages = implode(", ", $this->input->post("programming_languages"));
 
@@ -31,22 +31,22 @@ class SendEmailController extends CI_Controller {
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$jsonData['name'].'</td>
+                            <td width="70%">'.$this->post('name').'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Email Address</td>
-                            <td width="70%">'.$jsonData['email'].'</td>
+                            <td width="70%">'.$this->post('mail').'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$jsonData['phone'].'</td>
+                            <td width="70%">'.$this->post('mobile').'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$jsonData['message'].'</td>
+                            <td width="70%">'.$this->post('message').'</td>
                             </tr>
                         </table>
                     ';
@@ -81,7 +81,7 @@ class SendEmailController extends CI_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from($jsonData['email']);
+        $this->email->from($this->post('mail'));
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($message);
