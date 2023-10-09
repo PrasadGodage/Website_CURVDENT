@@ -1,6 +1,30 @@
 let appointmentList = new Map();
 
 
+// Get the current date and time
+var currentDate = new Date();
+
+// Extract hours and minutes
+var hours = currentDate.getHours();
+var minutes = currentDate.getMinutes();
+
+// Determine AM or PM
+var ampm = hours >= 12 ? 'PM' : 'AM';
+
+// Convert to 12-hour clock format
+hours = hours % 12;
+hours = hours ? hours : 12; // 0 should be converted to 12
+
+// Add leading zeros to minutes if necessary
+minutes = minutes < 10 ? '0' + minutes : minutes;
+
+// Create the formatted time string
+var formattedTime = hours + ':' + minutes + ' ' + ampm;
+
+// Now, `formattedTime` contains the current time in "00:00 AM/PM" format
+
+// You can use `formattedTime` in your AJAX request or wherever you need to save it to the database
+
 
 //Submit Category Btn script
 
@@ -52,7 +76,7 @@ $('#addappointmentForm').on('submit', function (e) {
                 }
 
             }
-
+            // let currentDate = new Date().toJSON().slice(10,20);
         });
     }
 });
@@ -66,8 +90,8 @@ $('#addappointmentBtn').click(function () {
     $('.error').text('');
     
     // Date Validation
-var today = new Date().toISOString().split('T')[0];
-document.getElementsByName("somedate")[0].setAttribute('min', today);
+// var today = new Date().toISOString().split('T')[0];
+// document.getElementsByName("somedate")[0].setAttribute('min', today);
 
 });
 
