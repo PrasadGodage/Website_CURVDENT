@@ -355,7 +355,7 @@
                 <div  class="col-md-12 col-sm-12">
                     <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                             <br>
-                            <form id="send-form" role="form" method="post">
+                            <form id="sendform" role="form" method="post">
                             <input type="hidden" class="form-control" id="id1" name="id">
                                 <div class="form-group row">
                                    <div class="col-sm-3 col-lg-3"></div>
@@ -410,7 +410,8 @@
                                 </div>
                                 <div class="form-group row justify-content-end">
                                     <div class="col-sm-7">
-                                        <button type="button"  id="appointment" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
+                                        <!-- <button type="button"  id="appointment" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button> -->
+                                        <input name="submit" type="submit" value="appointment">
                                     </div>
                                 </div>
                                 <br>
