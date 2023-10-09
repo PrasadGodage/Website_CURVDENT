@@ -5,13 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class SendEmailController extends CI_Controller {
       
 
-    // public function __construct() {
+    public function __construct() {
 
-    //     parent::__construct();
-    //     $this->load->library('email'); 
-    //     // $this->load->model('CategoryModel','category');
+        parent::__construct();
+        // $this->load->library('email'); 
+        $this->load->helper('url');
         
-    // }
+    }
    
     public function sendMail_post() {  
         
@@ -60,7 +60,7 @@ class SendEmailController extends CI_Controller {
         
         $config=array(
             
-            'protocol'   =>   'smtp',
+            'protocol'   =>   'sendmail',
             'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
             'smtp_user'   =>   'pradyumnb.297@gmail.com',
@@ -72,11 +72,13 @@ class SendEmailController extends CI_Controller {
         );
         
         $this->load->library('email', $config);
+
         $this->email->set_newline("\r\n");
+
         $this->email->from($this->input->post("email"));
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
-            $this->email->message($message);
+        $this->email->message($message);
 
         
         // $this->load->library('email', $config);
