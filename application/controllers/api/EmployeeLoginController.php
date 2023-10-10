@@ -60,7 +60,7 @@ class EmployeeLoginController extends REST_Controller {
 
     public function logout_post() {
 
-        if (isset($_SESSION['empSession']['logged_in']) || $_SESSION['empSession']['logged_in'] === true) {
+        if (isset($_SESSION['empSession']['logged_in']) && $_SESSION['empSession']['logged_in'] === true) {
 			
 			// remove session datas
 			foreach ($_SESSION as $key => $value) {
@@ -73,6 +73,10 @@ class EmployeeLoginController extends REST_Controller {
             $this->response($response, REST_Controller::HTTP_OK);
 			
 		} else {
+			
+			$this->session->sess_destroy();
+            
+		}else {
 			
 			// there user was not logged in, we cannot logged him out,
 			// redirect him to site root
