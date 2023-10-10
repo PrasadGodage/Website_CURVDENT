@@ -6,8 +6,8 @@ var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 if (etoken == null){
     window.location.replace('employeeLogin');
 }
-if(empdetails.profile_image == null){
-    var profileImage=(empdetails.profile_image!=null)?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
+if(empdetails == ''){
+    var profileImage=(empdetails.profile_image!=' ')?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
 }
 
 
