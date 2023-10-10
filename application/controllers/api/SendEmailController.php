@@ -24,7 +24,9 @@ class SendEmailController extends REST_Controller {
         // print_r($jsonData);
 
 
-        $subject = 'Application for Clinc By - ' . $this->post('name');
+        $sub = $this->post('name');
+        $subject = 'Application for Clinc By - ' . $sub;
+        $mail_from = $this->post('mail');
 
         // $programming_languages = implode(", ", $this->input->post("programming_languages"));
 
@@ -38,7 +40,7 @@ class SendEmailController extends REST_Controller {
                             
                             <tr>
                             <td width="30%">Email Address</td>
-                            <td width="70%">'.$this->post('mail').'</td>
+                            <td width="70%">'.$mail_from.'</td>
                             </tr>
                             
                             <tr>
@@ -83,7 +85,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from($this->post('mail'));
+        $this->email->from($mail_from);
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($message);
