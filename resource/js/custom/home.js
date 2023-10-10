@@ -246,12 +246,12 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax() {
-    var contactList = Array.from(contactData.values());
-    console.log(contactList);
+function SendEmailAjax(formData) {
+    // var contactList = Array.from(contactData.values());
+    console.log(formData);
 
-    if (contactList != '' && contactList != null && contactList.length > 0) {
-        var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+    // if (contactList != '' && contactList != null && contactList.length > 0) {
+        // var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
         // var formdata = new FormData();
         // formdata.append("mailDetails",jsonString);
 
@@ -260,11 +260,11 @@ function SendEmailAjax() {
 
             type: 'POST',
 
-            data: jsonString,
+            data: formData,
 
             cache: false,
 
-            contentType: 'application/json',
+            contentType: false,
 
             processData: false,
 
@@ -279,9 +279,9 @@ function SendEmailAjax() {
             },
             
         });
-    } else {
-        swal("ERROR!", "No contact data available to send an email.", "error");
-    }
+    // } else {
+    //     swal("ERROR!", "No contact data available to send an email.", "error");
+    // }
 }
 
 // $("#submitMail").click(function(e){
@@ -331,7 +331,7 @@ $('#contactForm').on('submit', function (e) {
         };
      
    
-        contactData.set(contactData.size+1,formData);
+        // contactData.set(contactData.size+1,formData);
          
         $('#fname').val('');
         $('#mail').val('');
@@ -341,7 +341,7 @@ $('#contactForm').on('submit', function (e) {
     
         // var contactList=Array.from(contactData.values());
         // console.log(contactList);
-        SendEmailAjax();
+        SendEmailAjax(formData);
 
     }
 });
