@@ -3,10 +3,10 @@ let appointmentList = new Map();
 
 // //Submit Category Btn script
 
-// $('#addappointmentForm').on('submit', function (e) {
+// $('#addAppointmentForm').on('submit', function (e) {
 //     e.preventDefault();
 
-//     var returnVal = $("#addappointmentForm").valid();
+//     var returnVal = $("#addAppointmentForm").valid();
 //     var formdata = new FormData(this);
 //     if (returnVal) {
      
@@ -32,7 +32,7 @@ let appointmentList = new Map();
 
 //             success: function (response) {
 //                 if (response.status == 200) {
-//                     $('#addappointmentModal').modal('toggle');
+//                     $('#addAppointmentModal').modal('toggle');
 
 //                     let id=response.data.id;
                   
