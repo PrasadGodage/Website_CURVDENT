@@ -246,55 +246,40 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax() {
-    var contactList = Array.from(contactData.values());
-    console.log(contactList);
 
-    if (contactList != '' && contactList != null && contactList.length > 0) {
-        var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+function SendEmailAjax(formData) {
+    $.ajax({
+        url: ebase_url + 'sendEmail_api',
 
-        $.ajax({
-            url: ebase_url + 'sendEmail_api',
+        type: 'POST',
 
-            type: 'POST',
+        data: JSON.stringify(formData),
 
-            data: jsonString,
+        contentType: 'application/json',
 
-            cache: false,
-
-            contentType: false,
-
-            processData: false,
-
-            dataType: 'json',
-
-            success: function(response) {
-                if (response.status == 200) {
-                    swal("Good job!", response.msg, "success");
-                } else {
-                    swal("ERROR!", response.msg, "error");
-                }
-            },
-            
-        });
-    } else {
-        swal("ERROR!", "No contact data available to send an email.", "error");
-    }
+        dataType: 'json',
+        
+        success: function(response) {
+            if (response.status == 200) {
+                swal("Good job!", response.msg, "success");
+            } else {
+                swal("ERROR!", response.msg, "error");
+            }
+        }
+    });
 }
 
 // $("#submitMail").click(function(e){
 $('#contactForm').on('submit', function (e) {
-
     e.preventDefault();
-    // Get form values
-    // var id = $('#id').val().trim();
+
     var name = $('#fname').val().trim();
     var email = $('#mail').val().trim();
     var phone = $('#mobile').val().trim();
     var subject = $('#subject').val().trim();
     var message = $('#msg').val().trim();
-           
-    var flag=true;
+            
+    var flag = true;
 
     if (name === '' || name === null){
         $('#nameError').text('Please enter name');
@@ -316,21 +301,15 @@ $('#contactForm').on('submit', function (e) {
         flag=true;
     }
 
-   if(flag){
-        // Create an object to store the form data
+    if (flag) {
         var formData = {
-
-            // id:id,
-            name:name,
-            email:email,
-            phone:phone,
-            subject:subject,
-            message:message
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message
         };
-     
    
-        contactData.set(contactData.size+1,formData);
-         
         $('#fname').val(' ');
         $('#mail').val(' ');
         $('#mobile').val(' ');
@@ -339,7 +318,7 @@ $('#contactForm').on('submit', function (e) {
     
         // var contactList=Array.from(contactData.values());
         // console.log(contactList);
-        SendEmailAjax();
+        SendEmailAjax(formData);
 
     }
 });
