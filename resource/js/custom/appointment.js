@@ -123,6 +123,9 @@ $('#addAppointmentBtn').click(function () {
 
 // get posting data
 function getAppointmentList() {
+    let selectedDateInput= document.getElementById("selectDate");
+    var selectedDate = selectedDateInput.value;
+    
     $.ajax({
 
         url: ebase_url+'appointment_api',
@@ -144,7 +147,10 @@ function getAppointmentList() {
 
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        appointmentList.set(response.data[i].id, response.data[i]);
+                        if (response.data[i].date == selectedDate){
+                            appointmentList.set(response.data[i].id, response.data[i]);
+                        }
+                        
                     }
                     
                 }
