@@ -1,7 +1,7 @@
 let appointmentList = new Map();
 
 
-// //Submit Category Btn script
+//Submit Category Btn script
 
 // $('#addAppointmentForm').on('submit', function (e) {
 //     e.preventDefault();
@@ -46,7 +46,7 @@ let appointmentList = new Map();
 //                     $(location).attr('href',ebase_url+'appointment');
 //                 } else {
 
-//                     // swal("Error!", response.msg, "error");
+//                     swal("Error!", response.msg, "error");
 
 //                 }
 
@@ -62,9 +62,12 @@ $('#addAppointmentForm').on('submit', function (e) {
 
     var returnVal = $("#addAppointmentForm").valid();
     var formdata = new FormData(this);
-    
+
     // Get the time value from the time input field
     var appointmentTime = $("#time").val();
+
+    // Add the time value to the FormData object
+    formdata.append('time', appointmentTime);
 
     if (returnVal) {
         $.ajax({
@@ -73,10 +76,7 @@ $('#addAppointmentForm').on('submit', function (e) {
             headers: {
                 "Authorization": etoken
             },
-            data: {
-                formData: formdata,
-                time: appointmentTime // Include the time data
-            },
+            data: formdata,
             cache: false,
             contentType: false,
             processData: false,
@@ -123,9 +123,7 @@ $('#addAppointmentBtn').click(function () {
 
 // get posting data
 function getAppointmentList() {
-    var selectedDate = $('#selectDate').val().trim();
-    console.log(selectedDate);
-    $.ajax({
+        $.ajax({
 
         url: ebase_url+'appointment_api',
 
@@ -146,9 +144,9 @@ function getAppointmentList() {
 
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        if (response.data[i].date == selectedDate){
+                       
                             appointmentList.set(response.data[i].id, response.data[i]);
-                        }
+                       
                         
                     }
                     
