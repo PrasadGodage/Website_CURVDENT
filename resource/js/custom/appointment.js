@@ -1,22 +1,27 @@
 let appointmentList = new Map();
 
 $(document).ready(function() {
-    // Function to format a date as "YYYY-MM-DD" (required by the date input field)
-    function formatDate(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
 
-    // Get the current date
-    const currentDate = new Date();
+    let currentDate = new Date().toJSON().slice(0,10);
+    document.getElementById("dateInput").value = currentDate;
 
-    // Format the current date
-    const formattedDate = formatDate(currentDate);
 
-    // Set the formatted date in the date input field
-    $('#dateInput').val(formattedDate);
+    // // Function to format a date as "YYYY-MM-DD" (required by the date input field)
+    // function formatDate(date) {
+    //     const year = date.getFullYear();
+    //     const month = String(date.getMonth() + 1).padStart(2, '0');
+    //     const day = String(date.getDate()).padStart(2, '0');
+    //     return `${year}-${month}-${day}`;
+    // }
+
+    // // Get the current date
+    // const currentDate = new Date();
+
+    // // Format the current date
+    // const formattedDate = formatDate(currentDate);
+
+    // // Set the formatted date in the date input field
+    // $('#dateInput').val(formattedDate);
 });
 
 //Submit Category Btn script
