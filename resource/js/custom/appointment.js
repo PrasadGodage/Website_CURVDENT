@@ -57,10 +57,10 @@ let appointmentList = new Map();
 // });
 
 
-$('#addappointmentForm').on('submit', function (e) {
+$('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
 
-    var returnVal = $("#addappointmentForm").valid();
+    var returnVal = $("#addAppointmentForm").valid();
     var formdata = new FormData(this);
     
     // Get the time value from the time input field
@@ -83,7 +83,7 @@ $('#addappointmentForm').on('submit', function (e) {
             dataType: 'json',
             success: function (response) {
                 if (response.status == 200) {
-                    $('#addappointmentModal').modal('toggle');
+                    $('#addAppointmentModal').modal('toggle');
 
                     let id = response.data.id;
 
@@ -106,9 +106,9 @@ $('#addappointmentForm').on('submit', function (e) {
 
 
 // addClient Button
-$('#addappointmentBtn').click(function () {
-    $('#addappointmentModal').modal('toggle');
-    $("#addappointmentForm").trigger("reset");
+$('#addAppointmentBtn').click(function () {
+    $('#addAppointmentModal').modal('toggle');
+    $("#addAppointmentForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
     
@@ -263,5 +263,5 @@ function updateAppointmentDetails(id) {
     $('#address').val(appointment.address);
    
     // Show the updated post details in a modal
-    $('#addappointmentModal').modal('toggle');
+    $('#addAppointmentModal').modal('toggle');
 }
