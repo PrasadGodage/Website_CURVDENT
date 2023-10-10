@@ -1,6 +1,30 @@
 let appointmentList = new Map();
 
 
+// Function to populate the table with data based on the selected date
+function populateTable(selectedDate) {
+    // Clear existing table data
+    $('#appointmentTable tbody').empty();
+
+    // Filter data based on the selected date
+    var filteredData = data.filter(function(item) {
+        return item.date === selectedDate;
+    });
+
+    // Populate the table with filtered data
+    filteredData.forEach(function(item) {
+        $('#appointmentTable tbody').append('<tr><td>' + item.date + '</td><td>' + item.content + '</td></tr>');
+    });
+}
+
+// Event handler for date input change
+$('#dateInput').on('change', function() {
+    var selectedDate = $(this).val();
+    populateTable(selectedDate);
+});
+
+
+
 //Submit Category Btn script
 
 // $('#addAppointmentForm').on('submit', function (e) {
