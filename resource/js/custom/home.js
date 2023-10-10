@@ -10,6 +10,10 @@ const myStyles = `
     }
 `;
 
+const styleElement = document.createElement('style');
+styleElement.innerHTML = myStyles;
+document.head.appendChild(styleElement);
+
 function getAllPostList() {
     $.ajax({
 
@@ -321,6 +325,7 @@ $('#contactForm').on('submit', function (e) {
             email:email,
             phone:phone,
             subject:subject,
+            message:message
         };
      
    
@@ -336,45 +341,6 @@ $('#contactForm').on('submit', function (e) {
         // console.log(contactList);
         SendEmailAjax();
 
-        // if(contactList != '' && contactList != null && contactList.length>0)
-        // {
-            
-        //     var jsonString= JSON.stringify(contactList);
-            
-        //     $.ajax({
-                
-        //         url: ebase_url + 'sendEmail_api',
-
-        //             type: 'POST',
-
-
-        //             data: jsonString,
-
-        //             cache: false,
-
-        //             contentType: false,
-
-        //             processData: false,
-
-        //             dataType: 'json',
-                    
-        //             success: function (response) {
-        //                 if (response.status == 200) {
-                            
-        //                     swal("Good job!", response.msg, "success");
-                            
-                                
-        //                 } else {
-            
-        //                     swal("ERROR!", response.msg, "error");
-            
-        //                 }
-            
-        //             }
-        //       });
-            
-        // }
-        
     }
 });
 

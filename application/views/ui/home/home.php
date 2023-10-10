@@ -772,18 +772,23 @@
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input name="fname" type="text" id="fname" placeholder="Name *" >
+                                <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="mail" type="email" id="mail" placeholder="Email *" >
+                                <span id="emailError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="mobile" type="text" id="mobile" placeholder="Number *" >
+                                <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="subject" type="text" id="subject" placeholder="Subject *" >
+                                <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
                                 <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
+                                <span id="messageError"></span>
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
