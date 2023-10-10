@@ -8,22 +8,39 @@ class SendEmailController extends REST_Controller {
       
     
     public function __construct() {
+
         parent::__construct();
-        $this->load->library('email');
+        // $this->load->library('email'); 
         $this->load->helper('url');
+        $this->load->library('email');
+        
     }
    
-    public function sendEmail_post() {
-        // $json_data = $this->input->raw_input_stream;
-        // $data = json_decode($json_data, true);
+    public function sendMail_post() {  
+        
+        $response = [];
+        // $jsonData = json_decode($jsonString, true);
+        // echo "<pre>"
+        // print_r($jsonData);
+        $json_data = $this->input->raw_input_stream;
 
-        $arrJson = json_decode($this->post('mailDetails'));
+        // Decode the JSON data into an array
+        $data = json_decode($json_data, true);
 
-        $name = $arrJson[0]->name;
-        $email = $arrJson[0]->email;
-        $phone = $arrJson[0]->phone;
-        $subject = $arrJson[0]->subject;
-        $message = $arrJson[0]->message;
+        // echo "<pre>";
+        // print_r($data);
+
+        // $sub = $this->post('name');
+        $subject = $data['subject'];
+        $mail_from = $data['email'];
+        $name = $data['name'];
+        $msg = $data['message'];
+        $mobile = $data['phone'];
+        // echo "<pre>";
+        // print_r($mail_from);
+        // print_r($subject);
+        // print_r($sub);
+
 
         
         $emailContent = '
@@ -81,7 +98,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from($email);
+        $this->email->from('pradyumnb.297@gmail.com');
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
         $this->email->message($emailContent);
