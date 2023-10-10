@@ -1,11 +1,6 @@
 let appointmentList = new Map();
 
 $(document).ready(function() {
-
-    let currentDate = new Date().toJSON().slice(0,10);
-    // document.getElementById("dateInput").value = currentDate;
-
-
     // // Function to format a date as "YYYY-MM-DD" (required by the date input field)
     // function formatDate(date) {
     //     const year = date.getFullYear();
@@ -132,6 +127,8 @@ $('#addAppointmentForm').on('submit', function (e) {
 $('#addAppointmentBtn').click(function () {
     $('#addAppointmentModal').modal('toggle');
     $("#addAppointmentForm").trigger("reset");
+    let currentDate = new Date().toJSON().slice(0,10);
+    document.getElementById("dateInput").value = currentDate;
     $('#id').val('');
     $('.error').text('');
     
