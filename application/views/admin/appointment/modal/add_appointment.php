@@ -1,4 +1,4 @@
-<div class="modal fade bs-example-modal-lg" id="addappointmentModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade bs-example-modal-lg" id="addAppointmentModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <!--form start-->
@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="form" id="addappointmentForm" method="post">
+                <form class="form" id="addAppointmentForm" method="post">
                     <div class="box-body">
                         <h4 class="box-title text-info"><i class="ti-user mr-15"></i> Appointment </h4>
                         <hr class="my-15">

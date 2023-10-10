@@ -33,7 +33,7 @@
                         <div class="box-header with-border box-controls pull-right">
 
                             <!--<div class="box-controls pull-right">-->
-                            <button type="button" class="col-md-3 btn btn-primary ml-2" id="addappointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
+                            <button type="button" class="col-md-3 btn btn-primary ml-2" id="addAppointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
                             <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
                             <!-- <div class=" box-controls pull-right"> -->
                                 <input type="date" class="col-md-3 form-control mr-2" id="selectDate " name="selectDate ">
