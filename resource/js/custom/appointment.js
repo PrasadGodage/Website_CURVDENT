@@ -1,47 +1,57 @@
 let appointmentList = new Map();
 
-function fetchData() {
-    // Get the selected date from the input field
-    const selectedDate = $('#dateInput').val();
 
-    // You should replace this with your own API or data source URL
-    const apiUrl = 'your_api_url_here?date=' + selectedDate;
 
-    // Make an AJAX request to fetch data for the selected date
-    $.ajax({
-        url: ebase_url + 'appointment_api',
-        method: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            // Clear the table body
-            $('#appointmentList').empty();
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
 
-            // Iterate through the fetched data and append rows to the table
-            $.each(data, function (index, appointment) {
-                const newRow = `<tr>
-                <td>` + index + `</td>
-                <td>` + appointment.fullName + `</td>
-                <td>` + appointment.date + `</td>
-                <td>` + appointment.time + `</td>
-                <td>` + appointment.contactNo + `</td>
-                <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                </td>
+today = mm + '/' + dd + '/' + yyyy;
+document.write(today);
+
+// function fetchData() {
+//     // Get the selected date from the input field
+//     const selectedDate = $('#dateInput').val();
+
+//     // You should replace this with your own API or data source URL
+//     const apiUrl = 'your_api_url_here?date=' + selectedDate;
+
+//     // Make an AJAX request to fetch data for the selected date
+//     $.ajax({
+//         url: ebase_url + 'appointment_api',
+//         method: 'GET',
+//         dataType: 'json',
+//         success: function (data) {
+//             // Clear the table body
+//             $('#appointmentList').empty();
+
+//             // Iterate through the fetched data and append rows to the table
+//             $.each(data, function (index, appointment) {
+//                 const newRow = `<tr>
+//                 <td>` + index + `</td>
+//                 <td>` + appointment.fullName + `</td>
+//                 <td>` + appointment.date + `</td>
+//                 <td>` + appointment.time + `</td>
+//                 <td>` + appointment.contactNo + `</td>
+//                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+//                 </td>
                 
-        </tr>`;
-        index++;
+//         </tr>`;
+//         index++;
 
-                $('#appointmentList').append(newRow);
-            });
-        },
-        error: function (error) {
-            console.error('Error fetching data:', error);
-        }
-    });
-}
+//                 $('#appointmentList').append(newRow);
+//             });
+//         },
+//         error: function (error) {
+//             console.error('Error fetching data:', error);
+//         }
+//     });
+// }
 
-// Call the fetchData function initially to load data for the current date
-fetchData();
+// // Call the fetchData function initially to load data for the current date
+// fetchData();
 
 
 $('#addAppointmentForm').on('submit', function (e) {
