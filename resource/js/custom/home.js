@@ -284,7 +284,7 @@ $('#contactForm').on('submit', function (e) {
     e.preventDefault();
     // Get form values
     // var id = $('#id').val().trim();
-    var name = $('#name').val().trim();
+    var name = $('#fname').val().trim();
     var email = $('#mail').val().trim();
     var phone = $('#mobile').val().trim();
     var subject = $('#subject').val().trim();
@@ -326,7 +326,7 @@ $('#contactForm').on('submit', function (e) {
    
         contactData.set(contactData.size+1,formData);
          
-        $('#name').val(' ');
+        $('#fname').val(' ');
         $('#mail').val(' ');
         $('#mobile').val(' ');
         $('#subject').val(' ');
