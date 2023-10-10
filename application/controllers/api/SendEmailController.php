@@ -14,14 +14,16 @@ class SendEmailController extends REST_Controller {
     }
    
     public function sendEmail_post() {
-        $json_data = $this->input->raw_input_stream;
-        $data = json_decode($json_data, true);
+        // $json_data = $this->input->raw_input_stream;
+        // $data = json_decode($json_data, true);
 
-        $name = $data['name'];
-        $email = $data['email'];
-        $phone = $data['phone'];
-        $subject = $data['subject'];
-        $message = $data['message'];
+        $arrJson = json_decode($this->post('mailDetails'));
+
+        $name = $arrJson[0]->name;
+        $email = $arrJson[0]->email;
+        $phone = $arrJson[0]->phone;
+        $subject = $arrJson[0]->subject;
+        $message = $arrJson[0]->message;
 
         
         $emailContent = '
