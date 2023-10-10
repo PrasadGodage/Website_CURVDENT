@@ -764,7 +764,7 @@
                            <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                <div class="alert alert-success contact__msg" id="alertMsg" style="display: none" role="alert">
                                     Your message was sent successfully.
                                 </div>
                             </div>
