@@ -1,5 +1,78 @@
 let appointmentList = new Map();
+let appointmentList1 = new Map();
 
+function setAppointmentList1(list) {
+
+    $('#appointmentTable').dataTable().fnDestroy();
+    $('#appointmentList1').empty();
+    var tblData = '';
+    var index=1;
+    
+    for (let k of list.keys()) {
+        
+        let appointment = list.get(k);
+    
+        tblData += `
+        <tr>
+                <td>` + index + `</td>
+                <td>` + appointment.fullName + `</td>
+                <td>` + appointment.date + `</td>
+                <td>` + appointment.time + `</td>
+                <td>` + appointment.contactNo + `</td>
+                <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                </td>
+                
+        </tr>`;
+        index++;
+    }
+    
+    $('#appointmentList1').html(tblData);
+    $('#appointmentTable').DataTable();
+    }
+
+$(document).ready(function() {
+
+   $.ajax({
+
+        url: ebase_url+'appointment_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        if(response.data[i].date === $("#selectDate").value())
+                        {
+
+                            appointmentList1.set(response.data[i].id, response.data[i]);
+
+                        }
+                        
+                    }
+                    
+                }
+                setAppointmentList1(appointmentList1);
+                console.log(appointmentList1);
+            }
+
+        }
+        
+    });
+
+  });
 
 // // Get the current date and time
 // var currentDate = new Date();
