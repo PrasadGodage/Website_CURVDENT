@@ -255,10 +255,10 @@ function SendEmailAjax(formData) {
 
         data: JSON.stringify(formData),
 
-        contentType: 'application/json',
+        contentType: false,
 
         dataType: 'json',
-        
+
         success: function(response) {
             if (response.status == 200) {
                 swal("Good job!", response.msg, "success");
