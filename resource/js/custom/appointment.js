@@ -1,78 +1,128 @@
 let appointmentList = new Map();
 let appointmentList1 = new Map();
 
-function setAppointmentList1(list) {
+// function setAppointmentList1(list) {
 
-    $('#appointmentTable').dataTable().fnDestroy();
-    $('#appointmentList1').empty();
-    var tblData = '';
-    var index=1;
+//     $('#appointmentTable').dataTable().fnDestroy();
+//     $('#appointmentList1').empty();
+//     var tblData = '';
+//     var index=1;
     
-    for (let k of list.keys()) {
+//     for (let k of list.keys()) {
         
-        let appointment = list.get(k);
+//         let appointment = list.get(k);
     
-        tblData += `
-        <tr>
-                <td>` + index + `</td>
-                <td>` + appointment.fullName + `</td>
-                <td>` + appointment.date + `</td>
-                <td>` + appointment.time + `</td>
-                <td>` + appointment.contactNo + `</td>
-                <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                </td>
+//         tblData += `
+//         <tr>
+//                 <td>` + index + `</td>
+//                 <td>` + appointment.fullName + `</td>
+//                 <td>` + appointment.date + `</td>
+//                 <td>` + appointment.time + `</td>
+//                 <td>` + appointment.contactNo + `</td>
+//                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+//                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+//                 </td>
                 
-        </tr>`;
-        index++;
-    }
+//         </tr>`;
+//         index++;
+//     }
     
-    $('#appointmentList1').html(tblData);
-    $('#appointmentTable').DataTable();
-    }
+//     $('#appointmentList1').html(tblData);
+//     $('#appointmentTable').DataTable();
+//     }
 
-$(document).ready(function() {
+//     $(document).ready(function() {
+//         const selectedDateInput = $("#selectDate");
+//        // const recordTableBody = $("#recordTableBody");
+      
+//         selectedDateInput.on("change", function() {
+//           const selectedDate = selectedDateInput.val();
+      
+//           // Clear the existing table rows
+//           //recordTableBody.empty();
+      
+//           // Make an AJAX request to fetch records for the selected date
+//           $.ajax({
+//             url: ebase_url+'appointment_api', // Replace with your backend API URL
 
-   $.ajax({
+//             method: "GET",
 
-        url: ebase_url+'appointment_api',
+//             data: { date: selectedDate },
 
-        type: 'GET',
+//             dataType: "json",
 
-        async:false,
+//             success: function(data) {
+//               // Populate the table with fetched records
+              
+//                 if (data.length != 0) {
+//                     for (var i = 0; i < data.length; i++) {
+//                         if(data[i].date === $("#selectDate").value())
+//                         {
 
-        headers: {
-            "Authorization": etoken
-        },
+//                             appointmentList1.set(data[i].id,data[i]);
 
-        dataType: 'json',
-
-        success: function (response) {
-        
-
-            if (response.status == 200) {
-
-                if (response.data.length != 0) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        if(response.data[i].date === $("#selectDate").value())
-                        {
-
-                            appointmentList1.set(response.data[i].id, response.data[i]);
-
-                        }
+//                         }
                         
-                    }
+//                     }
                     
-                }
-                setAppointmentList1(appointmentList1);
-                console.log(appointmentList1);
-            }
+//                 }
+//                 setAppointmentList1(appointmentList1);
+//                 console.log(appointmentList1);
+          
 
-        }
+//             },
+//             error: function(error) {
+//               console.error("Error fetching data:", error);
+//             }
+//           });
+//         });
+//       });
+      
+
+// $(document).ready(function() {
+
+//     const selectedDateInput = $("#selectDate");
+
+//    $.ajax({
+
+//         url: ebase_url+'appointment_api',
+
+//         type: 'GET',
+
+//         async:false,
+
+//         headers: {
+//             "Authorization": etoken
+//         },
+
+//         dataType: 'json',
+
+//         success: function (response) {
         
-    });
 
-  });
+//             if (response.status == 200) {
+
+//                 if (response.data.length != 0) {
+//                     for (var i = 0; i < response.data.length; i++) {
+//                         if(response.data[i].date === $("#selectDate").value())
+//                         {
+
+//                             appointmentList1.set(response.data[i].id, response.data[i]);
+
+//                         }
+                        
+//                     }
+                    
+//                 }
+//                 setAppointmentList1(appointmentList1);
+//                 console.log(appointmentList1);
+//             }
+
+//         }
+        
+//     });
+
+//   });
 
 // // Get the current date and time
 // var currentDate = new Date();
@@ -240,7 +290,7 @@ function setAppointmentList(list) {
     }
 
     // ---------------------- delete data ---------------------------------------------
-function deleteAppointmentDetails(id) {
+function deleteppointmentDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
     // swal({
     //     title: 'Are you sure?',
