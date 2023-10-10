@@ -264,7 +264,7 @@ function SendEmailAjax() {
 
             cache: false,
 
-            contentType: false,
+            contentType: 'application/json',
 
             processData: false,
 

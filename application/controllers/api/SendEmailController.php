@@ -37,6 +37,9 @@ class SendEmailController extends REST_Controller {
         $mobile = $data['phone'];
         $subject = $data['subject'];
         $msg = $data['message'];
+
+        $this->output->set_content_type('application/json');
+
         // echo "<pre>";
         // print_r($mail_from);
         // print_r($subject);
