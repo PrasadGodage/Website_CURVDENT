@@ -1,208 +1,108 @@
 let appointmentList = new Map();
-let appointmentList1 = new Map();
 
-// function setAppointmentList1(list) {
 
-//     $('#appointmentTable').dataTable().fnDestroy();
-//     $('#appointmentList1').empty();
-//     var tblData = '';
-//     var index=1;
-    
-//     for (let k of list.keys()) {
-        
-//         let appointment = list.get(k);
-    
-//         tblData += `
-//         <tr>
-//                 <td>` + index + `</td>
-//                 <td>` + appointment.fullName + `</td>
-//                 <td>` + appointment.date + `</td>
-//                 <td>` + appointment.time + `</td>
-//                 <td>` + appointment.contactNo + `</td>
-//                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-//                 </td>
-                
-//         </tr>`;
-//         index++;
-//     }
-    
-//     $('#appointmentList1').html(tblData);
-//     $('#appointmentTable').DataTable();
-//     }
+// //Submit Category Btn script
 
-//     $(document).ready(function() {
-//         const selectedDateInput = $("#selectDate");
-//        // const recordTableBody = $("#recordTableBody");
-      
-//         selectedDateInput.on("change", function() {
-//           const selectedDate = selectedDateInput.val();
-      
-//           // Clear the existing table rows
-//           //recordTableBody.empty();
-      
-//           // Make an AJAX request to fetch records for the selected date
-//           $.ajax({
-//             url: ebase_url+'appointment_api', // Replace with your backend API URL
+// $('#addappointmentForm').on('submit', function (e) {
+//     e.preventDefault();
 
-//             method: "GET",
+//     var returnVal = $("#addappointmentForm").valid();
+//     var formdata = new FormData(this);
+//     if (returnVal) {
+     
+//         $.ajax({
 
-//             data: { date: selectedDate },
+//             url: ebase_url+'appointment_api',
 
-//             dataType: "json",
+//             type: 'POST',
 
-//             success: function(data) {
-//               // Populate the table with fetched records
-              
-//                 if (data.length != 0) {
-//                     for (var i = 0; i < data.length; i++) {
-//                         if(data[i].date === $("#selectDate").value())
-//                         {
-
-//                             appointmentList1.set(data[i].id,data[i]);
-
-//                         }
-                        
-//                     }
-                    
-//                 }
-//                 setAppointmentList1(appointmentList1);
-//                 console.log(appointmentList1);
-          
-
+//             headers: {
+//                 "Authorization": etoken
 //             },
-//             error: function(error) {
-//               console.error("Error fetching data:", error);
-//             }
-//           });
-//         });
-//       });
-      
 
-// $(document).ready(function() {
+//             data: formdata,
+          
+//             cache: false,
 
-//     const selectedDateInput = $("#selectDate");
+//             contentType: false,
 
-//    $.ajax({
+//             processData: false,
 
-//         url: ebase_url+'appointment_api',
+//             dataType: 'json',
 
-//         type: 'GET',
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     $('#addappointmentModal').modal('toggle');
 
-//         async:false,
+//                     let id=response.data.id;
+                  
+//                  if(appointmentList.has(id)){
+//                     appointmentList.delete(id);   
+//                  }
+//                  appointmentList.set(id, response.data);
+//                  setAppointmentList(appointmentList);
 
-//         headers: {
-//             "Authorization": etoken
-//         },
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href',ebase_url+'appointment');
+//                 } else {
 
-//         dataType: 'json',
+//                     swal("Error!", response.msg, "error");
 
-//         success: function (response) {
-        
-
-//             if (response.status == 200) {
-
-//                 if (response.data.length != 0) {
-//                     for (var i = 0; i < response.data.length; i++) {
-//                         if(response.data[i].date === $("#selectDate").value())
-//                         {
-
-//                             appointmentList1.set(response.data[i].id, response.data[i]);
-
-//                         }
-                        
-//                     }
-                    
 //                 }
-//                 setAppointmentList1(appointmentList1);
-//                 console.log(appointmentList1);
+
 //             }
+//             // let currentDate = new Date().toJSON().slice(10,20);
+//         });
+//     }
+// });
 
-//         }
-        
-//     });
-
-//   });
-
-// // Get the current date and time
-// var currentDate = new Date();
-
-// // Extract hours and minutes
-// var hours = currentDate.getHours();
-// var minutes = currentDate.getMinutes();
-
-// // Determine AM or PM
-// var ampm = hours >= 12 ? 'PM' : 'AM';
-
-// // Convert to 12-hour clock format
-// hours = hours % 12;
-// hours = hours ? hours : 12; // 0 should be converted to 12
-
-// // Add leading zeros to minutes if necessary
-// minutes = minutes < 10 ? '0' + minutes : minutes;
-
-// // Create the formatted time string
-// var formattedTime = hours + ':' + minutes + ' ' + ampm;
-
-// // Now, `formattedTime` contains the current time in "00:00 AM/PM" format
-
-// // You can use `formattedTime` in your AJAX request or wherever you need to save it to the database
-
-
-//Submit Category Btn script
 
 $('#addappointmentForm').on('submit', function (e) {
     e.preventDefault();
 
     var returnVal = $("#addappointmentForm").valid();
     var formdata = new FormData(this);
+    
+    // Get the time value from the time input field
+    var appointmentTime = $("#time").val();
+
     if (returnVal) {
-     
         $.ajax({
-
-            url: ebase_url+'appointment_api',
-
+            url: ebase_url + 'appointment_api',
             type: 'POST',
-
             headers: {
                 "Authorization": etoken
             },
-
-            data: formdata,
-          
+            data: {
+                formData: formdata,
+                time: appointmentTime // Include the time data
+            },
             cache: false,
-
             contentType: false,
-
             processData: false,
-
             dataType: 'json',
-
             success: function (response) {
                 if (response.status == 200) {
                     $('#addappointmentModal').modal('toggle');
 
-                    let id=response.data.id;
-                  
-                 if(appointmentList.has(id)){
-                    appointmentList.delete(id);   
-                 }
-                 appointmentList.set(id, response.data);
-                 setAppointmentList(appointmentList);
+                    let id = response.data.id;
+
+                    if (appointmentList.has(id)) {
+                        appointmentList.delete(id);
+                    }
+                    appointmentList.set(id, response.data);
+                    setAppointmentList(appointmentList);
 
                     swal("Good job!", response.msg, "success");
-                    $(location).attr('href',ebase_url+'appointment');
+                    $(location).attr('href', ebase_url + 'appointment');
                 } else {
-
                     swal("Error!", response.msg, "error");
-
                 }
-
             }
-            // let currentDate = new Date().toJSON().slice(10,20);
         });
     }
 });
+
 
 
 // addClient Button
