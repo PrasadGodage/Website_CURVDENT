@@ -771,19 +771,19 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="name" type="text" id="name" placeholder="Name *" >
+                                <input name="fname" type="text" id="fname" placeholder="Name *" >
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" id="mail" placeholder="Email *" >
+                                <input name="mail" type="email" id="mail" placeholder="Email *" >
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="phone" type="text" id="mobile" placeholder="Number *" >
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" >
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="subject" type="text" id="subject" placeholder="Subject *" >
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="message" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
+                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
