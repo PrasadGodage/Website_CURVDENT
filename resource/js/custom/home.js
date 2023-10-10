@@ -246,19 +246,19 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax(formdata) {
-    // var contactList = Array.from(contactData.values());
-    // console.log(contactList);
+function SendEmailAjax() {
+    var contactList = Array.from(contactData.values());
+    console.log(contactList);
 
-    // if (contactList != '' && contactList != null && contactList.length > 0) {
-    //     var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+    if (contactList != '' && contactList != null && contactList.length > 0) {
+        var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
 
         $.ajax({
             url: ebase_url + 'sendEmail_api',
 
             type: 'POST',
 
-            data: formdata,
+            data: jsonString,
 
             cache: false,
 
@@ -277,86 +277,71 @@ function SendEmailAjax(formdata) {
             },
             
         });
-    // } else {
-    //     swal("ERROR!", "No contact data available to send an email.", "error");
-    // }
+    } else {
+        swal("ERROR!", "No contact data available to send an email.", "error");
+    }
 }
 
 // $("#submitMail").click(function(e){
 $('#contactForm').on('submit', function (e) {
 
     e.preventDefault();
-    var formdata = new FormData(this);
-    // Show the success message
-    $("#alertMsg").fadeIn();
-
-    // Clear the input field (optional)
-    $("#fname").val('');
-    $("#mail").val('');
-    $("#mobile").val('');
-    $("#subject").val('');
-    $("#msg").val('');
-
-    // Hide the success message after 3 seconds (adjust the time as needed)
-   setTimeout(function () {
-      $("#alertMsg").fadeOut();
-  }, 3000);
     // Get form values
     // var id = $('#id').val().trim();
-    // var name = $('#fname').val().trim();
-    // var email = $('#mail').val().trim();
-    // var phone = $('#mobile').val().trim();
-    // var subject = $('#subject').val().trim();
-    // var message = $('#msg').val().trim();
+    var name = $('#fname').val().trim();
+    var email = $('#mail').val().trim();
+    var phone = $('#mobile').val().trim();
+    var subject = $('#subject').val().trim();
+    var message = $('#msg').val().trim();
            
-//     var flag=true;
+    var flag=true;
 
-//     if (name === '' || name === null){
-//         $('#nameError').text('Please enter name');
-//         flag=false;
-//     }else if(email === '' || email === null){
-//         $('#emailError').text('Please enter email');
-//         flag=false;
-//     }else if(phone === '' || phone === null){
-//         $('#phoneError').text('Please enter phone');
-//         flag=false;
-//     }else if(subject === '' || subject === null){
-//         $('#subjectError').text('Please enter subject');
-//         flag=false;
-//     }else if(message === '' || message === null){
-//         $('#messageError').text('Please enter message');
-//         flag=false;
-//     }
-//     else{
-//         flag=true;
-//     }
+    if (name === '' || name === null){
+        $('#nameError').text('Please enter name');
+        flag=false;
+    }else if(email === '' || email === null){
+        $('#emailError').text('Please enter email');
+        flag=false;
+    }else if(phone === '' || phone === null){
+        $('#phoneError').text('Please enter phone');
+        flag=false;
+    }else if(subject === '' || subject === null){
+        $('#subjectError').text('Please enter subject');
+        flag=false;
+    }else if(message === '' || message === null){
+        $('#messageError').text('Please enter message');
+        flag=false;
+    }
+    else{
+        flag=true;
+    }
 
-//    if(flag){
-//         // Create an object to store the form data
-//         var formData = {
+   if(flag){
+        // Create an object to store the form data
+        var formData = {
 
-//             // id:id,
-//             name:name,
-//             email:email,
-//             phone:phone,
-//             subject:subject,
-//             message:message
-//         };
+            // id:id,
+            name:name,
+            email:email,
+            phone:phone,
+            subject:subject,
+            message:message
+        };
      
    
-//         contactData.set(contactData.size+1,formData);
+        contactData.set(contactData.size+1,formData);
          
-//         $('#fname').val(' ');
-//         $('#mail').val(' ');
-//         $('#mobile').val(' ');
-//         $('#subject').val(' ');
-//         $('#msg').val(' ');   
+        $('#fname').val('');
+        $('#mail').val('');
+        $('#mobile').val('');
+        $('#subject').val('');
+        $('#msg').val('');   
     
         // var contactList=Array.from(contactData.values());
         // console.log(contactList);
-        SendEmailAjax(formdata);
+        SendEmailAjax();
 
-    // }
+    }
 });
 
 
