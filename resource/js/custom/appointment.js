@@ -3,7 +3,7 @@ let appointmentList = new Map();
 $(document).ready(function() {
 
     let currentDate = new Date().toJSON().slice(0,10);
-    document.getElementById("dateInput").value = currentDate;
+    // document.getElementById("dateInput").value = currentDate;
 
 
     // // Function to format a date as "YYYY-MM-DD" (required by the date input field)
