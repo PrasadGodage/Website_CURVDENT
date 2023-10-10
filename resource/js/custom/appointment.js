@@ -9,7 +9,7 @@ var yyyy = currentDate.getFullYear();
 
 currentDate = mm + '/' + dd + '/' + yyyy;
 // document.write(today);
-document.getElementById("today").value = currentDate;
+// document.getElementById("today").value = currentDate;
 console.log(currentDate);
 // function fetchData() {
 //     // Get the selected date from the input field
