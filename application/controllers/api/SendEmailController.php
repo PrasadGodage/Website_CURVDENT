@@ -46,7 +46,7 @@ class SendEmailController extends CI_Controller {
                             
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$this->post('message').'</td>
+                            <td width="70%">'.$this->post('msg').'</td>
                             </tr>
                         </table>
                     ';
