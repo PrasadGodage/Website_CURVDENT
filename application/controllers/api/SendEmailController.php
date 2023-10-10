@@ -29,8 +29,8 @@ class SendEmailController extends REST_Controller {
         $mail_from = $this->post('mail');
         echo "<pre>"
         print_r($mail_from)
-        print_r($subject)
-        print_r($sub)
+        // print_r($subject)
+        // print_r($sub)
 
         // $programming_languages = implode(", ", $this->input->post("programming_languages"));
 
