@@ -6,6 +6,10 @@ var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 if (etoken == null){
     window.location.replace('employeeLogin');
 }
+else if($config['sess_expire_on_close'] == TRUE)
+{
+    window.location.replace('employeeLogin');
+}
 
 var profileImage=(empdetails.profile_image!=null)?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
 
