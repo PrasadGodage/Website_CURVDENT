@@ -22,11 +22,18 @@ class SendEmailController extends REST_Controller {
         // $jsonData = json_decode($jsonString, true);
         // echo "<pre>"
         // print_r($jsonData);
+        $json_data = $this->input->raw_input_stream;
+
+        // Decode the JSON data into an array
+        $data = json_decode($json_data, true);
 
 
-        $sub = $this->post('name');
-        $subject = 'Application for Clinc By - ' . $sub;
-        $mail_from = $this->post('mail');
+        // $sub = $this->post('name');
+        $subject = $data['subject'];
+        $mail_from = $data['email'];
+        $name = $data['name'];
+        $msg = $data['message'];
+        $mobile = $data['phone'];
         // echo "<pre>";
         // print_r($mail_from);
         // print_r($subject);
@@ -38,7 +45,7 @@ class SendEmailController extends REST_Controller {
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$this->post('name').'</td>
+                            <td width="70%">'.$name.'</td>
                             </tr>
                             
                             <tr>
@@ -48,12 +55,12 @@ class SendEmailController extends REST_Controller {
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$this->post('mobile').'</td>
+                            <td width="70%">'.$mobile.'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$this->post('msg').'</td>
+                            <td width="70%">'.$msg.'</td>
                             </tr>
                         </table>
                     ';
@@ -91,7 +98,7 @@ class SendEmailController extends REST_Controller {
         $this->email->from($mail_from);
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
-        $this->email->message($message);
+        $this->email->message($msg);
         // print_r($this->email->print_debugger());
 
         
