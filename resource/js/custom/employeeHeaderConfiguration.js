@@ -7,12 +7,12 @@ if (etoken == null){
     window.location.replace('employeeLogin');
 }
 
-// var profileImage=(empdetails.profile_image!=null)?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
+var profileImage=(empdetails.profile_image!=null)?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
 
-// $('#userImageSm').attr('src',profileImage);
-// $('#userImageMd').attr('src',profileImage);
-// $('#userName').html(empdetails.name);
-// $('#userIdforAvatar').html(empdetails.userid);
+$('#userImageSm').attr('src',profileImage);
+$('#userImageMd').attr('src',profileImage);
+$('#userName').html(empdetails.name);
+$('#userIdforAvatar').html(empdetails.userid);
 
 
 
