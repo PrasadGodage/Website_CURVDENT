@@ -60,7 +60,7 @@ class EmployeeLoginController extends REST_Controller {
 
     public function logout_post() {
 
-        if (isset($_SESSION['empSession']['logged_in']) && $_SESSION['empSession']['logged_in'] === true) {
+        if (isset($_SESSION['empSession']['logged_in']) || $_SESSION['empSession']['logged_in'] === true) {
 			
 			// remove session datas
 			foreach ($_SESSION as $key => $value) {
