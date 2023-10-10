@@ -3,105 +3,105 @@ let appointmentList = new Map();
 
 // //Submit Category Btn script
 
-// $('#addAppointmentForm').on('submit', function (e) {
-//     e.preventDefault();
-
-//     var returnVal = $("#addAppointmentForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
-     
-//         $.ajax({
-
-//             url: ebase_url+'appointment_api',
-
-//             type: 'POST',
-
-//             headers: {
-//                 "Authorization": etoken
-//             },
-
-//             data: formdata,
-          
-//             cache: false,
-
-//             contentType: false,
-
-//             processData: false,
-
-//             dataType: 'json',
-
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     $('#addAppointmentModal').modal('toggle');
-
-//                     let id=response.data.id;
-                  
-//                  if(appointmentList.has(id)){
-//                     appointmentList.delete(id);   
-//                  }
-//                  appointmentList.set(id, response.data);
-//                  setAppointmentList(appointmentList);
-
-//                     swal("Good job!", response.msg, "success");
-//                     $(location).attr('href',ebase_url+'appointment');
-//                 } else {
-
-//                     swal("Error!", response.msg, "error");
-
-//                 }
-
-//             }
-//             // let currentDate = new Date().toJSON().slice(10,20);
-//         });
-//     }
-// });
-
-
 $('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
 
     var returnVal = $("#addAppointmentForm").valid();
     var formdata = new FormData(this);
-    
-    // Get the time value from the time input field
-    var appointmentTime = $("#time").val();
-
     if (returnVal) {
+     
         $.ajax({
-            url: ebase_url + 'appointment_api',
+
+            url: ebase_url+'appointment_api',
+
             type: 'POST',
+
             headers: {
                 "Authorization": etoken
             },
-            data: {
-                formData: formdata,
-                time: appointmentTime // Include the time data
-            },
+
+            data: formdata,
+          
             cache: false,
+
             contentType: false,
+
             processData: false,
+
             dataType: 'json',
+
             success: function (response) {
                 if (response.status == 200) {
                     $('#addAppointmentModal').modal('toggle');
 
-                    let id = response.data.id;
-
-                    if (appointmentList.has(id)) {
-                        appointmentList.delete(id);
-                    }
-                    appointmentList.set(id, response.data);
-                    setAppointmentList(appointmentList);
+                    let id=response.data.id;
+                  
+                 if(appointmentList.has(id)){
+                    appointmentList.delete(id);   
+                 }
+                 appointmentList.set(id, response.data);
+                 setAppointmentList(appointmentList);
 
                     swal("Good job!", response.msg, "success");
-                    $(location).attr('href', ebase_url + 'appointment');
+                    $(location).attr('href',ebase_url+'appointment');
                 } else {
+
                     swal("Error!", response.msg, "error");
+
                 }
+
             }
+            // let currentDate = new Date().toJSON().slice(10,20);
         });
     }
 });
+
+
+// $('#addAppointmentForm').on('submit', function (e) {
+//     e.preventDefault();
+
+//     var returnVal = $("#addAppointmentForm").valid();
+//     var formdata = new FormData(this);
+    
+//     // Get the time value from the time input field
+//     var appointmentTime = $("#time").val();
+
+//     if (returnVal) {
+//         $.ajax({
+//             url: ebase_url + 'appointment_api',
+//             type: 'POST',
+//             headers: {
+//                 "Authorization": etoken
+//             },
+//             data: {
+//                 formData: formdata,
+//                 time: appointmentTime // Include the time data
+//             },
+//             cache: false,
+//             contentType: false,
+//             processData: false,
+//             dataType: 'json',
+//             success: function (response) {
+//                 if (response.status == 200) {
+//                     $('#addAppointmentModal').modal('toggle');
+
+//                     let id = response.data.id;
+
+//                     if (appointmentList.has(id)) {
+//                         appointmentList.delete(id);
+//                     }
+//                     appointmentList.set(id, response.data);
+//                     setAppointmentList(appointmentList);
+
+//                     swal("Good job!", response.msg, "success");
+//                     $(location).attr('href', ebase_url + 'appointment');
+//                 } else {
+//                     swal("Error!", response.msg, "error");
+//                 }
+//             }
+//         });
+//     }
+// });
 
 
 
@@ -190,7 +190,7 @@ function setAppointmentList(list) {
     }
 
     // ---------------------- delete data ---------------------------------------------
-function deleteppointmentDetails(id) {
+function deleteAppointmentDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
     // swal({
     //     title: 'Are you sure?',
