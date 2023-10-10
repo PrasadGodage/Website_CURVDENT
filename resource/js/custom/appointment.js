@@ -46,7 +46,7 @@ $('#addAppointmentForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'appointment');
                 } else {
 
-                    swal("Error!", response.msg, "error");
+                    // swal("Error!", response.msg, "error");
 
                 }
 
