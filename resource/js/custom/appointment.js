@@ -9,7 +9,7 @@ var yyyy = today.getFullYear();
 
 today = mm + '/' + dd + '/' + yyyy;
 document.write(today);
-
+console.log(today);
 // function fetchData() {
 //     // Get the selected date from the input field
 //     const selectedDate = $('#dateInput').val();
