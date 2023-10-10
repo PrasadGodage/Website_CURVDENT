@@ -1,78 +1,24 @@
 let appointmentList = new Map();
 
-$(document).ready(function() {
-    // // Function to format a date as "YYYY-MM-DD" (required by the date input field)
-    // function formatDate(date) {
-    //     const year = date.getFullYear();
-    //     const month = String(date.getMonth() + 1).padStart(2, '0');
-    //     const day = String(date.getDate()).padStart(2, '0');
-    //     return `${year}-${month}-${day}`;
-    // }
+// $(document).ready(function() {
+    // Function to format a date as "YYYY-MM-DD" (required by the date input field)
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
 
-    // // Get the current date
-    // const currentDate = new Date();
+    // Get the current date
+    const currentDate = new Date();
 
-    // // Format the current date
-    // const formattedDate = formatDate(currentDate);
+    // Format the current date
+    const formattedDate = formatDate(currentDate);
 
-    // // Set the formatted date in the date input field
-    // $('#dateInput').val(formattedDate);
-});
-
-//Submit Category Btn script
-
-// $('#addAppointmentForm').on('submit', function (e) {
-//     e.preventDefault();
-
-//     var returnVal = $("#addAppointmentForm").valid();
-//     var formdata = new FormData(this);
-//     if (returnVal) {
-     
-//         $.ajax({
-
-//             url: ebase_url+'appointment_api',
-
-//             type: 'POST',
-
-//             headers: {
-//                 "Authorization": etoken
-//             },
-
-//             data: formdata,
-          
-//             cache: false,
-
-//             contentType: false,
-
-//             processData: false,
-
-//             dataType: 'json',
-
-//             success: function (response) {
-//                 if (response.status == 200) {
-//                     $('#addAppointmentModal').modal('toggle');
-
-//                     let id=response.data.id;
-                  
-//                  if(appointmentList.has(id)){
-//                     appointmentList.delete(id);   
-//                  }
-//                  appointmentList.set(id, response.data);
-//                  setAppointmentList(appointmentList);
-
-//                     swal("Good job!", response.msg, "success");
-//                     $(location).attr('href',ebase_url+'appointment');
-//                 } else {
-
-//                     swal("Error!", response.msg, "error");
-
-//                 }
-
-//             }
-//             // let currentDate = new Date().toJSON().slice(10,20);
-//         });
-//     }
+    // Set the formatted date in the date input field
+    $('#dateInput').val(formattedDate);
 // });
+
 
 
 $('#addAppointmentForm').on('submit', function (e) {
@@ -127,8 +73,6 @@ $('#addAppointmentForm').on('submit', function (e) {
 $('#addAppointmentBtn').click(function () {
     $('#addAppointmentModal').modal('toggle');
     $("#addAppointmentForm").trigger("reset");
-    let currentDate = new Date().toJSON().slice(0,10);
-    document.getElementById("dateInput").value = currentDate;
     $('#id').val('');
     $('.error').text('');
     
