@@ -786,8 +786,8 @@
                                 <textarea name="message" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
                             </div>
                             <div class="col-md-12">
-                                <!-- <input name="submit" type="submit" value="Send Message"> -->
-                                <button type="submit" class="btn btn-form" id="submitMail" style="background-color: #fd8f00;">Send Message</button>
+                                <input name="submit" type="submit" value="Send Message">
+                                <!-- <button type="submit" class="btn btn-form" id="submitMail" style="background-color: #fd8f00;">Send Message</button> -->
                             </div>
                         </div>
                     </form>
