@@ -104,7 +104,8 @@ class SendEmailController extends REST_Controller {
 
         $this->email->from('pradyumnb.297@gmail.com');
         $this->email->to('pradyumnb.297@gmail.com');
-        $this->email->subject($subject);
+        $this->email->subject('This is Abhinav');
+        // $this->email->subject($subject);
         $this->email->message($emailContent);
         // print_r($this->email->print_debugger());
 
