@@ -27,24 +27,20 @@ class SendEmailController extends REST_Controller {
 
         // Decode the JSON data into an array
         // $data = json_decode($json_data, true);
-        $data = $this->post();
+        // $data = $this->post();
 
         // echo "<pre>";
         // print_r($data);
 
         // $sub = $this->post('name');
-        $mailData['name'] = $data['name'];
-        $mailData['email'] = $data['email'];
-        $mailData['phone'] = $data['phone'];
-        $mailData['subject'] = $data['subject'];
-        $mailData['message'] = $data['message'];
-        // $name = $data['name'];
-        // $email = $data['email'];
-        // $mobile = $data['phone'];
-        // $subject = $data['subject'];
-        // $msg = $data['message'];
 
-        $this->output->set_content_type('application/json');
+        $name = $this->post('name');
+        $email = $this->post('email');
+        $mobile = $this->post('phone');
+        $subject = $this->post('subject');
+        $msg = $this->post('message');
+
+        // $this->output->set_content_type('application/json');
 
         // echo "<pre>";
         // print_r($mail_from);
@@ -58,22 +54,22 @@ class SendEmailController extends REST_Controller {
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$mailData['name'].'</td>
+                            <td width="70%">'.$name.'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Email Address</td>
-                            <td width="70%">'.$mailData['email'].'</td>
+                            <td width="70%">'.$email.'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$mailData['phone'].'</td>
+                            <td width="70%">'.$mobile.'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$mailData['message'].'</td>
+                            <td width="70%">'.$msg.'</td>
                             </tr>
                         </table>
                     ';
@@ -110,7 +106,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->from('pradyumnb.297@gmail.com');
         $this->email->to('pradyumnb.297@gmail.com');
-        $this->email->subject($mailData['subject']);
+        $this->email->subject($subject);
         // $this->email->subject($subject);
         $this->email->message($emailContent);
         // print_r($this->email->print_debugger());
