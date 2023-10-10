@@ -252,13 +252,15 @@ function SendEmailAjax() {
 
     if (contactList != '' && contactList != null && contactList.length > 0) {
         var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+        var formdata = new FormData();
+        formdata.append("mailDetails",jsonString);
 
         $.ajax({
             url: ebase_url + 'sendEmail_api',
 
             type: 'POST',
 
-            data: jsonString,
+            data: formdata,
 
             cache: false,
 
