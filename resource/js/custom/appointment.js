@@ -1,12 +1,12 @@
 let appointmentList = new Map();
 
-// $(document).ready(function() {
-    // Function to format a date as "YYYY-MM-DD" (required by the date input field)
+$(document).ready(function() {
+    // Function to format the date as "MM/DD/YYYY"
     function formatDate(date) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
+        return `${month}/${day}/${year}`;
     }
 
     // Get the current date
@@ -15,9 +15,10 @@ let appointmentList = new Map();
     // Format the current date
     const formattedDate = formatDate(currentDate);
 
-    // Set the formatted date in the date input field
+    // Set the formatted date in the input field
     $('#dateInput').val(formattedDate);
-// });
+});
+
 
 
 
