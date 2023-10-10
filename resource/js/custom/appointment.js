@@ -240,7 +240,7 @@ function setAppointmentList(list) {
     }
 
     // ---------------------- delete data ---------------------------------------------
-function deleteppointmentDetails(id) {
+function deleteAppointmentDetails(id) {
     // Show a confirmation dialog using SweetAlert or JavaScript confirm
     // swal({
     //     title: 'Are you sure?',
