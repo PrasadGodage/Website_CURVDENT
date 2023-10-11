@@ -1,59 +1,8 @@
 let appointmentList = new Map();
 
-$(document).ready(function() {
-    // Get the current date
-    const currentDate = new Date();
-
-    // Format the current date as "YYYY-MM-DD" for setting in the input field
-    const formattedDate = currentDate.toISOString().split('T')[0];
-
-    // Set the formatted date in the input field
-    $('#dateInput').val(formattedDate);
-});
-
-// var currentDate = new Date();
-// var dd = String(currentDate.getDate()).padStart(2, '0');
-// var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
-// var yyyy = currentDate.getFullYear();
-
-// currentDate = mm + '/' + dd + '/' + yyyy;
-// // document.write(today);
-// // document.getElementById("today").value = currentDate;
-// console.log(currentDate);
-
-  // Function to refresh the table with filtered data
-  function refreshTable(selectedDate) {
-    // var filteredAppointments = appointmentData.filter(function(appointment) {
-    //     return appointment.date === selectedDate;
-    // });
-
-    var tableBody = $('#appointmentTable tbody');
-    tableBody.empty(); // Clear the current table
-
-    // Add rows for filtered data
-    filteredAppointments.forEach(function(appointment, index) {
-        var row = '<tr>' +
-            '<td>' + (index + 1) + '</td>' +
-            '<td>' + appointment.fullName + '</td>' +
-            '<td>' + appointment.date + '</td>' +
-            '<td>' + appointment.time + '</td>' +
-            '<td>' + appointment.contactNo + '</td>' +
-            '<td><button class="btn btn-danger">Delete</button></td>' +
-            '</tr>';
-
-        tableBody.append(row);
-    });
-}
-
-// Add an event listener to the date input
-$('#dateInput').on('change', function() {
-    var selectedDate = $(this).val();
-    refreshTable(selectedDate);
-});
-
-// Initialize the table with all data
-refreshTable('');
-
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
 
 
 $('#addAppointmentForm').on('submit', function (e) {
