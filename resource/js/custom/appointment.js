@@ -13,6 +13,7 @@ $('#addAppointmentForm').on('submit', function (e) {
 
     // Get the time value from the time input field
     var appointmentTime = $("#time").val();
+    console.log(appointmentTime);
 
     // Add the time value to the FormData object
     formdata.append('time', appointmentTime);
