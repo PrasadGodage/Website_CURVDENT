@@ -1,16 +1,26 @@
 let appointmentList = new Map();
 
+$(document).ready(function() {
+    // Get the current date
+    const currentDate = new Date();
 
+    // Format the current date as "YYYY-MM-DD" for setting in the input field
+    const formattedDate = currentDate.toISOString().split('T')[0];
 
-var currentDate = new Date();
-var dd = String(currentDate.getDate()).padStart(2, '0');
-var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
-var yyyy = currentDate.getFullYear();
+    // Set the formatted date in the input field
+    $('#dateInput').val(formattedDate);
+});
 
-currentDate = mm + '/' + dd + '/' + yyyy;
-// document.write(today);
-// document.getElementById("today").value = currentDate;
-console.log(currentDate);
+// var currentDate = new Date();
+// var dd = String(currentDate.getDate()).padStart(2, '0');
+// var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+// var yyyy = currentDate.getFullYear();
+
+// currentDate = mm + '/' + dd + '/' + yyyy;
+// // document.write(today);
+// // document.getElementById("today").value = currentDate;
+// console.log(currentDate);
+
 // function fetchData() {
 //     // Get the selected date from the input field
 //     const selectedDate = $('#dateInput').val();
