@@ -1,8 +1,8 @@
 <?php
-$session_data=$this->session->userdata();
-if(isset($session_data['empSession'])){
-    redirect(base_url('dashboard'));
-}
+// $session_data=$this->session->userdata();
+// if(isset($session_data['empSession'])){
+//     redirect(base_url('dashboard'));
+// }
 ?>
 
 
