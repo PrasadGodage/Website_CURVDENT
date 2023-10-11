@@ -783,7 +783,7 @@
                                 <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" id="sub" placeholder="Subject *" >
+                                <input name="sub" type="text" id="sub" placeholder="Subject *" >
                                 <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
