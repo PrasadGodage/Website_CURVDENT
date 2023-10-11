@@ -30,12 +30,13 @@ if (hours > 12) {
 }
 
 // Add seconds (you can set the seconds as needed)
-var seconds = "00";
+//var seconds = "00";
 
 // Create the formatted time string
-var formattedTime = hours + ":" + minutes + ":" + seconds + " " + ampm;
+var formattedTime = hours + ":" + minutes + " " + ampm;
+//var time = DateTime.ParseExact("17:00", "HH:mm", null).ToString("hh:mm tt");
 
-console.log(formattedTime); // Output: "3:30:00 PM"
+console.log(formattedTime); 
 
     console.log(appointmentTime);
 
@@ -145,13 +146,37 @@ function setAppointmentList(list) {
     for (let k of list.keys()) {
         
         let appointment = list.get(k);
-    
+
+        let formatedTime = appointment.time;
+        // Split the time into hours and minutes
+var parts = formatedTime.split(":");
+var hours = parseInt(parts[0]);
+var minutes = parseInt(parts[1]);
+
+// Determine AM or PM
+var ampm = hours >= 12 ? "PM" : "AM";
+
+// Convert to 12-hour format
+if (hours > 12) {
+    hours -= 12;
+} else if (hours === 0) {
+    hours = 12;
+}
+
+// Add seconds (you can set the seconds as needed)
+//var seconds = "00";
+
+// Create the formatted time string
+var formattedTime1 = hours + ":" + minutes + " " + ampm;
+
+console.log(formattedTime1);
+   
         tblData += `
         <tr>
                 <td>` + index + `</td>
                 <td>` + appointment.fullName + `</td>
                 <td>` + appointment.date + `</td>
-                <td>` + appointment.time + `</td>
+                <td>` + formattedTime1 + `</td>
                 <td>` + appointment.contactNo + `</td>
                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
