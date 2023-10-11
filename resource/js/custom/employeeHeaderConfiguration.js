@@ -3,7 +3,7 @@ var ebase_url = sessionStorage.getItem('eurl');
 var etoken = sessionStorage.getItem('etoken');
 var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 
-if (etoken != null){
+if (etoken == null){
     window.location.replace('employeeLogin');
 }
 if(empdetails != ''){
