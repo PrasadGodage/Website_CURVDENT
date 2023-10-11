@@ -72,12 +72,12 @@ class SendEmailController extends REST_Controller {
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'$data['phone']'</td>
+                            <td width="70%">'.$data['phone'].'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'$data['message']'</td>
+                            <td width="70%">'.$data['message'].'</td>
                             </tr>
                         </table>
                     ';
