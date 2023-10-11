@@ -21,25 +21,39 @@ $(document).ready(function() {
 // // document.getElementById("today").value = currentDate;
 // console.log(currentDate);
 
- // Function to display data in the table based on the selected date
- function displayAppointments(selectedDate) {
-    var table = $("#appointmentTable tbody");
-    table.empty(); // Clear existing data
+  // Function to refresh the table with filtered data
+  function refreshTable(selectedDate) {
+    var filteredAppointments = appointmentData.filter(function(appointment) {
+        return appointment.date === selectedDate;
+    });
 
-    $.each(appointments, function (index, appointment) {
-        if (appointment.date === selectedDate) {
-            // Create a new row and append it to the table
-            var row = "<tr><td>" + (index + 1) + "</td><td>" + appointment.name + "</td><td>" + appointment.date + "</td><td>" + appointment.time + "</td></tr>";
-            table.append(row);
-        }
+    var tableBody = $('#appointmentTable tbody');
+    tableBody.empty(); // Clear the current table
+
+    // Add rows for filtered data
+    filteredAppointments.forEach(function(appointment, index) {
+        var row = '<tr>' +
+            '<td>' + (index + 1) + '</td>' +
+            '<td>' + appointment.fullName + '</td>' +
+            '<td>' + appointment.date + '</td>' +
+            '<td>' + appointment.time + '</td>' +
+            '<td>' + appointment.contactNo + '</td>' +
+            '<td><button class="btn btn-danger">Delete</button></td>' +
+            '</tr>';
+
+        tableBody.append(row);
     });
 }
 
-// Event handler for the date input
-$("#dateInput").on("change", function () {
+// Add an event listener to the date input
+$('#dateInput').on('change', function() {
     var selectedDate = $(this).val();
-    displayAppointments(selectedDate);
+    refreshTable(selectedDate);
 });
+
+// Initialize the table with all data
+refreshTable('');
+
 
 
 $('#addAppointmentForm').on('submit', function (e) {
