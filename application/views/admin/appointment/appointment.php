@@ -36,8 +36,9 @@
                             <button type="button" class="col-md-3 btn btn-primary ml-2" id="addAppointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
                             <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
                             <!-- <div class=" box-controls pull-right"> -->
-                                <input type="date" class="col-md-3 form-control mr-2" id="dateInput " name="dateInput" placeholder="MM/DD/YYYY">
-                                
+                            <p>Date:<input type="text" class="col-md-3 form-control mr-2" id="datepicker" name="datepicker" placeholder="MM/DD/YYYY">
+                               </p> 
+                               <!-- <p>Date: <input type="text" id="datepicker"> -->
                             <!-- </button> -->
                             <!-- </div> -->
                         </div>
