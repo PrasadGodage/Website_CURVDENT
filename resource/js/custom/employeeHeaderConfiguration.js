@@ -3,10 +3,10 @@ var ebase_url = sessionStorage.getItem('eurl');
 var etoken = sessionStorage.getItem('etoken');
 var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 
-if (etoken == null){
+if (etoken != null){
     window.location.replace('employeeLogin');
 }
-if(empdetails == ''){
+if(empdetails != ''){
     var profileImage=(empdetails.profile_image!=' ')?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
 }
 
