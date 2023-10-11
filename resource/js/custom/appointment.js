@@ -21,48 +21,25 @@ $(document).ready(function() {
 // // document.getElementById("today").value = currentDate;
 // console.log(currentDate);
 
-// function fetchData() {
-//     // Get the selected date from the input field
-//     const selectedDate = $('#dateInput').val();
+ // Function to display data in the table based on the selected date
+ function displayAppointments(selectedDate) {
+    var table = $("#appointmentTable tbody");
+    table.empty(); // Clear existing data
 
-//     // You should replace this with your own API or data source URL
-//     const apiUrl = 'your_api_url_here?date=' + selectedDate;
+    $.each(appointments, function (index, appointment) {
+        if (appointment.date === selectedDate) {
+            // Create a new row and append it to the table
+            var row = "<tr><td>" + (index + 1) + "</td><td>" + appointment.name + "</td><td>" + appointment.date + "</td><td>" + appointment.time + "</td></tr>";
+            table.append(row);
+        }
+    });
+}
 
-//     // Make an AJAX request to fetch data for the selected date
-//     $.ajax({
-//         url: ebase_url + 'appointment_api',
-//         method: 'GET',
-//         dataType: 'json',
-//         success: function (data) {
-//             // Clear the table body
-//             $('#appointmentList').empty();
-
-//             // Iterate through the fetched data and append rows to the table
-//             $.each(data, function (index, appointment) {
-//                 const newRow = `<tr>
-//                 <td>` + index + `</td>
-//                 <td>` + appointment.fullName + `</td>
-//                 <td>` + appointment.date + `</td>
-//                 <td>` + appointment.time + `</td>
-//                 <td>` + appointment.contactNo + `</td>
-//                 <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                 <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-//                 </td>
-                
-//         </tr>`;
-//         index++;
-
-//                 $('#appointmentList').append(newRow);
-//             });
-//         },
-//         error: function (error) {
-//             console.error('Error fetching data:', error);
-//         }
-//     });
-// }
-
-// // Call the fetchData function initially to load data for the current date
-// fetchData();
+// Event handler for the date input
+$("#dateInput").on("change", function () {
+    var selectedDate = $(this).val();
+    displayAppointments(selectedDate);
+});
 
 
 $('#addAppointmentForm').on('submit', function (e) {
