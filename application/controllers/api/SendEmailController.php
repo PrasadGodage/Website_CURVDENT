@@ -167,15 +167,6 @@ class SendEmailController extends REST_Controller {
         $mobile = $this->input->post("mobile");
         $subject = $this->input->post("subject");
         $msg = $this->input->post("msg");
-
-        // $this->output->set_content_type('application/json');
-
-        // echo "<pre>";
-        // print_r($mail_from);
-        // print_r($subject);
-        // print_r($sub);
-
-
         
         $emailContent = '
                     <h3 align="center">Client Details</h3>
@@ -235,22 +226,9 @@ class SendEmailController extends REST_Controller {
         $this->email->from('pradyumnb.297@gmail.com');
         $this->email->to('pradyumnb.297@gmail.com');
         $this->email->subject($subject);
-        // $this->email->subject($subject);
+        
         $this->email->message($emailContent);
-        // print_r($this->email->print_debugger());
-
         
-        // $this->load->library('email', $config);
-        
-        // $this->email->from($this->input->post("email"));
-        // // $this->email->from($email);
-        // $this->email->to("soulsoft.urmila@gmail.com");
-        // $this->email->subject($subject);
-        // // $this->email->message($message);
-        // $this->email->message($emailContent);
-        // $this->email->set_newline("\r\n");
-        // $this->email->send();
-
         if (!$this->email->send()) {
             $response['msg'] = 'Email Send Successfully!';
             $response['status'] = 200;
