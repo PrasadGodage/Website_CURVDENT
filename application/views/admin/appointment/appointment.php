@@ -42,12 +42,12 @@
                             <!-- </button> -->
                             <!-- </div> -->
 
-                            <!-- <div class="col-md-3 input-group date"> -->
+                            <div class="col-md-3 input-group date"> 
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
                                 <input type="text" class="form-control pull-right" id="datepicker">
-                            <!-- </div> -->
+                            </div>
 
 
                         </div>
