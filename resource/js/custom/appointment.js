@@ -13,10 +13,34 @@ $('#addAppointmentForm').on('submit', function (e) {
 
     // Get the time value from the time input field
     var appointmentTime = $("#time").val();
+
+    // Split the time into hours and minutes
+var parts = appointmentTime.split(":");
+var hours = parseInt(parts[0]);
+var minutes = parseInt(parts[1]);
+
+// Determine AM or PM
+var ampm = hours >= 12 ? "PM" : "AM";
+
+// Convert to 12-hour format
+if (hours > 12) {
+    hours -= 12;
+} else if (hours === 0) {
+    hours = 12;
+}
+
+// Add seconds (you can set the seconds as needed)
+var seconds = "00";
+
+// Create the formatted time string
+var formattedTime = hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+console.log(formattedTime); // Output: "3:30:00 PM"
+
     console.log(appointmentTime);
 
     // Add the time value to the FormData object
-    formdata.append('time', appointmentTime);
+    formdata.append('time', formattedTime);
 
     if (returnVal) {
         $.ajax({
