@@ -39,23 +39,9 @@ class SendEmailController extends REST_Controller {
         $data['message'] = $this->post('msg');
         
         $id = $this->post('id');
-        echo "<pre>";
-        print_r($data);
-        print_r($id);
-        // $name = $this->post('name');
-        // $email = $this->post('email');
-        // $mobile = $this->post('phone');
-        // $subject = $this->post('subject');
-        // $msg = $this->post('message');
-
-        // $this->output->set_content_type('application/json');
-
         // echo "<pre>";
-        // print_r($mail_from);
-        // print_r($subject);
-        // print_r($sub);
-
-
+        // print_r($data);
+        // print_r($id);
         
         $emailContent = '
                     <h3 align="center">Client Details</h3>
@@ -83,18 +69,6 @@ class SendEmailController extends REST_Controller {
                     ';
 
 
-        // $name = $this->input->post('name');
-        // $email = $this->input->post('email');
-        // $phone = $this->input->post('phone');
-        // $subject = $this->input->post('subject');
-        // $message = $this->input->post('message');
-        
-        // $emailContent = 'Phone Number: ' . $phone . "\n\n" . 'Message: ' . $message;
-        // $subject = " NewsLetter send ";
-        // $this->input->post("title");
-        // 
-        // $file_data = $this->upoload_file();
-        
         $config=array(
             
             'protocol'   =>   'sendmail',
@@ -129,9 +103,9 @@ class SendEmailController extends REST_Controller {
         // // $this->email->message($message);
         // $this->email->message($emailContent);
         // $this->email->set_newline("\r\n");
-        // $this->email->send();
+        $status = $this->email->send();
 
-        if (!$this->email->send()) {
+        if ($status) {
             $response['msg'] = 'Email Send Successfully!';
             $response['status'] = 200;
             $this->response($response, REST_Controller::HTTP_OK);
