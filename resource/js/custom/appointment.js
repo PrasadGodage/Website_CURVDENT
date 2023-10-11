@@ -1,8 +1,9 @@
 let appointmentList = new Map();
 
-$( function() {
-    $( "#datepicker" ).datepicker();
-  } );
+ //Date picker
+ $('#datepicker').datepicker({
+    autoclose: true
+  });
 
 
 $('#addAppointmentForm').on('submit', function (e) {
