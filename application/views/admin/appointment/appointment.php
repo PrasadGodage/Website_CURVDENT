@@ -42,7 +42,7 @@
                             <!-- </button> -->
                             <!-- </div> -->
 
-                            <div class="input-group date">
+                            <div class="col-md-3 input-group date">
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
