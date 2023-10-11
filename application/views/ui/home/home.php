@@ -760,7 +760,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
                     <h6>Contact Form</h6>
-                    <form method="post" class="form" id="contactForm">
+                    <form method="post" class="form" id="contactForm" action="<?php echo base_url(); ?>SendEmailController/send" enctype="multipart/form-data">
                            <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">

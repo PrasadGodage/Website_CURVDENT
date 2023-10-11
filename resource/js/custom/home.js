@@ -285,66 +285,66 @@ function SendEmailAjax(formData) {
 }
 
 // $("#submitMail").click(function(e){
-$('#contactForm').on('submit', function (e) {
+// $('#contactForm').on('submit', function (e) {
 
-    e.preventDefault();
-    // Get form values
-    // var id = $('#id').val().trim();
-    var name = $('#fname').val().trim();
-    var email = $('#mail').val().trim();
-    var phone = $('#mobile').val().trim();
-    var subject = $('#subject').val().trim();
-    var message = $('#msg').val().trim();
+//     e.preventDefault();
+//     // Get form values
+//     // var id = $('#id').val().trim();
+//     var name = $('#fname').val().trim();
+//     var email = $('#mail').val().trim();
+//     var phone = $('#mobile').val().trim();
+//     var subject = $('#subject').val().trim();
+//     var message = $('#msg').val().trim();
            
-    var flag=true;
+//     var flag=true;
 
-    if (name === '' || name === null){
-        $('#nameError').text('Please enter name');
-        flag=false;
-    }else if(email === '' || email === null){
-        $('#emailError').text('Please enter email');
-        flag=false;
-    }else if(phone === '' || phone === null){
-        $('#phoneError').text('Please enter phone');
-        flag=false;
-    }else if(subject === '' || subject === null){
-        $('#subjectError').text('Please enter subject');
-        flag=false;
-    }else if(message === '' || message === null){
-        $('#messageError').text('Please enter message');
-        flag=false;
-    }
-    else{
-        flag=true;
-    }
+//     if (name === '' || name === null){
+//         $('#nameError').text('Please enter name');
+//         flag=false;
+//     }else if(email === '' || email === null){
+//         $('#emailError').text('Please enter email');
+//         flag=false;
+//     }else if(phone === '' || phone === null){
+//         $('#phoneError').text('Please enter phone');
+//         flag=false;
+//     }else if(subject === '' || subject === null){
+//         $('#subjectError').text('Please enter subject');
+//         flag=false;
+//     }else if(message === '' || message === null){
+//         $('#messageError').text('Please enter message');
+//         flag=false;
+//     }
+//     else{
+//         flag=true;
+//     }
 
-   if(flag){
-        // Create an object to store the form data
-        var formData = {
+//    if(flag){
+//         // Create an object to store the form data
+//         var formData = {
 
-            // id:id,
-            name:name,
-            email:email,
-            phone:phone,
-            subject:subject,
-            message:message
-        };
+//             // id:id,
+//             name:name,
+//             email:email,
+//             phone:phone,
+//             subject:subject,
+//             message:message
+//         };
      
    
-        // contactData.set(contactData.size+1,formData);
+//         // contactData.set(contactData.size+1,formData);
          
-        $('#fname').val('');
-        $('#mail').val('');
-        $('#mobile').val('');
-        $('#subject').val('');
-        $('#msg').val('');   
+//         $('#fname').val('');
+//         $('#mail').val('');
+//         $('#mobile').val('');
+//         $('#subject').val('');
+//         $('#msg').val('');   
     
-        // var contactList=Array.from(contactData.values());
-        // console.log(contactList);
-        SendEmailAjax(formData);
+//         // var contactList=Array.from(contactData.values());
+//         // console.log(contactList);
+//         SendEmailAjax(formData);
 
-    }
-});
+//     }
+// });
 
 
 // // Handle appointment form submission
