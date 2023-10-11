@@ -11,10 +11,10 @@ if(empdetails == ''){
 }
 
 
-// $('#userImageSm').attr('src',profileImage);
-// $('#userImageMd').attr('src',profileImage);
-// $('#userName').html(empdetails.name);
-// $('#userIdforAvatar').html(empdetails.userid);
+$('#userImageSm').attr('src',profileImage);
+$('#userImageMd').attr('src',profileImage);
+$('#userName').html(empdetails.name);
+$('#userIdforAvatar').html(empdetails.userid);
 
 
 
