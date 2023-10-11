@@ -4,7 +4,10 @@ var etoken = sessionStorage.getItem('etoken');
 var empdetails = JSON.parse(sessionStorage.getItem("empdetails"));
 
 if (etoken == null){
-    window.location.replace('employeeLogin');
+   // window.location.replace('employeeLogin');
+    // Redirect to a new URL
+     window.location.href = "https://dev.curvdent.com/employeeLogin"; // Replace with the URL you want to redirect to
+
 }
 if(empdetails != ''){
     var profileImage=(empdetails.profile_image!=' ')?ebase_url+empdetails.profile_image:ebase_url+'resource/images/avatar-custom.png';
