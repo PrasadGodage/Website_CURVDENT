@@ -23,9 +23,9 @@ $(document).ready(function() {
 
   // Function to refresh the table with filtered data
   function refreshTable(selectedDate) {
-    var filteredAppointments = appointmentData.filter(function(appointment) {
-        return appointment.date === selectedDate;
-    });
+    // var filteredAppointments = appointmentData.filter(function(appointment) {
+    //     return appointment.date === selectedDate;
+    // });
 
     var tableBody = $('#appointmentTable tbody');
     tableBody.empty(); // Clear the current table
