@@ -36,11 +36,20 @@
                             <button type="button" class="col-md-3 btn btn-primary ml-2" id="addAppointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
                             <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
                             <!-- <div class=" box-controls pull-right"> -->
-                            <input type="text" class="col-md-3 form-control mr-2" id="datepicker" name="datepicker">
-                           
+                            <!-- <input type="text" class="col-md-3 form-control mr-2" id="datepicker" name="datepicker">
+                            <input type="text" class="form-control pull-right" id="datepicker"> -->
                                <!-- <p>Date: <input type="text" id="datepicker"> -->
                             <!-- </button> -->
                             <!-- </div> -->
+
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker">
+                            </div>
+
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
