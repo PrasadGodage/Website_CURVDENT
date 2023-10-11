@@ -110,7 +110,7 @@ class SendEmailController extends REST_Controller {
             
             if ($Mailstatus) {
                 $response['msg'] = 'Email Send Successfully!';
-                $response['msg'] = $status;
+                // $response['msg'] = $status;
                 $response['status'] = 200;
                 $this->response($response, REST_Controller::HTTP_OK);
             }else {
