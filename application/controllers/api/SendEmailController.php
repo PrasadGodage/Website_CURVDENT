@@ -11,8 +11,8 @@ class SendEmailController extends REST_Controller {
 
         parent::__construct();
         // $this->load->library('email'); 
-        $this->load->helper('url');
         $this->load->library('email');
+        $this->load->helper('url');
         
     }
    
@@ -29,16 +29,23 @@ class SendEmailController extends REST_Controller {
         // $data = json_decode($json_data, true);
         // $data = $this->post();
 
-        // echo "<pre>";
-        // print_r($data);
-
+        
         // $sub = $this->post('name');
-
-        $name = $this->post('name');
-        $email = $this->post('email');
-        $mobile = $this->post('phone');
-        $subject = $this->post('subject');
-        $msg = $this->post('message');
+        
+        $data['firstName'] = $this->post('fname');
+        $data['email'] = $this->post('mail');
+        $data['phone'] = $this->post('mobile');
+        $data['subject'] = $this->post('sub');
+        $data['message'] = $this->post('msg');
+        
+        $id = $this->post('id');
+        echo "<pre>";
+        print_r($data);
+        // $name = $this->post('name');
+        // $email = $this->post('email');
+        // $mobile = $this->post('phone');
+        // $subject = $this->post('subject');
+        // $msg = $this->post('message');
 
         // $this->output->set_content_type('application/json');
 

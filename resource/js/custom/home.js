@@ -246,45 +246,45 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax(formData) {
-    // var contactList = Array.from(contactData.values());
-    console.log(formData);
+// function SendEmailAjax(formData) {
+//     // var contactList = Array.from(contactData.values());
+//     console.log(formData);
 
-    // if (contactList != '' && contactList != null && contactList.length > 0) {
-        // var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
-        // var formdata = new FormData();
-        // formdata.append("mailDetails",jsonString);
+//     // if (contactList != '' && contactList != null && contactList.length > 0) {
+//         // var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+//         // var formdata = new FormData();
+//         // formdata.append("mailDetails",jsonString);
 
-        $.ajax({
-            url: ebase_url + 'sendEmail_api',
+//         $.ajax({
+//             url: ebase_url + 'sendEmail_api',
 
-            type: 'POST',
+//             type: 'POST',
 
-            data: formData,
+//             data: formData,
 
-            cache: false,
+//             cache: false,
 
-            contentType: false,
+//             contentType: false,
 
-            processData: false,
+//             processData: false,
 
-            dataType: 'json',
+//             dataType: 'json',
 
-            success: function(response) {
-                if (response.status == 200) {
-                    swal("Good job!", response.msg, "success");
-                } else {
-                    swal("ERROR!", response.msg, "error");
-                }
-            },
+//             success: function(response) {
+//                 if (response.status == 200) {
+//                     swal("Good job!", response.msg, "success");
+//                 } else {
+//                     swal("ERROR!", response.msg, "error");
+//                 }
+//             }
             
-        });
-    // } else {
-    //     swal("ERROR!", "No contact data available to send an email.", "error");
-    // }
-}
+//         });
+//     // } else {
+//     //     swal("ERROR!", "No contact data available to send an email.", "error");
+//     // }
+// }
 
-// $("#submitMail").click(function(e){
+// // $("#submitMail").click(function(e){
 // $('#contactForm').on('submit', function (e) {
 
 //     e.preventDefault();
@@ -345,6 +345,72 @@ function SendEmailAjax(formData) {
 
 //     }
 // });
+
+$('#contactForm').on('submit', function (e) {
+
+    e.preventDefault();
+
+    // var returnVal = $("#emailForm").val();
+    var formdata = new FormData(this);
+
+     // Show the success message
+    //  $("#message").fadeIn();
+
+      // Clear the input field (optional)
+      $("#fname").val('');
+      $("#mail").val('');
+      $("#mobile").val('');
+      $("#sub").val('');
+      $("#msg").val('');
+
+     // Hide the success message after 3 seconds (adjust the time as needed)
+    //  setTimeout(function () {
+    //     $("#message").fadeOut();
+    // }, 3000);
+
+    // if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'sendEmail_api',
+
+            type: 'POST',
+
+            // headers: {
+            //     "Authorization": etoken
+            // },
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // Show success message
+                    // $("#successMessage").fadeIn();
+                    swal("Good job!", response.msg, "success");
+                    // Clear the input field
+                    // $("#email").val('');
+                    
+                    // Hide the success message after a few seconds (optional)
+                    // setTimeout(function() {
+                    //     $("#successMessage").fadeOut();
+                    // }, 3000); // Hide after 3 seconds
+                    swal("ERROR!", response.msg, "error");
+                // } else {
+                //     // Handle error
+                //     swal("Error", response.msg, "error");
+                 }
+            }
+        });
+
+    // }
+});
 
 
 // // Handle appointment form submission

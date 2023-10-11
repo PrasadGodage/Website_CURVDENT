@@ -760,7 +760,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
                     <h6>Contact Form</h6>
-                    <form method="post" class="form" id="contactForm" action="<?php echo base_url(); ?>home/send" enctype="multipart/form-data">
+                    <form class="form" id="contactForm" method="post">
                            <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">
@@ -783,7 +783,7 @@
                                 <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" id="subject" placeholder="Subject *" >
+                                <input name="subject" type="text" id="sub" placeholder="Subject *" >
                                 <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
