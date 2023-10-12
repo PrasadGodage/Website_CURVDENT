@@ -1,22 +1,36 @@
 let subscriberList = new Map();
 
 
-$('#email').on('input', function() {
-    // Get the input value
-    var email = $(this).val();
+// $('#email').on('input', function() {
+//     // Get the input value
+//     var email = $(this).val();
     
-    // Regular expression to validate email format
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+//     // Regular expression to validate email format
+//     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     
-    // Check if the input matches the email pattern
-    if (emailPattern.test(email)) {
-        // Valid email: clear any previous error message
-        $('#emailError').text('');
-    } else {
-        // Invalid email: show an error message
-        $('#emailError').text('Please enter a valid email address');
-    }
+//     // Check if the input matches the email pattern
+//     if (emailPattern.test(email)) {
+//         // Valid email: clear any previous error message
+//         $('#emailError').text('');
+//     } else {
+//         // Invalid email: show an error message
+//         $('#emailError').text('Please enter a valid email address');
+//     }
+// });
+
+
+$(document).ready(function() {
+    $('#emailField').on('input', function() {
+        var email = $(this).val();
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (emailPattern.test(email)) {
+            $('#emailError').text('');
+        } else {
+            $('#emailError').text('Please enter a valid email address');
+        }
+    });
 });
+
 
 //Submit Category Btn script
 
