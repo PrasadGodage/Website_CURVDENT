@@ -165,7 +165,7 @@ $('#addAppointmentForm').on('submit', function (e) {
 
     // Get the time value from the time input field
     var appointmentTime = $("#time").val();
-    var selectedDate = $("#date").val(); 
+    // var selectedDate = $("#date").val(); 
     
         // Split the time into hours and minutes
          var parts = appointmentTime.split(":");
@@ -182,48 +182,48 @@ $('#addAppointmentForm').on('submit', function (e) {
            hours = 12;
         }
 
-        var formattedTime = hours + ":" + minutes + " " + ampm;
+       // var formattedTime = hours + ":" + minutes + " " + ampm;
        //Logic for appointment timing selection 
-$.ajax({
+// $.ajax({
 
-    url: ebase_url+'appointment_api',
+//     url: ebase_url+'appointment_api',
 
-    type: 'GET',
+//     type: 'GET',
 
-    async:false,
+//     async:false,
 
-    headers: {
-        "Authorization": etoken
-    },
+//     headers: {
+//         "Authorization": etoken
+//     },
 
-    dataType: 'json',
+//     dataType: 'json',
 
-    success: function (response) {
+//     success: function (response) {
     
 
-        if (response.status == 200) {
+//         if (response.status == 200) {
 
-            if (response.data.length != 0) {
-                for (var i = 0; i < response.data.length; i++) {
+//             if (response.data.length != 0) {
+//                 for (var i = 0; i < response.data.length; i++) {
 
-                    if(response.data[i].date === selectedDate){
-                        if(response.data[i].time === formattedTime){
+//                     if(response.data[i].date === selectedDate){
+//                         if(response.data[i].time === formattedTime){
 
 
-                            alert("This time is alredy book please choose other time");
-                        }
+//                             alert("This time is alredy book please choose other time");
+//                         }
 
-                      // appointmentList1.set(response.data[i].id, response.data[i]);
+//                       // appointmentList1.set(response.data[i].id, response.data[i]);
 
-                    }                                              
+//                     }                                              
                                        
-                }
-             }
-          }
+//                 }
+//              }
+//           }
 
-    }
+//     }
     
-});
+// });
 
 
     // Add the time value to the FormData object
