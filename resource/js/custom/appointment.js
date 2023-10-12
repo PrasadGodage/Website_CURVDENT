@@ -65,14 +65,9 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime1 = hours + ":" + minutes + " " + ampm;
-
-console.log(formattedTime1);
-   
+ 
         tblData += `
         <tr>
                 <td>` + index + `</td>
@@ -101,8 +96,9 @@ $(document).ready(function() {
   });
 
   $("#datepicker").change(function() {
-    $('#appointmentTable').dataTable().fnDestroy();
-    $('#appointmentList').empty();
+    // $('#appointmentTable').dataTable().fnDestroy();
+    // $('#appointmentList').empty();
+    appointmentList1.clear();
 
     var selectedDate = $(this).val();
     var formattedDate = selectedDate.split('/').join('-');
@@ -111,8 +107,6 @@ $(document).ready(function() {
 
 if (parts.length === 3) {
   var formattedDate1 = parts.reverse().join("-");
-  console.log(formattedDate1); // Outputs: "2023-10-20"
-
   // Split the input date using the hyphen as a separator
 var dateComponents = formattedDate1.split('-');
 
@@ -120,6 +114,8 @@ var dateComponents = formattedDate1.split('-');
 var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateComponents[1];
 
 }
+
+
 
     $.ajax({
 
@@ -147,31 +143,19 @@ var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateCom
 
                             appointmentList1.set(response.data[i].id, response.data[i]);
 
-                        }
-                       
-                           
-                       
-                        
+                        }                                              
+                                           
                     }
-                    
-                }
+                                    }
                 setAppointmentList1(appointmentList1);
-                console.log(appointmentList1);
-            }
+             }
 
         }
         
     });
 
 });
-
-// $(document).ready(function () {
-//     $('.tanggal').datepicker({
-//         format:"yyyy-mm-dd",
-//             autoclose:true 
-//         });
-//     });
-    
+  
 
 $('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
@@ -197,17 +181,8 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime = hours + ":" + minutes + " " + ampm;
-//var time = DateTime.ParseExact("17:00", "HH:mm", null).ToString("hh:mm tt");
-
-console.log(formattedTime); 
-
-    console.log(appointmentTime);
-
     // Add the time value to the FormData object
     formdata.append('time', appointmentTime);
 
@@ -253,14 +228,7 @@ $('#addAppointmentBtn').click(function () {
     $("#addAppointmentForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    
-    // let currentDate = new Date().toJSON().slice(11,20);
-    //     console.log(currentDate);
-    // Date Validation
-// var today = new Date().toISOString().split('T')[0];
-// document.getElementsByName("somedate")[0].setAttribute('min', today);
-
-});
+    });
 
 
 // get posting data
@@ -294,8 +262,7 @@ function getAppointmentList() {
                     
                 }
                 setAppointmentList(appointmentList);
-                console.log(appointmentList);
-            }
+             }
 
         }
         
@@ -331,15 +298,10 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime1 = hours + ":" + minutes + " " + ampm;
-
-console.log(formattedTime1);
    
-        tblData += `
+tblData += `
         <tr>
                 <td>` + index + `</td>
                 <td>` + appointment.fullName + `</td>
@@ -356,7 +318,7 @@ console.log(formattedTime1);
     
     $('#appointmentList').html(tblData);
     $('#appointmentTable').DataTable();
-    }
+}
 
     // ---------------------- delete data ---------------------------------------------
 function deleteAppointmentDetails(id) {
