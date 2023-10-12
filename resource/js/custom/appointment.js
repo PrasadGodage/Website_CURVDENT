@@ -63,6 +63,8 @@ $(document).ready(function() {
   });
 
   $("#datepicker").change(function() {
+    $('#appointmentList').empty();
+
     var selectedDate = $(this).val();
     var formattedDate = selectedDate.split('/').join('-');
 
