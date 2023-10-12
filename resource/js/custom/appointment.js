@@ -99,6 +99,7 @@ $(document).ready(function() {
   });
 
   $("#datepicker").change(function() {
+    $('#appointmentTable').dataTable().fnDestroy();
     $('#appointmentList').empty();
 
     var selectedDate = $(this).val();
