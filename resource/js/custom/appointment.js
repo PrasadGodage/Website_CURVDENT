@@ -8,6 +8,14 @@ let appointmentList = new Map();
 //   });
 // });
 
+$(document).ready(function () {
+    $('.tanggal').datepicker({
+        format:"yyyy-mm-dd",
+            autoclose:true 
+        });
+    });
+    
+
 
 $('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
