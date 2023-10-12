@@ -66,6 +66,13 @@ $(document).ready(function() {
     var selectedDate = $(this).val();
     var formattedDate = selectedDate.split('/').join('-');
 
+    var parts = formattedDate.split("-"); // Split the input into an array
+
+if (parts.length === 3) {
+  var formattedDate1 = parts.reverse().join("-");
+  console.log(formattedDate1); // Outputs: "2023-10-20"
+}
+
     $.ajax({
 
         url: ebase_url+'appointment_api',
@@ -88,7 +95,7 @@ $(document).ready(function() {
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
 
-                        if(response.data[i].date === formattedDate){
+                        if(response.data[i].date === formattedDate1){
 
                             appointmentList1.set(response.data[i].id, response.data[i]);
 
