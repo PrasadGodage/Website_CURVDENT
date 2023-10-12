@@ -354,7 +354,7 @@ $('#contactForm').on('submit', function (e) {
     var formdata = new FormData(this);
 
      // Show the success message
-    //  $("#message").fadeIn();
+     $("#alertMsg").fadeIn();
 
       // Clear the input field (optional)
       $("#fname").val('');
@@ -364,9 +364,9 @@ $('#contactForm').on('submit', function (e) {
       $("#msg").val('');
 
      // Hide the success message after 3 seconds (adjust the time as needed)
-    //  setTimeout(function () {
-    //     $("#message").fadeOut();
-    // }, 3000);
+     setTimeout(function () {
+        $("#alertMsg").fadeOut();
+    }, 3000);
 
     // if (returnVal) {
         $.ajax({
@@ -374,10 +374,6 @@ $('#contactForm').on('submit', function (e) {
             url: ebase_url+'sendEmail_api',
 
             type: 'POST',
-
-            // headers: {
-            //     "Authorization": etoken
-            // },
 
             data: formdata,
 
@@ -392,19 +388,11 @@ $('#contactForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     // Show success message
-                    // $("#successMessage").fadeIn();
                     swal("Good job!", response.msg, "success");
-                    // Clear the input field
-                    // $("#email").val('');
                     
-                    // Hide the success message after a few seconds (optional)
-                    // setTimeout(function() {
-                    //     $("#successMessage").fadeOut();
-                    // }, 3000); // Hide after 3 seconds
-                    swal("ERROR!", response.msg, "error");
-                // } else {
-                //     // Handle error
-                //     swal("Error", response.msg, "error");
+                } else {
+                    // Handle error
+                    swal("Error", response.msg, "error");
                  }
             }
         });
@@ -544,3 +532,12 @@ $('#sendform').on('submit', function (e) {
 
     // }
 });
+
+
+
+
+//import clientValidation script
+var mailValidation = document.createElement('script');
+mailValidation.src = ebase_url + 'resource/js/custom/mailValidation.js';
+mailValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(mailValidation);
