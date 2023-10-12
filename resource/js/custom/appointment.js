@@ -96,8 +96,9 @@ $(document).ready(function() {
   });
 
   $("#datepicker").change(function() {
-    $('#appointmentTable').dataTable().fnDestroy();
-    $('#appointmentList').empty();
+    // $('#appointmentTable').dataTable().fnDestroy();
+    // $('#appointmentList').empty();
+    appointmentList1.clear();
 
     var selectedDate = $(this).val();
     var formattedDate = selectedDate.split('/').join('-');
@@ -113,6 +114,8 @@ var dateComponents = formattedDate1.split('-');
 var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateComponents[1];
 
 }
+
+
 
     $.ajax({
 
@@ -297,10 +300,8 @@ if (hours > 12) {
 
 // Create the formatted time string
 var formattedTime1 = hours + ":" + minutes + " " + ampm;
-
-console.log(formattedTime1);
    
-        tblData += `
+tblData += `
         <tr>
                 <td>` + index + `</td>
                 <td>` + appointment.fullName + `</td>
