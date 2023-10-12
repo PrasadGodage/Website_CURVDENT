@@ -38,6 +38,7 @@
                             <!-- <div class=" box-controls pull-right"> -->
                              <!-- <input type="date" class="col-md-3 form-control mr-2" id="dateInput" name="dateInput"> -->
                             <input type="text" class="form-control tangga pull-right" id="datepicker" readonly autocomplete="off"> 
+                            
                                <!-- <p>Date: <input type="text" id="datepicker"> -->
                             <!-- </button> -->
                             <!-- </div> -->

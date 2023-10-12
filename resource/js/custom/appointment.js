@@ -16,7 +16,6 @@ $(document).ready(function () {
     });
     
 
-
 $('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
 
