@@ -395,3 +395,10 @@ function updateAppointmentDetails(id) {
     // Show the updated post details in a modal
     $('#addAppointmentModal').modal('toggle');
 }
+
+
+ //appointmentValidation ----------------------------------------------------
+ var appointmentValidation = document.createElement('script');
+ appointmentValidation.src = ebase_url + 'resource/js/custom/appointmentValidation.js';
+ appointmentValidation.setAttribute("type", "text/javascript");
+ document.head.appendChild(appointmentValidation);
