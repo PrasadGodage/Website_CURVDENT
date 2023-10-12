@@ -165,23 +165,9 @@ $('#addAppointmentForm').on('submit', function (e) {
 
     // Get the time value from the time input field
     var appointmentTime = $("#time").val();
-    var selectedDate = $("#date").val();
-
-    var selectedAppointmentDate = selectedDate.split('/').join('-');
-
-    var parts = selectedAppointmentDate.split("-"); // Split the input into an array
-
-    var formattedDate2 = parts.reverse().join("-");
-    // Split the input date using the hyphen as a separator
-       if (parts.length === 3) {
-       var dateComponents1 = formattedDate2.split('-');
-
-       // Rearrange the components into the "yyyy-mm-dd" format
-       var formattedDate3 = dateComponents1[0] + '-' + dateComponents1[2] + '-' + dateComponents1[1];
-
-}
-
-         //     // Split the time into hours and minutes
+    var selectedDate = $("#date").val(); 
+    
+        // Split the time into hours and minutes
          var parts = appointmentTime.split(":");
          var hours = parseInt(parts[0]);
          var minutes = parseInt(parts[1]);
@@ -197,11 +183,7 @@ $('#addAppointmentForm').on('submit', function (e) {
         }
 
         var formattedTime = hours + ":" + minutes + " " + ampm;
-        // Create the formatted time string
-
-
-        
-        //Logic for appointment timing selection 
+       //Logic for appointment timing selection 
 $.ajax({
 
     url: ebase_url+'appointment_api',
@@ -224,7 +206,7 @@ $.ajax({
             if (response.data.length != 0) {
                 for (var i = 0; i < response.data.length; i++) {
 
-                    if(response.data[i].date === formattedDate3){
+                    if(response.data[i].date === selectedDate){
                         if(response.data[i].time === formattedTime){
 
 
