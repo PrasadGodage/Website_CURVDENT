@@ -98,6 +98,8 @@ $(document).ready(function() {
     autoclose: true
   });
 
+  });
+
   $("#datepicker").change(function() {
     $('#appointmentTable').dataTable().fnDestroy();
     $('#appointmentList').empty();
@@ -160,8 +162,6 @@ var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateCom
         }
         
     });
-
-});
 
 });
 
