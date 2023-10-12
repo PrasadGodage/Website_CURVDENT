@@ -8,7 +8,7 @@ $(function() {
 
             email: {
 
-                required: true, minlength: 2, maxlength: 255
+                required: true, 
 
             }
             
@@ -18,7 +18,7 @@ $(function() {
 
             email: {
 
-                required: 'Enter Email Address', minlength: 'please enter more word', maxlength: 'length is exceed'
+                required: 'please enter mail', 
 
             }
 
