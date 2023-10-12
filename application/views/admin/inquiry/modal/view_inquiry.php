@@ -15,9 +15,9 @@
                 <li class="nav-item">
                   <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Purchase Details</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-selected="false">Item List</a>
-                </li>
+                </li> -->
             </ul>
 
               <!-- Tab panes -->
@@ -70,87 +70,9 @@
                      </div>
                   <!-- end -->
 				              <hr/>
-                      <div class="row">
-                        <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm">
-                          <label>Purchase <span id="purchaseView"></span></label>
-                        </div>
-                      </div>
-                      <div class="row mb-2">
-                        
-                                  <!-- /.box-header -->
-                                
-                        <div class="box-body no-padding">
-                          <div class="table-responsive">
-                            <table class="table table-hover" id="purchaseTableView">
-                              <thead>
-                                <tr>
-                                  <th>Sr No</th>
-                                  <th>Product Name</th>
-                                  <th>Total Quantity</th>
-                                </tr>
-                              </thead>
-                              <tbody id="purchaseListView">
-                                        
-                              </tbody>
-                              <tfoot>
-                                <tr>
-                                  <th>Sr No</th>
-                                  <th>Product Name</th>
-                                  <th>Total Quantity</th>
-                                </tr>
-                              </tfoot>
-                            </table>
-			                	  </div>
-                      </div>
-              
-                              <!-- /.box-body -->
-                        
-                      </div>
+                      
                 </div>
-                <div class="tab-pane fade" id="profile">
-                    <div class="row">
-                      <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm">
-                        <label>Item Details <span id="itemDetailsView"></span></label>
-                      </div>
-                    </div>
-                    
-                      <!----itemDetailTable Start----->
-                      <div class="box-body no-padding row mb-2">
-                          <div class="table-responsive">
-                            <table class="table table-hover" id="itemDetailTableView">
-                              <thead>
-                                <tr>
-                                  <th>Sr No</th>
-                                  <th>Product Name</th>
-                                  <th>IMEI NO</th>
-                                  <th>UID/ICCDE No</th> 
-                                  <th>SIM1NO</th>
-                                  <th>SIM2NO</th>
-                                  <th>Status</th>
-                                  <th>Purchase Date</th>
-                                </tr>
-                              </thead>
-                              <tbody id="itemDetailListView">
-                                        
-                              </tbody>
-                              <tfoot>
-                                <tr>
-                                  <th>Sr No</th>
-                                  <th>Product Name</th>
-                                  <th>IMEI NO</th>
-                                  <th>UID/ICCDE No</th>
-                                  <th>SIM1NO</th>
-                                  <th>SIM2NO</th>
-                                  <th>Status</th>
-                                  <th>Purchase Date</th>
-                                </tr>
-                              </tfoot>
-                            </table>
-			                	  </div>
-                      </div>
-                      <!----itemDetailTable End----->
-                    
-                </div>
+                
                 
               </div>
             </div>
