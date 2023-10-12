@@ -24,7 +24,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Contact</label>
-                                    <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter 10-digit number">
+                                    <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter 10-digit number" maxlength="10">
                                     <span id="contactError" class="error"></span>
                                 </div>
                             </div>
