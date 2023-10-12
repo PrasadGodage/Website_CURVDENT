@@ -1,12 +1,12 @@
 let appointmentList = new Map();
 
 
-// $(document).ready(function() {
-//  //Date picker
-//  $('#datepicker').datepicker({
-//     autoclose: true
-//   });
-// });
+$(document).ready(function() {
+ //Date picker
+ $('#datepicker').datepicker({
+    autoclose: true
+  });
+});
 
 // $(document).ready(function () {
 //     $('.tanggal').datepicker({
