@@ -71,6 +71,13 @@ $(document).ready(function() {
 if (parts.length === 3) {
   var formattedDate1 = parts.reverse().join("-");
   console.log(formattedDate1); // Outputs: "2023-10-20"
+
+  // Split the input date using the hyphen as a separator
+var dateComponents = formattedDate1.split('-');
+
+// Rearrange the components into the "yyyy-mm-dd" format
+var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateComponents[1];
+
 }
 
     $.ajax({
@@ -95,7 +102,7 @@ if (parts.length === 3) {
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
 
-                        if(response.data[i].date === formattedDate1){
+                        if(response.data[i].date === formattedDate2){
 
                             appointmentList1.set(response.data[i].id, response.data[i]);
 
