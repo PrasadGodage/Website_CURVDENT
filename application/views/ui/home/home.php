@@ -779,7 +779,7 @@
                                 <!-- <span id="emailError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="mobile" type="number" id="mobile" placeholder="Number *" required>
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" required>
                                 <!-- <span id="phoneError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
