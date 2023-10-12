@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Address</label>
-                                    <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
+                                    <textarea  id="address" class="form-control" name="address"placeholder="Address"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">
