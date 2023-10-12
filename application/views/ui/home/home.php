@@ -771,28 +771,28 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="fname" type="text" id="fname" placeholder="Name *" >
-                                <span id="nameError"></span>
+                                <input name="fname" type="text" id="fname" placeholder="Name *" required>
+                                <!-- <span id="nameError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="mail" type="email" id="mail" placeholder="Email *" >
-                                <span id="emailError"></span>
+                                <input name="mail" type="email" id="mail" placeholder="Email *" required>
+                                <!-- <span id="emailError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="mobile" type="text" id="mobile" placeholder="Number *" >
-                                <span id="phoneError"></span>
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" required>
+                                <!-- <span id="phoneError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="sub" type="text" id="sub" placeholder="Subject *" >
-                                <span id="subjectError"></span>
+                                <input name="sub" type="text" id="sub" placeholder="Subject *" required>
+                                <!-- <span id="subjectError"></span> -->
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
-                                <span id="messageError"></span>
+                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                <!-- <span id="messageError"></span> -->
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
-                                <!-- <button type="submit" class="btn btn-form" id="submitMail" style="background-color: #fd8f00;">Send Message</button> -->
+                               
                             </div>
                         </div>
                     </form>
