@@ -400,6 +400,10 @@ $('#contactForm').on('submit', function (e) {
     // }
 });
 
+$("#mobile").on("input", function() {
+    var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
+    $(this).val(sanitizedValue);
+});
 
 // // Handle appointment form submission
 // $('#appointment').click(function(e){
