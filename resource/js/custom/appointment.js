@@ -64,6 +64,7 @@ $(document).ready(function() {
 
   $("#datepicker").change(function() {
     var selectedDate = $(this).val();
+    var formattedDate = selectedDate.split('/').join('-');
 
     $.ajax({
 
@@ -87,7 +88,7 @@ $(document).ready(function() {
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
 
-                        if(response.data[i].date == selectedDate){
+                        if(response.data[i].date === formattedDate){
 
                             appointmentList1.set(response.data[i].id, response.data[i]);
 
