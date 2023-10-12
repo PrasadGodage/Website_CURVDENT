@@ -17,6 +17,7 @@ $route['category']='admin/AdminController/category';
 $route['subscriber']='admin/AdminController/subscriber';
 $route['newsletter']='admin/AdminController/newsletter';
 $route['appointment']='admin/AdminController/appointment';
+$route['inquiry']='admin/AdminController/inquiry';
 
 
 //Employee Login and logout api
