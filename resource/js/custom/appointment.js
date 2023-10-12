@@ -397,7 +397,6 @@ function updateAppointmentDetails(id) {
     $('#addAppointmentModal').modal('toggle');
 }
 
-
  //appointmentValidation ----------------------------------------------------
  var appointmentValidation = document.createElement('script');
  appointmentValidation.src = ebase_url + 'resource/js/custom/appointmentValidation.js';
