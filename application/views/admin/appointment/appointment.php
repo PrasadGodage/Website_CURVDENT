@@ -37,7 +37,7 @@
                             <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
                             <!-- <div class=" box-controls pull-right"> -->
                              <!-- <input type="date" class="col-md-3 form-control mr-2" id="dateInput" name="dateInput"> -->
-                            <input type="text" class="col-md-3 form-control pull-right" id="datepicker"> 
+                            <input type="text" class="col-md-3 form-control pull-right" placeholder="Select Date" id="datepicker"> 
 
                                <!-- <p>Date: <input type="text" id="datepicker"> -->
                             <!-- </button> -->

@@ -17,26 +17,28 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Name</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder=" Name" required>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder=" Name">
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Contact</label>
-                                    <input type="tel" class="form-control" id="contactNo" name="contactNo" placeholder=" Contact" recorded>
+                                    <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter 10-digit number" maxlength="10">
+                                    <span id="contactError" class="error"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Email</label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" >
+                                    <span id="emailError" class="error"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Address</label>
-                                    <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
+                                    <textarea  id="address" class="form-control" name="address"placeholder="Address"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">

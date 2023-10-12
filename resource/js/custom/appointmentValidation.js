@@ -1,6 +1,6 @@
 $(function() {
 
-    $("#addappointmentForm").validate( {
+    $("#addAppointmentForm").validate( {
 
         ignore: [], rules: {
 

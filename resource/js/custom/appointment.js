@@ -2,6 +2,42 @@ let appointmentList = new Map();
 let appointmentList1 = new Map();
 
 
+
+$(document).ready(function() {
+    $('#contactNo').on('input', function() {
+        // Get the input value and remove any non-digit characters
+        var inputValue = $(this).val().replace(/\D/g, '');
+        
+        // Check if the input is a 10-digit number
+        if (/^\d{10}$/.test(inputValue)) {
+            // Valid input: clear any previous error message
+            $('#contactError').text('');
+        } else {
+            // Invalid input: show an error message
+            $('#contactError').text('Please enter a 10-digit number');
+        }
+    });
+
+    $('#email').on('input', function() {
+        // Get the input value
+        var email = $(this).val();
+        
+        // Regular expression to validate email format
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        
+        // Check if the input matches the email pattern
+        if (emailPattern.test(email)) {
+            // Valid email: clear any previous error message
+            $('#emailError').text('');
+        } else {
+            // Invalid email: show an error message
+            $('#emailError').text('Please enter a valid email address');
+        }
+    });
+
+});
+
+
 function setAppointmentList1(list) {
 
     $('#appointmentTable').dataTable().fnDestroy();
@@ -29,14 +65,9 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime1 = hours + ":" + minutes + " " + ampm;
-
-console.log(formattedTime1);
-   
+ 
         tblData += `
         <tr>
                 <td>` + index + `</td>
@@ -62,7 +93,13 @@ $(document).ready(function() {
     autoclose: true
   });
 
+  });
+
   $("#datepicker").change(function() {
+    // $('#appointmentTable').dataTable().fnDestroy();
+    // $('#appointmentList').empty();
+    appointmentList1.clear();
+
     var selectedDate = $(this).val();
     var formattedDate = selectedDate.split('/').join('-');
 
@@ -70,8 +107,6 @@ $(document).ready(function() {
 
 if (parts.length === 3) {
   var formattedDate1 = parts.reverse().join("-");
-  console.log(formattedDate1); // Outputs: "2023-10-20"
-
   // Split the input date using the hyphen as a separator
 var dateComponents = formattedDate1.split('-');
 
@@ -79,6 +114,8 @@ var dateComponents = formattedDate1.split('-');
 var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateComponents[1];
 
 }
+
+
 
     $.ajax({
 
@@ -106,33 +143,19 @@ var formattedDate2 = dateComponents[0] + '-' + dateComponents[2] + '-' + dateCom
 
                             appointmentList1.set(response.data[i].id, response.data[i]);
 
-                        }
-                       
-                           
-                       
-                        
+                        }                                              
+                                           
                     }
-                    
-                }
+                                    }
                 setAppointmentList1(appointmentList1);
-                console.log(appointmentList1);
-            }
+             }
 
         }
         
     });
 
 });
-
-});
-
-// $(document).ready(function () {
-//     $('.tanggal').datepicker({
-//         format:"yyyy-mm-dd",
-//             autoclose:true 
-//         });
-//     });
-    
+  
 
 $('#addAppointmentForm').on('submit', function (e) {
     e.preventDefault();
@@ -158,17 +181,8 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime = hours + ":" + minutes + " " + ampm;
-//var time = DateTime.ParseExact("17:00", "HH:mm", null).ToString("hh:mm tt");
-
-console.log(formattedTime); 
-
-    console.log(appointmentTime);
-
     // Add the time value to the FormData object
     formdata.append('time', appointmentTime);
 
@@ -214,14 +228,7 @@ $('#addAppointmentBtn').click(function () {
     $("#addAppointmentForm").trigger("reset");
     $('#id').val('');
     $('.error').text('');
-    
-    // let currentDate = new Date().toJSON().slice(11,20);
-    //     console.log(currentDate);
-    // Date Validation
-// var today = new Date().toISOString().split('T')[0];
-// document.getElementsByName("somedate")[0].setAttribute('min', today);
-
-});
+    });
 
 
 // get posting data
@@ -255,8 +262,7 @@ function getAppointmentList() {
                     
                 }
                 setAppointmentList(appointmentList);
-                console.log(appointmentList);
-            }
+             }
 
         }
         
@@ -292,15 +298,10 @@ if (hours > 12) {
     hours = 12;
 }
 
-// Add seconds (you can set the seconds as needed)
-//var seconds = "00";
-
 // Create the formatted time string
 var formattedTime1 = hours + ":" + minutes + " " + ampm;
-
-console.log(formattedTime1);
    
-        tblData += `
+tblData += `
         <tr>
                 <td>` + index + `</td>
                 <td>` + appointment.fullName + `</td>
@@ -317,7 +318,7 @@ console.log(formattedTime1);
     
     $('#appointmentList').html(tblData);
     $('#appointmentTable').DataTable();
-    }
+}
 
     // ---------------------- delete data ---------------------------------------------
 function deleteAppointmentDetails(id) {
@@ -395,3 +396,9 @@ function updateAppointmentDetails(id) {
     // Show the updated post details in a modal
     $('#addAppointmentModal').modal('toggle');
 }
+
+ //appointmentValidation ----------------------------------------------------
+ var appointmentValidation = document.createElement('script');
+ appointmentValidation.src = ebase_url + 'resource/js/custom/appointmentValidation.js';
+ appointmentValidation.setAttribute("type", "text/javascript");
+ document.head.appendChild(appointmentValidation);
