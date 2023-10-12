@@ -33,11 +33,12 @@ class SendEmailController extends REST_Controller {
         $subscriber['email'] = $this->post('mail');
         // $sub = $this->post('name');
         
-        $data['firstName'] = $this->post('fname');
+        $data['name'] = $this->post('fname');
         $data['email'] = $this->post('mail');
-        $data['phone'] = $this->post('mobile');
+        $data['number'] = $this->post('mobile');
         $data['subject'] = $this->post('sub');
         $data['message'] = $this->post('msg');
+        $data['is_newsletter'] = 0;
         
         $id = $this->post('id');
         // echo "<pre>";
@@ -49,7 +50,7 @@ class SendEmailController extends REST_Controller {
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$data['firstName'].'</td>
+                            <td width="70%">'.$data['name'].'</td>
                             </tr>
                             
                             <tr>
@@ -59,7 +60,7 @@ class SendEmailController extends REST_Controller {
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$data['phone'].'</td>
+                            <td width="70%">'.$data['number'].'</td>
                             </tr>
                             
                             <tr>
@@ -106,7 +107,7 @@ class SendEmailController extends REST_Controller {
         // $this->email->set_newline("\r\n");
         $Mailstatus = $this->email->send();
         if(empty($id)){
-            $status = $this->newsletter->insert_newsletter($subscriber);
+            $status = $this->newsletter->insert_newsletter($data);
             
             if ($Mailstatus) {
                 $response['msg'] = 'Email Send Successfully!';
