@@ -167,12 +167,12 @@ var minutes = parseInt(parts[1]);
 // Determine AM or PM
 var ampm = hours >= 12 ? "PM" : "AM";
 
-// // Convert to 12-hour format
-// if (hours > 12) {
-//     hours -= 12;
-// } else if (hours === 0) {
-//     hours = 12;
-// }
+// Convert to 12-hour format
+if (hours > 12) {
+    hours -= 12;
+} else if (hours === 0) {
+    hours = 12;
+}
 
 // Add seconds (you can set the seconds as needed)
 //var seconds = "00";
