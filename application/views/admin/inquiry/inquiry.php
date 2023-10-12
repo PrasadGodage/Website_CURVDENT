@@ -34,7 +34,7 @@
 
                             <!--<div class="box-controls pull-right">-->
                             <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <button type="button" class="btn btn-primary" id="addPostBtn">View Inquiry</button>
+                            <!-- <button type="button" class="btn btn-primary" id="addPostBtn">View Inquiry</button> -->
                             <!--</div>-->
                         </div>
                         <!-- /.box-header -->
@@ -44,10 +44,9 @@
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
-                                            <th>Article Title</th>
-                                            <th>Category</th>
-                                            <th>Active</th>
-                                            <th>Publish Date</th>
+                                            <th>Name</th>
+                                            <th>Subject</th>
+                                            <th>Number</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,11 +55,10 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                        <th>Sr No.</th>
-                                            <th>Article Title</th>
-                                            <th>Category</th>
-                                            <th>Active</th>
-                                            <th>Publish Date</th>
+                                            <th>Sr No.</th>
+                                            <th>Name</th>
+                                            <th>Subject</th>
+                                            <th>Number</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
