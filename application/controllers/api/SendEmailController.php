@@ -120,9 +120,9 @@ class SendEmailController extends REST_Controller {
             }
 
         }else{
-            $newsletter_id = $this->newsletter->insert_newsletter($subscriber);
+            $status = $this->newsletter->insert_newsletter($subscriber);
             
-            if ($status) {
+            if ($Mailstatus) {
                 $response['msg'] = 'Email Send Successfully!';
                 $response['status'] = 200;
                 $this->response($response, REST_Controller::HTTP_OK);
