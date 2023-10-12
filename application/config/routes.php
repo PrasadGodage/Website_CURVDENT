@@ -55,6 +55,10 @@ $route['blogpage_api/(:num)']='api/PostingUiController/posting/$1';
 $route['newsletter_api']='api/NewsletterController/newsletter';
 $route['newsletter_api/(:num)']='api/NewsletterController/newsletter/$1';
 
+//ContactForm Api
+$route['contact_api']='api/ContactFormController/contact';
+// $route['contact_api/(:num)']='api/ContactFormController/contact/$1';
+
 //Newsletter Api without Authorization
 $route['newsletterUi_api']='api/NewsletterUiController/newsletter';
 $route['newsletterUi_api/(:num)']='api/NewsletterUiController/newsletter/$1';
