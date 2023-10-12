@@ -1,11 +1,114 @@
 let appointmentList = new Map();
+let appointmentList1 = new Map();
 
+
+function setAppointmentList1(list) {
+
+    $('#appointmentTable').dataTable().fnDestroy();
+    $('#appointmentList').empty();
+    var tblData = '';
+    var index=1;
+    
+    for (let k of list.keys()) {
+        
+        let appointment = list.get(k);
+
+        let formatedTime = appointment.time;
+        // Split the time into hours and minutes
+       var parts = formatedTime.split(":");
+       var minutes = parseInt(parts[1]);
+       var hours = parseInt(parts[0]);
+
+// Determine AM or PM
+var ampm = hours >= 12 ? "PM" : "AM";
+
+// Convert to 12-hour format
+if (hours > 12) {
+    hours -= 12;
+} else if (hours === 0) {
+    hours = 12;
+}
+
+// Add seconds (you can set the seconds as needed)
+//var seconds = "00";
+
+// Create the formatted time string
+var formattedTime1 = hours + ":" + minutes + " " + ampm;
+
+console.log(formattedTime1);
+   
+        tblData += `
+        <tr>
+                <td>` + index + `</td>
+                <td>` + appointment.fullName + `</td>
+                <td>` + appointment.date + `</td>
+                <td>` + formattedTime1 + `</td>
+                <td>` + appointment.contactNo + `</td>
+                <td> <a href="#" onclick="updateAppointmentDetails(${appointment.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="deleteAppointmentDetails(${appointment.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                </td>
+                
+        </tr>`;
+        index++;
+    }
+    
+    $('#appointmentList').html(tblData);
+    $('#appointmentTable').DataTable();
+    }
 
 $(document).ready(function() {
  //Date picker
  $('#datepicker').datepicker({
     autoclose: true
   });
+
+  $("#datepicker").change(function() {
+    var selectedDate = $(this).val();
+
+    $.ajax({
+
+        url: ebase_url+'appointment_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+
+                        if(response.data[i].date == selectedDate){
+
+                            appointmentList1.set(response.data[i].id, response.data[i]);
+
+                        }
+                       
+                           
+                       
+                        
+                    }
+                    
+                }
+                setAppointmentList1(appointmentList1);
+                console.log(appointmentList1);
+            }
+
+        }
+        
+    });
+
+});
+
 });
 
 // $(document).ready(function () {
