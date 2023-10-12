@@ -2,6 +2,42 @@ let appointmentList = new Map();
 let appointmentList1 = new Map();
 
 
+
+$(document).ready(function() {
+    $('#contactNo').on('input', function() {
+        // Get the input value and remove any non-digit characters
+        var inputValue = $(this).val().replace(/\D/g, '');
+        
+        // Check if the input is a 10-digit number
+        if (/^\d{10}$/.test(inputValue)) {
+            // Valid input: clear any previous error message
+            $('#contactError').text('');
+        } else {
+            // Invalid input: show an error message
+            $('#contactError').text('Please enter a 10-digit number');
+        }
+    });
+
+    $('#email').on('input', function() {
+        // Get the input value
+        var email = $(this).val();
+        
+        // Regular expression to validate email format
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        
+        // Check if the input matches the email pattern
+        if (emailPattern.test(email)) {
+            // Valid email: clear any previous error message
+            $('#emailError').text('');
+        } else {
+            // Invalid email: show an error message
+            $('#emailError').text('Please enter a valid email address');
+        }
+    });
+
+});
+
+
 function setAppointmentList1(list) {
 
     $('#appointmentTable').dataTable().fnDestroy();
