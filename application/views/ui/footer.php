@@ -128,14 +128,13 @@
     <script src="<?php echo base_url() . 'resource/assets/vendor_components/jquery-3.3.1/jquery-3.3.1.js'; ?>"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->        
 
-    <!-- Bootstrap 4.1-->
-    <script src="<?php echo base_url() . 'resource/assets/vendor_components/bootstrap/dist/js/bootstrap.min.js'; ?>"></script>
+    
 
     <!--sweet alert-->
     <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
     <script src="<?php echo base_url() . 'resource/js/sweetalert.js' ?>"></script>
 
-    <script src="<?php echo base_url() . 'resource/js/ajax-jquery.js'; ?>"></script>
+   
 
      <script > 
         let ebase_url ='https://dev.curvdent.com/';
