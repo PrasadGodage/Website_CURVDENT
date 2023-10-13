@@ -442,11 +442,30 @@ $("#sub").click(function() {
 $("#msg").click(function() {
     $("#messageError").text("");
 });
+// Contact length validation 
+$("#mobile").on("input", function() {
+    var contactValue = $(this).val().trim();
+    var desiredLength = 10;
+    
+    if (contactValue.length === desiredLength) {
+        $("#phoneError").text(""); // Clear any previous messages
+    } else {
+        $("#phoneError").text("SIM1No. must be 10 digits.");
+    }
+});
+// Contact No. space remove
+$("#mobile").on("input", function() {
+    var inputValue = $(this).val();
+    var newValue = inputValue.replace(/\s/g, ''); // Remove all spaces
+    
+    $(this).val(newValue);
+});
+$("#mobile").on("input", function() {
+    var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
+    $(this).val(sanitizedValue);
+});
 
-// $("#mobile").on("input", function() {
-//     var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
-//     $(this).val(sanitizedValue);
-// });
+
 
 // // Handle appointment form submission
 // $('#appointment').click(function(e){
