@@ -246,142 +246,21 @@ $('#emailForm').on('submit', function (e) {
 });
 
 
-function SendEmailAjax(formData) {
-    // var contactList = Array.from(contactData.values());
-    console.log(formData);
+// function SendEmailAjax(formData) {
+//     // var contactList = Array.from(contactData.values());
+//     console.log(formData);
 
-    // if (contactList != '' && contactList != null && contactList.length > 0) {
-        // var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
-        // var formdata = new FormData();
-        // formdata.append("mailDetails",jsonString);
+//     // if (contactList != '' && contactList != null && contactList.length > 0) {
+//         // var jsonString = JSON.stringify(contactList); // Corrected variable name from 'list' to 'contactList'
+//         // var formdata = new FormData();
+//         // formdata.append("mailDetails",jsonString);
 
-        $.ajax({
-            url: ebase_url + 'sendEmail_api',
-
-            type: 'POST',
-
-            data: formData,
-
-            cache: false,
-
-            contentType: false,
-
-            processData: false,
-
-            dataType: 'json',
-
-            success: function(response) {
-                if (response.status == 200) {
-                    // Show the success message
-                    $("#alertMsg").fadeIn();
-
-                    // Hide the success message after 3 seconds (adjust the time as needed)
-                    setTimeout(function () {
-                        $("#alertMsg").fadeOut();
-                    }, 3000);
-                } else {
-                    swal("ERROR!", response.msg, "error");
-                }
-            }
-            
-        });
-    // } else {
-    //     swal("ERROR!", "No contact data available to send an email.", "error");
-    // }
-}
-
-// $("#submitMail").click(function(e){
-$('#contactForm').on('submit', function (e) {
-
-    e.preventDefault();
-    // Get form values
-    // var id = $('#id').val().trim();
-    var name = $('#fname').val().trim();
-    var email = $('#mail').val().trim();
-    var phone = $('#mobile').val().trim();
-    var subject = $('#sub').val().trim();
-    var message = $('#msg').val().trim();
-           
-    var flag=true;
-
-    if (name === '' || name === null){
-        $('#nameError').text('Please enter name');
-        flag=false;
-    }else if(email === '' || email === null){
-        $('#emailError').text('Please enter email');
-        flag=false;
-    }else if(phone === '' || phone === null){
-        $('#phoneError').text('Please enter phone');
-        flag=false;
-    }else if(subject === '' || subject === null){
-        $('#subjectError').text('Please enter subject');
-        flag=false;
-    }else if(message === '' || message === null){
-        $('#messageError').text('Please enter message');
-        flag=false;
-    }
-    else{
-        flag=true;
-    }
-
-   if(flag){
-        // Create an object to store the form data
-        var formData = {
-
-            // id:id,
-            name:name,
-            email:email,
-            phone:phone,
-            subject:subject,
-            message:message
-        };
-     
-   
-        // contactData.set(contactData.size+1,formData);
-         
-        $('#fname').val('');
-        $('#mail').val('');
-        $('#mobile').val('');
-        $('#sub').val('');
-        $('#msg').val('');   
-    
-        // var contactList=Array.from(contactData.values());
-        // console.log(contactList);
-        SendEmailAjax(formData);
-
-    }
-});
-
-// $('#contactForm').on('submit', function (e) {
-
-//     e.preventDefault();
-
-//     // var returnVal = $("#emailForm").val();
-//     var formdata = new FormData(this);
-
-//      // Show the success message
-//      $("#alertMsg").fadeIn();
-
-//       // Clear the input field (optional)
-//       $("#fname").val('');
-//       $("#mail").val('');
-//       $("#mobile").val('');
-//       $("#sub").val('');
-//       $("#msg").val('');
-
-//      // Hide the success message after 3 seconds (adjust the time as needed)
-//      setTimeout(function () {
-//         $("#alertMsg").fadeOut();
-//     }, 3000);
-
-//     // if (returnVal) {
 //         $.ajax({
-
-//             url: ebase_url+'sendEmail_api',
+//             url: ebase_url + 'sendEmail_api',
 
 //             type: 'POST',
 
-//             data: formdata,
+//             data: formData,
 
 //             cache: false,
 
@@ -391,25 +270,140 @@ $('#contactForm').on('submit', function (e) {
 
 //             dataType: 'json',
 
-//             success: function (response) {
+//             success: function(response) {
 //                 if (response.status == 200) {
-//                     // Show success message
 //                     swal("Good job!", response.msg, "success");
-                    
 //                 } else {
-//                     // Handle error
-//                     swal("Error", response.msg, "error");
-//                  }
+//                     swal("ERROR!", response.msg, "error");
+//                 }
 //             }
+            
 //         });
-
+//     // } else {
+//     //     swal("ERROR!", "No contact data available to send an email.", "error");
 //     // }
+// }
+
+// // $("#submitMail").click(function(e){
+// $('#contactForm').on('submit', function (e) {
+
+//     e.preventDefault();
+//     // Get form values
+//     // var id = $('#id').val().trim();
+//     var name = $('#fname').val().trim();
+//     var email = $('#mail').val().trim();
+//     var phone = $('#mobile').val().trim();
+//     var subject = $('#subject').val().trim();
+//     var message = $('#msg').val().trim();
+           
+//     var flag=true;
+
+//     if (name === '' || name === null){
+//         $('#nameError').text('Please enter name');
+//         flag=false;
+//     }else if(email === '' || email === null){
+//         $('#emailError').text('Please enter email');
+//         flag=false;
+//     }else if(phone === '' || phone === null){
+//         $('#phoneError').text('Please enter phone');
+//         flag=false;
+//     }else if(subject === '' || subject === null){
+//         $('#subjectError').text('Please enter subject');
+//         flag=false;
+//     }else if(message === '' || message === null){
+//         $('#messageError').text('Please enter message');
+//         flag=false;
+//     }
+//     else{
+//         flag=true;
+//     }
+
+//    if(flag){
+//         // Create an object to store the form data
+//         var formData = {
+
+//             // id:id,
+//             name:name,
+//             email:email,
+//             phone:phone,
+//             subject:subject,
+//             message:message
+//         };
+     
+   
+//         // contactData.set(contactData.size+1,formData);
+         
+//         $('#fname').val('');
+//         $('#mail').val('');
+//         $('#mobile').val('');
+//         $('#subject').val('');
+//         $('#msg').val('');   
+    
+//         // var contactList=Array.from(contactData.values());
+//         // console.log(contactList);
+//         SendEmailAjax(formData);
+
+//     }
 // });
 
-// $("#mobile").on("input", function() {
-//     var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
-//     $(this).val(sanitizedValue);
-// });
+$('#contactForm').on('submit', function (e) {
+
+    e.preventDefault();
+
+    var returnVal = $("#contactForm").val();
+    var formdata = new FormData(this);
+
+     // Show the success message
+     $("#alertMsg").fadeIn();
+
+      // Clear the input field (optional)
+      $("#fname").val('');
+      $("#mail").val('');
+      $("#mobile").val('');
+      $("#sub").val('');
+      $("#msg").val('');
+
+     // Hide the success message after 3 seconds (adjust the time as needed)
+     setTimeout(function () {
+        $("#alertMsg").fadeOut();
+    }, 3000);
+
+    if (returnVal) {
+        $.ajax({
+
+            url: ebase_url+'sendEmail_api',
+
+            type: 'POST',
+
+            data: formdata,
+
+            cache: false,
+
+            contentType: false,
+
+            processData: false,
+
+            dataType: 'json',
+
+            success: function (response) {
+                if (response.status == 200) {
+                    // Show success message
+                    swal("Good job!", response.msg, "success");
+                    
+                } else {
+                    // Handle error
+                    swal("Error", response.msg, "error");
+                 }
+            }
+        });
+
+    }
+});
+
+$("#mobile").on("input", function() {
+    var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
+    $(this).val(sanitizedValue);
+});
 
 // // Handle appointment form submission
 // $('#appointment').click(function(e){
