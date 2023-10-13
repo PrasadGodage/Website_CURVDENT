@@ -18,6 +18,20 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/master_style.css'; ?>">
+
+        
+    <!-- SoftMaterial admin skins -->
+    <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/skins/_all-skins.css'; ?>">
+
+    <!-- Bootstrap 4.1-->
+    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/bootstrap/dist/css/bootstrap.min.css'; ?>">
+
+    <!-- Bootstrap extend-->
+    <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/bootstrap-extend.css'; ?>">	
+
+
  <!-- Daterange picker -->	
  <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css';?>">
 
