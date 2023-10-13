@@ -53,7 +53,7 @@
                                 <input type="file" name="PDF" id="PDF">
                             </div>
                             <div id="selectedPdfName"></div>
-                            <div class="mt-10 px-10" id="pdfLink"></div>
+                            <div class="btn btn-info btn-file btn-outline btn-rounded mt-10 px-10" id="pdfLink"></div>
                             <!-- <div id="selectedPdfName"></div> -->
                         </div>
 
