@@ -375,7 +375,7 @@ $('#contactForm').on('submit', function (e) {
     if(flag){
 
         
-        var returnVal = $("#contactForm").val();
+        // var returnVal = $("#contactForm").val();
         var formdata = new FormData(this);
 
         // Show the success message
@@ -393,7 +393,7 @@ $('#contactForm').on('submit', function (e) {
             $("#alertMsg").fadeOut();
         }, 3000);
 
-        if (returnVal) {
+        // if (returnVal) {
             $.ajax({
 
                 url: ebase_url+'sendEmail_api',
@@ -422,14 +422,14 @@ $('#contactForm').on('submit', function (e) {
                 }
             });
 
-        }
+        // }
     }
 });
 
-$("#mobile").on("input", function() {
-    var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
-    $(this).val(sanitizedValue);
-});
+// $("#mobile").on("input", function() {
+//     var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
+//     $(this).val(sanitizedValue);
+// });
 
 // // Handle appointment form submission
 // $('#appointment').click(function(e){
