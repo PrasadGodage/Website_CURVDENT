@@ -765,13 +765,13 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-success contact__msg" id="alertMsg" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="fname" type="text" id="fname" placeholder="Name *" required>
+                                <input name="fname" type="text" id="fname" placeholder="Name *" class="form-control" required data-validation-required-message="This field is required">
                                 <!-- <span id="nameError"></span> -->
                             </div>
                             <div class="col-md-6 form-group">
