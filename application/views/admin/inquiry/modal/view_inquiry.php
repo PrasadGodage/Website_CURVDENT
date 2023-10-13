@@ -60,13 +60,13 @@
                                         <div id="contactNum"></div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
+                                <div class="col-6 col-md-6 col-lg-6 col-xs-6 input-group-sm ">
                                     <div class="form-group">
                                         <label class="form-label" style="text-align:right;">Subject </label>
                                         <div id="contactSub"></div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
+                                <div class="col-6 col-md-6 col-lg-6 col-xs-6 input-group-sm ">
                                     <div class="form-group">
                                         <label class="form-label" style="text-align:right;">Message </label>
                                         <div id="contactMsg"></div>
