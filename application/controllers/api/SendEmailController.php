@@ -212,7 +212,7 @@ class SendEmailController extends REST_Controller {
         $this->email->set_newline("\r\n");
 
         $this->email->from('soulsoft.soul120@gmail.com');
-        $this->email->to('pradyumnb.297@gmail.com','soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
+        $this->email->to('pradyumnb.297@gmail.com','soulsoft.soul120@gmail.com','soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
         //$this->email->subject($data['subject']);
         // $this->email->subject($subject);
         //$this->email->message($emailContent);
@@ -229,8 +229,8 @@ class SendEmailController extends REST_Controller {
         // $this->email->message($emailContent);
         // $this->email->set_newline("\r\n");
 
-        $this->email->subject('Your Subject');
-        $this->email->message('Your Message');
+        $this->email->subject('Your Subject test');
+        $this->email->message('Your Message test');
 
         $Mailstatus = $this->email->send();
                     
