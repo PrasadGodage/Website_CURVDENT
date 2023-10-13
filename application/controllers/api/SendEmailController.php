@@ -229,8 +229,8 @@ class SendEmailController extends REST_Controller {
         // $this->email->message($emailContent);
         // $this->email->set_newline("\r\n");
 
-        $this->email->subject('Your Subject');
-        $this->email->message('Your Message');
+        $this->email->subject('Your Subject test');
+        $this->email->message('Your Message test');
 
         $Mailstatus = $this->email->send();
                     
