@@ -350,7 +350,7 @@ $('#contactForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    // var returnVal = $("#emailForm").val();
+    var returnVal = $("#contactForm").val();
     var formdata = new FormData(this);
 
      // Show the success message
@@ -368,7 +368,7 @@ $('#contactForm').on('submit', function (e) {
         $("#alertMsg").fadeOut();
     }, 3000);
 
-    // if (returnVal) {
+    if (returnVal) {
         $.ajax({
 
             url: ebase_url+'sendEmail_api',
@@ -397,7 +397,7 @@ $('#contactForm').on('submit', function (e) {
             }
         });
 
-    // }
+    }
 });
 
 $("#mobile").on("input", function() {

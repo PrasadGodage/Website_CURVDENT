@@ -117,14 +117,14 @@
      <!-- End Whats App Chat Boat Code  -->
 
 
-<!-- This is datepicker -->
+    <!-- This is datepicker -->
 
-<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.js'; ?>"></script>
+    <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.js'; ?>"></script>
 
-<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
+    <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
 
-<script src="<?php echo base_url() . 'resource\js\jquery.validate.min.js'; ?>"></script>
-
+    <script src="<?php echo base_url() . 'resource\js\jquery.validate.min.js'; ?>"></script>
+    
      <script > 
         let ebase_url ='https://dev.curvdent.com/';
     </script>

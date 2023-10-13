@@ -765,30 +765,30 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-success contact__msg" id="alertMsg" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input name="fname" type="text" id="fname" placeholder="Name *" required>
-                                <!-- <span id="nameError"></span> -->
+                                <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="mail" type="email" id="mail" placeholder="Email *" required>
-                                <!-- <span id="emailError"></span> -->
+                                <span id="emailError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="mobile" type="text" id="mobile" placeholder="Number *" required>
-                                <!-- <span id="phoneError"></span> -->
+                                <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
                                 <input name="sub" type="text" id="sub" placeholder="Subject *" required>
-                                <!-- <span id="subjectError"></span> -->
+                                <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
                                 <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" required></textarea>
-                                <!-- <span id="messageError"></span> -->
+                                <span id="messageError"></span>
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
