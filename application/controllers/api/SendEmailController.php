@@ -140,6 +140,8 @@ class SendEmailController extends REST_Controller {
     public function sendPostMail_post() {  
         
         $response = [];
+
+        $arrJson = json_decode($this->post('emailDetails'));
     
         $config=array(
             
