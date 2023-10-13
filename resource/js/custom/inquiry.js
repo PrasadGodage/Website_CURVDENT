@@ -69,7 +69,7 @@ function setContactList(list){
 
 function viewContactDetails(id){
 
-    let contact = contactDetailList.get(id.toString());
+    let contact = contactList.get(id.toString());
     console.log(contact);
     $('#contactName').text(contact.name);
     $('#contactMail').text(contact.email);
