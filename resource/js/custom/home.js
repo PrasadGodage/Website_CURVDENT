@@ -461,7 +461,6 @@ $("#mobile").on("input", function() {
     $(this).val(newValue);
 });
 $("#mobile").on("input", function() {
-    $("#phoneError").text("Only accept Digits.");
     var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
     $(this).val(sanitizedValue);
 });
