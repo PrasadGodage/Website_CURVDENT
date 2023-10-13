@@ -4,6 +4,23 @@ let updatenewsletterId=id;
  console.log('newsletter id='+id);
 
 
+ // jQuery
+$(document).ready(function() {
+    // When the file input field changes (a file is selected)
+    $('#PDF').change(function() {
+        // Get the selected file's name
+        var fileName = $(this).val().split('\\').pop();
+
+        // Display the file name in the div
+        $('#selectedPdfName').text('Selected PDF: ' + fileName);
+    });
+
+    // Trigger the hidden file input when the button is clicked
+    $('#browseButton').click(function() {
+        $('#PDF').click();
+    });
+});
+
 
 
 $('#addNewsletterForm').on('submit', function (e) {
