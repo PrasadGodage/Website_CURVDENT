@@ -771,7 +771,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="fname" type="text" id="fname" placeholder="Name *" required>
+                                <input name="fname" type="text" id="fname" placeholder="Name *" >
                                 <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
