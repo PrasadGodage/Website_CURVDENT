@@ -775,19 +775,19 @@
                                 <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="mail" type="email" id="mail" placeholder="Email *" required>
+                                <input name="mail" type="email" id="mail" placeholder="Email *" >
                                 <span id="emailError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="mobile" type="text" id="mobile" placeholder="Number *" required>
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" >
                                 <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="sub" type="text" id="sub" placeholder="Subject *" required>
+                                <input name="sub" type="text" id="sub" placeholder="Subject *" >
                                 <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
                                 <span id="messageError"></span>
                             </div>
                             <div class="col-md-12">
