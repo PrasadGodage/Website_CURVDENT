@@ -1,4 +1,4 @@
-<div class="modal fade bs-example-modal-lg" id="viewPurchaseModal" tabindex="-1" role="dialog"
+<div class="modal fade bs-example-modal-lg" id="viewContactModal" tabindex="-1" role="dialog"
 	aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -13,7 +13,7 @@
               <!-- Nav tabs -->
               <ul class="nav nav-tabs nav-tabs-danger" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Purchase Details</a>
+                  <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Contact Details</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-selected="false">Item List</a>
@@ -26,45 +26,50 @@
                   <!-- start -->
 				          <div class="row">
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm">
-                                    <label>Product Order# <span id="purchaseOrdIdView"></span></label>
+                                    <label>Contact Us<span id="viewContact"></span></label>
                                 </div>
                                 <div class="col-6 col-md-3 col-lg-3 col-xs-3 input-group-sm"></div>
                                 
                                 <div class="col-6 col-md-1 col-lg-1 col-xs-1 input-group-sm">
                                     <div class="form-group">
-                                        <label class="control-label" for="purchaseDateView" style="text-align:right;"> Date
-                                        </label>
+                                        <!-- <label class="control-label" for="purchaseDateView" style="text-align:right;">Date</label> -->
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm">
                                     <div class="input-group">
-                                         <div id="purchaseDateView"></div>
+                                         <!-- <div id="purchaseDateView"></div> -->
                                     </div>
                                 </div>
                     </div>
                       <div class="row mb-2">
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
                                     <div class="form-group">
-                                        <label>Vendor Name </label>
-                                        <div id="vendorNameView"></div>
+                                        <label> Name </label>
+                                        <div id="contactName"></div>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="form-label">GST IN </label>
-                                        <div id="gstinView"></div>
+                                        <label for="exampleInputEmail1" class="form-label">Email </label>
+                                        <div id="contactMail"></div>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
                                     <div class="form-group">
-                                        <label class="form-label" style="text-align:right;">Contact </label>
-                                        <div id="contactFirmView"></div>
+                                        <label class="form-label" style="text-align:right;">Mobile </label>
+                                        <div id="contactNum"></div>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
                                     <div class="form-group">
-                                        <label class="form-label" style="text-align:right;">Created By </label>
-                                        <div id="createdByView"></div>
+                                        <label class="form-label" style="text-align:right;">Subject </label>
+                                        <div id="contactSub"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xs-4 input-group-sm ">
+                                    <div class="form-group">
+                                        <label class="form-label" style="text-align:right;">Message </label>
+                                        <div id="contactMsg"></div>
                                     </div>
                                 </div>
                      </div>

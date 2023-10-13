@@ -67,5 +67,5 @@ function setContactList(list){
 }
 
 function viewContactDetails(id){
-    $('#viewPurchaseModal').modal('toggle');
+    $('#viewContactModal').modal('toggle');
 }
