@@ -9,7 +9,7 @@ var pdfName;
             var pdfFileName = $(this).val().split("\\").pop();
             
             // Display the selected PDF file name in the "selectedPdfName" div
-            $("#selectedPdfName").text("Selected PDF: " + pdfFileName);
+            $("#selectedPdfName").text("" + pdfFileName);
         });
     });
 

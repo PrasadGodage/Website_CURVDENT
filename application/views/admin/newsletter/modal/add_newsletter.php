@@ -52,8 +52,9 @@
                                 <i class="fa fa-paperclip"></i> Attachment
                                 <input type="file" name="PDF" id="PDF">
                             </div>
-                            <div class="mt-10 px-10" id="pdfLink"></div>
                             <div id="selectedPdfName"></div>
+                            <div class="mt-10 px-10" id="pdfLink"></div>
+                            <!-- <div id="selectedPdfName"></div> -->
                         </div>
 
 
