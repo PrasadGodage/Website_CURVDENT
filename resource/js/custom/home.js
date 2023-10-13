@@ -450,7 +450,7 @@ $("#mobile").on("input", function() {
     if (contactValue.length === desiredLength) {
         $("#phoneError").text(""); // Clear any previous messages
     } else {
-        $("#phoneError").text("SIM1No. must be 10 digits.");
+        $("#phoneError").text("Mobile No. must be 10 digits.");
     }
 });
 // Contact No. space remove
