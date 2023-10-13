@@ -45,7 +45,7 @@
 
 
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <div class="col-sm-2">
                                 <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
@@ -53,15 +53,15 @@
                                 <i class="fa fa-paperclip"></i> Attachment
                                 <input type="file" name="PDF" id="PDF" style="display: none;">
                             </div>
-                            <!-- <div class=""><p class="help-block mt-3 ml-2"><span id="pdf-render">PDF Name</span></p></div> -->
-                            <div class="mt-10 px-10" id="pdfLink"></div>
+                            <div class=""><p class="help-block mt-3 ml-2"><span id="pdf-render">PDF Name</span></p></div> -->
+                            <!-- <div class="mt-10 px-10" id="pdfLink"></div>
                             <button id="browseButton">Browse PDF</button>
-                            <div id="selectedPdfName"></div>
+                            <div id="selectedPdfName"></div> -->
 
-                        </div>
+                        <!-- </div> -->
 
 
-                        <!-- <div class="form-group row">
+                        <div class="form-group row">
                             <div class="col-sm-2">
                                 <label for="PDF" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
@@ -77,7 +77,7 @@
                                 </div>
                                 <small class="form-text text-muted mt-3">Accepted file formats: PDF</small>
                             </div>
-                        </div> -->
+                        </div>
 
 
 
