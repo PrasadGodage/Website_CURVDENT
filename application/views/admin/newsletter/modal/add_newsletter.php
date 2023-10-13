@@ -44,19 +44,43 @@
                         </div> -->
 
 
+
                         <div class="form-group row">
                             <div class="col-sm-2">
                                 <label for="article" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
                             </div>
                             <div class="btn btn-info btn-file btn-outline btn-rounded">
                                 <i class="fa fa-paperclip"></i> Attachment
-                                <input type="file" name="PDF" id="PDF">
+                                <input type="file" name="PDF" id="PDF" style="display: none;">
                             </div>
                             <!-- <div class=""><p class="help-block mt-3 ml-2"><span id="pdf-render">PDF Name</span></p></div> -->
                             <div class="mt-10 px-10" id="pdfLink"></div>
-                            <div class=""></div>
+                            <button id="browseButton">Browse PDF</button>
+                            <div id="selectedPdfName"></div>
 
                         </div>
+
+
+                        <!-- <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label for="PDF" class="col-form-label"><span class="text-danger">*</span> Attachment </label>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-info btn-file btn-outline btn-rounded">
+                                            <i class="fa fa-paperclip"></i> Browse&hellip;
+                                            <input type="file" name="PDF" id="PDF" style="display: none;">
+                                        </span>
+                                    </span>
+                                    <input type="text" id="pdfLink" class="form-control" readonly>
+                                </div>
+                                <small class="form-text text-muted mt-3">Accepted file formats: PDF</small>
+                            </div>
+                        </div> -->
+
+
+
 
                         <div class="col-md-12 text-center modal-footer text-right">
                             <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal" id="cancleaddNewsletterPage">Cancel</button>
