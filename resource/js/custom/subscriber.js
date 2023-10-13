@@ -1,35 +1,23 @@
 let subscriberList = new Map();
 
 
-// $('#email').on('input', function() {
-//     // Get the input value
-//     var email = $(this).val();
+$('#email').on('input', function() {
+    // Get the input value
+    var email = $(this).val();
     
-//     // Regular expression to validate email format
-//     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    // Regular expression to validate email format
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     
-//     // Check if the input matches the email pattern
-//     if (emailPattern.test(email)) {
-//         // Valid email: clear any previous error message
-//         $('#emailError').text('');
-//     } else {
-//         // Invalid email: show an error message
-//         $('#emailError').text('Please enter a valid email address');
-//     }
-// });
-
-
-$(document).ready(function() {
-    $('#emailField').on('input', function() {
-        var email = $(this).val();
-        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        if (emailPattern.test(email)) {
-            $('#emailError').text('');
-        } else {
-            $('#emailError').text('Please enter a valid email address');
-        }
-    });
+    // Check if the input matches the email pattern
+    if (emailPattern.test(email)) {
+        // Valid email: clear any previous error message
+        $('#emailError').text('');
+    } else {
+        // Invalid email: show an error message
+        $('#emailError').text('Please enter a valid email address');
+    }
 });
+
 
 
 //Submit Category Btn script
@@ -114,7 +102,7 @@ function setSubscriberList(list) {
                 <td>` + index + `</td>
                 <td>` + subscriber.email + `</td>
                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-                <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
+                <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
                 </td>
                 
         </tr>`;
