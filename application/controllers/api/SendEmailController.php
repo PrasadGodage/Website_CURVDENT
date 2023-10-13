@@ -33,11 +33,11 @@ class SendEmailController extends REST_Controller {
         $subscriber['email'] = $this->post('mail');
         // $sub = $this->post('name');
         
-        $data['name'] = $this->post('fname');
-        $data['email'] = $this->post('mail');
-        $data['number'] = $this->post('mobile');
-        $data['subject'] = $this->post('sub');
-        $data['message'] = $this->post('msg');
+        $data['name'] = $this->post('name');
+        $data['email'] = $this->post('email');
+        $data['number'] = $this->post('phone');
+        $data['subject'] = $this->post('subject');
+        $data['message'] = $this->post('message');
         $data['is_newsletter'] = 0;
         
         $id = $this->post('id');
