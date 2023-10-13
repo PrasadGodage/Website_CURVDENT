@@ -426,6 +426,23 @@ $('#contactForm').on('submit', function (e) {
     }
 });
 
+//  Remove validation text
+$("#fname").click(function() {
+    $("#nameError").text("");
+});
+$("#mail").click(function() {
+    $("#emailError").text("");
+});
+$("#mobile").click(function() {
+    $("#phoneError").text("");
+});
+$("#sub").click(function() {
+    $("#subjectError").text("");
+});
+$("#msg").click(function() {
+    $("#messageError").text("");
+});
+
 // $("#mobile").on("input", function() {
 //     var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
 //     $(this).val(sanitizedValue);
