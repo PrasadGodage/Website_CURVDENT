@@ -140,60 +140,7 @@ class SendEmailController extends REST_Controller {
     public function sendPostMail_post() {  
         
         $response = [];
-        // $mailData = [];
-        // $jsonData = json_decode($jsonString, true);
-        // echo "<pre>"
-        // print_r($jsonData);
-        // $json_data = $this->input->raw_input_stream;
-
-        // Decode the JSON data into an array
-        // $data = json_decode($json_data, true);
-        // $data = $this->post();
-
-        
-        // $subscriber['email'] = $this->post('mail');
-        // // $sub = $this->post('name');
-        
-        // $data['name'] = $this->post('fname');
-        // $data['email'] = $this->post('mail');
-        // $data['number'] = $this->post('mobile');
-        // $data['subject'] = $this->post('sub');
-        // $data['message'] = $this->post('msg');
-        // $data['is_newsletter'] = 0;
-        
-        // $id = $this->post('id');
-        // echo "<pre>";
-        // print_r($data);
-        // print_r($id);
-
-        
-        
-        // $emailContent = '
-        //             <h3 align="center">Client Details</h3>
-        //                 <table border="1" width="100%" cellpadding="5">
-        //                     <tr>
-        //                     <td width="30%">Name</td>
-        //                     <td width="70%">'.$data['name'].'</td>
-        //                     </tr>
-                            
-        //                     <tr>
-        //                     <td width="30%">Email Address</td>
-        //                     <td width="70%">'.$data['email'].'</td>
-        //                     </tr>
-                            
-        //                     <tr>
-        //                     <td width="30%">Phone Number</td>
-        //                     <td width="70%">'.$data['number'].'</td>
-        //                     </tr>
-                            
-        //                     <tr>
-        //                     <td width="30%">Message</td>
-        //                     <td width="70%">'.$data['message'].'</td>
-        //                     </tr>
-        //                 </table>
-        //             ';
-
-
+    
         $config=array(
             
             'protocol'   =>   'sendmail',
@@ -216,22 +163,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->from('soulsoft.soul120@gmail.com');
         $this->email->to($recipients);
-        //$this->email->subject($data['subject']);
-        // $this->email->subject($subject);
-        //$this->email->message($emailContent);
-        // print_r($this->email->print_debugger());
-
         
-        // $this->load->library('email', $config);
-        
-        // $this->email->from($this->input->post("email"));
-        // // $this->email->from($email);
-        // $this->email->to("soulsoft.urmila@gmail.com");
-        // $this->email->subject($subject);
-        // // $this->email->message($message);
-        // $this->email->message($emailContent);
-        // $this->email->set_newline("\r\n");
-
         $this->email->subject('Subject hello guys');
         $this->email->message('Message body test');
 
