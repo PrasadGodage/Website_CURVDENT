@@ -3,7 +3,7 @@ let subscriberList = new Map();
 var pdfName;
 
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
         $("#PDF").change(function () {
             // Get the selected PDF file's name
             var pdfFileName = $(this).val().split("\\").pop();
@@ -11,7 +11,7 @@ var pdfName;
             // Display the selected PDF file name in the "selectedPdfName" div
             $("#selectedPdfName").text("" + pdfFileName);
         });
-    });
+    // });
 
   
 //Submit Category Btn script
