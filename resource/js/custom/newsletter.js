@@ -1,6 +1,18 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
 var pdfName;
+
+
+    $(document).ready(function () {
+        $("#PDF").change(function () {
+            // Get the selected PDF file's name
+            var pdfFileName = $(this).val().split("\\").pop();
+            
+            // Display the selected PDF file name in the "selectedPdfName" div
+            $("#selectedPdfName").text("Selected PDF: " + pdfFileName);
+        });
+    });
+
   
 //Submit Category Btn script
 
@@ -142,7 +154,7 @@ function setNewsletterList(list) {
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
                 <a href="#" onclick="sendEmailDetails()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
-                
+
                 </td>
                 
         </tr>`;
