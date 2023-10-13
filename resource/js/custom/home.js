@@ -350,53 +350,79 @@ $('#contactForm').on('submit', function (e) {
 
     e.preventDefault();
 
-    var returnVal = $("#contactForm").val();
-    var formdata = new FormData(this);
+    var flag = false;
 
-     // Show the success message
-     $("#alertMsg").fadeIn();
+    if ($('#fname').val().trim() === '' || $('#fname').val().trim() === null){
+        $('#nameError').text('Please enter name');
+        flag=false;
+    }else if($('#mail').val().trim() === '' || $('#mail').val().trim() === null){
+        $('#emailError').text('Please enter email');
+        flag=false;
+    }else if($('#mobile').val().trim() === '' || $('#mobile').val().trim() === null){
+        $('#phoneError').text('Please enter phone');
+        flag=false;
+    }else if($('#sub').val().trim() === '' || $('#sub').val().trim() === null){
+        $('#subjectError').text('Please enter subject');
+        flag=false;
+    }else if($('#msg').val().trim() === '' || $('#msg').val().trim() === null){
+        $('#messageError').text('Please enter message');
+        flag=false;
+    }
+    else{
+        flag=true;
+    }
 
-      // Clear the input field (optional)
-      $("#fname").val('');
-      $("#mail").val('');
-      $("#mobile").val('');
-      $("#sub").val('');
-      $("#msg").val('');
+    if(flag){
 
-     // Hide the success message after 3 seconds (adjust the time as needed)
-     setTimeout(function () {
-        $("#alertMsg").fadeOut();
-    }, 3000);
+        
+        var returnVal = $("#contactForm").val();
+        var formdata = new FormData(this);
 
-    if (returnVal) {
-        $.ajax({
+        // Show the success message
+        $("#alertMsg").fadeIn();
 
-            url: ebase_url+'sendEmail_api',
+        // Clear the input field (optional)
+        $("#fname").val('');
+        $("#mail").val('');
+        $("#mobile").val('');
+        $("#sub").val('');
+        $("#msg").val('');
 
-            type: 'POST',
+        // Hide the success message after 3 seconds (adjust the time as needed)
+        setTimeout(function () {
+            $("#alertMsg").fadeOut();
+        }, 3000);
 
-            data: formdata,
+        if (returnVal) {
+            $.ajax({
 
-            cache: false,
+                url: ebase_url+'sendEmail_api',
 
-            contentType: false,
+                type: 'POST',
 
-            processData: false,
+                data: formdata,
 
-            dataType: 'json',
+                cache: false,
 
-            success: function (response) {
-                if (response.status == 200) {
-                    // Show success message
-                    swal("Good job!", response.msg, "success");
-                    
-                } else {
-                    // Handle error
-                    swal("Error", response.msg, "error");
-                 }
-            }
-        });
+                contentType: false,
 
+                processData: false,
+
+                dataType: 'json',
+
+                success: function (response) {
+                    if (response.status == 200) {
+                        // Show success message
+                        swal("Good job!", response.msg, "success");
+                        
+                    } else {
+                        // Handle error
+                        swal("Error", response.msg, "error");
+                    }
+                }
+            });
+
+        }
     }
 });
 
@@ -541,7 +567,7 @@ $('#sendform').on('submit', function (e) {
 
 
 //import clientValidation script
-var mailValidation = document.createElement('script');
-mailValidation.src = ebase_url + 'resource/js/custom/mailValidation.js';
-mailValidation.setAttribute("type", "text/javascript");
-document.head.appendChild(mailValidation);
+// var mailValidation = document.createElement('script');
+// mailValidation.src = ebase_url + 'resource/js/custom/mailValidation.js';
+// mailValidation.setAttribute("type", "text/javascript");
+// document.head.appendChild(mailValidation);
