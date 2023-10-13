@@ -1,4 +1,5 @@
 let contactList = new Map();
+let contactDetailList = new Map();
 
 // get posting data
 function getContactList() {
@@ -67,5 +68,14 @@ function setContactList(list){
 }
 
 function viewContactDetails(id){
+
+    let contact = contactDetailList.get(id.toString());
+    console.log(contact);
+    $('#contactName').text(contact.name);
+    $('#contactMail').text(contact.email);
+    $('#contactNum').text(contact.number);
+    $('#contactSub').text(contact.subject);
+    $('#contactMsg').text(contact.message);
+
     $('#viewContactModal').modal('toggle');
 }
