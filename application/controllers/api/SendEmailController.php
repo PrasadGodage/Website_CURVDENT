@@ -155,7 +155,7 @@ class SendEmailController extends REST_Controller {
                 $data['email'] = $arrJson[i]->email;  
             }
             echo "<pre>";
-            print_r($data['email']);
+            print_r($data);
     
         $config=array(
             
