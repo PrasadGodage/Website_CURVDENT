@@ -599,7 +599,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 mb-30">
-                <h2 class="section-title" id="contact">Contact Us</h2>
+                <h2 class="section-title" id="contact">Book Your Appointment Now</h2>
                 <hr class="line line-hr-left text-center">
             </div>
         </div>
