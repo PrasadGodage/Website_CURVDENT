@@ -142,20 +142,20 @@ class SendEmailController extends REST_Controller {
         $response = [];
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
-
-        
-
+       
         // foreach ($arrJson as $i) {
         //     $email = $i->email;
         //     }
-           
 
+        $Mailstatus;
+           
             for($i=0 ; $i < count($arrJson) ; $i++){
 
-                $data['email'] = $arrJson[i]->email;  
-            }
-            echo "<pre>";
-            print_r($data['email']);
+                $data['email'] = $arrJson[$i]->email;  
+     //        }
+            
+            // echo "<pre>";
+            // print_r($data);
     
         $config=array(
             
@@ -173,17 +173,19 @@ class SendEmailController extends REST_Controller {
         
         $this->email->initialize($config);
 
-        $recipients=array('soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
+        //$recipients=array('soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
 
         $this->email->set_newline("\r\n");
 
         $this->email->from('soulsoft.soul120@gmail.com');
-        $this->email->to($recipients);
+        $this->email->to($data['email']);
         
-        $this->email->subject('Subject hello guys');
-        $this->email->message('Message body test');
+        $this->email->subject('testing purpose subject');
+        $this->email->message('testing purpose message');
 
         $Mailstatus = $this->email->send();
+
+    }
                     
             if ($Mailstatus) {
                 $response['msg'] = 'Email Send Successfully!';
