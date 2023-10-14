@@ -634,11 +634,11 @@
                             <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
                             <span id="contactNoError"></span>
                         </div>
-                        <div class="col-md-6 form-group mb-2">
+                        <div class="col-md-12 form-group mb-2">
                             <input name="date" type="date" id="date" required>
                             <span id="dateError"></span>
                         </div>
-                        <div class="col-md-6 form-group mb-2">
+                        <div class="col-md-12 form-group mb-2">
                             <input name="time" type="time" id="time" required>
                             <span id="timeError"></span>
                         </div>
