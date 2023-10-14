@@ -621,26 +621,26 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12 form-group">
+                        <div class="col-md-12 form-group mb-2">
                             <input name="fullName" type="text" id="fullName" placeholder="Enter Name *" required>
                         </div>
 
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-6 form-group mb-2">
                             <input name="email" type="email" id="email" placeholder="Email *" maxlength="10" required>
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-6 form-group mb-2">
                             <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-6 form-group mb-2">
                             <input name="date" type="date" id="date" required>
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-6 form-group mb-2">
                             <input name="time" type="time" id="time" required>
                         </div>
-                        <div class="col-md-12 form-group">
+                        <div class="col-md-12 form-group mb-2 mt-2">
                             <input name="address" type="text" id="address" cols="30" placeholder="Enter Address *" required>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-12 mb-2">
                             <input name="submit" type="submit" id="appointment" name="appointment" value="BOOK APPOINTMENT">
                         </div>
                     </div>
