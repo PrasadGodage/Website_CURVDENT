@@ -3,6 +3,19 @@ let subscriberList = new Map();
 let contactData = new Map();
 let appointmentList = new Map();
 
+
+//Timepicker
+$('.timepicker').timepicker({
+    showInputs: false
+  });
+
+  //Date picker
+  $('#datepicker').datepicker({
+    autoclose: true
+  });
+
+
+
 const myStyles = `
     #nameError, #emailError, #phoneError, #subjectError, #messageError {
         color: red;

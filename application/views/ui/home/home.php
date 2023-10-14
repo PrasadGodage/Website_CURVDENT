@@ -634,14 +634,29 @@
                             <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
                             <span id="contactNoError"></span>
                         </div>
+
+                       
+
                         <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
-                            <input name="date" type="date" id="date" required>
+                            <input type="text" class="form-control" placeholder="Select Date" id="datepicker" required> 
                             <span id="dateError"></span>
                         </div>
-                        <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
+
+                        <div class="col-md-6 form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control timepicker" required>
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <span id="timeError"></span>
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+
+                        <!-- <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
                             <input name="time" type="time" id="time" required>
                             <span id="timeError"></span>
-                        </div>
+                        </div> -->
                         <div class="col-md-12 form-group mt-2">
                             <input name="address" type="text" id="address" cols="30" rows="3" placeholder="Enter Address *" required>
                             <span id="addressError"></span>
