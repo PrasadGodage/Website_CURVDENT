@@ -1,13 +1,16 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
+let newsLetterList = new Map();
 var pdfName;
 
 
     // $(document).ready(function () {
         $("#PDF").change(function () {
             // Get the selected PDF file's name
+            var pdfFilePath = './uploads/' ;
             var pdfFileName = $(this).val().split("\\").pop();
-            
+            var result = pdfFilePath.concat(pdfFileName);
+
             // Display the selected PDF file name in the "selectedPdfName" div
             $("#selectedPdfName").text("" + pdfFileName);
         });
@@ -18,6 +21,77 @@ var pdfName;
 
 $('#addNewsletterForm').on('submit', function (e) {
     e.preventDefault();
+
+
+    //logic for send mail for blog
+
+    $.ajax({
+
+        url: ebase_url+'newsletter_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        if (response.data[i].is_active == 1){
+                            newsLetterList.set(response.data[i].id, response.data[i]);
+
+                        }
+                       console.log(newsLetterList); 
+                    }
+                    
+                }
+          }
+
+        }
+        
+    });
+   
+    var emailList=Array.from(newsLetterList.values());
+    var jsonString= JSON.stringify(emailList);
+    var formdata1 = new FormData();
+    formdata1.append("emailDetails",jsonString);
+
+    $.ajax({
+                    url: ebase_url + 'sendPostEmail_api',
+        
+                    type: 'POST',
+        
+                    data: formdata1,
+        
+                    cache: false,
+        
+                    contentType: false,
+        
+                    processData: false,
+        
+                    dataType: 'json',
+        
+                 success: function(response) {
+                     if (response.status == 200) {
+                        alert('suceess');
+                        // swal("Good job!", response.msg, "success");
+                     } else {
+                        alert('error');
+                        // swal("ERROR!", response.msg, "error");
+                        }
+                 }
+                    
+             });
+
 
     var returnVal = $("#addNewsletterForm").valid();
     var formdata = new FormData(this);
@@ -81,14 +155,14 @@ $('#addNewsletterBtn').click(function () {
 });
 
 //select File for attachment Btn script -----------------------------------------------------------------
-$('#PDF').click(function () {
+// $('#selectedPdfName').click(function () {
 
-    // pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
-    // $('#pdfLink').html(pdfLink);
+//     pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
+//     $('#pdfLink').html(pdfLink);
 
 
    
-});
+// });
 
 
 // get posting data
