@@ -7,8 +7,10 @@ var pdfName;
     // $(document).ready(function () {
         $("#PDF").change(function () {
             // Get the selected PDF file's name
+            var pdfFilePath = $(this).val();
             var pdfFileName = $(this).val().split("\\").pop();
             
+
             // Display the selected PDF file name in the "selectedPdfName" div
             $("#selectedPdfName").text("" + pdfFileName);
         });
@@ -153,14 +155,14 @@ $('#addNewsletterBtn').click(function () {
 });
 
 //select File for attachment Btn script -----------------------------------------------------------------
-$('#PDF').click(function () {
+// $('#selectedPdfName').click(function () {
 
-    // pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
-    // $('#pdfLink').html(pdfLink);
+//     pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
+//     $('#pdfLink').html(pdfLink);
 
 
    
-});
+// });
 
 
 // get posting data
