@@ -146,11 +146,14 @@ class SendEmailController extends REST_Controller {
         // foreach ($arrJson as $i) {
         //     $email = $i->email;
         //     }
+
+        $Mailstatus;
            
             for($i=0 ; $i < count($arrJson) ; $i++){
 
                 $data['email'] = $arrJson[$i]->email;  
-            }
+     //        }
+            
             // echo "<pre>";
             // print_r($data);
     
@@ -181,6 +184,8 @@ class SendEmailController extends REST_Controller {
         $this->email->message('testing purpose message');
 
         $Mailstatus = $this->email->send();
+
+    }
                     
             if ($Mailstatus) {
                 $response['msg'] = 'Email Send Successfully!';
