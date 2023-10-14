@@ -20,7 +20,7 @@ $(function() {
 
             id_category: {
 
-                required: true, minlength: 2, maxlength: 255
+                required: true, 
 
             },
 
@@ -48,7 +48,7 @@ $(function() {
 
             id_category: {
 
-                required: 'Select Category', minlength: 'please enter more word', maxlength: 'length is exceed'
+                required: 'Select Category',
 
             },
 

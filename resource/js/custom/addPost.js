@@ -13,7 +13,7 @@ $('#addPostForm').on('submit', function (e) {
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
-    console.log(formdata);
+     console.log(formdata);
     if (returnVal) {
         $.ajax({
 

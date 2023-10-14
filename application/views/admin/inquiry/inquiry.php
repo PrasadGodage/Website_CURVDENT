@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Appointment's
+            Inquiry Management
         </h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <!--<li class="breadcrumb-item"><a href="#">Master</a></li>-->
-            <li class="breadcrumb-item active">Appointment</li>
+            <li class="breadcrumb-item active">View Inquiry</li>
         </ol>
     </section>
 
@@ -18,7 +18,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header with-border">
-                <h3 class="box-title">Appointment List</h3>
+                <h3 class="box-title">View Inquiry</h3>
 
                 <ul class="box-controls pull-right">
                     <li><a class="box-btn-close" href="#"></a></li>
@@ -33,54 +33,32 @@
                         <div class="box-header with-border box-controls pull-right">
 
                             <!--<div class="box-controls pull-right">-->
-                            <button type="button" class="col-md-3 btn btn-primary ml-2" id="addAppointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
-                            <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
-                            <!-- <div class=" box-controls pull-right"> -->
-                             <!-- <input type="date" class="col-md-3 form-control mr-2" id="dateInput" name="dateInput"> -->
-                            <input type="text" class="col-md-3 form-control pull-right" placeholder="Select Date" id="datepicker"> 
-
-                               <!-- <p>Date: <input type="text" id="datepicker"> -->
-                            <!-- </button> -->
-                            <!-- </div> -->
-
-                            <!-- <div class="col-md-3 input-group date"> 
-                                <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control pull-right" id="datepicker">
-                            </div> -->
-
-
+                            <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
+                            <!-- <button type="button" class="btn btn-primary" id="addPostBtn">View Inquiry</button> -->
+                            <!--</div>-->
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table id="appointmentTable" class="table table-bordered table-striped">
-                                <colgroup>
-                                    <col class="column1">
-                                    <!-- <col class="column2"> -->
-                                    <!-- Add more col elements for additional columns as needed -->
-                                </colgroup>
+                                <table id="inquiryTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th>Sr No.</th>
                                             <th>Name</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Contact</th>
+                                            <th>Subject</th>
+                                            <th>Number</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="appointmentList">
+                                    <tbody id="inquiryList">
                                         
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                        <th>Sr No.</th>
+                                            <th>Sr No.</th>
                                             <th>Name</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Contact</th>
+                                            <th>Subject</th>
+                                            <th>Number</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
