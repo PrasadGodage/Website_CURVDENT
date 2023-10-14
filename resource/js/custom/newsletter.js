@@ -13,6 +13,9 @@ var pdfName;
 
             // Display the selected PDF file name in the "selectedPdfName" div
             $("#selectedPdfName").text("" + pdfFileName);
+
+            var pdfLink1 = '';
+            pdfLink1 += '<a class="help-block mt-3 ml-2" href='+ result +' target="_blank" > + pdfFileName + </a>';
         });
     // });
 
