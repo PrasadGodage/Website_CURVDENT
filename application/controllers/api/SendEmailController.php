@@ -148,6 +148,7 @@ class SendEmailController extends REST_Controller {
         foreach ($arrJson as $i) {
             $email = $i->email;
             }
+            echo "<pre>";
             print_r($email);
     
         $config=array(
