@@ -596,72 +596,66 @@
 
 <!-- Appointment Form -->
 <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
-        <div class="container mb-20" id="book">
-            <div class="row">
-                <div  class="col-md-6 col-sm-6">
-                    <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="color: #d4b76e;">Book Your Appointment Now </h2>
-                        <hr class="line line-hr-left">
-                    </div>   
-                </div>
-                <div  class="col-md-12 col-sm-12">
-                    <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
-                            <br>
-                        <form id="send-form" role="form" method="post">
-                            <input type="hidden" class="form-control" id="id1" name="id">
-                                <!-- <div class="form-group row"> -->
-                                <div class="row">
-                                    <div class="col-md-2 form-group"></div>
-                                    <div class="col-md-8 form-group">
-                                        <input name="fullName" type="text" id="fullName" placeholder="Enter Name *" required>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2 form-group"></div>
-                                        <div class="col-md-6 form-group">
-                                            <input name="email" type="email" id="email" placeholder="Email *" required>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-2 form-group"></div>
-                                    <div class="col-md-2 form-group">
-                                        <input name="date" type="date" id="date" required>
-                                    </div>
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-2">
-                                        <input name="time" type="time" id="time" required>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-2 form-group"></div>
-                                    <div class="col-md-8 form-group">
-                                        <input name="address" type="text" id="address" placeholder="Enter Address *" required>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4"></div>
-                                    <div class="col-md-4">
-                                        <input name="submit" type="submit" id="appointment" name="appointment" value="BOOK APPOINTMENT">
-                                    </div>
-                                    <div class="col-md-4"></div>
-                                </div>
-                        </form>
-                    </div>
-                </div>
+    <div class="container">
+		<div class="row">
+            <div class="col-md-12 mb-30">
+                <h2 class="section-title" id="contact">Contact Us</h2>
+                    <hr class="line line-hr-left text-center">
             </div>
         </div>
-    </section>
-    <br>
+ 	    <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-3 animate-box" data-animate-effect="fadeInUp"></div>
+
+            <div class="col-md-6 app-sub-w3 animate-box" data-animate-effect="fadeInUp">
+                            <br>
+                <form id="send-form" role="form" method="post">
+                    <input type="hidden" class="form-control" id="id1" name="id">
+
+ 				        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success contact__msg" id="alertMsg" style="display: none" role="alert">
+                                	<span class="text-danger">Your message was sent successfully.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group row"> -->
+                        <div class="row">
+                                 
+                            <div class="col-md-12 form-group">
+                                <input name="fullName" type="text" id="fullName" placeholder="Enter Name *" required>
+                            </div>
+                              
+                            <div class="col-md-6 form-group">
+                                <input name="email" type="email" id="email" placeholder="Email *" maxlength="10" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="date" type="date" id="date" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input name="time" type="time" id="time" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input name="address" type="text" id="address" cols="30" placeholder="Enter Address *" required>
+                            </div>
+                            <div class="col-md-12">
+                                <input name="submit" type="submit" id="appointment" name="appointment" value="BOOK APPOINTMENT">
+                            </div>
+                        </div>
+                </form>
+            </div>
+     
+ 		    <div class="col-md-3 animate-box" data-animate-effect="fadeInUp"></div>
+     
+	    </div>
+     
+    </div>
+
+</section>
 
 
 
