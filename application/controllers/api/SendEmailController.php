@@ -152,7 +152,7 @@ class SendEmailController extends REST_Controller {
 
             for($i=0 ; $i < count($arrJson) ; $i++){
 
-                $data['email'] = $arrJson[i]->email;  
+                $data['email'] = $arrJson[$i]->email;  
             }
             echo "<pre>";
             print_r($data);
