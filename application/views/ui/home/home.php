@@ -642,7 +642,7 @@
 
                         <div class="col-md-6 form-group">
                             <div class="input-group">
-                                <input type="text" class="col-md-6 form-control timepicker" placeholder="Select Time" required>
+                                <input type="text" class="col-md-6 form-control timepicker" id="timepicker" placeholder="Select Time" required>
                                 <div class="input-group-addon">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
