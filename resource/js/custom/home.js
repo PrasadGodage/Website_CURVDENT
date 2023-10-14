@@ -4,10 +4,21 @@ let contactData = new Map();
 let appointmentList = new Map();
 
 
-//Timepicker
-$('.timepicker').timepicker({
-    showInputs: false
-  });
+$(document).ready(function() {
+    $('.timepicker').timepicker({
+        showInputs: false
+    });
+    
+    // Handle the time selection event
+    $('.timepicker').on('changeTime.timepicker', function(e) {
+        // This function is called when a time is selected.
+        // You can access the selected time using e.time.
+        var selectedTime = e.time;
+        
+        // Now, you can do something with the selected time, like displaying it or further processing.
+        console.log('Selected Time: ' + selectedTime);
+    });
+});
 
   //Date picker
   $('#datepicker').datepicker({
