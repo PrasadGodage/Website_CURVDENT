@@ -638,13 +638,13 @@
                        
 
                         <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
-                            <input type="text" class="form-control" placeholder="Select Date" id="datepicker" required> 
+                            <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
                             <span id="dateError"></span>
                         </div>
 
                         <div class="col-md-6 form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control timepicker" required>
+                                <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="timepicker" required>
                                 <div class="input-group-addon">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
