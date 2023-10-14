@@ -126,6 +126,7 @@
    <!-- bootstrap time picker -->
     <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.js'; ?>"></script>
 
+    <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
 
     
     <script src="<?php echo base_url() . 'resource\js\jquery.validate.min.js'; ?>"></script>

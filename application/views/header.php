@@ -33,6 +33,7 @@
        <!-- Bootstrap time Picker -->
         <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.css';?>">
 
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.css';?>">
 
         <!-- Select2 -->
 	    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/css/select2.min.css'?>">	
