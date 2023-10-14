@@ -1,80 +1,80 @@
 let categoryList = new Map();
 let postList = new Map();
-let newsLetterList = new Map();
+// let newsLetterList = new Map();
 
 //Submit Category Btn script
 
 $('#addPostForm').on('submit', function (e) {
     e.preventDefault();
 
-    //logic for send mail for blog
+    // //logic for send mail for blog
 
-    $.ajax({
+    // $.ajax({
 
-        url: ebase_url+'newsletter_api',
+    //     url: ebase_url+'newsletter_api',
 
-        type: 'GET',
+    //     type: 'GET',
 
-        async:false,
+    //     async:false,
 
-        headers: {
-            "Authorization": etoken
-        },
+    //     headers: {
+    //         "Authorization": etoken
+    //     },
 
-        dataType: 'json',
+    //     dataType: 'json',
 
-        success: function (response) {
+    //     success: function (response) {
         
 
-            if (response.status == 200) {
+    //         if (response.status == 200) {
 
-                if (response.data.length != 0) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        if (response.data[i].is_active == 1){
-                            newsLetterList.set(response.data[i].id, response.data[i]);
+    //             if (response.data.length != 0) {
+    //                 for (var i = 0; i < response.data.length; i++) {
+    //                     if (response.data[i].is_active == 1){
+    //                         newsLetterList.set(response.data[i].id, response.data[i]);
 
-                        }
-                       console.log(newsLetterList); 
-                    }
+    //                     }
+    //                    console.log(newsLetterList); 
+    //                 }
                     
-                }
-          }
+    //             }
+    //       }
 
-        }
+    //     }
         
-    });
+    // });
    
-    var emailList=Array.from(newsLetterList.values());
-    var jsonString= JSON.stringify(emailList);
-    var formdata1 = new FormData();
-    formdata1.append("emailDetails",jsonString);
+    // var emailList=Array.from(newsLetterList.values());
+    // var jsonString= JSON.stringify(emailList);
+    // var formdata1 = new FormData();
+    // formdata1.append("emailDetails",jsonString);
 
-    $.ajax({
-                    url: ebase_url + 'sendPostEmail_api',
+    // $.ajax({
+    //                 url: ebase_url + 'sendPostEmail_api',
         
-                    type: 'POST',
+    //                 type: 'POST',
         
-                    data: formdata1,
+    //                 data: formdata1,
         
-                    cache: false,
+    //                 cache: false,
         
-                    contentType: false,
+    //                 contentType: false,
         
-                    processData: false,
+    //                 processData: false,
         
-                    dataType: 'json',
+    //                 dataType: 'json',
         
-                 success: function(response) {
-                     if (response.status == 200) {
-                        alert('suceess');
-                        // swal("Good job!", response.msg, "success");
-                     } else {
-                        alert('error');
-                        // swal("ERROR!", response.msg, "error");
-                        }
-                 }
+    //              success: function(response) {
+    //                  if (response.status == 200) {
+    //                     alert('suceess');
+    //                     // swal("Good job!", response.msg, "success");
+    //                  } else {
+    //                     alert('error');
+    //                     // swal("ERROR!", response.msg, "error");
+    //                     }
+    //              }
                     
-             });
+    //          });
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);

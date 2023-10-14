@@ -6,7 +6,7 @@ let appointmentList = new Map();
 
 $(document).ready(function() {
     $('.timepicker').timepicker({
-        showInputs: false
+        showInputs: true
     });
     
     // Handle the time selection event
