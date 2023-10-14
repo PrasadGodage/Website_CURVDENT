@@ -142,6 +142,13 @@ class SendEmailController extends REST_Controller {
         $response = [];
 
         $arrJson = json_decode($this->post('emailDetails'));
+
+        print_r($arrJson);
+
+        foreach ($arrJson as $i) {
+            $email = $i->email;
+            }
+        
     
         $config=array(
             

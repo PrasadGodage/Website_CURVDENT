@@ -43,10 +43,7 @@ $('#addPostForm').on('submit', function (e) {
         }
         
     });
-
-    
-    
-
+   
     var emailList=Array.from(newsLetterList.values());
     var jsonString= JSON.stringify(emailList);
     var formdata1 = new FormData();
