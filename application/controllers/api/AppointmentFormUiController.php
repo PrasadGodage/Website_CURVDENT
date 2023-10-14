@@ -20,7 +20,7 @@ class AppointmentFormUiController extends REST_Controller {
             
         try {
             //Authentication
-            //$headers = $this->input->request_headers();
+           // $headers = $this->input->request_headers();
 
             // if (isset($headers['Authorization'])) {
             //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
@@ -37,7 +37,8 @@ class AppointmentFormUiController extends REST_Controller {
                         $response['status'] = 404;
                         $this->response($response, REST_Controller::HTTP_OK);
                     }
-                    //     }else {
+                    //     }
+                    //     else {
                     //     $this->response($decodedToken);
                     // }
                     // }else {
@@ -62,7 +63,7 @@ class AppointmentFormUiController extends REST_Controller {
         $id = $this->post('id');
         
         //Authentication
-        $headers = $this->input->request_headers();
+        //$headers = $this->input->request_headers();
 
         // if (isset($headers['Authorization'])) {
         //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
@@ -132,7 +133,7 @@ class AppointmentFormUiController extends REST_Controller {
             
         try {
             //Authentication
-            $headers = $this->input->request_headers();
+            // $headers = $this->input->request_headers();
 
             // if (isset($headers['Authorization'])) {
             //     $decodedToken = $this->authorization_token->validateToken($headers['Authorization']);
@@ -152,8 +153,7 @@ class AppointmentFormUiController extends REST_Controller {
                             $this->response($response, REST_Controller::HTTP_OK);
                         }
                     }
-                //}
-            //     else {
+            //     }else {
             //         $this->response($decodedToken);
             //     }
                 

@@ -17,7 +17,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Enter Email Address</label>
-                                    <input type="text" class="form-control" placeholder="Enter Email Address" id="email" name="email">
+                                    <input type="email" class="form-control" placeholder="Enter Email Address" id="email" name="email">
+                                    <span id="emailError" class="error"></span>
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>

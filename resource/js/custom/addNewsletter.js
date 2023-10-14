@@ -4,6 +4,21 @@ let updatenewsletterId=id;
  console.log('newsletter id='+id);
 
 
+ // jQuery
+
+
+    //  $(document).ready(function () {
+    //      $("#PDF").change(function () {
+    //          // Get the selected PDF file's name
+    //          var pdfFileName = $(this).val().split("\\").pop();
+             
+    //          // Display the selected PDF file name in the "selectedPdfName" div
+    //          $("#selectedPdfName").text("Selected PDF: " + pdfFileName);
+    //      });
+    //  });
+
+ 
+
 
 
 $('#addNewsletterForm').on('submit', function (e) {
