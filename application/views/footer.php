@@ -253,6 +253,8 @@
   <!-- bootstrap time picker -->
   <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.js'; ?>"></script>
 
+  <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
+
     <script>
     //Initialize Select2 Elements
     $('.select2').select2();
