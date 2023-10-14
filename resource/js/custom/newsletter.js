@@ -7,9 +7,9 @@ var pdfName;
     // $(document).ready(function () {
         $("#PDF").change(function () {
             // Get the selected PDF file's name
-            var pdfFilePath = $(this).val();
+            var pdfFilePath = './uploads/' ;
             var pdfFileName = $(this).val().split("\\").pop();
-            
+            var result = pdfFilePath.concat(pdfFileName);
 
             // Display the selected PDF file name in the "selectedPdfName" div
             $("#selectedPdfName").text("" + pdfFileName);
