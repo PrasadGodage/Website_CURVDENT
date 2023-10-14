@@ -250,6 +250,9 @@
 
 <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
 
+  <!-- Daterange picker -->	
+  <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-timepicker\js\bootstrap-timepicker.js';?>">
+
 
 
     <script>

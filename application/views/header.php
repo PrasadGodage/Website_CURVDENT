@@ -30,6 +30,8 @@
         <!-- Daterange picker -->	
         <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css';?>">
 
+       <!-- Daterange picker -->	
+       <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-timepicker\css\timepicker.css';?>">
 
         <!-- Select2 -->
 	    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/css/select2.min.css'?>">	
