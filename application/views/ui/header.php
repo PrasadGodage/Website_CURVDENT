@@ -22,7 +22,8 @@
  <!-- Daterange picker -->	
  <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css';?>">
 
-
+<!-- Bootstrap time Picker -->
+<link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.css';?>">
 
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

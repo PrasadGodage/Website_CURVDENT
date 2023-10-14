@@ -637,7 +637,7 @@
 
                        
 
-                        <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
+                        <div class="col-md-6 form-group mb-2">
                             <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
                             <span id="dateError"></span>
                         </div>
