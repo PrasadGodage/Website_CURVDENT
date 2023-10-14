@@ -642,13 +642,12 @@
 
                         <div class="col-md-6 form-group">
                             <div class="input-group">
-                                <input type="text" class="col-md-6 form-control timepicker" id="timepicker" placeholder="Select Time" required>
-                                <div class="input-group-addon">
+                                <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required>
+                                <span class="input-group-addon">
                                     <i class="fa fa-clock-o"></i>
-                                </div>
-                                <span id="timeError"></span>
+                                </span>
                             </div>
-                            <!-- /.input group -->
+                            <span id="timeError"></span>
                         </div>
 
                         <!-- <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
