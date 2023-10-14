@@ -290,61 +290,6 @@ function sendEmailDetails(){
             });
         }
        
-
-
-// function setSubscriberList(list) {
-
-//     $('#subscriberTable').dataTable().fnDestroy();
-//     $('#subscriberList').empty();
-//     var tblData = '';
-//     var index=1;
-    
-//     for (let k of list.keys()) {
-        
-//         let subscriber = list.get(k);
-    
-//         tblData += `
-//         <tr>
-//                 <td>` + index + `</td>
-//                 <td>` + subscriber.email + `</td>
-//                 <td> <a href="#" onclick="updateSubscriberDetails(${subscriber.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                 <a href="#" onclick="deletesubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-//                 </td>
-                
-//         </tr>`;
-//         index++;
-//     }
-    
-//     $('#subscriberList').html(tblData);
-//     $('#subscriberTable').DataTable();
-//     }
-
-
-// function setSubscriberList1(list) {
-//     $('#subscriberTable').dataTable().fnDestroy();
-//     $('#subscriberList').empty();
-//         var tblData = '';
-//         var index = 1;
-        
-//         for (let k of list.keys()) {
-//             let subscriber = list.get(k);
-        
-//             tblData += `
-//             <tr>
-//                 <td><input type="checkbox" /></td>
-//                 <td>${index}</td>
-//                 <td>${subscriber.email}</td>
-//                 <td>        
-//                     <a href="#" onclick="updateSubscriberDetails(${subscriber.id})"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
-//                     <a href="#" onclick="deleteSubscriberDetails(${subscriber.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                  
-//                 </td>
-//             </tr>`;
-//             index++;
-//         }
-        
-//         $('#subscriberList').html(tblData);
-//         $('#subscriberTable').DataTable();
-// }
         
 function setSubscriberList1(list) {
     $('#subscriberTable').DataTable().destroy();
@@ -355,7 +300,7 @@ function setSubscriberList1(list) {
         // results.forEach(subscriber => {
         let tblData = `
             <tr>
-                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 0px; opacity: 1;" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
                 <td>
@@ -430,6 +375,29 @@ $('#sendEmail').click(function () {
     // });
 
     
+});
+
+
+$(document).ready(function () {
+    // Handle the Send button click event
+    $('#sendEmail').on('click', function () {
+        // Initialize an empty array to store selected data
+        var selectedData = [];
+
+        // Iterate through the checkboxes to find the selected data
+        $('.select-data:checked').each(function () {
+            var $row = $(this).closest('tr');
+            var name = $row.find('[data-name]').data('name');
+            var email = $row.find('[data-email]').data('email');
+            selectedData.push({ name: name, email: email });
+        });
+
+        // You can send the selectedData to your server here
+        console.log('Selected Data:', selectedData);
+        
+        // Clear selections
+        $('.select-data:checked').prop('checked', false);
+    });
 });
 
 
