@@ -49,6 +49,33 @@ $('#addPostForm').on('submit', function (e) {
     var formdata1 = new FormData();
     formdata1.append("emailDetails",jsonString);
 
+    $.ajax({
+                    url: ebase_url + 'sendPostEmail_api',
+        
+                    type: 'POST',
+        
+                    data: formdata1,
+        
+                    cache: false,
+        
+                    contentType: false,
+        
+                    processData: false,
+        
+                    dataType: 'json',
+        
+                 success: function(response) {
+                     if (response.status == 200) {
+                        alert('suceess');
+                        // swal("Good job!", response.msg, "success");
+                     } else {
+                        alert('error');
+                        // swal("ERROR!", response.msg, "error");
+                        }
+                 }
+                    
+             });
+
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
@@ -140,7 +167,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
-                console.log(postList);
+               // console.log(postList);
             }
 
         }
