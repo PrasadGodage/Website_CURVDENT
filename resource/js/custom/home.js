@@ -21,12 +21,13 @@ let appointmentList = new Map();
 // });
 
 
-$('#timeInput').timepicker({
-    timeFormat: 'h:mm p',
-    interval: 15,
-    dynamic: false,
-    dropdown: true,
-    scrollbar: true
+ // Listen for changes to the input
+ $('#timeInput').on('change', function() {
+    // Get the selected time
+    var selectedTime = $(this).val();
+
+    // Do something with the selected time, for example, display it in a div
+    $('#selectedTime').text(selectedTime);
   });
 
   //Date picker
