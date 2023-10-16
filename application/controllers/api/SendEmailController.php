@@ -142,21 +142,13 @@ class SendEmailController extends REST_Controller {
         $response = [];
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
-       
-        // foreach ($arrJson as $i) {
-        //     $email = $i->email;
-        //     }
-
+        
         $Mailstatus;
            
             for($i=0 ; $i < count($arrJson) ; $i++){
 
                 $data['email'] = $arrJson[$i]->email;  
-     //        }
-            
-            // echo "<pre>";
-            // print_r($data);
-    
+         
         $config=array(
             
             'protocol'   =>   'sendmail',
@@ -182,6 +174,8 @@ class SendEmailController extends REST_Controller {
         
         $this->email->subject('hello subject');
         $this->email->message('hello message');
+        // Attach the PDF file.
+        $this->email->attach($_FILES['pdfInput']['tmp_name'], 'your-pdf.pdf');
 
         $Mailstatus = $this->email->send();
 
