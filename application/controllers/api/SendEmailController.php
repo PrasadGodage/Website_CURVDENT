@@ -142,7 +142,7 @@ class SendEmailController extends REST_Controller {
         $response = [];
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
-        
+        $pdf=$this->post('pdfInput');
         $Mailstatus;
            
             for($i=0 ; $i < count($arrJson) ; $i++){
@@ -175,7 +175,7 @@ class SendEmailController extends REST_Controller {
         $this->email->subject('hello subject');
         $this->email->message('hello message');
         // Attach the PDF file.
-        $this->email->attach($_FILES['pdfInput']['tmp_name'], 'your-pdf.pdf');
+        $this->email->attach($_FILES['$pdf']['tmp_name'], 'your-pdf.pdf');
 
         $Mailstatus = $this->email->send();
 
