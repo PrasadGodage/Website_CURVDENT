@@ -642,7 +642,7 @@
 
                         <div class="col-md-6 form-group">
                             <!-- <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required> -->
-                            <input type="time" id="timeInput" placeholder="Select Time" required>
+                            <input type="time" class="col-md-6 form-control" id="timeInput" placeholder="Select Time" required>
                             <span id="timeError"></span>
                         </div>
 
