@@ -175,9 +175,15 @@ class SendEmailController extends REST_Controller {
         
         $this->email->subject('hello subject');
         $this->email->message('hello message');
-        // Attach the PDF file.
-        $this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
 
+
+        // Attach the PDF file.
+
+        $this->email->attach($pdf_path);
+
+        //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
+       // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
+       // $this->email->attach($attched_file);
         $Mailstatus = $this->email->send();
 
     }
