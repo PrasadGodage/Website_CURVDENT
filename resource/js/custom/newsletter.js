@@ -39,9 +39,6 @@ var pdfName;
             $('.select-data:checked').prop('checked', false);
         });
 
-
-
-
   
 //Submit Category Btn script
 
