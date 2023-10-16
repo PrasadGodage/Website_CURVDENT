@@ -390,9 +390,10 @@ $('#sendEmail').click(function () {
             // Iterate through the checkboxes to find the selected data
             $('.select-data:checked').each(function () {
                 var $row = $(this).closest('tr');
-                var name = $row.find('[data-name]').data('name');
+                // var name = $row.find('[data-name]').data('name');
                 var email = $row.find('[data-email]').data('email');
-                selectedData.push({ name: name, email: email });
+                // selectedData.push({ name: name, email: email });
+                selectedData.push({email: email });
             });
 
             // You can send the selectedData to your server here
