@@ -4,6 +4,22 @@ let newsLetterList1 = new Map();
 var pdfName;
 
 
+$('#sendEmail').on('click', function() {
+        var selectedItems = [];
+        
+        // Iterate over each checked checkbox
+        $('.checkbox:checked').each(function() {
+            selectedItems.push($(this).val());
+        });
+
+        // Now 'selectedItems' is an array containing the values of checked checkboxes
+
+        // You can send this data to your server or perform any desired action here
+        // For example, you can log the selected items to the console
+        console.log('', selectedItems);
+    });
+
+
     // $(document).ready(function () {
         $("#PDF").change(function () {
             // Get the selected PDF file's name
@@ -19,26 +35,26 @@ var pdfName;
 
 
 
-        // Handle the Send button click event
-        $('#sendEmail').on('click', function () {
-            // Initialize an empty array to store selected data
-            var selectedData = [];
+        // // Handle the Send button click event
+        // $('#sendEmail').on('click', function () {
+        //     // Initialize an empty array to store selected data
+        //     var selectedData = [];
 
-            // Iterate through the checkboxes to find the selected data
-            $('.select-data:checked').each(function () {
-                var $row = $(this).closest('tr');
-                // var name = $row.find('[data-name]').data('name');
-                var email = $row.find('[data-email]').data('email');
-                // selectedData.push({ name: name, email: email });
-                selectedData.push({email: email });
-            });
+        //     // Iterate through the checkboxes to find the selected data
+        //     $('.select-data:checked').each(function () {
+        //         var $row = $(this).closest('tr');
+        //         // var name = $row.find('[data-name]').data('name');
+        //         var email = $row.find('[data-email]').data('email');
+        //         // selectedData.push({ name: name, email: email });
+        //         selectedData.push({email: email });
+        //     });
 
-            // You can send the selectedData to your server here
-            console.log('Selected Data:', selectedData);
+        //     // You can send the selectedData to your server here
+        //     console.log('Selected Data:', selectedData);
             
-            // Clear selections
-            $('.select-data:checked').prop('checked', false);
-        });
+        //     // Clear selections
+        //     $('.select-data:checked').prop('checked', false);
+        // });
 
   
 //Submit Category Btn script
