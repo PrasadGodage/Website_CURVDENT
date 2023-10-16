@@ -147,7 +147,7 @@ class SendEmailController extends REST_Controller {
         //$pdfFilePath1 = FCPATH . "uploads/".$file.".pdf";
         $Mailstatus;
 
-        $file_data=$this->upload_file();
+       // $file_data=$this->upload_file();
 
         // if(is_array($file_data))
         // {
@@ -189,7 +189,7 @@ class SendEmailController extends REST_Controller {
 
         // Attach the PDF file.
 
-        $this->email->attach($file_data['full_path']);
+       // $this->email->attach($file_data['full_path']);
 
         //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
        // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
@@ -212,20 +212,20 @@ class SendEmailController extends REST_Controller {
         
     }
 
-   function upload_file(){
+//    function upload_file(){
 
-    $config['upload_path']= 'uploads/';
-    $config['allowed_types']= 'pdf';
-    $this->load->library('upload', $config);
-    if($this->upload->do_upload('PDF'))
-    {
-        return $this->upload->data();
-    }
-    else {
-        return $this->upload->display_errors();
-    }   
+//     $config['upload_path']= 'uploads/';
+//     $config['allowed_types']= 'pdf';
+//     $this->load->library('upload', $config);
+//     if($this->upload->do_upload('PDF'))
+//     {
+//         return $this->upload->data();
+//     }
+//     else {
+//         return $this->upload->display_errors();
+//     }   
 
-   } 
+//    } 
 
 
 }
