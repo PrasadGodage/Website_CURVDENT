@@ -473,7 +473,7 @@ $('#sendEmail').click(function () {
         let headers = name.concat(email,sendersubject,message);
         console.log(headers);  
 
-    let success = mail(mail_to, subject, headers);
+    // let success = mail(mail_to, subject, headers);
 
     // $.ajax({
     //     url: 'email.php',
