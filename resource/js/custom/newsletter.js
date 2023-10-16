@@ -84,12 +84,12 @@ $('#addNewsletterForm').on('submit', function (e) {
     });
     
     const pdfInput = document.getElementById('PDF');
-    //const pdfFile = pdfInput.files[0];
+    const pdfFile = pdfInput.files[0];
     var emailList=Array.from(newsLetterList1.values());
     var jsonString= JSON.stringify(emailList);
     var formdata1 = new FormData();
     formdata1.append("emailDetails",jsonString);
-    formdata1.append('pdfInput', pdfInput);
+    formdata1.append('pdfInput', pdfFile);
 
     $.ajax({
                     url: ebase_url + 'sendPostEmail_api',
