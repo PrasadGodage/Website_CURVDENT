@@ -180,8 +180,8 @@ class SendEmailController extends REST_Controller {
         $this->email->from('soulsoft.soul120@gmail.com');
         $this->email->to($data['email']);
         
-        $this->email->subject('testing purpose subject');
-        $this->email->message('testing purpose message');
+        $this->email->subject('hello subject');
+        $this->email->message('hello message');
 
         $Mailstatus = $this->email->send();
 
