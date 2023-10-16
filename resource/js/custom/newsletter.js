@@ -16,6 +16,29 @@ var pdfName;
         });
     // });
 
+
+
+        // Handle the Send button click event
+        $('#sendEmail').on('click', function () {
+            // Initialize an empty array to store selected data
+            var selectedData = [];
+
+            // Iterate through the checkboxes to find the selected data
+            $('.select-data:checked').each(function () {
+                var $row = $(this).closest('tr');
+                // var name = $row.find('[data-name]').data('name');
+                var email = $row.find('[data-email]').data('email');
+                // selectedData.push({ name: name, email: email });
+                selectedData.push({email: email });
+            });
+
+            // You can send the selectedData to your server here
+            console.log('Selected Data:', selectedData);
+            
+            // Clear selections
+            $('.select-data:checked').prop('checked', false);
+        });
+
   
 //Submit Category Btn script
 
@@ -303,7 +326,7 @@ function setSubscriberList1(list) {
         // results.forEach(subscriber => {
         let tblData = `
             <tr>
-                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index}" style="position: absolute; left: 0px; opacity: 1;" /></td>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 0px; opacity: 1;" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
                 <td>
@@ -379,29 +402,6 @@ $('#sendEmail').click(function () {
 
     
 });
-
-
- $(document).ready(function () {
-        // Handle the Send button click event
-        $('#send-button').on('click', function () {
-            // Initialize an empty array to store selected data
-            var selectedData = [];
-
-            // Iterate through the checkboxes to find the selected data
-            $('.select-data:checked').each(function () {
-                var $row = $(this).closest('tr');
-                var name = $row.find('[data-name]').data('name');
-                var email = $row.find('[data-email]').data('email');
-                selectedData.push({ name: name, email: email });
-            });
-
-            // You can send the selectedData to your server here
-            console.log('Selected Data:', selectedData);
-            
-            // Clear selections
-            $('.select-data:checked').prop('checked', false);
-        });
-    });
 
 
  //import newsletterValidation script
