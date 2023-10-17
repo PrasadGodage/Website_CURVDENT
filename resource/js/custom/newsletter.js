@@ -445,7 +445,7 @@ function setSubscriberList1(list) {
       } else {
         $('#chkAll').prop('checked', false);
       }
-    //   getCheckRecords();
+      getCheckRecords();
     });
 
     $("#chkAll").change(function () {
@@ -455,9 +455,37 @@ function setSubscriberList1(list) {
       } else {
         $('.tblChk').not(this).prop('checked', false);
       }
-    //   getCheckRecords();
+      getCheckRecords();
     })
 //   });
+
+    function getCheckRecords() {
+        debugger;
+        $(".selectedDiv").html("");
+        $('.tblChk:checked').each(function () {
+        debugger;
+        if ($(this).prop('checked')) {
+            if ($(".selectedDiv").children().length == 0) {
+            const rec = "<strong>" + $(this).attr("data-id") + " </strong>";
+            $(".selectedDiv").append(rec);
+            } else {
+            const rec = ", <strong>" + $(this).attr("data-id") + " </strong>";
+            $(".selectedDiv").append(rec);
+            }
+        }
+        console.log(this.value);
+        });
+    }
+
+
+
+
+
+
+
+
+
+
 
 // //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 // $('#sendEmail').click(function () {
@@ -498,31 +526,31 @@ function setSubscriberList1(list) {
 
 // select checked value data ----------------------------
 
-var table;
+// var table;
 
-$(document).ready(function () {
-    table = $('#subscriberTable').DataTable({
-        'columnDefs': [
-            {
-                'targets': 0,
-                'checkboxes': {
-                    'selectRow': true
-                }
-            }
-        ],
-        'select': {
-            'style': 'multi'
-        },
-        'order': [[1, 'asc']]
-    });
-});
-
-$('#sendEmail').on('click', function () {
-    var selected_rows = table.column(0).checkboxes.selected();
-    $.each(selected_rows, function (index, id) {
-        console.log(id);
-    });
-});
+// $(document).ready(function () {
+//     table = $('#subscriberTable').DataTable({
+//         'columnDefs': [
+//             {
+//                 'targets': 0,
+//                 'checkboxes': {
+//                     'selectRow': true
+//                 }
+//             }
+//         ],
+//         'select': {
+//             'style': 'multi'
+//         },
+//         'order': [[1, 'asc']]
+//     });
+// });
+ 
+// $('#sendEmail').on('click', function () {
+//     var selected_rows = table.column(0).checkboxes.selected();
+//     $.each(selected_rows, function (index, id) {
+//         console.log(id);
+//     });
+// });
 
 
 

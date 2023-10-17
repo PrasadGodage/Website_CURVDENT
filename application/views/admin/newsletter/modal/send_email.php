@@ -27,8 +27,14 @@
                                         </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
-                                <div class="box-body ">
-                                
+                                    <div class="box-body ">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h3>Selected Record ids: => </h3>
+                                            </div>
+                                            <div class="col-md-8 selectedDiv">
+                                            </div>
+                                        </div>
                                         <div class="table-responsive">
                                             <table id="subscriberTable" class="table table-bordered table-hover">
                                                 <thead>
