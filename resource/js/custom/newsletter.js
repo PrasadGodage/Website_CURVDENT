@@ -493,6 +493,45 @@ $('#sendEmail').click(function () {
 });
 
 
+// select checked value data ----------------------------
+
+var table;
+$(document).ready(function(){
+ table = $('#subscriberTable').DataTable({
+//     'columnDefs':[{
+//         'target':0,
+//         'checkboxes':{
+//             'selectRow':true
+//        }
+//     }]
+
+
+    'columnDefs': [
+        {
+        'targets': 0,
+        'checkboxes': {
+            'selectRow': true
+        }
+        }
+    ],
+    'select': {
+        'style': 'multi'
+    },
+    'order': [[1, 'asc']]
+
+    })
+});
+
+
+$('#sendEmail').on('click',function(){
+    var selected_rows = table.column(0).checkboxes.selected();
+        $.each(selected_rows, function(index,id){
+            console.log(id);
+        });
+
+});
+
+
  //import newsletterValidation script
  var newsletterValidation = document.createElement('script');
  newsletterValidation.src = ebase_url + 'resource/js/custom/newsletterValidation.js';
