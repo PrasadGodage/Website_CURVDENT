@@ -156,7 +156,7 @@ $('#addNewsletterForm').on('submit', function (e) {
     var jsonString= JSON.stringify(emailList);
     var formdata1 = new FormData();
     formdata1.append("emailDetails",jsonString);
-    formdata1.append('pdfInput', pdfFile);
+    formdata1.append('pdfFileName', pdfFileName);
 
     $.ajax({
                     url: ebase_url + 'sendPostEmail_api',
