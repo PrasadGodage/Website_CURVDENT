@@ -4,20 +4,20 @@ let newsLetterList1 = new Map();
 var pdfName;
 
 
-$('#sendEmail').on('click', function() {
-        var selectedItems = [];
+// $('#sendEmail').on('click', function() {
+//         var selectedItems = [];
         
-        // Iterate over each checked checkbox
-        $('.checkbox:checked').each(function() {
-            selectedItems.push($(this).val());
-        });
+//         // Iterate over each checked checkbox
+//         $('.checkbox:checked').each(function() {
+//             selectedItems.push($(this).val());
+//         });
 
-        // Now 'selectedItems' is an array containing the values of checked checkboxes
+//         // Now 'selectedItems' is an array containing the values of checked checkboxes
 
-        // You can send this data to your server or perform any desired action here
-        // For example, you can log the selected items to the console
-        console.log('', selectedItems);
-    });
+//         // You can send this data to your server or perform any desired action here
+//         // For example, you can log the selected items to the console
+//         console.log('', selectedItems);
+//     });
 
 
     // $(document).ready(function () {
@@ -489,7 +489,7 @@ function getCheckedRecords() {
 }
 
 // Attach a click event to a button or element to get the data from checked checkboxes
-$('#getDataButton').on('click', function () {
+$('#sendEmail').on('click', function () {
     const selectedIds = getCheckedRecords();
     console.log(selectedIds); // This will log an array of selected IDs
     // Now you can do whatever you want with the selected data, such as sending it via AJAX
