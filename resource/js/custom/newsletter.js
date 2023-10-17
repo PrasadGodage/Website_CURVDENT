@@ -150,6 +150,8 @@ $('#addNewsletterForm').on('submit', function (e) {
     
     const pdfInput = document.getElementById('PDF');
     const pdfFile = pdfInput.files[0];
+    const pdfFileName = pdfFile.name;
+    console.log(pdfFileName);
     var emailList=Array.from(newsLetterList1.values());
     var jsonString= JSON.stringify(emailList);
     var formdata1 = new FormData();
