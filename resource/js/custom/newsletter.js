@@ -62,78 +62,6 @@ $('#sendEmail').on('click', function() {
 $('#addNewsletterForm').on('submit', function (e) {
     e.preventDefault();
 
-     //logic for send mail for blog
-
-    $.ajax({
-
-        url: ebase_url+'newsletter_api',
-
-        type: 'GET',
-
-        async:false,
-
-        headers: {
-            "Authorization": etoken
-        },
-
-        dataType: 'json',
-
-        success: function (response) {
-        
-
-            if (response.status == 200) {
-
-                if (response.data.length != 0) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        if (response.data[i].is_active == 1){
-                            newsLetterList1.set(response.data[i].id, response.data[i]);
-
-                        }
-                       console.log(newsLetterList1); 
-                    }
-                    
-                }
-          }
-
-        }
-        
-    });
-    
-    const pdfInput = document.getElementById('PDF');
-    const pdfFile = pdfInput.files[0];
-    var emailList=Array.from(newsLetterList1.values());
-    var jsonString= JSON.stringify(emailList);
-    var formdata1 = new FormData();
-    formdata1.append("emailDetails",jsonString);
-    formdata1.append('pdfInput', pdfFile);
-
-    $.ajax({
-                    url: ebase_url + 'sendPostEmail_api',
-        
-                    type: 'POST',
-        
-                    data: formdata1,
-        
-                    cache: false,
-        
-                    contentType: false,
-        
-                    processData: false,
-        
-                    dataType: 'json',
-        
-                 success: function(response) {
-                     if (response.status == 200) {
-                        alert('suceess');
-                        // swal("Good job!", response.msg, "success");
-                     } else {
-                        alert('error');
-                        // swal("ERROR!", response.msg, "error");
-                        }
-                 }
-                    
-             });
-
     var returnVal = $("#addNewsletterForm").valid();
     var formdata = new FormData(this);
     if (returnVal) {
@@ -182,6 +110,79 @@ $('#addNewsletterForm').on('submit', function (e) {
 
         });
     }
+
+    //logic for send mail for blog
+
+    $.ajax({
+
+        url: ebase_url+'newsletter_api',
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        if (response.data[i].is_active == 1){
+                            newsLetterList1.set(response.data[i].id, response.data[i]);
+
+                        }
+                        
+                    }
+                    
+                }
+          }
+
+        }
+        
+    });
+    
+    const pdfInput = document.getElementById('PDF');
+    const pdfFile = pdfInput.files[0];
+    var emailList=Array.from(newsLetterList1.values());
+    var jsonString= JSON.stringify(emailList);
+    var formdata1 = new FormData();
+    formdata1.append("emailDetails",jsonString);
+    formdata1.append('pdfInput', pdfFile);
+
+    $.ajax({
+                    url: ebase_url + 'sendPostEmail_api',
+        
+                    type: 'POST',
+        
+                    data: formdata1,
+        
+                    cache: false,
+        
+                    contentType: false,
+        
+                    processData: false,
+        
+                    dataType: 'json',
+        
+                 success: function(response) {
+                     if (response.status == 200) {
+                        alert('suceess');
+                        // swal("Good job!", response.msg, "success");
+                     } else {
+                        alert('error');
+                        // swal("ERROR!", response.msg, "error");
+                        }
+                 }
+                    
+             });
+
 });
 
 //Add Newsletter  Btn script -----------------------------------------------------------------
@@ -234,7 +235,7 @@ function getNewsletterList() {
                     
                 }
                 setNewsletterList(newsletterList);
-                console.log(newsletterList);
+                
             }
 
         }
@@ -397,7 +398,7 @@ function sendEmailDetails(){
                             
                         }
                         setSubscriberList1(subscriberList);
-                        console.log(subscriberList);
+                       
                     }
         
                 }
