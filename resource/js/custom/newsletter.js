@@ -509,8 +509,8 @@ function getCheckRecords() {
         } else {
             $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
         }
+        console.log(dataId,email);
     });
-    console.log(dataId,email);
 }
 
 function getSubscriberEmail(dataId) {
