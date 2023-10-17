@@ -518,12 +518,14 @@ function getSubscriberEmail(dataId) {
     // It might involve searching the subscriberList or making an API call to get the email.
     // For this example, I assume you have a subscriberList object.
     const subscriber = subscriberList.get(dataId);
+    console.log(subscriber.email);
     if (subscriber) {
         return subscriber.email;
+
     }
     return ""; // Return an empty string if no email is found.
 }
-console.log(subscriber.email);
+
 
 
 
