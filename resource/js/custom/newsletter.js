@@ -523,7 +523,7 @@ function getSubscriberEmail(dataId) {
     }
     return ""; // Return an empty string if no email is found.
 }
-console.log(dataId);
+console.log(email);
 
 
 
