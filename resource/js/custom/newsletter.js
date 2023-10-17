@@ -459,26 +459,41 @@ function setSubscriberList1(list) {
     })
 //   });
 
-    function getCheckRecords() {
-        debugger;
-        $(".selectedDiv").html("");
-        $('.tblChk:checked').each(function () {
-        debugger;
-        if ($(this).prop('checked')) {
-            if ($(".selectedDiv").children().length == 0) {
-            const rec = "<strong>" + $(this).attr("data-id") + " </strong>";
-            $(".selectedDiv").append(rec);
-            } else {
-            const rec = ", <strong>" + $(this).attr("data-id") + " </strong>";
-            $(".selectedDiv").append(rec);
-            }
-        }
-        console.log(this.value);
-        console.log(data.email);
-        });
-    }
+    // function getCheckRecords() {
+    //     debugger;
+    //     $(".selectedDiv").html("");
+    //     $('.tblChk:checked').each(function () {
+    //     debugger;
+    //     if ($(this).prop('checked')) {
+    //         if ($(".selectedDiv").children().length == 0) {
+    //         const rec = "<strong>" + $(this).attr("data-id") + " </strong>";
+    //         $(".selectedDiv").append(rec);
+    //         } else {
+    //         const rec = ", <strong>" + $(this).attr("data-id") + " </strong>";
+    //         $(".selectedDiv").append(rec);
+    //         }
+    //     }
+    //     console.log(this.value);
+    //     console.log(data.email);
+    //     });
+    // }
 
 
+// Use this function to get data from checked checkboxes
+function getCheckedRecords() {
+    const selectedIds = [];
+    $('.tblChk:checked').each(function () {
+        selectedIds.push($(this).attr('data-id'));
+    });
+    return selectedIds;
+}
+
+// Attach a click event to a button or element to get the data from checked checkboxes
+$('#getDataButton').on('click', function () {
+    const selectedIds = getCheckedRecords();
+    console.log(selectedIds); // This will log an array of selected IDs
+    // Now you can do whatever you want with the selected data, such as sending it via AJAX
+});
 
 
 
