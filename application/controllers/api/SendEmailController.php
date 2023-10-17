@@ -183,8 +183,8 @@ class SendEmailController extends REST_Controller {
         $this->email->from('soulsoft.soul120@gmail.com');
         $this->email->to($data['email']);
         
-        $this->email->subject('hello subject');
-        $this->email->message('hello message');
+        $this->email->subject('Our Latest NewsLetter subject');
+        $this->email->message('Our Latest NewsLetter Message');
 
 
         // Attach the PDF file.
