@@ -474,6 +474,7 @@ function setSubscriberList1(list) {
             }
         }
         console.log(this.value);
+        console.log(this.email);
         });
     }
 
