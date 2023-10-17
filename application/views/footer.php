@@ -255,17 +255,8 @@
 
   <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
 
-<!-- This is select --->
-<script src="<?php echo base_url() . 'resource\ assets\vendor_components\bootstrap-select\dist\js\bootstrap-select.js'; ?>"></script>
-
 <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
 
-
-
-  <!-- Bootstrap icheck -->
-  <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\iCheck\iCheck.js';?>">
-
-  <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\iCheck\iCheck.min.js';?>">
 
     <script>
     //Initialize Select2 Elements
