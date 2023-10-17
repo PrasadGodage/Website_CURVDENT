@@ -479,24 +479,49 @@ function setSubscriberList1(list) {
     // }
 
 
-// Use this function to get data from checked checkboxes
-function getCheckedRecords() {
-    const selectedIds = [];
+// // Use this function to get data from checked checkboxes
+// function getCheckedRecords() {
+//     const selectedIds = [];
+//     $('.tblChk:checked').each(function () {
+//         selectedIds.push($(this).attr('data-id'));
+//     });
+//     return selectedIds;
+// }
+
+// // Attach a click event to a button or element to get the data from checked checkboxes
+// $('#sendEmail').on('click', function () {
+//     const selectedIds = getCheckedRecords();
+//     console.log(selectedIds); // This will log an array of selected IDs
+//     // Now you can do whatever you want with the selected data, such as sending it via AJAX
+// });
+
+
+
+function getCheckRecords() {
+    $(".selectedDiv").html(""); // Clear the selected records div
+
     $('.tblChk:checked').each(function () {
-        selectedIds.push($(this).attr('data-id'));
+        const dataId = $(this).attr("data-id");
+        const email = getSubscriberEmail(dataId); // This function fetches the email based on data-id, you need to implement it
+
+        if ($(".selectedDiv").children().length === 0) {
+            $(".selectedDiv").append(`<strong>${dataId} (${email})</strong>`);
+        } else {
+            $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
+        }
     });
-    return selectedIds;
 }
 
-// Attach a click event to a button or element to get the data from checked checkboxes
-$('#sendEmail').on('click', function () {
-    const selectedIds = getCheckedRecords();
-    console.log(selectedIds); // This will log an array of selected IDs
-    // Now you can do whatever you want with the selected data, such as sending it via AJAX
-});
-
-
-
+function getSubscriberEmail(dataId) {
+    // You should implement this function to get the email based on data-id.
+    // It might involve searching the subscriberList or making an API call to get the email.
+    // For this example, I assume you have a subscriberList object.
+    const subscriber = subscriberList.get(dataId);
+    if (subscriber) {
+        return subscriber.email;
+    }
+    return ""; // Return an empty string if no email is found.
+}
 
 
 
