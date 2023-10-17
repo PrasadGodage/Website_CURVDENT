@@ -456,80 +456,71 @@ function setSubscriberList1(list) {
     })
 //   });
 
-//Add Newsletter sendEmail Btn script -----------------------------------------------------------------
-$('#sendEmail').click(function () {
-    let mail_to = "soulsoft.urmila@gmail.com";
-    console.log(mail_to);
-    let subject= "test subject";
-    console.log(subject);
+// //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
+// $('#sendEmail').click(function () {
+//     let mail_to = "soulsoft.urmila@gmail.com";
+//     console.log(mail_to);
+//     let subject= "test subject";
+//     console.log(subject);
      
 
-        // sender details
-        let name = "urmila";
-        let email = "soulsoft.soul120@gmail.com";
-        let sendersubject = "test";
-        let message = "test msg";
+//         // sender details
+//         let name = "urmila";
+//         let email = "soulsoft.soul120@gmail.com";
+//         let sendersubject = "test";
+//         let message = "test msg";
 
-        let headers = name.concat(email,sendersubject,message);
-        console.log(headers);  
+//         let headers = name.concat(email,sendersubject,message);
+//         console.log(headers);  
 
-    // let success = mail(mail_to, subject, headers);
+//     // let success = mail(mail_to, subject, headers);
 
-    // $.ajax({
-    //     url: 'email.php',
-    //     type: 'POST',
-    //     data: fData,
-    //     cache: false,
-    //     contentType: false,
-    //     processData: false,
-    //     success: function (response) {
+//     // $.ajax({
+//     //     url: 'email.php',
+//     //     type: 'POST',
+//     //     data: fData,
+//     //     cache: false,
+//     //     contentType: false,
+//     //     processData: false,
+//     //     success: function (response) {
       
-    //  alert("response as recorde");
-    //                      },
+//     //  alert("response as recorde");
+//     //                      },
     
-    // });
+//     // });
 
     
-});
+// });
 
 
 // select checked value data ----------------------------
 
 var table;
-$(document).ready(function(){
- table = $('#subscriberTable').DataTable({
-//     'columnDefs':[{
-//         'target':0,
-//         'checkboxes':{
-//             'selectRow':true
-//        }
-//     }]
 
-
-    'columnDefs': [
-        {
-        'targets': 0,
-        'checkboxes': {
-            'selectRow': true
-        }
-        }
-    ],
-    'select': {
-        'style': 'multi'
-    },
-    'order': [[1, 'asc']]
-
-    })
+$(document).ready(function () {
+    table = $('#subscriberTable').DataTable({
+        'columnDefs': [
+            {
+                'targets': 0,
+                'checkboxes': {
+                    'selectRow': true
+                }
+            }
+        ],
+        'select': {
+            'style': 'multi'
+        },
+        'order': [[1, 'asc']]
+    });
 });
 
-
-$('#sendEmail').on('click',function(){
+$('#sendEmail').on('click', function () {
     var selected_rows = table.column(0).checkboxes.selected();
-        $.each(selected_rows, function(index,id){
-            console.log(id);
-        });
-
+    $.each(selected_rows, function (index, id) {
+        console.log(id);
+    });
 });
+
 
 
  //import newsletterValidation script
