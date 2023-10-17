@@ -142,10 +142,11 @@ class SendEmailController extends REST_Controller {
         $response = [];
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
-        // $pdf=$this->post('pdfInput');
+        $pdf=$this->post('pdfInput');
         // $pdf_path = FCPATH . 'uploads/' . $pdf;
+        $pdf_path = FCPATH . 'uploads/website_Requirement1.pdf';
         //$pdfFilePath1 = FCPATH . "uploads/".$file.".pdf";
-        $Mailstatus;
+         $Mailstatus;
 
        // $file_data=$this->upload_file();
 
@@ -193,7 +194,7 @@ class SendEmailController extends REST_Controller {
 
         //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
        // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
-       // $this->email->attach($attched_file);
+        $this->email->attach($pdf_path);
         $Mailstatus = $this->email->send();
 
     }
