@@ -510,6 +510,7 @@ function getCheckRecords() {
             $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
         }
     });
+    console.log(dataId,email);
 }
 
 function getSubscriberEmail(dataId) {
@@ -522,6 +523,7 @@ function getSubscriberEmail(dataId) {
     }
     return ""; // Return an empty string if no email is found.
 }
+console.log(dataId);
 
 
 
