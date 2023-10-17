@@ -143,7 +143,7 @@ class SendEmailController extends REST_Controller {
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
         $pdf=$this->post('pdfFileName');
-        $pdf_path = FCPATH . 'uploads/' . $pdf;
+        //$pdf_path = FCPATH . 'uploads/' . $pdf;
          print_r($pdf_path);
          $Mailstatus;
 
@@ -159,6 +159,7 @@ class SendEmailController extends REST_Controller {
             for($i=0 ; $i < count($arrJson) ; $i++){
 
                 $data['email'] = $arrJson[$i]->email;  
+                $pdf_path = FCPATH . 'uploads/' . $pdf;
          
         $config=array(
             
