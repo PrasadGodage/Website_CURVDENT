@@ -666,13 +666,13 @@ function getCheckRecords() {
 //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 $('#sendEmail').click(function () {
 
-   // var chkMailList=Array.from(subscriberList.values());
-    var jsonString= JSON.stringify(subscriber);
+    var chkMailList=Array.from(emailList.values());
+    var jsonString= JSON.stringify(chkMailList);
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
     formdata2.append("pdf",pdf);
     console.log(emailList); // You can use the selected data array as needed
-    
+    console.log(formdata2);
     // $.ajax({
     //             url: ebase_url + 'sendSubscriber_api',
         
