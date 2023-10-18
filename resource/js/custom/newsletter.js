@@ -497,7 +497,7 @@ function setSubscriberList1(list) {
       } else {
         $('#chkAll').prop('checked', false);
       }
-      getCheckRecords();
+    //   getCheckRecords();
     });
 
     $("#chkAll").change(function () {
@@ -507,7 +507,7 @@ function setSubscriberList1(list) {
       } else {
         $('.tblChk').not(this).prop('checked', false);
       }
-      getCheckRecords();
+    //   getCheckRecords();
     })
 //   });
 
@@ -613,6 +613,7 @@ function setSubscriberList1(list) {
             $(".selectedDiv").append(rec);
         }
     });
+    console.log(selectedData);
 
     // Handle the "Select All" checkbox
     $("#chkAll").change(function () {
