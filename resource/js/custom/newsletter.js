@@ -632,7 +632,7 @@ function setSubscriberList1(list) {
 function getCheckRecords() {
     $(".selectedDiv").html(""); // Clear the selected records div
     // const selectedData = []; // Array to store selected data
-      selectedData = []; // Array to store selected data
+      //selectedData = []; // Array to store selected data
 
     $('.tblChk:checked').each(function () {
         const dataId = $(this).attr("data-id"); // Get the data-id attribute (in your case, the index value)
@@ -654,6 +654,7 @@ function getCheckRecords() {
     // You can process or send this data as needed
 
    console.log(selectedData); // Log the selected data for reference
+
 }
 
 
