@@ -671,7 +671,7 @@
 
     <!-- NewsLetters -->
     <section class="section-padding shadow light-pink-bg" data-scroll-index="" >
-        <div class="container">
+        <div class="container shadow">
             <div class="row">
                 <div class="col-md-12 mb-20">
                     <h2 class="section-title" id="contact">Newsletter</h2>
