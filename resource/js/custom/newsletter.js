@@ -64,7 +64,7 @@ $('#addNewsletterForm').on('submit', function (e) {
 
     var returnVal = $("#addNewsletterForm").valid();
     var formdata = new FormData(this);
-    if (returnVal) {
+    // if (returnVal) {
      
         $.ajax({
 
@@ -88,15 +88,15 @@ $('#addNewsletterForm').on('submit', function (e) {
 
             success: function (response) {
                 if (response.status == 200) {
-                    $(location).attr('href',ebase_url+'newsletter');
+                    //$(location).attr('href',ebase_url+'newsletter');
 
-                    let id=response.data.id;
+                //     let id=response.data.id;
                   
-                 if(newsletterList.has(id)){
-                    newsletterList.delete(id);   
-                 }
-                 newsletterList.set(id, response.data);
-                 setNewsletterList(newsletterList);
+                //  if(newsletterList.has(id)){
+                //     newsletterList.delete(id);   
+                //  }
+                //  newsletterList.set(id, response.data);
+                //  setNewsletterList(newsletterList);
 
                     swal("Good job!", response.msg, "success");
                     $(location).attr('href',ebase_url+'newsletter');
@@ -109,7 +109,7 @@ $('#addNewsletterForm').on('submit', function (e) {
             }
 
         });
-    }
+     //}
 
     //logic for send mail for blog
 
