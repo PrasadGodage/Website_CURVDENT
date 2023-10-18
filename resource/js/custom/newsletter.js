@@ -653,7 +653,7 @@ function getCheckRecords() {
     // Now, you have the selected data in the 'selectedData' array
     // You can process or send this data as needed
 
-   // console.log(selectedData); // Log the selected data for reference
+   console.log(selectedData); // Log the selected data for reference
 }
 
 
