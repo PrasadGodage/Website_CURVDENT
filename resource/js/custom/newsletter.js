@@ -1,6 +1,7 @@
 let newsletterList = new Map();
 let subscriberList = new Map();
 let newsLetterList1 = new Map();
+let newsletterpdfList = new Map();
 var pdfName;
 
 
@@ -162,7 +163,6 @@ function sendPdf()
     const pdfInput = document.getElementById('PDF');
     const pdfFile = pdfInput.files[0];
     const pdfFileName = pdfFile.name;
-    console.log(pdfFileName);
     var emailList=Array.from(newsLetterList1.values());
     var jsonString= JSON.stringify(emailList);
     var formdata1 = new FormData();
@@ -282,7 +282,7 @@ function setNewsletterList(list) {
                 <td>` + newsletter.date + `</td>
                 <td> <a href="#" onclick="updateNewsletterDetails(${newsletter.id})" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                 <a href="#" onclick="deleteNewsletterDetails(${newsletter.id})"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>                          
-                <a href="#" onclick="sendEmailDetails()">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="sendEmailDetails(${newsletter.id})">Sent<i class="fa fa-fw fa-arrow-right" style="font-size: 20px;"></i></a>
 
                 </td>
                 
@@ -371,7 +371,6 @@ function updateNewsletterDetails(id) {
    //  $('#PDF').attr('src', ebase_url + newsletter.PDF);
   //$('#date').val(newsletter.date);
     pdfName=newsletter.PDF;
-    console.log(pdfName);
     var pdfLink = '';
     pdfLink += '<a class="help-block mt-3 ml-2" href='+ pdfName +' target="_blank" >Open PDF</a>';
     $('#pdfLink').html(pdfLink);
@@ -380,7 +379,7 @@ function updateNewsletterDetails(id) {
     $('#addNewsletterModal').modal('toggle');
 }
  
-function sendEmailDetails(){
+function sendEmailDetails(id){
 
     $('#addSendEmailModal').modal('toggle');
 
@@ -417,6 +416,42 @@ function sendEmailDetails(){
                 }
                 
             });
+
+////////////////////Get newsletter to given id
+            $.ajax({
+
+                url: ebase_url+'postNewsletter_api/'+id,
+        
+                type: 'GET',
+        
+                async:false,
+        
+                headers: {
+                    "Authorization": etoken
+                },
+        
+                dataType: 'json',
+        
+                success: function (response) {
+                
+        
+                    if (response.status == 200) {
+        
+                        if (response.data.length != 0) {
+                            for (var i = 0; i < response.data.length; i++) {
+                                newsletterpdfList.set(response.data[i].id, response.data[i]);
+                            }
+                            
+                        }
+                        console.log(newsletterpdfList);
+                        
+                    }
+        
+                }
+                
+            });
+
+
         }
        
         
@@ -520,8 +555,7 @@ function getCheckRecords() {
         } else {
             $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
         }
-        console.log(dataId,email);
-    });
+     });
 }
 
 function getSubscriberEmail(dataId) {
@@ -529,7 +563,6 @@ function getSubscriberEmail(dataId) {
     // It might involve searching the subscriberList or making an API call to get the email.
     // For this example, I assume you have a subscriberList object.
     const subscriber = subscriberList.get(dataId);
-    console.log(subscriber.email);
     if (subscriber) {
         return subscriber.email;
 
