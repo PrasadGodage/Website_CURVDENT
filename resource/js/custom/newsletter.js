@@ -548,33 +548,52 @@ function setSubscriberList1(list) {
 
 
 
+// function getCheckRecords() {
+//     $(".selectedDiv").html(""); // Clear the selected records div
+
+//     $('.tblChk:checked').each(function () {
+//         const dataId = $(this).attr("data-id");
+//         const email = getSubscriberEmail(dataId); // This function fetches the email based on data-id, you need to implement it
+
+//         if ($(".selectedDiv").children().length === 0) {
+//             $(".selectedDiv").append(`<strong>${dataId} (${email})</strong>`);
+//         } else {
+//             $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
+//         }
+//      });
+// }
+
+// function getSubscriberEmail(dataId) {
+//     // You should implement this function to get the email based on data-id.
+//     // It might involve searching the subscriberList or making an API call to get the email.
+//     // For this example, I assume you have a subscriberList object.
+//      subscriber = subscriberList.get(dataId);
+//     if (subscriber) {
+//         return subscriber.email;
+
+//     }
+//     return ""; // Return an empty string if no email is found.
+// }
+
 function getCheckRecords() {
-    $(".selectedDiv").html(""); // Clear the selected records div
-
+    var selectedData = []; // Create an array to store the selected data
+    $(".selectedDiv").html(""); // Clear the previous selection display
     $('.tblChk:checked').each(function () {
-        const dataId = $(this).attr("data-id");
-        const email = getSubscriberEmail(dataId); // This function fetches the email based on data-id, you need to implement it
-
-        if ($(".selectedDiv").children().length === 0) {
-            $(".selectedDiv").append(`<strong>${dataId} (${email})</strong>`);
+        var dataId = $(this).data("id"); // Get the data-id attribute value
+        var email = $(this).closest('tr').find('td:nth-child(3)').text(); // Get the email from the same row
+        selectedData.push({ id: dataId, email: email }); // Store data in the array
+    });
+    
+    // Display the selected data
+    for (var i = 0; i < selectedData.length; i++) {
+        if (i == 0) {
+            $(".selectedDiv").append("<strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
         } else {
-            $(".selectedDiv").append(`, <strong>${dataId} (${email})</strong>`);
+            $(".selectedDiv").append(", <strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
         }
-     });
-}
-
-function getSubscriberEmail(dataId) {
-    // You should implement this function to get the email based on data-id.
-    // It might involve searching the subscriberList or making an API call to get the email.
-    // For this example, I assume you have a subscriberList object.
-     subscriber = subscriberList.get(dataId);
-    if (subscriber) {
-        return subscriber.email;
-
     }
-    return ""; // Return an empty string if no email is found.
+    console.log(selectedData); // You can use the selected data array as needed
 }
-
 
 
 
@@ -593,34 +612,6 @@ $('#sendEmail').click(function () {
     
 });
 
-
-// select checked value data ----------------------------
-
-// var table;
-
-// $(document).ready(function () {
-//     table = $('#subscriberTable').DataTable({
-//         'columnDefs': [
-//             {
-//                 'targets': 0,
-//                 'checkboxes': {
-//                     'selectRow': true
-//                 }
-//             }
-//         ],
-//         'select': {
-//             'style': 'multi'
-//         },
-//         'order': [[1, 'asc']]
-//     });
-// });
- 
-// $('#sendEmail').on('click', function () {
-//     var selected_rows = table.column(0).checkboxes.selected();
-//     $.each(selected_rows, function (index, id) {
-//         console.log(id);
-//     });
-// });
 
 
 
