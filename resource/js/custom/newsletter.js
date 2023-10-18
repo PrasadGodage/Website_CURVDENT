@@ -99,6 +99,7 @@ $('#addNewsletterForm').on('submit', function (e) {
                 //  setNewsletterList(newsletterList);
 
                     swal("Good job!", response.msg, "success");
+                    sendPdf();
                     $(location).attr('href',ebase_url+'newsletter');
                 } else {
 
@@ -111,7 +112,14 @@ $('#addNewsletterForm').on('submit', function (e) {
         });
      //}
 
-    //logic for send mail for blog
+          
+    
+
+});
+
+function sendPdf()
+      {
+        //logic for send mail for blog
 
     $.ajax({
 
@@ -184,8 +192,8 @@ $('#addNewsletterForm').on('submit', function (e) {
                  }
                     
              });
+      }   
 
-});
 
 //Add Newsletter  Btn script -----------------------------------------------------------------
 $('#addNewsletterBtn').click(function () {
