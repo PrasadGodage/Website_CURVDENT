@@ -3,6 +3,7 @@ let subscriberList = new Map();
 let newsLetterList1 = new Map();
 let newsletterpdfList = new Map();
 var pdfName;
+var subscriber;
 var pdf;
 
 
@@ -441,7 +442,7 @@ function sendEmailDetails(id){
                         if (response.data.length != 0) {
                             
                                // newsletterpdfList.set(response.data[i].id, response.data[i]);
-                               let pdf=response.data;
+                                pdf=response.data;
                                 console.log(pdf);
                                 console.log(pdf.PDF);
                             }
@@ -566,7 +567,7 @@ function getSubscriberEmail(dataId) {
     // You should implement this function to get the email based on data-id.
     // It might involve searching the subscriberList or making an API call to get the email.
     // For this example, I assume you have a subscriberList object.
-    const subscriber = subscriberList.get(dataId);
+     subscriber = subscriberList.get(dataId);
     if (subscriber) {
         return subscriber.email;
 
@@ -583,8 +584,8 @@ function getSubscriberEmail(dataId) {
 //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 $('#sendEmail').click(function () {
 
-    var chkMailList=Array.from(subscriberList.values());
-    var jsonString= JSON.stringify(chkMailList);
+   // var chkMailList=Array.from(subscriberList.values());
+    var jsonString= JSON.stringify(subscriber);
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
     formdata2.append("pdf",pdf);
