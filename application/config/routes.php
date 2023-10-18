@@ -84,4 +84,5 @@ $route['appointmentUi_api/(:num)']='api/AppointmentFormUiController/appointment/
 //SendEmail api
 $route['sendEmail_api']='api/SendEmailController/sendMail';
 $route['sendPostEmail_api']='api/SendEmailController/sendPostMail';
+$route['sendSubscriber_api']='api/SendEmailController/sendSubscriber';
 
