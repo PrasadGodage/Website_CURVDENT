@@ -497,7 +497,7 @@ function setSubscriberList1(list) {
       } else {
         $('#chkAll').prop('checked', false);
       }
-    //   getCheckRecords();
+      getCheckRecords();
     });
 
     $("#chkAll").change(function () {
@@ -507,7 +507,7 @@ function setSubscriberList1(list) {
       } else {
         $('.tblChk').not(this).prop('checked', false);
       }
-    //   getCheckRecords();
+      getCheckRecords();
     })
 //   });
 
@@ -597,35 +597,63 @@ function setSubscriberList1(list) {
 // }
 
 
-// $(document).ready(function () {
-    $('#subscriberTable').on('change', '.tblChk', function () {
-        $(".selectedDiv").html("");
-        // var selectedData = []; // Array to store selected data
-        $('.tblChk:checked').each(function () {
-            var id = $(this).data("id"); // Get the ID from the data-id attribute
-            var email = $(this).closest("tr").find("td:nth-child(3)").text(); // Assuming email is in the third column
-            selectedData.push({ id: id, email: email }); // Store in the array
-        });
+// // $(document).ready(function () {
+//     $('#subscriberTable').on('change', '.tblChk', function () {
+//         $(".selectedDiv").html("");
+//         // var selectedData = []; // Array to store selected data
+//         $('.tblChk:checked').each(function () {
+//             var id = $(this).data("id"); // Get the ID from the data-id attribute
+//             var email = $(this).closest("tr").find("td:nth-child(3)").text(); // Assuming email is in the third column
+//             selectedData.push({ id: id, email: email }); // Store in the array
+//         });
 
-        // Display selected data in the div
-        for (var i = 0; i < selectedData.length; i++) {
-            var rec = "<strong>ID: " + selectedData[i].id + ", Email: " + selectedData[i].email + "</strong>";
-            $(".selectedDiv").append(rec);
-        }
-    });
+//         // Display selected data in the div
+//         for (var i = 0; i < selectedData.length; i++) {
+//             var rec = "<strong>ID: " + selectedData[i].id + ", Email: " + selectedData[i].email + "</strong>";
+//             $(".selectedDiv").append(rec);
+//         }
+//     });
     
 
-    // Handle the "Select All" checkbox
-    $("#chkAll").change(function () {
-        if ($(this).prop('checked')) {
-            $('.tblChk').prop('checked', true);
+//     // Handle the "Select All" checkbox
+//     $("#chkAll").change(function () {
+//         if ($(this).prop('checked')) {
+//             $('.tblChk').prop('checked', true);
+//         } else {
+//             $('.tblChk').prop('checked', false);
+//         }
+//         // Trigger the change event to update the selected data
+//         $('.tblChk').change();
+//     });
+// // });
+
+
+// Function to collect checked checkboxes and display data
+function getCheckRecords() {
+    $(".selectedDiv").html(""); // Clear the selected records div
+    const selectedData = []; // Array to store selected data
+
+    $('.tblChk:checked').each(function () {
+        const dataId = $(this).attr("data-id"); // Get the data-id attribute (in your case, the index value)
+        const email = $(this).closest("tr").find("td:eq(2)").text(); // Get the email value from the row
+
+        // Display the selected data in a div
+        if (selectedData.length === 0) {
+            selectedData.push({ index: dataId, email: email });
         } else {
-            $('.tblChk').prop('checked', false);
+            selectedData.push({ index: dataId, email: email });
         }
-        // Trigger the change event to update the selected data
-        $('.tblChk').change();
+
+        // Build the HTML content for the selected records div
+        const rec = "<strong>" + dataId + "</strong> - " + email;
+        $(".selectedDiv").append(rec);
     });
-// });
+
+    // Now, you have the selected data in the 'selectedData' array
+    // You can process or send this data as needed
+
+    console.log(selectedData); // Log the selected data for reference
+}
 
 
 
