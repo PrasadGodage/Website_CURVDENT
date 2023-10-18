@@ -420,7 +420,7 @@ function sendEmailDetails(id){
 ////////////////////Get newsletter to given id
             $.ajax({
 
-                url: ebase_url+'postNewsletter_api/'+id,
+                url: ebase_url+'subsriberpage_api/'+id,
         
                 type: 'GET',
         
