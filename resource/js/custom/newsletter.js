@@ -5,6 +5,7 @@ let newsletterpdfList = new Map();
 var pdfName;
 var subscriber;
 var pdf;
+var selectedData = []; // Create an array to store the selected data
 
 
 // $('#sendEmail').on('click', function() {
@@ -576,7 +577,7 @@ function setSubscriberList1(list) {
 // }
 
 function getCheckRecords() {
-    var selectedData = []; // Create an array to store the selected data
+   
     $(".selectedDiv").html(""); // Clear the previous selection display
     $('.tblChk:checked').each(function () {
         var dataId = $(this).data("id"); // Get the data-id attribute value
@@ -592,7 +593,7 @@ function getCheckRecords() {
             $(".selectedDiv").append(", <strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
         }
     }
-    console.log(selectedData); // You can use the selected data array as needed
+    
 }
 
 
@@ -608,6 +609,7 @@ $('#sendEmail').click(function () {
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
     formdata2.append("pdf",pdf);
+    console.log(selectedData); // You can use the selected data array as needed
     
     
 });
