@@ -440,7 +440,9 @@ function sendEmailDetails(id){
                         if (response.data.length != 0) {
                             
                                // newsletterpdfList.set(response.data[i].id, response.data[i]);
-                                console.log(response.data);
+                               let pdf=response.data;
+                                console.log(pdf);
+                                console.log(pdf.PDF);
                             }
                             
                         }
