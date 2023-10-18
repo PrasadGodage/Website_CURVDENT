@@ -438,14 +438,15 @@ function sendEmailDetails(id){
                     if (response.status == 200) {
         
                         if (response.data.length != 0) {
-                            for (var i = 0; i < response.data.length; i++) {
-                                newsletterpdfList.set(response.data[i].id, response.data[i]);
+                            
+                               // newsletterpdfList.set(response.data[i].id, response.data[i]);
+                                console.log(response.data);
                             }
                             
                         }
-                        console.log(newsletterpdfList);
                         
-                    }
+                        
+                    
         
                 }
                 
