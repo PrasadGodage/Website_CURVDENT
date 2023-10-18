@@ -640,7 +640,32 @@ $('#sendEmail').click(function () {
     formdata2.append("pdf",pdf);
     console.log(selectedData); // You can use the selected data array as needed
     
-    
+    $.ajax({
+                url: ebase_url + 'sendSubscriber_api',
+        
+                type: 'POST',
+        
+                data: formdata2,
+        
+                cache: false,
+        
+                contentType: false,
+        
+                processData: false,
+        
+                dataType: 'json',
+        
+             success: function(response) {
+                 if (response.status == 200) {
+                    alert('suceess');
+                    // swal("Good job!", response.msg, "success");
+                 } else {
+                    alert('error');
+                    // swal("ERROR!", response.msg, "error");
+                    }
+             }
+                
+         });
 });
 
 
