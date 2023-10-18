@@ -236,7 +236,8 @@ class SendEmailController extends REST_Controller {
             for($i=0 ; $i < count($arrJson) ; $i++){
 
                 $data['email'] = $arrJson[$i]->email;  
-                $pdf_path = FCPATH . 'uploads/' . $pdf;
+                //$pdf_path = FCPATH . 'uploads/' . $pdf;
+                $pdf_path = FCPATH . $pdf;
          
         $config=array(
             

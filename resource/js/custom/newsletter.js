@@ -5,7 +5,7 @@ let newsletterpdfList = new Map();
 let emailList = new Map();
 var pdfName;
 var subscriber;
-var pdf;
+var pdfPath;
 var selectedData = []; // Create an array to store the selected data
 
 
@@ -445,9 +445,10 @@ function sendEmailDetails(id){
                         if (response.data.length != 0) {
                             
                                // newsletterpdfList.set(response.data[i].id, response.data[i]);
-                                pdf=response.data;
+                               let pdf=response.data;
                                 console.log(pdf);
                                 console.log(pdf.PDF);
+                                pdfPath=pdf.PDF;
                             }
                             
                         }
@@ -671,35 +672,35 @@ $('#sendEmail').click(function () {
     var jsonString= JSON.stringify(chkMailList);
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
-    formdata2.append("pdf",pdf);
+    formdata2.append("pdf",pdfPath);
    // console.log(emailList); // You can use the selected data array as needed
     console.log(formdata2);
-    // $.ajax({
-    //             url: ebase_url + 'sendSubscriber_api',
+    $.ajax({
+                url: ebase_url + 'sendSubscriber_api',
         
-    //             type: 'POST',
+                type: 'POST',
         
-    //             data: formdata2,
+                data: formdata2,
         
-    //             cache: false,
+                cache: false,
         
-    //             contentType: false,
+                contentType: false,
         
-    //             processData: false,
+                processData: false,
         
-    //             dataType: 'json',
+                dataType: 'json',
         
-    //          success: function(response) {
-    //              if (response.status == 200) {
-    //                 alert('suceess');
-    //                 // swal("Good job!", response.msg, "success");
-    //              } else {
-    //                 alert('error');
-    //                 // swal("ERROR!", response.msg, "error");
-    //                 }
-    //          }
+             success: function(response) {
+                 if (response.status == 200) {
+                    alert('suceess');
+                    // swal("Good job!", response.msg, "success");
+                 } else {
+                    alert('error');
+                    // swal("ERROR!", response.msg, "error");
+                    }
+             }
                 
-    //      });
+         });
 });
 
 
