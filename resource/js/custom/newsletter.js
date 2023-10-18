@@ -576,27 +576,55 @@ function setSubscriberList1(list) {
 //     return ""; // Return an empty string if no email is found.
 // }
 
-function getCheckRecords() {
+// function getCheckRecords() {
    
-    $(".selectedDiv").html(""); // Clear the previous selection display
-    $('.tblChk:checked').each(function () {
-        var dataId = $(this).data("id"); // Get the data-id attribute value
-        var email = $(this).closest('tr').find('td:nth-child(3)').text(); // Get the email from the same row
-        selectedData.push({ id: dataId, email: email }); // Store data in the array
-    });
+//     $(".selectedDiv").html(""); // Clear the previous selection display
+//     $('.tblChk:checked').each(function () {
+//         var dataId = $(this).data("id"); // Get the data-id attribute value
+//         var email = $(this).closest('tr').find('td:nth-child(3)').text(); // Get the email from the same row
+//         selectedData.push({ id: dataId, email: email }); // Store data in the array
+//     });
     
-    // Display the selected data
-    for (var i = 0; i < selectedData.length; i++) {
-        if (i == 0) {
-            $(".selectedDiv").append("<strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
-        } else {
-            $(".selectedDiv").append(", <strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
+//     // Display the selected data
+//     for (var i = 0; i < selectedData.length; i++) {
+//         if (i == 0) {
+//             $(".selectedDiv").append("<strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
+//         } else {
+//             $(".selectedDiv").append(", <strong>" + selectedData[i].id + " (" + selectedData[i].email + ")</strong>");
+//         }
+//     }
+    
+// }
+
+
+// $(document).ready(function () {
+    $('#subscriberTable').on('change', '.tblChk', function () {
+        $(".selectedDiv").html("");
+        var selectedData = []; // Array to store selected data
+        $('.tblChk:checked').each(function () {
+            var id = $(this).data("id"); // Get the ID from the data-id attribute
+            var email = $(this).closest("tr").find("td:nth-child(3)").text(); // Assuming email is in the third column
+            selectedData.push({ id: id, email: email }); // Store in the array
+        });
+
+        // Display selected data in the div
+        for (var i = 0; i < selectedData.length; i++) {
+            var rec = "<strong>ID: " + selectedData[i].id + ", Email: " + selectedData[i].email + "</strong>";
+            $(".selectedDiv").append(rec);
         }
-    }
-    
-}
+    });
 
-
+    // Handle the "Select All" checkbox
+    $("#chkAll").change(function () {
+        if ($(this).prop('checked')) {
+            $('.tblChk').prop('checked', true);
+        } else {
+            $('.tblChk').prop('checked', false);
+        }
+        // Trigger the change event to update the selected data
+        $('.tblChk').change();
+    });
+// });
 
 
 
