@@ -670,10 +670,10 @@
 
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 shadow" data-scroll-index="" >
+    <section class="section-padding shadow" data-scroll-index="" >
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-30">
+                <div class="col-md-12 mb-20">
                     <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
@@ -690,13 +690,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-1 form-group"></div>
+                            <div class="col-md-2 form-group"></div>
                             <div class="col-md-6 form-group">
                                 <input name="email" type="email" id="email" placeholder="Email *" required>
                             </div>
                             <div class="col-md-2">
                                 <input name="submit" type="submit" value="Subscribe">
                             </div>
+                            <div class="col-md-2 form-group"></div>
                         </div>
                     </form>
                 </div>
