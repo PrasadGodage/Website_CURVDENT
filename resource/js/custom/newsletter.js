@@ -172,6 +172,7 @@ function sendPdf()
     var formdata1 = new FormData();
     formdata1.append("emailDetails",jsonString);
     formdata1.append('pdfFileName', pdfFileName);
+    console.log(formdata1);
 
     $.ajax({
                     url: ebase_url + 'sendPostEmail_api',
@@ -671,7 +672,7 @@ $('#sendEmail').click(function () {
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
     formdata2.append("pdf",pdf);
-    console.log(emailList); // You can use the selected data array as needed
+   // console.log(emailList); // You can use the selected data array as needed
     console.log(formdata2);
     // $.ajax({
     //             url: ebase_url + 'sendSubscriber_api',
