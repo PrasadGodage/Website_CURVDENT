@@ -3,6 +3,7 @@ let subscriberList = new Map();
 let newsLetterList1 = new Map();
 let newsletterpdfList = new Map();
 var pdfName;
+var pdf;
 
 
 // $('#sendEmail').on('click', function() {
@@ -579,41 +580,17 @@ function getSubscriberEmail(dataId) {
 
 
 
-// //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
-// $('#sendEmail').click(function () {
-//     let mail_to = "soulsoft.urmila@gmail.com";
-//     console.log(mail_to);
-//     let subject= "test subject";
-//     console.log(subject);
-     
+//Add Newsletter sendEmail Btn script -----------------------------------------------------------------
+$('#sendEmail').click(function () {
 
-//         // sender details
-//         let name = "urmila";
-//         let email = "soulsoft.soul120@gmail.com";
-//         let sendersubject = "test";
-//         let message = "test msg";
-
-//         let headers = name.concat(email,sendersubject,message);
-//         console.log(headers);  
-
-//     // let success = mail(mail_to, subject, headers);
-
-//     // $.ajax({
-//     //     url: 'email.php',
-//     //     type: 'POST',
-//     //     data: fData,
-//     //     cache: false,
-//     //     contentType: false,
-//     //     processData: false,
-//     //     success: function (response) {
-      
-//     //  alert("response as recorde");
-//     //                      },
+    var chkMailList=Array.from(subscriberList.values());
+    var jsonString= JSON.stringify(chkMailList);
+    var formdata2 = new FormData();
+    formdata2.append("chkList",jsonString);
+    formdata2.append("pdf",pdf);
     
-//     // });
-
     
-// });
+});
 
 
 // select checked value data ----------------------------
