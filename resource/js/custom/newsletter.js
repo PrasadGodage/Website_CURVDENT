@@ -600,7 +600,7 @@ function setSubscriberList1(list) {
 // $(document).ready(function () {
     $('#subscriberTable').on('change', '.tblChk', function () {
         $(".selectedDiv").html("");
-        var selectedData = []; // Array to store selected data
+        // var selectedData = []; // Array to store selected data
         $('.tblChk:checked').each(function () {
             var id = $(this).data("id"); // Get the ID from the data-id attribute
             var email = $(this).closest("tr").find("td:nth-child(3)").text(); // Assuming email is in the third column
@@ -613,7 +613,7 @@ function setSubscriberList1(list) {
             $(".selectedDiv").append(rec);
         }
     });
-    console.log(selectedData);
+    
 
     // Handle the "Select All" checkbox
     $("#chkAll").change(function () {
