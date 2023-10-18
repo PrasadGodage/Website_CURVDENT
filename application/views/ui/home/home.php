@@ -670,7 +670,7 @@
 
 
     <!-- NewsLetters -->
-    <section class="section-padding shadow" data-scroll-index="" >
+    <section class="section-padding shadow light-pink-bg" data-scroll-index="" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mb-20">
