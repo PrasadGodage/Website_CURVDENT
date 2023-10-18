@@ -97,9 +97,13 @@ $('#addNewsletterForm').on('submit', function (e) {
                 //  }
                 //  newsletterList.set(id, response.data);
                 //  setNewsletterList(newsletterList);
-                   swal("Good job!", response.msg, "success");
+                   swal("Good job!", response.msg, "success",1000);
                     sendPdf();
-                    //$(location).attr('href',ebase_url+'newsletter');
+                    setTimeout(
+                        $(location).attr('href',ebase_url+'newsletter'),
+                         8000
+                         )
+                   
                 } else {
 
                     swal("Error!", response.msg, "error");
