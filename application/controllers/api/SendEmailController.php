@@ -213,20 +213,83 @@ class SendEmailController extends REST_Controller {
         
     }
 
-//    function upload_file(){
 
-//     $config['upload_path']= 'uploads/';
-//     $config['allowed_types']= 'pdf';
-//     $this->load->library('upload', $config);
-//     if($this->upload->do_upload('PDF'))
-//     {
-//         return $this->upload->data();
-//     }
-//     else {
-//         return $this->upload->display_errors();
-//     }   
+    public function sendSubscriber_post() {  
+        
+        $response = [];
+        //$email = [];
+        $arrJson = json_decode($this->post('chkList'));
+        $pdf=$this->post('pdf');
+        //$pdf_path = FCPATH . 'uploads/' . $pdf;
+         print_r($pdf_path);
+         $Mailstatus;
 
-//    } 
+       // $file_data=$this->upload_file();
+
+        // if(is_array($file_data))
+        // {
+
+        // }else{
+        //     $this->session->set_flashdata('message','there is an error in uploading file');
+        // }
+           
+            for($i=0 ; $i < count($arrJson) ; $i++){
+
+                $data['email'] = $arrJson[$i]->email;  
+                $pdf_path = FCPATH . 'uploads/' . $pdf;
+         
+        $config=array(
+            
+            'protocol'   =>   'sendmail',
+            'smtp_host'   =>   'ssl://smtp.gmail.com',
+            'smtp_port'   =>   465,
+            'smtp_user'   =>   'soulsoft.soul120@gmail.com',
+            'smtp_pass'   =>   'dipalirahane@1993',
+            'mailtype'   =>   'html',
+            'charset'   =>   'utf-8',
+            'wordwrap'   =>   TRUE
+            
+        );
+
+        
+        $this->email->initialize($config);
+
+        //$recipients=array('soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
+
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('soulsoft.soul120@gmail.com');
+        $this->email->to($data['email']);
+        
+        $this->email->subject('Our Latest NewsLetter subject');
+        $this->email->message('Our Latest NewsLetter Message');
+
+
+        // Attach the PDF file.
+
+       // $this->email->attach($file_data['full_path']);
+
+        //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
+       // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
+        $this->email->attach($pdf_path);
+        $Mailstatus = $this->email->send();
+
+    }
+                    
+            if ($Mailstatus) {
+                $response['msg'] = 'Email Send Successfully!';
+                // $response['msg'] = $status;
+                $response['status'] = 200;
+                $this->response($response, REST_Controller::HTTP_OK);
+            }else {
+                $response['msg'] = 'Bad Request!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+            }
+                    
+        
+    }
+
 
 
 }
