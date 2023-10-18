@@ -2,6 +2,7 @@ let newsletterList = new Map();
 let subscriberList = new Map();
 let newsLetterList1 = new Map();
 let newsletterpdfList = new Map();
+let emailList = new Map();
 var pdfName;
 var subscriber;
 var pdf;
@@ -632,7 +633,7 @@ function setSubscriberList1(list) {
 function getCheckRecords() {
     $(".selectedDiv").html(""); // Clear the selected records div
     // const selectedData = []; // Array to store selected data
-      //selectedData = []; // Array to store selected data
+      selectedData = []; // Array to store selected data
 
     $('.tblChk:checked').each(function () {
         const dataId = $(this).attr("data-id"); // Get the data-id attribute (in your case, the index value)
@@ -654,7 +655,9 @@ function getCheckRecords() {
     // You can process or send this data as needed
 
    console.log(selectedData); // Log the selected data for reference
-
+   for (let i = 0; i < selectedData.length; i++) {
+    emailList.set(i, selectedData[i]);
+  }
 }
 
 
@@ -668,7 +671,7 @@ $('#sendEmail').click(function () {
     var formdata2 = new FormData();
     formdata2.append("chkList",jsonString);
     formdata2.append("pdf",pdf);
-    console.log(selectedData); // You can use the selected data array as needed
+    console.log(emailList); // You can use the selected data array as needed
     
     // $.ajax({
     //             url: ebase_url + 'sendSubscriber_api',
