@@ -631,7 +631,8 @@ function setSubscriberList1(list) {
 // Function to collect checked checkboxes and display data
 function getCheckRecords() {
     $(".selectedDiv").html(""); // Clear the selected records div
-    const selectedData = []; // Array to store selected data
+    // const selectedData = []; // Array to store selected data
+      selectedData = []; // Array to store selected data
 
     $('.tblChk:checked').each(function () {
         const dataId = $(this).attr("data-id"); // Get the data-id attribute (in your case, the index value)
