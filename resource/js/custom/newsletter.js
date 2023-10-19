@@ -6,24 +6,7 @@ let emailList = new Map();
 var pdfName;
 var subscriber;
 var pdfPath;
-var selectedData = []; // Create an array to store the selected data
-
-
-// $('#sendEmail').on('click', function() {
-//         var selectedItems = [];
-        
-//         // Iterate over each checked checkbox
-//         $('.checkbox:checked').each(function() {
-//             selectedItems.push($(this).val());
-//         });
-
-//         // Now 'selectedItems' is an array containing the values of checked checkboxes
-
-//         // You can send this data to your server or perform any desired action here
-//         // For example, you can log the selected items to the console
-//         console.log('', selectedItems);
-//     });
-
+var selectedData = []; 
 
     // $(document).ready(function () {
         $("#PDF").change(function () {
@@ -37,31 +20,7 @@ var selectedData = []; // Create an array to store the selected data
             // pdfLink1 += '<a class="help-block mt-3 ml-2" href='+ result +' target="_blank" >pdfFileName</a>';
         });
     // });
-
-
-
-        // // Handle the Send button click event
-        // $('#sendEmail').on('click', function () {
-        //     // Initialize an empty array to store selected data
-        //     var selectedData = [];
-
-        //     // Iterate through the checkboxes to find the selected data
-        //     $('.select-data:checked').each(function () {
-        //         var $row = $(this).closest('tr');
-        //         // var name = $row.find('[data-name]').data('name');
-        //         var email = $row.find('[data-email]').data('email');
-        //         // selectedData.push({ name: name, email: email });
-        //         selectedData.push({email: email });
-        //     });
-
-        //     // You can send the selectedData to your server here
-        //     console.log('Selected Data:', selectedData);
-            
-        //     // Clear selections
-        //     $('.select-data:checked').prop('checked', false);
-        // });
-
-  
+         
 //Submit Category Btn script
 
 $('#addNewsletterForm').on('submit', function (e) {
@@ -216,12 +175,7 @@ $('#addNewsletterBtn').click(function () {
 
 //select File for attachment Btn script -----------------------------------------------------------------
 $('#PDF').click(function () {
-
-    // pdfLink += '<a href='+ pdfName +' >Open PDF</a>';
-    // $('#pdfLink').html(pdfLink);
-
-
-   
+    
 });
 
 
@@ -302,18 +256,8 @@ function setNewsletterList(list) {
 
 // ---------------------- delete data ---------------------------------------------
 function deleteNewsletterDetails(id) {
-    // Show a confirmation dialog using SweetAlert or JavaScript confirm
-    // swal({
-    //     title: 'Are you sure?',
-    //     text: 'You won\'t be able to revert this!',
-    //     icon: 'warning',
-    //     showCancelButton: true,
-    //     confirmButtonColor: '#3085d6',
-    //     cancelButtonColor: '#d33',
-    //     confirmButtonText: 'Yes, delete it!'
-    // }).then((result) => {
-    //     if (result.isConfirmed) {
-    //         // Send an AJAX request to delete the data
+   
+           // Send an AJAX request to delete the data
             $.ajax({
                 url: ebase_url + 'postNewsletter_api/' + id, // Replace with your actual delete API endpoint
                 type: 'DELETE',
@@ -336,14 +280,7 @@ function deleteNewsletterDetails(id) {
 
                 }
                 },
-                // error: function () {
-                //     // Handle the case where the AJAX request itself fails
-                //     swal(
-                //         'Error!',
-                //         'Something went wrong!',
-                //         'error'
-                //     );
-                // }
+                
             });
         }
 //     });
@@ -359,9 +296,7 @@ function updateNewsletterDetails(id) {
     $('#id').val('');
     $('#title').val('');
     $('#content').val(''); 
-    //$('#date').val('');
-     //$('#PDF').attr('src','');
-     $('#pdfLink').text('');
+    $('#pdfLink').text('');
 
     // Reset the image preview
     //$('#otherdpre').attr('src',ebase_url+'resource/images/avatar-custom.png');
@@ -452,9 +387,9 @@ function sendEmailDetails(id){
                             }
                             
                         }
-                        
-                        
-                    
+                       
+                      
+                  
         
                 }
                 
@@ -692,11 +627,14 @@ $('#sendEmail').click(function () {
         
              success: function(response) {
                  if (response.status == 200) {
-                    alert('suceess');
-                    // swal("Good job!", response.msg, "success");
+                    swal("Good job!", response.msg, "success");
+                    setTimeout(
+                        $(location).attr('href',ebase_url+'newsletter'),
+                         8000
+                         )
                  } else {
-                    alert('error');
-                    // swal("ERROR!", response.msg, "error");
+                    
+                     swal("ERROR!", response.msg, "error");
                     }
              }
                 
