@@ -48,10 +48,10 @@
                                 </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>Sr No.</th>
-                                            <th>Article Title</th>
-                                            <th>Publish Date</th>
-                                            <th>Action</th>
+                                            <th class="col-lg-2">Sr No.</th>
+                                            <th class="col-lg-4">Article Title</th>
+                                            <th class="col-lg-3">Publish Date</th>
+                                            <th class="col-lg-3">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="newsletterList">
