@@ -627,11 +627,11 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input name="email" type="email" id="email" placeholder="Email *" maxlength="10" required>
+                            <input name="email" type="email" id="email" placeholder="Email *" required>
                             <span id="emailError"></span>
                         </div>
                         <div class="col-md-6 form-group">
-                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
+                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" maxlength="10" required>
                             <span id="contactNoError"></span>
                         </div>
 
