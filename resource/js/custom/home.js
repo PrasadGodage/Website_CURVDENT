@@ -568,69 +568,58 @@ $("#mobile").on("input", function() {
 // });
 
 $('#sendform').on('submit', function (e) {
-
     e.preventDefault();
 
-    // var returnVal = $("#emailForm").val();
     var formdata = new FormData(this);
 
-     // Show the success message
-     $("#message").fadeIn();
+    // Get the date and time values from the input fields
+    var date = $("#date").val();
+    var time = $("#time").val();
 
-      // Clear the input field (optional)
-      $("#fullName").val('');
-      $("#contactNo").val('');
-      $("#email").val('');
-      $("#address").val('');
-      $("#date").val('');
-      $("#time").val('');
+    // Add the date and time to the formdata
+    formdata.append('date', date);
+    formdata.append('time', time);
 
-     // Hide the success message after 3 seconds (adjust the time as needed)
-     setTimeout(function () {
+    // Show the success message
+    $("#message").fadeIn();
+
+    // Clear the input fields (optional)
+    $("#fullName").val('');
+    $("#contactNo").val('');
+    $("#email").val('');
+    $("#address").val('');
+    $("#date").val('');
+    $("#time").val('');
+
+    // Hide the success message after 3 seconds (adjust the time as needed)
+    setTimeout(function () {
         $("#message").fadeOut();
     }, 3000);
 
-    // if (returnVal) {
-        $.ajax({
-
-            url: ebase_url+'appointmentUi_api',
-
-            type: 'POST',
-
-            // headers: {
-            //     "Authorization": etoken
-            // },
-
-            data: formdata,
-
-            cache: false,
-
-            contentType: false,
-
-            processData: false,
-
-            dataType: 'json',
-
-            success: function (response) {
-                if (response.status == 200) {
-                    // Show success message
-                    $("#successMessage").fadeIn();
-                    
-                    // Clear the input field
-                    // $("#email").val('');
-                    
-                    // Hide the success message after a few seconds (optional)
-                    setTimeout(function() {
-                        $("#successMessage").fadeOut();
-                    }, 3000); // Hide after 3 seconds
-                // } else {
-                //     // Handle error
-                //     swal("Error", response.msg, "error");
-                 }
+    // Make the AJAX request with date and time included in formdata
+    $.ajax({
+        url: ebase_url + 'appointmentUi_api',
+        type: 'POST',
+        data: formdata,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: 'json',
+        success: function (response) {
+            if (response.status == 200) {
+                // Show success message
+                $("#successMessage").fadeIn();
+                
+                // Clear the input fields (optional)
+                // $("#email").val('');
+                
+                // Hide the success message after a few seconds (optional)
+                setTimeout(function() {
+                    $("#successMessage").fadeOut();
+                }, 3000);
             }
-        });
-
-    // }
+        }
+    });
 });
 
 
