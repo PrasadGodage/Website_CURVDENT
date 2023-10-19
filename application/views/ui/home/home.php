@@ -591,9 +591,6 @@
     </section> -->
 
 
-
-
-
 <!-- Appointment Form -->
 <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
     <div class="container">
@@ -636,7 +633,8 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="date" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
+                            <!-- <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required>  -->
+                            <input type="date" class="col-md-6 form-control" placeholder="Select Date" required> 
                             <span id="dateError"></span>
                         </div>
 
@@ -651,7 +649,7 @@
                             <span id="timeError"></span>
                         </div> -->
                         <div class="col-md-12 form-group mt-2">
-                            <input name="address" type="textarea" id="address" cols="30" rows="3" placeholder="Enter Address *" required>
+                            <textarea name="address" id="address" cols="30" rows="3" placeholder="Enter Address *" required></textarea>
                             <span id="addressError"></span>
                         </div>
                         <div class="col-md-12">
