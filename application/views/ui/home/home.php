@@ -634,13 +634,13 @@
 
                         <div class="col-md-6 form-group">
                             <!-- <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required>  -->
-                            <input type="date" class="col-md-6 form-control" placeholder="Select Date" required> 
+                            <input type="date" class="col-md-6 form-control" id="date" placeholder="Select Date" required> 
                             <span id="dateError"></span>
                         </div>
 
                         <div class="col-md-6 form-group">
                             <!-- <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required> -->
-                            <input type="time" class="col-md-6 form-control" id="timeInput" placeholder="Select Time" required>
+                            <input type="time" class="col-md-6 form-control" id="time" placeholder="Select Time" required>
                             <span id="timeError"></span>
                         </div>
 

@@ -22,18 +22,18 @@ let appointmentList = new Map();
 
 
  // Listen for changes to the input
- $('#timeInput').on('change', function() {
-    // Get the selected time
-    var selectedTime = $(this).val();
+//  $('#timeInput').on('change', function() {
+//     // Get the selected time
+//     var selectedTime = $(this).val();
 
-    // Do something with the selected time, for example, display it in a div
-    $('#selectedTime').text(selectedTime);
-  });
+//     // Do something with the selected time, for example, display it in a div
+//     $('#selectedTime').text(selectedTime);
+//   });
 
-  //Date picker
-  $('#datepicker').datepicker({
-    autoclose: true
-  });
+//   //Date picker
+//   $('#datepicker').datepicker({
+//     autoclose: true
+//   });
 
 
 
