@@ -41,9 +41,9 @@
                                 <table id="subscriberTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Sr.No</th>
-                                            <th>Email</th>
-                                            <th>Action</th>
+                                            <th class="col-lg-1">Sr.No</th>
+                                            <th class="col-lg-2">Email</th>
+                                            <th class="col-lg-1">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="subscriberList">
