@@ -636,7 +636,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
+                            <input type="date" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
                             <span id="dateError"></span>
                         </div>
 
@@ -651,7 +651,7 @@
                             <span id="timeError"></span>
                         </div> -->
                         <div class="col-md-12 form-group mt-2">
-                            <input name="address" type="text" id="address" cols="30" rows="3" placeholder="Enter Address *" required>
+                            <input name="address" type="textarea" id="address" cols="30" rows="3" placeholder="Enter Address *" required>
                             <span id="addressError"></span>
                         </div>
                         <div class="col-md-12">
