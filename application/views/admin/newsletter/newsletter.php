@@ -48,9 +48,9 @@
                                 </colgroup>
                                     <thead>
                                         <tr>
-                                            <th class="col-lg-2">Sr No.</th>
-                                            <th class="col-lg-4">Article Title</th>
-                                            <th class="col-lg-3">Publish Date</th>
+                                            <th class="col-lg-1">Sr No.</th>
+                                            <th class="col-lg-3">Article Title</th>
+                                            <th class="col-lg-2">Publish Date</th>
                                             <th class="col-lg-3">Action</th>
                                         </tr>
                                     </thead>
