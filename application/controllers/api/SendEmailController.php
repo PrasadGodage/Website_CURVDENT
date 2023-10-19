@@ -19,17 +19,7 @@ class SendEmailController extends REST_Controller {
     public function sendMail_post() {  
         
         $response = [];
-        // $mailData = [];
-        // $jsonData = json_decode($jsonString, true);
-        // echo "<pre>"
-        // print_r($jsonData);
-        // $json_data = $this->input->raw_input_stream;
-
-        // Decode the JSON data into an array
-        // $data = json_decode($json_data, true);
-        // $data = $this->post();
-
-        
+                
         $subscriber['email'] = $this->post('mail');
         // $sub = $this->post('name');
         
@@ -41,10 +31,7 @@ class SendEmailController extends REST_Controller {
         $data['is_newsletter'] = 0;
         
         $id = $this->post('id');
-        // echo "<pre>";
-        // print_r($data);
-        // print_r($id);
-        
+                
         $emailContent = '
                     <h3 align="center">Client Details</h3>
                         <table border="1" width="100%" cellpadding="5">
@@ -93,18 +80,7 @@ class SendEmailController extends REST_Controller {
         $this->email->subject($data['subject']);
         // $this->email->subject($subject);
         $this->email->message($emailContent);
-        // print_r($this->email->print_debugger());
-
         
-        // $this->load->library('email', $config);
-        
-        // $this->email->from($this->input->post("email"));
-        // // $this->email->from($email);
-        // $this->email->to("soulsoft.urmila@gmail.com");
-        // $this->email->subject($subject);
-        // // $this->email->message($message);
-        // $this->email->message($emailContent);
-        // $this->email->set_newline("\r\n");
         $Mailstatus = $this->email->send();
         if(empty($id)){
             $status = $this->newsletter->insert_newsletter($data);
@@ -143,18 +119,10 @@ class SendEmailController extends REST_Controller {
         //$email = [];
         $arrJson = json_decode($this->post('emailDetails'));
         $pdf=$this->post('pdfFileName');
-        //$pdf_path = FCPATH . 'uploads/' . $pdf;
-         print_r($pdf_path);
+        print_r($pdf_path);
          $Mailstatus;
 
-       // $file_data=$this->upload_file();
-
-        // if(is_array($file_data))
-        // {
-
-        // }else{
-        //     $this->session->set_flashdata('message','there is an error in uploading file');
-        // }
+       
            
             for($i=0 ; $i < count($arrJson) ; $i++){
 
@@ -184,16 +152,11 @@ class SendEmailController extends REST_Controller {
         $this->email->from('soulsoft.soul120@gmail.com');
         $this->email->to($data['email']);
         
-        $this->email->subject('Our Latest NewsLetter subject');
-        $this->email->message('Our Latest NewsLetter Message');
+        $this->email->subject('Our Latest NewsLetter');
+        $this->email->message('Our Latest NewsLetter');
 
 
-        // Attach the PDF file.
-
-       // $this->email->attach($file_data['full_path']);
-
-        //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
-       // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
+       
         $this->email->attach($pdf_path);
         $Mailstatus = $this->email->send();
 
@@ -220,19 +183,10 @@ class SendEmailController extends REST_Controller {
         //$email = [];
         $arrJson = json_decode($this->post('chkList'));
         $pdf=$this->post('pdf');
-        //$pdf_path = FCPATH . 'uploads/' . $pdf;
+        
          print_r($pdf_path);
          $Mailstatus;
-
-       // $file_data=$this->upload_file();
-
-        // if(is_array($file_data))
-        // {
-
-        // }else{
-        //     $this->session->set_flashdata('message','there is an error in uploading file');
-        // }
-           
+                
             for($i=0 ; $i < count($arrJson) ; $i++){
 
                 $data['email'] = $arrJson[$i]->email;  
@@ -262,16 +216,10 @@ class SendEmailController extends REST_Controller {
         $this->email->from('soulsoft.soul120@gmail.com');
         $this->email->to($data['email']);
         
-        $this->email->subject('Our Latest NewsLetter subject');
-        $this->email->message('Our Latest NewsLetter Message');
+        $this->email->subject('Our Latest NewsLetter');
+        $this->email->message('Our Latest NewsLetter');
 
 
-        // Attach the PDF file.
-
-       // $this->email->attach($file_data['full_path']);
-
-        //$this->email->attach($_FILES['$pdf_path']['tmp_name'], 'your-pdf.pdf');
-       // $attched_file= $_SERVER["DOCUMENT_ROOT"]."/uploads/".$file_name;
         $this->email->attach($pdf_path);
         $Mailstatus = $this->email->send();
 
