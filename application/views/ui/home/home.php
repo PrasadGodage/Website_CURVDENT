@@ -609,7 +609,7 @@
 
             <div class="col-md-8 app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                 <br>
-                <form id="send-form" role="form" method="post">
+                <form id="sendform" role="form" method="post">
                     <input type="hidden" class="form-control" id="id1" name="id">
 
                     <div class="row">
