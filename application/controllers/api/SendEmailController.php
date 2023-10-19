@@ -183,8 +183,7 @@ class SendEmailController extends REST_Controller {
         //$email = [];
         $arrJson = json_decode($this->post('chkList'));
         $pdf=$this->post('pdf');
-        
-         print_r($pdf_path);
+                
          $Mailstatus;
                 
             for($i=0 ; $i < count($arrJson) ; $i++){
