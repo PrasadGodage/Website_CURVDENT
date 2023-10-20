@@ -43,7 +43,6 @@
                                                         <th><input type="checkbox"  class="largerCheckbox" id="chkAll" style="position: absulute; left:0px; opacity:1;" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
-                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="subscriberList">
@@ -55,7 +54,6 @@
                                                         <th>#</th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
-                                                        <th>Action</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>
