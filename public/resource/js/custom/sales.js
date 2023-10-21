@@ -31,7 +31,8 @@ function setSalesList(list) {
                 <td>` + sales.itemTotalAmt + `</td>
                 <td>` + sales.paymentMtd + `</td>
                 <td>` + sales.created_at + `</td>
-                <td> <a href="#" onclick="updateSalesDetails(${sales.id})" title="Update Views"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i>                    
+                <td> <a href="#" onclick="viewSalesDetails(${sales.id})" title="Views"><i class="mdi mdi-eye-outline" style="font-size: 20px;"></i></a>
+                <a href="#" onclick="updateSalesDetails(${sales.id})" title="Update Views"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>                   
                 </td>
             </tr>`;
             index++;
@@ -77,8 +78,15 @@ function getsalesList() {
 }
 getsalesList();
 
+function updateSalesDetails(id)
+{
+   
+    $(location).attr('href',ebase_url+'updateSales/'+id);
+    
 
-function updateSalesDetails(id){
+}
+
+function viewSalesDetails(id){
 
     let sales = saleList.get(id.toString());
     var salesDetailsList = sales.salesDetail;

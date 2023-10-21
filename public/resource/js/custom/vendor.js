@@ -1,7 +1,6 @@
 let vendorList = new Map();
 let countryList = new Map();
 
-//submit
 $('#addVendorForm').on('submit', function (e) {
 
     e.preventDefault();
@@ -60,8 +59,8 @@ $('#addVendorForm').on('submit', function (e) {
 $('#addVendorBtn').click(function () {
     $('#addVendorModal').modal('toggle');
     $("#addVendorForm").trigger("reset");
-    $('#id').val('');
-    $('.error').text('');
+    $('#id').val(' ');
+    $('.error').text(' ');
     $('#country_id').val("").change();
     $('#state_id').val("").change();
     $('#city_id').val("").change();
@@ -391,17 +390,8 @@ $("#state_id").change(function() {
     });
 });
 
-
-
-
-
-
-
-
-
-
 //import vendorValidation script
-var vendorValidation = document.createElement('script');
+ var vendorValidation = document.createElement('script');
 vendorValidation.src = ebase_url + 'resource/js/custom/vendorValidation.js';
 vendorValidation.setAttribute("type", "text/javascript");
 document.head.appendChild(vendorValidation);

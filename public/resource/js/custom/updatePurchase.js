@@ -1,10 +1,15 @@
+// console.log('purchase Id1:'+id);
+let updatepurchaseId=id;
+// console.log('purchase Id2:'+updatepurchaseId);
 let vendorList = new Map();
 let productList = new Map();
 let purchaseList = new Map();
+let inventoryList=new Map();
 let itemMap=new Map();
+// let updatePurchaseList = new Map();
 
 const myStyles = `
-    #IMEINoError, #UIDNo_ICCDENoError, #SIM1NoError, #SIM2NoError {
+    #uIMEINoError, #uUIDNo_ICCDENoError, #uSIM1NoError, #uSIM2NoError {
         color: red;
         padding: 10px;
     }
@@ -24,11 +29,26 @@ function deletePurchaseDetailItems(key){
         }
 }
 
-
+// Define a function to format the date
+// function formatDate(date) {
+//     // Extract date components
+//     const year = date.getFullYear();
+//     const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+//     const day = String(date.getDate()).padStart(2, '0');
+    // const hours = String(date.getHours()).padStart(2, '0');
+    // const minutes = String(date.getMinutes()).padStart(2, '0');
+    // const seconds = String(date.getSeconds()).padStart(2, '0');
+  
+    // Create the formatted date string
+    //const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+//     const formattedDate = `${year}-${month}-${day}`;
+  
+//     return formattedDate;
+//   }
 // Function to refresh the table with the stored data
 function refreshTable() {
     // Clear the existing table content
-    $('#dataTable tbody').empty();
+    // $('#udataTable tbody').empty();
             var index=1;
         for (let k of itemMap.keys()) {
             var row = '<tr>' +
@@ -47,58 +67,58 @@ function refreshTable() {
                 '</td>' +
                 '</tr>';
            // console.log(data.amount);
-            $('#dataTable tbody').append(row);
+            $('#udataTable tbody').append(row);
         }
 
-        $('#totQty').val(itemMap.size);
+        $('#utotQty').val(itemMap.size);
     }
 
 //  Remove validation text
-    $("#IMEINo").click(function() {
-        $("#IMEINoError").text("");
+    $("#uIMEINo").click(function() {
+        $("#uIMEINoError").text("");
     });
-    $("#UIDNo_ICCDENo").click(function() {
-        $("#UIDNo_ICCDENoError").text("");
+    $("#uUIDNo_ICCDENo").click(function() {
+        $("#uUIDNo_ICCDENoError").text("");
     });
-    $("#SIM1No").click(function() {
-        $("#SIM1NoError").text("");
+    $("#uSIM1No").click(function() {
+        $("#uSIM1NoError").text("");
     });
-    $("#SIM2No").click(function() {
-        $("#SIM2NoError").text("");
+    $("#uSIM2No").click(function() {
+        $("#uSIM2NoError").text("");
     });
 
     // Contact length validation 
-    $("#SIM1No").on("input", function() {
+    $("#uSIM1No").on("input", function() {
         var contactValue = $(this).val().trim();
         var desiredLength = 10;
         
         if (contactValue.length === desiredLength) {
-            $("#SIM1NoError").text(""); // Clear any previous messages
+            $("#uSIM1NoError").text(""); // Clear any previous messages
         } else {
-            $("#SIM1NoError").text("SIM1No. must be 10 digits.");
+            $("#uSIM1NoError").text("SIM1No. must be 10 digits.");
         }
     });
 
-    $("#SIM2No").on("input", function() {
+    $("#uSIM2No").on("input", function() {
         var contactValue = $(this).val().trim();
         var desiredLength = 10;
         
         if (contactValue.length === desiredLength) {
-            $("#SIM2NoError").text(""); // Clear any previous messages
+            $("#uSIM2NoError").text(""); // Clear any previous messages
         } else {
-            $("#SIM2NoError").text("SIM2No. must be 10 digits.");
+            $("#uSIM2NoError").text("SIM2No. must be 10 digits.");
         }
     });
 
 // Contact No. space remove
-    $("#SIM1No").on("input", function() {
+    $("#uSIM1No").on("input", function() {
         var inputValue = $(this).val();
         var newValue = inputValue.replace(/\s/g, ''); // Remove all spaces
         
         $(this).val(newValue);
     });
 
-    $("#SIM2No").on("input", function() {
+    $("#uSIM2No").on("input", function() {
         var inputValue = $(this).val();
         var newValue = inputValue.replace(/\s/g, ''); // Remove all spaces
         
@@ -106,52 +126,53 @@ function refreshTable() {
     });
 
     //
-    $("#SIM1No").on("input", function() {
+    $("#uSIM1No").on("input", function() {
         var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
         $(this).val(sanitizedValue);
     });
 
-    $("#SIM2No").on("input", function() {
+    $("#uSIM2No").on("input", function() {
         var sanitizedValue = $(this).val().replace(/\D/g, ''); // Remove non-digits
         $(this).val(sanitizedValue);
     });
    
 
     // Handle form submission
-    $('#addPurchaseForm').submit(function(e) {
+    $('#updatePurchaseForm').submit(function(e) {
         e.preventDefault();
 
         // Get form values
-        var purchaseOrdId = $('#purchaseOrdId').text().trim();
-        var purchaseDate = $('#purchaseDate').val().trim();
-        var vendorName = $('#vendorName option:selected').text().trim();
-        var VenderId  = $('#vendorName').val().trim();
+        var purchaseOrdId = $('#upurchaseOrdId').text().trim();
+        var purchaseDate = $('#upurchaseDate').val().trim();
+        var vendorName = $('#uvendorName option:selected').text().trim();
+        var VenderId  = $('#uvendorName').val().trim();
         // $("#yourdropdownid option:selected").text();
-        var gstin = $('#gstin').val().trim();
-        var contactFirm = $('#contactFirm').val().trim();
-        var productName = $('#productName option:selected').text().trim();
-        var Product_Id = $('#productName').val().trim();
-        var ActivationDate = $('#ActivationDate').val().trim();
-        var IMEINo = $('#IMEINo').val().trim();
-        var UIDNo_ICCDENo = $('#UIDNo_ICCDENo').val().trim();
-        var SIM1No = $('#SIM1No').val().trim();
-        var SIM2No = $('#SIM2No').val().trim();
-
-        
+        var gstin = $('#ugstin').val().trim();
+        var contactFirm = $('#ucontactFirm').val().trim();
+        var productName = $('#uproductName option:selected').text().trim();
+        var Product_Id = $('#uproductName').val().trim();
+        var ActivationDate = $('#uActivationDate').val().trim();
+        var IMEINo = $('#uIMEINo').val().trim();
+        var UIDNo_ICCDENo = $('#uUIDNo_ICCDENo').val().trim();
+        var SIM1No = $('#uSIM1No').val().trim();
+        var SIM2No = $('#uSIM2No').val().trim();
+        // console.log(ActivationDate);
+        // var ActivationDate1=formatDate(ActivationDate);
+        // console.log(ActivationDate1);
         
         var flag;
 
         if (IMEINo == '' || IMEINo == null){
-            $('#IMEINoError').text('Please enter IMEINO');
+            $('#uIMEINoError').text('Please enter IMEINO');
             flag=false;
         }else if(UIDNo_ICCDENo == '' || UIDNo_ICCDENo == null){
-            $('#UIDNo_ICCDENoError').text('Please enter UID/ICCDE Number');
+            $('#uUIDNo_ICCDENoError').text('Please enter UID/ICCDE Number');
             flag=false;
         }else if(SIM1No == '' || SIM1No == null){
-            $('#SIM1NoError').text('Please enter SIM NO.01');
+            $('#uSIM1NoError').text('Please enter SIM NO.01');
             flag=false;
         }else if(SIM2No == '' || SIM2No == null){
-            $('#SIM2NoError').text('Please enter SIM NO.02');
+            $('#uSIM2NoError').text('Please enter SIM NO.02');
             flag=false;
         }
         else{
@@ -179,12 +200,12 @@ function refreshTable() {
        
         itemMap.set(itemMap.size+1,formData);
              
-        $('#ActivationDate').val(' ');
-        $('#IMEINo').val(' ');
-        $('#UIDNo_ICCDENo').val(' ');
-        $('#SIM1No').val(' ');
-        $('#SIM2No').val(' ');
-        $('#vendorName').prop('disabled',true);
+        $('#uActivationDate').val(' ');
+        $('#uIMEINo').val(' ');
+        $('#uUIDNo_ICCDENo').val(' ');
+        $('#uSIM1No').val(' ');
+        $('#uSIM2No').val(' ');
+        $('#uvendorName').prop('disabled',true);
         refreshTable();
        
     }
@@ -208,7 +229,7 @@ function setVendorDropdown(list) {
       }
         
     
-    $('#vendorName').html(options);
+    $('#uvendorName').html(options);
     
 }
 
@@ -250,11 +271,12 @@ function getVendorList() {
 getVendorList();
 
 //set GST and contact field on vendor change event
-$("#vendorName").change(function(){
+$("#uvendorName").change(function(){
     var vId=this.value;
     var vendor=vendorList.get(vId);
-    $("#gstin").val(vendor.gstin);
-    $("#contactFirm").val(vendor.contactFirm);
+    // console.log(vendor);
+    $("#ugstin").val(vendor.gstin);
+    $("#ucontactFirm").val(vendor.contactFirm);
   });
 
 //------------ DropdownList For Product ----------------------------------------------------------
@@ -271,7 +293,7 @@ function setProductDropdown(list) {
                 
       }   
     
-    $('#productName').html(options);
+    $('#uproductName').html(options);
     
 }
 
@@ -315,7 +337,7 @@ getProductList();
 
 
 //call ajax and send purchase details to the api i.e. purchase_api 
-$("#callPurchaseAjax").click(function(e){
+$("#ucallPurchaseAjax").click(function(e){
     
     e.preventDefault();
     
@@ -324,8 +346,8 @@ $("#callPurchaseAjax").click(function(e){
 
     if(itemList != '' && itemList != null && itemList.length>0)
     {
-        var itemTotalAmt = $('#itemTotalAmt').val().trim();
-        var paymentMtd = $('#paymentMtd').val().trim();
+        var itemTotalAmt = $('#uitemTotalAmt').val().trim();
+        var paymentMtd = $('#upaymentMtd').val().trim();
         var jsonString= JSON.stringify(itemList);
         var formdata = new FormData();
         formdata.append("purchaseDetails",jsonString);
@@ -379,7 +401,7 @@ $("#callPurchaseAjax").click(function(e){
         });
     }
 });
-$('#canclePurchasePage').click(function () {
+$('#ucanclePurchasePage').click(function () {
 
     $(location).attr('href',ebase_url+'purchase');
      
@@ -414,12 +436,12 @@ function getPurchaseList() {
                     }
                     
                 }
-                const [firstKey] = purchaseList.keys();
-                var i=isNaN(parseInt(firstKey))?1:parseInt(firstKey)+1;
-                $('#purchaseOrdId').text('OP-00'+i);
-                //setup current date in purchase date field
-                let currentDate = new Date().toJSON().slice(0,10);
-                document.getElementById("purchaseDate").value = currentDate;
+                // const [firstKey] = purchaseList.keys();
+                // var i=isNaN(parseInt(firstKey))?1:parseInt(firstKey)+1;
+                // $('#upurchaseOrdId').text('OP-00'+i);
+                // //setup current date in purchase date field
+                // let currentDate = new Date().toJSON().slice(0,10);
+                // document.getElementById("upurchaseDate").value = currentDate;
             }
 
         }
@@ -427,3 +449,139 @@ function getPurchaseList() {
     });
 }
 getPurchaseList();
+
+
+function getUpdatePurchaseList() {
+    $.ajax({
+
+        url: ebase_url+'purchase_api/'+updatepurchaseId,
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.lenght != 0) {
+                   // for (var i = 0; i < response.data.length; i++) {
+                        // updatePurchaseList.set(response.data);
+                        updatePuchase(response.data[0]);
+                        
+                   // }  
+                    
+                }
+                
+            }
+
+        }
+
+    });
+}
+getUpdatePurchaseList();
+
+function updatePuchase(data){
+    console.log(data);
+    let productData = data.purchaseDetail;
+    let itemData = data.itemDetail;
+    // console.log(productData);
+    //console.log(itemData);
+    $('#upurchaseOrdId').text(data.purchaseOrderNo);
+    $('#upurchaseDate').val(data.purchaseDate);
+    //$('#uvendorName').val(data.vendor_id).change();
+    $('#utotQty').val(data.totalQty);
+
+    $('#udataTable tbody').empty();
+    var index=1;
+    for (var k=0 ; k<itemData.length ; k++) {
+        // console.log(itemData[k]);
+        var row = '<tr>' +
+            '<td>' + (index++) + '</td>' +
+            // '<td>' + itemMap.get(k).poid + '</td>' +
+            // '<td>' + itemMap.get(k).purchaseDate + '</td>' +
+            '<td>' + itemData[k].vendorName + '</td>' +
+            '<td>' + itemData[k].productName + '</td>' +
+            '<td>' + itemData[k].ActivationDate + '</td>' +
+            '<td>' + itemData[k].IMEINo + '</td>' +
+            '<td>' + itemData[k].UIDNo_ICCDENo + '</td>' +
+            '<td>' + itemData[k].SIM1No + '</td>' +
+            '<td>' + itemData[k].SIM2No + '</td>' +
+            '<td>' +
+            '<a href="#" onclick="updateItemPurchase('+itemData[k].id+')"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>' +
+            '</td>' +
+            '</tr>';
+       // console.log(data.amount);
+       $('#udataTable tbody').append(row);
+       
+    }
+    // $('#uproductName').val(productData.product_id).change();
+    // $('#uIMEINo').val(itemData.IMEINo);
+    // $('#uActivationDate').val(itemData.ActivationDate);
+    // $('#uUIDNo_ICCDENo').val(itemData.UIDNo_ICCDENo);
+    // $('#uSIM1No').val(itemData.SIM1No);
+    // $('#uSIM2No').val(itemData.SIM2No);
+}
+function updateItemPurchase(id){
+    // var datat=data;
+     console.log(id);
+
+    $.ajax({
+
+        url: ebase_url+'inventoryitem_api/'+id,
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+         
+            if (response.status == 200) {
+                //let option='<option value="disabled selected hidden>"</option>';
+                       
+                if (response.data.length != 0) {
+                   //for (var i = 0; i < response.data.length; i++) {
+                        
+                                          
+                       // option +=`<option value="${response.data[i].id}">${response.data[i].IMEINo}</option>`; 
+                       // inventoryList.set(response.data[i].id, response.data[i]);
+                       updateItem(response.data[0]);
+                      
+                 //  }
+                   
+                }
+                
+
+            }
+
+        }
+
+    });
+}
+
+function updateItem(data){
+
+    console.log(data);
+     $('#uvendorName').val(data.VenderId).change();
+     $('#uproductName').val(data. Product_Id).change();
+     $('#uIMEINo').val(data.IMEINo);
+    $('#uActivationDate').val(data.ActivationDate);
+    $('#uUIDNo_ICCDENo').val(data.UIDNo_ICCDENo);
+    $('#uSIM1No').val(data.SIM1No);
+    $('#uSIM2No').val(data.SIM2No);
+  
+}

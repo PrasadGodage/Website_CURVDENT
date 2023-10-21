@@ -116,6 +116,22 @@ function refreshTable() {
         $(this).val(sanitizedValue);
     });
    
+// Define a function to format the date
+    // function formatDate(date) {
+    // // Extract date components
+    // const year = date.getFullYear();
+    // const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    // const day = String(date.getDate()).padStart(2, '0');
+    // const hours = String(date.getHours()).padStart(2, '0');
+    // const minutes = String(date.getMinutes()).padStart(2, '0');
+    // const seconds = String(date.getSeconds()).padStart(2, '0');
+  
+    // Create the formatted date string
+    //const formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    // const formattedDate = `${year}-${month}-${day}`;
+  
+//     return formattedDate;
+//   }
 
     // Handle form submission
     $('#addPurchaseForm').submit(function(e) {
@@ -136,6 +152,9 @@ function refreshTable() {
         var UIDNo_ICCDENo = $('#UIDNo_ICCDENo').val().trim();
         var SIM1No = $('#SIM1No').val().trim();
         var SIM2No = $('#SIM2No').val().trim();
+        // console.log(ActivationDate);
+        // var ActivationDate1=formatDate(ActivationDate);
+        // console.log(ActivationDate1);
 
         
         
@@ -236,7 +255,12 @@ function getVendorList() {
 
                 if (response.data.lenght != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        vendorList.set(response.data[i].id, response.data[i]);
+                        if(response.data[i].status!=0){
+
+                            vendorList.set(response.data[i].id, response.data[i]);
+                        }
+                        
+                    
                     }
                     
                 }

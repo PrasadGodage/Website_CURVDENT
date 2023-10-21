@@ -79,9 +79,8 @@ function getPurchaseList() {
 }
 getPurchaseList();
 function updatePurchaseDetails(id){
-    let purchase = purchaseList.get(id.toString());
-    
-    $(location).attr('href',ebase_url+'updatePurchase');
+
+    $(location).attr('href',ebase_url+'updatePurchase/'+id);
     
 }
 function viewPurchaseDetails(id){

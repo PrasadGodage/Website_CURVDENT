@@ -1,8 +1,11 @@
+//console.log('sales id='+id);
+let updatesalesId=id;
 let clientList = new Map();
 let productList = new Map();
 let inventoryList = new Map();
 let salesList = new Map();
 let itemMap=new Map();
+//let updateSalesList = new Map();
 
 //Delete purchase item 
 function deleteSalesDetailItems(key){
@@ -11,6 +14,21 @@ function deleteSalesDetailItems(key){
         refreshTable();
     }
 }
+
+function changeDateFormat(activationDate) {
+    // Split the input date into day, month, and year
+    var dateParts = activationDate.split("-");
+    
+    // Create a Date object in the original format (month - 1 because months are 0-based)
+    var originalDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+    
+    // Get the new date in yyyy-mm-dd format
+    var activationDate = originalDate.getFullYear() + "-" +
+                  ('0' + (originalDate.getMonth() + 1)).slice(-2) + "-" +
+                  ('0' + originalDate.getDate()).slice(-2);
+    
+    return activationDate;
+  }
 // Function to refresh the table with the stored data
 function refreshTable() {
     // Clear the existing table content
@@ -39,34 +57,36 @@ function refreshTable() {
         $('#totQty').val(itemMap.size);
     }
 //----------------Display data in table---------
-$('#addSalesForm').submit(function(e) {
+$('#updateSalesForm').submit(function(e) {
     e.preventDefault();
 
     // Get form values
-    var salesOrdId = $('#salesOrdId').text().trim();
-    var salesDate = $('#salesDate').val().trim();
-    var clientName = $('#clientName option:selected').text().trim();
-    var clientId = $('#clientName').val().trim();
-    var productName = $('#productName option:selected').text().trim();
-    var Product_Id = $('#productName').val().trim();
-    var imei_no = $('#imeiNo option:selected').text().trim();
-    var IMEINo = $('#imeiNo').val().trim();
-    var activationDate = $('#activationDate').val().trim();
-    var serialNumber = $('#serialNumber').val().trim();
-    var simno1 = $('#simno1').val().trim();
-    var simno2 = $('#simno2').val().trim();
+    var salesOrdId = $('#usalesOrdId').text().trim();
+    var salesDate = $('#usalesDate').val().trim();
+    var clientName = $('#uclientName option:selected').text().trim();
+    var clientId = $('#uclientName').val().trim();
+    var address = $('#uaddress').val().trim();
+    var email = $('#uemail').val().trim();
+    var productName = $('#uproductName option:selected').text().trim();
+    var Product_Id = $('#uproductName').val();
+    var imei_no = $('#uimeiNo option:selected').text().trim();
+    var IMEINo = $('#uimeiNo').val().trim();
+    var activationDate = $('#uactivationDate').val().trim();
+    var serialNumber = $('#userialNumber').val().trim();
+    var simno1 = $('#usimno1').val().trim();
+    var simno2 = $('#usimno2').val().trim();
     
     
     var flag;
 
     if (clientName == '' || clientName == null){
-        $('#clientName option:selected').text('Please Select Client Name');
+        $('#uclientName option:selected').text('Please Select Client Name');
         flag=false;
     }else if(productName == '' || productName == null){
-        $('#productName option:selected').text('Please select pruduct name');
+        $('#uproductName option:selected').text('Please select pruduct name');
         flag=false;
     }else if(IMEINo == '' || IMEINo == null){
-        $('#imeiNo option:selected').val('Please select imei no');
+        $('#uimeiNo option:selected').val('Please select imei no');
         flag=false;
     // }else if(serialNumber == '' || serialNumber == null){
     //     $('#UIDNo_ICCDENoError').text('Please enter UID/ICCDE Number');
@@ -88,6 +108,8 @@ $('#addSalesForm').submit(function(e) {
         salesDate:salesDate,
         clientName:clientName,
         clientId:clientId,
+        address:address,
+        email:email,
         productName:productName ,
         Product_Id:Product_Id ,
         activationDate:activationDate,
@@ -100,10 +122,10 @@ $('#addSalesForm').submit(function(e) {
     itemMap.set(itemMap.size+1,formData);
   //clear field value
 
-  $('#serialNumber').val(' ');
-  $('#simno1').val(' ');
-  $('#simno2').val(' ');
-  $('#activationDate').val(' ');
+  $('#userialNumber').val(' ');
+  $('#usimno1').val(' ');
+  $('#usimno2').val(' ');
+  $('#uactivationDate').val(' ');
   //$('#imeiNo').val('0').change();
 
     refreshTable();
@@ -114,22 +136,8 @@ $('#addSalesForm').submit(function(e) {
 });
 
 
-//Add Sales Btn script -----------------------------------------------------------------
-/*
-$('#addSalesBtn').click(function () {
-    $("#addSalesForm").trigger("reset");
-    let currentDate = new Date().toJSON().slice(0,10);
-    $('#addSalesModal').modal('toggle');
-    document.getElementById("salesDate").value = currentDate;
-    const [firstKey] = salesList.keys();
-    var i=isNaN(parseInt(firstKey))?1:parseInt(firstKey)+1;
-    $('#salesOrdId').text('SO-00'+i);
-    $('#id').val('');
-    $('.error').text('');
-    
-});
-*/
-$("#productName").change(function(){
+
+$("#uproductName").change(function(){
     
     var product_id=this.value;
        $.ajax({
@@ -154,7 +162,7 @@ $("#productName").change(function(){
                        
                 if (response.data.lenght != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        if(response.data[i].StkStatus == 'Purchase'){
+                        if(response.data[i].StkStatus == 'Sales'){
                                           
                         option +=`<option value="${response.data[i].id}">${response.data[i].IMEINo}</option>`; 
                         inventoryList.set(response.data[i].id, response.data[i]);
@@ -163,7 +171,7 @@ $("#productName").change(function(){
                     }
                    
                 }
-                $('#imeiNo').html(option);
+                $('#uimeiNo').html(option);
                 //$('#imeiNo').prop('disabled',false);
 
             }
@@ -175,12 +183,12 @@ $("#productName").change(function(){
    
 //*******for fetch client details
 
-$("#imeiNo").change(function(){
+$("#uimeiNo").change(function(){
     var productData = inventoryList.get(this.value);
-    $('#activationDate').val(productData.ActivationDate);
-    $('#serialNumber').val(productData.UIDNo_ICCDENo); 
-    $('#simno1').val(productData.SIM1No);
-    $('#simno2').val(productData.SIM2No); 
+    $('#uactivationDate').val(productData.ActivationDate);
+    $('#userialNumber').val(productData.UIDNo_ICCDENo); 
+    $('#usimno1').val(productData.SIM1No);
+    $('#usimno2').val(productData.SIM2No); 
   });
 
 
@@ -197,7 +205,7 @@ function setclientDropdown(list) {
               
       }
        
-        $('#clientName').html(options);
+        $('#uclientName').html(options);
     
 }
   //--------import client data-------
@@ -224,13 +232,7 @@ function getclientList() {
 
                 if (response.data.lenght != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        if(response.data[i].status!=0){
-                            
-                            clientList.set(response.data[i].id, response.data[i]);
-
-                        }
-
-                        
+                        clientList.set(response.data[i].id, response.data[i]);
                     }
                     setclientDropdown(clientList);
                 }
@@ -245,12 +247,18 @@ getclientList();
 
   //*******for fetch client details
 
-$("#clientName").change(function(){
+$("#uclientName").change(function(){
     var clientData = clientList.get(this.value);
-    $('#address').val(clientData.address1);
-    $('#email').val(clientData.email); 
+    $('#uaddress').val(clientData.address1);
+    $('#uemail').val(clientData.email); 
   });
 
+  //*******for fetch IMEI details
+  $("#uIMEINo").change(function(){
+    var clientData = clientList.get(this.value);
+    $('#uaddress').val(clientData.address1);
+    $('#uemail').val(clientData.email); 
+  });
 
   //-----------DropdownList For Product-----------------------
 function setproductDropdown(list) {
@@ -265,7 +273,7 @@ function setproductDropdown(list) {
               
       }
        
-        $('#productName').html(options);
+        $('#uproductName').html(options);
     
 }
 
@@ -307,7 +315,7 @@ function getproductList() {
 getproductList();
 
   //call ajax and send purchase details to the api i.e. purchase_api 
-$("#callSalesAjax").click(function(e){
+$("#ucallSalesAjax").click(function(e){
     
     e.preventDefault();
     
@@ -315,8 +323,8 @@ $("#callSalesAjax").click(function(e){
     var itemList=Array.from(itemMap.values());
     if(itemList != '' && itemList != null && itemList.length>0)
     {
-        var itemTotalAmt = $('#itemTotalAmt').val().trim();
-        var paymentMtd = $('#paymentMtd').val().trim();
+        var itemTotalAmt = $('#uitemTotalAmt').val().trim();
+        var paymentMtd = $('#upaymentMtd').val().trim();
         var jsonString= JSON.stringify(itemList);
         var formdata = new FormData();
         formdata.append("salesDetails",jsonString);
@@ -370,8 +378,7 @@ $("#callSalesAjax").click(function(e){
     }
     
   });
-  
-  $('#cancleSalesPage').click(function () {
+  $('#ucancleSalesPage').click(function () {
 
     $(location).attr('href',ebase_url+'sales');
      
@@ -383,7 +390,7 @@ $("#callSalesAjax").click(function(e){
 function getsalesList() {
     $.ajax({
 
-        url: ebase_url+'sales_api',
+        url: ebase_url+'sales_api/'+updatesalesId,
 
         type: 'GET',
 
@@ -407,13 +414,13 @@ function getsalesList() {
                     
                     
                 }
-                const [firstKey] = salesList.keys();
-                var i=isNaN(parseInt(firstKey))?1:parseInt(firstKey)+1;
-                $('#salesOrdId').text('SO-00'+i);
-                //setup current date in purchase date field
-                let currentDate = new Date().toJSON().slice(0,10);
-                document.getElementById("salesDate").value = currentDate;
-                document.getElementById("activationDate").value = currentDate;
+                // const [firstKey] = salesList.keys();
+                // var i=isNaN(parseInt(firstKey))?1:parseInt(firstKey)+1;
+                // $('#salesOrdId').text('SO-00'+i);
+                // //setup current date in purchase date field
+                // let currentDate = new Date().toJSON().slice(0,10);
+                // document.getElementById("salesDate").value = currentDate;
+                // document.getElementById("activationDate").value = currentDate;
 
             }
 
@@ -422,3 +429,142 @@ function getsalesList() {
     });
 }
 getsalesList();
+
+function getUpdateSalesList() {
+    $.ajax({
+
+        url: ebase_url+'sales_api/'+updatesalesId,
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.lenght != 0) {
+                    //for (var i = 0; i < response.data.length; i++) {
+                        //updateSalesList.set(response.data[i].id, response.data[i]);
+                        updateSales(response.data[0]);
+                        
+                  //  }  
+                    
+                    
+                }
+                
+            }
+
+        }
+
+    });
+}
+getUpdateSalesList();
+
+function updateSales(data){
+    // $('#upurchaseOrdId').val(list.purchaseOrderNo);
+
+// let updateList = JSON.stringify(list);
+let salesData = data.salesDetail;
+let itemData = data.itemDetail;
+
+    $('#usalesOrdId').text(data.salesOrderNo);
+    $('#usalesDate').val(data.salesDate);
+   
+    $('#utotQty').val(data.totalQty);
+   
+    $('#udataTable tbody').empty();
+    var index=1;
+    for (var k=0 ; k<itemData.length ; k++) {
+        // console.log(itemData[k]);
+        var row = '<tr>' +
+            '<td>' + (index++) + '</td>' +
+            // '<td>' + itemMap.get(k).poid + '</td>' +
+            // '<td>' + itemMap.get(k).purchaseDate + '</td>' +
+            '<td>' + itemData[k].firstName +' '+itemData[k].lastName+ '</td>' +
+            '<td>' + itemData[k].productName + '</td>' +
+            '<td>' + itemData[k].ActivationDate + '</td>' +
+            '<td>' + itemData[k].IMEINo + '</td>' +
+            '<td>' + itemData[k].UIDNo_ICCDENo + '</td>' +
+            '<td>' + itemData[k].SIM1No + '</td>' +
+            '<td>' + itemData[k].SIM2No + '</td>' +
+            '<td>' +
+            '<a href="#" onclick="updateItemSales('+itemData[k].id+')"><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>' +
+            '</td>' +
+            '</tr>';
+       // console.log(data.amount);
+        $('#udataTable tbody').append(row);
+    }
+    
+}
+function updateItemSales(id){
+    // var datat=data;
+    console.log(id);
+    $.ajax({
+
+        url: ebase_url+'inventorysalesitem_api/'+id,
+
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+         
+            if (response.status == 200) {
+                //let option='<option value="disabled selected hidden>"</option>';
+                       
+                if (response.data.length != 0) {
+                   //for (var i = 0; i < response.data.length; i++) {
+                        
+                                          
+                       // option +=`<option value="${response.data[i].id}">${response.data[i].IMEINo}</option>`; 
+                       // inventoryList.set(response.data[i].id, response.data[i]);
+                       updateItem(response.data[0]);
+                      
+                 //  }
+                   
+                }
+                
+
+            }
+
+        }
+
+    });
+    
+}
+//*******for fetch client details
+
+$("#uclientName").change(function(){
+    var clientData = clientList.get(this.value);
+    $('#uaddress').val(clientData.address1);
+    $('#uemail').val(clientData.email); 
+  });
+
+  
+function updateItem(data){
+
+    console.log(data);
+     $('#uclientName').val(data.ClientId).change();
+     $('#uproductName').val(data.Product_Id).change();   
+    $('#uimeiNo').val(data.id).change();
+    // $('#activationDate').val(data.ActivationDate);
+    // $('#userialNumber').val(data.UIDNo_ICCDENo);
+    // $('#usimno1').val(data.SIM1No);
+    // $('#usimno2').val(data.SIM2No);
+  
+}

@@ -2,20 +2,15 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
+class Home extends BaseController
+{
+    public function index(): string
+    {
+        return view('welcome_message');
+    }
 
- class Home extends BaseController {
-  public function index() {
-//$data['main_content'] = 'innerpages/home'; // page name
-   echo view('innerpages/login');
-   // echo view('innerpages/header');
-   // // echo view('innerpages/home');
-   // echo view('innerpages/footer');
-   }
-
-   public function dashboard() {
-         echo view('innerpages/header');
-         // echo view('innerpages/home');
-         echo view('innerpages/footer');
-         }
- }
+    public function test()
+    {
+        return view('test');
+    }
+}

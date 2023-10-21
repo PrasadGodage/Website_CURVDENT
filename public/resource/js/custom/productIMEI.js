@@ -7,8 +7,12 @@ let itemMap=new Map();
 $('#addImeiBtn').click(function () {
     $('#addImeiModal').modal('toggle');
     $("#addImeiForm").trigger("reset");
+    let currentDate = new Date().toJSON().slice(0,10);
+    document.getElementById("activationDate").value = currentDate;
     $('#id').val('');
     $('.error').text('');
+
+
 });
 
 // Function to refresh the table with the stored data
@@ -21,7 +25,7 @@ function refreshTable() {
                 '<td>' + (index++) + '</td>' +
                 
                 '<td>' + itemMap.get(k).productName + '</td>' +
-                // '<td>' + itemMap.get(k).activationDate + '</td>' + 
+                 '<td>' + itemMap.get(k).activationDate + '</td>' + 
                 '<td>' + itemMap.get(k).imei_no + '</td>' + 
                 '<td>' +
                 '<a href="#" onclick="deleteSalesDetailItems('+k+')"><i class="mdi mdi-delete-circle" style="font-size: 20px;"></i></a>' +
@@ -42,7 +46,7 @@ $('#addImeiForm').submit(function(e) {
     var Product_Id = $('#productName').val().trim();
     var imei_no = $('#imeiNo option:selected').text().trim();
     var IMEINo = $('#imeiNo').val().trim();
-   // var activationDate = $('#activationDate').val().trim();
+   var activationDate = $('#activationDate').val().trim();
        
     
     var flag;
