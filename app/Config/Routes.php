@@ -5,8 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/test', 'Home::test');
+
+$routes->group('super', function ($routes) {
+    $routes->get('login', 'Super::index');    
+});
 
 $routes->group("api", function ($routes) {
     $routes->post("register", "Register::index");
