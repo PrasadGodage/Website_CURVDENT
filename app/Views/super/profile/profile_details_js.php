@@ -1,0 +1,1 @@
+<script src="<?php echo base_url() . 'resource/js/custom/profile_detail_import.js'; ?>"></script>
