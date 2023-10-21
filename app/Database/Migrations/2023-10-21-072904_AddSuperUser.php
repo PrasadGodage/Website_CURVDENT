@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class TabMaster extends Migration
+class AddSuperUser extends Migration
 {
     public function up()
     {
@@ -15,25 +15,14 @@ class TabMaster extends Migration
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'tab_name' => [
+            'uname' => [
                 'type' => 'VARCHAR',
                 'unique' => true,
-                'constraint' => '100',
+                'constraint' => '255',
             ],
-            'is_subtab' => [
-                'type' => 'TINYINT',
-                'constraint' => '1',
-                'default' => 0,
-            ],
-            'icon_id' => [
-                'type' => 'BIGINT',
-                'constraint' => 255,
-                'unsigned' => true,
-            ],
-            'is_active' => [
-                'type' => 'TINYINT',
-                'constraint' => '1',
-                'default' => 0,
+            'password' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
@@ -45,12 +34,11 @@ class TabMaster extends Migration
             ],
         ]);
         $this->forge->addPrimaryKey('id');
-        $this->forge->addForeignKey('icon_id', 'icon_master', 'id');
-        $this->forge->createTable('tab_master');
+        $this->forge->createTable('super_master');
     }
 
     public function down()
     {
-        $this->forge->dropTable('tab_master');
+        $this->forge->dropTable('super_master');
     }
 }
