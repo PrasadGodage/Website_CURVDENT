@@ -36,6 +36,10 @@ $routes->group('super', function ($routes) {
     $routes->get('icon', 'api\IconController::getIcon');      
     $routes->get('icon/(:num)', 'api\IconController::getIcon/$1');      
     $routes->post('icon', 'api\IconController::postIcon');   
+
+    $routes->get('activity', 'api\ActivityController::getActivity');      
+    $routes->get('activity/(:num)', 'api\ActivityController::getActivity/$1');      
+    $routes->post('activity', 'api\ActivityController::postActivity');   
 });
 
 $routes->group("api", function ($routes) {
