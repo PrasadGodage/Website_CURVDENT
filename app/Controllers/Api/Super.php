@@ -36,7 +36,7 @@ class Super extends BaseController
             $key = getenv('JWT_SECRET');
             $iat = time(); // current timestamp value
             $exp = $iat + 3600;
-          
+
             $payload = [
                 "iss" => "Issuer of the JWT",
                 "aud" => "Audience that the JWT",

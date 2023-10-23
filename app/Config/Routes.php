@@ -27,14 +27,11 @@ $routes->group('super', function ($routes) {
     $routes->post('superUserLogin', 'api\Super::index');      
     $routes->post('register', 'api\Super::register'); 
 
+   
     $routes->get('tab', 'api\TabController::getTab');      
     $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
     $routes->post('tab', 'api\TabController::postTab');      
-    // $routes->get('tab/(:num)', 'api\TabController::getTab/$1');  
-    
-    $routes->get('activity', 'api\ActivityController::getActivity');      
-    $routes->get('activity/(:num)', 'api\ActivityController::getActivity/$1');      
-    $routes->post('activity', 'api\ActivityController::postActivity');    
+    // $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
 });
 
 $routes->group("api", function ($routes) {
