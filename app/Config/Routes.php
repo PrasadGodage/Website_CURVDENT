@@ -39,7 +39,11 @@ $routes->group('super', function ($routes) {
 
     $routes->get('activity', 'api\ActivityController::getActivity');      
     $routes->get('activity/(:num)', 'api\ActivityController::getActivity/$1');      
-    $routes->post('activity', 'api\ActivityController::postActivity');   
+    $routes->post('activity', 'api\ActivityController::postActivity');  
+    
+    $routes->get('role', 'api\RoleController::getRole');      
+    $routes->get('role/(:num)', 'api\RoleController::getRole/$1');      
+    $routes->post('role', 'api\RoleController::postRole');
 });
 
 $routes->group("api", function ($routes) {
