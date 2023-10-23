@@ -30,7 +30,12 @@ $routes->group('super', function ($routes) {
     $routes->get('tab', 'api\TabController::getTab');      
     $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
     $routes->post('tab', 'api\TabController::postTab');      
-    // $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
+    // $routes->get('tab/(:num)', 'api\TabController::getTab/$1');
+    
+    
+    $routes->get('role', 'api\RoleController::getRole');      
+    $routes->get('role/(:num)', 'api\RoleController::getRole/$1');      
+    $routes->post('role', 'api\RoleController::postRole');       
 });
 
 $routes->group("api", function ($routes) {
