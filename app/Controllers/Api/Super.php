@@ -36,7 +36,7 @@ class Super extends BaseController
             $key = getenv('JWT_SECRET');
             $iat = time(); // current timestamp value
             $exp = $iat + 3600;
-
+          
             $payload = [
                 "iss" => "Issuer of the JWT",
                 "aud" => "Audience that the JWT",
@@ -47,8 +47,14 @@ class Super extends BaseController
                 // Expiration time of token
                 "uname" => $userModel->getInsertID(),
             ];
-
-            $token = JWT::encode($payload, $key, 'HS256');
+           //print_r($payload);exit;
+            try {
+                $token = JWT::encode($payload, $key, 'HS256');
+            } catch (\Exception $e) {
+                exit($e->getMessage());
+            }
+            
+           
 
 
 
