@@ -31,11 +31,7 @@ $routes->group('super', function ($routes) {
     $routes->get('tab', 'api\TabController::getTab');      
     $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
     $routes->post('tab', 'api\TabController::postTab');      
-    
-    $routes->get('icon', 'api\IconController::getIcon');      
-    $routes->get('icon/(:num)', 'api\IconController::getIcon/$1');      
-    $routes->post('icon', 'api\IconController::postIcon');      
-    
+    // $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
 });
 
 $routes->group("api", function ($routes) {
