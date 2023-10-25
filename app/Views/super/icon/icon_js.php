@@ -1,1 +1,1 @@
-<script src="<?php echo base_url() . 'resource/js/custom/icon_import.js'; ?>"></script>
+<script src="<?php echo base_url() . 'resource/js/custom/icon.js'; ?>"></script>

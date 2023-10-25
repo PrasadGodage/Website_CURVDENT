@@ -12,6 +12,10 @@ class TabController extends BaseController
     use ResponseTrait;
 
     
+    // public function __construct()
+    // {
+    //     $tabModel = new TabModel();
+    // }
     public function getTab($id=0)
     {
         $tabModel = new TabModel();
