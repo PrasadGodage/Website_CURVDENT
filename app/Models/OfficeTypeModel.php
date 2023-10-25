@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class RoleModel extends Model
+class OfficeTypeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'role_master';
+    protected $table            = 'office_type_master';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['role'];
+    protected $allowedFields    = ['type'];
 
     // Dates
     protected $useTimestamps = false;
