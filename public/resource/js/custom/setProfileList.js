@@ -4,7 +4,7 @@
     function getProfileList() {
         $.ajax({
 
-            url: base_url+'profile',
+            url: base_url+'super/profile',
 
             type: 'GET',
 

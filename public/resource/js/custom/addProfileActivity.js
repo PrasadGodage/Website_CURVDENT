@@ -7,7 +7,7 @@ $('#addProfileActivityForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'profileActivity',
+            url: base_url+'super/profileActivity',
 
             type: 'POST',
 

@@ -7,7 +7,7 @@ $('#addProfileTabForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'profileTab',
+            url: base_url+'super/profileTab',
 
             type: 'POST',
 

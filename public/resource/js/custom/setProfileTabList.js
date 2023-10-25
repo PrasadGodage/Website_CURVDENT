@@ -5,7 +5,7 @@
         profileTabList.clear();
         $.ajax({
 
-            url: base_url+'profileTab/'+profileid,
+            url: base_url+'super/profileTab/'+profileid,
 
             type: 'GET',
 

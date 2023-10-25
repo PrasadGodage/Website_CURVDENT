@@ -39,7 +39,7 @@ $('#saveActivityControlPermissionbtn').click( function (e) {
     if (true) {
         $.ajax({
 
-            url: base_url+'profileActivityPermissions',
+            url: base_url+'super/profileActivityPermissions',
 
             type: 'POST',
 

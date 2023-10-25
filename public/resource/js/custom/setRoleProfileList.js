@@ -3,7 +3,7 @@ let roleList = new Map();
 function getRoleList() {
     $.ajax({
 
-        url: base_url+'role',
+        url: base_url+'super/role',
 
         type: 'GET',
 

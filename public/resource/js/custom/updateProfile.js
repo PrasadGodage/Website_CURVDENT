@@ -7,7 +7,7 @@ $('#addProfileForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'profile',
+            url: base_url+'super/profile',
 
             type: 'POST',
 
