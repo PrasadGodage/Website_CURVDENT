@@ -1,1 +1,1 @@
-<script src="<?php echo base_url() . 'resource/js/custom/activity_import.js'; ?>"></script>
+<script src="<?php echo base_url() . 'resource/js/custom/activity.js'; ?>"></script>

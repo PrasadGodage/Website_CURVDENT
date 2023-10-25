@@ -1,0 +1,1 @@
+<script src="<?php echo base_url() . 'resource/js/custom/office_type_import.js'; ?>"></script>

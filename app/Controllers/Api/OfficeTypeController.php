@@ -3,21 +3,21 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\RoleModel;
+use App\Models\OfficeTypeModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
-class RoleController extends BaseController
+class OfficeTypeController extends BaseController
 {
     use ResponseTrait;
 
     
-    public function getRole($id=0)
+    public function getOfficeType($id=0)
     {
-        $roleModel = new RoleModel();
+        $officeModel = new OfficeTypeModel();
 
         // Fetch all products from the database
-        $data = $roleModel->findAll();
+        $data = $officeModel->findAll();
 
         if (!empty($data)) {
             $response = [
@@ -36,17 +36,17 @@ class RoleController extends BaseController
        
     }
 
-    public function postRole()
+    public function postOfficeType()
     {
-        $roleModel = new RoleModel();
+        $officeModel = new OfficeTypeModel();
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
-            'role' => $this->request->getVar('role'),
+            'type' => $this->request->getVar('type'),
                      
         ];
-        $result= $roleModel->save($data);
+        $result= $officeModel->save($data);
 
         if(!empty($result)){
             
