@@ -72,15 +72,21 @@ class TabModel extends Model
         ));
     }
 
-    public function get_all_data()
+    
+    public function get_all_data($id)
     {
-        $query = $this->db->query('select * from ' . $this->table);
-        return $query->getResult();
+    $builder = $this->db->table('tab_master tm');
+    $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon');
+    $builder->join('icon_master im', 'im.id=tm.icon_id');
 
-        // $tabObject = $this->db->table("tab_master as tm");
-
-        // $tabObject->select("tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon");
-
-        // $tabObject->join("icon_master im", "tm.icon_id = im.id");
+    if ($id != 0) {
+        $builder->where('tm.id', $id);
+        return $builder->get()->getRowArray();
+    } else {
+        return $builder->get()->getResultArray();
     }
+}
+
+
+    
 }

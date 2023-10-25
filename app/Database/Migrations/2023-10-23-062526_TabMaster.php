@@ -17,12 +17,10 @@ class TabMaster extends Migration
             ],
             'tab_name' => [
                 'type' => 'VARCHAR',
-                'unique' => true,
                 'constraint' => '255',
             ],
             'is_subtab' => [
                 'type' => 'TINYINT',
-                'unique' => true,
                 'constraint' => '1',
             ],
             'icon_id' => [
@@ -31,7 +29,8 @@ class TabMaster extends Migration
             ],
             'is_active' => [
                 'type' => 'TINYINT',
-                'null' => true
+                'null' => true,
+                'constraint' => '2',
             ],
             
         ]);

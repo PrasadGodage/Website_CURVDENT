@@ -21,7 +21,8 @@ class TabController extends BaseController
         $tabModel = new TabModel();
 
         // Fetch all products from the database
-        $data = $tabModel->findAll();
+        // $data = $tabModel->findAll();
+        $data = $tabModel->get_all_data($id);
 
         if (!empty($data)) {
             $response = [
