@@ -50,6 +50,10 @@ $routes->group('super', function ($routes) {
     $routes->get('profile/(:num)', 'api\ProfileController::getProfile/$1');      
     $routes->post('profile', 'api\ProfileController::postProfile');
 
+    $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
+    $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
+    $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');
+
     $routes->get('tabJoin', 'SiteController::getData');      
 });
 
