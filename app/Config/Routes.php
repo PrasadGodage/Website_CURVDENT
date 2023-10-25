@@ -32,6 +32,7 @@ $routes->group('super', function ($routes) {
     $routes->get('tab/(:num)', 'api\TabController::getTab/$1');      
     $routes->post('tab', 'api\TabController::postTab');      
     // $routes->get('tab/(:num)', 'api\TabController::getTab/$1'); 
+     // $routes->get('tab/(:num)', 'api\TabController::getTab/$1'); 
     
     $routes->get('icon', 'api\IconController::getIcon');      
     $routes->get('icon/(:num)', 'api\IconController::getIcon/$1');      
