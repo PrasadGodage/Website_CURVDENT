@@ -44,6 +44,12 @@ $routes->group('super', function ($routes) {
     $routes->get('role', 'api\RoleController::getRole');      
     $routes->get('role/(:num)', 'api\RoleController::getRole/$1');      
     $routes->post('role', 'api\RoleController::postRole');
+    
+    $routes->get('profile', 'api\ProfileController::getProfile');      
+    $routes->get('profile/(:num)', 'api\ProfileController::getProfile/$1');      
+    $routes->post('profile', 'api\ProfileController::postProfile');
+
+    $routes->get('tabJoin', 'SiteController::getData');      
 });
 
 $routes->group("api", function ($routes) {
