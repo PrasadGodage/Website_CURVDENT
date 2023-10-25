@@ -5,7 +5,7 @@
         profileActivityList.clear();
         $.ajax({
 
-            url: base_url+'profileActivity/'+profileid,
+            url: base_url+'super/profileActivity/'+profileid,
 
             type: 'GET',
 

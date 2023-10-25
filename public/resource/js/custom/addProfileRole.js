@@ -8,7 +8,7 @@ $('#addProfileRoleForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'profileRole',
+            url: base_url+'super/profileRole',
 
             type: 'POST',
 

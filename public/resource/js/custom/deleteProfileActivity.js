@@ -22,7 +22,7 @@ function deleteActivity(activityid){
     
     $.ajax({
 
-        url: base_url+'profileActivityDelete/'+activityid+'/'+profileid,
+        url: base_url+'super/profileActivityDelete/'+activityid+'/'+profileid,
 
         type: 'GET',
 

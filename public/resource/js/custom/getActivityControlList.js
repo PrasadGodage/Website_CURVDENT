@@ -5,7 +5,7 @@
         activityControlList.clear();
         $.ajax({
 
-            url: base_url+'activityControl/'+id,
+            url: base_url+'super/activityControl/'+id,
 
             type: 'GET',
 

@@ -4,7 +4,7 @@
         profileActPermission.clear();
         $.ajax({
 
-            url: base_url+'profileActivityPermissions/'+profileid,
+            url: base_url+'super/profileActivityPermissions/'+profileid,
 
             type: 'GET',
 

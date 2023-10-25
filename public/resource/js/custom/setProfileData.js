@@ -2,7 +2,7 @@
     function setProfileData() {
         $.ajax({
 
-            url: base_url+'profile/'+profileid,
+            url: base_url+'super/profile/'+profileid,
 
             type: 'GET',
 

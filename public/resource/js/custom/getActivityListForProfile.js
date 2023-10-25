@@ -3,7 +3,7 @@ let activityList = new Map();
 function getActivityList() {
     $.ajax({
 
-        url: base_url+'activity',
+        url: base_url+'super/activity',
 
         type: 'GET',
 
