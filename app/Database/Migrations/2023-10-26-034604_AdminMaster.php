@@ -45,7 +45,7 @@ class AdminMaster extends Migration
                 'constraint' => '11'
             ],
             'gender' => [
-                'type' => 'ENUM("Male",Female")',
+                'type' => 'ENUM("Male","Female")',
                 'default' => 'Male',
                 'null' => FALSE
             ],
