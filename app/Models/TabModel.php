@@ -75,17 +75,27 @@ class TabModel extends Model
     
     public function get_all_data($id)
     {
-    $builder = $this->db->table('tab_master tm');
-    $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon');
-    $builder->join('icon_master im', 'im.id=tm.icon_id');
+        $builder = $this->db->table('tab_master tm');
+        $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon');
+        $builder->join('icon_master im', 'im.id=tm.icon_id');
 
-    if ($id != 0) {
-        $builder->where('tm.id', $id);
-        return $builder->get()->getRowArray();
-    } else {
-        return $builder->get()->getResultArray();
+        if ($id != 0) {
+            $builder->where('tm.id', $id);
+            return $builder->get()->getRowArray();
+        } else {
+            return $builder->get()->getResultArray();
+        }
     }
-}
+    public function get_data()
+    {
+        $builder = $this->db->table('tab_master tm');
+        $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon');
+        $builder->join('icon_master im', 'im.id=tm.icon_id');
+
+        
+            return $builder->get()->getResultArray();
+        
+    }
 
 
     

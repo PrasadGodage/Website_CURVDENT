@@ -4,18 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class IconModel extends Model
+class EmployeeLoginModel extends Model
 {
-
-    protected $db;
     protected $DBGroup          = 'default';
-    protected $table            = 'icon_master';
+    protected $table            = 'admin_master';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['icon_title','icon'];
+    protected $allowedFields    = ['role_id','profile_id','office_branch_id','name','profile_image','dob','age','gender','aadhar_no','pancard','userid','password','contact_number1','contact_number2','email_id','address','country_id','state_id','city_id','area_id','pincode','is_active','is_verified','created_at','created_by','modified_at','modified_by'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,21 +38,4 @@ class IconModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->db = \Config\Database::connect();
-        // OR $this->db = db_connect();
-    }
-
-    public function get_data()
-    {
-        $builder = $this->db->table('icon_master im');
-        $builder->select('im.icon_title, im.icon');
-        
-        return $builder->get()->getResultArray();
-        
-    }
 }

@@ -1,0 +1,1 @@
+<script src="<?php echo base_url() . 'resource/js/custom/employee_import.js'; ?>"></script>
