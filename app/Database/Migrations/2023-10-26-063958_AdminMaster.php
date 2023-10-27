@@ -12,7 +12,7 @@ class AdminMaster extends Migration
             'id' => [
                 'type' => 'INT',
                 'constraint' => '11',
-                'auto_increment' => true
+                'auto_increment' => true,
             ],
             'role_id' => [
                 'type' => 'INT',
@@ -34,111 +34,111 @@ class AdminMaster extends Migration
             ],
             'profile_image' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255'
+                'constraint' => '255',
             ],
             'dob' => [
-                'type' => 'DATE'
-                
+                'type' => 'DATE',
+                'null' => FALSE,
             ],
             'age' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
             ],
             'gender' => [
                 'type' => 'ENUM("Male","Female")',
                 'default' => 'Male',
-                'null' => FALSE
+                'null' => FALSE,
             ],
             'aadhar_no' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255'
+                'constraint' => '255',
             ],
             'pancard' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255'
+                'constraint' => '255',
             ],
             'userid' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
-                'null' => FALSE
+                'null' => FALSE,
             ],
             'password' => [
                 'type' => 'VARCHAR',
                 'constraint' => '8',
-                'null' => FALSE
+                'null' => FALSE,
             ],
             'contact_number1' => [
                 'type' => 'VARCHAR',
                 'constraint' => '20',
-                'null' => FALSE
+                'null' => FALSE,
             ],
             'contact_number2' => [
                 'type' => 'VARCHAR',
                 'constraint' => '20',
-                'null' => TRUE
+                'null' => TRUE,
             ],
             'email_id' => [
                 'type' => 'VARCHAR',
-                'constraint' => '150'
+                'constraint' => '150',
                 
             ],
             'address' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255'
+                'constraint' => '255',
                 
             ],
             'country_id' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
                 
             ],
             'state_id' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
                 
             ],
             'city_id' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
                 
             ],
             'area_id' => [
                 'type' => 'INT',
                 'constraint' => '11',
-                'null' => TRUE
+                'null' => TRUE,
             ],
             'pincode' => [
                 'type' => 'VARCHAR',
-                'constraint' => '10'
+                'constraint' => '10',
                 
             ],
             'is_active' => [
                 'type' => 'TINYINT',
-                'constraint' => '2'
+                'constraint' => '2',
             ],
             'is_verified' => [
                 'type' => 'TINYINT',
-                'constraint' => '2'
+                'constraint' => '2',
                 
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true
+                'null' => true,
                 
             ],
             'created_by' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
                 
             ],
             'modified_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true
+                'null' => true,
                 
             ],
             'modified_by' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
                 
             ],
             

@@ -3,22 +3,22 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\ProfileModel;
+use App\Models\ProfileTabModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
 
-class ProfileController extends BaseController
+class ProfileTabController extends BaseController
 {
     use ResponseTrait;
-    
-    public function getProfile($id=0)
+
+    public function getProfile_tab($id = 0)
     {
-        $profileModel = new ProfileModel();
+        $profileTabModel = new ProfileTabModel();
 
         // Fetch all products from the database
-        // $data = $profileModel->findAll();
-        $data = $profileModel->get_all_data($id);
+        // $data = $tabModel->findAll();
+        $data = $profileTabModel->get_all_data($id,1);
 
         if (!empty($data)) {
             $response = [
@@ -37,24 +37,24 @@ class ProfileController extends BaseController
        
     }
 
-    public function postProfile()
+    public function postProfile_tab()
     {
-        $profileModel = new ProfileModel();
+        $profileTabModel = new ProfileTabModel();
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
-            'role_id' => $this->request->getVar('role_id'),
-            'profile' => $this->request->getVar('profile'),
-            'is_active' => $this->request->getVar('is_active'),
+            'tab_id' => $this->request->getVar('tab_id'),
+            'profile_id' => $this->request->getVar('profile_id'),
+            
         ];
-        $result= $profileModel->save($data);
+        $result= $profileTabModel->save($data);
 
         if(!empty($result)){
             
             $response = [
                 'status' => 200,
-                'message' => 'Profile Created Successfully!',
+                'message' => 'Tab Data Created Successfully!',
                 'data' => $result
             ];
             return $this->response->setJSON($response);
@@ -66,6 +66,29 @@ class ProfileController extends BaseController
                 'message' => 'Data not Found!'
             ];
             return $this->response->setJSON($response); 
+        }
+
+    }
+
+    public function deleteProfile_tab($id = 0){
+
+        $profileTabModel = new ProfileTabModel();
+
+        $result = $profileTabModel->delete_data($id);
+
+        if (!empty($result)) {
+            $response = [
+                'status' => 200,
+                'message' => 'All Data Deleted successfully!',
+                'data' => $result
+            ];
+            return $this->response->setJSON($response);
+        } else {
+            $response = [
+                'status' => 404,
+                'message' => 'Data not Found!'
+            ];
+            return $this->response->setJSON($response);
         }
 
     }
