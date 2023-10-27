@@ -1,1 +1,1 @@
-<script src="<?php echo base_url() . 'resource/js/custom/office_branch_import.js'; ?>"></script>
+<script src="<?php echo base_url() . 'resource/js/custom/officeBranch.js'; ?>"></script>
