@@ -18,7 +18,6 @@ class ActivityMaster extends Migration
             ],
             'tab_id' => [
                 'type' => 'INT',
-                'unique' => true,
                 'constraint' => '11',
             ],
             'icon_id' => [

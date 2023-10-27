@@ -36,7 +36,11 @@ $routes->group('super', function ($routes) {
     
     $routes->get('icon', 'api\IconController::getIcon');      
     $routes->get('icon/(:num)', 'api\IconController::getIcon/$1');      
-    $routes->post('icon', 'api\IconController::postIcon');   
+    $routes->post('icon', 'api\IconController::postIcon');  
+    
+    $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
+    $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
+    $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');  
 
     $routes->get('activity', 'api\ActivityController::getActivity');      
     $routes->get('activity/(:num)', 'api\ActivityController::getActivity/$1');      
@@ -50,9 +54,7 @@ $routes->group('super', function ($routes) {
     $routes->get('profile/(:num)', 'api\ProfileController::getProfile/$1');      
     $routes->post('profile', 'api\ProfileController::postProfile');
 
-    $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
-    $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
-    $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');
+    
 
     $routes->get('tabJoin', 'SiteController::getData');      
 });

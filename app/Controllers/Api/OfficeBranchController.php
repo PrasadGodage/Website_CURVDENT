@@ -3,19 +3,19 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\ActivityModel;
+use App\Models\OfficeBranchModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
-class ActivityController extends BaseController
+class OfficeBranchController extends BaseController
 {
     use ResponseTrait;
-    public function getActivity($id=0)
+    public function getOfficeBranch($id=0)
     {
-        $activityModel = new ActivityModel();
+        $officeBranchModel = new OfficeBranchModel();
 
         // Fetch all products from the database
-        $data = $activityModel->get_all_data($id);
+        $data = $officeBranchModel->get_all_data($id);
 
         if (!empty($data)) {
             $response = [
@@ -33,9 +33,9 @@ class ActivityController extends BaseController
         }
     }
 
-    public function postActivity()
+    public function postOfficeBranch()
     {
-        $activityModel = new ActivityModel();
+        $officeBranchModel = new OfficeBranchModel();
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
@@ -47,7 +47,7 @@ class ActivityController extends BaseController
             'is_active' => $this->request->getVar('is_active'),
             
         ];
-        $result= $activityModel->save($data);
+        $result= $officeBranchModel->save($data);
 
         if(!empty($result)){
             

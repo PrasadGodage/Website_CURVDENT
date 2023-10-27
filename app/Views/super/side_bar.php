@@ -47,7 +47,7 @@
                 </a>
                 <ul class="treeview-menu" style="display: none;">
                     <li><a href="<?php echo base_url('super/office_type'); ?>"><i class="fa fa-circle-thin"></i>Type</a></li>
-                    <li><a href="<?php echo base_url('super/superOfficeBranch'); ?>"><i class="fa fa-circle-thin"></i>Branch</a></li>
+                    <li><a href="<?php echo base_url('super/officeBranch'); ?>"><i class="fa fa-circle-thin"></i>Branch</a></li>
                     <li><a href="<?php echo base_url('super/superEmployee'); ?>"><i class="fa fa-circle-thin"></i>Employee</a></li>
                     
                     

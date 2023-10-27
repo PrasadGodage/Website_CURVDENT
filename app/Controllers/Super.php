@@ -86,9 +86,10 @@ class Super extends BaseController
     {
         return view('super/header')
             . view('super/side_bar')
-            . view('office/office_type/modal/add_office_type')
+            . view('super/office/office_type/office_type')
+            . view('super/office/office_type/modal/add_office_type')
             . view('super/footer')
-            . view('office/office_type/office_type_js')
+            . view('super/office/office_type/office_type_js')
             . view('super/htmlend');
     }
 
@@ -96,10 +97,10 @@ class Super extends BaseController
     {
         return view('super/header')
             . view('super/side_bar')
-            . view('office/office_branch/office_branch')
-            . view('office/office_branch/modal/add_office_branch')
+            . view('super/office/office_branch/office_branch')
+            . view('super/office/office_branch/modal/add_office_branch')
             . view('super/footer')
-            . view('office/office_branch/office_branch_js')
+            . view('super/office/office_branch/office_branch_js')
             . view('super/htmlend');
     }
 

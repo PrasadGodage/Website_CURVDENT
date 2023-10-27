@@ -60,10 +60,10 @@ function setActivityList(list) {
 
         tblData += `
                 <tr>
-                        <td>` + activity.id + `</td>
+                        <td>` + activity.activity_id + `</td>
                         <td>` + activity.tab_name + `</td>
                         <td>` + activity.activity_title + `</td>
-                        <td>` + activity.url  + `</td>
+                        <td>` + activity.url + `</td>
                         <td><i class="${activity.icon}" aria-hidden="true" style="font-size:20px;"></i></td>
                         <td>` + status + `</td>
                         <td> <a href="#" onclick="updateTabDetails(` + activity.id + `)" title="Update Tab" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
