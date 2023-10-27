@@ -58,6 +58,26 @@ $routes->group('super', function ($routes) {
     $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
     $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');
 
+
+    $routes->get('profileRole', 'api\ProfileRoleController::getProfile_role');      
+    $routes->get('profileRole/(:num)', 'api\ProfileRoleController::getProfile_role/$1');      
+    $routes->post('profileRole', 'api\ProfileRoleController::postProfile_role');
+    $routes->delete('profileRole/(:num)', 'api\ProfileRoleController::deleteProfile_role/$1');
+    
+    $routes->get('profileTab', 'api\ProfileTabController::getProfile_tab');      
+    $routes->get('profileTab/(:num)', 'api\ProfileTabController::getProfile_tab/$1');      
+    $routes->post('profileTab', 'api\ProfileTabController::postProfile_tab');
+    $routes->delete('profileTab/(:num)', 'api\ProfileTabController::deleteProfile_tab/$1');
+    
+    
+    $routes->get('profileActivity', 'api\ProfileActivityController::getProfileActivity');      
+    $routes->get('profileActivity/(:num)', 'api\ProfileActivityController::getProfileActivity/$1');      
+    $routes->post('profileActivity', 'api\ProfileActivityController::postProfileActivity');
+    $routes->delete('profileActivity/(:num)/(:num)', 'api\ProfileActivityController::deleteProfileActivity/$1/$2');
+    
+    $routes->get('profileActivityPermissions', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission');      
+    $routes->get('profileActivityPermissions/(:num)', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission/$1');
+
     $routes->get('tabJoin', 'SiteController::getData');      
 });
 
