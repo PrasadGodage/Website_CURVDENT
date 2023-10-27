@@ -15,7 +15,7 @@ class StateController extends BaseController
         $stateModel = new StateModel();
 
         // Fetch all products from the database
-        $data = $stateModel->get_all_data($id);
+        $data = $stateModel->get_all_data($id,0);
 
         if (!empty($data)) {
             $response = [

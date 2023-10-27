@@ -91,7 +91,8 @@ $routes->group('super', function ($routes) {
     $routes->post('state', 'api\StateController::postState');
 
     $routes->get('city', 'api\CityController::getCity');      
-    $routes->get('city/(:num)', 'api\CityController::getCity/$1');      
+    $routes->get('city/(:num)', 'api\CityController::getCity/$1');    
+    $routes->get('statecity/(:num)', 'api\CityController::getStateCity/$1');  
     $routes->post('city', 'api\CityController::postCity');
 
     $routes->get('tabJoin', 'SiteController::getData');      

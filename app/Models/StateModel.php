@@ -62,7 +62,7 @@ class StateModel extends Model
     }
 
     
-    public function get_all_data($id)
+    public function get_all_data1($id)
     {
         $builder = $this->db->table('state_master sm');
         $builder->select('sm.id as state_id, sm.country_id,sm.state,sm.is_active');
@@ -75,4 +75,24 @@ class StateModel extends Model
             return $builder->get()->getResultArray();
         }
     }
+
+    public function get_all_data($id, $flag)
+{
+    $builder = $this->db->table('state_master sm');
+    $builder->select('sm.id as state_id, sm.country_id,sm.state,sm.is_active');
+    $builder->join('country_master cm', 'cm.id=sm.id');
+
+    if ($id != 0 && $flag == 0) {
+        $builder->where('sm.country_id', $id);
+        $data = $builder->get()->getResult();
+    } else if ($id != 0 && $flag == 1) {
+        $builder->where('sm.id', $id);
+        $data = $builder->get()->getRowArray();
+    } else {
+        $data = $builder->get()->getResult();
+    }
+
+    return $data;
+}
+
 }
