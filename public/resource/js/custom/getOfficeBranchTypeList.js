@@ -3,7 +3,7 @@ let officeTypeList = new Map();
 function getOfficeTypeList() {
     $.ajax({
 
-        url: base_url+'officeType',
+        url: base_url+'super/officeType',
 
         type: 'GET',
 

@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ActivityModel extends Model
+class StateModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'activity_master';
+    protected $table            = 'state_master';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['tab_id','icon_id','activity_title','url','is_active'];
+    protected $allowedFields    = ['country_id','state','is_active'];
 
     // Dates
     protected $useTimestamps = false;
@@ -38,8 +38,6 @@ class ActivityModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-
 
     public function __construct()
     {
@@ -66,17 +64,15 @@ class ActivityModel extends Model
     
     public function get_all_data($id)
     {
-        $builder = $this->db->table('activity_master am');
-        $builder->select('am.id as activity_id, am.tab_id, am.icon_id,tm.tab_name , am.activity_title,am.url,im.icon, am.is_active');
-        $builder->join('tab_master tm', 'tm.id=am.tab_id');
-        $builder->join('icon_master im', 'im.id=am.icon_id');
-
+        $builder = $this->db->table('state_master sm');
+        $builder->select('sm.id as state_id, sm.country_id,sm.state,sm.is_active');
+        $builder->join('country_master cm', 'cm.id=sm.id');
+        
         if ($id != 0) {
-            $builder->where('am.id', $id);
+            $builder->where('sm.id', $id);
             return $builder->get()->getRowArray();
         } else {
             return $builder->get()->getResultArray();
         }
     }
-
 }

@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ActivityModel extends Model
+class CityModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'activity_master';
+    protected $table            = 'city_master';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['tab_id','icon_id','activity_title','url','is_active'];
+    protected $allowedFields    = ['state_id','country_id','city'];
 
     // Dates
     protected $useTimestamps = false;
@@ -40,43 +40,18 @@ class ActivityModel extends Model
     protected $afterDelete    = [];
 
 
-
-    public function __construct()
-    {
-        parent::__construct();
-        $this->db = \Config\Database::connect();
-        // OR $this->db = db_connect();
-    }
-    
-    public function update_data($id, $data)
-    {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
-    }
-
-    public function delete_data($id)
-    {
-        return $this->db->table($this->table)->delete(array(
-            "id" => $id,
-        ));
-    }
-
-    
     public function get_all_data($id)
     {
-        $builder = $this->db->table('activity_master am');
-        $builder->select('am.id as activity_id, am.tab_id, am.icon_id,tm.tab_name , am.activity_title,am.url,im.icon, am.is_active');
-        $builder->join('tab_master tm', 'tm.id=am.tab_id');
-        $builder->join('icon_master im', 'im.id=am.icon_id');
-
+        $builder = $this->db->table('city_master cim');
+        $builder->select('cim.id as city_id, cim.country_id,cim.state_id,cim.city');
+        $builder->join('country_master cm', 'cm.id=cim.id');
+        $builder->join('state_master sm', 'sm.id=cim.id');
+        
         if ($id != 0) {
-            $builder->where('am.id', $id);
+            $builder->where('cim.id', $id);
             return $builder->get()->getRowArray();
         } else {
             return $builder->get()->getResultArray();
         }
     }
-
 }

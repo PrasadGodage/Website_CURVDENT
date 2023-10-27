@@ -3,20 +3,21 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\OfficeBranchModel;
+use App\Models\CityModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
-class OfficeBranchController extends BaseController
+
+
+class CityController extends BaseController
 {
     use ResponseTrait;
-    public function getOfficeBranch($id=0)
+    public function getCity($id=0)
     {
-        $officeBranchModel = new OfficeBranchModel();
+        $cityModel = new CityModel();
 
         // Fetch all products from the database
-       // $data = $officeBranchModel->get_all_data($id);
-        $data = $officeBranchModel->findAll();
+        $data = $cityModel->get_all_data($id);
 
         if (!empty($data)) {
             $response = [
@@ -34,34 +35,24 @@ class OfficeBranchController extends BaseController
         }
     }
 
-    public function postOfficeBranch()
+    public function postCity()
     {
-        $officeBranchModel = new OfficeBranchModel();
+        $cityModel = new CityModel();
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
-            'office_type_id' => $this->request->getVar('office_type_id'),
-            'office_name' => $this->request->getVar('office_name'),
-            'address' => $this->request->getVar('address'),
             'country_id' => $this->request->getVar('country_id'),
             'state_id' => $this->request->getVar('state_id'),
-            'city_id' => $this->request->getVar('city_id'),
-            'area_id' => $this->request->getVar('area_id'),
-            'pincode' => $this->request->getVar('pincode'),
-            'hod_id' => $this->request->getVar('hod_id'),
-            'contact_number1' => $this->request->getVar('contact_number1'),
-            'contact_number2' => $this->request->getVar('contact_number2'),
-            'email_id' => $this->request->getVar('email_id'),
-            
+            'city' => $this->request->getVar('city'),                     
         ];
-        $result= $officeBranchModel->save($data);
+        $result= $cityModel->save($data);
 
         if(!empty($result)){
             
             $response = [
                 'status' => 200,
-                'message' => 'Office Branch Data Created Successfully!',
+                'message' => 'City Data Created Successfully!',
                 'data' => $result
             ];
             return $this->response->setJSON($response);
