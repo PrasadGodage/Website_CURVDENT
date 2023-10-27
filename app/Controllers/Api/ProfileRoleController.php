@@ -3,22 +3,21 @@
 namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
-use App\Models\ProfileModel;
+use App\Models\ProfileRoleModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
-
-class ProfileController extends BaseController
+class ProfileRoleController extends BaseController
 {
     use ResponseTrait;
-    
-    public function getProfile($id=0)
+
+    public function getProfile_role($id = 0)
     {
-        $profileModel = new ProfileModel();
+        $profileRoleModel = new ProfileRoleModel();
 
         // Fetch all products from the database
-        // $data = $profileModel->findAll();
-        $data = $profileModel->get_all_data($id);
+        // $data = $tabModel->findAll();
+        $data = $profileRoleModel->get_all_data($id);
 
         if (!empty($data)) {
             $response = [
@@ -37,24 +36,24 @@ class ProfileController extends BaseController
        
     }
 
-    public function postProfile()
+    public function postProfile_role()
     {
-        $profileModel = new ProfileModel();
+        $profileRoleModel = new ProfileRoleModel();
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
             'role_id' => $this->request->getVar('role_id'),
-            'profile' => $this->request->getVar('profile'),
-            'is_active' => $this->request->getVar('is_active'),
+            'profile_id' => $this->request->getVar('profile_id'),
+            
         ];
-        $result= $profileModel->save($data);
+        $result= $profileRoleModel->save($data);
 
         if(!empty($result)){
             
             $response = [
                 'status' => 200,
-                'message' => 'Profile Created Successfully!',
+                'message' => 'Tab Data Created Successfully!',
                 'data' => $result
             ];
             return $this->response->setJSON($response);
@@ -66,6 +65,29 @@ class ProfileController extends BaseController
                 'message' => 'Data not Found!'
             ];
             return $this->response->setJSON($response); 
+        }
+
+    }
+
+    public function deleteProfile_role($id = 0){
+
+        $profileRoleModel = new ProfileRoleModel();
+
+        $result = $profileRoleModel->delete_data($id);
+
+        if (!empty($result)) {
+            $response = [
+                'status' => 200,
+                'message' => 'All Data Deleted successfully!',
+                'data' => $result
+            ];
+            return $this->response->setJSON($response);
+        } else {
+            $response = [
+                'status' => 404,
+                'message' => 'Data not Found!'
+            ];
+            return $this->response->setJSON($response);
         }
 
     }

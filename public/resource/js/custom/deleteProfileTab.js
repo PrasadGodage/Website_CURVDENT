@@ -22,9 +22,9 @@ function deleteTab(id){
     
     $.ajax({
 
-        url: base_url+'super/deleteProfileTab/'+id,
+        url: base_url+'super/profileTab/'+id,
 
-        type: 'GET',
+        type: 'DELETE',
 
         async: false,
 

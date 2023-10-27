@@ -72,7 +72,7 @@ function setProfileList(list) {
                         <td>` + profile.role + `</td>
                         <td>` + profile.profile + `</td>
                         <td>` + status + `</td>
-                        <td> <a href="`+base_url+`profileDetails/`+profile.profile_id+`" title="Update Profile" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
+                        <td> <a href="`+base_url+`super/profileDetails/`+profile.profile_id+`" title="Update Profile" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> 
                         
                         </td>
                         

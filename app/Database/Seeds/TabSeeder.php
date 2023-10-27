@@ -5,22 +5,22 @@ namespace App\Database\Seeds;
 use CodeIgniter\Database\Seeder;
 
 use App\Controllers\BaseController;
-use App\Models\IconModel;
+use App\Models\TabModel;
 use CodeIgniter\API\ResponseTrait;
 use \Firebase\JWT\JWT;
 
-class IconSeeder extends Seeder
+class TabSeeder extends Seeder
 {
     use ResponseTrait;
 
     public function run()
     {
-
-        $iconModel = new IconModel();
+        $tabModel = new TabModel();
 
         // Fetch all products from the database
-        $data = $iconModel->get_data();
+        // $data = $tabModel->findAll();
+        $data = $tabModel->get_data();
 
-        $this->db->table('icon_master')->insertBatch($data);
+        $this->db->table('tab_master')->insertBatch($data);
     }
 }
