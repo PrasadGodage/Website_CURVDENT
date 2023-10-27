@@ -47,13 +47,17 @@ class TabController extends BaseController
 
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
-        $data = [
-            'tab_name' => $this->request->getVar('tab_name'),
-            'is_subtab' => $this->request->getVar('is_subtab'),
-            'icon_id' => $this->request->getVar('icon_id'),
-            'is_active' => $this->request->getVar('is_active'),
+        // $data = [
+        //     'tab_name' => $this->request->getVar('tab_name'),
+        //     'is_subtab' => $this->request->getVar('is_subtab'),
+        //     'icon_id' => $this->request->getVar('icon_id'),
+        //     'is_active' => $this->request->getVar('is_active'),
             
-        ];
+        // ];
+        $data['tab_name'] = $this->request->getVar('tab_name');
+        $data['icon_id'] = $this->request->getVar('icon_id');
+        $data['is_active'] = ($this->request->getVar('is_active') == 'on' || $this->request->getVar('is_active') == 1) ? 1 : 0;
+        $data['is_subtab'] = ($this->request->getVar('is_subtab') == 'on' || $this->request->getVar('is_subtab') == 1) ? 1 : 0;
         $result= $tabModel->save($data);
 
         if(!empty($result)){

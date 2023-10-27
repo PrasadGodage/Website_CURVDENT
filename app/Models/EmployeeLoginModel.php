@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 
 class EmployeeLoginModel extends Model
 {
+    protected $db;
     protected $DBGroup          = 'default';
     protected $table            = 'admin_master';
     protected $primaryKey       = 'id';
@@ -38,4 +39,52 @@ class EmployeeLoginModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->db = \Config\Database::connect();
+        // OR $this->db = db_connect();
+    }
+    public function insert_data($data)
+    {
+        $this->db->table($this->table)->insert($data);
+        return $this->db->insertID();
+    }
+
+    public function update_data($id, $data)
+    {
+        $this->db->table($this->table)->update($data, array(
+            "id" => $id,
+        ));
+        return $this->db->affectedRows();
+    }
+
+    public function delete_data($id)
+    {
+        return $this->db->table($this->table)->delete(array(
+            "id" => $id,
+        ));
+    }
+
+    public function get_authenticate($data)
+    {
+        $builder = $this->db->table('admin_master am');
+        $builder->select('am.id, am.role_id, rm.role, am.profile_id, pm.profile, am.office_branch_id, obm.office_name, 
+        am.name, am.profile_image, am.dob, am.age, am.aadhar_no, am.pancard, am.password, am.userid, am.contact_number1,
+        am.contact_number2, am.email_id, am.city_id, ctm.city, am.state_id, sm.state, am.country_id, cm.country, am.pincode,
+        am.gender, am.address, am.is_active, am.is_verified, am.created_by, am.created_at, am.modified_by, am.modified_at'); // List all columns you want to select
+        
+        $builder->join('role_master rm', 'rm.id = am.role_id');
+        $builder->join('profile_master pm', 'pm.id = am.profile_id');
+        $builder->join('office_branch_master obm', 'obm.id = am.office_branch_id');
+        $builder->join('country_master cm', 'cm.id = am.country_id');
+        $builder->join('state_master sm', 'sm.id = am.state_id');
+        $builder->join('city_master ctm', 'ctm.id = am.city_id');
+        $builder->where("am.userid", $data['userid']);
+        $builder->where("am.password", $data['password']);
+        $result = $builder->get()->getRowArray();
+        return $result;
+    }
+
 }

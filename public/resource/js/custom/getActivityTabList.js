@@ -4,7 +4,7 @@
     function getActivityTabList() {
         $.ajax({
 
-            url: base_url+'tab',
+            url: base_url+'super/tab',
 
             type: 'GET',
 

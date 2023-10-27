@@ -26,6 +26,7 @@
                         for (var i = 0; i < response.data.length; i++) {
                             profileActivityList.set(response.data[i].ppermission_id, response.data[i]);
                         }
+                        // console.log(profileActivityList);
                         setProfileActivityList(profileActivityList);
                     }
                     

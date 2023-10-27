@@ -16,7 +16,7 @@ $('#editActivityControlForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'updateActivityControl',
+            url: base_url+'super/updateActivityControl',
 
             type: 'POST',
 

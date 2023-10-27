@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 
 class ActivityModel extends Model
 {
+    protected $db;
     protected $DBGroup          = 'default';
     protected $table            = 'activity_master';
     protected $primaryKey       = 'id';

@@ -71,9 +71,9 @@ class ProfileActivityControlPermissionModel extends Model
     public function get_all_data($id = 0)
     {
         $builder = $this->db->table('profile_access_control_permission pacp');
-        $builder->select('pacp.id, pacp.profile_id, pm.profile, pacp.aac_id, pacp.activity_id, am.activity_title, am.url, pacp.permission');
-        // $builder->select('pacp.id, pacp.profile_id, pm.profile, pacp.aac_id, acc.control_name, pacp.activity_id, am.activity_title, am.url, pacp.permission');
-        // $builder->join('activity_access_controls acc', 'acc.id = pacp.aac_id');
+        // $builder->select('pacp.id, pacp.profile_id, pm.profile, pacp.aac_id, pacp.activity_id, am.activity_title, am.url, pacp.permission');
+        $builder->select('pacp.id, pacp.profile_id, pm.profile, pacp.aac_id, acc.control_name, pacp.activity_id, am.activity_title, am.url, pacp.permission');
+        $builder->join('activity_access_controls acc', 'acc.id = pacp.aac_id');
         $builder->join('activity_master am', 'am.id = pacp.activity_id');
         $builder->join('profile_master pm', 'pm.id = pacp.profile_id');
 

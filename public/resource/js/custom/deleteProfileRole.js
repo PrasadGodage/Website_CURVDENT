@@ -22,9 +22,9 @@ function deleteRole(id){
     
     $.ajax({
 
-        url: base_url+'super/deleteProfileRole/'+id,
+        url: base_url+'super/profileRole/'+id,
 
-        type: 'GET',
+        type: 'DELETE',
 
         async: false,
 

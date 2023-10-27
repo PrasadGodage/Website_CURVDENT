@@ -3,7 +3,7 @@ let iconList = new Map();
 function getIconList() {
     $.ajax({
 
-        url: base_url+'icon',
+        url: base_url+'super/icon',
 
         type: 'GET',
 

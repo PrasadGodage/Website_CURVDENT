@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 
 class ActivityControlModel extends Model
 {
+    protected $db;
     protected $DBGroup          = 'default';
     protected $table            = 'activity_access_controls';
     protected $primaryKey       = 'id';
@@ -38,4 +39,41 @@ class ActivityControlModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->db = \Config\Database::connect();
+        // OR $this->db = db_connect();
+    }
+
+    // public function update($id, $data) {
+	// 	return $this->db
+    //                     ->table('activity_access_controls')
+    //                     ->where(["id" => $id])
+    //                     ->set($data)
+    //                     ->update();
+	// }
+
+    public function get_activityControlById($id)
+    {
+        if ($id != 0) {
+            $query = $this->db->table('activity_access_controls')
+                            ->where('id', $id)
+                            ->get();
+            return $query->getRowArray();
+        } else {
+            return [];
+        }
+    }
+
+
+    public function update_data($id, $data)
+    {
+        $this->db->table($this->table)->update($data, array(
+            "id" => $id,
+        ));
+        return $this->db->affectedRows();
+    }
 }
