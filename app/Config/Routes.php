@@ -78,6 +78,22 @@ $routes->group('super', function ($routes) {
     $routes->get('profileActivityPermissions', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission');      
     $routes->get('profileActivityPermissions/(:num)', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission/$1');
 
+    $routes->get('officeBranchDetails', 'api\OfficeBranchController::getOfficeBranch');      
+    $routes->get('officeBranchDetails/(:num)', 'api\OfficeBranchController::getOfficeBranch/$1');      
+    $routes->post('officeBranchDetails', 'api\OfficeBranchController::postOfficeBranch');
+
+    $routes->get('country', 'api\CountryController::getCountry');      
+    $routes->get('country/(:num)', 'api\CountryController::getCountry/$1');      
+    $routes->post('country', 'api\CountryController::postCountry');
+
+    $routes->get('state', 'api\StateController::getState');      
+    $routes->get('state/(:num)', 'api\StateController::getState/$1');      
+    $routes->post('state', 'api\StateController::postState');
+
+    $routes->get('city', 'api\CityController::getCity');      
+    $routes->get('city/(:num)', 'api\CityController::getCity/$1');      
+    $routes->post('city', 'api\CityController::postCity');
+
     $routes->get('tabJoin', 'SiteController::getData');      
 });
 
