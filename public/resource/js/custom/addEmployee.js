@@ -13,7 +13,7 @@ $('#addEmployeeForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'employee',
+            url: base_url+'super/employee',
 
             type: 'POST',
 

@@ -52,6 +52,7 @@ $routes->group('super', function ($routes) {
     
     $routes->get('profile', 'api\ProfileController::getProfile');      
     $routes->get('profile/(:num)', 'api\ProfileController::getProfile/$1');      
+    $routes->get('profileByRole/(:num)', 'api\ProfileController::getRoleByProfile/$1');      
     $routes->post('profile', 'api\ProfileController::postProfile');
 
     $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
@@ -105,6 +106,15 @@ $routes->group('super', function ($routes) {
     $routes->get('city/(:num)', 'api\CityController::getCity/$1');    
     $routes->get('statecity/(:num)', 'api\CityController::getStateCity/$1');  
     $routes->post('city', 'api\CityController::postCity');
+
+    //Admin Master 
+    //api 
+    $routes->post('employee', 'api\AdminController::postAdmin');
+    $routes->get('employee/(:num)/(:num)', 'api\AdminController::getAdmin/$1/$2');
+    // $routes->post('employeeLogout', 'api\EmployeeLoginController::logout');
+
+    // $route['employee']='api/AdminController/admin';
+    // $route['employee/(:num)/(:num)']='api/AdminController/admin/$1/$2';
 
     $routes->get('tabJoin', 'SiteController::getData');      
 });

@@ -123,7 +123,6 @@ class AdminMaster extends Migration
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true,
                 
             ],
             'created_by' => [
@@ -133,7 +132,7 @@ class AdminMaster extends Migration
             ],
             'modified_at' => [
                 'type' => 'TIMESTAMP',
-                'null' => true,
+                
                 
             ],
             'modified_by' => [

@@ -3,7 +3,7 @@ let officeBranchList = new Map();
 function getOfficeBranchList() {
     $.ajax({
 
-        url: base_url+'officeBranch',
+        url: base_url+'super/officeBranchDetails',
 
         type: 'GET',
 

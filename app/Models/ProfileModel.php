@@ -82,5 +82,17 @@ class ProfileModel extends Model
             return $builder->get()->getResultArray();
         }
     }
+    public function get_roleByProfile($roleId)
+    {
+        $builder = $this->db->table('profile_master pm');
+        $builder->select('pm.id as profile_id, pm.role_id, rm.role, pm.profile, pm.is_active');
+        $builder->join('role_master rm', 'rm.id=pm.role_id');
+        
+        $builder->where('pm.role_id', $roleId);
+        // return $builder->get()->getRowArray();
+    
+        return $builder->get()->getResultArray();
+        
+    }
 
 }

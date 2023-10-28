@@ -4,7 +4,7 @@ $("#state_id").change(function() {
     $('#city_id').html('');
     $.ajax({
 
-        url: base_url+'statecity/'+countryid,
+        url: base_url+'super/statecity/'+countryid,
 
         type: 'GET',
 

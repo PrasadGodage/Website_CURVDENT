@@ -4,7 +4,7 @@ $("#role_id").change(function() {
     $('#profile_id').html('');
     $.ajax({
 
-        url: base_url+'profileByRole/'+roleid,
+        url: base_url+'super/profileByRole/'+roleid,
 
         type: 'GET',
 

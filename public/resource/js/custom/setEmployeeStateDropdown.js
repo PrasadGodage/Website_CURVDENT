@@ -4,7 +4,7 @@ $("#country_id").change(function() {
     $('#state_id').html('');
     $.ajax({
 
-        url: base_url+'state/'+countryid,
+        url: base_url+'super/state/'+countryid,
 
         type: 'GET',
 
@@ -25,7 +25,8 @@ $("#country_id").change(function() {
                 if (response.data.lenght != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         if(response.data[i].is_active==1){
-                        option +=`<option value="${response.data[i].id}">${response.data[i].state}</option>`;
+                        option +=`<option value="${response.data[i].state_id}">${response.data[i].state}</option>`;
+                        // console.log(response.data[i].state_id);
                      }
                     }
                     

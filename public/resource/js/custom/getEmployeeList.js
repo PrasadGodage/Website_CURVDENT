@@ -36,7 +36,7 @@ function getEmployeeList() {
     
     $.ajax({
 
-        url: base_url+'employee/'+userid+'/'+flag,
+        url: base_url+'super/employee/'+userid+'/'+flag,
 
         type: 'GET',
 

@@ -36,11 +36,11 @@ class ProfileController extends BaseController
         }
        
     }
-
+    
     public function postProfile()
     {
         $profileModel = new ProfileModel();
-
+        
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
@@ -67,6 +67,30 @@ class ProfileController extends BaseController
             ];
             return $this->response->setJSON($response); 
         }
-
+        
+    }
+    public function getRoleByProfile($roleId=0)
+    {
+        $profileModel = new ProfileModel();
+    
+        // Fetch all products from the database
+        // $data = $profileModel->findAll();
+        $data = $profileModel->get_roleByProfile($roleId);
+    
+        if (!empty($data)) {
+            $response = [
+                'status' => 200,
+                'message' => 'All Data Fetch successfully!',
+                'data' => $data
+            ];
+            return $this->response->setJSON($response);
+        } else {
+            $response = [
+                'status' => 404,
+                'message' => 'Data not Found!'
+            ];
+            return $this->response->setJSON($response);
+        }
+       
     }
 }

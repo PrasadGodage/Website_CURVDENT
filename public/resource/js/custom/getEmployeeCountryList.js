@@ -3,7 +3,7 @@ let countryList = new Map();
 function getEmployeeCountryList() {
     $.ajax({
 
-        url: base_url+'country',
+        url: base_url+'super/country',
 
         type: 'GET',
 
