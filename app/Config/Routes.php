@@ -78,6 +78,17 @@ $routes->group('super', function ($routes) {
     $routes->get('profileActivityPermissions', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission');      
     $routes->get('profileActivityPermissions/(:num)', 'api\ProfileAccessControlPermissionController::getprofileActivityPermission/$1');
 
+    $routes->get('activityControl', 'api\ActivityControlModelController::getActivityControl');      
+    $routes->get('activityControl/(:num)', 'api\ActivityControlModelController::getActivityControl/$1');      
+    $routes->post('activityControl', 'api\ActivityControlModelController::postActivityControl');
+
+    $routes->post('updateActivityControl', 'api\ActivityControlModelController::updateActivityControl');
+
+
+    //Employee Login and logout api
+    $routes->post('employee_login', 'api\EmployeeLoginController::login_auth');
+    $routes->post('employeeLogout', 'api\EmployeeLoginController::logout');
+    
     $routes->get('officeBranchDetails', 'api\OfficeBranchController::getOfficeBranch');      
     $routes->get('officeBranchDetails/(:num)', 'api\OfficeBranchController::getOfficeBranch/$1');      
     $routes->post('officeBranchDetails', 'api\OfficeBranchController::postOfficeBranch');

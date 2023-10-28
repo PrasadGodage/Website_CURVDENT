@@ -20,7 +20,7 @@ class EmployeeLoginController extends BaseController
     protected $profileRoleModel;
     protected $profileTabModel;
     protected $profileActivityModel;
-    protected $profileActivityControlPermissionModel;
+    protected $permissionModel;
 
     public function __construct()
     {
@@ -28,17 +28,33 @@ class EmployeeLoginController extends BaseController
         $this->profileRoleModel = new ProfileRoleModel();
         $this->profileTabModel = new ProfileTabModel();
         $this->profileActivityModel = new ProfileActivityModel();
-        $this->profileActivityControlPermissionModel = new ProfileActivityControlPermissionModel();
+        $this->permissionModel = new ProfileActivityControlPermissionModel();
     }
 
     public function login_auth()
     {
-        $data['userid'] = $this->request->getPost('userid');
-        $data['password'] = $this->request->getPost('password');
-        // Now you can use $userID and $password in your code
-        $empDetails = $this->employeeLoginModel->get_authenticate($data);
-        echo "<pre>";
-        print_r($empDetails);
 
+        $this->employeeLoginModel = new EmployeeLoginModel();
+        $data = [
+            'userid' => $this->request->getVar('userid'),
+            'password' => $this->request->getVar('password'),
+        ];
+        
+        $empDetails = $this->employeeLoginModel->get_authenticate($data);
+        
+        if (!empty($empDetails)) {
+            $rolePermission=$this->profileRoleModel->get_all_data($empDetails['profile_id']);
+            $tabPermission=$this->profileTabModel->get_all_data($empDetails['profile_id'],1);
+            $activityPermission=$this->profileActivityModel->get_all_data($empDetails['profile_id']);
+            $activityContorlPermission = $this->permissionModel->get_all_data($empDetails['profile_id']);
+
+            // echo "<pre>";
+            // echo "12345";
+            // print_r($rolePermission);
+            // print_r($tabPermission);
+            // print_r($activityPermission);
+            // print_r($activityContorlPermission);
+        }
     }
+
 }
