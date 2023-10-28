@@ -15,8 +15,8 @@ class OfficeBranchController extends BaseController
         $officeBranchModel = new OfficeBranchModel();
 
         // Fetch all products from the database
-       // $data = $officeBranchModel->get_all_data($id);
-        $data = $officeBranchModel->findAll();
+       $data = $officeBranchModel->get_all_data($id);
+        //$data = $officeBranchModel->findAll();
 
         if (!empty($data)) {
             $response = [

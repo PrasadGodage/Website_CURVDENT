@@ -1,6 +1,6 @@
 let officeTypeList = new Map();
 let countryList = new Map();
-
+let officeBranchList = new Map();
 
 function getOfficeTypeList() {
     $.ajax({
@@ -12,11 +12,7 @@ function getOfficeTypeList() {
         async:false,
 
         caches:false,
-
-        headers: {
-            "Authorization": token
-        },
-
+      
         dataType: 'json',
 
         success: function (response) {
@@ -43,6 +39,108 @@ function getOfficeTypeList() {
 }
 getOfficeTypeList();
 
+function setHeadOfDeptDropdown(list) {
+
+    var options = '<option value="" disabled selected hidden>Please Choose...</option>';
+        options += '<option value="0">Self</option>';
+    for (let k of list.keys()) {
+        
+        let hod = list.get(k);
+        
+          options+=`<option value="`+hod.id+`">`+hod.office_name+`</option>`;
+        
+        
+      }
+        
+    
+    $('#hod_id').html(options);
+    
+}
+
+function setOfficeBranchList(list) {
+
+    $('#officeBranchTable').dataTable().fnDestroy();
+    $('#officeBranchList').empty();
+    var tblData = '', badge, status;
+    
+    for (let k of list.keys()) {
+        
+        let branch = list.get(k);
+        
+        
+
+        tblData += `
+                <tr>
+                        <td>${branch.id}</td>
+                        <td>${branch.type}</td>
+                        <td width="100%">
+                        
+                        <div class="media align-items-center">
+
+
+                                                    
+                                                    <div class="media-body">
+                                                        <p>
+                                                            <a href="#"><strong class="h6">${branch.office_name}</strong></a>
+                                                            
+                                                        </p>
+                                                        <p><strong class="">Address:-</strong>${branch.address}</p>
+                                                        <p><strong class="">Country:-</strong>${branch.country} <strong class="">State:-</strong>${branch.state} <strong class="">City:-</strong>${branch.city}</p>
+                                                        <p><strong class="">Contact No.1:-</strong> ${branch.contact_number1} | <strong>Contact No.2:-</strong>${branch.contact_number2}</p>
+                                                        <p> <strong class="">Email:</strong>${branch.email_id}</p>
+                                                  </div>
+                        
+                        </td>
+                        <td>${branch.created_at}</td>
+                        <td> <a href="#" onclick="updateOfficeBranchDetails(${branch.id})" title="Update Branch" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
+                        
+                        </td>
+                </tr>
+                `;
+    }
+    
+    $('#officeBranchList').html(tblData);
+    $('#officeBranchTable').DataTable();
+}
+
+function getOfficeBranchList() {
+    $.ajax({
+
+        url: base_url+'super/officeBranchDetails',
+
+        type: 'GET',
+
+        async:false,
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.lenght != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+                        officeBranchList.set(response.data[i].id, response.data[i]);
+                    }
+                    
+                    setOfficeBranchList(officeBranchList);
+                    // getOfficeTypeList();
+                    setHeadOfDeptDropdown(officeBranchList);
+                    
+                }
+
+            }else if(response.status==404){
+                $('#hod_id').html('<option value="0">Self</option>');
+            }
+
+        }
+
+    });
+}
+
+getOfficeBranchList();
+
 
 $('#addOfficeBranchForm').on('submit', function (e) {
 
@@ -53,13 +151,9 @@ $('#addOfficeBranchForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'officeBranch',
+            url: base_url+'super/officeBranchDetails',
 
             type: 'POST',
-
-            headers: {
-                "Authorization": token
-            },
 
             data: formdata,
 
@@ -104,26 +198,26 @@ $('#addOfficeBranchBtn').click(function () {
 });
 
 
-//setCountryList
+// //setCountryList
 
-function setOfficeCountryDropdown(list) {
+// function setOfficeCountryDropdown(list) {
 
-    //var options = '<option value="" disabled selected hidden>India</option>';
-    let options='<option value="" disable selected hidden>Please choose...</option>';
+//     //var options = '<option value="" disabled selected hidden>India</option>';
+//     let options='<option value="" disable selected hidden>Please choose...</option>';
     
-    for (let k of list.keys()) {
+//     for (let k of list.keys()) {
         
-        let country = list.get(k);
+//         let country = list.get(k);
         
-          options+=`<option value="`+country.id+`">`+country.country+`</option>`;
+//           options+=`<option value="`+country.id+`">`+country.country+`</option>`;
         
         
-      }        
+//       }        
     
-    $('#country_id').html(options);
-    // $('#state_id').prop('disabled',true);
-    // $('#city_id').prop('disabled',true);
-}
+//     $('#country_id').html(options);
+//     // $('#state_id').prop('disabled',true);
+//     // $('#city_id').prop('disabled',true);
+// }
 
 // getCountryList
 function getOfficeCountryList() {
@@ -134,10 +228,6 @@ function getOfficeCountryList() {
         type: 'GET',
 
         async:false,
-
-        headers: {
-            "Authorization": token
-        },
 
         dataType: 'json',
 
@@ -177,10 +267,6 @@ $("#country_id").change(function() {
 
         async:false,
 
-        headers: {
-            "Authorization": token
-        },
-
         dataType: 'json',
 
         success: function (response) {
@@ -189,7 +275,7 @@ $("#country_id").change(function() {
             if (response.status == 200) {
                 let option='<option value="" disable selected hidden>Please choose...</option>';
                        
-                if (response.data.lenght != 0) {
+                if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         if(response.data[i].is_active==1){
                         option +=`<option value="${response.data[i].id}">${response.data[i].state}</option>`;
@@ -233,9 +319,9 @@ $("#state_id").change(function() {
 
             if (response.status == 200) {
                 let option='<option value="" disabled selected hidden>Please Choose...</option>';
-                if (response.data.lenght != 0) {
+                if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        option +=`<option value="${response.data[i].id}">${response.data[i].city}</option>`;
+                        option +=`<option value="${response.data[i].state_id}">${response.data[i].city}</option>`;
                     }
                     
                 }

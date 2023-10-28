@@ -60,13 +60,13 @@ function setActivityList(list) {
 
         tblData += `
                 <tr>
-                        <td>` + activity.activity_id + `</td>
+                        <td>` + activity.id + `</td>
                         <td>` + activity.tab_name + `</td>
                         <td>` + activity.activity_title + `</td>
                         <td>` + activity.url + `</td>
                         <td><i class="${activity.icon}" aria-hidden="true" style="font-size:20px;"></i></td>
                         <td>` + status + `</td>
-                        <td> <a href="#" onclick="updateTabDetails(` + activity.id + `)" title="Update Tab" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
+                        <td> <a href="#" onclick="updateActivityDetails(` + activity.id + `)" title="Update Tab" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a> </td>
                 </tr>
                 `;
     }
@@ -188,28 +188,30 @@ function setTabDropdown(list) {
       }
         
     
-    $('#tab.id').html(options);
+    $('#tab_id').html(options);
     
 }
 
+setTabDropdown(tabList);
 
-function updateTabDetails(id) {
+
+function updateActivityDetails(id) {
     let activity = activityList.get(id.toString());
-    //clear all fields
-    $('#id').val('');
-    $('#activity_title').val('');
-    $("#active").attr('checked', false) ;
-     $("#inactive").attr('checked',false);
-    $('.error').text('');
-    //set details
-    $('#id').val(activity.id);
-    $('#activity_title').val(activity.activity_title);
-    $('#url').val(activity.url);
-    
-    (activity.is_active == 1) ? $("#active").attr('checked', 'checked') : $("#inactive").attr('checked', 'checked');
-    (activity.is_subtab == 1) ? $("#is_subtab").attr('checked', true) : $("#is_subtab").attr('checked', false);
-    $('#activity_id').val(activity.activity_id).change();
-    $('#addActivityModal').modal('toggle');
+     //clear all fields
+     $('#id').val('');
+     $('#activity_title').val('');
+     $('#url').val('');
+     $("#active").attr('checked', false) ;
+      $("#inactive").attr('checked',false);
+     $('.error').text('');
+     //set details
+     $('#id').val(activity.id);
+     $('#tab_id').val(activity.tab_id);
+     $('#activity_title').val(activity.activity_title);
+     $('#url').val(activity.url);
+     $('#icon_id').val(activity.icon_id).change();
+     (activity.is_active == 1) ? $("#active").attr('checked', 'checked') : $("#inactive").attr('checked', 'checked');
+     $('#addActivityModal').modal('toggle');
 }
 
 let iconList = new Map();

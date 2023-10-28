@@ -68,7 +68,7 @@ class ActivityModel extends Model
     public function get_all_data($id)
     {
         $builder = $this->db->table('activity_master am');
-        $builder->select('am.id as activity_id, am.tab_id, am.icon_id,tm.tab_name , am.activity_title,am.url,im.icon, am.is_active');
+        $builder->select('am.id, am.tab_id, am.icon_id,tm.tab_name , am.activity_title,am.url,im.icon, am.is_active');
         $builder->join('tab_master tm', 'tm.id=am.tab_id');
         $builder->join('icon_master im', 'im.id=am.icon_id');
 

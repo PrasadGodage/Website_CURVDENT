@@ -34,7 +34,8 @@ class OfficeBranchMaster extends Migration
             ],
             'state_id' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
+                'null' => true
             ],
             'city_id' => [
                 'type' => 'INT',
@@ -43,7 +44,8 @@ class OfficeBranchMaster extends Migration
             ],
             'area_id' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
+                'null' => true
             ],
             'pincode' => [
                 'type' => 'INT',
@@ -55,7 +57,8 @@ class OfficeBranchMaster extends Migration
             ],
             'created_by' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255'
+                'constraint' => '255',
+                'null' => true
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
@@ -63,7 +66,8 @@ class OfficeBranchMaster extends Migration
             ],
             'modified_by' => [
                 'type' => 'INT',
-                'constraint' => '11'
+                'constraint' => '11',
+                'null' => true
             ],
             'modified_at' => [
                 'type' => 'TIMESTAMP',
