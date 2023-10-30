@@ -83,21 +83,21 @@ class OfficeBranchModel extends Model
     //     }
     // }
     public function get_all_data($id)
-{
-    $builder = $this->db->table('office_branch_master obm');
-    $builder->select('obm.id, obm.office_type_id, otm.type, obm.office_name, obm.address, obm.area_id, obm.city_id, cm.city, obm.state_id, sm.state, obm.country_id, ctm.country, obm.pincode, obm.contact_number1, obm.contact_number2, obm.email_id, obm.hod_id, obm.created_by, obm.created_at, obm.modified_by, obm.modified_at');
-    $builder->join('office_type_master otm', 'otm.id=obm.office_type_id');
-    $builder->join('city_master cm', 'cm.id=obm.city_id');
-    $builder->join('state_master sm', 'sm.id=obm.state_id');
-    $builder->join('country_master ctm', 'ctm.id=obm.country_id');
+    {
+        $builder = $this->db->table('office_branch_master obm');
+        $builder->select('obm.id, obm.office_type_id, otm.type, obm.office_name, obm.address, obm.area_id, obm.city_id, cm.city, obm.state_id, sm.state, obm.country_id, ctm.country, obm.pincode, obm.contact_number1, obm.contact_number2, obm.email_id, obm.hod_id, obm.created_by, obm.created_at, obm.modified_by, obm.modified_at');
+        $builder->join('office_type_master otm', 'otm.id=obm.office_type_id');
+        $builder->join('city_master cm', 'cm.id=obm.city_id');
+        $builder->join('state_master sm', 'sm.id=obm.state_id');
+        $builder->join('country_master ctm', 'ctm.id=obm.country_id');
 
-    if ($id !== 0) {
-        $builder->where('obm.id', $id);
-        return $builder->get()->getRowArray();
-    } else {
-        return $builder->get()->getResult();
+        if ($id !== 0) {
+            $builder->where('obm.id', $id);
+            return $builder->get()->getRowArray();
+        } else {
+            return $builder->get()->getResult();
+        }
     }
-}
 
 
 }

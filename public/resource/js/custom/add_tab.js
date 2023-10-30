@@ -8,7 +8,7 @@ $('#addTabForm').on('submit', function (e) {
     if (returnVal) {
         $.ajax({
 
-            url: base_url+'tab',
+            url: base_url+'super/tab',
 
             type: 'POST',
 
