@@ -91,7 +91,7 @@ function setOfficeBranchList(list) {
                                                   </div>
                         
                         </td>
-                        <td>${branch.created_at}</td>
+                        <td>${branch.created_by}</td>
                         <td> <a href="#" onclick="updateOfficeBranchDetails(${branch.id})" title="Update Branch" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                         
                         </td>
@@ -189,6 +189,29 @@ $('#addOfficeBranchForm').on('submit', function (e) {
     }
 });
 
+function updateOfficeBranchDetails(id) {
+    
+    let branch = officeBranchList.get(id.toString());
+    //clear all fields
+    $("#addOfficeBranchForm").trigger("reset");
+    $('.error').text('');
+    //set details
+    $('#id').val(id);
+    $('#office_type_id').val(branch.office_type_id).change();
+    $('#office_name').val(branch.office_name);
+    $('#hod_id').val(branch.hod_id).change();
+    $('#contact_number1').val(branch.contact_number1);
+    $('#contact_number2').val(branch.contact_number2);
+    $('#email_id').val(branch.email_id);
+    $('#country_id').val(branch.country_id).change();
+    $('#state_id').val(branch.state_id).change();
+    $('#city_id').val(branch.city_id).change();
+    $('#address').val(branch.address);
+    $('#pincode').val(branch.pincode);
+    
+    $('#addOfficeBranchModal').modal('toggle');
+}
+
 
 $('#addOfficeBranchBtn').click(function () {
     $('#addOfficeBranchModal').modal('toggle');
@@ -244,7 +267,8 @@ function getOfficeCountryList() {
                 }
                
                $('#country_id').html(options);
-
+              $('#state_id').prop('disabled',false);
+              $('#city_id').prop('disabled',true);
 
             }
 
@@ -278,15 +302,15 @@ $("#country_id").change(function() {
                 if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         if(response.data[i].is_active==1){
-                        option +=`<option value="${response.data[i].id}">${response.data[i].state}</option>`;
+                        option +=`<option value="${response.data[i].state_id}">${response.data[i].state}</option>`;
+                        //console.log(response.data[i].state_id);
                      }
                     }
                     
                 }
                 $('#state_id').html(option);
-                $('#city_id').html('');
-                // $('#state_id').prop('disabled',false);
-                // $('#city_id').prop('disabled',true);
+               // $('#city_id').html('');
+                $('#city_id').prop('disabled',false);
 
             }
 
