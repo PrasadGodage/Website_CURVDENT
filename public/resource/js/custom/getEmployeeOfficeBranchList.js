@@ -1,5 +1,5 @@
 let officeBranchList = new Map();
-
+console.log('This is working');
 function getOfficeBranchList() {
     $.ajax({
 
@@ -24,7 +24,7 @@ function getOfficeBranchList() {
                     for (var i = 0; i < response.data.length; i++) {
                         officeBranchList.set(response.data[i].id, response.data[i]);
                     }
-                    
+                    console.log(officeBranchList);
                     setEmployeeBranchDropdown(officeBranchList);
                     
                 }

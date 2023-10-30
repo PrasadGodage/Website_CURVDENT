@@ -55,9 +55,9 @@ $routes->group('super', function ($routes) {
     $routes->get('profileByRole/(:num)', 'api\ProfileController::getRoleByProfile/$1');      
     $routes->post('profile', 'api\ProfileController::postProfile');
 
-    $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
-    $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
-    $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');
+    // $routes->get('officeType', 'api\OfficeTypeController::getOfficeType');      
+    // $routes->get('officeType/(:num)', 'api\OfficeTypeController::getOfficeType/$1');      
+    // $routes->post('officeType', 'api\OfficeTypeController::postOfficeType');
 
 
     $routes->get('profileRole', 'api\ProfileRoleController::getProfile_role');      

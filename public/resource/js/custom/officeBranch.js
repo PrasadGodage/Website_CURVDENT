@@ -20,7 +20,7 @@ function getOfficeTypeList() {
 
             if (response.status == 200) {
 
-                if (response.data.lenght != 0) {
+                if (response.data.length != 0) {
                     var options = '<option value="" disabled selected hidden>Please Choose...</option>';
                     
                     for (var i = 0; i < response.data.length; i++) {
@@ -119,7 +119,7 @@ function getOfficeBranchList() {
 
             if (response.status == 200) {
 
-                if (response.data.lenght != 0) {
+                if (response.data.length != 0) {
                     for (var i = 0; i < response.data.length; i++) {
                         officeBranchList.set(response.data[i].id, response.data[i]);
                     }

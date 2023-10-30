@@ -144,5 +144,15 @@ class AdminModel extends Model
     
         return empty($result);
     }
+
+    public function update_admin($id, $data)
+    {
+        $builder = $this->db->table('admin_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
+    }
+
     
 }

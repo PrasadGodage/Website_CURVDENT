@@ -103,17 +103,16 @@ $('#addTabForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addTabModal').modal('toggle');
+                    swal("Good job!", response.msg, "success");
                    
                 let id=response.data.id;
                   
-                 if(tabList.has(id)){
+                if(tabList.has(id)){
                     tabList.delete(id);   
-                 }
-                 tabList.set(id, response.data);
-                 setTabList(tabList);
-                 swal("Good job!", response.msg, "success");
+                }
+                tabList.set(id, response.data);
+                setTabList(tabList);
                 } else {
-
                     swal("Good job!", response.msg, "error");
 
                 }

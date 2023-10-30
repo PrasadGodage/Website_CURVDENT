@@ -81,49 +81,75 @@ class AdminController extends BaseController
         $data['is_verified'] = ($this->request->getVar('is_verified') == 'on' || $this->request->getVar('is_verified') == 1) ? 1 : 0;
         
         $id = $this->request->getPost('id');
-
-        $loop = true;
-        $prefix = $this->getPrefix();
-
-        while ($loop) {
-            $randomNo = rand(1, 10000);
-            $userid = $prefix . $randomNo;
-
-            if (!$this->admin->find_userid($userid)) {
-                $data['userid'] = $userid;
-                $loop = false;
-            }
-        }
-        $data['created_by'] = $this->request->getVar('created_by');
-
-
-
-
-
-
-
-
-
-
-
-        $result= $admin->save($data);
-
-        if(!empty($result)){
+        
+        if(empty($id)){
             
-            $response = [
-                'status' => 200,
-                'message' => 'Tab Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
+            $data['created_by'] = $this->request->getVar('created_by');
+            $img = $this->request->getFile('profile_image');
+
+            if (! $img->hasMoved()) {
+                $filepath = WRITEPATH . 'uploads/' . $img->store();
+
+                // $data = ['profile_image' => new File($filepath)];
+                $data['profile_image'] = $filepath;
+            }
+            
+            $result= $admin->save($data);
+
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Tab Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $admin->get_all_data($id, 4);
+            
+            if($result){
+                
+            }
+
+            $data['created_by'] = $this->request->getVar('created_by');
+            $img = $this->request->getFile('profile_image');
+
+            if (! $img->hasMoved()) {
+                $filepath = WRITEPATH . 'uploads/' . $img->store();
+
+                // $data = ['profile_image' => new File($filepath)];
+                $data['profile_image'] = $filepath;
+            }
+            
+            // $result= $admin->save($data);
+            $status = $admin->update_admin($id,$data);
+
+            if(!empty($status)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Tab Data Updated Successfully!',
+                    'data' => $status
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
         }
 
     }
