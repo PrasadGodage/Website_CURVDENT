@@ -59,10 +59,11 @@ class TabModel extends Model
 
     public function update_data($id, $data)
     {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
+        $builder = $this->db->table('tab_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
     }
 
     public function delete_data($id)
@@ -76,8 +77,8 @@ class TabModel extends Model
     public function get_all_data($id)
     {
         $builder = $this->db->table('tab_master tm');
-        $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon');
-        $builder->join('icon_master im', 'im.id=tm.icon_id');
+        $builder->select('tm.id, tm.tab_name, tm.is_subtab, tm.icon_id, tm.is_active, im.icon_title, im.icon')
+                ->join('icon_master im', 'im.id=tm.icon_id');
 
         if ($id != 0) {
             $builder->where('tm.id', $id);

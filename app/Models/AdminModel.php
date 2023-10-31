@@ -111,27 +111,33 @@ class AdminModel extends Model
                             am.created_at, 
                             am.modified_by, 
                             am.modified_at'
-                        ); // List all columns you want to select
-        $builder->join('role_master rm', 'rm.id = am.role_id');
-        $builder->join('profile_master pm', 'pm.id = am.profile_id');
-        $builder->join('office_branch_master obm', 'obm.id = am.office_branch_id');
-        $builder->join('country_master cm', 'cm.id = am.country_id');
-        $builder->join('state_master sm', 'sm.id = am.state_id');
-        $builder->join('city_master ctm', 'ctm.id = am.city_id');
+                        ) // List all columns you want to select
+                ->join('role_master rm', 'rm.id = am.role_id')
+                ->join('profile_master pm', 'pm.id = am.profile_id')
+                ->join('office_branch_master obm', 'obm.id = am.office_branch_id')
+                ->join('country_master cm', 'cm.id = am.country_id')
+                ->join('state_master sm', 'sm.id = am.state_id')
+                ->join('city_master ctm', 'ctm.id = am.city_id');
 
         if ($flag == 1) {
             $builder->where('am.created_by', $id);
+            $data = $builder->get()->getResult();
         } elseif ($flag == 2) {
             $builder->join('admin_master am2', 'am2.created_by = am.id');
             $builder->where('am.created_by', $id);
+            $data = $builder->get()->getResult();
+            // echo "<pre>";
+            // print_r("id:" . $id);
+            // print_r("flag:" . $flag);
         } elseif ($flag == 3) {
-            return ($builder->get()->getResult());
+            $data = ($builder->get()->getResult());
         } elseif ($flag == 4) {
             $builder->where('am.id', $id);
+            $data = $builder->get()->getResult();
         }
 
         // print_r($builder->get()->getResult());
-        return ($builder->get()->getResult());
+        return $data;
     }
 
 

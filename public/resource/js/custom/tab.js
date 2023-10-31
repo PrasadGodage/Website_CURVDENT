@@ -45,7 +45,7 @@ function setTabList(list) {
     for (let k of list.keys()) {
         
         let tab = list.get(k);
-        
+        console.log(tab.id);
         switch (tab.is_active) {
             case '1':
                 status = '<span class="badge badge-pill badge-success">Active</span>';
@@ -79,6 +79,7 @@ $('#addTabForm').on('submit', function (e) {
 
     var returnVal = $("#addTabForm").valid();
     var formdata = new FormData(this);
+    console.log(formdata);
     if (returnVal) {
         $.ajax({
 
@@ -137,6 +138,7 @@ $('#addTabBtn').click(function () {
 
 function updateTabDetails(id) {
     let tab = tabList.get(id.toString());
+    console.log(tab);
     //clear all fields
     $('#id').val('');
     $('#tab_name').val('');
