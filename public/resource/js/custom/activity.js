@@ -113,11 +113,16 @@ $('#addActivityForm').on('submit', function (e) {
                     activityList.delete(id);   
                  }
                  activityList.set(id, response.data);
-                 setTabList(activityList);
-                 swal("Good job!", response.msg, "success");
+                 setActivityList(activityList);
+                 swal("Good job!", response.message, "success");
+                 setTimeout(
+                    $(location).attr('href',base_url+'super/superActivity'),
+                     8000
+                     )
+
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

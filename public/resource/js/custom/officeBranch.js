@@ -91,7 +91,7 @@ function setOfficeBranchList(list) {
                                                   </div>
                         
                         </td>
-                        <td>${branch.created_by}</td>
+                        <td>${branch.created_at}</td>
                         <td> <a href="#" onclick="updateOfficeBranchDetails(${branch.id})" title="Update Branch" ><i class="mdi mdi-tooltip-edit" style="font-size: 20px;"></i></a>
                         
                         </td>
@@ -168,7 +168,7 @@ $('#addOfficeBranchForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addOfficeBranchModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
+                  
 
                     let id=response.data.id;
                   
@@ -176,10 +176,15 @@ $('#addOfficeBranchForm').on('submit', function (e) {
                  officeBranchList.set(id, response.data);
                  
                     setOfficeBranchList(officeBranchList);
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/officeBranch'),
+                         8000
+                         )
 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

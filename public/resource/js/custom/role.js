@@ -92,17 +92,22 @@ $('#addRoleForm').on('submit', function (e) {
                 if (response.status == 200) {
                     $('#addRoleModal').modal('toggle');
                    
-                // let id=response.data.id;
+                let id=response.data.id;
                   
-                //  if(roleList.has(id)){
-                //     roleList.delete(id);   
-                //  }
-                //  roleList.set(id, response.data);
-                //  setRoleList(roleList);
-                 swal("Good job!", response.msg, "success");
+                 if(roleList.has(id)){
+                    roleList.delete(id);   
+                 }
+                 roleList.set(id, response.data);
+                 setRoleList(roleList);
+                 swal("Good job!", response.message, "success");
+                 setTimeout(
+                    $(location).attr('href',base_url+'super/superRole'),
+                     8000
+                     )
+                 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

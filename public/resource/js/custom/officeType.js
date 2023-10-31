@@ -98,11 +98,15 @@ $('#addOfficeTypeForm').on('submit', function (e) {
                     officeTypeList.delete(id);   
                  }
                  officeTypeList.set(id, response.data);
-                 setRoleList(officeTypeList);
-                 swal("Good job!", response.msg, "success");
+                 setOfficeTypeList(officeTypeList);
+                 swal("Good job!", response.message, "success");
+                 setTimeout(
+                    $(location).attr('href',base_url+'super/office_type'),
+                     8000
+                     )
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

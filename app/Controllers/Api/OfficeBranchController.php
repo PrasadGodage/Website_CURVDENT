@@ -53,10 +53,9 @@ class OfficeBranchController extends BaseController
             'email_id' => $this->request->getVar('email_id'),
             
         ];
-        $data['created_at'] = date('Y-m-d H:i:s');
-
+       
         $id = $this->request->getPost('id');
-        print_r( $id);
+        //print_r( $id);
             
         if(empty($id)){
 
