@@ -40,8 +40,6 @@ class ActivityModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-
-
     public function __construct()
     {
         parent::__construct();
@@ -49,19 +47,29 @@ class ActivityModel extends Model
         // OR $this->db = db_connect();
     }
     
-    public function update_data($id, $data)
-    {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
-    }
-
-    public function delete_data($id)
+        public function delete_data($id)
     {
         return $this->db->table($this->table)->delete(array(
             "id" => $id,
         ));
+    }
+
+    public function find_activity($id) {
+        $builder = $this->db->table('activity_master');
+        $builder->select('*');
+        $builder->where('id', $id);
+        $result = $builder->get()->getRowArray();
+    
+        return empty($result);
+    }
+
+    public function update_activity($id, $data)
+    {
+        $builder = $this->db->table('activity_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
     }
 
     

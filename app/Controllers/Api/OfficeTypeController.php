@@ -17,7 +17,7 @@ class OfficeTypeController extends BaseController
         $officeModel = new OfficeTypeModel();
 
         // Fetch all products from the database
-        $data = $officeModel->findAll();
+        $data = $officeModel-> get_all_data($id);
 
         if (!empty($data)) {
             $response = [
@@ -39,32 +39,77 @@ class OfficeTypeController extends BaseController
     public function postOfficeType()
     {
         $officeModel = new OfficeTypeModel();
-
-        // $data = $this->request->getVar('uname');
-        // $data = $this->request->getVar('password');
+        
         $data = [
             'type' => $this->request->getVar('type'),
                      
         ];
-        $result= $officeModel->save($data);
-
-        if(!empty($result)){
+        $id = $this->request->getPost('id');
+        print_r( $id);
             
-            $response = [
-                'status' => 200,
-                'message' => 'Role Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
+        if(empty($id)){
+                                                       
+            $result= $officeModel->save($data);
+
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Office Type Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $officeModel->get_all_data($id);
+                            
+            // $result= $admin->save($data);
+            $status = $officeModel->update_officeType($id,$data);
+
+            if(!empty($status)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Office Type Data Updated Successfully!',
+                    'data' => $status
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
         }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
-        }
+
+        // if(!empty($result)){
+            
+        //     $response = [
+        //         'status' => 200,
+        //         'message' => 'Role Data Created Successfully!',
+        //         'data' => $result
+        //     ];
+        //     return $this->response->setJSON($response);
+        // }
+        // else
+        // {
+        //     $response = [
+        //         'status' => 404,
+        //         'message' => 'Data not Found!'
+        //     ];
+        //     return $this->response->setJSON($response); 
+        // }
 
     }
 }

@@ -36,10 +36,7 @@ class ActivityController extends BaseController
     public function postActivity()
     {
         $activityModel = new ActivityModel();
-
-        // $data = $this->request->getVar('uname');
-        // $data = $this->request->getVar('password');
-        $data = [
+       $data = [
             'tab_id' => $this->request->getVar('tab_id'),
             'icon_id' => $this->request->getVar('icon_id'),
             'activity_title' => $this->request->getVar('activity_title'),
@@ -47,25 +44,54 @@ class ActivityController extends BaseController
             'is_active' => $this->request->getVar('is_active'),
             
         ];
-        $result= $activityModel->save($data);
-
-        if(!empty($result)){
+        $id = $this->request->getPost('id');
+        print_r( $id);
             
-            $response = [
-                'status' => 200,
-                'message' => 'Activity Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
-        }
+        if(empty($id)){
+                                                       
+            $result= $activityModel->save($data);
 
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Activity Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $activityModel->get_all_data($id);
+                            
+            // $result= $admin->save($data);
+            $status = $activityModel->update_activity($id,$data);
+
+            if(!empty($status)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Activity Data Updated Successfully!',
+                    'data' => $status
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }
+       
     }
 }

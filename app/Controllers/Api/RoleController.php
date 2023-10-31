@@ -17,7 +17,7 @@ class RoleController extends BaseController
         $roleModel = new RoleModel();
 
         // Fetch all products from the database
-        $data = $roleModel->findAll();
+        $data = $roleModel->get_all_data($id);
 
         if (!empty($data)) {
             $response = [
@@ -46,24 +46,58 @@ class RoleController extends BaseController
             'role' => $this->request->getVar('role'),
                      
         ];
-        $result= $roleModel->save($data);
+        $id = $this->request->getPost('id');
+        // print_r("id:" . $id);
+        // print_r($data);
+       
 
-        if(!empty($result)){
-            
-            $response = [
-                'status' => 200,
-                'message' => 'Role Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
+
+        if(empty($id)){
+
+            $result= $roleModel->save($data);
+
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Role Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $roleModel->get_all_data($id);
+            // print_r("result: " . $id);
+            if($result){
+
+                $status = $roleModel->update_role($id,$data);
+
+                if(!empty($status)){
+                
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Role Data Updated Successfully!',
+                        'data' => $status
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
+            }
         }
 
     }

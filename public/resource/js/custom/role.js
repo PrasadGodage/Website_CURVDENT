@@ -92,13 +92,13 @@ $('#addRoleForm').on('submit', function (e) {
                 if (response.status == 200) {
                     $('#addRoleModal').modal('toggle');
                    
-                let id=response.data.id;
+                // let id=response.data.id;
                   
-                 if(roleList.has(id)){
-                    roleList.delete(id);   
-                 }
-                 roleList.set(id, response.data);
-                 setRoleList(roleList);
+                //  if(roleList.has(id)){
+                //     roleList.delete(id);   
+                //  }
+                //  roleList.set(id, response.data);
+                //  setRoleList(roleList);
                  swal("Good job!", response.msg, "success");
                 } else {
 

@@ -37,9 +37,7 @@ class OfficeBranchController extends BaseController
     public function postOfficeBranch()
     {
         $officeBranchModel = new OfficeBranchModel();
-
-        // $data = $this->request->getVar('uname');
-        // $data = $this->request->getVar('password');
+              
         $data = [
             'office_type_id' => $this->request->getVar('office_type_id'),
             'office_name' => $this->request->getVar('office_name'),
@@ -55,26 +53,58 @@ class OfficeBranchController extends BaseController
             'email_id' => $this->request->getVar('email_id'),
             
         ];
-        $data['created_by'] = date('Y-m-d H:i:s');
-        $result= $officeBranchModel->save($data);
+        $data['created_at'] = date('Y-m-d H:i:s');
 
-        if(!empty($result)){
+        $id = $this->request->getPost('id');
+        print_r( $id);
             
-            $response = [
-                'status' => 200,
-                'message' => 'Office Branch Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
-        }
+        if(empty($id)){
 
+            $data['created_by'] = $this->request->getVar('created_by');
+                                                       
+            $result= $officeBranchModel->save($data);
+
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'officeBranch Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $officeBranchModel->get_all_data($id);
+            $data['created_by'] = $this->request->getVar('created_by');            
+            // $result= $admin->save($data);
+            $status = $officeBranchModel->update_officeBranch($id,$data);
+
+            if(!empty($status)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'officeBranch Data Updated Successfully!',
+                    'data' => $status
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }
+        
     }
 }

@@ -38,4 +38,44 @@ class RoleModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->db = \Config\Database::connect();
+        // OR $this->db = db_connect();
+    }
+    
+    public function update_role($id, $data)
+    {
+        $builder = $this->db->table('role_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
+    }
+
+    public function delete_data($id)
+    {
+        return $this->db->table($this->table)->delete(array(
+            "id" => $id,
+        ));
+    }
+
+    
+    public function get_all_data($id)
+    {
+        $builder = $this->db->table('role_master rm');
+        $builder->select('rm.id, rm.role');
+               
+        if ($id != 0) {
+            $builder->where('rm.id', $id);
+            return $builder->get()->getRowArray();
+        } else {
+            return $builder->get()->getResultArray();
+        }
+    }
+   
 }
