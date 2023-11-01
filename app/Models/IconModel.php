@@ -15,7 +15,7 @@ class IconModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['icon_title','icon'];
+    protected $allowedFields    = ['id','icon_title','icon'];
 
     // Dates
     protected $useTimestamps = false;
@@ -49,12 +49,22 @@ class IconModel extends Model
         // OR $this->db = db_connect();
     }
 
-    public function get_data()
+    public function get_data($id)
     {
         $builder = $this->db->table('icon_master im');
-        $builder->select('im.icon_title, im.icon');
+        $builder->select('im.id, im.icon_title, im.icon')
+                ->where('im.id', $id);
         
         return $builder->get()->getResultArray();
+        
+    }
+    public function update_data($id,$data)
+    {
+        $builder = $this->db->table('icon_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
         
     }
 }

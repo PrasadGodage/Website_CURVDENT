@@ -104,17 +104,25 @@ $('#addTabForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addTabModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
-                   
-                let id=response.data.id;
-                  
-                if(tabList.has(id)){
-                    tabList.delete(id);   
-                }
-                tabList.set(id, response.data);
-                setTabList(tabList);
+                    
+                    let id=response.data.id;
+                    
+                    if(tabList.has(id)){
+                        tabList.delete(id);   
+                    }
+                    tabList.set(id, response.data);
+                    setTabList(tabList);
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/superTab'),
+                         8000
+                         )
                 } else {
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/superTab'),
+                         8000
+                         )
 
                 }
 

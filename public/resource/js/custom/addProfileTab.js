@@ -4,6 +4,7 @@ $('#addProfileTabForm').on('submit', function (e) {
 
     var returnVal = $("#addProfileTabForm").valid();
     var formdata = new FormData(this);
+    console.log(formdata);
     if (returnVal) {
         $.ajax({
 
@@ -28,14 +29,14 @@ $('#addProfileTabForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addProfileTabModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
+                    swal("Good job!", response.message, "success");
 
                     
                     getProfileTabList();
 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

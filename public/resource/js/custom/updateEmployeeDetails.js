@@ -1,8 +1,11 @@
 function updateEmployeeDetails(employeeid){
     let employee = employeeList.get(employeeid.toString());
 
+    console.log(employee.profile_image);
+    // console.log(base_url);
     $('#otherdpre').attr('src',base_url+'resource/images/avatar-custom.png');
-    (employee.profile_image != null) ? $('#otherdpre').attr('src', base_url + employee.profile_image) : '';
+    // (employee.profile_image != null) ? $('#otherdpre').attr('src', base_url + employee.profile_image) : '';
+    (employee.profile_image != null) ? $('#otherdpre').attr('src', base_url + employee.profile_image.replace(/\\/g, '/')) : '';
     $('#addEmployeeModal').modal('toggle');
     $("#addEmployeeForm").trigger("reset");
     $('#office_branch_id').val(employee.office_branch_id).change();

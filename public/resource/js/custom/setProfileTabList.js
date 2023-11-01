@@ -2,6 +2,7 @@
     let profileTabList = new Map();
 
     function getProfileTabList() {
+        // console.log(profileid);
         profileTabList.clear();
         $.ajax({
 

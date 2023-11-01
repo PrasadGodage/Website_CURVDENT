@@ -36,14 +36,22 @@ $('#addProfileForm').on('submit', function (e) {
                     updateProfileInformation(id);
                                      
 
-                    swal("Good job!", response.msg, "success");
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/profileDetails/'+id),
+                         8000
+                        )
 
                     
                  
 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/profileDetails/'+id),
+                         8000
+                        )
 
                 }
 

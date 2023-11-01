@@ -50,6 +50,9 @@ function setTabProfileDropdown(list) {
     for (let k of list.keys()) {
         
         let tab = list.get(k);
+
+        // console.log(tab);
+
         if(tab.is_active==1){
           options+=`<option value="`+tab.id+`">`+tab.tab_name+`</option>`;
         }

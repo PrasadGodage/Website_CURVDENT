@@ -39,12 +39,20 @@ $('#addIconForm').on('submit', function (e) {
                  iconList.set(id, response.data);
                  setIconList(iconList);
 
-                    swal("Good job!", response.msg, "success");
-
-
-                } else {
-
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/superIcon'),
+                         8000
+                        )
+                        
+                        
+                    } else {
+                        
+                        swal("Good job!", response.message, "error");
+                        setTimeout(
+                            $(location).attr('href',base_url+'super/superIcon'),
+                             8000
+                            )
 
                 }
 

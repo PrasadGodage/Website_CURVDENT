@@ -14,7 +14,7 @@ class ActivityControlModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['activity_id','control_name'];
+    protected $allowedFields    = ['id','activity_id','control_name'];
 
     // Dates
     protected $useTimestamps = false;
@@ -58,22 +58,25 @@ class ActivityControlModel extends Model
 
     public function get_activityControlById($id)
     {
+        $builder = $this->db->table('activity_access_controls aac');
+        $builder->select('aac.id, aac.activity_id, aac.control_name');
+                
+
         if ($id != 0) {
-            $query = $this->db->table('activity_access_controls')
-                            ->where('id', $id)
-                            ->get();
-            return $query->getRowArray();
+            $builder->where('aac.id', $id);
+            return $builder->get()->getRowArray();
         } else {
-            return [];
+            return null;
         }
     }
 
 
     public function update_data($id, $data)
     {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
+        $builder = $this->db->table('activity_access_controls');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
     }
 }

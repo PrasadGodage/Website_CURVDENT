@@ -44,26 +44,57 @@ class ProfileActivityController extends BaseController
         // $data = $this->request->getVar('password');
         $data = [
             'activity_id' => $this->request->getVar('activity_id'),
-            'profile_id' => $this->request->getVar('profile_id'),
+            'profile_id' => $this->request->getVar('p_id'),
         ];
-        $result= $profileActivityModel->save($data);
 
-        if(!empty($result)){
-            
-            $response = [
-                'status' => 200,
-                'message' => 'Profile Activity Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
+        $id = $this->request->getPost('id');
+
+        if(empty($id)){
+
+            $result= $profileActivityModel->save($data);
+    
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Profile Activity Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $profileActivityModel->get_all_data($id);
+
+            if($result){
+                $status = $profileActivityModel->update_data($id,$data);
+
+                if(!empty($status)){
+                
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Profile Activity Updated Successfully!',
+                        'data' => $status
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
+            }
+
         }
 
     }

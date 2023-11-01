@@ -29,7 +29,7 @@ $('#addProfileRoleForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addProfileRoleModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
+                    swal("Good job!", response.message, "success");
 
                     //setTimeout(function(){ location.reload(); }, 1000);
                     getProfileRoleList();
@@ -37,7 +37,7 @@ $('#addProfileRoleForm').on('submit', function (e) {
 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

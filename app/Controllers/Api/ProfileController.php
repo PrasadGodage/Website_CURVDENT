@@ -48,24 +48,54 @@ class ProfileController extends BaseController
             'profile' => $this->request->getVar('profile'),
             'is_active' => $this->request->getVar('is_active'),
         ];
-        $result= $profileModel->save($data);
 
-        if(!empty($result)){
+        $id = $this->request->getPost('id');
+
+        if(empty($id)){
+
+            $result= $profileModel->save($data);
+    
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Profile Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $profileModel->get_all_data($id);
             
-            $response = [
-                'status' => 200,
-                'message' => 'Profile Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
+            if($result){
+
+                $status = $profileModel->update_data($id,$data);
+                if(!empty($status)){
+                    
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Profile Updated Successfully!',
+                        'data' => $result
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
+            }
         }
         
     }

@@ -98,7 +98,7 @@ class AdminModel extends Model
                             am.city_id, 
                             ctm.city, 
                             am.state_id, 
-                            sm.state, 
+                            sm.state,
                             am.country_id, 
                             cm.country,
                             am.area_id, 
@@ -136,7 +136,10 @@ class AdminModel extends Model
             $data = $builder->get()->getResult();
         }
 
+        // echo $this->db->getLastQuery();
         // print_r($builder->get()->getResult());
+        // print_r($builder->get()->getLastQuery());
+        
         return $data;
     }
 

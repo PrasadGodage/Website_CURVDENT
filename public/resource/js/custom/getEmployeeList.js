@@ -3,29 +3,30 @@ let employeeList = new Map();
 
 function getEmployeeAccessFlag(){
       var val=0;
-     for(let permission of activityControlPermission) {
-        
-            if(permission.url=='employeeRegistration' && permission.permission=='1'){
-                switch(permission.control_name){
+      
+      for(let permission of activityControlPermission) {
+          
+          if(permission.url=='employeeRegistration' && permission.permission=='1'){
+              switch(permission.control_name){
                     case 'showSelf':val=1;break;
                     case 'showSelfWithChild':val=2;break;
                     case 'showAll':val=3;break;
                 }
             }
-        
-        
-      }
-      return val;
-}
-
-
-
-
-
-function getEmployeeList() {
+            
+            
+        }
+        return val;
+    }
     
-    let flag;
-    let userid;
+    
+    
+    
+    
+    function getEmployeeList() {
+        
+        let flag;
+        let userid;
     if(type=='employee'){
         flag=getEmployeeAccessFlag();
         userid=empdetails.id;
@@ -33,9 +34,11 @@ function getEmployeeList() {
         flag=3;
         userid=0;
     }
+    // console.log("flag: "+flag);
+    // console.log("userid: "+userid);
     
     $.ajax({
-
+        
         url: base_url+'super/employee/'+userid+'/'+flag,
 
         type: 'GET',

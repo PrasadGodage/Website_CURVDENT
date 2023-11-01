@@ -46,25 +46,52 @@ class IconController extends BaseController
             'icon_title' => $this->request->getVar('icon_title'),
             'icon' => $this->request->getVar('icon'),
         ];
-        $result= $iconModel->save($data);
+        $id = $this->request->getPost('id');
+        if(empty($id)){
 
-        if(!empty($result)){
+            $result= $iconModel->save($data);
+                
+            if(!empty($result)){
+                
+                $response = [
+                    'status' => 200,
+                    'message' => 'Tab Data Created Successfully!',
+                    'data' => $result
+                ];
+                return $this->response->setJSON($response);
+            }
+            else
+            {
+                $response = [
+                    'status' => 404,
+                    'message' => 'Data not Found!'
+                ];
+                return $this->response->setJSON($response); 
+            }
+        }else{
+            $result = $iconModel->get_data($id);
             
-            $response = [
-                'status' => 200,
-                'message' => 'Tab Data Created Successfully!',
-                'data' => $result
-            ];
-            return $this->response->setJSON($response);
-        }
-        else
-        {
-            $response = [
-                'status' => 404,
-                'message' => 'Data not Found!'
-            ];
-            return $this->response->setJSON($response); 
-        }
+            if(!empty($result)){
+                $status = $iconModel->update_data($id,$data);
+                if($status){
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Icon Data Updated Successfully!',
+                        'data' => $result
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
+            }
 
+        }
+        
     }
 }

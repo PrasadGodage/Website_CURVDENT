@@ -6,6 +6,7 @@ function setProfileActivityList(list) {
     for (let k of list.keys()) {
         
         let activity = list.get(k);
+        // console.log("id : "+activity.activity_id);
         
         
         data += `<div class="col-md-3 p-10">

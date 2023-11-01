@@ -22,7 +22,8 @@ class AdminController extends BaseController
         // echo "<pre>";
         // print_r($id);
         // print_r($flag);
-        // print_r($data);
+        
+        // <?= $lastQuery; 
 
         if (!empty($data)) {
             $response = [
@@ -89,6 +90,7 @@ class AdminController extends BaseController
 
             if (! $img->hasMoved()) {
                 $filepath = WRITEPATH . 'uploads/' . $img->store();
+                // $filepath = $img->move('./uploads');
 
                 // $data = ['profile_image' => new File($filepath)];
                 $data['profile_image'] = $filepath;
@@ -125,6 +127,7 @@ class AdminController extends BaseController
 
             if (! $img->hasMoved()) {
                 $filepath = WRITEPATH . 'uploads/' . $img->store();
+                // $filepath = $img->move('./uploads');
 
                 // $data = ['profile_image' => new File($filepath)];
                 $data['profile_image'] = $filepath;

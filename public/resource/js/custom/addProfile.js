@@ -36,14 +36,19 @@ $('#addProfileForm').on('submit', function (e) {
                  setProfileList(profileList);
                  
                  
-                    swal("Good job!", response.msg, "success");
-
-                    
-                 
-
-                } else {
-
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/superProfile'),
+                         8000
+                        )
+                        
+                    } else {
+                        
+                        swal("Good job!", response.message, "error");
+                        setTimeout(
+                            $(location).attr('href',base_url+'super/superProfile'),
+                             8000
+                            )
 
                 }
 

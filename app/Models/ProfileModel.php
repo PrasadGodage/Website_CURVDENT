@@ -14,7 +14,7 @@ class ProfileModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['role_id','profile','is_active'];
+    protected $allowedFields    = ['id','role_id','profile','is_active'];
 
     // Dates
     protected $useTimestamps = false;
@@ -55,10 +55,11 @@ class ProfileModel extends Model
 
     public function update_data($id, $data)
     {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
+        $builder = $this->db->table('profile_master');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
     }
 
     public function delete_data($id)

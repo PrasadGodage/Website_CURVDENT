@@ -43,7 +43,7 @@ class ProfileRoleController extends BaseController
         // $data = $this->request->getVar('uname');
         // $data = $this->request->getVar('password');
         $data = [
-            'role_id' => $this->request->getVar('role_id'),
+            'role_id' => $this->request->getVar('role_id1'),
             'profile_id' => $this->request->getVar('profile_id'),
             
         ];

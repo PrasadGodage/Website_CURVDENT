@@ -49,6 +49,7 @@ function setRoleProfileList(list) {
     for (let k of list.keys()) {
         
         let role = list.get(k);
+        // console.log(role.id);
         
           options+=`<option value="`+role.id+`">`+role.role+`</option>`;
         

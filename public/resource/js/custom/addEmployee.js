@@ -34,22 +34,30 @@ $('#addEmployeeForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addEmployeeModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
-
-                    let id=response.data.id;
-                  
-                 if(employeeList.has(id)){
-                     
-                    employeeList.delete(id); 
                     
-                 }
-                 employeeList.set(id, response.data);
-                 
+                    let id=response.data.id;
+                    
+                    if(employeeList.has(id)){
+                        
+                        employeeList.delete(id); 
+                        
+                    }
+                    employeeList.set(id, response.data);
+                    
                     setEmployeeList(employeeList);
-
-                } else {
-
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "success");
+                    setTimeout(
+                        $(location).attr('href',base_url+'super/superEmployee'),
+                         8000
+                        )
+                        
+                    } else {
+                        
+                        swal("Good job!", response.message, "error");
+                        setTimeout(
+                            $(location).attr('href',base_url+'super/superEmployee'),
+                             8000
+                            )
 
                 }
 

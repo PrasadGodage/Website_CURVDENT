@@ -23,8 +23,9 @@ $("#state_id").change(function() {
                 let option='<option value="" disabled selected hidden>Please Choose...</option>';
                 if (response.data.lenght != 0) {
                     for (var i = 0; i < response.data.length; i++) {
-                        option +=`<option value="${response.data[i].id}">${response.data[i].city}</option>`;
+                        option +=`<option value="${response.data[i].city_id}">${response.data[i].city}</option>`;
                     }
+                    
                     
                 }
                 $('#city_id').html(option);

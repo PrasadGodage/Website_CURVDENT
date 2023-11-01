@@ -61,10 +61,10 @@ class TabController extends BaseController
         $id = $this->request->getPost('id');
         // echo "<pre>";
         // print_r("id:" . $id);
-        $result= $tabModel->save($data);
-
+        
         if(empty($id)){
-
+            
+            $result= $tabModel->save($data);
             if(!empty($result)){
                 
                 $response = [
@@ -83,10 +83,10 @@ class TabController extends BaseController
                 return $this->response->setJSON($response); 
             }
         }else{
-            $result = $tabModel->get_all_data($id);
             // print_r("result: " . $id);
+            $result = $tabModel->get_all_data($id);
             if($result){
-
+                
                 $status = $tabModel->update_data($id,$data);
 
                 if(!empty($status)){
@@ -111,9 +111,5 @@ class TabController extends BaseController
 
     }
 
-    public function updateTab($id)
-    {
-        $tabModel = new TabModel();
-    } 
-    
+        
 }

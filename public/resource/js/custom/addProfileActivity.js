@@ -28,7 +28,7 @@ $('#addProfileActivityForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addProfileActivityModal').modal('toggle');
-                    swal("Good job!", response.msg, "success");
+                    swal("Good job!", response.message, "success");
 
                     //setTimeout(function(){ location.reload(); }, 1000);
                     getProfileActivityList();
@@ -36,7 +36,7 @@ $('#addProfileActivityForm').on('submit', function (e) {
 
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Good job!", response.message, "error");
 
                 }
 

@@ -70,12 +70,13 @@ class ActivityControlModelController extends BaseController
     {
         $activityControlModel = new ActivityControlModel();
         
-        $id = $this->request->getPost('control_id');
         // $activity_id = $this->request->getPost('activity_id');
         $data['control_name'] = $this->request->getPost('c_name');
+        $id = $this->request->getPost('control_id');
+        // echo "<pre>";
+        // print_r("id: " . $id);
 
         $result = $activityControlModel->get_activityControlById($id);
-        // echo "<pre>";
         // print_r($result);
 
         if (!empty($result)) {

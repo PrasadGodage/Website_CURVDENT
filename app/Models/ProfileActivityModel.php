@@ -14,7 +14,7 @@ class ProfileActivityModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['activity_id','profile_id'];
+    protected $allowedFields    = ['id','activity_id','profile_id'];
 
     // Dates
     protected $useTimestamps = false;
@@ -54,10 +54,11 @@ class ProfileActivityModel extends Model
 
     public function update_data($id, $data)
     {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
+        $builder = $this->db->table('profile_activity_permission');
+        $builder->where('id', $id);
+        $builder->update($data);
+
+        return true;
     }
 
     public function delete_data($id)
@@ -71,6 +72,7 @@ class ProfileActivityModel extends Model
     public function get_all_data($id)
     {
         $builder = $this->db->table('profile_activity_permission pap');
+        // $builder->select('pap.id as ppermission_id, pap.activity_id, am.activity_title, am.tab_id, am.icon_id, am.url, pap.profile_id, im.icon');
         $builder->select('pap.id as ppermission_id, pap.activity_id, am.activity_title, am.tab_id, am.icon_id, am.url, pap.profile_id, pm.profile, im.icon');
         $builder->join('activity_master am', 'am.id=pap.activity_id');
         $builder->join('profile_master pm', 'pm.id=pap.profile_id');
