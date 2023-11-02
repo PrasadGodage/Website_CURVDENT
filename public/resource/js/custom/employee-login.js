@@ -39,6 +39,7 @@ $('#loginForm').on('submit', function (e) {
                     sessionStorage.setItem("activityControlPermission", JSON.stringify(response.activityControls));
                  
                     window.location.replace("dashboard");
+                    console.log('Employee');
                  
                 } else if(response.status == 400){
 

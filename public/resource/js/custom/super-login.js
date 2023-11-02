@@ -29,6 +29,7 @@ $('#loginForm').on('submit', function (e) {
                     sessionStorage.setItem("token", response.token);
 
                  window.location.replace("superDashboard");
+                 console.log('Super');
                  
                 } else if(response.status == 400){
 

@@ -37,7 +37,7 @@ class EmployeeLoginController extends BaseController
         $this->employeeLoginModel = new EmployeeLoginModel();
 
         $data = [
-            'userid' => $this->request->getVar('userid'),
+            'email_id' => $this->request->getVar('email_id'),
             'password' => $this->request->getVar('password'),
         ];
         
@@ -68,6 +68,51 @@ class EmployeeLoginController extends BaseController
             $response = [
                 'status' => 400,
                 'message' => 'incorrect userid or password!'
+            ];
+            return $this->response->setJSON($response);
+        }
+
+        
+    }
+
+    
+    public function forgate_password_link_sendmail_post()
+    {
+        $response = [];
+
+        $userid = $this->request->getPost('email');
+        $row = $this->employeeLoginModel->send_mail($userid);
+
+        if ($row['status']) {
+            $fromEmail = "support@soulsoftinfotech.in";
+            $toEmail = $userid;
+            $link = base_url() . "resetpassword?key=" . $userid . "&token=" . $row['token'];
+
+            // Load email library
+            $email = \Config\Services::email();
+            $email->setFrom($fromEmail, 'Soulsoft');
+            $email->setTo($toEmail);
+            $email->setSubject('Reset Password Link');
+            $email->setMessage($link);
+
+            // Send mail
+            if ($email->send()) {
+                $response = [
+                    'Message' => 'Mail is sent to your email id please reset your password',
+                    'Responsecode' => 200
+                ];
+                return $this->response->setJSON($response);
+            } else {
+                $response = [
+                    'Message' => 'Problem with Mail sent, please try again later',
+                    'Responsecode' => 400
+                ];
+                return $this->response->setJSON($response);
+            }
+        } else {
+            $response = [
+                'Message' => 'Email id is not registered',
+                'Responsecode' => 204
             ];
             return $this->response->setJSON($response);
         }

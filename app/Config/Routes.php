@@ -23,6 +23,8 @@ $routes->group('super', function ($routes) {
     $routes->get('superEmployee', 'Super::employee');    
     $routes->get('superIcon', 'Super::icon');  
     
+    $routes->get('employeeLogin', 'admin\AdminController::index');    
+    $routes->get('dashboard', 'admin\AdminController::dashboard');    
     
     $routes->post('superUserLogin', 'api\Super::index');      
     $routes->post('register', 'api\Super::register'); 

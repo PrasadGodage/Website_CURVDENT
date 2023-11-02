@@ -111,7 +111,7 @@ class EmployeeLoginModel extends Model
                 ->join('country_master cm', 'cm.id = am.country_id')
                 ->join('state_master sm', 'sm.id = am.state_id')
                 ->join('city_master ctm', 'ctm.id = am.city_id')
-                ->where("am.userid", $data['userid'])
+                ->where("am.email_id", $data['email_id'])
                 ->where("am.password", $data['password']);
                 $result = $builder->get()->getRowArray();
                 // print_r($builder->get()->getLastQuery());
