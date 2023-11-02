@@ -69,7 +69,7 @@ class ProfileRoleModel extends Model
     }
 
     
-    public function get_all_data($id = 0)
+    public function get_all_data($id)
     {
         $builder = $this->db->table('profile_role_permission prp');
         $builder->select('prp.id as ppermission_id,prp.role_id, rm.role, prp.profile_id, pm.profile');

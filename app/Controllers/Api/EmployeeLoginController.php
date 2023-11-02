@@ -35,10 +35,12 @@ class EmployeeLoginController extends BaseController
     {
 
         $this->employeeLoginModel = new EmployeeLoginModel();
+
         $data = [
             'userid' => $this->request->getVar('userid'),
             'password' => $this->request->getVar('password'),
         ];
+        
         
         $empDetails = $this->employeeLoginModel->get_authenticate($data);
         
@@ -48,12 +50,26 @@ class EmployeeLoginController extends BaseController
             $activityPermission=$this->profileActivityModel->get_all_data($empDetails['profile_id']);
             $activityContorlPermission = $this->permissionModel->get_all_data($empDetails['profile_id']);
 
-            // echo "<pre>";
-            // echo "12345";
-            // print_r($rolePermission);
-            // print_r($tabPermission);
-            // print_r($activityPermission);
-            // print_r($activityContorlPermission);
+            $response = [
+                'msg' => 'user login successfully!',
+                'empdetails' => $empDetails,
+                'type' => 'employee',
+                'role' => $rolePermission,
+                'tab' => $tabPermission,
+                'activity' => $activityPermission,
+                'activityControls' => $activityContorlPermission,
+                'url' => base_url(),
+                'status' => 200
+            ];
+            
+            return $this->response->setJSON($response);            
+            
+        }else {
+            $response = [
+                'status' => 400,
+                'message' => 'incorrect userid or password!'
+            ];
+            return $this->response->setJSON($response);
         }
     }
 

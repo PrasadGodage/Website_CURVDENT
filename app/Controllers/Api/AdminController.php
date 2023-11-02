@@ -120,39 +120,39 @@ class AdminController extends BaseController
             
             if($result){
                 
-            }
-
-            $data['created_by'] = $this->request->getVar('created_by');
-            $img = $this->request->getFile('profile_image');
-
-            if (! $img->hasMoved()) {
-                $filepath = WRITEPATH . 'uploads/' . $img->store();
-                // $filepath = $img->move('./uploads');
-
-                // $data = ['profile_image' => new File($filepath)];
-                $data['profile_image'] = $filepath;
-            }
-            
-            // $result= $admin->save($data);
-            $status = $admin->update_admin($id,$data);
-
-            if(!empty($status)){
+                $data['created_by'] = $this->request->getVar('created_by');
+                $img = $this->request->getFile('profile_image');
+    
+                if (! $img->hasMoved()) {
+                    $filepath = WRITEPATH . 'uploads/' . $img->store();
+                    // $filepath = $img->move('./uploads');
+    
+                    // $data = ['profile_image' => new File($filepath)];
+                    $data['profile_image'] = $filepath;
+                }
                 
-                $response = [
-                    'status' => 200,
-                    'message' => 'Tab Data Updated Successfully!',
-                    'data' => $status
-                ];
-                return $this->response->setJSON($response);
+                // $result= $admin->save($data);
+                $status = $admin->update_admin($id,$data);
+    
+                if(!empty($status)){
+                    
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Tab Data Updated Successfully!',
+                        'data' => $status
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
             }
-            else
-            {
-                $response = [
-                    'status' => 404,
-                    'message' => 'Data not Found!'
-                ];
-                return $this->response->setJSON($response); 
-            }
+
         }
 
     }

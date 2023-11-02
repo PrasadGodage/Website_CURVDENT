@@ -14,7 +14,7 @@ class EmployeeLoginModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['role_id','profile_id','office_branch_id','name','profile_image','dob','age','gender','aadhar_no','pancard','userid','password','contact_number1','contact_number2','email_id','address','country_id','state_id','city_id','area_id','pincode','is_active','is_verified','created_at','created_by','modified_at','modified_by'];
+    protected $allowedFields    = ['id','role_id','profile_id','office_branch_id','name','profile_image','dob','age','gender','aadhar_no','pancard','userid','password','contact_number1','contact_number2','email_id','address','country_id','state_id','city_id','area_id','pincode','is_active','is_verified','created_at','created_by','modified_at','modified_by'];
 
     // Dates
     protected $useTimestamps = false;
@@ -70,20 +70,51 @@ class EmployeeLoginModel extends Model
     public function get_authenticate($data)
     {
         $builder = $this->db->table('admin_master am');
-        $builder->select('am.id, am.role_id, rm.role, am.profile_id, pm.profile, am.office_branch_id, obm.office_name, 
-        am.name, am.profile_image, am.dob, am.age, am.aadhar_no, am.pancard, am.password, am.userid, am.contact_number1,
-        am.contact_number2, am.email_id, am.city_id, ctm.city, am.state_id, sm.state, am.country_id, cm.country, am.pincode,
-        am.gender, am.address, am.is_active, am.is_verified, am.created_by, am.created_at, am.modified_by, am.modified_at'); // List all columns you want to select
-        
-        $builder->join('role_master rm', 'rm.id = am.role_id');
-        $builder->join('profile_master pm', 'pm.id = am.profile_id');
-        $builder->join('office_branch_master obm', 'obm.id = am.office_branch_id');
-        $builder->join('country_master cm', 'cm.id = am.country_id');
-        $builder->join('state_master sm', 'sm.id = am.state_id');
-        $builder->join('city_master ctm', 'ctm.id = am.city_id');
-        $builder->where("am.userid", $data['userid']);
-        $builder->where("am.password", $data['password']);
-        $result = $builder->get()->getRowArray();
+        $builder->select('  am.id,
+                            am.role_id,
+                            rm.role, 
+                            am.profile_id, 
+                            pm.profile, 
+                            am.office_branch_id, 
+                            obm.office_name, 
+                            am.name, 
+                            am.profile_image, 
+                            am.dob, 
+                            am.age, 
+                            am.aadhar_no, 
+                            am.pancard, 
+                            am.password, 
+                            am.userid, 
+                            am.contact_number1,
+                            am.contact_number2, 
+                            am.email_id, 
+                            am.city_id, 
+                            ctm.city, 
+                            am.state_id, 
+                            sm.state,
+                            am.country_id, 
+                            cm.country,
+                            am.area_id, 
+                            am.pincode,
+                            am.gender, 
+                            am.address, 
+                            am.is_active, 
+                            am.is_verified, 
+                            am.created_by, 
+                            am.created_at, 
+                            am.modified_by, 
+                            am.modified_at'
+                        ) // List all columns you want to select
+                ->join('role_master rm', 'rm.id = am.role_id')
+                ->join('profile_master pm', 'pm.id = am.profile_id')
+                ->join('office_branch_master obm', 'obm.id = am.office_branch_id')
+                ->join('country_master cm', 'cm.id = am.country_id')
+                ->join('state_master sm', 'sm.id = am.state_id')
+                ->join('city_master ctm', 'ctm.id = am.city_id')
+                ->where("am.userid", $data['userid'])
+                ->where("am.password", $data['password']);
+                $result = $builder->get()->getRowArray();
+                // print_r($builder->get()->getLastQuery());
         return $result;
     }
 
