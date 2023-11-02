@@ -74,10 +74,6 @@ $('#addOfficeTypeForm').on('submit', function (e) {
 
             type: 'POST',
 
-            headers: {
-                "Authorization": token
-            },
-
             data: formdata,
 
             cache: false,
@@ -91,7 +87,8 @@ $('#addOfficeTypeForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addOfficeTypeModal').modal('toggle');
-                   
+                    swal("Good job!", response.message, "success");
+
                 let id=response.data.id;
                   
                  if(officeTypeList.has(id)){
@@ -99,7 +96,7 @@ $('#addOfficeTypeForm').on('submit', function (e) {
                  }
                  officeTypeList.set(id, response.data);
                  setOfficeTypeList(officeTypeList);
-                 swal("Good job!", response.message, "success");
+                 
                  setTimeout(
                     $(location).attr('href',base_url+'super/office_type'),
                      8000
@@ -143,9 +140,8 @@ function updateOfficeTypeDetails(id) {
 }
 
 
-
-//import activityValidation script
-// var activityValidation = document.createElement('script');
-// activityValidation.src = base_url + 'resource/js/custom/activityValidation.js';
-// activityValidation.setAttribute("type", "text/javascript");
-// document.head.appendChild(activityValidation);
+//import officeValidation script
+var officeValidation = document.createElement('script');
+officeValidation.src = base_url + 'resource/js/custom/officeValidation.js';
+officeValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(officeValidation);

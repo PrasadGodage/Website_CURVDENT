@@ -41,11 +41,11 @@ class ActivityController extends BaseController
             'icon_id' => $this->request->getVar('icon_id'),
             'activity_title' => $this->request->getVar('activity_title'),
             'url' => $this->request->getVar('url'),
-            'is_active' => $this->request->getVar('is_active'),
-            
+                       
         ];
+        $data['is_active'] = ($this->request->getVar('is_active') == 'on' || $this->request->getVar('is_active') == 1) ? 1 : 0;
         $id = $this->request->getPost('id');
-        print_r( $id);
+       // print_r( $id);
             
         if(empty($id)){
                                                        

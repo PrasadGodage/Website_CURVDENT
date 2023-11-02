@@ -45,12 +45,12 @@ class OfficeTypeController extends BaseController
                      
         ];
         $id = $this->request->getPost('id');
-        print_r( $id);
-            
-        if(empty($id)){
-                                                       
-            $result= $officeModel->save($data);
+        //print_r( $id);
+        
 
+        if(empty($id)){
+                       
+            $result= $officeModel->save($data);
             if(!empty($result)){
                 
                 $response = [
@@ -72,44 +72,31 @@ class OfficeTypeController extends BaseController
             $result = $officeModel->get_all_data($id);
                             
             // $result= $admin->save($data);
-            $status = $officeModel->update_officeType($id,$data);
+            if($result){
 
-            if(!empty($status)){
-                
-                $response = [
-                    'status' => 200,
-                    'message' => 'Office Type Data Updated Successfully!',
-                    'data' => $status
-                ];
-                return $this->response->setJSON($response);
+
+                $status = $officeModel->update_officeType($id,$data);
+
+                if(!empty($status)){
+                    
+                    $response = [
+                        'status' => 200,
+                        'message' => 'Office Type Data Updated Successfully!',
+                        'data' => $status
+                    ];
+                    return $this->response->setJSON($response);
+                }
+                else
+                {
+                    $response = [
+                        'status' => 404,
+                        'message' => 'Data not Found!'
+                    ];
+                    return $this->response->setJSON($response); 
+                }
             }
-            else
-            {
-                $response = [
-                    'status' => 404,
-                    'message' => 'Data not Found!'
-                ];
-                return $this->response->setJSON($response); 
-            }
+           
         }
-
-        // if(!empty($result)){
-            
-        //     $response = [
-        //         'status' => 200,
-        //         'message' => 'Role Data Created Successfully!',
-        //         'data' => $result
-        //     ];
-        //     return $this->response->setJSON($response);
-        // }
-        // else
-        // {
-        //     $response = [
-        //         'status' => 404,
-        //         'message' => 'Data not Found!'
-        //     ];
-        //     return $this->response->setJSON($response); 
-        // }
-
+       
     }
 }

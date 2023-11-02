@@ -168,7 +168,7 @@ $('#addOfficeBranchForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addOfficeBranchModal').modal('toggle');
-                  
+                    swal("Good job!", response.message, "success");
 
                     let id=response.data.id;
                   
@@ -176,7 +176,7 @@ $('#addOfficeBranchForm').on('submit', function (e) {
                  officeBranchList.set(id, response.data);
                  
                     setOfficeBranchList(officeBranchList);
-                    swal("Good job!", response.message, "success");
+                    
                     setTimeout(
                         $(location).attr('href',base_url+'super/officeBranch'),
                          8000
@@ -221,31 +221,32 @@ function updateOfficeBranchDetails(id) {
 $('#addOfficeBranchBtn').click(function () {
     $('#addOfficeBranchModal').modal('toggle');
     $("#addOfficeBranchForm").trigger("reset");
+    //$('#state_id').prop('disabled',true);
     $('#id').val('');
     $('.error').text('');
 });
 
 
-// //setCountryList
+//setCountryList
 
-// function setOfficeCountryDropdown(list) {
+function setOfficeCountryDropdown(list) {
 
-//     //var options = '<option value="" disabled selected hidden>India</option>';
-//     let options='<option value="" disable selected hidden>Please choose...</option>';
+    //var options = '<option value="" disabled selected hidden>India</option>';
+    let options='<option value="" disable selected hidden>Please choose...</option>';
     
-//     for (let k of list.keys()) {
+    for (let k of list.keys()) {
         
-//         let country = list.get(k);
+        let country = list.get(k);
         
-//           options+=`<option value="`+country.id+`">`+country.country+`</option>`;
+          options+=`<option value="`+country.id+`">`+country.country+`</option>`;
         
         
-//       }        
+      }        
     
-//     $('#country_id').html(options);
-//     // $('#state_id').prop('disabled',true);
-//     // $('#city_id').prop('disabled',true);
-// }
+    $('#country_id').html(options);
+    // $('#state_id').prop('disabled',true);
+    // $('#city_id').prop('disabled',true);
+}
 
 // getCountryList
 function getOfficeCountryList() {
@@ -268,11 +269,14 @@ function getOfficeCountryList() {
                     
                 for (var i = 0; i < response.data.length; i++) {
                    
-                   options+=`<option value="`+response.data[i].id+`">`+response.data[i].country	+`</option>`;
+                //    options+=`<option value="`+response.data[i].id+`">`+response.data[i].country	+`</option>`;
+
+                   countryList.set(response.data[i].id, response.data[i]);
                 }
                
-               $('#country_id').html(options);
-              $('#state_id').prop('disabled',false);
+                setOfficeCountryDropdown(countryList);
+            //    $('#country_id').html(options);
+              $('#state_id').prop('disabled',true);
               $('#city_id').prop('disabled',true);
 
             }
@@ -315,7 +319,8 @@ $("#country_id").change(function() {
                 }
                 $('#state_id').html(option);
                // $('#city_id').html('');
-                $('#city_id').prop('disabled',false);
+               $('#state_id').prop('disabled',false);
+                $('#city_id').prop('disabled',true);
 
             }
 
@@ -355,11 +360,15 @@ $("#state_id").change(function() {
                     
                 }
                 $('#city_id').html(option);
-                // $('#city_id').prop('disabled',false);
+                 $('#city_id').prop('disabled',false);
             }
 
         }
 
     });
 });
-
+//import officeBranchbValidation script
+var officeBranchbValidation = document.createElement('script');
+officeBranchbValidation.src = base_url + 'resource/js/custom/officeBranchbValidation.js';
+officeBranchbValidation.setAttribute("type", "text/javascript");
+document.head.appendChild(officeBranchbValidation);
