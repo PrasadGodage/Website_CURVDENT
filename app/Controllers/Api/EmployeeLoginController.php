@@ -37,7 +37,7 @@ class EmployeeLoginController extends BaseController
         $this->employeeLoginModel = new EmployeeLoginModel();
 
         $data = [
-            'email_id' => $this->request->getVar('email_id'),
+            'email_id' => $this->request->getVar('uname'),
             'password' => $this->request->getVar('password'),
         ];
         
@@ -75,7 +75,7 @@ class EmployeeLoginController extends BaseController
         
     }
 
-    
+
     public function forgate_password_link_sendmail_post()
     {
         $response = [];

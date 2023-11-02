@@ -8,7 +8,7 @@ class AdminController extends BaseController
 {
     public function index()
     {
-        return view("super/login");
+        return view('login');
     }
 
     public function dashboard() {

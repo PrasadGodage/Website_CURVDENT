@@ -27,7 +27,7 @@ $('#loginForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     console.log(response);
-                   // swal("Good job!", response.msg, "success");
+                   swal("Good job!", response.msg, "success");
                     
                     sessionStorage.setItem("eurl", response.url);
                     sessionStorage.setItem("etoken", response.token);
