@@ -89,8 +89,11 @@ $('#addRoleForm').on('submit', function (e) {
             dataType: 'json',
 
             success: function (response) {
+                console.log(response);
                 if (response.status == 200) {
+                 
                     $('#addRoleModal').modal('toggle');
+                    swal("Good job!", response.message, "success");
                    
                 let id=response.data.id;
                   
@@ -99,7 +102,7 @@ $('#addRoleForm').on('submit', function (e) {
                  }
                  roleList.set(id, response.data);
                  setRoleList(roleList);
-                 swal("Good job!", response.message, "success");
+                 
                  setTimeout(
                     $(location).attr('href',base_url+'super/superRole'),
                      8000

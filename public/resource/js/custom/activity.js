@@ -106,7 +106,7 @@ $('#addActivityForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     $('#addActivityModal').modal('toggle');
-                   
+                    swal("Good job!", response.message, "success");
                 let id=response.data.id;
                   
                  if(activityList.has(id)){
@@ -114,7 +114,7 @@ $('#addActivityForm').on('submit', function (e) {
                  }
                  activityList.set(id, response.data);
                  setActivityList(activityList);
-                 swal("Good job!", response.message, "success");
+                 
                  setTimeout(
                     $(location).attr('href',base_url+'super/superActivity'),
                      8000
