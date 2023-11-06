@@ -89,10 +89,10 @@ class AdminController extends BaseController
             $img = $this->request->getFile('profile_image');
 
             if (! $img->hasMoved()) {
-                $filepath = WRITEPATH . 'uploads/' . $img->store();
-                // $filepath = $img->move('./uploads');
-
-                // $data = ['profile_image' => new File($filepath)];
+                $newName = $img->getRandomName();
+                $img->move('resource/img/employee',$newName);
+                $filepath = 'resource/img/employee/' . $newName;
+                
                 $data['profile_image'] = $filepath;
             }
             
@@ -124,14 +124,15 @@ class AdminController extends BaseController
                 $img = $this->request->getFile('profile_image');
     
                 if (! $img->hasMoved()) {
-                    $filepath = WRITEPATH . 'uploads/' . $img->store();
-                    // $filepath = $img->move('./uploads');
-    
-                    // $data = ['profile_image' => new File($filepath)];
+                    
+                    $newName = $img->getRandomName();
+                    $img->move('resource/img/employee',$newName);
+                    $filepath = 'resource/img/employee/' . $newName;
+                    
                     $data['profile_image'] = $filepath;
+                    
                 }
                 
-                // $result= $admin->save($data);
                 $status = $admin->update_admin($id,$data);
     
                 if(!empty($status)){

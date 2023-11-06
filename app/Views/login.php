@@ -36,7 +36,7 @@
 
                 <div class="col-lg-5 col-md-8 col-12">
                     <div class="content-top-agile">
-                        <h2>Cakeshop Super Login</h2>
+                        <h2>CI4 Super Login</h2>
                         <p class="text-white">Sign in to start your session</p>
                     </div>
                     <div class="p-40 mt-10 bg-info content-bottom">
