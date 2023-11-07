@@ -263,7 +263,7 @@ $('#emailForm').on('submit', function (e) {
                     // $("#successMessage").fadeIn();
                     $("#message").fadeIn();
                     // Clear the input field
-                     $("#email").val('');
+                     $("#newsemail").val('');
 
                     setTimeout(function () {
                         $("#message").fadeOut();

@@ -668,7 +668,7 @@
 
 
     <!-- NewsLetters -->
-    <section class="section-padding shadow light-pink-bg" data-scroll-index="" >
+    <section class="section-padding shadow light-pink-bg" data-scroll-index=""  data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container shadow p-3">
             <div class="row">
                 <div class="col-md-12 mb-20">
@@ -690,7 +690,7 @@
                         <div class="row">
                             <div class="col-md-2 form-group"></div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" id="email" placeholder="Email *" required>
+                                <input name="newsemail" type="email" id="newsemail" placeholder="Email *" required>
                             </div>
                             <div class="col-md-2">
                                 <input name="submit" type="submit" value="Subscribe">
