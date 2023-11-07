@@ -14,6 +14,7 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/dashboard/dashboard');
         $this->load->view('footer');
+        $this->load->view('admin/dashboard/dashboard_js');
         $this->load->view('htmlend');
     }
     
@@ -51,9 +52,42 @@ class AdminController extends CI_Controller {
         $this->load->view('header');
         $this->load->view('admin/sidebar/side_bar');
         $this->load->view('admin/subscriber/subscriber');
+        $this->load->view('admin/subscriber/modal/add_subscriber');
         $this->load->view('footer');
         $this->load->view('admin/subscriber/subscriber_js');
         $this->load->view('htmlend');
     }
+
+    public function newsletter() {
+        $this->load->view('header');
+        $this->load->view('admin/sidebar/side_bar');
+        $this->load->view('admin/newsletter/newsletter');
+        $this->load->view('admin/newsletter/modal/add_newsletter');
+        $this->load->view('admin/newsletter/modal/send_email');
+        $this->load->view('footer');
+        $this->load->view('admin/newsletter/newsletter_js');
+        // $this->load->view('admin/newsletter/send_email_js');
+        $this->load->view('htmlend');
+    }
     
+    public function appointment() {
+        $this->load->view('header');
+        $this->load->view('admin/sidebar/side_bar');
+        $this->load->view('admin/appointment/appointment');
+        $this->load->view('admin/appointment/modal/add_appointment');
+        $this->load->view('footer');
+        $this->load->view('admin/appointment/appointment_js');
+        $this->load->view('htmlend');
+    }
+    
+    public function inquiry() {
+        $this->load->view('header');
+        $this->load->view('admin/sidebar/side_bar');
+        $this->load->view('admin/inquiry/inquiry');
+        $this->load->view('admin/inquiry/modal/view_inquiry');
+        $this->load->view('footer');
+        $this->load->view('admin/inquiry/inquiry_js');
+        $this->load->view('htmlend');
+    }
+
 }

@@ -31,7 +31,7 @@
                     <div class="box-header with-border box-controls pull-right">
                         <!-- <div class="box-header pull-left"> -->
                             <!-- <div class="box-controls pull-right"> -->
-                            <button type="button" class="btn btn-primary" id="addCategoryBtn"><i class="fa fa-plus" aria-hidden="true"></i> Add Subscriber</button>
+                            <button type="button" class="btn btn-primary" id="addSubscriberBtn"><i class="fa fa-plus" aria-hidden="true"></i> Add Subscriber</button>
                             <!-- <button type="button" class="btn btn-info" id="reloadCategoryBtn"><i class="fa-sync-alt"></i>Reload</button> -->
                             </div>
                         <!-- </div> -->
@@ -41,9 +41,9 @@
                                 <table id="subscriberTable" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Sr.No</th>
-                                            <th>Email</th>
-                                            <th>Action</th>
+                                            <th class="col-lg-1">Sr.No</th>
+                                            <th class="col-lg-2">Email</th>
+                                            <th class="col-lg-1">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody id="subscriberList">

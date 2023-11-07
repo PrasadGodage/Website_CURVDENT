@@ -72,7 +72,7 @@ class EmployeeLoginController extends REST_Controller {
             $response['status'] = 200;
             $this->response($response, REST_Controller::HTTP_OK);
 			
-		} else {
+		}else {
 			
 			// there user was not logged in, we cannot logged him out,
 			// redirect him to site root

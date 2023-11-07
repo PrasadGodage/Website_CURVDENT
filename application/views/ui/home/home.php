@@ -1,5 +1,5 @@
 
-    <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
@@ -122,19 +122,19 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <h2 class="section-title" id="about" data-scroll-index="1">Latest Blog</h2>
                     <hr class="line line-hr-left">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-4 mb-20 animate-box" data-animate-effect="fadeInUp" id="data6">
+                <div class="col-md-1 mb-30 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp" id="data6">
                     <!-- <div class="betty-about-img">
                         <div class="img"> <img src="" alt="" width="300" height="250"> </div>
                     </div> -->
                 </div>
-                <div class="col-md-6 mb-20 animate-box content" data-animate-effect="fadeInUp"  id="data7">
+                <div class="col-md-6 mb-30 animate-box content" data-animate-effect="fadeInUp"  id="data7">
                     <!-- <h6>Revitalize Your Look: Hair and Face Clinic Offers Top-notch Treatments!"</h6>
                     <p>Welcome to Curvdent Hair & Face Clinic, the premier destination near Sangamner exclusively
                         dedicated to providing top-notch hair and face treatments. Our clinic is committed to enhancing
@@ -149,11 +149,11 @@
                         </div>
                     <!-- <h6>Betty White | Salon Owner</h6> -->
                 </div>
-                <div class="col-md-1 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-1 mb-30 animate-box" data-animate-effect="fadeInUp"></div>
             </div>
             <div class="row" id="data8">
-                <div class="col-md-5 mb-20 animate-box" data-animate-effect="fadeInUp"></div>
-                <div class="col-md-7 mb-20 animate-box" data-animate-effect="fadeInUp">
+                <div class="col-md-5 mb-30 animate-box" data-animate-effect="fadeInUp"></div>
+                <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
                      <a  href="blog_page">
                         <button type="button" class="btn btn-warning" style="display: flex; justify-content: center; align-items: center;">Read More</button>
                     </a>
@@ -343,68 +343,8 @@
             </div>
         </div>
     </section>
-    <!-- Services -->
-    <!-- <section class="betty-services section-padding" data-scroll-index="2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 mb-30">
-                    <h2 class="section-title">Our Services</h2>
-                    <span class="section-subtitle">We offer a wide range of beauty services</span>
-                    <hr class="line line-hr-left">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/01.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Makeup <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/02.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Hairdressing <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/03.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Barber <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/04.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Massages <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/05.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Body Treatments <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <div class="position-re o-hidden"> <img src="img/services/06.jpg" alt=""> </div>
-                        <div class="con">
-                            <h5>Aromatherapy <i class="ti-arrow-right"></i></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    
+
 
     <!-- Makeup -->
     <!-- <section class="betty-makeup section-padding light-pink-bg">
@@ -650,48 +590,117 @@
         </div>
     </section> -->
 
+
+<!-- Appointment Form -->
+<section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-30">
+                <h2 class="section-title" id="contact">Book Your Appointment Now</h2>
+                <hr class="line line-hr-left text-center">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+
+            <div class="col-md-8 app-sub-w3 animate-box" data-animate-effect="fadeInUp">
+                <br>
+                <form id="sendform" role="form" method="post">
+                    <input type="hidden" class="form-control" id="id1" name="id">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-success contact__msg" id="appointmentMsg" style="display: none" role="alert">
+                                <span class="text-danger">Your message was sent successfully.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input name="fullName" type="text" id="fullName" placeholder="Enter Name *" required>
+                            <span id="fullNameError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <input name="email" type="email" id="email" placeholder="Email *" required>
+                            <span id="emailError"></span>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" maxlength="10" required>
+                            <span id="contactNoError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <!-- <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required>  -->
+                            <input type="date" class="col-md-6 form-control" id="date" placeholder="Select Date" required> 
+                            <span id="dateError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <!-- <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required> -->
+                            <input type="time" class="col-md-6 form-control" id="time" placeholder="Select Time" required>
+                            <span id="timeError"></span>
+                        </div>
+
+                        <!-- <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
+                            <input name="time" type="time" id="time" required>
+                            <span id="timeError"></span>
+                        </div> -->
+                        <div class="col-md-12 form-group mt-2">
+                            <textarea name="address" id="address" cols="30" rows="3" placeholder="Enter Address *" required></textarea>
+                            <span id="addressError"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <input name="submit" type="submit" id="appointment" name="appointment" value="BOOK APPOINTMENT">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 item bg-img" data-scroll-index="5" data-overlay-dark="1" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
-    <!-- Content of your section goes here -->
-   
-        <div class="container aos-init aos-animate mb-20" data-aos="zoom-in" style="background-color: hsla(0, 0%, 60%, 0.9); padding:60px;">
+    <section class="section-padding shadow light-pink-bg" data-scroll-index="" >
+        <div class="container shadow p-3">
             <div class="row">
-                <div class="col-md-12 mb-30">
-                    <h2 class="section-title" id="newsletter">Newsletter</h2>
+                <div class="col-md-12 mb-20">
+                    <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
             </div>
-      
-          <!-- <div class="section-header">
-            <h2>Newsletter</h2>
-            <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-            </div> -->
-
-            <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                <form method="POST" action="#">
-                    <div class="row justify-content-center d-flex">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <input name="email" type="email" placeholder="Email *" required>
-                            <!-- <input type="text" class="form-control" placeholder="Enter your Email"> -->
-                            <!-- <button type="submit" class="ms-2">Subscribe</button> -->
-                            <!-- <input name="submit" type="submit" value="Send Message"> -->
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <form class="form" id="emailForm" method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-success" id="message" style="display: none" role="alert">
+                                <span class="text-danger">Your message was sent successfully.</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-2 form-group"></div>
+                            <div class="col-md-6 form-group">
+                                <input name="email" type="email" id="email" placeholder="Email *" required>
+                            </div>
+                            <div class="col-md-2">
                                 <input name="submit" type="submit" value="Subscribe">
                             </div>
-                    </div>
-
-                    <!-- <div class="row justify-content-center">
-                        <div class="col-lg-6 col-md-10 d-flex">
-                            <input type="text" class="form-control" placeholder="Enter your Email">
-                            <button type="submit" class="ms-2">Subscribe</button>
+                            <div class="col-md-2 form-group"></div>
                         </div>
-                    </div> -->
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-   
     </section>
 
     <!-- Contact -->
@@ -742,33 +751,39 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
                     <h6>Contact Form</h6>
-                    <form method="post" class="contact__form" action="mail.php">
+                    <form class="form" id="contactForm" method="post">
+                           <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <div class="alert alert-success contact__msg" id="contactMsg" style="display: none" role="alert">
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="name" type="text" placeholder="Name *" required>
+                                <input name="fname" type="text" id="fname" placeholder="Name *" >
+                                <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" placeholder="Email *" required>
+                                <input name="mail" type="email" id="mail" placeholder="Email *" >
+                                <span id="emailError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="phone" type="text" placeholder="Number *" required>
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" maxlength="10" >
+                                <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" placeholder="Subject *" required>
+                                <input name="sub" type="text" id="sub" placeholder="Subject *" >
+                                <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *"
-                                    required></textarea>
+                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
+                                <span id="messageError"></span>
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
+                               
                             </div>
                         </div>
                     </form>
@@ -819,4 +834,46 @@
         .read-more-button {
             display: none;
         }
+
+        .fa {
+         padding: 20px;
+         font-size: 10px;
+         width: 10px;
+         text-align: center;
+         text-decoration: none;
+         margin: 5px 2px;
+        }
+        .fa:hover {
+        opacity: 0.7;
+        }
+
+       .fa-facebook {
+        background: #3B5998;
+        color: white;
+       }
+       .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+
+       .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+      .fa-whatsapp {
+        background: rgba(0, 128, 0, 0.6);
+        color: white;
+      }
+
+      /* Appointment Form */
+      
     </style>

@@ -15,8 +15,9 @@
     <section class="content">
 	  <div class="row">
 	    <div class="col">
-            <div class="alert alert-pale-info alert-dismissible fade show callout bg-pale-info" role="alert">
-                Logged In Successfully...               
+		<!-- id="successMessage" style="display: none;" class="alert alert-success"> -->
+            <div id="successMessage" style="display: none;" class="alert alert-pale-success alert-dismissible fade show callout bg-pale-info"  role="alert">
+                <!-- Logged In Successfully...                -->
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">×</span>
                 </button>   
@@ -29,13 +30,13 @@
 		</div> -->
 
 	  </div>
-    <div class="row">
+      <div class="row">
 		<div class="col-md-4 col-12">
           	<a class="box box-body box-inverse box-primary bg-primary">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">TOTAL POST</h6>
-                  <small>50+</small>
+                  <h6 class="mb-0">TOTAL BLOG</h6>
+                  <div id="blogConut" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="fa fa-newspaper-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
@@ -49,8 +50,8 @@
           	<a class="box box-body box-inverse box-primary bg-danger">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">NEWS CATEGORY</h6>
-                  <small>50+</small>
+                  <h6 class="mb-0">TOTAL NEWSLETTER</h6>
+				  <div id="newsletterCount" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="mdi mdi-checkbox-multiple-blank-outline fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
@@ -62,8 +63,8 @@
           	<a class="box box-body box-inverse box-primary bg-success">
               <div class="flexbox align-items-center">
                 <div>
-                  <h6 class="mb-0">BANNER</h6>
-                  <small>50+</small>
+                  <h6 class="mb-0">SUBSCRIBER</h6>
+                  <div id="subscriberCount" style=""></div>
                 </div>
                 <!-- <img class="avatar avatar-lg avatar-bordered" src="../../../images/avatar/4.jpg" alt="..."> -->
                 <i class="fa fa-picture-o fa-3x text-gray-500 avatar avatar-lg avatar-bordered" aria-hidden="true"></i>
@@ -73,7 +74,7 @@
          </div>
         
       </div>
-
+    <section>
       <div class="col-12">
           <div class="box">
             <div class="box-body">
@@ -457,7 +458,64 @@
  
             <div class="box-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart" height="400vh"></canvas>
+                    <!-- <canvas id="myAreaChart" height="400vh"></canvas> -->
+
+					<!-- <section class="section-padding">
+    	 <div class="container"> -->
+        <div class="row col-md-12">
+            <!-- Content -->
+         	 <!-- <ul class="content list-group">   -->
+            <div class="col-md-12 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1">
+                <!-- <div class="main_title2"><h6 style=" font-weight:bold;">All News About Blog</h6></div>
+                <div class="row"> -->
+                    <!-- <div class="col-md-5 p-4">
+                        <div class="item">
+                            <div class="position-re o-hidden" id="div1">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 p-4">
+                        <div class="item">
+                            <div class="media-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <a  href="blog_page">
+                                        <button type="button" class="btn btn-warning">Blog</button></a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                    <div class="col-sm-4" id="div2">
+                                    </div>
+                                    <div class="col-md-12" id="heading1">
+                                         <h5 style="color:red;" href="blog_page" id="heading1"> -->
+                                        <!-- The Definitive Story of How Marvel Studios Created the Marvel Cinematic Universe -->
+                                    <!-- </h5> -->
+                                    <!--</div>    
+                                    <div class="col-md-12" href="blog_page" id="p1">
+                                         <p id="paragraph1"></p> -->
+                                        <!-- <p>Get your first look at The Story of Marvel Studios: The Making of the Marvel Cinematic Universe from…</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+
+			<!-- <div class="col-md-6 animate-box  contentTest list-group" data-animate-effect="fadeInUp" id="data1"></div> -->
+
+			<div class="paginator"></div> 
+
+		</div>
+
+
+
+
+
+
+
                 </div>
             </div>
 
@@ -469,3 +527,42 @@
 	</section>
     <!-- /.content -->
   </div>
+
+ <!-- Style for Title -->
+ <!-- <style>
+    .main_title2{
+	   background: #f9f9ff;
+	   border-left: 3px solid $baseColor;
+	   margin-bottom: 30px;
+	h2{
+		color: $dip;
+		font-size: 18px; 
+		font-family: $rob;
+		font-weight: 500;
+		line-height: 40px;
+		padding-left: 15px;
+		margin-bottom: 0px;
+	}
+}
+
+        .content {
+            overflow: hidden;
+            max-height: 55px; /* Adjust the max-height as needed */
+        }
+        .content1 {
+            overflow: hidden;
+            max-height: 45px; /* Adjust the max-height as needed */
+        }
+        .read-more-button {
+            display: none;
+        }
+
+        .horizontal-scrollable {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+    </style> -->
+
+    <!-- script for slider -->
+
+		

@@ -13,7 +13,7 @@ $('#addPostForm').on('submit', function (e) {
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
-    console.log(formdata);
+     console.log(formdata);
     if (returnVal) {
         $.ajax({
 
@@ -54,7 +54,7 @@ $('#addPostForm').on('submit', function (e) {
                     $(location).attr('href',ebase_url+'posting');
                 } else {
 
-                    swal("Good job!", response.msg, "error");
+                    swal("Error!", response.msg, "error");
 
                 }
 

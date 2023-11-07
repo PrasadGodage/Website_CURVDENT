@@ -23,9 +23,26 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/master_style.css'; ?>">
 
-        
+           <!-- iCheck for checkboxes and radio inputs -->
+         <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\iCheck\all.css';?>">
+
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.css';?>">
+       
+        <!-- select -->	
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-select\dist\css\bootstrap-select.css';?>">
+
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-select\dist\css\bootstrap-select.min.css';?>">
+
         <!-- SoftMaterial admin skins -->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/skins/_all-skins.css'; ?>">	
+
+        <!-- Daterange picker -->	
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.css';?>">
+
+       <!-- Bootstrap time Picker -->
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.css';?>">
+
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.css';?>">
 
         <!-- Select2 -->
 	    <link rel="stylesheet" href="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/css/select2.min.css'?>">	
@@ -140,7 +157,7 @@
                             </li>
                             <!-- Control Sidebar Toggle Button -->
                             <li>
-                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a>
+                                <!-- <a href="#" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></a> -->
                             </li>
                         </ul>
                     </div>

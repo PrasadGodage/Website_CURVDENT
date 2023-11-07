@@ -116,6 +116,21 @@
    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
      <!-- End Whats App Chat Boat Code  -->
 
+
+    <!-- This is datepicker -->
+
+    <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.js'; ?>"></script>
+
+    <script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
+
+   <!-- bootstrap time picker -->
+    <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.js'; ?>"></script>
+
+    <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
+
+    
+    <script src="<?php echo base_url() . 'resource\js\jquery.validate.min.js'; ?>"></script>
+    
      <script > 
         let ebase_url ='https://dev.curvdent.com/';
     </script>

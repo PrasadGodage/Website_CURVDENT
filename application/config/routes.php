@@ -15,6 +15,10 @@ $route['posting']='admin/AdminController/posting';
 // $route['addPost/(:num)']='admin/AdminController/addPost/$1';
 $route['category']='admin/AdminController/category';
 $route['subscriber']='admin/AdminController/subscriber';
+$route['newsletter']='admin/AdminController/newsletter';
+$route['appointment']='admin/AdminController/appointment';
+$route['inquiry']='admin/AdminController/inquiry';
+
 
 //Employee Login and logout api
 $route['employee_login']='api/EmployeeLoginController/login_auth';
@@ -50,3 +54,35 @@ $route['blogpage_api/(:num)']='api/PostingUiController/posting/$1';
 //Newsletter Api
 $route['newsletter_api']='api/NewsletterController/newsletter';
 $route['newsletter_api/(:num)']='api/NewsletterController/newsletter/$1';
+
+//ContactForm Api
+$route['contact_api']='api/ContactFormController/contact';
+// $route['contact_api/(:num)']='api/ContactFormController/contact/$1';
+
+//Newsletter Api without Authorization
+$route['newsletterUi_api']='api/NewsletterUiController/newsletter';
+$route['newsletterUi_api/(:num)']='api/NewsletterUiController/newsletter/$1';
+
+//postNewsletter Api
+$route['postNewsletter_api']='api/PostNewsletterController/postingNews';
+$route['postNewsletter_api/(:num)']='api/PostNewsletterController/postingNews/$1';
+
+//postNewsletter Api without Authorization
+$route['subsriberpage_api']='api/PostNewsletterUiController/postingNews';
+$route['subsriberpage_api/(:num)']='api/PostNewsletterUiController/postingNews/$1';
+
+
+
+//AppointmentForm Api 
+$route['appointment_api']='api/AppointmentFormController/appointment';
+$route['appointment_api/(:num)']='api/AppointmentFormController/appointment/$1';
+
+//AppointmentForm Api without Authorization
+$route['appointmentUi_api']='api/AppointmentFormUiController/appointment';
+$route['appointmentUi_api/(:num)']='api/AppointmentFormUiController/appointment/$1';
+  
+//SendEmail api
+$route['sendEmail_api']='api/SendEmailController/sendMail';
+$route['sendPostEmail_api']='api/SendEmailController/sendPostMail';
+$route['sendSubscriber_api']='api/SendEmailController/sendSubscriber';
+
