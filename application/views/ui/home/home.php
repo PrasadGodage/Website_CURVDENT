@@ -668,7 +668,7 @@
 
 
     <!-- NewsLetters -->
-    <section class="section-padding shadow light-pink-bg" data-scroll-index=""  data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+    <section class="section-padding" data-scroll-index="5"  data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
         <div class="container shadow p-3">
             <div class="row">
                 <div class="col-md-12 mb-20">
