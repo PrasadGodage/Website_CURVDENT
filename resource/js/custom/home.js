@@ -413,7 +413,7 @@ $('#contactForm').on('submit', function (e) {
         var formdata = new FormData(this);
 
         // Show the success message
-        $("#alertMsg").fadeIn();
+        $("#contactMsg").fadeIn();
 
         // Clear the input field (optional)
         $("#fname").val('');
@@ -424,8 +424,8 @@ $('#contactForm').on('submit', function (e) {
 
         // Hide the success message after 3 seconds (adjust the time as needed)
         setTimeout(function () {
-            $("#alertMsg").fadeOut();
-        }, 3000);
+            $("#contactMsg").fadeOut();
+        }, 8000);
 
         // if (returnVal) {
             $.ajax({
