@@ -585,20 +585,20 @@ $('#sendform').on('submit', function (e) {
     formdata.append('time', time);
 
     // Show the success message
-    $("#message").fadeIn();
+    // $("#appointmentMsg").fadeIn();
 
     // Clear the input fields (optional)
-    $("#fullName").val('');
-    $("#contactNo").val('');
-    $("#email").val('');
-    $("#address").val('');
-    $("#date").val('');
-    $("#time").val('');
+    // $("#fullName").val('');
+    // $("#contactNo").val('');
+    // $("#email").val('');
+    // $("#address").val('');
+    // $("#date").val('');
+    // $("#time").val('');
 
     // Hide the success message after 3 seconds (adjust the time as needed)
-    setTimeout(function () {
-        $("#message").fadeOut();
-    }, 3000);
+    // setTimeout(function () {
+    //     $("#appointmentMsg").fadeOut();
+    // }, 8000);
 
     // Make the AJAX request with date and time included in formdata
     $.ajax({
@@ -612,15 +612,20 @@ $('#sendform').on('submit', function (e) {
         success: function (response) {
             if (response.status == 200) {
                 // Show success message
-                $("#successMessage").fadeIn();
+                $("#appointmentMsg").fadeIn();
                 
                 // Clear the input fields (optional)
                 // $("#email").val('');
-                
+                $("#fullName").val('');
+                $("#contactNo").val('');
+                $("#email").val('');
+                $("#address").val('');
+                $("#date").val('');
+                $("#time").val('');
                 // Hide the success message after a few seconds (optional)
                 setTimeout(function() {
-                    $("#successMessage").fadeOut();
-                }, 3000);
+                    $("#appointmentMsg").fadeOut();
+                }, 8000);
             }
         }
     });
