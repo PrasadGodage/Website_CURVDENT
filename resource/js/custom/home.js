@@ -180,25 +180,25 @@ function postDetails(id){
 // });
 
 
-$(document).ready(function () {
-    $("#emailForm").submit(function (e) {
-        e.preventDefault();
+// $(document).ready(function () {
+//     $("#emailForm").submit(function (e) {
+//         e.preventDefault();
 
-        $.ajax({
-            url: "mail.php", // Replace with the path to your PHP script
-            type: "POST",
-            data: $(this).serialize(),
-            dataType: "json",
-            success: function (response) {
-                if (response.status === "success") {
-                    $("#message").removeClass("alert-danger").addClass("alert-success").html(response.message).fadeIn();
-                } else {
-                    $("#message").removeClass("alert-success").addClass("alert-danger").html(response.message).fadeIn();
-                }
-            }
-        });
-    });
-});
+//         $.ajax({
+//             url: "mail.php", // Replace with the path to your PHP script
+//             type: "POST",
+//             data: $(this).serialize(),
+//             dataType: "json",
+//             success: function (response) {
+//                 if (response.status === "success") {
+//                     $("#message").removeClass("alert-danger").addClass("alert-success").html(response.message).fadeIn();
+//                 } else {
+//                     $("#message").removeClass("alert-success").addClass("alert-danger").html(response.message).fadeIn();
+//                 }
+//             }
+//         });
+//     });
+// });
 
 
 
@@ -210,15 +210,15 @@ $('#emailForm').on('submit', function (e) {
     var formdata = new FormData(this);
 
      // Show the success message
-     $("#message").fadeIn();
+    //  $("#message").fadeIn();
 
       // Clear the input field (optional)
-      $("#email").val('');
+    //   $("#email").val('');
 
      // Hide the success message after 3 seconds (adjust the time as needed)
-     setTimeout(function () {
-        $("#message").fadeOut();
-    }, 3000);
+    //  setTimeout(function () {
+    //     $("#message").fadeOut();
+    // }, 8000);
 
     // if (email) {
     //     // Show the success message
@@ -260,15 +260,19 @@ $('#emailForm').on('submit', function (e) {
             success: function (response) {
                 if (response.status == 200) {
                     // Show success message
-                    $("#successMessage").fadeIn();
-                    
+                    // $("#successMessage").fadeIn();
+                    $("#message").fadeIn();
                     // Clear the input field
-                    // $("#email").val('');
+                     $("#email").val('');
+
+                    setTimeout(function () {
+                        $("#message").fadeOut();
+                    }, 8000);
                     
                     // Hide the success message after a few seconds (optional)
-                    setTimeout(function() {
-                        $("#successMessage").fadeOut();
-                    }, 3000); // Hide after 3 seconds
+                    // setTimeout(function() {
+                    //     $("#successMessage").fadeOut();
+                    // }, 3000); // Hide after 3 seconds
                 // } else {
                 //     // Handle error
                 //     swal("Error", response.msg, "error");
