@@ -611,7 +611,7 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <div class="alert alert-success contact__msg" id="alertMsg" style="display: none" role="alert">
+                            <div class="alert alert-success contact__msg" id="appointmentMsg" style="display: none" role="alert">
                                 <span class="text-danger">Your message was sent successfully.</span>
                             </div>
                         </div>
@@ -683,7 +683,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-success" id="message" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
