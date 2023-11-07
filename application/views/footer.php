@@ -255,6 +255,9 @@
 
   <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
 
+<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
+
+
     <script>
     //Initialize Select2 Elements
     $('.select2').select2();

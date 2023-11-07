@@ -591,9 +591,6 @@
     </section> -->
 
 
-
-
-
 <!-- Appointment Form -->
 <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
     <div class="container">
@@ -609,7 +606,7 @@
 
             <div class="col-md-8 app-sub-w3 animate-box" data-animate-effect="fadeInUp">
                 <br>
-                <form id="send-form" role="form" method="post">
+                <form id="sendform" role="form" method="post">
                     <input type="hidden" class="form-control" id="id1" name="id">
 
                     <div class="row">
@@ -627,22 +624,23 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input name="email" type="email" id="email" placeholder="Email *" maxlength="10" required>
+                            <input name="email" type="email" id="email" placeholder="Email *" required>
                             <span id="emailError"></span>
                         </div>
                         <div class="col-md-6 form-group">
-                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" required>
+                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" maxlength="10" required>
                             <span id="contactNoError"></span>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required> 
+                            <!-- <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required>  -->
+                            <input type="date" class="col-md-6 form-control" id="date" placeholder="Select Date" required> 
                             <span id="dateError"></span>
                         </div>
 
                         <div class="col-md-6 form-group">
                             <!-- <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required> -->
-                            <input type="time" class="col-md-6 form-control" id="timeInput" placeholder="Select Time" required>
+                            <input type="time" class="col-md-6 form-control" id="time" placeholder="Select Time" required>
                             <span id="timeError"></span>
                         </div>
 
@@ -651,7 +649,7 @@
                             <span id="timeError"></span>
                         </div> -->
                         <div class="col-md-12 form-group mt-2">
-                            <input name="address" type="text" id="address" cols="30" rows="3" placeholder="Enter Address *" required>
+                            <textarea name="address" id="address" cols="30" rows="3" placeholder="Enter Address *" required></textarea>
                             <span id="addressError"></span>
                         </div>
                         <div class="col-md-12">
@@ -670,10 +668,10 @@
 
 
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg '; ?>">
-        <div class="container">
+    <section class="section-padding shadow light-pink-bg" data-scroll-index="" >
+        <div class="container shadow p-3">
             <div class="row">
-                <div class="col-md-12 mb-30">
+                <div class="col-md-12 mb-20">
                     <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
@@ -690,13 +688,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-1 form-group"></div>
-                            <div class="col-md-8 form-group">
+                            <div class="col-md-2 form-group"></div>
+                            <div class="col-md-6 form-group">
                                 <input name="email" type="email" id="email" placeholder="Email *" required>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <input name="submit" type="submit" value="Subscribe">
                             </div>
+                            <div class="col-md-2 form-group"></div>
                         </div>
                     </form>
                 </div>

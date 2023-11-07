@@ -23,7 +23,16 @@
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/master_style.css'; ?>">
 
-        
+           <!-- iCheck for checkboxes and radio inputs -->
+         <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\iCheck\all.css';?>">
+
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.css';?>">
+       
+        <!-- select -->	
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-select\dist\css\bootstrap-select.css';?>">
+
+        <link rel="stylesheet" href="<?php echo base_url() .'resource\assets\vendor_components\bootstrap-select\dist\css\bootstrap-select.min.css';?>">
+
         <!-- SoftMaterial admin skins -->
         <link rel="stylesheet" href="<?php echo base_url() . 'resource/css/skins/_all-skins.css'; ?>">	
 
