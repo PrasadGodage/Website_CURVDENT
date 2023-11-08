@@ -134,8 +134,8 @@ class SendEmailController extends REST_Controller {
             'protocol'   =>   'sendmail',
             'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
-            'smtp_user'   =>   'soulsoft.soul120@gmail.com',
-            'smtp_pass'   =>   'dipalirahane@1993',
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
             'mailtype'   =>   'html',
             'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
@@ -149,7 +149,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from('soulsoft.soul120@gmail.com');
+        $this->email->from('info@curvdent.com');
         $this->email->to($data['email']);
         
         $this->email->subject('Our Latest NewsLetter');
@@ -197,8 +197,8 @@ class SendEmailController extends REST_Controller {
             'protocol'   =>   'sendmail',
             'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
-            'smtp_user'   =>   'soulsoft.soul120@gmail.com',
-            'smtp_pass'   =>   'dipalirahane@1993',
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
             'mailtype'   =>   'html',
             'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
@@ -212,7 +212,7 @@ class SendEmailController extends REST_Controller {
 
         $this->email->set_newline("\r\n");
 
-        $this->email->from('soulsoft.soul120@gmail.com');
+        $this->email->from('info@curvdent.com');
         $this->email->to($data['email']);
         
         $this->email->subject('Our Latest NewsLetter');
