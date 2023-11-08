@@ -63,8 +63,8 @@ class SendEmailController extends REST_Controller {
             'protocol'   =>   'sendmail',
             'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
-            'smtp_user'   =>   'pradyumnb.297@gmail.com',
-            'smtp_pass'   =>   'Pradyumn@1998',
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
             'mailtype'   =>   'html',
             'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
@@ -76,7 +76,7 @@ class SendEmailController extends REST_Controller {
         $this->email->set_newline("\r\n");
 
         $this->email->from($data['email']);
-        $this->email->to('pradyumnb.297@gmail.com');
+        $this->email->to('info@curvdent.com');
         $this->email->subject($data['subject']);
         // $this->email->subject($subject);
         $this->email->message($emailContent);
