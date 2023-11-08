@@ -33,9 +33,24 @@
                         <div class="box-header with-border box-controls pull-right">
 
                             <!--<div class="box-controls pull-right">-->
-                            <!--<button id="row-count" class="btn btn-xs btn-primary">Row count</button>-->
-                            <button type="button" class="btn btn-primary" id="addappointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
-                            <!--</div>-->
+                            <button type="button" class="col-md-3 btn btn-primary ml-2" id="addAppointmentBtn"><i class="fa fa-plus" aria-hidden="true"></i> New Appointment</button>
+                            <!-- <button id="date" class="btn btn-xs btn-primary">Select Date -->
+                            <!-- <div class=" box-controls pull-right"> -->
+                             <!-- <input type="date" class="col-md-3 form-control mr-2" id="dateInput" name="dateInput"> -->
+                            <input type="text" class="col-md-3 form-control pull-right" placeholder="Select Date" id="datepicker"> 
+
+                               <!-- <p>Date: <input type="text" id="datepicker"> -->
+                            <!-- </button> -->
+                            <!-- </div> -->
+
+                            <!-- <div class="col-md-3 input-group date"> 
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker">
+                            </div> -->
+
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">

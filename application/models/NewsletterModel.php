@@ -60,6 +60,31 @@ class NewsletterModel extends CI_Model {
           }
     }
 
+
+    public function get_contact() {
+        $data=[];
+        // if ($id != 0) {
+            $this->db->select(
+                'nl.id,'
+                . 'nl.email,'
+                . 'nl.name,'
+                . 'nl.subject,'
+                . 'nl.number,'
+                . 'nl.message,'
+                . 'nl.is_newsletter,'
+                . 'nl.is_active'
+                
+            );
+            $this->db->from('newsletter_master nl');
+            $query = $this->db->where('nl.is_newsletter',0);
+            $data = $this->db->get()->result();
+        // }
+          
+        // return print_r($this->db->last_query());    
+
+        return $data;
+    }
+
     
 }
 

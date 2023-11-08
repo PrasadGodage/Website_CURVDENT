@@ -1,125 +1,243 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
+require APPPATH . '/libraries/REST_Controller.php';
+use Restserver\Libraries\REST_Controller;
 
-class SendEmailController extends CI_Controller {
+class SendEmailController extends REST_Controller {
       
+    
+    public function __construct() {
 
-    // public function __construct() {
-
-    //     parent::__construct();
-    //     $this->load->library('email'); 
-    //     // $this->load->model('CategoryModel','category');
+        parent::__construct();
+        $this->load->library('email');
+        $this->load->helper('url');
+        $this->load->model('NewsletterModel','newsletter');
         
-    // }
+    }
    
     public function sendMail_post() {  
         
         $response = [];
-
-        $subject = 'Application for Clinc By - ' . $this->input->post("name");
-        // $programming_languages = implode(", ", $this->input->post("programming_languages"));
-
-        $message = '
+                
+        $subscriber['email'] = $this->post('mail');
+        // $sub = $this->post('name');
+        
+        $data['name'] = $this->post('fname');
+        $data['email'] = $this->post('mail');
+        $data['number'] = $this->post('mobile');
+        $data['subject'] = $this->post('sub');
+        $data['message'] = $this->post('msg');
+        $data['is_newsletter'] = 0;
+        
+        $id = $this->post('id');
+                
+        $emailContent = '
                     <h3 align="center">Client Details</h3>
                         <table border="1" width="100%" cellpadding="5">
                             <tr>
                             <td width="30%">Name</td>
-                            <td width="70%">'.$this->input->post("name").'</td>
+                            <td width="70%">'.$data['name'].'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Email Address</td>
-                            <td width="70%">'.$this->input->post("email").'</td>
+                            <td width="70%">'.$data['email'].'</td>
                             </tr>
                             
                             <tr>
                             <td width="30%">Phone Number</td>
-                            <td width="70%">'.$this->input->post("phone").'</td>
+                            <td width="70%">'.$data['number'].'</td>
                             </tr>
-
+                            
                             <tr>
                             <td width="30%">Message</td>
-                            <td width="70%">'.$this->input->post("message").'</td>
+                            <td width="70%">'.$data['message'].'</td>
                             </tr>
                         </table>
                     ';
 
 
-        // $name = $this->input->post('name');
-        // $email = $this->input->post('email');
-        // $phone = $this->input->post('phone');
-        // $subject = $this->input->post('subject');
-        // $message = $this->input->post('message');
-        
-        // $emailContent = 'Phone Number: ' . $phone . "\n\n" . 'Message: ' . $message;
-        // $subject = " NewsLetter send ";
-        // $this->input->post("title");
-        // 
-        // $file_data = $this->upoload_file();
-        
         $config=array(
             
-            'protocol'   =>   'smtp',
-            'smtp_host'   =>   'smtp.gmail.com',
+            'protocol'   =>   'sendmail',
+            'smtp_host'   =>   'ssl://smtp.gmail.com',
             'smtp_port'   =>   465,
-            'smtp_user'   =>   'soulsoft.soul120@gmail.com',
-            'smtp_pass'   =>   'dipalirahane@1993',
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
             'mailtype'   =>   'html',
             'charset'   =>   'utf-8',
             'wordwrap'   =>   TRUE
             
         );
         
-        $this->load->library('email', $config);
+        $this->email->initialize($config);
+
         $this->email->set_newline("\r\n");
-        $this->email->from($this->input->post("email"));
-        $this->email->to('pradyumnb.297@gmail.com');
-        $this->email->subject($subject);
-            $this->email->message($message);
 
-        
-        // $this->load->library('email', $config);
-        
-        // $this->email->from($this->input->post("email"));
-        // // $this->email->from($email);
-        // $this->email->to("soulsoft.urmila@gmail.com");
+        $this->email->from($data['email']);
+        $this->email->to('info@curvdent.com');
+        $this->email->subject($data['subject']);
         // $this->email->subject($subject);
-        // // $this->email->message($message);
-        // $this->email->message($emailContent);
-        // $this->email->set_newline("\r\n");
-        // $this->email->send();
-
-        if (!$this->email->send()) {
-            $response['msg'] = 'Email Send Successfully!';
-            $response['status'] = 200;
-            $this->response($response, REST_Controller::HTTP_OK);
-        }else {
-            $response['msg'] = 'Bad Request!';
-            $response['status'] = 400;
-            $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
-          }
-        // $this->email->attach($file_data['full_path']);
+        $this->email->message($emailContent);
         
-        // if($this->email->send()){
-        //     if(delete_files($file_data['file_path']))
-        //     {
-        //         $this->session->set_flashdata('message', 'Application Sended');
-                
-        //     }
-        // }
+        $Mailstatus = $this->email->send();
+        if(empty($id)){
+            $status = $this->newsletter->insert_newsletter($data);
+            
+            if ($Mailstatus) {
+                $response['msg'] = 'Email Send Successfully!';
+                // $response['msg'] = $status;
+                $response['status'] = 200;
+                $this->response($response, REST_Controller::HTTP_OK);
+            }else {
+                $response['msg'] = 'Bad Request!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+            }
+
+        }else{
+            $status = $this->newsletter->insert_newsletter($subscriber);
+            
+            if ($Mailstatus) {
+                $response['msg'] = 'Email Send Successfully!';
+                $response['status'] = 200;
+                $this->response($response, REST_Controller::HTTP_OK);
+            }else {
+                $response['msg'] = 'Bad Request!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+            }
+
+        }
+        
     }
 
-    // public function upoload_file(){
+    public function sendPostMail_post() {  
+        
+        $response = [];
+        //$email = [];
+        $arrJson = json_decode($this->post('emailDetails'));
+        $pdf=$this->post('pdfFileName');
+        print_r($pdf_path);
+         $Mailstatus;
 
-        //     $config['upload_path']   = './uploads/'; // Same as in the config file
-        //     $config['allowed_types'] = 'pdf';
-        //     $this->load->library('upload', $config);
+       
+           
+            for($i=0 ; $i < count($arrJson) ; $i++){
 
-        //      if ($this->upload->do_upload('PDF')) {
-        //         // Upload successful, you can do further processing here
-        //         $data = $this->upload->data();
-        // }
-    
-    // }
+                $data['email'] = $arrJson[$i]->email;  
+                $pdf_path = FCPATH . 'uploads/' . $pdf;
+         
+        $config=array(
+            
+            'protocol'   =>   'sendmail',
+            'smtp_host'   =>   'ssl://smtp.gmail.com',
+            'smtp_port'   =>   465,
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
+            'mailtype'   =>   'html',
+            'charset'   =>   'utf-8',
+            'wordwrap'   =>   TRUE
+            
+        );
+
+        
+        $this->email->initialize($config);
+
+        //$recipients=array('soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
+
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('info@curvdent.com');
+        $this->email->to($data['email']);
+        
+        $this->email->subject('Our Latest NewsLetter');
+        $this->email->message('Our Latest NewsLetter');
+
+
+       
+        $this->email->attach($pdf_path);
+        $Mailstatus = $this->email->send();
+
+    }
+                    
+            if ($Mailstatus) {
+                $response['msg'] = 'Email Send Successfully!';
+                // $response['msg'] = $status;
+                $response['status'] = 200;
+                $this->response($response, REST_Controller::HTTP_OK);
+            }else {
+                $response['msg'] = 'Bad Request!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+            }
+                    
+        
+    }
+
+
+    public function sendSubscriber_post() {  
+        
+        $response = [];
+        //$email = [];
+        $arrJson = json_decode($this->post('chkList'));
+        $pdf=$this->post('pdf');
+                
+         $Mailstatus;
+                
+            for($i=0 ; $i < count($arrJson) ; $i++){
+
+                $data['email'] = $arrJson[$i]->email;  
+                //$pdf_path = FCPATH . 'uploads/' . $pdf;
+                $pdf_path = FCPATH . $pdf;
+         
+        $config=array(
+            
+            'protocol'   =>   'sendmail',
+            'smtp_host'   =>   'ssl://smtp.gmail.com',
+            'smtp_port'   =>   465,
+            'smtp_user'   =>   'info@curvdent.com',
+            'smtp_pass'   =>   'Curvdent@2023',
+            'mailtype'   =>   'html',
+            'charset'   =>   'utf-8',
+            'wordwrap'   =>   TRUE
+            
+        );
+
+        
+        $this->email->initialize($config);
+
+        //$recipients=array('soulsoft.urmila@gmail.com','soulsoft.gauravvanam@gmail.com','soulsoft.krishna@gmail.com');
+
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('info@curvdent.com');
+        $this->email->to($data['email']);
+        
+        $this->email->subject('Our Latest NewsLetter');
+        $this->email->message('Our Latest NewsLetter');
+
+
+        $this->email->attach($pdf_path);
+        $Mailstatus = $this->email->send();
+
+    }
+                    
+            if ($Mailstatus) {
+                $response['msg'] = 'Email Send Successfully!';
+                // $response['msg'] = $status;
+                $response['status'] = 200;
+                $this->response($response, REST_Controller::HTTP_OK);
+            }else {
+                $response['msg'] = 'Bad Request!';
+                $response['status'] = 400;
+                $this->response($response, REST_Controller::HTTP_BAD_REQUEST);
+            }
+                    
+        
+    }
+
+
+
 }

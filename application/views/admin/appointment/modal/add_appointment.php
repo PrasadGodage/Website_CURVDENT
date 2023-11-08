@@ -1,4 +1,4 @@
-<div class="modal fade bs-example-modal-lg" id="addappointmentModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal fade bs-example-modal-lg" id="addAppointmentModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <!--form start-->
@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="form" id="addappointmentForm" method="post">
+                <form class="form" id="addAppointmentForm" method="post">
                     <div class="box-body">
                         <h4 class="box-title text-info"><i class="ti-user mr-15"></i> Appointment </h4>
                         <hr class="my-15">
@@ -16,42 +16,43 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label ><span class="error">*</span>Date</label>
-                                    <input type="date" class="form-control" id="date" name="date">
+                                    <label ><span class="error">*</span>Name</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder=" Name">
                                     <input type="hidden" class="form-control" id="id" name="id">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label ><span class="error">*</span>Time</label>
-                                    <input type="time" class="form-control" id="time" name="time">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label ><span class="error">*</span>Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder=" Name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label ><span class="error">*</span>Contact</label>
-                                    <input type="tel" class="form-control" id="contact" name="contact" placeholder=" Contact" recorded>
+                                    <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Enter 10-digit number" maxlength="10">
+                                    <span id="contactError" class="error"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Email</label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" >
+                                    <span id="emailError" class="error"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label ><span class="error">*</span>Address</label>
-                                    <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
+                                    <textarea  id="address" class="form-control" name="address"placeholder="Address"></textarea>
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Date</label>
+                                    <input type="date" class="form-control" id="date" name="date">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label ><span class="error">*</span>Time</label>
+                                    <input type="time" class="form-control" id="time" name="time ">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer text-right">

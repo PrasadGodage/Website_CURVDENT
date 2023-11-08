@@ -79,6 +79,13 @@
             <i class="glyphicon glyphicon-user mr-15"></i> <span>Appointment</span>
           </a>
         </li>
+        
+        <li class="">
+          <a href="inquiry">
+            <!-- <i class="glyphicon glyphicon-user mr-15"></i> <span>Inquiry</span> -->
+            <i class="fa fa-address-card mr-15" aria-hidden="true"></i> <span>Inquiry</span>
+          </a>
+        </li>
 
       </ul>
     </section>

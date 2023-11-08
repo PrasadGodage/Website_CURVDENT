@@ -27,8 +27,14 @@
                                         </div>
                                 <!-- </div> -->
                                 <!-- /.box-header -->
-                                <div class="box-body ">
-                                
+                                    <div class="box-body ">
+                                        <!-- <div class="row">
+                                            <div class="col-md-4">
+                                                <h3>Selected Record ids: => </h3>
+                                            </div>
+                                            <div class="col-md-8 selectedDiv">
+                                            </div>
+                                        </div> -->
                                         <div class="table-responsive">
                                             <table id="subscriberTable" class="table table-bordered table-hover">
                                                 <thead>
@@ -37,7 +43,6 @@
                                                         <th><input type="checkbox"  class="largerCheckbox" id="chkAll" style="position: absulute; left:0px; opacity:1;" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
-                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="subscriberList">
@@ -49,7 +54,6 @@
                                                         <th>#</th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
-                                                        <th>Action</th>
                                                     </tr>
                                                 </tfoot>
                                             </table>

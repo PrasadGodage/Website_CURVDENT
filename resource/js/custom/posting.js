@@ -1,10 +1,80 @@
 let categoryList = new Map();
 let postList = new Map();
+// let newsLetterList = new Map();
 
 //Submit Category Btn script
 
 $('#addPostForm').on('submit', function (e) {
     e.preventDefault();
+
+    // //logic for send mail for blog
+
+    // $.ajax({
+
+    //     url: ebase_url+'newsletter_api',
+
+    //     type: 'GET',
+
+    //     async:false,
+
+    //     headers: {
+    //         "Authorization": etoken
+    //     },
+
+    //     dataType: 'json',
+
+    //     success: function (response) {
+        
+
+    //         if (response.status == 200) {
+
+    //             if (response.data.length != 0) {
+    //                 for (var i = 0; i < response.data.length; i++) {
+    //                     if (response.data[i].is_active == 1){
+    //                         newsLetterList.set(response.data[i].id, response.data[i]);
+
+    //                     }
+    //                    console.log(newsLetterList); 
+    //                 }
+                    
+    //             }
+    //       }
+
+    //     }
+        
+    // });
+   
+    // var emailList=Array.from(newsLetterList.values());
+    // var jsonString= JSON.stringify(emailList);
+    // var formdata1 = new FormData();
+    // formdata1.append("emailDetails",jsonString);
+
+    // $.ajax({
+    //                 url: ebase_url + 'sendPostEmail_api',
+        
+    //                 type: 'POST',
+        
+    //                 data: formdata1,
+        
+    //                 cache: false,
+        
+    //                 contentType: false,
+        
+    //                 processData: false,
+        
+    //                 dataType: 'json',
+        
+    //              success: function(response) {
+    //                  if (response.status == 200) {
+    //                     alert('suceess');
+    //                     // swal("Good job!", response.msg, "success");
+    //                  } else {
+    //                     alert('error');
+    //                     // swal("ERROR!", response.msg, "error");
+    //                     }
+    //              }
+                    
+    //          });
 
     var returnVal = $("#addPostForm").valid();
     var formdata = new FormData(this);
@@ -97,7 +167,7 @@ function getPostList() {
                     
                 }
                 setPostList(postList);
-                console.log(postList);
+               // console.log(postList);
             }
 
         }

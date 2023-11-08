@@ -1,5 +1,5 @@
 
-    <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
             <div class="logo-wrapper mt-3">
@@ -343,86 +343,8 @@
             </div>
         </div>
     </section>
-    <section class="section-padding" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
-        <div class="container mb-20" id="book">
-            <div class="row">
-                <div  class="col-md-6 col-sm-6">
-                    <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.6s" style="color: #d4b76e;">Book Your Appointment Now </h2>
-                        <hr class="line line-hr-left">
-                    </div>   
-                </div>
-                <div  class="col-md-12 col-sm-12">
-                    <div class="app-sub-w3 animate-box" data-animate-effect="fadeInUp">
-                            <br>
-                            <form id="send-form" role="form" method="post">
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Name</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <input type="text" id="patient_name" class="form-control" placeholder=" Name"  name="patient_name" required>
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Contact</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <input type="tel" id="contact" class="form-control" placeholder=" Contact"  name="contact" recorded>
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <br>
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Email</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <input type="email" id="email" class="form-control" placeholder="Your Email"  name="email">
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Date</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <input type="date" id="date" class="form-control" name="date">
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <br>
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Time</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <input type="time" id="time" class="form-control" name="time">
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <br>
-                                <div class="form-group row">
-                                   <div class="col-sm-3 col-lg-3"></div>
-                                   <label class="col-sm-2 col-lg-2" style="color: #d4b76e;">Address</label>
-                                   <div class="col-sm-5 col-lg-5">
-                                      <textarea  id="address" class="form-control" name="address"placeholder="Address" required></textarea>
-                                   </div>
-                                   <div class="col-sm-2 col-lg-2"></div>
-                                </div>
-                                <div class="form-group row justify-content-end">
-                                    <div class="col-sm-5">
-                                        <button type="submit" class="btn btn-form" name="appointment" style="background-color: #fd8f00;">BOOK APPOINTMENT</button>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                            </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br>
     
-   
+
 
     <!-- Makeup -->
     <!-- <section class="betty-makeup section-padding light-pink-bg">
@@ -668,11 +590,88 @@
         </div>
     </section> -->
 
+
+<!-- Appointment Form -->
+<section class="section-padding mb-20" data-scroll-index="5" data-background="<?php echo base_url() . 'uiAssets/img/slider/1.jpg'; ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-30">
+                <h2 class="section-title" id="contact">Book Your Appointment Now</h2>
+                <hr class="line line-hr-left text-center">
+            </div>
+        </div>
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+
+            <div class="col-md-8 app-sub-w3 animate-box" data-animate-effect="fadeInUp">
+                <br>
+                <form id="sendform" role="form" method="post">
+                    <input type="hidden" class="form-control" id="id1" name="id">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-success contact__msg" id="appointmentMsg" style="display: none" role="alert">
+                                <span class="text-danger">Your message was sent successfully.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input name="fullName" type="text" id="fullName" placeholder="Enter Name *" required>
+                            <span id="fullNameError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <input name="email" type="email" id="email" placeholder="Email *" required>
+                            <span id="emailError"></span>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <input name="contactNo" type="text" id="contactNo" placeholder="Enter Contact No *" maxlength="10" required>
+                            <span id="contactNoError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <!-- <input type="text" class="col-md-6 form-control" placeholder="Select Date" id="datepicker" required>  -->
+                            <input type="date" class="col-md-6 form-control" id="date" placeholder="Select Date" required> 
+                            <span id="dateError"></span>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <!-- <input type="text" class="form-control timepicker" placeholder="Select Time" id="timepicker" required> -->
+                            <input type="time" class="col-md-6 form-control" id="time" placeholder="Select Time" required>
+                            <span id="timeError"></span>
+                        </div>
+
+                        <!-- <div class="col-md-6 form-group mb-2" style="width:150px; height:20px;">
+                            <input name="time" type="time" id="time" required>
+                            <span id="timeError"></span>
+                        </div> -->
+                        <div class="col-md-12 form-group mt-2">
+                            <textarea name="address" id="address" cols="30" rows="3" placeholder="Enter Address *" required></textarea>
+                            <span id="addressError"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <input name="submit" type="submit" id="appointment" name="appointment" value="BOOK APPOINTMENT">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
     <!-- NewsLetters -->
-    <section class="section-padding mb-20 shadow" data-scroll-index="" data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg '; ?>">
-        <div class="container">
+    <section class="section-padding mb-20" data-scroll-index="5"  data-background="<?php echo base_url() . 'uiAssets/img/slider/2.jpg'; ?>">
+        <div class="container shadow p-3">
             <div class="row">
-                <div class="col-md-12 mb-30">
+                <div class="col-md-12 mb-20">
                     <h2 class="section-title" id="contact">Newsletter</h2>
                     <hr class="line line-hr-left text-center">
                 </div>
@@ -684,18 +683,19 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-success" id="message" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-1 form-group"></div>
-                            <div class="col-md-8 form-group">
-                                <input name="email" type="email" id="email" placeholder="Email *" required>
+                            <div class="col-md-2 form-group"></div>
+                            <div class="col-md-6 form-group">
+                                <input name="newsemail" type="email" id="newsemail" placeholder="Email *" required>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <input name="submit" type="submit" value="Subscribe">
                             </div>
+                            <div class="col-md-2 form-group"></div>
                         </div>
                     </form>
                 </div>
@@ -751,34 +751,39 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 animate-box" data-animate-effect="fadeInUp">
                     <h6>Contact Form</h6>
-                    <form method="post" class="contact__form" id="contactForm">
+                    <form class="form" id="contactForm" method="post">
                            <input type="hidden" class="form-control" id="id" name="id">
                         <div class="row">
                             <div class="col-12">
-                                <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                    Your message was sent successfully.
+                                <div class="alert alert-success contact__msg" id="contactMsg" style="display: none" role="alert">
+                                <span class="text-danger">Your message was sent successfully.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input name="name" type="text" id="name" placeholder="Name *" required>
+                                <input name="fname" type="text" id="fname" placeholder="Name *" >
+                                <span id="nameError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="email" type="email" id="email" placeholder="Email *" required>
+                                <input name="mail" type="email" id="mail" placeholder="Email *" >
+                                <span id="emailError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="phone" type="text" id="phone" placeholder="Number *" required>
+                                <input name="mobile" type="text" id="mobile" placeholder="Number *" maxlength="10" >
+                                <span id="phoneError"></span>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input name="subject" type="text" id="subject" placeholder="Subject *" required>
+                                <input name="sub" type="text" id="sub" placeholder="Subject *" >
+                                <span id="subjectError"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *"
-                                    required></textarea>
+                                <textarea name="msg" id="msg" cols="30" rows="4" placeholder="Message *" ></textarea>
+                                <span id="messageError"></span>
                             </div>
                             <div class="col-md-12">
                                 <input name="submit" type="submit" value="Send Message">
+                               
                             </div>
                         </div>
                     </form>

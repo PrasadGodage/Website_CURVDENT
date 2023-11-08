@@ -244,6 +244,20 @@
 <!-- Select2 -->
 	<script src="<?php echo base_url() . 'resource/assets/vendor_components/select2/dist/js/select2.full.js'; ?>"></script>
 
+<!-- This is datepicker -->
+
+<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.js'; ?>"></script>
+
+<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
+
+  <!-- bootstrap time picker -->
+  <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.min.js'; ?>"></script>
+
+  <script src="<?php echo base_url() . 'resource\assets\vendor_plugins\timepicker\bootstrap-timepicker.js'; ?>"></script>
+
+<script src="<?php echo base_url() . 'resource\assets\vendor_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js'; ?>"></script>
+
+
     <script>
     //Initialize Select2 Elements
     $('.select2').select2();
