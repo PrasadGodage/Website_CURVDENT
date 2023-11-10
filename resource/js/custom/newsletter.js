@@ -2,6 +2,7 @@ let newsletterList = new Map();
 let subscriberList = new Map();
 let newsLetterList1 = new Map();
 let newsletterpdfList = new Map();
+let appointmentList = new Map();
 let emailList = new Map();
 var pdfName;
 var subscriber;
@@ -408,7 +409,7 @@ function setSubscriberList1(list) {
         // results.forEach(subscriber => {
         let tblData = `
             <tr>
-                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 0px; opacity: 1;" /></td>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 10px; opacity: 1;" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
             </tr>`;
@@ -593,8 +594,60 @@ function getCheckRecords() {
   }
 }
 
+//get  appointment mail List
+/*
+function getAppointmentMailList(){
+    $.ajax({
 
+        url: ebase_url+'appointment_api',
 
+        type: 'GET',
+
+        async:false,
+
+        headers: {
+            "Authorization": etoken
+        },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+
+                            appointmentList.set(response.data[i].id, response.data[i]);
+                                           
+                        }
+                    }
+                    setAppointmentMailList(appointmentList);
+                    // console.log(appointmentList);
+
+             }
+
+        }
+        
+    });
+}
+getAppointmentMailList();
+
+function setAppointmentMailList(list){
+    for (let k of list.keys()) {
+        
+        let appointment = list.get(k);
+
+        // appointment.email;
+        emailList.set(appointment.id, appointment.email);
+        console.log(emailList);
+        
+    }
+
+}
+
+*/
 
 //Add Newsletter sendEmail Btn script -----------------------------------------------------------------
 $('#sendEmail').click(function () {
