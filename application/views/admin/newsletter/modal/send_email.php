@@ -40,7 +40,7 @@
                                                 <thead>
                                                     <tr>
                                                      <!-- <th class="custom-control-input"></th> -->
-                                                        <th><input type="checkbox"  class="largerCheckbox" id="chkAll" style="position: absulute; left:0px; opacity:1;" /></th>
+                                                        <th><input type="checkbox"  class="largerCheckbox" id="chkAll" style="position: absulute; left:5px; opacity:1;" /></th>
                                                         <th>Sr.No</th>
                                                         <th>Email</th>
                                                     </tr>
