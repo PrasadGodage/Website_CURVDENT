@@ -624,7 +624,7 @@ function getAppointmentMailList(){
                         }
                     }
                     setAppointmentMailList(appointmentList);
-                    console.log(appointmentList);
+                    // console.log(appointmentList);
 
              }
 
