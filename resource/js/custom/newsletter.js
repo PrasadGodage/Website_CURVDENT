@@ -605,9 +605,9 @@ function getAppointmentMailList(){
 
         async:false,
 
-        // headers: {
-        //     "Authorization": etoken
-        // },
+        headers: {
+            "Authorization": etoken
+        },
 
         dataType: 'json',
 
