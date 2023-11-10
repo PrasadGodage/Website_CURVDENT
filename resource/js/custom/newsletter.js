@@ -593,6 +593,56 @@ function getCheckRecords() {
   }
 }
 
+//get  appointment mail List
+
+function getAppointmentMailList(){
+    $.ajax({
+
+        url: ebase_url+'appointment_api',
+
+        type: 'GET',
+
+        async:false,
+
+        // headers: {
+        //     "Authorization": etoken
+        // },
+
+        dataType: 'json',
+
+        success: function (response) {
+        
+
+            if (response.status == 200) {
+
+                if (response.data.length != 0) {
+                    for (var i = 0; i < response.data.length; i++) {
+
+                            appointmentList.set(response.data[i].id, response.data[i]);
+                                           
+                    }
+                }
+                setAppointmentMailList(appointmentList);
+             }
+
+        }
+        
+    });
+}
+getAppointmentMailList();
+
+function setAppointmentMailList(list){
+    for (let k of list.keys()) {
+        
+        let appointment = list.get(k);
+
+        // appointment.email;
+        emailList.set(appointment.id, appointment.email);
+        console.log(emailList);
+        
+    }
+
+}
 
 
 
