@@ -2,6 +2,7 @@ let newsletterList = new Map();
 let subscriberList = new Map();
 let newsLetterList1 = new Map();
 let newsletterpdfList = new Map();
+let appointmentList = new Map();
 let emailList = new Map();
 var pdfName;
 var subscriber;
