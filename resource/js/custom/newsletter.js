@@ -620,9 +620,11 @@ function getAppointmentMailList(){
 
                             appointmentList.set(response.data[i].id, response.data[i]);
                                            
+                        }
                     }
-                }
-                setAppointmentMailList(appointmentList);
+                    setAppointmentMailList(appointmentList);
+                    console.log(appointmentList);
+
              }
 
         }
