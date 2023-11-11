@@ -63,7 +63,7 @@ class AppointmentFormUiController extends REST_Controller {
 
 
         $appointmentData['email'] = $this->post('email');
-        $appointmentData['is_active'] = $this->post('is_active');
+        // $appointmentData['is_active'] = $this->post('is_active');
         
         $id = $this->post('id');
         
