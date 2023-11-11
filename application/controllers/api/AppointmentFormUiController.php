@@ -104,7 +104,7 @@ class AppointmentFormUiController extends REST_Controller {
                 // if($this->category->find_category($data['category_name']) || $result['category_name']==$data['category_name']){
                     
                 $status = $this->appointment->update_appointment($id, $data);
-                $this->newsletter->update_newsletter($id, $appointmentData);
+                $this->newsletter->insert_newsletter($appointmentData);
                 if ($status) {
                     $restData = $this->appointment->get_appointment($id);
                     $response['msg'] = 'appointment updated successfully!';
