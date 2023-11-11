@@ -409,7 +409,7 @@ function setSubscriberList1(list) {
         // results.forEach(subscriber => {
         let tblData = `
             <tr>
-                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 10px; opacity: 1;" /></td>
+                <td><input type="checkbox" data-id="${subscriber.id}" class="largerCheckbox tblChk chk${index} select-data" style="position: absolute; left: 20px; opacity: 1;" /></td>
                 <td>${index}</td>
                 <td>${subscriber.email}</td>
             </tr>`;
