@@ -11,6 +11,7 @@ class AppointmentFormController extends REST_Controller {
         parent::__construct();
         $this->load->library('Authorization_Token'); 
         $this->load->model('AppointmentFormModel','appointment');
+        $this->load->model('NewsletterModel','newsletter');
         
     }
 
@@ -58,6 +59,9 @@ class AppointmentFormController extends REST_Controller {
         $data['date'] = $this->post('date');
         $data['time'] = $this->post('time');
         $data['address'] = $this->post('address');
+
+        $appointmentData['email'] = $this->post('email');
+        // $appointmentData['is_active'] = $this->post('is_active');
         
         $id = $this->post('id');
         
@@ -72,6 +76,7 @@ class AppointmentFormController extends REST_Controller {
             if (empty($id)) {
                 if($this->appointment->find_appointment($data['fullName'])){
                    $appointment_id = $this->appointment->insert_appointment($data);
+                   $this->newsletter->insert_newsletter($appointmentData);
 
             if (!empty($appointment_id)) {
                 $restData = $this->appointment->get_appointment($appointment_id);
@@ -97,6 +102,7 @@ class AppointmentFormController extends REST_Controller {
                 // if($this->category->find_category($data['category_name']) || $result['category_name']==$data['category_name']){
                     
                 $status = $this->appointment->update_appointment($id, $data);
+                $this->newsletter->insert_newsletter($appointmentData);
                 if ($status) {
                     $restData = $this->appointment->get_appointment($id);
                     $response['msg'] = 'appointment updated successfully!';
